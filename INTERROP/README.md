@@ -1,1 +1,1 @@
-readme
+All resources for INTERROP course in summerterm 2015
