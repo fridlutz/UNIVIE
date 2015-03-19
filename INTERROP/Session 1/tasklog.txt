@@ -1,0 +1,9 @@
+Comments/Log
+
+1) Download of DB2 client/admin studio: do not try to register from Safari, website does not support Safari and will not allow you to create an account
+
+2) Creation of own database - this is strange, when defining a valid path for the database, DB2 won't accept that and return "invalid path", without path, the script runs after few tries
+
+3) Init scripts: the create and connect statement at the beginning as well as connection reset statement at the end are syntactically not support by the studio, potentially when running from command line.
+
+4) Drop statements would need to be improved with conditional statements (works at least on MSSQL server), currently the drop fails on first commit, are ok on second.
