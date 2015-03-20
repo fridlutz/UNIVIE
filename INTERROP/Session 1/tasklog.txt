@@ -10,6 +10,6 @@ Comments/Log
 
 5) Open result XML in XML editor, howto? "..." not appearing anymore
 
-6) CREATE statement for XML working but not shown in DB
+6) CREATE statement for XML working but not shown in DB - RESOLVED.
 
 7) How to save the SQL statements in the formats suggested by the submission system? How to submit stuff?
