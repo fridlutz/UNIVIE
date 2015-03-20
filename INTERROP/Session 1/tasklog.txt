@@ -7,3 +7,9 @@ Comments/Log
 3) Init scripts: the create and connect statement at the beginning as well as connection reset statement at the end are syntactically not support by the studio, potentially when running from command line.
 
 4) Drop statements would need to be improved with conditional statements (works at least on MSSQL server), currently the drop fails on first commit, are ok on second.
+
+5) Open result XML in XML editor, howto? "..." not appearing anymore
+
+6) CREATE statement for XML working but not shown in DB
+
+7) How to save the SQL statements in the formats suggested by the submission system? How to submit stuff?
