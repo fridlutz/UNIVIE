@@ -1,4 +1,3 @@
 DROP TABLE TEILNEHMERXML;
 CREATE TABLE TEILNEHMERXML (TNNr INTEGER, Content XML); 
-INSERT INTO TEILNEHMERXML VALUES(215, '<Teilnehmer><Name>Gerstner, M.</Name><Ort>Ulm</Ort></Teilnehmer>');;
-SELECT * FROM TEILNEHMERXML;
+INSERT INTO TEILNEHMERXML VALUES(215, '<Teilnehmer><Name>Gerstner, M.</Name><Ort>Ulm</Ort></Teilnehmer>');
