@@ -1,0 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>G08</KURSNR><KURSTITEL>Grundlagen I</KURSTITEL><ANGNR>1</ANGNR></KURSE>    
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>G08</KURSNR><KURSTITEL>Grundlagen I</KURSTITEL><ANGNR>2</ANGNR></KURSE>    
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>G10</KURSNR><KURSTITEL>Grundlagen II</KURSTITEL><ANGNR>1</ANGNR></KURSE>   
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>G10</KURSNR><KURSTITEL>Grundlagen II</KURSTITEL><ANGNR>2</ANGNR></KURSE>   
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>P13</KURSNR><KURSTITEL>C-Programmierung</KURSTITEL><ANGNR>1</ANGNR></KURSE>
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>P13</KURSNR><KURSTITEL>C-Programmierung</KURSTITEL><ANGNR>2</ANGNR></KURSE>
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>I09</KURSNR><KURSTITEL>Datenbanken</KURSTITEL><ANGNR>1</ANGNR></KURSE>     
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>I09</KURSNR><KURSTITEL>Datenbanken</KURSTITEL><ANGNR>2</ANGNR></KURSE>     
+ <?xml version="1.0" encoding="UTF-8"?><KURSE><KURSNR>I09</KURSNR><KURSTITEL>Datenbanken</KURSTITEL><ANGNR>3</ANGNR></KURSE>     
