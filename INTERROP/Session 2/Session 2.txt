@@ -1,0 +1,6 @@
+Übungsblatt 2: Übung 2 
+Download von BaseX unter «link», in Ubuntu mittels apt-get install basex 
+Supplementary: XPath, XSLT, XQuery 
+Literatur: 
+«Quelle 1»: D. Florescu, D. Kossmann: Storing and Querying XML Data using an RDMBS. IEEE Data Engineering Bulletin 22:27-34 (1999) 
+«Quelle 2» J. Shanmugasundaram. E. Shekita, R. Barr, M. Carey, B. Lindsay, H. Pirahesh, B. Reinwald: Efficiently publishing relational data as XML document. VLDB Journal 10:133-154 (2001) 
