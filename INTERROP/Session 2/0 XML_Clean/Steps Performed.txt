@@ -1,0 +1,8 @@
+Replace &amp;apos; -> &apos; 721
+Replace &amp;quot; -> &quot; 15
+Replace &amp;amp; -> &amp; 507
+Replace &amp;lt; -> &lt; 0
+Replace &amp;gt; -> &gt; 0
+
+remove nbsp; in Line 466 -> This was a random space in the middle of a word
+Corrected numeric entities &amp;# -> &# 439
