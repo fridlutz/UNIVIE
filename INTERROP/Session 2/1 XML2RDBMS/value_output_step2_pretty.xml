@@ -1,0 +1,1545 @@
+<?xml version="1.0"?>
+<values>
+  <value type="string" id="idm106607101456" attributename="name">7.6. Masterstudien Geschichte</value>
+  <value type="string" id="idm106607100656" attributename="period">Sommersemester 2015</value>
+  <value type="string" id="idm106607099952" attributename="name">7.6.1 MA Geschichte 2014</value>
+  <value type="string" id="idm106607099696" attributename="id">706_2</value>
+  <value type="string" id="idm106607099472" attributename="parentID">706_1</value>
+  <value type="string" id="idm106607098880" attributename="name">Pflichtmodul 1: Einf&#xFC;hrung in die Schwerpunkte</value>
+  <value type="string" id="idm106607098608" attributename="id">706_3</value>
+  <value type="string" id="idm106607097872" attributename="name">Schwerpunkt-Einf&#xFC;hrung: Vorlesungen</value>
+  <value type="string" id="idm106607097600" attributename="id">706_4</value>
+  <value type="string" id="idm106607096640" attributename="name">Introduction to Global History</value>
+  <value type="string" id="idm106607096128" attributename="type">VO</value>
+  <value type="string" id="idm106607095648" attributename="continousassessment">No</value>
+  <value type="string" id="idm106607095424" attributename="ects">3,0</value>
+  <value type="string" id="idm106607094976" attributename="responsible_unit">Studienprogrammleitung Geschichte</value>
+  <value type="string" id="idm106607093680" attributename="learningplatform">MOODLE</value>
+  <value type="string" id="idm106607093456" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41203</value>
+  <value type="string" id="idm106607092192" attributename="date">17-Mar-2015</value>
+  <value type="string" id="idm106607091264" attributename="room">H&#xF6;rsaal 34</value>
+  <value type="string" id="idm106607090816" attributename="city">Wien</value>
+  <value type="string" id="idm106607090576" attributename="roomnumber">HP.187</value>
+  <value type="string" id="idm106607090336" attributename="street">Universit&#xE4;tsring 1</value>
+  <value type="string" id="idm106607089824" attributename="date">24-Mar-2015</value>
+  <value type="string" id="idm106607087408" attributename="date">14-Apr-2015</value>
+  <value type="string" id="idm106607084992" attributename="date">21-Apr-2015</value>
+  <value type="string" id="idm106607082576" attributename="date">28-Apr-2015</value>
+  <value type="string" id="idm106607080160" attributename="date">05-May-2015</value>
+  <value type="string" id="idm106607077744" attributename="date">12-May-2015</value>
+  <value type="string" id="idm106607075328" attributename="date">19-May-2015</value>
+  <value type="string" id="idm106607072912" attributename="date">02-Jun-2015</value>
+  <value type="string" id="idm106607070496" attributename="date">09-Jun-2015</value>
+  <value type="string" id="idm106607068080" attributename="date">16-Jun-2015</value>
+  <value type="string" id="idm106607065664" attributename="date">23-Jun-2015</value>
+  <value type="string" id="idm106607063248" attributename="date">30-Jun-2015</value>
+  <value type="string" id="idm106607060832" attributename="courselanguage">Englisch</value>
+  <value type="string" id="idm106607060448" attributename="givenname">Martina</value>
+  <value type="string" id="idm106607060224" attributename="name">Kaller</value>
+  <value type="string" id="idm106607060000" attributename="email">martina.kaller@univie.ac.at</value>
+  <value type="string" id="idm106607059776" attributename="role">V - Verantwortlicher Leiter</value>
+  <value type="string" id="idm106607059264" attributename="givenname">Berthold</value>
+  <value type="string" id="idm106607059024" attributename="name">Molden</value>
+  <value type="string" id="idm106607058784" attributename="email">berthold.molden@univie.ac.at</value>
+  <value type="string" id="idm106607058528" attributename="role">P - Mitanbieter</value>
+  <value type="string" id="idm106607057648" attributename="name">Schwerpunkt-Einf&#xFC;hrung: Lekt&#xFC;rekurse</value>
+  <value type="string" id="idm106607057376" attributename="id">706_5</value>
+  <value type="string" id="idm106607056288" attributename="name">Lekt&#xFC;rekurs</value>
+  <value type="string" id="idm106607056048" attributename="title">Lekt&#xFC;rekurs - Reading Group for Digital Humanities and Digital History</value>
+  <value type="string" id="idm106607055744" attributename="type">LK</value>
+  <value type="string" id="idm106607055296" attributename="continousassessment">Yes</value>
+  <value type="string" id="idm106607055072" attributename="ects">5,0</value>
+  <value type="string" id="idm106607053264" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41247</value>
+  <value type="string" id="idm106607052976" attributename="block">NA</value>
+  <value type="string" id="idm106607052256" attributename="date">16-Mar-2015</value>
+  <value type="string" id="idm106607051312" attributename="room">Seminarraum Geschichte 1</value>
+  <value type="string" id="idm106607050576" attributename="roomnumber">O1.93A</value>
+  <value type="string" id="idm106607049824" attributename="date">23-Mar-2015</value>
+  <value type="string" id="idm106607047392" attributename="date">13-Apr-2015</value>
+  <value type="string" id="idm106607044960" attributename="date">20-Apr-2015</value>
+  <value type="string" id="idm106607042528" attributename="date">27-Apr-2015</value>
+  <value type="string" id="idm106607040096" attributename="date">04-May-2015</value>
+  <value type="string" id="idm106607037664" attributename="date">11-May-2015</value>
+  <value type="string" id="idm106607035232" attributename="date">18-May-2015</value>
+  <value type="string" id="idm106607032800" attributename="date">01-Jun-2015</value>
+  <value type="string" id="idm106607030368" attributename="date">08-Jun-2015</value>
+  <value type="string" id="idm106607027936" attributename="courselanguage">Deutsch</value>
+  <value type="string" id="idm106607027536" attributename="givenname">Mareike</value>
+  <value type="string" id="idm106607027296" attributename="name">K&#xF6;nig</value>
+  <value type="string" id="idm106607027056" attributename="email">mareike.koenig@univie.ac.at</value>
+  <value type="string" id="idm106607025776" attributename="name">Pflichtmodul 2: Einf&#xFC;hrung in den Forschungsprozess. Design und Methoden</value>
+  <value type="string" id="idm106607025472" attributename="id">706_6</value>
+  <value type="string" id="idm106607024496" attributename="name">Seminar</value>
+  <value type="string" id="idm106607024016" attributename="type">AR</value>
+  <value type="string" id="idm106607021424" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38768</value>
+  <value type="string" id="idm106607020416" attributename="date">10-Mar-2015</value>
+  <value type="string" id="idm106607019472" attributename="room">Seminarraum WISO 1</value>
+  <value type="string" id="idm106607018736" attributename="roomnumber">ZG1O2.28</value>
+  <value type="string" id="idm106606985968" attributename="givenname">Erich</value>
+  <value type="string" id="idm106606985728" attributename="name">Landsteiner</value>
+  <value type="string" id="idm106606985488" attributename="email">erich.landsteiner@univie.ac.at</value>
+  <value type="string" id="idm106606984464" attributename="name">Proseminare</value>
+  <value type="string" id="idm106606984224" attributename="id">706_7</value>
+  <value type="string" id="idm106606983216" attributename="name">MA-Proseminar</value>
+  <value type="string" id="idm106606982976" attributename="title">MA-Proseminar - The Nazi "Volksgemeinschaft". Social Practice and historiographical debate</value>
+  <value type="string" id="idm106606982656" attributename="type">PS</value>
+  <value type="string" id="idm106606980064" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42105</value>
+  <value type="string" id="idm106606978112" attributename="room">Seminarraum 1</value>
+  <value type="string" id="idm106606977392" attributename="roomnumber">1H-O1-10</value>
+  <value type="string" id="idm106606977152" attributename="street">Spitalgasse 2</value>
+  <value type="string" id="idm106606945056" attributename="givenname">Sybille</value>
+  <value type="string" id="idm106606944816" attributename="name">Steinbacher</value>
+  <value type="string" id="idm106606944576" attributename="email">sybille.steinbacher@univie.ac.at</value>
+  <value type="string" id="idm106606943056" attributename="title">MA-Proseminar - Transformations in History</value>
+  <value type="string" id="idm106606940224" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37782</value>
+  <value type="string" id="idm106606939216" attributename="date">05-Mar-2015</value>
+  <value type="string" id="idm106606936928" attributename="date">19-Mar-2015</value>
+  <value type="string" id="idm106606934656" attributename="date">26-Mar-2015</value>
+  <value type="string" id="idm106606932352" attributename="date">16-Apr-2015</value>
+  <value type="string" id="idm106606929936" attributename="date">23-Apr-2015</value>
+  <value type="string" id="idm106606927520" attributename="date">30-Apr-2015</value>
+  <value type="string" id="idm106606925104" attributename="date">07-May-2015</value>
+  <value type="string" id="idm106606922688" attributename="date">21-May-2015</value>
+  <value type="string" id="idm106606920272" attributename="date">28-May-2015</value>
+  <value type="string" id="idm106606917856" attributename="date">11-Jun-2015</value>
+  <value type="string" id="idm106606915440" attributename="date">18-Jun-2015</value>
+  <value type="string" id="idm106606913024" attributename="date">25-Jun-2015</value>
+  <value type="string" id="idm106606910208" attributename="givenname">Wolfgang</value>
+  <value type="string" id="idm106606909968" attributename="name">Schmale</value>
+  <value type="string" id="idm106606909728" attributename="email">wolfgang.schmale@univie.ac.at</value>
+  <value type="string" id="idm106606908960" attributename="givenname">Maximilian</value>
+  <value type="string" id="idm106606908720" attributename="name">Diesenberger</value>
+  <value type="string" id="idm106606908480" attributename="email">maximilian.diesenberger@univie.ac.at</value>
+  <value type="string" id="idm106606906976" attributename="title">MA-Proseminar - Introduction to scientific knowledge and text production using the example of topics in the area of the Middle Ages and the women's and gender history of the 12th and 13th century</value>
+  <value type="string" id="idm106606903984" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41198</value>
+  <value type="string" id="idm106606902976" attributename="date">11-Mar-2015</value>
+  <value type="string" id="idm106606900544" attributename="date">18-Mar-2015</value>
+  <value type="string" id="idm106606898112" attributename="date">25-Mar-2015</value>
+  <value type="string" id="idm106606895680" attributename="date">15-Apr-2015</value>
+  <value type="string" id="idm106606893248" attributename="date">22-Apr-2015</value>
+  <value type="string" id="idm106606890816" attributename="date">29-Apr-2015</value>
+  <value type="string" id="idm106606888384" attributename="date">06-May-2015</value>
+  <value type="string" id="idm106606885952" attributename="date">13-May-2015</value>
+  <value type="string" id="idm106606883520" attributename="date">20-May-2015</value>
+  <value type="string" id="idm106606881088" attributename="date">27-May-2015</value>
+  <value type="string" id="idm106606878656" attributename="date">03-Jun-2015</value>
+  <value type="string" id="idm106606876224" attributename="date">10-Jun-2015</value>
+  <value type="string" id="idm106606873792" attributename="date">17-Jun-2015</value>
+  <value type="string" id="idm106606871360" attributename="date">24-Jun-2015</value>
+  <value type="string" id="idm106606868528" attributename="givenname">Adelheid</value>
+  <value type="string" id="idm106606868288" attributename="name">Krah</value>
+  <value type="string" id="idm106606868048" attributename="email">adelheid.krah@univie.ac.at</value>
+  <value type="string" id="idm106606866544" attributename="title">MA-Proseminar - Physical Violence in Early Modern Europe</value>
+  <value type="string" id="idm106606863696" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39323</value>
+  <value type="string" id="idm106606862688" attributename="date">04-Mar-2015</value>
+  <value type="string" id="idm106606825808" attributename="givenname">Dorothea</value>
+  <value type="string" id="idm106606825568" attributename="name">Nolde</value>
+  <value type="string" id="idm106606825328" attributename="email">dorothea.nolde@univie.ac.at</value>
+  <value type="string" id="idm106606824064" attributename="name">Proseminar</value>
+  <value type="string" id="idm106606823824" attributename="title">Proseminar - Social inequality in the society of orders</value>
+  <value type="string" id="idm106606820976" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38767</value>
+  <value type="string" id="idm106606785920" attributename="date">01-Jul-2015</value>
+  <value type="string" id="idm106606781120" attributename="title">MA-Proseminar - War in the World of Islam and in the European West, including Jihad and Crusade</value>
+  <value type="string" id="idm106606778240" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39449</value>
+  <value type="string" id="idm106606777232" attributename="date">03-Mar-2015</value>
+  <value type="string" id="idm106606776304" attributename="room">Seminarraum Geschichte 3</value>
+  <value type="string" id="idm106606775568" attributename="roomnumber">O2.119</value>
+  <value type="string" id="idm106606740592" attributename="givenname">Philippe</value>
+  <value type="string" id="idm106606740352" attributename="name">Buc</value>
+  <value type="string" id="idm106606740128" attributename="email">philippe.buc@univie.ac.at</value>
+  <value type="string" id="idm106606735824" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41062</value>
+  <value type="string" id="idm106606733872" attributename="room">Seminarraum</value>
+  <value type="string" id="idm106606733152" attributename="roomnumber">2Q-EG-27</value>
+  <value type="string" id="idm106606700816" attributename="givenname">Mihailo</value>
+  <value type="string" id="idm106606700576" attributename="name">Popovic</value>
+  <value type="string" id="idm106606700336" attributename="email">mihailo.popovic@univie.ac.at</value>
+  <value type="string" id="idm106606699072" attributename="name">ProseminarPerceptions and Parallels between Asia and Europe during Early Modern Globalisation (1400-</value>
+  <value type="string" id="idm106606698848" attributename="title">ProseminarPerceptions and Parallels between Asia and Europe during Early Modern Globalisation (1400- - Perceptions and Parallels between Asia and Europe during Early Modern Globalisation (1400-1800)</value>
+  <value type="string" id="idm106606695856" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41214</value>
+  <value type="string" id="idm106606665152" attributename="givenname">Gijsbert</value>
+  <value type="string" id="idm106606664912" attributename="name">Kruijtzer</value>
+  <value type="string" id="idm106606664672" attributename="email">gijs.kruijtzer@univie.ac.at</value>
+  <value type="string" id="idm106606663168" attributename="title">MA-Proseminar - Introduction to Digital History</value>
+  <value type="string" id="idm106606660336" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41246</value>
+  <value type="string" id="idm106606658384" attributename="room">Seminarraum Geschichte 2</value>
+  <value type="string" id="idm106606657648" attributename="roomnumber">O2.144</value>
+  <value type="string" id="idm106606632976" attributename="name">Methodenkurse</value>
+  <value type="string" id="idm106606632736" attributename="id">706_8</value>
+  <value type="string" id="idm106606631760" attributename="name">Course</value>
+  <value type="string" id="idm106606631520" attributename="title">Course - Methods of Cultural History</value>
+  <value type="string" id="idm106606631248" attributename="type">KU</value>
+  <value type="string" id="idm106606628688" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37783</value>
+  <value type="string" id="idm106606595104" attributename="name">Methodenkurs</value>
+  <value type="string" id="idm106606594864" attributename="title">Methodenkurs - Relational Approaches in Historiography</value>
+  <value type="string" id="idm106606592016" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41534</value>
+  <value type="string" id="idm106606561184" attributename="name">Steer</value>
+  <value type="string" id="idm106606560944" attributename="email">martina.steer@univie.ac.at</value>
+  <value type="string" id="idm106606559440" attributename="title">Methodenkurs - Sexuelle Gewalt in der Geschichte im Lichte neuerer Forschungsans&#xE4;tze</value>
+  <value type="string" id="idm106606556560" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39324</value>
+  <value type="string" id="idm106606516928" attributename="name">KU Methodenkurs</value>
+  <value type="string" id="idm106606516688" attributename="title">KU Methodenkurs - qualitative and quantitative methods used in historical studies</value>
+  <value type="string" id="idm106606513808" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39153</value>
+  <value type="string" id="idm106606478352" attributename="givenname">Reinhard</value>
+  <value type="string" id="idm106606478112" attributename="name">Sieder</value>
+  <value type="string" id="idm106606477872" attributename="email">reinhard.sieder@univie.ac.at</value>
+  <value type="string" id="idm106606477104" attributename="givenname">Ernst</value>
+  <value type="string" id="idm106606476864" attributename="name">Langthaler</value>
+  <value type="string" id="idm106606476624" attributename="email">ernst.langthaler@univie.ac.at</value>
+  <value type="string" id="idm106606475136" attributename="title">Course - Digital Methods in Historical Research</value>
+  <value type="string" id="idm106606472304" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41231</value>
+  <value type="string" id="idm106606464016" attributename="date">17-Apr-2015</value>
+  <value type="string" id="idm106606463088" attributename="room">Seminarraum 9</value>
+  <value type="string" id="idm106606462128" attributename="street">W&#xE4;hringer Stra&#xDF;e 29</value>
+  <value type="string" id="idm106606459584" attributename="name">Methodenworkshops</value>
+  <value type="string" id="idm106606459328" attributename="id">706_9</value>
+  <value type="string" id="idm106606458352" attributename="name">Methoden-Workshop 1: Interpretation und Analyse von Texten</value>
+  <value type="string" id="idm106606458064" attributename="title">Methoden-Workshop 1: Interpretation und Analyse von Texten - Food policy. Parliamentary debates and supreme court decisions on food control</value>
+  <value type="string" id="idm106606455136" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39480</value>
+  <value type="string" id="idm106606419680" attributename="givenname">Peter</value>
+  <value type="string" id="idm106606419440" attributename="name">Becker</value>
+  <value type="string" id="idm106606419200" attributename="email">peter.becker@univie.ac.at</value>
+  <value type="string" id="idm106606417936" attributename="name">AR Workshop 1: Interpretation und Analyse von Texten</value>
+  <value type="string" id="idm106606417648" attributename="title">AR Workshop 1: Interpretation und Analyse von Texten - Sources in Soviet History</value>
+  <value type="string" id="idm106606415680" attributename="appointmentcount">0</value>
+  <value type="string" id="idm106606414768" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40991</value>
+  <value type="string" id="idm106606413376" attributename="givenname">Markian</value>
+  <value type="string" id="idm106606413136" attributename="name">Prokopovych</value>
+  <value type="string" id="idm106606412896" attributename="email">markian.prokopovych@univie.ac.at</value>
+  <value type="string" id="idm106606411616" attributename="name">Workshop on Methods: Food in a global world. Global history 19th and 20th century</value>
+  <value type="string" id="idm106606408416" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41236</value>
+  <value type="string" id="idm106606406352" attributename="room">H&#xF6;rsaal 45</value>
+  <value type="string" id="idm106606405632" attributename="roomnumber">O2.77</value>
+  <value type="string" id="idm106606371440" attributename="name">Cultural history: Practice of methods in cultural history primary sources</value>
+  <value type="string" id="idm106606368272" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37784</value>
+  <value type="string" id="idm106606350128" attributename="date">19-Jun-2015</value>
+  <value type="string" id="idm106606349200" attributename="room">H&#xF6;rsaal 26</value>
+  <value type="string" id="idm106606348480" attributename="roomnumber">TP.39</value>
+  <value type="string" id="idm106606347728" attributename="date">20-Jun-2015</value>
+  <value type="string" id="idm106606342048" attributename="name">AR Workshop 2: Dokumentation und Analyse von Diskursen</value>
+  <value type="string" id="idm106606338880" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38960</value>
+  <value type="string" id="idm106606301408" attributename="date">29-May-2015</value>
+  <value type="string" id="idm106606298544" attributename="givenname">Franz</value>
+  <value type="string" id="idm106606298304" attributename="name">Eder</value>
+  <value type="string" id="idm106606298064" attributename="email">franz.eder@univie.ac.at</value>
+  <value type="string" id="idm106606296800" attributename="name">Workshop</value>
+  <value type="string" id="idm106606296560" attributename="title">Workshop - Practicing Digital Methods in Historical Research</value>
+  <value type="string" id="idm106606293712" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41205</value>
+  <value type="string" id="idm106606289376" attributename="room">Seminarraum 2</value>
+  <value type="string" id="idm106606288656" attributename="roomnumber">U1.28</value>
+  <value type="string" id="idm106606285744" attributename="name">Pflichtmodul 3: Praktische Forschung und Darstellung</value>
+  <value type="string" id="idm106606285456" attributename="id">706_10</value>
+  <value type="string" id="idm106606284720" attributename="name">Forschungsseminare</value>
+  <value type="string" id="idm106606284464" attributename="id">706_11</value>
+  <value type="string" id="idm106606283488" attributename="name">SE Seminar (PM 3)</value>
+  <value type="string" id="idm106606283232" attributename="title">SE Seminar (PM 3) - The University of Vienna and the development of scientific fields in the second half of the 18th Century</value>
+  <value type="string" id="idm106606282880" attributename="type">SE</value>
+  <value type="string" id="idm106606282208" attributename="ects">10,0</value>
+  <value type="string" id="idm106606280304" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39264</value>
+  <value type="string" id="idm106606278912" attributename="givenname">Sonia Johanna</value>
+  <value type="string" id="idm106606278672" attributename="name">Horn</value>
+  <value type="string" id="idm106606278432" attributename="email">sonia.horn@univie.ac.at</value>
+  <value type="string" id="idm106606277168" attributename="name">Forschungsseminar</value>
+  <value type="string" id="idm106606274080" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40284</value>
+  <value type="string" id="idm106606271408" attributename="roomnumber">1H-O1-18</value>
+  <value type="string" id="idm106605062096" attributename="givenname">Carola</value>
+  <value type="string" id="idm106605061856" attributename="name">Sachse</value>
+  <value type="string" id="idm106605061616" attributename="email">carola.sachse@univie.ac.at</value>
+  <value type="string" id="idm106605060736" attributename="givenname">Irene</value>
+  <value type="string" id="idm106605060496" attributename="name">Bandhauer-Sch&#xF6;ffmann</value>
+  <value type="string" id="idm106605060240" attributename="email">irene.bandhauer-schoeffmann@univie.ac.at</value>
+  <value type="string" id="idm106605058976" attributename="name">Research Seminar</value>
+  <value type="string" id="idm106605058720" attributename="title">Research Seminar - Hotbed of Revolutions: The larger Caribbean and global anti-imperialism in the 20th century</value>
+  <value type="string" id="idm106605055920" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41196</value>
+  <value type="string" id="idm106605054800" attributename="date">20-Mar-2015</value>
+  <value type="string" id="idm106605052368" attributename="date">08-May-2015</value>
+  <value type="string" id="idm106605049936" attributename="date">22-May-2015</value>
+  <value type="string" id="idm106605043872" attributename="title">SE Seminar (PM 3) - Generation-Paradigm</value>
+  <value type="string" id="idm106605041024" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42600</value>
+  <value type="string" id="idm106605038352" attributename="roomnumber">2H316</value>
+  <value type="string" id="idm106605038112" attributename="street">Althanstra&#xDF;e 14 (UZA II)</value>
+  <value type="string" id="idm106605005792" attributename="givenname">Rainer</value>
+  <value type="string" id="idm106605005552" attributename="name">Gries</value>
+  <value type="string" id="idm106605005312" attributename="email">rainer.gries@univie.ac.at</value>
+  <value type="string" id="idm106605004160" attributename="name">Projektkurse</value>
+  <value type="string" id="idm106605003920" attributename="id">706_12</value>
+  <value type="string" id="idm106605002944" attributename="name">KU Kurs (PM 3)</value>
+  <value type="string" id="idm106605002704" attributename="title">KU Kurs (PM 3) - The University of Vienna and the development of scientific fields in the second half of the 18th Century</value>
+  <value type="string" id="idm106604999776" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39850</value>
+  <value type="string" id="idm106604996640" attributename="name">Projektkurs</value>
+  <value type="string" id="idm106604996400" attributename="title">Projektkurs - History and exhibition: University of Vienna</value>
+  <value type="string" id="idm106604993536" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37758</value>
+  <value type="string" id="idm106604992656" attributename="givenname">Meta</value>
+  <value type="string" id="idm106604982240" attributename="name">Niederkorn</value>
+  <value type="string" id="idm106604982000" attributename="email">meta.niederkorn@univie.ac.at</value>
+  <value type="string" id="idm106604980848" attributename="name">Proposal-Workshops</value>
+  <value type="string" id="idm106604980592" attributename="id">706_13</value>
+  <value type="string" id="idm106604979616" attributename="name">Proposalworkshop (PM 3)</value>
+  <value type="string" id="idm106604979360" attributename="title">Proposalworkshop (PM 3) - Writing workshop master thesis</value>
+  <value type="string" id="idm106604976512" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39479</value>
+  <value type="string" id="idm106604939296" attributename="name">Pflichtmodul 4: Wahlbereich</value>
+  <value type="string" id="idm106604939040" attributename="id">706_14</value>
+  <value type="string" id="idm106604938064" attributename="name">Church History Compact I</value>
+  <value type="string" id="idm106604937808" attributename="title">Church History Compact I - The first christian millenium</value>
+  <value type="string" id="idm106604936400" attributename="responsible_unit">Studienprogrammleitung Katholische Theologie</value>
+  <value type="string" id="idm106604934960" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37637</value>
+  <value type="string" id="idm106604933840" attributename="date">27-Jun-2011</value>
+  <value type="string" id="idm106604932896" attributename="room">&#xDC;bungsraum 1</value>
+  <value type="string" id="idm106604932176" attributename="roomnumber">O2.145</value>
+  <value type="string" id="idm106604930496" attributename="room">H&#xF6;rsaal 46</value>
+  <value type="string" id="idm106604929776" attributename="roomnumber">O2.76</value>
+  <value type="string" id="idm106605055024" attributename="givenname">Rupert</value>
+  <value type="string" id="idm106604897184" attributename="name">Klieber</value>
+  <value type="string" id="idm106604896944" attributename="email">rupert.klieber@univie.ac.at</value>
+  <value type="string" id="idm106604895680" attributename="name">The Bishop in the Eastern and Western Churches. History and theology of the episcopal office</value>
+  <value type="string" id="idm106604895040" attributename="type">FS</value>
+  <value type="string" id="idm106604894368" attributename="ects">6,0</value>
+  <value type="string" id="idm106604892480" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37898</value>
+  <value type="string" id="idm106604889808" attributename="roomnumber">EG035a</value>
+  <value type="string" id="idm106606266480" attributename="street">Schenkenstra&#xDF;e 8-10</value>
+  <value type="string" id="idm106606265968" attributename="date">18-Apr-2015</value>
+  <value type="string" id="idm106606261152" attributename="date">30-May-2015</value>
+  <value type="string" id="idm106606258752" attributename="date">12-Jun-2015</value>
+  <value type="string" id="idm106606256336" attributename="date">13-Jun-2015</value>
+  <value type="string" id="idm106606252272" attributename="roomnumber">EG035b</value>
+  <value type="string" id="idm106606251120" attributename="givenname">Thomas</value>
+  <value type="string" id="idm106606250880" attributename="name">Pr&#xFC;gl</value>
+  <value type="string" id="idm106606250640" attributename="email">thomas.pruegl@univie.ac.at</value>
+  <value type="string" id="idm106606249872" attributename="givenname">Rudolf</value>
+  <value type="string" id="idm106606249632" attributename="name">Prokschi</value>
+  <value type="string" id="idm106606249392" attributename="email">rudolf.prokschi@univie.ac.at</value>
+  <value type="string" id="idm106606248144" attributename="name">Church History Compact II</value>
+  <value type="string" id="idm106606245072" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37638</value>
+  <value type="string" id="idm106606203392" attributename="name">Manuscripts and Sources in German</value>
+  <value type="string" id="idm106606201728" attributename="responsible_unit">Studienprogrammleitung Rechtswissenschaften</value>
+  <value type="string" id="idm106606200528" attributename="learningplatform"/>
+  <value type="string" id="idm106606198976" attributename="givenname">Stephan</value>
+  <value type="string" id="idm106606198736" attributename="name">Wendehorst</value>
+  <value type="string" id="idm106606198496" attributename="email">stephan.wendehorst@univie.ac.at</value>
+  <value type="string" id="idm106606197008" attributename="name">Jews in the Holy Roman Empire as a multinational, multilingual and multireligious Polity</value>
+  <value type="string" id="idm106606196688" attributename="title">Jews in the Holy Roman Empire as a multinational, multilingual and multireligious Polity - Summer Academy of the research cluster "The Jewish Holy Roman Empire"</value>
+  <value type="string" id="idm106606190384" attributename="name">Culture of Nobility in the 18th Century</value>
+  <value type="string" id="idm106606189168" attributename="ects">4,0</value>
+  <value type="string" id="idm106606185184" attributename="room">H&#xF6;rsaal 41</value>
+  <value type="string" id="idm106606184464" attributename="roomnumber">O1.106A</value>
+  <value type="string" id="idm106606186464" attributename="givenname">Martin</value>
+  <value type="string" id="idm106606149584" attributename="name">Scheutz</value>
+  <value type="string" id="idm106606149344" attributename="email">martin.scheutz@univie.ac.at</value>
+  <value type="string" id="idm106606147968" attributename="name">Ringvorlesung: &#xD6;sterreichische Geschichte 1815 - 1995</value>
+  <value type="string" id="idm106606144944" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42432</value>
+  <value type="string" id="idm106604003840" attributename="date">29-Jun-2015</value>
+  <value type="string" id="idm106604002896" attributename="room">H&#xF6;rsaal 47</value>
+  <value type="string" id="idm106604002176" attributename="roomnumber">O2.75</value>
+  <value type="string" id="idm106603999888" attributename="givenname">Eduard</value>
+  <value type="string" id="idm106603999648" attributename="name">Fuchs</value>
+  <value type="string" id="idm106603999408" attributename="email">eduard.fuchs@univie.ac.at</value>
+  <value type="string" id="idm106603998160" attributename="name">Theory of Science and History</value>
+  <value type="string" id="idm106603997904" attributename="title">Theory of Science and History - Logic of Science - Logic of History</value>
+  <value type="string" id="idm106603995280" attributename="learningplatform">EXTERN</value>
+  <value type="string" id="idm106606148432" attributename="givenname">Walter</value>
+  <value type="string" id="idm106603957216" attributename="name">Pohl</value>
+  <value type="string" id="idm106603956976" attributename="email">walter.pohl@univie.ac.at</value>
+  <value type="string" id="idm106603951552" attributename="date">09-Mar-2015</value>
+  <value type="string" id="idm106603950608" attributename="room">H&#xF6;rsaal 48</value>
+  <value type="string" id="idm106603949888" attributename="roomnumber">O2.74</value>
+  <value type="string" id="idm106603924976" attributename="date">15-Jun-2015</value>
+  <value type="string" id="idm106603922560" attributename="date">22-Jun-2015</value>
+  <value type="string" id="idm106603951776" attributename="givenname">Karl</value>
+  <value type="string" id="idm106603917200" attributename="name">Milford</value>
+  <value type="string" id="idm106603916960" attributename="email">karl.milford@univie.ac.at</value>
+  <value type="string" id="idm106603915584" attributename="name">Die Wiener Universit&#xE4;t 1365-2015. Tradition als Innovation und Ort der Begegnung</value>
+  <value type="string" id="idm106603911456" attributename="date">13-Mar-2015</value>
+  <value type="string" id="idm106603906624" attributename="date">27-Mar-2015</value>
+  <value type="string" id="idm106603901792" attributename="date">24-Apr-2015</value>
+  <value type="string" id="idm106603896960" attributename="date">15-May-2015</value>
+  <value type="string" id="idm106603889712" attributename="date">05-Jun-2015</value>
+  <value type="string" id="idm106603882464" attributename="date">26-Jun-2015</value>
+  <value type="string" id="idm106603876688" attributename="room">H&#xF6;rsaal 33</value>
+  <value type="string" id="idm106603875968" attributename="roomnumber">O1.194A</value>
+  <value type="string" id="idm106603873680" attributename="givenname">Marianne</value>
+  <value type="string" id="idm106603873440" attributename="name">Klemun</value>
+  <value type="string" id="idm106603873200" attributename="email">marianne.klemun@univie.ac.at</value>
+  <value type="string" id="idm106603871952" attributename="name">Lecture (PM4)</value>
+  <value type="string" id="idm106603871712" attributename="title">Lecture (PM4) - Human Rights - Women`s Rights? Human Rights and Gender from the Early Modern Period until Today</value>
+  <value type="string" id="idm106603868928" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40282</value>
+  <value type="string" id="idm106603832336" attributename="givenname">Roman</value>
+  <value type="string" id="idm106603832096" attributename="name">Birke</value>
+  <value type="string" id="idm106603831856" attributename="email">roman.birke@univie.ac.at</value>
+  <value type="string" id="idm106603830368" attributename="title">Lecture (PM4) - East Central Europe and the Soviet Empire after World War 2</value>
+  <value type="string" id="idm106603827504" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40994</value>
+  <value type="string" id="idm106603825552" attributename="room">H&#xF6;rsaal</value>
+  <value type="string" id="idm106603824832" attributename="roomnumber">2R-EG-07</value>
+  <value type="string" id="idm106603802496" attributename="title">Lecture (PM4) - Verfassung, Wahlen und Parteien 1789-1989</value>
+  <value type="string" id="idm106603798832" attributename="givenname">Lothar</value>
+  <value type="string" id="idm106603764256" attributename="name">H&#xF6;belt</value>
+  <value type="string" id="idm106603764016" attributename="email">lothar.hoebelt@univie.ac.at</value>
+  <value type="string" id="idm106603762512" attributename="title">Lecture (PM4) - Kultur- und Wissenschaftsgeschichte der Psychoanalyse</value>
+  <value type="string" id="idm106603759648" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41185</value>
+  <value type="string" id="idm106603757584" attributename="room">H&#xF6;rsaal 7</value>
+  <value type="string" id="idm106603756864" attributename="roomnumber">HP.57A</value>
+  <value type="string" id="idm106603758752" attributename="givenname">Eveline</value>
+  <value type="string" id="idm106603729008" attributename="name">List</value>
+  <value type="string" id="idm106603728768" attributename="email">eveline.list@univie.ac.at</value>
+  <value type="string" id="idm106603727264" attributename="title">Lecture (PM4) - Das Reich und seine Regionen im Mittelalter</value>
+  <value type="string" id="idm106603868032" attributename="givenname">Klaus</value>
+  <value type="string" id="idm106603686608" attributename="name">Lohrmann</value>
+  <value type="string" id="idm106603686368" attributename="email">klaus.lohrmann@univie.ac.at</value>
+  <value type="string" id="idm106603684864" attributename="title">Lecture (PM4) - House, household and family in historical and global comparison</value>
+  <value type="string" id="idm106603682000" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41373</value>
+  <value type="string" id="idm106603680880" attributename="date">11-Nov-2011</value>
+  <value type="string" id="idm106603679936" attributename="room">H&#xF6;rsaal 24</value>
+  <value type="string" id="idm106603679216" attributename="roomnumber">TP.33</value>
+  <value type="string" id="idm106603678464" attributename="date">06-Mar-2015</value>
+  <value type="string" id="idm106603642832" attributename="name">Irish History from Earliest Times to the Present</value>
+  <value type="string" id="idm106603637712" attributename="room">H&#xF6;rsaal 31</value>
+  <value type="string" id="idm106603636992" attributename="roomnumber">O1.202</value>
+  <value type="string" id="idm106603638880" attributename="givenname">Finbarr</value>
+  <value type="string" id="idm106603604304" attributename="name">McLoughlin</value>
+  <value type="string" id="idm106603604064" attributename="email">finbarr.mcloughlin@univie.ac.at</value>
+  <value type="string" id="idm106603602800" attributename="name">Economic and Social History in Transdisciplinary Context 2  </value>
+  <value type="string" id="idm106603602512" attributename="title">Economic and Social History in Transdisciplinary Context 2   - Demografic Change</value>
+  <value type="string" id="idm106603599632" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38393</value>
+  <value type="string" id="idm106603598736" attributename="givenname">Josef</value>
+  <value type="string" id="idm106603564160" attributename="name">Ehmer</value>
+  <value type="string" id="idm106603563920" attributename="email">josef.ehmer@univie.ac.at</value>
+  <value type="string" id="idm106603562416" attributename="title">Lecture (PM4) - History of the Crimea from  its mythical beginnings to the Russian annexion in 2014</value>
+  <value type="string" id="idm106603559632" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40978</value>
+  <value type="string" id="idm106603529504" attributename="givenname">Kerstin Susanne</value>
+  <value type="string" id="idm106603529264" attributename="name">Jobst</value>
+  <value type="string" id="idm106603529024" attributename="email">kerstin.susanne.jobst@univie.ac.at</value>
+  <value type="string" id="idm106603527744" attributename="name">Excursion</value>
+  <value type="string" id="idm106603527504" attributename="title">Excursion - The First World War in the Caribbean</value>
+  <value type="string" id="idm106603527216" attributename="type">EX</value>
+  <value type="string" id="idm106603524656" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37946</value>
+  <value type="string" id="idm106603523264" attributename="givenname">Christian</value>
+  <value type="string" id="idm106603523024" attributename="name">Cwik</value>
+  <value type="string" id="idm106603522784" attributename="email">christian.cwik@univie.ac.at</value>
+  <value type="string" id="idm106603521280" attributename="title">Excursion - Friedrichshof</value>
+  <value type="string" id="idm106603518464" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40285</value>
+  <value type="string" id="idm106603501424" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39564</value>
+  <value type="string" id="idm106603492832" attributename="givenname">Bertrand</value>
+  <value type="string" id="idm106603492592" attributename="name">Perz</value>
+  <value type="string" id="idm106603492352" attributename="email">bertrand.perz@univie.ac.at</value>
+  <value type="string" id="idm106603491584" attributename="givenname">Jutta</value>
+  <value type="string" id="idm106603491344" attributename="name">Fuchshuber</value>
+  <value type="string" id="idm106603491104" attributename="email">jutta.fuchshuber@univie.ac.at</value>
+  <value type="string" id="idm106603489856" attributename="name">Seminar (PM4)</value>
+  <value type="string" id="idm106603489616" attributename="title">Seminar (PM4) - Sound History.</value>
+  <value type="string" id="idm106603486768" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41482</value>
+  <value type="string" id="idm106603473440" attributename="givenname">Monika</value>
+  <value type="string" id="idm106603473200" attributename="name">Bernold</value>
+  <value type="string" id="idm106603472960" attributename="email">monika.bernold@univie.ac.at</value>
+  <value type="string" id="idm106603471456" attributename="title">Seminar (PM4) - Gender Relations - Emancipation - Transformation: 1917 ff.</value>
+  <value type="string" id="idm106603468592" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40146</value>
+  <value type="string" id="idm106603433136" attributename="givenname">Gabriella</value>
+  <value type="string" id="idm106603432896" attributename="name">Hauch</value>
+  <value type="string" id="idm106603432656" attributename="email">gabriella.hauch@univie.ac.at</value>
+  <value type="string" id="idm106603431392" attributename="name">Seminar (PM 4)</value>
+  <value type="string" id="idm106603431152" attributename="title">Seminar (PM 4) - Europe's 'barbarian' past: migrations and the formation of kingdoms in the Early Middle Ages</value>
+  <value type="string" id="idm106603423952" attributename="room">Seminarraum 6</value>
+  <value type="string" id="idm106603420336" attributename="name">SE Seminar (PM4)</value>
+  <value type="string" id="idm106603420080" attributename="title">SE Seminar (PM4) - US Cuban Relations: Before and Beyond the Cold War</value>
+  <value type="string" id="idm106603417216" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38607</value>
+  <value type="string" id="idm106603401184" attributename="givenname">Raul</value>
+  <value type="string" id="idm106603400944" attributename="name">Rodriguez</value>
+  <value type="string" id="idm106603399232" attributename="title">Seminar (PM4) - Independence Movements and State Formation in the New World, 1776-1826</value>
+  <value type="string" id="idm106603396352" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38084</value>
+  <value type="string" id="idm106603365408" attributename="room">Medien/Arbeitsraum</value>
+  <value type="string" id="idm106603364672" attributename="roomnumber">O2.100</value>
+  <value type="string" id="idm106603363280" attributename="name">Fr&#xF6;schl</value>
+  <value type="string" id="idm106603363040" attributename="email">thomas.froeschl@univie.ac.at</value>
+  <value type="string" id="idm106603361536" attributename="title">Seminar (PM4) - Grundlagentexte der Kultur- und Wissenschaftsgeschichte der Psychoanalyse</value>
+  <value type="string" id="idm106603358656" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41222</value>
+  <value type="string" id="idm106603323856" attributename="title">Seminar (PM4) - Female and Gender History of the Sowiet Union and the Russian Federation</value>
+  <value type="string" id="idm106603320976" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40815</value>
+  <value type="string" id="idm106603281808" attributename="name">Seminar: Universities between Past, Present and Future</value>
+  <value type="string" id="idm106603280096" attributename="responsible_unit">Studienprogrammleitung Kunstgeschichte und Europ&#xE4;ische Ethnologie</value>
+  <value type="string" id="idm106603278624" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41943</value>
+  <value type="string" id="idm106603275952" attributename="roomnumber">3F-EG-07</value>
+  <value type="string" id="idm106603243616" attributename="givenname">Lioba</value>
+  <value type="string" id="idm106603243376" attributename="name">Theis</value>
+  <value type="string" id="idm106603243136" attributename="email">lioba.theis@univie.ac.at</value>
+  <value type="string" id="idm106603241632" attributename="title">Seminar (PM4) - Economic growth in the 20th century: Ideas, theories, data</value>
+  <value type="string" id="idm106603238768" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41210</value>
+  <value type="string" id="idm106603210384" attributename="name">Eigner</value>
+  <value type="string" id="idm106603210144" attributename="email">peter.eigner@univie.ac.at</value>
+  <value type="string" id="idm106603170432" attributename="name">Sauer</value>
+  <value type="string" id="idm106603170192" attributename="email">walter.sauer@univie.ac.at</value>
+  <value type="string" id="idm106603168688" attributename="title">Seminar (PM 4) - History of the University of Vienna in the "long 20th century".</value>
+  <value type="string" id="idm106603165808" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41223</value>
+  <value type="string" id="idm106603130800" attributename="givenname">Friedrich</value>
+  <value type="string" id="idm106603130560" attributename="name">Stadler</value>
+  <value type="string" id="idm106603130320" attributename="email">friedrich.stadler@univie.ac.at</value>
+  <value type="string" id="idm106603129552" attributename="givenname">Andreas</value>
+  <value type="string" id="idm106603129312" attributename="name">Huber</value>
+  <value type="string" id="idm106603129072" attributename="email">andreas.huber@univie.ac.at</value>
+  <value type="string" id="idm106603127584" attributename="title">Seminar (PM 4) - Themen aus der Geschichte Italiens und des Papsttums</value>
+  <value type="string" id="idm106603124720" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37875</value>
+  <value type="string" id="idm106603103616" attributename="name">Gottsmann</value>
+  <value type="string" id="idm106603103376" attributename="email">andreas.gottsmann@univie.ac.at</value>
+  <value type="string" id="idm106603102368" attributename="name">Murauer</value>
+  <value type="string" id="idm106603101904" attributename="role">VO - Vortragender in einer LVA</value>
+  <value type="string" id="idm106603101392" attributename="givenname">Elisabeth</value>
+  <value type="string" id="idm106603101152" attributename="name">Zingerle</value>
+  <value type="string" id="idm106603099440" attributename="title">Seminar (PM 4) - The GULag. The Soviet Camp System.</value>
+  <value type="string" id="idm106603096592" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42136</value>
+  <value type="string" id="idm106603095584" attributename="date">29-Jun-2011</value>
+  <value type="string" id="idm106603094640" attributename="room">Unterrichtsraum</value>
+  <value type="string" id="idm106603093920" attributename="roomnumber">3G-EG-21</value>
+  <value type="string" id="idm106603064384" attributename="title">Seminar (PM4) - History of the Venetian overseas empire 800-1800</value>
+  <value type="string" id="idm106603061520" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41220</value>
+  <value type="string" id="idm106603026736" attributename="givenname">Oliver</value>
+  <value type="string" id="idm106603026496" attributename="name">Schmitt</value>
+  <value type="string" id="idm106603026256" attributename="email">oliver.schmitt@univie.ac.at</value>
+  <value type="string" id="idm106603024752" attributename="title">Seminar (PM 4) - Art and cultural policy in the NS</value>
+  <value type="string" id="idm106603021904" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38338</value>
+  <value type="string" id="idm106594581792" attributename="name">Rathkolb</value>
+  <value type="string" id="idm106594581552" attributename="email">oliver.rathkolb@univie.ac.at</value>
+  <value type="string" id="idm106594580784" attributename="givenname">Rosemarie</value>
+  <value type="string" id="idm106594580544" attributename="name">Burgstaller</value>
+  <value type="string" id="idm106594580304" attributename="email">rosemarie.burgstaller@univie.ac.at</value>
+  <value type="string" id="idm106594578816" attributename="name">Foreign Languages in Historical Science</value>
+  <value type="string" id="idm106594578544" attributename="title">Foreign Languages in Historical Science - Projets d'unification europ&#xE9;enne: sources et historiographie en langue francaise (XVIIe --- XXIe si&#xE8;cle)</value>
+  <value type="string" id="idm106594578160" attributename="type">UE</value>
+  <value type="string" id="idm106594575712" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40543</value>
+  <value type="string" id="idm106594550160" attributename="courselanguage">Franz&#xF6;sisch</value>
+  <value type="string" id="idm106594549552" attributename="name">Angerer</value>
+  <value type="string" id="idm106594549328" attributename="email">thomas.angerer@univie.ac.at</value>
+  <value type="string" id="idm106594548112" attributename="name">Exercises in foreign language within the discipline of History</value>
+  <value type="string" id="idm106594544976" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41237</value>
+  <value type="string" id="idm106594527056" attributename="courselanguage">Italienisch</value>
+  <value type="string" id="idm106594526656" attributename="givenname">Alexander Karl</value>
+  <value type="string" id="idm106594526416" attributename="name">Koller</value>
+  <value type="string" id="idm106594526176" attributename="email">alexander.koller@univie.ac.at</value>
+  <value type="string" id="idm106594524672" attributename="title">Seminar (PM4) - Urban Communities - Communities in Urban Space</value>
+  <value type="string" id="idm106594501024" attributename="givenname">Maria-Christina</value>
+  <value type="string" id="idm106594500784" attributename="name">Lutter</value>
+  <value type="string" id="idm106594500544" attributename="email">christina.lutter@univie.ac.at</value>
+  <value type="string" id="idm106594499040" attributename="title">Excursion - Pre-modern Prague: Capital of a kingdom - Imperial residence - metropolis Bohemiae</value>
+  <value type="string" id="idm106594494848" attributename="givenname">Petr</value>
+  <value type="string" id="idm106594494608" attributename="name">Mata</value>
+  <value type="string" id="idm106594494368" attributename="email">petr.mata@univie.ac.at</value>
+  <value type="string" id="idm106594493104" attributename="name">Source Studies: Austrian History</value>
+  <value type="string" id="idm106594488000" attributename="room">H&#xF6;rsaal IOeG</value>
+  <value type="string" id="idm106594487280" attributename="roomnumber">O1.80</value>
+  <value type="string" id="idm106594450928" attributename="name">Lackner</value>
+  <value type="string" id="idm106594450688" attributename="email">christian.lackner@univie.ac.at</value>
+  <value type="string" id="idm106594449440" attributename="name">History of Armenia and the Armenians in the Middle Ages</value>
+  <value type="string" id="idm106594449152" attributename="title">History of Armenia and the Armenians in the Middle Ages - an Overview (4th-16th cent. CE)</value>
+  <value type="string" id="idm106594447712" attributename="responsible_unit">Studienprogrammleitung Altertumswissenschaften</value>
+  <value type="string" id="idm106594445344" attributename="date">02-Mar-2015</value>
+  <value type="string" id="idm106594443680" attributename="roomnumber">L3-04</value>
+  <value type="string" id="idm106594443440" attributename="street">Postgasse 9</value>
+  <value type="string" id="idm106594408944" attributename="givenname">Johannes</value>
+  <value type="string" id="idm106594408704" attributename="name">Preiser-Kapeller</value>
+  <value type="string" id="idm106594408448" attributename="email">johannes.preiser-kapeller@univie.ac.at</value>
+  <value type="string" id="idm106594406928" attributename="title">Excursion - On the traces of Red Vienna - Considerations and analysis from a gender perspective.</value>
+  <value type="string" id="idm106594404144" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38530</value>
+  <value type="string" id="idm106594397264" attributename="room">Prominentenzimmer</value>
+  <value type="string" id="idm106594396528" attributename="roomnumber">TP.274</value>
+  <value type="string" id="idm106594392944" attributename="givenname">Veronika</value>
+  <value type="string" id="idm106594392704" attributename="name">Duma</value>
+  <value type="string" id="idm106594392464" attributename="email">veronika.duma@univie.ac.at</value>
+  <value type="string" id="idm106594391696" attributename="givenname">Hanna</value>
+  <value type="string" id="idm106594391456" attributename="name">Lichtenberger</value>
+  <value type="string" id="idm106594391216" attributename="email">hanna.lichtenberger@univie.ac.at</value>
+  <value type="string" id="idm106594386912" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41187</value>
+  <value type="string" id="idm106594380672" attributename="givenname">Helgard</value>
+  <value type="string" id="idm106594380432" attributename="name">Fr&#xF6;hlich</value>
+  <value type="string" id="idm106594380192" attributename="email">helgard.froehlich@univie.ac.at</value>
+  <value type="string" id="idm106594378688" attributename="title">Seminar (PM4) - Von der Kunst in die Drogerie, K&#xF6;rper&#xE4;sthetik zwischen Kunst und Alltag</value>
+  <value type="string" id="idm106594374496" attributename="givenname">Christian-Hubert</value>
+  <value type="string" id="idm106594374240" attributename="name">Ehalt</value>
+  <value type="string" id="idm106594374000" attributename="email">christian-hubert.ehalt@univie.ac.at</value>
+  <value type="string" id="idm106594372384" attributename="name">Konversatorium zu Texten &#xFC;ber K&#xF6;rper&#xE4;sthetik</value>
+  <value type="string" id="idm106594372112" attributename="title">Konversatorium zu Texten &#xFC;ber K&#xF6;rper&#xE4;sthetik - begleitend zur LV 070284 Von der Kunst in die Drogerie, K&#xF6;rper&#xE4;sthetik zwischen Kunst und Alltag</value>
+  <value type="string" id="idm106594371728" attributename="type">KO</value>
+  <value type="string" id="idm106594366304" attributename="name">The Circulation of People, Commodities, Ideas and Objects in Africa</value>
+  <value type="string" id="idm106594365024" attributename="ects">8,0</value>
+  <value type="string" id="idm106594364576" attributename="responsible_unit">Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</value>
+  <value type="string" id="idm106594363104" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40946</value>
+  <value type="string" id="idm106594361152" attributename="room">Seminarraum 3</value>
+  <value type="string" id="idm106594360432" attributename="roomnumber">2M-O1-12</value>
+  <value type="string" id="idm106594332784" attributename="givenname">Kirsten</value>
+  <value type="string" id="idm106594332544" attributename="name">R&#xFC;ther</value>
+  <value type="string" id="idm106594332304" attributename="email">kirsten.ruether@univie.ac.at</value>
+  <value type="string" id="idm106594331264" attributename="name">The Empire of the Black Pharaohs: Kush and the Ancient World</value>
+  <value type="string" id="idm106594325504" attributename="roomnumber">2M-O1-03</value>
+  <value type="string" id="idm106594290768" attributename="givenname">Michael</value>
+  <value type="string" id="idm106594290528" attributename="name">Zach</value>
+  <value type="string" id="idm106594290288" attributename="email">michael.zach@univie.ac.at</value>
+  <value type="string" id="idm106594289024" attributename="name">Health-Seeking in Colonial Africa</value>
+  <value type="string" id="idm106594285888" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41524</value>
+  <value type="string" id="idm106594253936" attributename="name">Spreading News in South Africa: A Short History of 19th and 20th Century Media</value>
+  <value type="string" id="idm106594253328" attributename="type">VO+UE</value>
+  <value type="string" id="idm106594250720" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41525</value>
+  <value type="string" id="idm106594248048" attributename="roomnumber">2M-O1-06</value>
+  <value type="string" id="idm106594213968" attributename="name">Exercise Course (History and Society) (M6)</value>
+  <value type="string" id="idm106594212304" attributename="responsible_unit">Studienprogrammleitung Ostasienwissenschaften</value>
+  <value type="string" id="idm106594210864" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39754</value>
+  <value type="string" id="idm106594208944" attributename="room">Seminarraum OAW 1</value>
+  <value type="string" id="idm106594208208" attributename="roomnumber">2I-O1-05</value>
+  <value type="string" id="idm106594173696" attributename="givenname">Astrid</value>
+  <value type="string" id="idm106594173456" attributename="name">Lipinsky</value>
+  <value type="string" id="idm106594173216" attributename="email">astrid.lipinsky@univie.ac.at</value>
+  <value type="string" id="idm106594171952" attributename="name">Philosophy of Science</value>
+  <value type="string" id="idm106594171696" attributename="title">Philosophy of Science - Vienna Circle, Wittgenstein, and Popper. Theory Dynamics and Problem History in Context</value>
+  <value type="string" id="idm106594170352" attributename="responsible_unit">Studienprogrammleitung Philosophie</value>
+  <value type="string" id="idm106594168912" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42075</value>
+  <value type="string" id="idm106594131824" attributename="name">Kant, Neo-Kantianism, and the Vienna Circle. 'Continental' and 'Analytic' Interactions</value>
+  <value type="string" id="idm106594128624" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42530</value>
+  <value type="string" id="idm106594126576" attributename="room">H&#xF6;rsaal 3F</value>
+  <value type="string" id="idm106594125856" attributename="roomnumber">D0313</value>
+  <value type="string" id="idm106594125616" attributename="street">Universit&#xE4;tsstra&#xDF;e 7 (NIG)</value>
+  <value type="string" id="idm106593530784" attributename="name">Nemeth</value>
+  <value type="string" id="idm106593530544" attributename="email">elisabeth.nemeth@univie.ac.at</value>
+  <value type="string" id="idm106593529056" attributename="title">Seminar (PM4) - Noble life in Modern Europe (16th to 19th century</value>
+  <value type="string" id="idm106593526192" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41248</value>
+  <value type="string" id="idm106593509968" attributename="name">Edelmayer</value>
+  <value type="string" id="idm106593509728" attributename="email">friedrich.edelmayer@univie.ac.at</value>
+  <value type="string" id="idm106593508944" attributename="givenname">Katharina</value>
+  <value type="string" id="idm106593508704" attributename="name">Arnegger</value>
+  <value type="string" id="idm106593508464" attributename="email">katharina.arnegger@univie.ac.at</value>
+  <value type="string" id="idm106593507216" attributename="name">Seminar zu Geschichte (PM 4) -Anerkennung</value>
+  <value type="string" id="idm106593504112" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41862</value>
+  <value type="string" id="idm106593466912" attributename="name">Foreign Languages in Historical Science 1</value>
+  <value type="string" id="idm106593466640" attributename="title">Foreign Languages in Historical Science 1 - Discovering the World. Texts on Globalization (16th to 20th Centuries)</value>
+  <value type="string" id="idm106593463728" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42112</value>
+  <value type="string" id="idm106593461664" attributename="room">H&#xF6;rsaal 29</value>
+  <value type="string" id="idm106593460944" attributename="roomnumber">O1.207</value>
+  <value type="string" id="idm106593427920" attributename="name">Classical Texts in the History and Philosophy of Science</value>
+  <value type="string" id="idm106593424784" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41927</value>
+  <value type="string" id="idm106593423664" attributename="date">14-Sep-2011</value>
+  <value type="string" id="idm106593422736" attributename="room">Carl Auer v. Welsbach-H&#xF6;rsaal</value>
+  <value type="string" id="idm106593422000" attributename="roomnumber">1H47</value>
+  <value type="string" id="idm106593421760" attributename="street">W&#xE4;hringer Stra&#xDF;e 38-42</value>
+  <value type="string" id="idm106593420304" attributename="room">H&#xF6;rsaal 3C</value>
+  <value type="string" id="idm106593419584" attributename="roomnumber">C0302</value>
+  <value type="string" id="idm106593383920" attributename="title">Lecture (PM4) - History of Belarus since the Union of Brest</value>
+  <value type="string" id="idm106593379760" attributename="givenname">Per Anders</value>
+  <value type="string" id="idm106593379520" attributename="name">Rudling</value>
+  <value type="string" id="idm106593377808" attributename="title">Lecture (PM4) - History of Russia and the Soviet Union since 1861</value>
+  <value type="string" id="idm106593372032" attributename="name">Pflichtmodul 5: Masterseminar</value>
+  <value type="string" id="idm106593371776" attributename="id">706_15</value>
+  <value type="string" id="idm106593370800" attributename="name">Masterseminar (PM 5)</value>
+  <value type="string" id="idm106593364672" attributename="name">Seminar for M.A. and doctoral students</value>
+  <value type="string" id="idm106593323520" attributename="name">Schwarcz</value>
+  <value type="string" id="idm106593323280" attributename="email">andreas.schwarcz@univie.ac.at</value>
+  <value type="string" id="idm106593318944" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37935</value>
+  <value type="string" id="idm106593278672" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40145</value>
+  <value type="string" id="idm106593272464" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42344</value>
+  <value type="string" id="idm106593198400" attributename="room">B&#xFC;ro</value>
+  <value type="string" id="idm106593197680" attributename="roomnumber">1I-O1-02</value>
+  <value type="string" id="idm106593177328" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38850</value>
+  <value type="string" id="idm106593144720" attributename="givenname">Hans</value>
+  <value type="string" id="idm106593144480" attributename="name">Safrian</value>
+  <value type="string" id="idm106593144240" attributename="email">hans.safrian@univie.ac.at</value>
+  <value type="string" id="idm106593127728" attributename="givenname">Mitchell</value>
+  <value type="string" id="idm106593127488" attributename="name">Ash</value>
+  <value type="string" id="idm106593127264" attributename="email">mitchell.ash@univie.ac.at</value>
+  <value type="string" id="idm106593122944" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42137</value>
+  <value type="string" id="idm106593121824" attributename="date">21-Jun-2011</value>
+  <value type="string" id="idm106593120880" attributename="room">H&#xF6;rsaal 4</value>
+  <value type="string" id="idm106593120160" attributename="roomnumber">2Z221</value>
+  <value type="string" id="idm106593060160" attributename="givenname">Frank</value>
+  <value type="string" id="idm106593059920" attributename="name">Stern</value>
+  <value type="string" id="idm106593059680" attributename="email">frank.stern@univie.ac.at</value>
+  <value type="string" id="idm106593019952" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41219</value>
+  <value type="string" id="idm106593001520" attributename="givenname">Christa</value>
+  <value type="string" id="idm106593001280" attributename="name">Ehrmann-H&#xE4;mmerle</value>
+  <value type="string" id="idm106593001024" attributename="email">christa.ehrmann-haemmerle@univie.ac.at</value>
+  <value type="string" id="idm106592996640" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41183</value>
+  <value type="string" id="idm106592970928" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41235</value>
+  <value type="string" id="idm106592962272" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41193</value>
+  <value type="string" id="idm106592956016" attributename="givenname">Stefan</value>
+  <value type="string" id="idm106592955776" attributename="name">Zahlmann</value>
+  <value type="string" id="idm106592955536" attributename="email">stefan.zahlmann@univie.ac.at</value>
+  <value type="string" id="idm106592954016" attributename="title">Masterseminar (PM 5) - From the first (1515) to the second Congrress of Vienna (1814/15)</value>
+  <value type="string" id="idm106592951136" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39552</value>
+  <value type="string" id="idm106592949184" attributename="room">Dissertantenraum</value>
+  <value type="string" id="idm106592948448" attributename="roomnumber">2N-O1-27</value>
+  <value type="string" id="idm106592915904" attributename="givenname">Marija</value>
+  <value type="string" id="idm106592915664" attributename="name">Wakounig</value>
+  <value type="string" id="idm106592915424" attributename="email">marija.wakounig@univie.ac.at</value>
+  <value type="string" id="idm106592914160" attributename="name">Masterseminar - Graduate College 2</value>
+  <value type="string" id="idm106592911056" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38177</value>
+  <value type="string" id="idm106592874784" attributename="title">Masterseminar (PM 5) - New Research in Economic and Social History</value>
+  <value type="string" id="idm106592871920" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39319</value>
+  <value type="string" id="idm106592870288" attributename="name">Ertl</value>
+  <value type="string" id="idm106592870048" attributename="email">thomas.ertl@univie.ac.at</value>
+  <value type="string" id="idm106592869280" attributename="givenname">Carsten</value>
+  <value type="string" id="idm106592869040" attributename="name">Burhop</value>
+  <value type="string" id="idm106592868800" attributename="email">carsten.burhop@univie.ac.at</value>
+  <value type="string" id="idm106592864480" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38958</value>
+  <value type="string" id="idm106592861056" attributename="date">09-May-2015</value>
+  <value type="string" id="idm106592848576" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41195</value>
+  <value type="string" id="idm106592842368" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41226</value>
+  <value type="string" id="idm106592836160" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38395</value>
+  <value type="string" id="idm106592829952" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41241</value>
+  <value type="string" id="idm106592828560" attributename="givenname">Alois</value>
+  <value type="string" id="idm106592828320" attributename="name">Ecker</value>
+  <value type="string" id="idm106592828080" attributename="email">alois.ecker@univie.ac.at</value>
+  <value type="string" id="idm106604886400" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41211</value>
+  <value type="string" id="idm106594095520" attributename="givenname">Gerhard</value>
+  <value type="string" id="idm106594095280" attributename="name">Botz</value>
+  <value type="string" id="idm106594095040" attributename="email">gerhard.botz@univie.ac.at</value>
+  <value type="string" id="idm106594088688" attributename="room">H&#xF6;rsaal 23</value>
+  <value type="string" id="idm106594087968" attributename="roomnumber">O1.185</value>
+  <value type="string" id="idm106594055536" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41215</value>
+  <value type="string" id="idm106594052352" attributename="name">7.6.2 MA Geschichtsforschung, Historische Hilfswissenschaften und Archivwissenschaft</value>
+  <value type="string" id="idm106594052032" attributename="id">706_16</value>
+  <value type="string" id="idm106594051296" attributename="name">0. Eingangsphase</value>
+  <value type="string" id="idm106594051040" attributename="id">706_17</value>
+  <value type="string" id="idm106594050304" attributename="name">PM Aufbaumodul Geschichtswissenchaftliches Denken und Arbeiten</value>
+  <value type="string" id="idm106594050016" attributename="id">706_18</value>
+  <value type="string" id="idm106593966560" attributename="name">1. Grundmodulgruppe</value>
+  <value type="string" id="idm106593966304" attributename="id">706_19</value>
+  <value type="string" id="idm106593965568" attributename="name">PM Grundmodul 1</value>
+  <value type="string" id="idm106593965328" attributename="id">706_20</value>
+  <value type="string" id="idm106593964592" attributename="name">PM Grundmodul 2</value>
+  <value type="string" id="idm106593964352" attributename="id">706_21</value>
+  <value type="string" id="idm106593963616" attributename="name">PM Grundmodul 3</value>
+  <value type="string" id="idm106593963376" attributename="id">706_22</value>
+  <value type="string" id="idm106593962400" attributename="name">Museology and Exhibition Management</value>
+  <value type="string" id="idm106593961856" attributename="type">VU</value>
+  <value type="string" id="idm106593957984" attributename="givenname">Matthias</value>
+  <value type="string" id="idm106593957744" attributename="name">Pfaffenbichler</value>
+  <value type="string" id="idm106593956272" attributename="name">Source Studies: Archival Sources (with special reference to local history)</value>
+  <value type="string" id="idm106593929792" attributename="name">Zehetmayer</value>
+  <value type="string" id="idm106593929552" attributename="email">roman.zehetmayer@univie.ac.at</value>
+  <value type="string" id="idm106593928288" attributename="name">Information Management and Documentation in Archives and Libraries</value>
+  <value type="string" id="idm106593894560" attributename="name">Just</value>
+  <value type="string" id="idm106593894320" attributename="email">thomas.just@univie.ac.at</value>
+  <value type="string" id="idm106593893168" attributename="name">PM Grundmodul 4</value>
+  <value type="string" id="idm106593892928" attributename="id">706_23</value>
+  <value type="string" id="idm106593891952" attributename="name">Latin Palaeography II</value>
+  <value type="string" id="idm106593888880" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38921</value>
+  <value type="string" id="idm106593887984" attributename="givenname">Christoph</value>
+  <value type="string" id="idm106593853408" attributename="name">Egger</value>
+  <value type="string" id="idm106593853168" attributename="email">christoph.egger@univie.ac.at</value>
+  <value type="string" id="idm106593851904" attributename="name">Modern Palaeography</value>
+  <value type="string" id="idm106593782016" attributename="name">Zajic</value>
+  <value type="string" id="idm106593781776" attributename="email">andreas.zajic@univie.ac.at</value>
+  <value type="string" id="idm106593780624" attributename="name">PM Grundmodul 5</value>
+  <value type="string" id="idm106593780384" attributename="id">706_24</value>
+  <value type="string" id="idm106593779408" attributename="name">Diplomatics and Chronology</value>
+  <value type="string" id="idm106593672928" attributename="givenname">Anton</value>
+  <value type="string" id="idm106593672688" attributename="name">Scharer</value>
+  <value type="string" id="idm106593672448" attributename="email">anton.scharer@univie.ac.at</value>
+  <value type="string" id="idm106593670080" attributename="name">PM Grundmodul 6</value>
+  <value type="string" id="idm106593669840" attributename="id">706_25</value>
+  <value type="string" id="idm106593669104" attributename="name">PM Archivpraktikum</value>
+  <value type="string" id="idm106593668848" attributename="id">706_26</value>
+  <value type="string" id="idm106593667984" attributename="name">2. Alternative Pflichtmodulgruppen</value>
+  <value type="string" id="idm106593667712" attributename="id">706_27</value>
+  <value type="string" id="idm106593666976" attributename="name">APM Geschichtsforschung 1</value>
+  <value type="string" id="idm106593666720" attributename="id">706_28</value>
+  <value type="string" id="idm106593665984" attributename="name">APM Geschichtsforschung 2</value>
+  <value type="string" id="idm106593665728" attributename="id">706_29</value>
+  <value type="string" id="idm106593664992" attributename="name">APM Geschichtsforschung 3</value>
+  <value type="string" id="idm106593664736" attributename="id">706_30</value>
+  <value type="string" id="idm106593663760" attributename="name">Source Studies: Objects</value>
+  <value type="string" id="idm106593586688" attributename="givenname">Herwig</value>
+  <value type="string" id="idm106593586448" attributename="name">Weigl</value>
+  <value type="string" id="idm106593586208" attributename="email">herwig.weigl@univie.ac.at</value>
+  <value type="string" id="idm106593585072" attributename="name">APM Geschichtsforschung 4</value>
+  <value type="string" id="idm106593584816" attributename="id">706_31</value>
+  <value type="string" id="idm106593583840" attributename="name">Research Seminar: Charters / Administrative Records / Palaeography</value>
+  <value type="string" id="idm106592482240" attributename="room">Seminarraum Geschichte 4 (PC &#xDC;bungsraum)</value>
+  <value type="string" id="idm106592481488" attributename="roomnumber">O2.118</value>
+  <value type="string" id="idm106592479200" attributename="givenname">Paul</value>
+  <value type="string" id="idm106592478960" attributename="name">Herold</value>
+  <value type="string" id="idm106592478720" attributename="email">paul.herold@univie.ac.at</value>
+  <value type="string" id="idm106592477584" attributename="name">APM Archivwissenschaft und Medienarchive 1</value>
+  <value type="string" id="idm106592477312" attributename="id">706_32</value>
+  <value type="string" id="idm106592476576" attributename="name">APM Archivwissenschaft und Medienarchive 2</value>
+  <value type="string" id="idm106592476304" attributename="id">706_33</value>
+  <value type="string" id="idm106592475568" attributename="name">APM Archivwissenschaft und Medienarchive 3</value>
+  <value type="string" id="idm106592475296" attributename="id">706_34</value>
+  <value type="string" id="idm106592474320" attributename="name">Archives: Appraisal and Access</value>
+  <value type="string" id="idm106592469936" attributename="givenname">Heinrich</value>
+  <value type="string" id="idm106592469696" attributename="name">Berg</value>
+  <value type="string" id="idm106592469456" attributename="email">heinrich.berg@univie.ac.at</value>
+  <value type="string" id="idm106592468192" attributename="name">Archival Technology and Conservation</value>
+  <value type="string" id="idm106592465088" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38863</value>
+  <value type="string" id="idm106592483392" attributename="givenname">Jakob</value>
+  <value type="string" id="idm106592427200" attributename="name">W&#xFC;hrer</value>
+  <value type="string" id="idm106592426960" attributename="email">jakob.wuehrer@univie.ac.at</value>
+  <value type="string" id="idm106592425808" attributename="name">APM Archivwissenschaft und Medienarchive 4</value>
+  <value type="string" id="idm106592425536" attributename="id">706_35</value>
+  <value type="string" id="idm106592424560" attributename="name">Media Production and PR</value>
+  <value type="string" id="idm106592403008" attributename="name">Dusek</value>
+  <value type="string" id="idm106592402768" attributename="email">peter.dusek@univie.ac.at</value>
+  <value type="string" id="idm106592402000" attributename="givenname">Siegfried</value>
+  <value type="string" id="idm106592401760" attributename="name">Steinlechner</value>
+  <value type="string" id="idm106592400304" attributename="name">Archive Management and Public Relations</value>
+  <value type="string" id="idm106592388448" attributename="name">Schuster</value>
+  <value type="string" id="idm106592388208" attributename="email">walter.schuster@univie.ac.at</value>
+  <value type="string" id="idm106592387440" attributename="givenname">Leopold</value>
+  <value type="string" id="idm106592387200" attributename="name">Kammerhofer</value>
+  <value type="string" id="idm106592386960" attributename="email">leopold.kammerhofer@univie.ac.at</value>
+  <value type="string" id="idm106592385696" attributename="name">Administrative Records and Modern Diplomatics - Practical Application</value>
+  <value type="string" id="idm106592380672" attributename="room">Seminarraum 7</value>
+  <value type="string" id="idm106592368896" attributename="name">Wiesflecker</value>
+  <value type="string" id="idm106592367920" attributename="givenname">Elke</value>
+  <value type="string" id="idm106592367680" attributename="name">Hammer-Luza</value>
+  <value type="string" id="idm106592366720" attributename="givenname">Gernot Peter</value>
+  <value type="string" id="idm106592366480" attributename="name">Obersteiner</value>
+  <value type="string" id="idm106592365136" attributename="name">Exkursion</value>
+  <value type="string" id="idm106592364896" attributename="id">706_36</value>
+  <value type="string" id="idm106592357728" attributename="name">3. Master-Modul</value>
+  <value type="string" id="idm106592357488" attributename="id">706_37</value>
+  <value type="string" id="idm106591181168" attributename="name">7.6.3 MA Globalgeschichte &amp; Global Studies</value>
+  <value type="string" id="idm106591180896" attributename="id">706_38</value>
+  <value type="string" id="idm106591180160" attributename="name">1. Pflichtmodule Eingangsphase</value>
+  <value type="string" id="idm106591179904" attributename="id">706_39</value>
+  <value type="string" id="idm106591179168" attributename="name">PM Aufbaumodul Geschichtswissenschaftliches Denken und Arbeiten</value>
+  <value type="string" id="idm106591178880" attributename="id">706_40</value>
+  <value type="string" id="idm106591135456" attributename="name">Practice of Scientific Communication</value>
+  <value type="string" id="idm106591096976" attributename="givenname">Peer</value>
+  <value type="string" id="idm106591096736" attributename="name">Vries</value>
+  <value type="string" id="idm106591096496" attributename="email">peer.vries@univie.ac.at</value>
+  <value type="string" id="idm106591055328" attributename="name">PM Fremdsprachen in der Geschichtswissenschaft</value>
+  <value type="string" id="idm106591055056" attributename="id">706_41</value>
+  <value type="string" id="idm106590918928" attributename="name">2. Alternative Pflichtmodule</value>
+  <value type="string" id="idm106590918672" attributename="id">706_42</value>
+  <value type="string" id="idm106590917936" attributename="name">APM Grundlagen der Globalgeschichte</value>
+  <value type="string" id="idm106590917664" attributename="id">706_43</value>
+  <value type="string" id="idm106590877824" attributename="name">Working Skills in Global History</value>
+  <value type="string" id="idm106590877552" attributename="title">Working Skills in Global History - A global history of political participation since 1800</value>
+  <value type="string" id="idm106590874672" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42091</value>
+  <value type="string" id="idm106590844080" attributename="givenname">Florian</value>
+  <value type="string" id="idm106590843840" attributename="name">Musil</value>
+  <value type="string" id="idm106590843600" attributename="email">florian.musil@univie.ac.at</value>
+  <value type="string" id="idm106590842336" attributename="name">Theories and Methods of Global History </value>
+  <value type="string" id="idm106590800032" attributename="name">APM Grundlagen aus einer anderen Disziplin der Global Studies</value>
+  <value type="string" id="idm106590799744" attributename="id">706_44</value>
+  <value type="string" id="idm106590798768" attributename="name">International Law and International Organisations</value>
+  <value type="string" id="idm106590795632" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39499</value>
+  <value type="string" id="idm106590792960" attributename="roomnumber">HSU21</value>
+  <value type="string" id="idm106590792720" attributename="street">Schottenbastei 10-16 (Juridicum)</value>
+  <value type="string" id="idm106590774528" attributename="name">Dunkel</value>
+  <value type="string" id="idm106590774288" attributename="email">florian.dunkel@univie.ac.at</value>
+  <value type="string" id="idm106590773024" attributename="name">Approaching Cultural Studies</value>
+  <value type="string" id="idm106590771392" attributename="responsible_unit">Studienprogrammleitung Anglistik</value>
+  <value type="string" id="idm106590769952" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41059</value>
+  <value type="string" id="idm106590768000" attributename="room">Kleiner H&#xF6;rsaal C2</value>
+  <value type="string" id="idm106590767264" attributename="roomnumber">2G-K1-03</value>
+  <value type="string" id="idm106590734480" attributename="name">Fagan</value>
+  <value type="string" id="idm106590734240" attributename="email">paul.fagan@univie.ac.at</value>
+  <value type="string" id="idm106590732976" attributename="name">Introduction to Cultural Theories</value>
+  <value type="string" id="idm106590732704" attributename="title">Introduction to Cultural Theories - Tutorial</value>
+  <value type="string" id="idm106590732432" attributename="type">TR</value>
+  <value type="string" id="idm106590731760" attributename="ects">0,0</value>
+  <value type="string" id="idm106590702320" attributename="givenname">Matthew</value>
+  <value type="string" id="idm106590702080" attributename="name">Leroy</value>
+  <value type="string" id="idm106590701840" attributename="email">matthew.leroy@univie.ac.at</value>
+  <value type="string" id="idm106590701584" attributename="role">T - Tutor</value>
+  <value type="string" id="idm106590700592" attributename="name">KG1- International Development in Historical Context</value>
+  <value type="string" id="idm106590697424" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40333</value>
+  <value type="string" id="idm106590695472" attributename="room">H&#xF6;rsaal A</value>
+  <value type="string" id="idm106590694752" attributename="roomnumber">2F-EG-32</value>
+  <value type="string" id="idm106590662416" attributename="givenname">Arno</value>
+  <value type="string" id="idm106590662176" attributename="name">Sonderegger</value>
+  <value type="string" id="idm106590661936" attributename="email">arno.sonderegger@univie.ac.at</value>
+  <value type="string" id="idm106590660672" attributename="name">KW1 - K IV - Introductory Lecture: Development Economics</value>
+  <value type="string" id="idm106590657504" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41191</value>
+  <value type="string" id="idm106590622320" attributename="givenname">Alejandro</value>
+  <value type="string" id="idm106590622080" attributename="name">Cunat</value>
+  <value type="string" id="idm106590621840" attributename="email">alejandro.cunat@univie.ac.at</value>
+  <value type="string" id="idm106590620576" attributename="name">GM1 - Principles of Development Research</value>
+  <value type="string" id="idm106590617440" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38757</value>
+  <value type="string" id="idm106590587232" attributename="givenname">Margarete Maria</value>
+  <value type="string" id="idm106590586992" attributename="name">Grandner</value>
+  <value type="string" id="idm106590586752" attributename="email">margarete.grandner@univie.ac.at</value>
+  <value type="string" id="idm106590585472" attributename="name">3. Pflichtmodule</value>
+  <value type="string" id="idm106590585216" attributename="id">706_45</value>
+  <value type="string" id="idm106590584480" attributename="name">PM Theorien, Quellen und Methoden der Globalgeschichte und Global Studies</value>
+  <value type="string" id="idm106590584176" attributename="id">706_46</value>
+  <value type="string" id="idm106590540704" attributename="name">Theories, Sources and Methods of Global History</value>
+  <value type="string" id="idm106590537600" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41229</value>
+  <value type="string" id="idm106590838416" attributename="givenname">Amadou-Lamine</value>
+  <value type="string" id="idm106590499952" attributename="name">Sarr</value>
+  <value type="string" id="idm106590499712" attributename="email">amadou-lamine.sarr@univie.ac.at</value>
+  <value type="string" id="idm106590462784" attributename="name">KP2 - Political Aspects of Development</value>
+  <value type="string" id="idm106590462512" attributename="title">KP2 - Political Aspects of Development - Human Rights</value>
+  <value type="string" id="idm106590459632" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41268</value>
+  <value type="string" id="idm106590443824" attributename="givenname">Ralph</value>
+  <value type="string" id="idm106590443584" attributename="name">Guth</value>
+  <value type="string" id="idm106590443344" attributename="email">ralph.guth@univie.ac.at</value>
+  <value type="string" id="idm106590442192" attributename="name">PM Vertiefung 1: Fragestellungen der Globalgeschichte: Weltregionen in globalgeschichtlicher Sicht</value>
+  <value type="string" id="idm106590441968" attributename="id">706_47</value>
+  <value type="string" id="idm106590325792" attributename="title">Seminar zu Geschichte (PM 4) -Anerkennung - European Expansion, Globalisation, Ecology</value>
+  <value type="string" id="idm106590285088" attributename="givenname">Gottfried</value>
+  <value type="string" id="idm106590284848" attributename="name">Liedl</value>
+  <value type="string" id="idm106590284608" attributename="email">gottfried.liedl@univie.ac.at</value>
+  <value type="string" id="idm106590283600" attributename="name">Feldbauer</value>
+  <value type="string" id="idm106590283360" attributename="email">peter.feldbauer@univie.ac.at</value>
+  <value type="string" id="idm106590177088" attributename="name">Emphasis 1 - 8 - Seminar (optional 3 out of 8)</value>
+  <value type="string" id="idm106590175872" attributename="ects">7,0</value>
+  <value type="string" id="idm106590171392" attributename="roomnumber">EG.02</value>
+  <value type="string" id="idm106590171152" attributename="street">Sensengasse 3 (Stiege 2)</value>
+  <value type="string" id="idm106590166576" attributename="roomnumber">EG.01</value>
+  <value type="string" id="idm106590162784" attributename="name">G&#xE4;rtner</value>
+  <value type="string" id="idm106590162544" attributename="email">peter.gaertner@univie.ac.at</value>
+  <value type="string" id="idm106590161392" attributename="name">PM Vertiefung 2: Fragestellungen der Globalgeschichte:  Themen der Globalgeschichte</value>
+  <value type="string" id="idm106590161072" attributename="id">706_48</value>
+  <value type="string" id="idm106590008112" attributename="name">TEF A - Transdisciplinary  Development Research</value>
+  <value type="string" id="idm106590004976" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41516</value>
+  <value type="string" id="idm106589974528" attributename="name">J&#xE4;ger</value>
+  <value type="string" id="idm106589974288" attributename="email">johannes.jaeger@univie.ac.at</value>
+  <value type="string" id="idm106589973024" attributename="name">Colonialism: Transdisciplinary Perspectives, Debates, and Themes of Discussion</value>
+  <value type="string" id="idm106589969824" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41153</value>
+  <value type="string" id="idm106589967872" attributename="room">H&#xF6;rsaal B</value>
+  <value type="string" id="idm106589967152" attributename="roomnumber">2C-EG-02</value>
+  <value type="string" id="idm106589934816" attributename="givenname">Clemens</value>
+  <value type="string" id="idm106589934576" attributename="name">Pfeffer</value>
+  <value type="string" id="idm106589934336" attributename="email">clemens.pfeffer@univie.ac.at</value>
+  <value type="string" id="idm106589933568" attributename="givenname">Sara</value>
+  <value type="string" id="idm106589933328" attributename="name">De Jong</value>
+  <value type="string" id="idm106589933088" attributename="email">sara.de.jong@univie.ac.at</value>
+  <value type="string" id="idm106589931840" attributename="name">Mobility, Borders, Transnationalisation: Concepts and Debates</value>
+  <value type="string" id="idm106589928672" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40630</value>
+  <value type="string" id="idm106589901040" attributename="givenname">Petra</value>
+  <value type="string" id="idm106589900800" attributename="name">Dannecker</value>
+  <value type="string" id="idm106589900560" attributename="email">petra.dannecker@univie.ac.at</value>
+  <value type="string" id="idm106589899296" attributename="name">VM1 - VM2 - International Environment and Economic Development</value>
+  <value type="string" id="idm106589896128" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41351</value>
+  <value type="string" id="idm106589843680" attributename="name">PM Exkursion und Global Studies</value>
+  <value type="string" id="idm106589843424" attributename="id">706_49</value>
+  <value type="string" id="idm106589835424" attributename="name">Strohmeier</value>
+  <value type="string" id="idm106589835184" attributename="email">gerhard.strohmeier@univie.ac.at</value>
+  <value type="string" id="idm106589833920" attributename="name">Global Studies</value>
+  <value type="string" id="idm106589830880" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41238</value>
+  <value type="string" id="idm106589787760" attributename="name">4. Alternative Pflichtmodule</value>
+  <value type="string" id="idm106589787504" attributename="id">706_50</value>
+  <value type="string" id="idm106589786768" attributename="name">APM Forschungsmodul Globalgeschichte</value>
+  <value type="string" id="idm106589786496" attributename="id">706_51</value>
+  <value type="string" id="idm106589770784" attributename="name">APM Forschungsmodul Global Studies</value>
+  <value type="string" id="idm106589770512" attributename="id">706_52</value>
+  <value type="string" id="idm106589769776" attributename="name">APM Angewandte Globalgeschichte</value>
+  <value type="string" id="idm106589769520" attributename="id">706_53</value>
+  <value type="string" id="idm106589768544" attributename="name">Gandhi's Political Philosophy and Practice</value>
+  <value type="string" id="idm106589765392" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38270</value>
+  <value type="string" id="idm106589762720" attributename="roomnumber">2C-O1-34</value>
+  <value type="string" id="idm106589730144" attributename="name">Gaenszle</value>
+  <value type="string" id="idm106589729904" attributename="email">martin.gaenszle@univie.ac.at</value>
+  <value type="string" id="idm106589728752" attributename="name">APM Angewandte Global Studies</value>
+  <value type="string" id="idm106589728496" attributename="id">706_54</value>
+  <value type="string" id="idm106589692352" attributename="name">5. Master-Modul</value>
+  <value type="string" id="idm106589692112" attributename="id">706_55</value>
+  <value type="string" id="idm106589049200" attributename="name">7.6.4 MA Frauen- und Geschlechtergeschichte (auslaufend)</value>
+  <value type="string" id="idm106589048912" attributename="id">706_56</value>
+  <value type="string" id="idm106589047920" attributename="id">706_57</value>
+  <value type="string" id="idm106589046896" attributename="id">706_58</value>
+  <value type="string" id="idm106588923072" attributename="id">706_59</value>
+  <value type="string" id="idm106588786688" attributename="id">706_60</value>
+  <value type="string" id="idm106588785952" attributename="name">APM Einf&#xFC;hrung in die Frauen- und Geschlechtergeschichte</value>
+  <value type="string" id="idm106588785664" attributename="id">706_61</value>
+  <value type="string" id="idm106588784688" attributename="name">Women's and Gender History</value>
+  <value type="string" id="idm106588781616" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40143</value>
+  <value type="string" id="idm106588744752" attributename="name">APM Erweiternde Lehrveranstaltungen im disziplin&#xE4;ren Kontext: Lehrveranstaltungen beliebigen Typs aus dem Angebot der geschichtswissenschaftlichen Masterstudien</value>
+  <value type="string" id="idm106588744352" attributename="id">706_62</value>
+  <value type="string" id="idm106588743328" attributename="id">706_63</value>
+  <value type="string" id="idm106588742608" attributename="name">PM Theorien, Quellen und Methoden der Frauen- und Geschlechtergeschichte</value>
+  <value type="string" id="idm106588742304" attributename="id">706_64</value>
+  <value type="string" id="idm106588741456" attributename="name">PM Exkursion und transdisziplin&#xE4;rer Kontext</value>
+  <value type="string" id="idm106588741184" attributename="id">706_65</value>
+  <value type="string" id="idm106588674096" attributename="name">4. Pflichtmodulgruppe Vertiefung</value>
+  <value type="string" id="idm106588673824" attributename="id">706_66</value>
+  <value type="string" id="idm106588673088" attributename="name">PM Vertiefung 1: Fragestellungen und Themen der Frauen- und Geschlechtergeschichte</value>
+  <value type="string" id="idm106588672768" attributename="id">706_67</value>
+  <value type="string" id="idm106588274560" attributename="name">PM Vertiefung 2: Fragestellungen und Themen der Frauen- und Geschlechtergeschichte</value>
+  <value type="string" id="idm106588274240" attributename="id">706_68</value>
+  <value type="string" id="idm106587892176" attributename="name">PM Forschungsmodul Frauen- und Geschlechtergeschichte</value>
+  <value type="string" id="idm106587891888" attributename="id">706_69</value>
+  <value type="string" id="idm106587866720" attributename="name">PM Angewandte Frauen- und Geschlechtergeschichte</value>
+  <value type="string" id="idm106587866432" attributename="id">706_70</value>
+  <value type="string" id="idm106587865328" attributename="id">706_71</value>
+  <value type="string" id="idm106587271664" attributename="name">7.6.5 MA Geschichte 2008 (auslaufend)</value>
+  <value type="string" id="idm106587271392" attributename="id">706_72</value>
+  <value type="string" id="idm106587270400" attributename="id">706_73</value>
+  <value type="string" id="idm106587269376" attributename="id">706_74</value>
+  <value type="string" id="idm106587129296" attributename="id">706_75</value>
+  <value type="string" id="idm106586992912" attributename="id">706_76</value>
+  <value type="string" id="idm106586992176" attributename="name">APM Erweiternde Lehrveranstaltungen</value>
+  <value type="string" id="idm106586991904" attributename="id">706_77</value>
+  <value type="string" id="idm106586991168" attributename="name">APM Schwerpunktvorbereitung</value>
+  <value type="string" id="idm106586990912" attributename="id">706_78</value>
+  <value type="string" id="idm106586989712" attributename="name">Guided Reading</value>
+  <value type="string" id="idm106586989472" attributename="title">Guided Reading - Jezebel&#x2019;s Daughters: Representations of Female Power and Spirituality from Late Antiquity to the High Middle Ages</value>
+  <value type="string" id="idm106586989104" attributename="type">GR</value>
+  <value type="string" id="idm106586986624" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40160</value>
+  <value type="string" id="idm106586953680" attributename="name">Wieser</value>
+  <value type="string" id="idm106586953440" attributename="email">veronika.wieser@univie.ac.at</value>
+  <value type="string" id="idm106586951936" attributename="title">Guided Reading - Origin and Early Stages of the European Expansion Overseas</value>
+  <value type="string" id="idm106586949072" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42590</value>
+  <value type="string" id="idm106586945632" attributename="date">04-Sep-2015</value>
+  <value type="string" id="idm106586943200" attributename="date">05-Sep-2015</value>
+  <value type="string" id="idm106586940784" attributename="date">12-Sep-2015</value>
+  <value type="string" id="idm106586935296" attributename="name">Obenaus</value>
+  <value type="string" id="idm106586935056" attributename="email">andreas.obenaus@univie.ac.at</value>
+  <value type="string" id="idm106586933552" attributename="title">Guided Reading - Theories of development and industrialization</value>
+  <value type="string" id="idm106586927328" attributename="date">08-Jul-2015</value>
+  <value type="string" id="idm106586924912" attributename="date">09-Jul-2015</value>
+  <value type="string" id="idm106586922096" attributename="givenname">Alexander</value>
+  <value type="string" id="idm106586921856" attributename="name">Reinold</value>
+  <value type="string" id="idm106586921616" attributename="email">alexander.reinold@univie.ac.at</value>
+  <value type="string" id="idm106586920336" attributename="name">3. Alternative Pflichtmodulgruppen - Schwerpunkte im MA Geschichte</value>
+  <value type="string" id="idm106586920032" attributename="id">706_79</value>
+  <value type="string" id="idm106586919296" attributename="name">3.1. APMG Alte Geschichte und Altertumskunde</value>
+  <value type="string" id="idm106586919024" attributename="id">706_80</value>
+  <value type="string" id="idm106586918288" attributename="name">PM Theorien, Quellen und Methoden der Alten Geschichte und Altertumskunde</value>
+  <value type="string" id="idm106586917984" attributename="id">706_81</value>
+  <value type="string" id="idm106586917248" attributename="name">PM Vertiefung 1: Griechische Geschichte</value>
+  <value type="string" id="idm106586916976" attributename="id">706_82</value>
+  <value type="string" id="idm106586873360" attributename="name">PM Vertiefung 2: R&#xF6;mische Geschichte</value>
+  <value type="string" id="idm106586873088" attributename="id">706_83</value>
+  <value type="string" id="idm106586829360" attributename="name">Seminar in Roman History </value>
+  <value type="string" id="idm106586829104" attributename="title">Seminar in Roman History  - The third century crisis of the Roman Empire</value>
+  <value type="string" id="idm106586826240" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38039</value>
+  <value type="string" id="idm106586824176" attributename="room">&#xDC;bungsraum</value>
+  <value type="string" id="idm106586823456" attributename="roomnumber">TP.96</value>
+  <value type="string" id="idm106586825344" attributename="givenname">Fritz</value>
+  <value type="string" id="idm106586795600" attributename="name">Mitthof</value>
+  <value type="string" id="idm106586795360" attributename="email">fritz.mitthof@univie.ac.at</value>
+  <value type="string" id="idm106586794208" attributename="name">PM Angewandte Geschichte der Antike: Exkursion(en)</value>
+  <value type="string" id="idm106586793920" attributename="id">706_84</value>
+  <value type="string" id="idm106586793184" attributename="name">PM Altertumskunde</value>
+  <value type="string" id="idm106586792928" attributename="id">706_85</value>
+  <value type="string" id="idm106586792192" attributename="name">PM Forschungsmodul Alte Geschichte und Altertumskunde</value>
+  <value type="string" id="idm106586791904" attributename="id">706_86</value>
+  <value type="string" id="idm106586791040" attributename="name">3.2. APMG Mittelalterliche Geschichte</value>
+  <value type="string" id="idm106586790768" attributename="id">706_87</value>
+  <value type="string" id="idm106586789792" attributename="name">Basics of Medieval and Modern Palaeography </value>
+  <value type="string" id="idm106586714416" attributename="name">PM Theorien, Quellen und Methoden: Analyse und Interpretation von Quellen zur mittelalterlichen Geschichte</value>
+  <value type="string" id="idm106586714192" attributename="id">706_88</value>
+  <value type="string" id="idm106586635584" attributename="name">PM Vertiefung 1: Mittelalter I (bis ca. 1200)</value>
+  <value type="string" id="idm106586635312" attributename="id">706_89</value>
+  <value type="string" id="idm106586367648" attributename="name">PM Vertiefung 2: Mittelalter II (ca. 1200 - ca. 1500)</value>
+  <value type="string" id="idm106586367360" attributename="id">706_90</value>
+  <value type="string" id="idm106586039488" attributename="name">PM Forschungsmodul Mittelalterliche Geschichte</value>
+  <value type="string" id="idm106586039216" attributename="id">706_91</value>
+  <value type="string" id="idm106586038480" attributename="name">PM Angewandte Mittelalterliche Geschichte</value>
+  <value type="string" id="idm106586038208" attributename="id">706_92</value>
+  <value type="string" id="idm106586037472" attributename="name">PM Historische Hilfswissenschaften der  mittelalterlichen Geschichte mit Exkursion</value>
+  <value type="string" id="idm106586037152" attributename="id">706_93</value>
+  <value type="string" id="idm106586036176" attributename="name">Outlines of Byzantine Numismatics</value>
+  <value type="string" id="idm106586034512" attributename="responsible_unit">Studienprogrammleitung &#xC4;gyptologie, Judaistik, Urgeschichte und Historische Arch&#xE4;ologie</value>
+  <value type="string" id="idm106586031152" attributename="room">Seminarraum 11</value>
+  <value type="string" id="idm106586030432" attributename="roomnumber">AE.18</value>
+  <value type="string" id="idm106586030192" attributename="street">Franz-Klein-Gasse 1</value>
+  <value type="string" id="idm106585997632" attributename="name">Hahn</value>
+  <value type="string" id="idm106585997392" attributename="email">wolfgang.hahn@univie.ac.at</value>
+  <value type="string" id="idm106585995888" attributename="title">Guided Reading - Internationalism and international organizations with a particular focus on the League of Nations</value>
+  <value type="string" id="idm106585992976" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39515</value>
+  <value type="string" id="idm106585920848" attributename="name">3.3. APMG Geschichte der Neuzeit</value>
+  <value type="string" id="idm106585920576" attributename="id">706_94</value>
+  <value type="string" id="idm106585919840" attributename="name">PM Theorien, Quellen und Methoden der Geschichte der Neuzeit</value>
+  <value type="string" id="idm106585919552" attributename="id">706_95</value>
+  <value type="string" id="idm106585918816" attributename="name">PM Vertiefung 1: Fr&#xFC;he Neuzeit (ca. 1500 bis ca. 1800)</value>
+  <value type="string" id="idm106585918528" attributename="id">706_96</value>
+  <value type="string" id="idm106585248656" attributename="name">PM Vertiefung 2: Sp&#xE4;te Neuzeit ( Neueste Geschichte) (ca. 1800 bis heute)</value>
+  <value type="string" id="idm106585248352" attributename="id">706_97</value>
+  <value type="string" id="idm106591661648" attributename="name">PM Exkursion und transdiziplin&#xE4;re &#xD6;ffnung</value>
+  <value type="string" id="idm106591661376" attributename="id">706_98</value>
+  <value type="string" id="idm106591660400" attributename="name">From the protection of persecuted co-religionist to the protection of universal human rights</value>
+  <value type="string" id="idm106591660080" attributename="title">From the protection of persecuted co-religionist to the protection of universal human rights - Theory and practice of humanitarian intervention in historcial perspective</value>
+  <value type="string" id="idm106591654544" attributename="roomnumber">HSU12</value>
+  <value type="string" id="idm106591629344" attributename="name">Law and Empire</value>
+  <value type="string" id="idm106591624448" attributename="room">Seminarraum 31</value>
+  <value type="string" id="idm106591623728" attributename="roomnumber">SEM31</value>
+  <value type="string" id="idm106591616432" attributename="roomnumber">HSU16</value>
+  <value type="string" id="idm106591598928" attributename="name">Judeities - A legal, political and cultural history of the Jews in the Early Modern Period</value>
+  <value type="string" id="idm106591567952" attributename="name">Seminar on history of international law</value>
+  <value type="string" id="idm106591567680" attributename="title">Seminar on history of international law - for diploma and doctoral students</value>
+  <value type="string" id="idm106591564816" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40898</value>
+  <value type="string" id="idm106591562880" attributename="room">Seminarraum 33</value>
+  <value type="string" id="idm106591562160" attributename="roomnumber">SEM33</value>
+  <value type="string" id="idm106591560448" attributename="room">Seminarraum 34</value>
+  <value type="string" id="idm106591559728" attributename="roomnumber">SEM34</value>
+  <value type="string" id="idm106591558560" attributename="givenname">Milos</value>
+  <value type="string" id="idm106591558320" attributename="name">Vec</value>
+  <value type="string" id="idm106591558064" attributename="email">milos.vec@univie.ac.at</value>
+  <value type="string" id="idm106591527328" attributename="name">PM Angewandte Geschichte der Neuzeit</value>
+  <value type="string" id="idm106591527056" attributename="id">706_99</value>
+  <value type="string" id="idm106591503984" attributename="name">PM Forschungsmodul Geschichte der Neuzeit</value>
+  <value type="string" id="idm106591503712" attributename="id">706_100</value>
+  <value type="string" id="idm106591496400" attributename="name">3.4. APMG &#xD6;sterreichische Geschichte</value>
+  <value type="string" id="idm106591496128" attributename="id">706_101</value>
+  <value type="string" id="idm106591495152" attributename="name">Austrian History II</value>
+  <value type="string" id="idm106591492080" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41012</value>
+  <value type="string" id="idm106584095936" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=37838</value>
+  <value type="string" id="idm106583980768" attributename="name">Weber</value>
+  <value type="string" id="idm106583980528" attributename="email">fritz.weber@univie.ac.at</value>
+  <value type="string" id="idm106583979024" attributename="title">Guided Reading - Austrian History II</value>
+  <value type="string" id="idm106583976192" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41013</value>
+  <value type="string" id="idm106583944448" attributename="name">PM Theorien, Quellen und Methoden der &#xD6;sterreichischen Geschichte</value>
+  <value type="string" id="idm106583944144" attributename="id">706_102</value>
+  <value type="string" id="idm106583943408" attributename="name">PM Vertiefung 1: &#xD6;sterreichische Geschichte des Mittelalters und der Fr&#xFC;hen Neuzeit</value>
+  <value type="string" id="idm106583943088" attributename="id">706_103</value>
+  <value type="string" id="idm106583595360" attributename="name">PM Vertiefung 2: &#xD6;sterreichische Geschichte seit dem 19. Jahrhundert</value>
+  <value type="string" id="idm106583595056" attributename="id">706_104</value>
+  <value type="string" id="idm106583293552" attributename="name">PM Forschungsmodul &#xD6;sterreichische Geschichte</value>
+  <value type="string" id="idm106583293280" attributename="id">706_105</value>
+  <value type="string" id="idm106583261792" attributename="name">PM Angewandte &#xD6;sterreichische Geschichte</value>
+  <value type="string" id="idm106583261520" attributename="id">706_106</value>
+  <value type="string" id="idm106583254080" attributename="id">706_107</value>
+  <value type="string" id="idm106583201616" attributename="name">3.5. APMG Wissenschaftsgeschichte</value>
+  <value type="string" id="idm106583201344" attributename="id">706_108</value>
+  <value type="string" id="idm106583200608" attributename="name">PM Theorien, Quellen und Methoden der Wissenschaftsgeschichte</value>
+  <value type="string" id="idm106583200320" attributename="id">706_109</value>
+  <value type="string" id="idm106583199584" attributename="name">PM Vertiefung 1: Probleme und Themen der Wissenschaftsgeschichte</value>
+  <value type="string" id="idm106583199280" attributename="id">706_110</value>
+  <value type="string" id="idm106582947456" attributename="name">PM Vertiefung 2: Probleme der Wissenschaftsgeschichte und transdiziplin&#xE4;re &#xD6;ffnung</value>
+  <value type="string" id="idm106582947136" attributename="id">706_111</value>
+  <value type="string" id="idm106582627264" attributename="name">PM Themen der Wissenschaftsgeschichte mit Exkursion</value>
+  <value type="string" id="idm106582626976" attributename="id">706_112</value>
+  <value type="string" id="idm106582626240" attributename="name">PM Angewandte Wissenschaftsgeschichte</value>
+  <value type="string" id="idm106582625968" attributename="id">706_113</value>
+  <value type="string" id="idm106582602896" attributename="name">PM Forschungsmodul  Wissenschaftsgeschichte</value>
+  <value type="string" id="idm106582602624" attributename="id">706_114</value>
+  <value type="string" id="idm106582595184" attributename="name">4. Master-Modul</value>
+  <value type="string" id="idm106582594944" attributename="id">706_115</value>
+  <value type="string" id="idm106581945904" attributename="name">7.6.6 MA Historisch-Kulturwissenschaftliche Europaforschung (auslaufend)</value>
+  <value type="string" id="idm106581945600" attributename="id">706_116</value>
+  <value type="string" id="idm106581938480" attributename="id">706_117</value>
+  <value type="string" id="idm106581937456" attributename="id">706_118</value>
+  <value type="string" id="idm106581813632" attributename="id">706_119</value>
+  <value type="string" id="idm106581677504" attributename="name">2. Pflichtmodule</value>
+  <value type="string" id="idm106581677248" attributename="id">706_120</value>
+  <value type="string" id="idm106581676512" attributename="name">PM Einf&#xFC;hrung Europ&#xE4;ische Geschichte</value>
+  <value type="string" id="idm106581676240" attributename="id">706_121</value>
+  <value type="string" id="idm106581675504" attributename="name">PM Theorien, Quellen und Methoden der Historisch-Kulturwissenschaftlichen Europaforschung</value>
+  <value type="string" id="idm106581675184" attributename="id">706_122</value>
+  <value type="string" id="idm106581457872" attributename="name">3. Pflichtmodulgruppe Vertiefung</value>
+  <value type="string" id="idm106581457600" attributename="id">706_123</value>
+  <value type="string" id="idm106581456864" attributename="name">PM Vertiefung 1: Historisch-Kulturwissenschaftliche Europaforschung in regionaler Perspektive</value>
+  <value type="string" id="idm106581456544" attributename="id">706_124</value>
+  <value type="string" id="idm106581112496" attributename="name">PM Vertiefung 2: Historisch-Kulturwissenschaftliche Europaforschung in raum&#xFC;bergreifender Perspektive</value>
+  <value type="string" id="idm106581112272" attributename="id">706_125</value>
+  <value type="string" id="idm106580866960" attributename="name">PM Exkursion und transdiziplin&#xE4;re Perspektive</value>
+  <value type="string" id="idm106580866688" attributename="id">706_126</value>
+  <value type="string" id="idm106580838832" attributename="name">PM Forschungsmodul Historisch-Kulturwissenschaftliche Europaforschung in transnationaler Perspektive</value>
+  <value type="string" id="idm106580838608" attributename="id">706_127</value>
+  <value type="string" id="idm106580791232" attributename="name">PM Angewandte Historisch-Kulturwissenschaftliche Europaforschung</value>
+  <value type="string" id="idm106580790928" attributename="id">706_128</value>
+  <value type="string" id="idm106580767488" attributename="id">706_129</value>
+  <value type="string" id="idm106580182112" attributename="name">Seminar on "relational approaches" in history and cultural studies</value>
+  <value type="string" id="idm106580181808" attributename="title">Seminar on "relational approaches" in history and cultural studies - Interdisciplinary Seminar for Doctoral Candidates and preparation for the 9th Graduate Conference in European History (Graceh)</value>
+  <value type="string" id="idm106580180256" attributename="responsible_unit">Studienprogrammleitung Historisch-Kulturwissenschaftliches Doktoratsstudium</value>
+  <value type="string" id="idm106580178992" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=38056</value>
+  <value type="string" id="idm106580148240" attributename="givenname">Philipp</value>
+  <value type="string" id="idm106580148016" attributename="name">Ther</value>
+  <value type="string" id="idm106580147792" attributename="email">philipp.ther@univie.ac.at</value>
+  <value type="string" id="idm106580139088" attributename="name">7.6.7 MA Osteurop&#xE4;ische Geschichte (auslaufend)</value>
+  <value type="string" id="idm106580138800" attributename="id">706_130</value>
+  <value type="string" id="idm106580137808" attributename="id">706_131</value>
+  <value type="string" id="idm106580136784" attributename="id">706_132</value>
+  <value type="string" id="idm106580012960" attributename="id">706_133</value>
+  <value type="string" id="idm106579860320" attributename="id">706_134</value>
+  <value type="string" id="idm106579859584" attributename="name">APM Grundlagen der osteurop&#xE4;ischen Geschichte</value>
+  <value type="string" id="idm106579859312" attributename="id">706_135</value>
+  <value type="string" id="idm106579858096" attributename="title">Guided Reading - History of the Roma</value>
+  <value type="string" id="idm106579855264" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41208</value>
+  <value type="string" id="idm106579820256" attributename="givenname">Konrad</value>
+  <value type="string" id="idm106579820016" attributename="name">Petrovszky</value>
+  <value type="string" id="idm106579819776" attributename="email">konrad.petrovszky@univie.ac.at</value>
+  <value type="string" id="idm106579818272" attributename="title">Guided Reading - Authoritarian Regimes in Southeast Europe</value>
+  <value type="string" id="idm106579815424" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41200</value>
+  <value type="string" id="idm106579809888" attributename="name">Eastern European History</value>
+  <value type="string" id="idm106579806816" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39640</value>
+  <value type="string" id="idm106579771792" attributename="name">Augustynowicz</value>
+  <value type="string" id="idm106579771552" attributename="email">christoph.augustynowicz@univie.ac.at</value>
+  <value type="string" id="idm106579770768" attributename="givenname">Alojz</value>
+  <value type="string" id="idm106579770528" attributename="name">Ivanisevic</value>
+  <value type="string" id="idm106579770288" attributename="email">alojz.ivanisevic@univie.ac.at</value>
+  <value type="string" id="idm106579767536" attributename="title">Guided Reading - Sources and Methods of Russian History</value>
+  <value type="string" id="idm106579764688" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=41240</value>
+  <value type="string" id="idm106579729680" attributename="givenname">Iskra</value>
+  <value type="string" id="idm106579729200" attributename="email">iskra.schwarcz@univie.ac.at</value>
+  <value type="string" id="idm106579727696" attributename="title">Guided Reading - Sources, Methods and Literature: From the Golden Horde to the End of the Crimean Khanate</value>
+  <value type="string" id="idm106579724912" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40988</value>
+  <value type="string" id="idm106579692592" attributename="title">Guided Reading - Cultural History of Eastern and Central Europe in the Modern Period</value>
+  <value type="string" id="idm106579689712" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40993</value>
+  <value type="string" id="idm106579667104" attributename="title">Guided Reading - From the first (1515) to the second Congrress of Vienna (1814/15)</value>
+  <value type="string" id="idm106579664224" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=39554</value>
+  <value type="string" id="idm106579627232" attributename="title">Guided Reading - Ukraine: Nationality, Nationalism and Memory</value>
+  <value type="string" id="idm106579621120" attributename="title">Guided Reading - Modern time history of Eastern Europa</value>
+  <value type="string" id="idm106579618272" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=40618</value>
+  <value type="string" id="idm106579581632" attributename="name">APM Exkursion und transdiziplin&#xE4;re &#xD6;ffnung</value>
+  <value type="string" id="idm106579581360" attributename="id">706_136</value>
+  <value type="string" id="idm106579559632" attributename="name">3. Modulgruppe Hauptprobleme, Quellen und Methoden der Osteurop&#xE4;ischen Geschichte</value>
+  <value type="string" id="idm106579559312" attributename="id">706_137</value>
+  <value type="string" id="idm106579558576" attributename="name">PM Hauptprobleme, Quellen und Methoden der russischen/ostslawischen Geschichte</value>
+  <value type="string" id="idm106579558272" attributename="id">706_138</value>
+  <value type="string" id="idm106579551088" attributename="name">PM Hauptprobleme, Quellen und Methoden der ostmitteleurop&#xE4;ischen Geschichte</value>
+  <value type="string" id="idm106579550784" attributename="id">706_139</value>
+  <value type="string" id="idm106579550048" attributename="name">PM Hauptprobleme, Quellen und Methoden der s&#xFC;dosteurop&#xE4;ischen Geschichte</value>
+  <value type="string" id="idm106579549744" attributename="id">706_140</value>
+  <value type="string" id="idm106579548880" attributename="name">4. Modulgruppe Vertiefung</value>
+  <value type="string" id="idm106579548624" attributename="id">706_141</value>
+  <value type="string" id="idm106579547888" attributename="name">PM Vertiefung Osteurop&#xE4;ische Geschichte I</value>
+  <value type="string" id="idm106579547616" attributename="id">706_142</value>
+  <value type="string" id="idm106579259568" attributename="name">PM Vertiefung Osteurop&#xE4;ische Geschichte II</value>
+  <value type="string" id="idm106579259296" attributename="id">706_143</value>
+  <value type="string" id="idm106579012592" attributename="name">PM Forschung Osteurop&#xE4;ische Geschichte</value>
+  <value type="string" id="idm106579012320" attributename="id">706_144</value>
+  <value type="string" id="idm106579011216" attributename="id">706_145</value>
+  <value type="string" id="idm106578368304" attributename="name">7.6.8 MA Wirtschafts- und Sozialgeschichte (auslaufend)</value>
+  <value type="string" id="idm106578368016" attributename="id">706_146</value>
+  <value type="string" id="idm106578367024" attributename="id">706_147</value>
+  <value type="string" id="idm106578366000" attributename="id">706_148</value>
+  <value type="string" id="idm106578284624" attributename="id">706_149</value>
+  <value type="string" id="idm106578148240" attributename="id">706_150</value>
+  <value type="string" id="idm106578147504" attributename="name">APM Grundlagen der Wirtschafts- und Sozialgeschichte</value>
+  <value type="string" id="idm106578147216" attributename="id">706_151</value>
+  <value type="string" id="idm106578146480" attributename="name">APM Wirtschafts- und Sozialgeschichte im transdisziplin&#xE4;ren Kontext</value>
+  <value type="string" id="idm106578146176" attributename="id">706_152</value>
+  <value type="string" id="idm106578145200" attributename="name">Keynes for Beginners (BA)</value>
+  <value type="string" id="idm106578144688" attributename="type">UK</value>
+  <value type="string" id="idm106578143568" attributename="responsible_unit">Studienprogrammleitung Wirtschaftswissenschaften</value>
+  <value type="string" id="idm106578142112" attributename="learningplatformurl">https://moodle.univie.ac.at/course/view.php?id=42243</value>
+  <value type="string" id="idm106578139440" attributename="roomnumber">EG.316</value>
+  <value type="string" id="idm106578139200" attributename="street">Oskar-Morgenstern-Platz 1</value>
+  <value type="string" id="idm106578069552" attributename="id">706_153</value>
+  <value type="string" id="idm106578068816" attributename="name">PM Wirtschafts-, sozial- und kulturwissenschaftliche Theorien</value>
+  <value type="string" id="idm106578068528" attributename="id">706_154</value>
+  <value type="string" id="idm106578067792" attributename="name">PM Qualitative und quantitative Methoden</value>
+  <value type="string" id="idm106578067520" attributename="id">706_155</value>
+  <value type="string" id="idm106578066384" attributename="id">706_156</value>
+  <value type="string" id="idm106578065648" attributename="name">PM Vertiefung 1: Themen, Probleme und Methoden der Wirtschafts- und Sozialgeschichte</value>
+  <value type="string" id="idm106578065328" attributename="id">706_157</value>
+  <value type="string" id="idm106577728752" attributename="name">PM Vertiefung 2: Themen, Probleme und Methoden der Wirtschafts- und Sozialgeschichte</value>
+  <value type="string" id="idm106577728432" attributename="id">706_158</value>
+  <value type="string" id="idm106577408112" attributename="name">PM Forschungsmodul Wirtschafts- und Sozialgeschichte</value>
+  <value type="string" id="idm106577407824" attributename="id">706_159</value>
+  <value type="string" id="idm106577366880" attributename="name">PM Angewandte Geschichte</value>
+  <value type="string" id="idm106577366624" attributename="id">706_160</value>
+  <value type="string" id="idm106577365520" attributename="id">706_161</value>
+  <value type="string" id="idm106576716480" attributename="name">7.6.9 MA Zeitgeschichte (auslaufend)</value>
+  <value type="string" id="idm106576716208" attributename="id">706_162</value>
+  <value type="string" id="idm106576715216" attributename="id">706_163</value>
+  <value type="string" id="idm106576714192" attributename="id">706_164</value>
+  <value type="string" id="idm106576630592" attributename="id">706_165</value>
+  <value type="string" id="idm106576494464" attributename="name">2. Pflichtmodul Theorien, Quellen und Methoden der Zeitgeschichte</value>
+  <value type="string" id="idm106576494160" attributename="id">706_166</value>
+  <value type="string" id="idm106576453136" attributename="id">706_167</value>
+  <value type="string" id="idm106576417344" attributename="name">PM Vertiefung 1: Fragestellungen und Themen der Zeitgeschichte</value>
+  <value type="string" id="idm106576417056" attributename="id">706_168</value>
+  <value type="string" id="idm106575829568" attributename="name">PM Vertiefung 2: Fragestellungen und Themen der Zeitgeschichte</value>
+  <value type="string" id="idm106575829280" attributename="id">706_169</value>
+  <value type="string" id="idm106575184192" attributename="name">PM Forschungsmodul Zeitgeschichte</value>
+  <value type="string" id="idm106575183920" attributename="id">706_170</value>
+  <value type="string" id="idm106575118672" attributename="name">PM Angewandte Zeitgeschichte</value>
+  <value type="string" id="idm106575118416" attributename="id">706_171</value>
+  <value type="string" id="idm106575117680" attributename="name">PM Erweiternde Lehrveranstaltungen mit Exkursion</value>
+  <value type="string" id="idm106575117392" attributename="id">706_172</value>
+  <value type="string" id="idm106575056496" attributename="name">4. Pflichtmodul Disziplin&#xE4;re und transdisziplin&#xE4;re Kontexte</value>
+  <value type="string" id="idm106575056208" attributename="id">706_173</value>
+  <value type="string" id="idm106574962656" attributename="id">706_174</value>
+  <value type="int" id="idm106607100432" attributename="numberOfStudyPrograms">9</value>
+  <value type="int" id="idm106607096864" attributename="id">070116</value>
+  <value type="int" id="idm106607095904" attributename="groupcount">1</value>
+  <value type="int" id="idm106607095200" attributename="weekhours">20</value>
+  <value type="int" id="idm106607094352" attributename="appointmentcount">13</value>
+  <value type="int" id="idm106607092944" attributename="duration_min_sum">1170</value>
+  <value type="int" id="idm106607091968" attributename="start">1315</value>
+  <value type="int" id="idm106607091744" attributename="end">1445</value>
+  <value type="int" id="idm106607091520" attributename="duration_min">90</value>
+  <value type="int" id="idm106607091040" attributename="zip">1010</value>
+  <value type="int" id="idm106607056528" attributename="id">070281</value>
+  <value type="int" id="idm106607092432" attributename="appointmentcount">10</value>
+  <value type="int" id="idm106607052752" attributename="duration_min_sum">1500</value>
+  <value type="int" id="idm106607052016" attributename="start">1600</value>
+  <value type="int" id="idm106607051776" attributename="end">1830</value>
+  <value type="int" id="idm106607051536" attributename="duration_min">150</value>
+  <value type="int" id="idm106607024736" attributename="id">070141</value>
+  <value type="int" id="idm106607022336" attributename="appointmentcount">14</value>
+  <value type="int" id="idm106607020912" attributename="duration_min_sum">1260</value>
+  <value type="int" id="idm106607020176" attributename="start">1645</value>
+  <value type="int" id="idm106607019936" attributename="end">1815</value>
+  <value type="int" id="idm106606983456" attributename="id">070072</value>
+  <value type="int" id="idm106606979552" attributename="duration_min_sum">1680</value>
+  <value type="int" id="idm106606978816" attributename="start">1000</value>
+  <value type="int" id="idm106606978576" attributename="end">1200</value>
+  <value type="int" id="idm106606978336" attributename="duration_min">120</value>
+  <value type="int" id="idm106606977872" attributename="zip">1090</value>
+  <value type="int" id="idm106606943536" attributename="id">070075</value>
+  <value type="int" id="idm106606941136" attributename="appointmentcount">12</value>
+  <value type="int" id="idm106606939712" attributename="duration_min_sum">1080</value>
+  <value type="int" id="idm106606938976" attributename="start">900</value>
+  <value type="int" id="idm106607094576" attributename="end">1030</value>
+  <value type="int" id="idm106606907456" attributename="id">070081</value>
+  <value type="int" id="idm106606902736" attributename="start">1145</value>
+  <value type="int" id="idm106606867024" attributename="id">070090</value>
+  <value type="int" id="idm106606864608" attributename="appointmentcount">15</value>
+  <value type="int" id="idm106606863184" attributename="duration_min_sum">1350</value>
+  <value type="int" id="idm106606862448" attributename="start">1330</value>
+  <value type="int" id="idm106606824304" attributename="id">070182</value>
+  <value type="int" id="idm106606820464" attributename="duration_min_sum">1800</value>
+  <value type="int" id="idm106606785216" attributename="duration_min">540</value>
+  <value type="int" id="idm106606781600" attributename="id">070193</value>
+  <value type="int" id="idm106606739104" attributename="id">070234</value>
+  <value type="int" id="idm106606734336" attributename="end">1700</value>
+  <value type="int" id="idm106606699312" attributename="id">070258</value>
+  <value type="int" id="idm106606663648" attributename="id">070278</value>
+  <value type="int" id="idm106606659088" attributename="start">1045</value>
+  <value type="int" id="idm106606632000" attributename="id">070076</value>
+  <value type="int" id="idm106606627200" attributename="end">1215</value>
+  <value type="int" id="idm106606595344" attributename="id">070083</value>
+  <value type="int" id="idm106606590528" attributename="end">1345</value>
+  <value type="int" id="idm106606559920" attributename="id">070115</value>
+  <value type="int" id="idm106606555312" attributename="start">1515</value>
+  <value type="int" id="idm106606517168" attributename="id">070146</value>
+  <value type="int" id="idm106606512320" attributename="end">1630</value>
+  <value type="int" id="idm106606475616" attributename="id">070279</value>
+  <value type="int" id="idm106606473216" attributename="appointmentcount">4</value>
+  <value type="int" id="idm106606471792" attributename="duration_min_sum">1095</value>
+  <value type="int" id="idm106606471056" attributename="start">1115</value>
+  <value type="int" id="idm106606470816" attributename="end">1245</value>
+  <value type="int" id="idm106606465968" attributename="end">1415</value>
+  <value type="int" id="idm106606465728" attributename="duration_min">315</value>
+  <value type="int" id="idm106606463776" attributename="start">800</value>
+  <value type="int" id="idm106606463312" attributename="duration_min">600</value>
+  <value type="int" id="idm106606462368" attributename="roomnumber">2.15</value>
+  <value type="int" id="idm106606458592" attributename="id">070086</value>
+  <value type="int" id="idm106606453888" attributename="start">1845</value>
+  <value type="int" id="idm106606453648" attributename="end">2015</value>
+  <value type="int" id="idm106606418176" attributename="id">070110</value>
+  <value type="int" id="idm106606411856" attributename="id">070192</value>
+  <value type="int" id="idm106606371680" attributename="id">070197</value>
+  <value type="int" id="idm106606367760" attributename="duration_min_sum">1605</value>
+  <value type="int" id="idm106606366784" attributename="end">1730</value>
+  <value type="int" id="idm106606349888" attributename="start">945</value>
+  <value type="int" id="idm106606349664" attributename="end">2000</value>
+  <value type="int" id="idm106606349424" attributename="duration_min">615</value>
+  <value type="int" id="idm106606347264" attributename="end">1400</value>
+  <value type="int" id="idm106606347024" attributename="duration_min">360</value>
+  <value type="int" id="idm106606342288" attributename="id">070263</value>
+  <value type="int" id="idm106606339824" attributename="appointmentcount">16</value>
+  <value type="int" id="idm106606338368" attributename="duration_min_sum">2340</value>
+  <value type="int" id="idm106606303584" attributename="start">830</value>
+  <value type="int" id="idm106606303360" attributename="end">1430</value>
+  <value type="int" id="idm106606300928" attributename="end">2100</value>
+  <value type="int" id="idm106606300688" attributename="duration_min">300</value>
+  <value type="int" id="idm106606297040" attributename="id">070280</value>
+  <value type="int" id="idm106606294624" attributename="appointmentcount">2</value>
+  <value type="int" id="idm106606293200" attributename="duration_min_sum">1230</value>
+  <value type="int" id="idm106606283728" attributename="id">070014</value>
+  <value type="int" id="idm106606277408" attributename="id">070066</value>
+  <value type="int" id="idm106606274992" attributename="appointmentcount">7</value>
+  <value type="int" id="idm106606272352" attributename="duration_min">240</value>
+  <value type="int" id="idm106605059216" attributename="id">070191</value>
+  <value type="int" id="idm106605056832" attributename="appointmentcount">3</value>
+  <value type="int" id="idm106605044368" attributename="id">070272</value>
+  <value type="int" id="idm106605003184" attributename="id">070015</value>
+  <value type="int" id="idm106604996880" attributename="id">070092</value>
+  <value type="int" id="idm106604979856" attributename="id">070093</value>
+  <value type="int" id="idm106604938304" attributename="id">010006</value>
+  <value type="int" id="idm106604895920" attributename="id">010040</value>
+  <value type="int" id="idm106604890752" attributename="duration_min">195</value>
+  <value type="int" id="idm106606265504" attributename="end">1300</value>
+  <value type="int" id="idm106606253696" attributename="start">1130</value>
+  <value type="int" id="idm106606248384" attributename="id">010223</value>
+  <value type="int" id="idm106606244560" attributename="duration_min_sum">1440</value>
+  <value type="int" id="idm106606203632" attributename="id">030621</value>
+  <value type="int" id="idm106606197248" attributename="id">030314</value>
+  <value type="int" id="idm106606190624" attributename="id">070267</value>
+  <value type="int" id="idm106606148208" attributename="id">070235</value>
+  <value type="int" id="idm106603998400" attributename="id">070036</value>
+  <value type="int" id="idm106603955952" attributename="id">070236</value>
+  <value type="int" id="idm106603915824" attributename="id">070085</value>
+  <value type="int" id="idm106603872192" attributename="id">070055</value>
+  <value type="int" id="idm106603830848" attributename="id">070277</value>
+  <value type="int" id="idm106603826992" attributename="duration_min_sum">1620</value>
+  <value type="int" id="idm106603825776" attributename="duration_min">180</value>
+  <value type="int" id="idm106603802976" attributename="id">070107</value>
+  <value type="int" id="idm106603762992" attributename="id">070113</value>
+  <value type="int" id="idm106603727744" attributename="id">070259</value>
+  <value type="int" id="idm106603685344" attributename="id">070183</value>
+  <value type="int" id="idm106603681488" attributename="duration_min_sum">1320</value>
+  <value type="int" id="idm106603680160" attributename="duration_min">60</value>
+  <value type="int" id="idm106603643072" attributename="id">070094</value>
+  <value type="int" id="idm106603603040" attributename="id">070143</value>
+  <value type="int" id="idm106603562896" attributename="id">070404</value>
+  <value type="int" id="idm106603558048" attributename="end">1100</value>
+  <value type="int" id="idm106603527984" attributename="id">070237</value>
+  <value type="int" id="idm106603521760" attributename="id">070262</value>
+  <value type="int" id="idm106603517952" attributename="duration_min_sum">960</value>
+  <value type="int" id="idm106603504704" attributename="id">070088</value>
+  <value type="int" id="idm106603490096" attributename="id">070062</value>
+  <value type="int" id="idm106603487712" attributename="appointmentcount">5</value>
+  <value type="int" id="idm106603471936" attributename="id">070089</value>
+  <value type="int" id="idm106603467104" attributename="end">1545</value>
+  <value type="int" id="idm106603431632" attributename="id">070095</value>
+  <value type="int" id="idm106603427920" attributename="duration_min_sum">210</value>
+  <value type="int" id="idm106603423232" attributename="roomnumber">1.01</value>
+  <value type="int" id="idm106603420576" attributename="id">070001</value>
+  <value type="int" id="idm106603418128" attributename="appointmentcount">6</value>
+  <value type="int" id="idm106603416704" attributename="duration_min_sum">1035</value>
+  <value type="int" id="idm106603403328" attributename="duration_min">135</value>
+  <value type="int" id="idm106603399712" attributename="id">070096</value>
+  <value type="int" id="idm106603395840" attributename="duration_min_sum">1140</value>
+  <value type="int" id="idm106603365872" attributename="end">1745</value>
+  <value type="int" id="idm106603362016" attributename="id">070114</value>
+  <value type="int" id="idm106603324336" attributename="id">070282</value>
+  <value type="int" id="idm106603282048" attributename="id">080043</value>
+  <value type="int" id="idm106603242112" attributename="id">070184</value>
+  <value type="int" id="idm106603239680" attributename="appointmentcount">11</value>
+  <value type="int" id="idm106603238256" attributename="duration_min_sum">990</value>
+  <value type="int" id="idm106603209120" attributename="id">070250</value>
+  <value type="int" id="idm106603169168" attributename="id">070070</value>
+  <value type="int" id="idm106603128064" attributename="id">070268</value>
+  <value type="int" id="idm106603125632" attributename="appointmentcount">8</value>
+  <value type="int" id="idm106603099920" attributename="id">070071</value>
+  <value type="int" id="idm106603064864" attributename="id">070306</value>
+  <value type="int" id="idm106603025232" attributename="id">070065</value>
+  <value type="int" id="idm106594579056" attributename="id">070040</value>
+  <value type="int" id="idm106594575200" attributename="duration_min_sum">1380</value>
+  <value type="int" id="idm106594548336" attributename="id">070230</value>
+  <value type="int" id="idm106594525152" attributename="id">070082</value>
+  <value type="int" id="idm106594521376" attributename="duration_min_sum">1410</value>
+  <value type="int" id="idm106594499520" attributename="id">070084</value>
+  <value type="int" id="idm106594493344" attributename="id">070269</value>
+  <value type="int" id="idm106594449680" attributename="id">090136</value>
+  <value type="int" id="idm106594444864" attributename="end">1530</value>
+  <value type="int" id="idm106594407408" attributename="id">070002</value>
+  <value type="int" id="idm106594403632" attributename="duration_min_sum">750</value>
+  <value type="int" id="idm106594402448" attributename="end">1900</value>
+  <value type="int" id="idm106594390192" attributename="id">070206</value>
+  <value type="int" id="idm106594382784" attributename="duration_min">420</value>
+  <value type="int" id="idm106594379168" attributename="id">070284</value>
+  <value type="int" id="idm106594372624" attributename="id">070285</value>
+  <value type="int" id="idm106594366544" attributename="id">140245</value>
+  <value type="int" id="idm106594372848" attributename="id">140247</value>
+  <value type="int" id="idm106594289264" attributename="id">140249</value>
+  <value type="int" id="idm106594254176" attributename="id">140314</value>
+  <value type="int" id="idm106594214208" attributename="id">150074</value>
+  <value type="int" id="idm106594209616" attributename="start">815</value>
+  <value type="int" id="idm106594172192" attributename="id">180054</value>
+  <value type="int" id="idm106594132064" attributename="id">180057</value>
+  <value type="int" id="idm106593529536" attributename="id">070289</value>
+  <value type="int" id="idm106593514736" attributename="duration_min">330</value>
+  <value type="int" id="idm106593507456" attributename="id">070291</value>
+  <value type="int" id="idm106593467152" attributename="id">070294</value>
+  <value type="int" id="idm106593428160" attributename="id">180173</value>
+  <value type="int" id="idm106593384400" attributename="id">070295</value>
+  <value type="int" id="idm106593378288" attributename="id">070297</value>
+  <value type="int" id="idm106593371040" attributename="id">070016</value>
+  <value type="int" id="idm106593364912" attributename="id">070047</value>
+  <value type="int" id="idm106593322256" attributename="id">070048</value>
+  <value type="int" id="idm106593318432" attributename="duration_min_sum">2520</value>
+  <value type="int" id="idm106593317456" attributename="end">2045</value>
+  <value type="int" id="idm106593281984" attributename="id">070049</value>
+  <value type="int" id="idm106593275776" attributename="id">070063</value>
+  <value type="int" id="idm106593271952" attributename="duration_min_sum">1650</value>
+  <value type="int" id="idm106593271216" attributename="start">930</value>
+  <value type="int" id="idm106593243328" attributename="id">070064</value>
+  <value type="int" id="idm106593203584" attributename="id">070067</value>
+  <value type="int" id="idm106593180640" attributename="id">070068</value>
+  <value type="int" id="idm106593143216" attributename="id">070069</value>
+  <value type="int" id="idm106593139472" attributename="duration_min_sum">1560</value>
+  <value type="int" id="idm106593138256" attributename="duration_min">480</value>
+  <value type="int" id="idm106593126256" attributename="id">070073</value>
+  <value type="int" id="idm106593119040" attributename="end">1930</value>
+  <value type="int" id="idm106593084000" attributename="id">070074</value>
+  <value type="int" id="idm106593058656" attributename="id">070098</value>
+  <value type="int" id="idm106593053904" attributename="end">1915</value>
+  <value type="int" id="idm106593023296" attributename="id">070099</value>
+  <value type="int" id="idm106593019440" attributename="duration_min_sum">1065</value>
+  <value type="int" id="idm106593003632" attributename="duration_min">525</value>
+  <value type="int" id="idm106592999984" attributename="id">070100</value>
+  <value type="int" id="idm106592994912" attributename="duration_min">165</value>
+  <value type="int" id="idm106592974272" attributename="id">070101</value>
+  <value type="int" id="idm106592965616" attributename="id">070103</value>
+  <value type="int" id="idm106592961760" attributename="duration_min_sum">570</value>
+  <value type="int" id="idm106592954512" attributename="id">070109</value>
+  <value type="int" id="idm106592914400" attributename="id">070119</value>
+  <value type="int" id="idm106592875280" attributename="id">070144</value>
+  <value type="int" id="idm106592867792" attributename="id">070145</value>
+  <value type="int" id="idm106592851888" attributename="id">070148</value>
+  <value type="int" id="idm106592845680" attributename="id">070185</value>
+  <value type="int" id="idm106592839472" attributename="id">070188</value>
+  <value type="int" id="idm106592833264" attributename="id">070189</value>
+  <value type="int" id="idm106604889712" attributename="id">070190</value>
+  <value type="int" id="idm106594100144" attributename="id">070261</value>
+  <value type="int" id="idm106594094016" attributename="id">070270</value>
+  <value type="int" id="idm106594058848" attributename="id">070276</value>
+  <value type="int" id="idm106593962640" attributename="id">070241</value>
+  <value type="int" id="idm106593956512" attributename="id">070242</value>
+  <value type="int" id="idm106593928528" attributename="id">070247</value>
+  <value type="int" id="idm106593892192" attributename="id">070253</value>
+  <value type="int" id="idm106593852144" attributename="id">070254</value>
+  <value type="int" id="idm106593850496" attributename="weekhours">40</value>
+  <value type="int" id="idm106593849744" attributename="appointmentcount">27</value>
+  <value type="int" id="idm106593848384" attributename="duration_min_sum">2430</value>
+  <value type="int" id="idm106593779648" attributename="id">070240</value>
+  <value type="int" id="idm106593777232" attributename="appointmentcount">42</value>
+  <value type="int" id="idm106593775872" attributename="duration_min_sum">4680</value>
+  <value type="int" id="idm106593664000" attributename="id">070248</value>
+  <value type="int" id="idm106593628864" attributename="id">070255</value>
+  <value type="int" id="idm106593584080" attributename="id">070150</value>
+  <value type="int" id="idm106593580224" attributename="duration_min_sum">1710</value>
+  <value type="int" id="idm106592474560" attributename="id">070244</value>
+  <value type="int" id="idm106592468432" attributename="id">070256</value>
+  <value type="int" id="idm106592424800" attributename="id">070246</value>
+  <value type="int" id="idm106592400544" attributename="id">070251</value>
+  <value type="int" id="idm106592393088" attributename="duration_min">30</value>
+  <value type="int" id="idm106592385936" attributename="id">070257</value>
+  <value type="int" id="idm106592382096" attributename="duration_min_sum">975</value>
+  <value type="int" id="idm106592379952" attributename="roomnumber">1.23</value>
+  <value type="int" id="idm106591135696" attributename="id">070138</value>
+  <value type="int" id="idm106590878064" attributename="id">070117</value>
+  <value type="int" id="idm106590842576" attributename="id">070139</value>
+  <value type="int" id="idm106590799008" attributename="id">030248</value>
+  <value type="int" id="idm106590794144" attributename="end">2030</value>
+  <value type="int" id="idm106590773264" attributename="id">120011</value>
+  <value type="int" id="idm106590733216" attributename="id">124011</value>
+  <value type="int" id="idm106590700832" attributename="id">140290</value>
+  <value type="int" id="idm106590660912" attributename="id">140294</value>
+  <value type="int" id="idm106590620816" attributename="id">140369</value>
+  <value type="int" id="idm106590540944" attributename="id">070211</value>
+  <value type="int" id="idm106590463024" attributename="id">140329</value>
+  <value type="int" id="idm106590326304" attributename="id">070249</value>
+  <value type="int" id="idm106590322464" attributename="duration_min_sum">1590</value>
+  <value type="int" id="idm106590287440" attributename="end">2130</value>
+  <value type="int" id="idm106590177328" attributename="id">140409</value>
+  <value type="int" id="idm106590008352" attributename="id">140288</value>
+  <value type="int" id="idm106590004464" attributename="duration_min_sum">2160</value>
+  <value type="int" id="idm106589973264" attributename="id">140366</value>
+  <value type="int" id="idm106589932080" attributename="id">140368</value>
+  <value type="int" id="idm106589899536" attributename="id">140401</value>
+  <value type="int" id="idm106589842688" attributename="id">070243</value>
+  <value type="int" id="idm106589834160" attributename="id">070245</value>
+  <value type="int" id="idm106589768784" attributename="id">140343</value>
+  <value type="int" id="idm106588784928" attributename="id">070019</value>
+  <value type="int" id="idm106586989952" attributename="id">070200</value>
+  <value type="int" id="idm106586952416" attributename="id">070300</value>
+  <value type="int" id="idm106586934032" attributename="id">070301</value>
+  <value type="int" id="idm106586930256" attributename="duration_min_sum">1110</value>
+  <value type="int" id="idm106586926624" attributename="duration_min">510</value>
+  <value type="int" id="idm106586829600" attributename="id">090064</value>
+  <value type="int" id="idm106586790032" attributename="id">070012</value>
+  <value type="int" id="idm106586036416" attributename="id">060023</value>
+  <value type="int" id="idm106586030912" attributename="zip">1190</value>
+  <value type="int" id="idm106585996368" attributename="id">070024</value>
+  <value type="int" id="idm106591660640" attributename="id">030263</value>
+  <value type="int" id="idm106591629584" attributename="id">030316</value>
+  <value type="int" id="idm106591599168" attributename="id">030322</value>
+  <value type="int" id="idm106591568192" attributename="id">030393</value>
+  <value type="int" id="idm106591495392" attributename="id">070050</value>
+  <value type="int" id="idm106591455536" attributename="id">070054</value>
+  <value type="int" id="idm106584019216" attributename="id">070091</value>
+  <value type="int" id="idm106583979504" attributename="id">070198</value>
+  <value type="int" id="idm106580182352" attributename="id">410001</value>
+  <value type="int" id="idm106579858576" attributename="id">070105</value>
+  <value type="int" id="idm106579818752" attributename="id">070124</value>
+  <value type="int" id="idm106579810128" attributename="id">070133</value>
+  <value type="int" id="idm106579768016" attributename="id">070137</value>
+  <value type="int" id="idm106579728176" attributename="id">070176</value>
+  <value type="int" id="idm106579693072" attributename="id">070229</value>
+  <value type="int" id="idm106579667584" attributename="id">070231</value>
+  <value type="int" id="idm106579627712" attributename="id">070286</value>
+  <value type="int" id="idm106579621600" attributename="id">070293</value>
+  <value type="int" id="idm106578145440" attributename="id">041010</value>
+</values>
