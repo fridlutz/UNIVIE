@@ -1,0 +1,6 @@
+ COURSEID MAXAPPOINTMENTMIN COURSETITLE                COURSEWEEKHOURS LECTURERNAME 
+ -------- ----------------- -------------------------- --------------- ------------ 
+    70240              4680 Diplomatics and Chronology              60 Lackner     
+    70240              4680 Diplomatics and Chronology              60 Scharer     
+    70240              4680 Diplomatics and Chronology              60 Schwarcz    
+
