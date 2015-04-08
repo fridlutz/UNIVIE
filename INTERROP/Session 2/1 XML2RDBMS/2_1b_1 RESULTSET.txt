@@ -1,0 +1,6 @@
+ COURSEID MAXAPPOINTMENTMIN COURSETITLE                                                               COURSEWEEKHOURS LECTURERNAME 
+ -------- ----------------- ------------------------------------------------------------------------- --------------- ------------ 
+    70197               615 Cultural history: Practice of methods in cultural history primary sources              20 Diesenberger
+    70197               615 Cultural history: Practice of methods in cultural history primary sources              20 Schmale     
+    70280               615 Workshop - Practicing Digital Methods in Historical Research                           20 König       
+
