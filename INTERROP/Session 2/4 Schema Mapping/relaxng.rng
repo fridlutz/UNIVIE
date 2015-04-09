@@ -1,0 +1,199 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0">
+  <start>
+    <element xmlns="http://relaxng.org/ns/structure/1.0" name="studies">
+      <attribute name="name">
+        <text/>
+      </attribute>
+      <attribute name="period">
+        <text/>
+      </attribute>
+      <attribute name="numberOfStudyPrograms">
+        <text/>
+      </attribute>
+      <zeroOrMore>
+        <element name="study">
+          <attribute name="name">
+            <text/>
+          </attribute>
+          <attribute name="id">
+            <text/>
+          </attribute>
+          <attribute name="parentID">
+            <text/>
+          </attribute>
+          <zeroOrMore>
+            <ref name="courseRef"/>
+          </zeroOrMore>
+          <zeroOrMore>
+            <element name="module">
+              <attribute name="name">
+                <text/>
+              </attribute>
+              <attribute name="id">
+                <text/>
+              </attribute>
+              <attribute name="parentID">
+                <text/>
+              </attribute>
+              <zeroOrMore>
+                <ref name="courseRef"/>
+              </zeroOrMore>
+              <zeroOrMore>
+                <element name="category">
+                  <attribute name="name">
+                    <text/>
+                  </attribute>
+                  <attribute name="id">
+                    <text/>
+                  </attribute>
+                  <attribute name="parentID">
+                    <text/>
+                  </attribute>
+                  <zeroOrMore>
+                    <ref name="courseRef"/>
+                  </zeroOrMore>
+                  <zeroOrMore>
+                    <element name="sub-category">
+                      <attribute name="id">
+                        <text/>
+                      </attribute>
+                      <attribute name="name">
+                        <text/>
+                      </attribute>
+                      <attribute name="parentID">
+                        <text/>
+                      </attribute>
+                      <zeroOrMore>
+                        <ref name="courseRef"/>
+                      </zeroOrMore>
+                    </element>
+                  </zeroOrMore>
+                </element>
+              </zeroOrMore>
+            </element>
+          </zeroOrMore>
+        </element>
+      </zeroOrMore>
+    </element>
+  </start>
+  <define name="courseRef">
+    <element name="course">
+      <attribute name="id">
+        <text/>
+      </attribute>
+      <attribute name="name">
+        <text/>
+      </attribute>
+      <attribute name="title">
+        <text/>
+      </attribute>
+      <attribute name="type">
+        <text/>
+      </attribute>
+      <attribute name="groupcount">
+        <text/>
+      </attribute>
+      <attribute name="continousassessment">
+        <text/>
+      </attribute>
+      <attribute name="ects">
+        <text/>
+      </attribute>
+      <attribute name="weekhours">
+        <text/>
+      </attribute>
+      <attribute name="responsible_unit">
+        <text/>
+      </attribute>
+      <oneOrMore>
+        <element name="group">
+          <attribute name="appointmentcount">
+            <text/>
+          </attribute>
+          <attribute name="signlanguage">
+            <text/>
+          </attribute>
+          <attribute name="livestream">
+            <text/>
+          </attribute>
+          <attribute name="learningplatform">
+            <text/>
+          </attribute>
+          <attribute name="learningplatformurl">
+            <text/>
+          </attribute>
+          <attribute name="block">
+            <text/>
+          </attribute>
+          <attribute name="duration_min_sum">
+            <text/>
+          </attribute>
+          <zeroOrMore>
+            <ref name="courselanguageRef"/>
+          </zeroOrMore>
+          <zeroOrMore>
+            <ref name="lecturerRef"/>
+          </zeroOrMore>
+          <zeroOrMore>
+            <element name="appointment">
+              <attribute name="date">
+                <text/>
+              </attribute>
+              <attribute name="start">
+                <text/>
+              </attribute>
+              <attribute name="end">
+                <text/>
+              </attribute>
+              <attribute name="duration_min">
+                <text/>
+              </attribute>
+              <attribute name="room">
+                <text/>
+              </attribute>
+              <attribute name="zip">
+                <text/>
+              </attribute>
+              <attribute name="city">
+                <text/>
+              </attribute>
+              <attribute name="roomnumber">
+                <text/>
+              </attribute>
+              <attribute name="street">
+                <text/>
+              </attribute>
+            </element>
+          </zeroOrMore>
+          <oneOrMore>
+            <ref name="courselanguageRef"/>
+          </oneOrMore>
+          <oneOrMore>
+            <ref name="lecturerRef"/>
+          </oneOrMore>
+        </element>
+      </oneOrMore>
+    </element>
+  </define>
+  <define name="courselanguageRef">
+    <element name="courselanguage">
+      <text/>
+    </element>
+  </define>
+  <define name="lecturerRef">
+    <element name="lecturer">
+      <attribute name="givenname">
+        <text/>
+      </attribute>
+      <attribute name="name">
+        <text/>
+      </attribute>
+      <attribute name="email">
+        <text/>
+      </attribute>
+      <attribute name="role">
+        <text/>
+      </attribute>
+    </element>
+  </define>
+</grammar>
