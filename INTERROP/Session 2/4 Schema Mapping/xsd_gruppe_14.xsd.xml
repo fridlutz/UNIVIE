@@ -1,0 +1,56 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns="http://www.univie.ac.at/Interop" targetNamespace="http://www.univie.ac.at/Interop">
+  <xs:element name="studies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="module" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="name"/>
+              <xs:element type="xs:string" name="id"/>
+              <xs:element name="course" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="title"/>
+                    <xs:element type="xs:string" name="study_programme"/>
+                    <xs:element type="xs:string" name="type"/>
+                    <xs:element type="xs:int" name="id"/>
+                    <xs:element type="xs:string" name="immanent"/>
+                    <xs:element type="xs:float" name="ects"/>
+                    <xs:element type="xs:string" name="comment"/>
+                    <xs:element name="group" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:int" name="id"/>
+                          <xs:element type="xs:string" name="livestream"/>
+                          <xs:element type="xs:string" name="sign_language"/>
+                          <xs:element type="xs:string" name="block"/>
+                          <xs:element type="xs:string" name="platform_link"/>
+                          <xs:element type="xs:string" name="lecturer_first_name"/>
+                          <xs:element type="xs:string" name="lecturer_last_name"/>
+                          <xs:element type="xs:string" name="tests"/>
+                          <xs:element type="xs:string" name="exam"/>
+                          <xs:element name="group_details" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="date"/>
+                                <xs:element type="xs:float" name="start_time"/>
+                                <xs:element type="xs:float" name="end_time"/>
+                                <xs:element type="xs:string" name="room"/>
+                                <xs:element type="xs:string" name="city"/>
+                                <xs:element type="xs:string" name="street"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
