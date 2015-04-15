@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2015r3sp1 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="xsd_gruppe_14_FIXED" library="xml" uid="3" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="410" rbx="789" rby="978"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace uid="http://www.univie.ac.at/Interop"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="studies" inpkey="1" expanded="1">
+										<entry name="module" inpkey="2" expanded="1">
+											<entry name="name" inpkey="3"/>
+											<entry name="id" inpkey="4"/>
+											<entry name="course" inpkey="5" expanded="1">
+												<entry name="title" inpkey="6"/>
+												<entry name="study_programme" inpkey="7"/>
+												<entry name="type" inpkey="8"/>
+												<entry name="id" inpkey="9"/>
+												<entry name="immanent" inpkey="10"/>
+												<entry name="ects" inpkey="11"/>
+												<entry name="group" inpkey="12" expanded="1">
+													<entry name="id" inpkey="13"/>
+													<entry name="livestream" inpkey="14"/>
+													<entry name="sign_language" inpkey="15"/>
+													<entry name="block" inpkey="16"/>
+													<entry name="platform_link" inpkey="17"/>
+													<entry name="lecturer_first_name" inpkey="18"/>
+													<entry name="lecturer_last_name" inpkey="19"/>
+													<entry name="group_details" inpkey="20" expanded="1">
+														<entry name="date" inpkey="21"/>
+														<entry name="start_time" inpkey="22"/>
+														<entry name="end_time" inpkey="23"/>
+														<entry name="room" inpkey="24"/>
+														<entry name="city" inpkey="25"/>
+														<entry name="street" inpkey="26"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="xsd_gruppe_14_FIXED.xsd" outputinstance="xsd_gruppe_14_FIXED.xml" instanceroot="{http://www.univie.ac.at/Interop}studies"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="convertedXSDSchema_FIXED" library="xml" uid="2" kind="14">
+					<properties/>
+					<view rbx="337" rby="978"/>
+					<data>
+						<root scrollposition="26">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.univie.ac.at/Interop"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="studies" ns="1" outkey="27" expanded="1">
+										<entry name="study" ns="1" outkey="28" expanded="1">
+											<entry name="name" type="attribute" outkey="29"/>
+											<entry name="id" type="attribute" outkey="30"/>
+											<entry name="course" ns="1" outkey="31" expanded="1">
+												<entry name="id" type="attribute" outkey="32"/>
+												<entry name="title" type="attribute" outkey="33"/>
+												<entry name="type" type="attribute" outkey="34"/>
+												<entry name="continousassessment" type="attribute" outkey="35"/>
+												<entry name="ects" type="attribute" outkey="36"/>
+												<entry name="responsible_unit" type="attribute" outkey="37"/>
+												<entry name="group" ns="1" outkey="38" expanded="1">
+													<entry name="signlanguage" type="attribute" outkey="39"/>
+													<entry name="livestream" type="attribute" outkey="40"/>
+													<entry name="learningplatformurl" type="attribute" outkey="41"/>
+													<entry name="block" type="attribute" outkey="42"/>
+													<entry name="lecturer" ns="1" expanded="1">
+														<entry name="givenname" type="attribute" outkey="43"/>
+														<entry name="name" type="attribute" outkey="44"/>
+													</entry>
+													<entry name="appointment" ns="1" outkey="45" expanded="1">
+														<entry name="date" type="attribute" outkey="46"/>
+														<entry name="start" type="attribute" outkey="47"/>
+														<entry name="end" type="attribute" outkey="48"/>
+														<entry name="room" type="attribute" outkey="49"/>
+														<entry name="city" type="attribute" outkey="50"/>
+														<entry name="roomnumber" type="attribute" outkey="51"/>
+													</entry>
+												</entry>
+											</entry>
+											<entry name="module" ns="1" expanded="1">
+												<entry name="course" ns="1" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="convertedXSDSchema_FIXED.xsd" outputinstance="convertedXSDSchema_FIXED.xml" instanceroot="{http://www.univie.ac.at/Interop}studies"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="1" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="2" edgekey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="3" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="4" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="5" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="9" edgekey="57"/>
+							<edge vertexkey="13" edgekey="58"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="6" edgekey="59"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="8" edgekey="60"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="10" edgekey="61"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="11" edgekey="62"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="7" edgekey="63"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="12" edgekey="64"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="15" edgekey="65"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="14" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="17" edgekey="67"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="16" edgekey="68"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="18" edgekey="69"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="44">
+						<edges>
+							<edge vertexkey="19" edgekey="70"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="45">
+						<edges>
+							<edge vertexkey="20" edgekey="71"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="46">
+						<edges>
+							<edge vertexkey="21" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="47">
+						<edges>
+							<edge vertexkey="22" edgekey="73"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="48">
+						<edges>
+							<edge vertexkey="23" edgekey="74"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="24" edgekey="75"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="25" edgekey="76"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="26" edgekey="77"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<course id="706_38">
+  <name>7.6.3 MA Globalgeschichte &amp; Global Studies</name>
+  <description>
+    <!--This information is not available in source.-->
+  </description>
+  <moduleclass id="706_39" name="1. Pflichtmodule Eingangsphase">
+    <modulegroup id="706_40" name="PM Aufbaumodul Geschichtswissenschaftliches Denken und Arbeiten">
+      <module id="706_40" name="PM Aufbaumodul Geschichtswissenschaftliches Denken und Arbeiten">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="4,0" title="Theory of Science and History - Logic of Science - Logic of History" name="Theory of Science and History" id="070036" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="04-Mar-2015" signLanguage="No" lastDate="24-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1315" date="04-Mar-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="11-Mar-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="18-Mar-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="25-Mar-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="15-Apr-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="22-Apr-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="29-Apr-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="06-May-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="13-May-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="20-May-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="27-May-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="03-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="10-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="17-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="24-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="walter.pohl@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Walter" lastname="Pohl"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="6,0" title="Practice of Scientific Communication" name="Practice of Scientific Communication" id="070138" attendance="Yes" type="KU">
+          <group id="N/A" remark="N/A" block="No" startDate="11-Mar-2015" signLanguage="No" lastDate="24-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1045" date="11-Mar-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="18-Mar-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="25-Mar-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="15-Apr-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="22-Apr-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="29-Apr-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="06-May-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="13-May-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="20-May-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="27-May-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="03-Jun-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="10-Jun-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="17-Jun-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="24-Jun-2015" end="1215" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="peer.vries@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Peer" lastname="Vries"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="Theory of Science and History - Logic of Science - Logic of History" name="Theory of Science and History" id="070236" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="09-Mar-2015" signLanguage="No" lastDate="29-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1130" date="09-Mar-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="16-Mar-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="23-Mar-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="13-Apr-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="20-Apr-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="27-Apr-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="04-May-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="11-May-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="18-May-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="01-Jun-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="08-Jun-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="15-Jun-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="22-Jun-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1130" date="29-Jun-2015" end="1300" room="Hörsaal 48" city="Wien" zip="1010" roomNr="O2.74" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="karl.milford@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Karl" lastname="Milford"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+    <modulegroup id="706_41" name="PM Fremdsprachen in der Geschichtswissenschaft">
+      <module id="706_41" name="PM Fremdsprachen in der Geschichtswissenschaft">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="5,0" title="Foreign Languages in Historical Science - Projets d'unification européenne: sources et historiographie en langue francaise (XVIIe --- XXIe siècle)" name="Foreign Languages in Historical Science" id="070040" attendance="Yes" type="UE">
+          <group id="N/A" remark="N/A" block="No" startDate="06-Mar-2015" signLanguage="No" lastDate="26-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=40543">
+            <duration id="N/A" begin="1415" date="06-Mar-2015" end="1545" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="13-Mar-2015" end="1545" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="20-Mar-2015" end="1545" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="27-Mar-2015" end="1745" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="17-Apr-2015" end="1745" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="08-May-2015" end="1745" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="22-May-2015" end="1545" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="29-May-2015" end="1745" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="19-Jun-2015" end="1545" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="26-Jun-2015" end="1545" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="thomas.angerer@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Thomas" lastname="Angerer"/>
+            <language>Deutsch</language>
+            <language>Französisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="5,0" title="Exercises in foreign language within the discipline of History" name="Exercises in foreign language within the discipline of History" id="070230" attendance="Yes" type="UE">
+          <group id="N/A" remark="N/A" block="No" startDate="13-Mar-2015" signLanguage="No" lastDate="17-Apr-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41237">
+            <duration id="N/A" begin="900" date="13-Mar-2015" end="1200" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="27-Mar-2015" end="1200" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="08-May-2015" end="1200" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="22-May-2015" end="1200" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="05-Jun-2015" end="1200" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="19-Jun-2015" end="1200" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="17-Apr-2015" end="1200" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="alexander.koller@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Alexander Karl" lastname="Koller"/>
+            <language>Italienisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="3,0" title="Exercise Course (History and Society) (M6)" name="Exercise Course (History and Society) (M6)" id="150074" attendance="Yes" type="UE">
+          <group id="N/A" remark="N/A" block="No" startDate="04-Mar-2015" signLanguage="No" lastDate="24-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=39754">
+            <duration id="N/A" begin="815" date="04-Mar-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="11-Mar-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="18-Mar-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="25-Mar-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="15-Apr-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="22-Apr-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="29-Apr-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="06-May-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="13-May-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="20-May-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="27-May-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="03-Jun-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="10-Jun-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="17-Jun-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="815" date="24-Jun-2015" end="945" room="Seminarraum OAW 1" city="Wien" zip="1090" roomNr="2I-O1-05" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="astrid.lipinsky@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Astrid" lastname="Lipinsky"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Ostasienwissenschaften</institute>
+        </lecture>
+        <lecture ects="5,0" title="Foreign Languages in Historical Science 1 - Discovering the World. Texts on Globalization (16th to 20th Centuries)" name="Foreign Languages in Historical Science 1" id="070294" attendance="Yes" type="UE">
+          <group id="N/A" remark="N/A" block="No" startDate="18-Mar-2015" signLanguage="No" lastDate="24-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=42112">
+            <duration id="N/A" begin="1500" date="18-Mar-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="25-Mar-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="15-Apr-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="22-Apr-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="29-Apr-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="06-May-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="13-May-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="20-May-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="27-May-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="03-Jun-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="10-Jun-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="17-Jun-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="24-Jun-2015" end="1630" room="Hörsaal 29" city="Wien" zip="1010" roomNr="O1.207" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="friedrich.edelmayer@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Friedrich" lastname="Edelmayer"/>
+            <lecturer id="N/A" email="katharina.arnegger@univie.ac.at" rolePerson="P - Mitanbieter" rolePersonNr="N/A" firstname="Katharina" lastname="Arnegger"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+  </moduleclass>
+  <moduleclass id="706_42" name="2. Alternative Pflichtmodule">
+    <modulegroup id="706_43" name="APM Grundlagen der Globalgeschichte">
+      <module id="706_43" name="APM Grundlagen der Globalgeschichte">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="3,0" title="Introduction to Global History" name="Introduction to Global History" id="070116" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="17-Mar-2015" signLanguage="No" lastDate="30-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41203">
+            <duration id="N/A" begin="1315" date="17-Mar-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="24-Mar-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="14-Apr-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="21-Apr-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="28-Apr-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="05-May-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="12-May-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="19-May-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="02-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="09-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="16-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="23-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="30-Jun-2015" end="1445" room="Hörsaal 34" city="Wien" zip="1010" roomNr="HP.187" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="martina.kaller@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Martina" lastname="Kaller"/>
+            <lecturer id="N/A" email="berthold.molden@univie.ac.at" rolePerson="P - Mitanbieter" rolePersonNr="N/A" firstname="Berthold" lastname="Molden"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="3,0" title="Working Skills in Global History - A global history of political participation since 1800" name="Working Skills in Global History" id="070117" attendance="Yes" type="KU">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="25-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=42091">
+            <duration id="N/A" begin="1830" date="05-Mar-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="19-Mar-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="26-Mar-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="16-Apr-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="23-Apr-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="30-Apr-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="07-May-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="21-May-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="28-May-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="11-Jun-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="18-Jun-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1830" date="25-Jun-2015" end="2000" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="florian.musil@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Florian" lastname="Musil"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="Theories and Methods of Global History " name="Theories and Methods of Global History " id="070139" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="04-Mar-2015" signLanguage="No" lastDate="24-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1500" date="04-Mar-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="11-Mar-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="18-Mar-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="25-Mar-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="15-Apr-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="22-Apr-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="29-Apr-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="06-May-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="13-May-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="20-May-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="27-May-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="03-Jun-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="10-Jun-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="17-Jun-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="24-Jun-2015" end="1630" room="Hörsaal 7" city="Wien" zip="1010" roomNr="HP.57A" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="peer.vries@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Peer" lastname="Vries"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+    <modulegroup id="706_44" name="APM Grundlagen aus einer anderen Disziplin der Global Studies">
+      <module id="706_44" name="APM Grundlagen aus einer anderen Disziplin der Global Studies">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="4,0" title="International Law and International Organisations" name="International Law and International Organisations" id="030248" attendance="Yes" type="KU">
+          <group id="N/A" remark="N/A" block="No" startDate="11-Mar-2015" signLanguage="No" lastDate="13-May-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=39499">
+            <duration id="N/A" begin="1730" date="11-Mar-2015" end="2030" room="Hörsaal" city="Wien" zip="1010" roomNr="HSU21" street="Schottenbastei 10-16 (Juridicum)"/>
+            <duration id="N/A" begin="1730" date="25-Mar-2015" end="2030" room="Hörsaal" city="Wien" zip="1010" roomNr="HSU21" street="Schottenbastei 10-16 (Juridicum)"/>
+            <duration id="N/A" begin="1730" date="15-Apr-2015" end="2030" room="Hörsaal" city="Wien" zip="1010" roomNr="HSU21" street="Schottenbastei 10-16 (Juridicum)"/>
+            <duration id="N/A" begin="1730" date="06-May-2015" end="2030" room="Hörsaal" city="Wien" zip="1010" roomNr="HSU21" street="Schottenbastei 10-16 (Juridicum)"/>
+            <duration id="N/A" begin="1730" date="20-May-2015" end="2030" room="Hörsaal" city="Wien" zip="1010" roomNr="HSU21" street="Schottenbastei 10-16 (Juridicum)"/>
+            <duration id="N/A" begin="1730" date="03-Jun-2015" end="2030" room="Hörsaal" city="Wien" zip="1010" roomNr="HSU21" street="Schottenbastei 10-16 (Juridicum)"/>
+            <duration id="N/A" begin="1730" date="17-Jun-2015" end="2030" room="Hörsaal" city="Wien" zip="1010" roomNr="HSU21" street="Schottenbastei 10-16 (Juridicum)"/>
+            <duration id="N/A" begin="1730" date="13-May-2015" end="2030" room="Hörsaal" city="Wien" zip="1010" roomNr="HSU21" street="Schottenbastei 10-16 (Juridicum)"/>
+            <lecturer id="N/A" email="florian.dunkel@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Florian" lastname="Dunkel"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Rechtswissenschaften</institute>
+        </lecture>
+        <lecture ects="5,0" title="Approaching Cultural Studies" name="Approaching Cultural Studies" id="120011" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="09-Mar-2015" signLanguage="No" lastDate="29-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41059">
+            <duration id="N/A" begin="1315" date="09-Mar-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="16-Mar-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="23-Mar-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="13-Apr-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="20-Apr-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="27-Apr-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="04-May-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="11-May-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="18-May-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="01-Jun-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="08-Jun-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="15-Jun-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="22-Jun-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1315" date="29-Jun-2015" end="1445" room="Kleiner Hörsaal C2" city="Wien" zip="1090" roomNr="2G-K1-03" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="paul.fagan@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Paul" lastname="Fagan"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Anglistik</institute>
+        </lecture>
+        <lecture ects="0,0" title="Introduction to Cultural Theories - Tutorial" name="Introduction to Cultural Theories" id="124011" attendance="No" type="TR">
+          <group id="N/A" remark="N/A" block="No" startDate="19-Mar-2015" signLanguage="No" lastDate="16-Apr-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="830" date="19-Mar-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="26-Mar-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="25-Jun-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="18-Jun-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="11-Jun-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="28-May-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="21-May-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="07-May-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="30-Apr-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="23-Apr-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="830" date="16-Apr-2015" end="1000" room="Unterrichtsraum" city="Wien" zip="1090" roomNr="3G-EG-21" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="matthew.leroy@univie.ac.at" rolePerson="T - Tutor" rolePersonNr="N/A" firstname="Matthew" lastname="Leroy"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Anglistik</institute>
+        </lecture>
+        <lecture ects="3,0" title="KG1- International Development in Historical Context" name="KG1- International Development in Historical Context" id="140290" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="11-Mar-2015" signLanguage="No" lastDate="24-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=40333">
+            <duration id="N/A" begin="1300" date="11-Mar-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="18-Mar-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="25-Mar-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="15-Apr-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="22-Apr-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="29-Apr-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="06-May-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="13-May-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="20-May-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="27-May-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="03-Jun-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="10-Jun-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="17-Jun-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1300" date="24-Jun-2015" end="1500" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="arno.sonderegger@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Arno" lastname="Sonderegger"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+        <lecture ects="3,0" title="KW1 - K IV - Introductory Lecture: Development Economics" name="KW1 - K IV - Introductory Lecture: Development Economics" id="140294" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="16-Mar-2015" signLanguage="No" lastDate="09-Mar-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41191">
+            <duration id="N/A" begin="900" date="16-Mar-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="23-Mar-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="13-Apr-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="20-Apr-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="27-Apr-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="04-May-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="11-May-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="18-May-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="01-Jun-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="08-Jun-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="15-Jun-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="22-Jun-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="29-Jun-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="09-Mar-2015" end="1100" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="alejandro.cunat@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Alejandro" lastname="Cunat"/>
+            <language>Deutsch</language>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+        <lecture ects="4,0" title="GM1 - Principles of Development Research" name="GM1 - Principles of Development Research" id="140369" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="25-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=38757">
+            <duration id="N/A" begin="1100" date="05-Mar-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="19-Mar-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="26-Mar-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="16-Apr-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="23-Apr-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="30-Apr-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="07-May-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="21-May-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="28-May-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="11-Jun-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="18-Jun-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="25-Jun-2015" end="1300" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="margarete.grandner@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Margarete Maria" lastname="Grandner"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+  </moduleclass>
+  <moduleclass id="706_45" name="3. Pflichtmodule">
+    <modulegroup id="706_46" name="PM Theorien, Quellen und Methoden der Globalgeschichte und Global Studies">
+      <module id="706_46" name="PM Theorien, Quellen und Methoden der Globalgeschichte und Global Studies">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="5,0" title="MA-Proseminar - War in the World of Islam and in the European West, including Jihad and Crusade" name="MA-Proseminar" id="070193" attendance="Yes" type="PS">
+          <group id="N/A" remark="N/A" block="No" startDate="03-Mar-2015" signLanguage="No" lastDate="30-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=39449">
+            <duration id="N/A" begin="900" date="03-Mar-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="10-Mar-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="17-Mar-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="24-Mar-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="14-Apr-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="21-Apr-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="28-Apr-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="05-May-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="12-May-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="19-May-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="02-Jun-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="09-Jun-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="16-Jun-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="23-Jun-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="30-Jun-2015" end="1030" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="philippe.buc@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Philippe" lastname="Buc"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="5,0" title="Theories, Sources and Methods of Global History" name="Theories, Sources and Methods of Global History" id="070211" attendance="Yes" type="KU">
+          <group id="N/A" remark="N/A" block="No" startDate="04-Mar-2015" signLanguage="No" lastDate="24-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41229">
+            <duration id="N/A" begin="900" date="04-Mar-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="11-Mar-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="18-Mar-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="25-Mar-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="15-Apr-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="22-Apr-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="29-Apr-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="06-May-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="13-May-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="20-May-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="27-May-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="03-Jun-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="10-Jun-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="17-Jun-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="900" date="24-Jun-2015" end="1030" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="amadou-lamine.sarr@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Amadou-Lamine" lastname="Sarr"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="5,0" title="ProseminarPerceptions and Parallels between Asia and Europe during Early Modern Globalisation (1400- - Perceptions and Parallels between Asia and Europe during Early Modern Globalisation (1400-1800)" name="ProseminarPerceptions and Parallels between Asia and Europe during Early Modern Globalisation (1400-" id="070258" attendance="Yes" type="PS">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="25-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41214">
+            <duration id="N/A" begin="1315" date="05-Mar-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="19-Mar-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="26-Mar-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="16-Apr-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="23-Apr-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="30-Apr-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="07-May-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="21-May-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="28-May-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="11-Jun-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="18-Jun-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1315" date="25-Jun-2015" end="1445" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="gijs.kruijtzer@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Gijsbert" lastname="Kruijtzer"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="6,0" title="KP2 - Political Aspects of Development - Human Rights" name="KP2 - Political Aspects of Development" id="140329" attendance="Yes" type="KU">
+          <group id="N/A" remark="N/A" block="No" startDate="06-Mar-2015" signLanguage="No" lastDate="12-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41268">
+            <duration id="N/A" begin="1100" date="06-Mar-2015" end="1400" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="20-Mar-2015" end="1400" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="17-Apr-2015" end="1400" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="08-May-2015" end="1400" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="22-May-2015" end="1400" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="12-Jun-2015" end="1400" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="ralph.guth@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Ralph" lastname="Guth"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+    <modulegroup id="706_47" name="PM Vertiefung 1: Fragestellungen der Globalgeschichte: Weltregionen in globalgeschichtlicher Sicht">
+      <module id="706_47" name="PM Vertiefung 1: Fragestellungen der Globalgeschichte: Weltregionen in globalgeschichtlicher Sicht">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="6,0" title="SE Seminar (PM4) - US Cuban Relations: Before and Beyond the Cold War" name="SE Seminar (PM4)" id="070001" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="21-Apr-2015" signLanguage="No" lastDate="15-Apr-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=38607">
+            <duration id="N/A" begin="1045" date="21-Apr-2015" end="1345" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="28-Apr-2015" end="1345" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="05-May-2015" end="1345" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="12-May-2015" end="1345" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1045" date="19-May-2015" end="1345" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="15-Apr-2015" end="1630" room="Seminarraum Geschichte 3" city="Wien" zip="1010" roomNr="O2.119" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Raul" lastname="Rodriguez"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="Irish History from Earliest Times to the Present" name="Irish History from Earliest Times to the Present" id="070094" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="11-Mar-2015" signLanguage="No" lastDate="24-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1645" date="11-Mar-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="18-Mar-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="25-Mar-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="15-Apr-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="22-Apr-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="29-Apr-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="06-May-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="13-May-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="20-May-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="27-May-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="03-Jun-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="10-Jun-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="17-Jun-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="24-Jun-2015" end="1815" room="Hörsaal 31" city="Wien" zip="1010" roomNr="O1.202" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="finbarr.mcloughlin@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Finbarr" lastname="McLoughlin"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="6,0" title="Seminar (PM4) - Independence Movements and State Formation in the New World, 1776-1826" name="Seminar (PM4)" id="070096" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="18-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=38084">
+            <duration id="N/A" begin="1515" date="05-Mar-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="19-Mar-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="26-Mar-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="16-Apr-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="23-Apr-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="30-Apr-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="07-May-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="21-May-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="28-May-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="11-Jun-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="18-Jun-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1515" date="25-Jun-2015" end="1645" room="Hörsaal 45" city="Wien" zip="1010" roomNr="O2.77" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="18-Jun-2015" end="1745" room="Medien/Arbeitsraum" city="Wien" zip="1010" roomNr="O2.100" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="thomas.froeschl@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Thomas" lastname="Fröschl"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="6,0" title="Seminar zu Geschichte (PM 4) -Anerkennung - European Expansion, Globalisation, Ecology" name="Seminar zu Geschichte (PM 4) -Anerkennung" id="070249" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="11-Mar-2015" signLanguage="No" lastDate="06-Mar-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1215" date="11-Mar-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="18-Mar-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="25-Mar-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="15-Apr-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="22-Apr-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="29-Apr-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="06-May-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="13-May-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="20-May-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="27-May-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="03-Jun-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="10-Jun-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="17-Jun-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="24-Jun-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1600" date="06-Mar-2015" end="2130" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="gottfried.liedl@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Gottfried" lastname="Liedl"/>
+            <lecturer id="N/A" email="peter.feldbauer@univie.ac.at" rolePerson="P - Mitanbieter" rolePersonNr="N/A" firstname="Peter" lastname="Feldbauer"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="Lecture (PM4) - East Central Europe and the Soviet Empire after World War 2" name="Lecture (PM4)" id="070277" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="NA" startDate="09-Mar-2015" signLanguage="No" lastDate="18-May-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=40994">
+            <duration id="N/A" begin="1500" date="09-Mar-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="16-Mar-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="23-Mar-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="13-Apr-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="20-Apr-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="27-Apr-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="04-May-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="11-May-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="18-May-2015" end="1800" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="markian.prokopovych@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Markian" lastname="Prokopovych"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="Lecture (PM4) - History of the Crimea from  its mythical beginnings to the Russian annexion in 2014" name="Lecture (PM4)" id="070404" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="25-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=40978">
+            <duration id="N/A" begin="900" date="05-Mar-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="19-Mar-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="26-Mar-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="16-Apr-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="23-Apr-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="30-Apr-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="07-May-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="21-May-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="28-May-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="11-Jun-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="18-Jun-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="25-Jun-2015" end="1100" room="Hörsaal" city="Wien" zip="1090" roomNr="2R-EG-07" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="kerstin.susanne.jobst@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Kerstin Susanne" lastname="Jobst"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="The Empire of the Black Pharaohs: Kush and the Ancient World" name="The Empire of the Black Pharaohs: Kush and the Ancient World" id="140247" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="03-Mar-2015" signLanguage="No" lastDate="30-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1130" date="03-Mar-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="10-Mar-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="17-Mar-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="24-Mar-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="14-Apr-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="21-Apr-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="28-Apr-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="05-May-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="12-May-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="19-May-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="02-Jun-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="09-Jun-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="16-Jun-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="23-Jun-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1130" date="30-Jun-2015" end="1300" room="Seminarraum 1" city="Wien" zip="1090" roomNr="2M-O1-03" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="michael.zach@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Michael" lastname="Zach"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+        <lecture ects="7,0" title="Emphasis 1 - 8 - Seminar (optional 3 out of 8)" name="Emphasis 1 - 8 - Seminar (optional 3 out of 8)" id="140409" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="28-May-2015" signLanguage="No" lastDate="05-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="900" date="28-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="EG.02" street="Sensengasse 3 (Stiege 2)"/>
+            <duration id="N/A" begin="900" date="29-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="EG.02" street="Sensengasse 3 (Stiege 2)"/>
+            <duration id="N/A" begin="1400" date="03-Jun-2015" end="1800" room="Seminarraum 1" city="Wien" zip="1090" roomNr="EG.01" street="Sensengasse 3 (Stiege 2)"/>
+            <duration id="N/A" begin="900" date="05-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="EG.02" street="Sensengasse 3 (Stiege 2)"/>
+            <lecturer id="N/A" email="peter.gaertner@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Peter" lastname="Gärtner"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+    <modulegroup id="706_48" name="PM Vertiefung 2: Fragestellungen der Globalgeschichte:  Themen der Globalgeschichte">
+      <module id="706_48" name="PM Vertiefung 2: Fragestellungen der Globalgeschichte:  Themen der Globalgeschichte">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="6,0" title="Seminar (PM4) - Economic growth in the 20th century: Ideas, theories, data" name="Seminar (PM4)" id="070184" attendance="No" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="19-Mar-2015" signLanguage="No" lastDate="25-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41210">
+            <duration id="N/A" begin="1645" date="19-Mar-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="26-Mar-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="16-Apr-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="23-Apr-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="30-Apr-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="07-May-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="21-May-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="28-May-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="11-Jun-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="18-Jun-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1645" date="25-Jun-2015" end="1815" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="peter.eigner@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Peter" lastname="Eigner"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="6,0" title="Seminar zu Geschichte (PM 4) -Anerkennung - European Expansion, Globalisation, Ecology" name="Seminar zu Geschichte (PM 4) -Anerkennung" id="070249" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="11-Mar-2015" signLanguage="No" lastDate="06-Mar-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1215" date="11-Mar-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="18-Mar-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="25-Mar-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="15-Apr-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="22-Apr-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="29-Apr-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="06-May-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="13-May-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="20-May-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="27-May-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="03-Jun-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="10-Jun-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="17-Jun-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1215" date="24-Jun-2015" end="1345" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1600" date="06-Mar-2015" end="2130" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="gottfried.liedl@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Gottfried" lastname="Liedl"/>
+            <lecturer id="N/A" email="peter.feldbauer@univie.ac.at" rolePerson="P - Mitanbieter" rolePersonNr="N/A" firstname="Peter" lastname="Feldbauer"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="6,0" title="Seminar (PM 4)" name="Seminar (PM 4)" id="070250" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="09-Mar-2015" signLanguage="No" lastDate="29-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1500" date="09-Mar-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="16-Mar-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="23-Mar-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="13-Apr-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="20-Apr-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="27-Apr-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="04-May-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="11-May-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="18-May-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="01-Jun-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="08-Jun-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="15-Jun-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="22-Jun-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1500" date="29-Jun-2015" end="1630" room="Hörsaal 26" city="Wien" zip="1010" roomNr="TP.39" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="walter.sauer@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Walter" lastname="Sauer"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="Health-Seeking in Colonial Africa" name="Health-Seeking in Colonial Africa" id="140249" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="25-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41524">
+            <duration id="N/A" begin="1100" date="05-Mar-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="19-Mar-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="26-Mar-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="16-Apr-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="23-Apr-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="30-Apr-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="07-May-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="21-May-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="28-May-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="11-Jun-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="18-Jun-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="25-Jun-2015" end="1300" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="kirsten.ruether@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Kirsten" lastname="Rüther"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+        <lecture ects="4,0" title="TEF A - Transdisciplinary  Development Research" name="TEF A - Transdisciplinary  Development Research" id="140288" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="25-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41516">
+            <duration id="N/A" begin="1500" date="05-Mar-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="19-Mar-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="26-Mar-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="16-Apr-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="23-Apr-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="30-Apr-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="07-May-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="21-May-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="28-May-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="11-Jun-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="18-Jun-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="25-Jun-2015" end="1800" room="Hörsaal A" city="Wien" zip="1090" roomNr="2F-EG-32" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="johannes.jaeger@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Johannes" lastname="Jäger"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+        <lecture ects="4,0" title="Colonialism: Transdisciplinary Perspectives, Debates, and Themes of Discussion" name="Colonialism: Transdisciplinary Perspectives, Debates, and Themes of Discussion" id="140366" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="09-Mar-2015" signLanguage="No" lastDate="29-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41153">
+            <duration id="N/A" begin="1100" date="09-Mar-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="16-Mar-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="23-Mar-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="13-Apr-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="20-Apr-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="27-Apr-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="04-May-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="11-May-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="18-May-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="01-Jun-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="08-Jun-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="15-Jun-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="22-Jun-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="29-Jun-2015" end="1300" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="clemens.pfeffer@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Clemens" lastname="Pfeffer"/>
+            <lecturer id="N/A" email="sara.de.jong@univie.ac.at" rolePerson="P - Mitanbieter" rolePersonNr="N/A" firstname="Sara" lastname="De Jong"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+        <lecture ects="4,0" title="Mobility, Borders, Transnationalisation: Concepts and Debates" name="Mobility, Borders, Transnationalisation: Concepts and Debates" id="140368" attendance="No" type="VO">
+          <group id="N/A" remark="N/A" block="No" startDate="13-Mar-2015" signLanguage="No" lastDate="26-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=40630">
+            <duration id="N/A" begin="900" date="13-Mar-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="20-Mar-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="27-Mar-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="17-Apr-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="24-Apr-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="08-May-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="22-May-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="29-May-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="12-Jun-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="19-Jun-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="900" date="26-Jun-2015" end="1100" room="Hörsaal B" city="Wien" zip="1090" roomNr="2C-EG-02" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="petra.dannecker@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Petra" lastname="Dannecker"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+        <lecture ects="7,0" title="VM1 - VM2 - International Environment and Economic Development" name="VM1 - VM2 - International Environment and Economic Development" id="140401" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="09-Mar-2015" signLanguage="No" lastDate="29-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41351">
+            <duration id="N/A" begin="1100" date="09-Mar-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="16-Mar-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="23-Mar-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="13-Apr-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="20-Apr-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="27-Apr-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="04-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="11-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="18-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="01-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="08-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="15-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="22-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="29-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="alejandro.cunat@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Alejandro" lastname="Cunat"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+        <lecture ects="7,0" title="Emphasis 1 - 8 - Seminar (optional 3 out of 8)" name="Emphasis 1 - 8 - Seminar (optional 3 out of 8)" id="140409" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="28-May-2015" signLanguage="No" lastDate="05-Jun-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="900" date="28-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="EG.02" street="Sensengasse 3 (Stiege 2)"/>
+            <duration id="N/A" begin="900" date="29-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="EG.02" street="Sensengasse 3 (Stiege 2)"/>
+            <duration id="N/A" begin="1400" date="03-Jun-2015" end="1800" room="Seminarraum 1" city="Wien" zip="1090" roomNr="EG.01" street="Sensengasse 3 (Stiege 2)"/>
+            <duration id="N/A" begin="900" date="05-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="EG.02" street="Sensengasse 3 (Stiege 2)"/>
+            <lecturer id="N/A" email="peter.gaertner@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Peter" lastname="Gärtner"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+    <modulegroup id="706_49" name="PM Exkursion und Global Studies">
+      <module id="706_49" name="PM Exkursion und Global Studies">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="6,0" title="Excursion" name="Excursion" id="070243" attendance="Yes" type="EX">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="05-Mar-2015" livestream="No" plattform="">
+            <duration id="N/A" begin="1600" date="05-Mar-2015" end="1800" room="Seminarraum WISO 1" city="Wien" zip="1010" roomNr="ZG1O2.28" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="gerhard.strohmeier@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Gerhard" lastname="Strohmeier"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="Global Studies" name="Global Studies" id="070245" attendance="Yes" type="KU">
+          <group id="N/A" remark="N/A" block="No" startDate="" signLanguage="No" lastDate="" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41238">
+            <lecturer id="N/A" email="gerhard.strohmeier@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Gerhard" lastname="Strohmeier"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+        <lecture ects="4,0" title="Spreading News in South Africa: A Short History of 19th and 20th Century Media" name="Spreading News in South Africa: A Short History of 19th and 20th Century Media" id="140314" attendance="No" type="VO+UE">
+          <group id="N/A" remark="N/A" block="No" startDate="10-Mar-2015" signLanguage="No" lastDate="30-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41525">
+            <duration id="N/A" begin="1100" date="10-Mar-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="17-Mar-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="24-Mar-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="14-Apr-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="21-Apr-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="28-Apr-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="05-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="12-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="19-May-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="02-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="09-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="16-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="23-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1100" date="30-Jun-2015" end="1300" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2M-O1-06" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="kirsten.ruether@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Kirsten" lastname="Rüther"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+  </moduleclass>
+  <moduleclass id="706_50" name="4. Alternative Pflichtmodule">
+    <modulegroup id="706_51" name="APM Forschungsmodul Globalgeschichte">
+      <module id="706_51" name="APM Forschungsmodul Globalgeschichte">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="10,0" title="Research Seminar - Hotbed of Revolutions: The larger Caribbean and global anti-imperialism in the 20th century" name="Research Seminar" id="070191" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="20-Mar-2015" signLanguage="No" lastDate="22-May-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=41196">
+            <duration id="N/A" begin="1415" date="20-Mar-2015" end="2015" room="Seminarraum Geschichte 2" city="Wien" zip="1010" roomNr="O2.144" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="08-May-2015" end="2015" room="Seminarraum Geschichte 2" city="Wien" zip="1010" roomNr="O2.144" street="Universitätsring 1"/>
+            <duration id="N/A" begin="1415" date="22-May-2015" end="2015" room="Seminarraum Geschichte 2" city="Wien" zip="1010" roomNr="O2.144" street="Universitätsring 1"/>
+            <lecturer id="N/A" email="martina.kaller@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Martina" lastname="Kaller"/>
+            <lecturer id="N/A" email="berthold.molden@univie.ac.at" rolePerson="P - Mitanbieter" rolePersonNr="N/A" firstname="Berthold" lastname="Molden"/>
+            <language>Englisch</language>
+          </group>
+          <institute>Studienprogrammleitung Geschichte</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+    <modulegroup id="706_52" name="APM Forschungsmodul Global Studies">
+      <module id="706_52" name="APM Forschungsmodul Global Studies">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+      </module>
+    </modulegroup>
+    <modulegroup id="706_53" name="APM Angewandte Globalgeschichte">
+      <module id="706_53" name="APM Angewandte Globalgeschichte">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="10,0" title="Gandhi's Political Philosophy and Practice" name="Gandhi's Political Philosophy and Practice" id="140343" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="10-Mar-2015" signLanguage="No" lastDate="30-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=38270">
+            <duration id="N/A" begin="1000" date="10-Mar-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="17-Mar-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="24-Mar-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="14-Apr-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="21-Apr-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="28-Apr-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="05-May-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="12-May-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="19-May-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="02-Jun-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="09-Jun-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="16-Jun-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="23-Jun-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1000" date="30-Jun-2015" end="1130" room="Seminarraum 2" city="Wien" zip="1090" roomNr="2C-O1-34" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="martin.gaenszle@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Martin" lastname="Gaenszle"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+    <modulegroup id="706_54" name="APM Angewandte Global Studies">
+      <module id="706_54" name="APM Angewandte Global Studies">
+        <description>
+          <!--This information is not available in source.-->
+        </description>
+        <lecture ects="8,0" title="The Circulation of People, Commodities, Ideas and Objects in Africa" name="The Circulation of People, Commodities, Ideas and Objects in Africa" id="140245" attendance="Yes" type="SE">
+          <group id="N/A" remark="N/A" block="No" startDate="05-Mar-2015" signLanguage="No" lastDate="25-Jun-2015" livestream="No" plattform="https://moodle.univie.ac.at/course/view.php?id=40946">
+            <duration id="N/A" begin="1500" date="05-Mar-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="19-Mar-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="26-Mar-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="16-Apr-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="23-Apr-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="30-Apr-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="07-May-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="21-May-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="28-May-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="11-Jun-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="18-Jun-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <duration id="N/A" begin="1500" date="25-Jun-2015" end="1700" room="Seminarraum 3" city="Wien" zip="1090" roomNr="2M-O1-12" street="Spitalgasse 2"/>
+            <lecturer id="N/A" email="kirsten.ruether@univie.ac.at" rolePerson="V - Verantwortlicher Leiter" rolePersonNr="N/A" firstname="Kirsten" lastname="Rüther"/>
+            <language>Deutsch</language>
+          </group>
+          <institute>Studienprogrammleitung Orientalistik, Afrikanistik, Indologie und Tibetologie</institute>
+        </lecture>
+      </module>
+    </modulegroup>
+  </moduleclass>
+  <moduleclass id="706_55" name="5. Master-Modul"/>
+</course>
