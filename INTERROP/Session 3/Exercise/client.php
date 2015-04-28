@@ -51,7 +51,7 @@ Examples:<br>
 7. <a href="http://wwwlab.cs.univie.ac.at/~a9902268/client.php/convert?sourceValue=100&sourceCurrency=EUR&targetCurrency=ILS">100 EUR -> ILS</a><br>
 8. <a href="http://wwwlab.cs.univie.ac.at/~a9902268/client.php/convert?sourceValue=100&sourceCurrency=EUR&targetCurrency=GYD">100 EUR -> GYD</a><br>
 9. <a href="http://wwwlab.cs.univie.ac.at/~a9902268/client.php/convert?sourceValue=100&sourceCurrency=EUR&targetCurrency=MOP">100 EUR -> MOP</a><br>
-10. <a href="http://wwwlab.cs.univie.ac.at/~a9902268/client.php/convert?sourceValue=100&sourceCurrency=EUR&targetCurrency=PGK">100 EUR -> PGK</a><br>');
+10. <a href="http://wwwlab.cs.univie.ac.at/~a9902268/client.php/convert?sourceValue=100&sourceCurrency=EUR&targetCurrency=PGK">100 EUR -> PGK</a><br><br><br> Source code: <a href="https://github.com/fridlutz/UNIVIE/tree/master/INTERROP/Session%203/Exercise">here</a>');
 
 }
 
