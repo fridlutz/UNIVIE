@@ -1,0 +1,3 @@
+Erstellen Sie ein Web Service welches einen EUR-Betrag in eine andere WÃ¤hrung (auÃŸerhalb der EU) umrechnet. In mindestens zehn WÃ¤hrungen soll umgerechnet werden kÃ¶nnen, jedoch sollten USD, JPY, CNY und CHF auf jeden Fall abrufbar sein. Als Ergebnis soll die Kurzbezeichnung der WÃ¤hrung nach ISO 4217 und der umgerechnete Betrag als Datenstruktur zurÃ¼ckgeliefert werden. Eine weitere Operation soll den Namen des Autors/der Autorin des Web Services zurÃ¼ckgeben.
+
+Something uploaded: no
