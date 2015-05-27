@@ -1,0 +1,10 @@
+@prefix : <http://wst.univie.ac.at/>.
+
+:juergen a :person .
+:eva-maria a :person .
+:martin a :person .
+:pluto a :dog .
+:martin :hasJob :SPL .
+:juergen :hasSister :eva-maria.
+:juergen :hasFriend :martin .
+:juergen :hasFriend :pluto.

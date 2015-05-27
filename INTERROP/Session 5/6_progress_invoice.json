@@ -1,0 +1,12 @@
+[
+  {
+    "action": "Retrieve order and sign off",
+    "duration": 10,
+    "tasktype": "manual"
+  },
+  {
+    "action": "Prepare invoice in ebXML",
+    "duration": 30,
+    "tasktype": "automatic"
+  }
+]

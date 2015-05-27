@@ -1,0 +1,5 @@
+#QUERY <http://dbpedia.org/sparql>                    
+SELECT DISTINCT ?s ?label                             
+WHERE {                                               
+    ?s <http://dbpedia.org/property/season> ?o .      
+}  

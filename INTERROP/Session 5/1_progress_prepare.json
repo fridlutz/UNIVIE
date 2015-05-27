@@ -1,0 +1,22 @@
+[
+  {
+    "action": "Analyse order/request",
+    "duration": 10,
+    "tasktype": "manual"
+  },
+  {
+    "action": "Retrieve parts from inventory",
+    "duration": 30,
+    "tasktype": "robot"
+  },
+  {
+    "action": "Adjust robots for assembly",
+    "duration": 60,
+    "tasktype": "manual"
+  },	
+  {
+    "action": "Trigger conveyer belt",
+    "duration": 20,
+    "tasktype": "manual"
+  }
+]

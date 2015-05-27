@@ -1,0 +1,17 @@
+[
+  {
+    "action": "Request delivery",
+    "duration": 10,
+    "tasktype": "manual"
+  },
+  {
+    "action": "Handover order from inventory",
+    "duration": 30,
+    "tasktype": "robot"
+  },
+  {
+    "action": "Sign-off delivery",
+    "duration": 60,
+    "tasktype": "manual"
+  }
+]

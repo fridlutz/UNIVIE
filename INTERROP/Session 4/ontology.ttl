@@ -1,0 +1,542 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <http://univie.ac.at/cmoser/>.
+@prefix team18: <http://univie.ac.at/cmoser/team18/>.
+@prefix team4: <http://univie.ac.at/cmoser/team4/>.
+@prefix team3: <http://univie.ac.at/cmoser/team3/>.
+@prefix german: <http://univie.ac.at/cmoser/german/>.
+
+# the following approach was applied in developing the ontology
+# 1. turtle representation of all 3 input xmls developed, namespaces for each team input
+# 2. the team18.xml was used as the basis and crosslinking the other team inputs, this can also be done in both directions, this was skipped. Data and queries are written against the base from team18, also translation happens here to German. The cross-linking in only done on element level, not on attribute level, the datasets are mapped to this base.
+#-> team18 represents the ontology, the others are mapped to it
+
+
+
+
+
+# from Team18.xml
+team18:studies :has team18:id;
+               :has team18:title;
+		       :has team18:module;
+			   # cross-linking the concepts with team3 and team4
+			   a team3:studies;
+			   a team4:study;
+			   a german:studium.
+		 
+team18:module :has team18:name;
+              :has team18:id;
+		      :has team18:course;
+			  # cross-linking the concepts with team3 and team4
+			  a team3:module;
+			  a team4:module;
+			  a team3:submodule;
+			  a german:modul.
+
+team18:course :has team18:title;
+              :has team18:courseid;
+	          :has team18:ECTS;
+	          :has team18:immanent;
+	          :has team18:type;
+	          :has team18:spl;
+		      :has team18:groups;
+			  # cross-linking the concepts with team3 and team4
+			  a team3:lecture;
+			  a team4:course;
+			  a german:lehrveranstaltung.
+
+team18:groups :has team18:blocked;
+              :has team18:sign_language;
+		      :has team18:livestream;
+		      :has team18:link;
+		      :has team18:time;
+		      :has team18:lecturer;
+			  # cross-linking the concepts with team3 and team4
+			  a team3:group;
+			  a team4:course_group;
+			  a german:gruppe.
+
+team18:time :has team18:begin;
+            :has team18:date;
+	        :has team18:end;
+	        :has team18:room;
+			# cross-linking the concepts with team3 and team4
+			a team3:appointment;
+			a team4:from_to;
+			a german:veranstaltung.	
+
+team18:lecturer :has team18:pkey;
+                :has team18:firstname;
+		        :has team18:lastname;
+				# cross-linking the concepts with team3 and team4
+				a team4:lecturer;
+				a team3:lecturer;
+				a german:vortragender.
+			
+
+
+		  
+# from Team4.xml
+team4:study :has team4:id;
+            :has team4:chapter;
+			:has team4:title;
+			:has team4:module.
+
+team4:module :has team4:id;
+             :has team4:chapter;
+			 :has team4:title;
+			 :has team4:course.
+			 
+team4:course :has team4:id;
+             :has team4:node_id;
+			 :has team4:chapter;
+			 :has team4:name;
+			 :has team4:title;
+			 :has team4:limited;
+			 :has team4:imanent_exam;
+			 :has team4:course_type;
+			 :has team4:ects;
+			 :has team4:week_hourse;
+			 :has team4:course_group;
+			 :has team4:institute.
+
+team4:course_group :has team4:id;
+                   :has team4:description;
+				   :has team4:first_date;
+				   :has team4:last_date;
+				   :has team4:blocked;
+				   :has team4:url;
+				   :has team4:livestream;
+				   :has team4:sign_language;
+				   :has team4:language;
+				   :has team4:from_to;
+				   :has team4:lecturer;
+				   :has team4:additional_info.
+
+team4:from_to :has team4:time_start;
+              :has team4:time_end;
+			  :has team4:room_number;
+			  :has team4:room_name;
+			  :has team4:street;
+			  :has team4:city;
+			  :has team4:zipcode.
+		
+team4:lecturer :has team4:email;
+               :has team4:pkey;
+			   :has team4:role_person;
+			   :has team4:role_person_nr;
+			   :has team4:first_name;
+			   :has team4:last_name.
+
+team4:additional_info :has team4:short_comment;
+                      :has team4:assessment;
+					  :has team4:literature;
+					  :has team4:exam;
+					  :has team4:requirements.			   
+
+
+team4:institute :has team4:inum;
+                :has team4:code;
+				:has team4:active;
+				:has team4:description;
+				:has team4:code;
+				:has team4:fakcode;
+				:has team4:gender;
+				:has team4:genitiv;
+				:has team4:infobox;
+				:has team4:institute;
+				:has team4:edu_link;
+				:has team4:name1;
+				:has team4:name2;
+				:has team4:url;
+				:has team4:url_en.
+			
+# from Team3.xml
+team3:studies :has team3:title;
+              :has team3:module.
+			 
+team3:module :has team3:title;
+             :has team3:id;
+			 :has team3:submodule.
+			 
+team3:submodule :has team3:title;
+                :has team3:lecture.
+
+team3:lecture :has team3:nr;
+              :has team3:title;
+			  :has team3:type;
+			  :has team3:blocked;
+			  :has team3:pi;
+			  :has team3:ects;
+			  :has team3:group;
+			  :has team3:institute.
+
+
+team3:group :has team3:sign_lang;
+            :has team3:stream;
+			:has team3:link;
+			:has team3:blocked;
+			:has team3:language;
+			:has team3:appointment;
+			:has team3:lecturer.
+
+team3:lecturer :has team3:first_name;
+               :has team3:last_name;
+			   :has team3:role;
+			   :has team3:person_nr.
+
+	
+team3:appointment :has team3:date;
+                  :has team3:start_time;
+				  :has team3:end_time;
+				  :has team3:city;
+				  :has team3:zip;
+				  :has team3:street.		
+
+team3:institute :has team3:name.
+
+		  
+#### DATA - Team18.xml ####
+:studies_2401_1 a team18:studies;
+                team18:title "24.02. Bachelorstudium Kultur- und Sozialanthropologie";
+				team18:id "2401_1";
+				team18:module :module_2401_2.
+
+:module_2401_2 a team18:module;
+               team18:name "1. Studieneingangs- und Orientierungsphase";
+			   team18:id "2401_1";
+			   team18:course :course_240001.
+			   
+:course_240001 a team18:course;
+               team18:title "STEOP: Introduction to Cultural and Social Anthropology";
+			   team18:courseid "240001";
+			   team18:ECTS "6.0";
+			   team18:immanent "N";
+			   team18:type "VO";
+			   team18:spl "Studienprogrammleitung Kultur- und Sozialanthropologie";
+			   team18:group :group_240001.
+			  
+:group_240001 a team18:groups;
+              team18:blocked "B";
+			  team18:sign_language "N";
+			  team18:livestream "Y";
+			  team18:link "https://moodle.univie.ac.at/course/view.php?id=39730";
+			  team18:language "Deutsch";
+			  team18:time :time_240001_1;
+			  team18:time :time_240001_2;
+			  team18:time :time_240001_3;
+			  team18:time :time_240001_4;
+			  team18:time :time_240001_5;
+			  team18:time :time_240001_6;
+			  team18:time :time_240001_7;
+			  team18:time :time_240001_8;			  
+			  team18:time :time_240001_9;
+			  team18:time :time_240001_10;
+			  team18:time :time_240001_11;
+			  team18:time :time_240001_12;
+			  team18:time :time_240001_13;
+			  team18:time :time_240001_14;
+			  team18:time :time_240001_15;
+			  team18:time :time_240001_16;
+			  team18:time :time_240001_17;
+			  team18:time :time_240001_18;
+			  team18:time :time_240001_19;
+			  team18:time :time_240001_20;
+			  team18:time :time_240001_21;
+			  team18:time :time_240001_22;
+			  team18:time :time_240001_23;
+			  team18:time :time_240001_23;
+			  team18:time :time_240001_24;
+			  team18:time :time_240001_25;
+			  team18:time :time_240001_26;
+			  team18:time :time_240001_27;
+			  team18:time :time_240001_28;
+			  team18:time :time_240001_29;
+			  team18:lecturer :lect_22847.
+			  
+:time_240001_1 a team18:time;
+               team18:begin "1130";
+			   team18:date "02-Mar-2015 00:00:00";
+			   team18:end "13:00";
+			   team18:room "Hoersaal 1".
+
+:time_240001_2 a team18:time;
+               team18:begin "1130";
+               team18:date "09-Mar-2015 00:00:00";
+               team18:end "13:00";
+               team18:room "Hoersaal 1".
+
+:time_240001_3 a team18:time;
+               team18:begin "1130";
+               team18:date "16-Mar-2015 00:00:00";
+               team18:end "13:00";
+               team18:room "Hoersaal 1".
+
+:time_240001_4 a team18:time;
+               team18:begin "1130";
+               team18:date "23-Mar-2015 00:00:00";
+               team18:end "13:00";
+               team18:room "Hoersaal 1".
+
+:time_240001_5 a team18:time;
+               team18:begin "1130";
+               team18:date "13-Apr-2015 00:00:00";
+               team18:end "13:00";
+               team18:room "Hoersaal 1".
+
+:time_240001_6 a team18:time;
+               team18:begin "1130";
+               team18:date "20-Apr-2015 00:00:00";
+               team18:end "13:00";
+               team18:room "Hoersaal 1".
+
+:time_240001_7 a team18:time;
+               team18:begin "1130";
+               team18:date "27-Apr-2015 00:00:00";
+               team18:end "13:00";
+               team18:room "Hoersaal 1".
+
+:time_240001_8 a team18:time;
+               team18:begin "1130";
+               team18:date "04-May-2015 00:00:00";
+               team18:end "13:00";
+               team18:room "Hoersaal 1".
+
+
+:time_24001_9 a team18:time; 
+              team18:begin "1130";
+			  team18:date "11-May-2015 00:00:00";
+			  team18:end "1300";
+			  team18:room "Hoersaal 1".
+
+:time_24001_10 a team18:time; 
+               team18:begin "1130";
+			   team18:date "18-May-2015 00:00:00";
+			   team18:end "1300"; 
+			   team18:room "Hoersaal 1".
+
+
+:time_24001_11 a team18:time; 
+                 team18:begin "1130";
+				 team18:date "22-Jun-2015 00:00:00";
+				 team18:end "1300"; 
+				 team18:room "Hoersaal 1".
+
+:time_24001_12 a team18:time; 
+                 team18:begin "1645";
+				 team18:date "03-Mar-2015 00:00:00"; 
+				 team18:end "1800";
+				 team18:room "Hoersaal 1".
+				 
+:time_24001_13 a team18:time; 
+                 team18:begin "1645"; 
+				 team18:date "10-Mar-2015 00:00:00"; 
+				 team18:end "1800"; 
+				 team18:room "Hoersaal 1".
+				 
+:time_24001_14 a team18:time; 
+                 team18:begin "1645";
+				 team18:date "17-Mar-2015 00:00:00";
+				 team18:end "1800";
+				 team18:room "Hoersaal 1".
+
+:time_24001_15 a team18:time; 
+                 team18:begin "1645"; 
+				 team18:date "24-Mar-2015 00:00:00";
+				 team18:end "1800"; team18:room "Hoersaal 1".
+
+:time_24001_16 a team18:time; 
+                 team18:begin "1645";
+				 team18:date "14-Apr-2015 00:00:00";
+				 team18:end "1800";
+				 team18:room "Hoersaal 1".
+				 
+				 
+:time_24001_17 a team18:time; 
+                 team18:begin "1645";
+				 team18:date "21-Apr-2015 00:00:00";
+				 team18:end "1800";
+				 team18:room "Hoersaal 1".
+				 
+:time_24001_18 a team18:time; team18:begin "1645"; team18:date "28-Mar-2015 00:00:00"; team18:end "1800"; team18:room "Hoersaal 1".
+:time_24001_19 a team18:time; team18:begin "1645"; team18:date "05-May-2015 00:00:00"; team18:end "1800"; team18:room "Hoersaal 1".
+:time_24001_20 a team18:time; team18:begin "1645"; team18:date "12-May-2015 00:00:00"; team18:end "1800"; team18:room "Hoersaal 1".
+:time_24001_21 a team18:time; team18:begin "1130"; team18:date "04-Mar-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+:time_24001_22 a team18:time; team18:begin "1130"; team18:date "11-Mar-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+:time_24001_23 a team18:time; team18:begin "1130"; team18:date "18-Mar-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+:time_24001_24 a team18:time; team18:begin "1130"; team18:date "25-Mar-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+:time_24001_25 a team18:time; team18:begin "1130"; team18:date "15-Apr-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+:time_24001_26 a team18:time; team18:begin "1130"; team18:date "22-Apr-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+:time_24001_27 a team18:time; team18:begin "1130"; team18:date "29-Apr-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+:time_24001_28 a team18:time; team18:begin "1130"; team18:date "06-May-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+:time_24001_29 a team18:time; team18:begin "1130"; team18:date "13-May-2015 00:00:00"; team18:end "1300"; team18:room "Hoersaal 1".
+
+:lect_22847 a team18:lecturer;
+            team18:firstname "Herta";
+			team18:lastname "Noebauer";
+			team18:pkey "22847".
+
+#### DATA - Team4.xml ####
+:studies_1001_1 a team18:studies;
+                team18:title "Bachelorstudium Deutsche Philologie - Version 2011";
+				team18:id "1001_1";
+				team18:module :module_1001_3.
+				
+:module_1001_3 a team18:module;
+               team18:name "BM 01,1 Studieneingangs- und Orientierungsphase I";
+			   team18:id "1001_3";
+			   team18:course :course_100001.
+			   
+:course_100001 a team18:course;
+               team18:title "Einführungsvorlesung Einführung in die Deutsche Philologie";
+			   team18:courseid "100001";
+			   team18:ects "6.0";
+			   team18:type "EV";
+			   team18:spl "Studienprogrammleitung Deutsche Philologie";
+               team18:group :group_100001.
+
+:group_100001 a team18:group;
+              team18:blocked "N";
+			  team18:sign_language "N";
+			  team18:livestream "Y";
+			  team18:language "Deutsch";
+			  team18:link "https://moodle.univie.ac.at/course/view.php?id=39582";
+			  team18:time :time_100001_1;
+			  team18:time :time_100001_2;
+			  team18:time :time_100001_3;
+			  team18:time :time_100001_4;
+			  team18:time :time_100001_5;
+			  team18:time :time_100001_6;
+			  team18:time :time_100001_7;
+			  team18:time :time_100001_8;
+			  team18:time :time_100001_9;
+			  team18:time :time_100001_10;
+			  team18:time :time_100001_11;
+			  team18:time :time_100001_12;
+			  team18:time :time_100001_13;
+			  team18:time :time_100001_14;
+			  team18:time :time_100001_15;
+			  team18:time :time_100001_16;
+			  team18:lecturer :lect_883;
+			  team18:lecturer :lect_41589;
+			  team18:lecturer :lect_42859;
+			  team18:lecture :lect_54308.
+			  
+
+:time_100001_1 a team18:time; team18:begin "2015-03-02T12:30:00+01:00"; team18:end "2015-03-02T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_2 a team18:time; team18:begin "2015-03-09T12:30:00+01:00"; team18:end "2015-03-09T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_3 a team18:time; team18:begin "2015-03-16T12:30:00+01:00"; team18:end "2015-03-16T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_4 a team18:time; team18:begin "2015-03-23T12:30:00+01:00"; team18:end "2015-03-23T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_5 a team18:time; team18:begin "2015-04-13T12:30:00+01:00"; team18:end "2015-04-13T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_6 a team18:time; team18:begin "2015-04-20T12:30:00+01:00"; team18:end "2015-04-20T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_7 a team18:time; team18:begin "2015-04-27T12:30:00+01:00"; team18:end "2015-05-27T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_8 a team18:time; team18:begin "2015-05-04T12:30:00+01:00"; team18:end "2015-05-04T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_9 a team18:time; team18:begin "2015-05-06T12:30:00+01:00"; team18:end "2015-05-06T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_10 a team18:time; team18:begin "2015-03-02T12:30:00+01:00"; team18:end "2015-03-02T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_11 a team18:time; team18:begin "2015-03-02T12:30:00+01:00"; team18:end "2015-03-02T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_12 a team18:time; team18:begin "2015-03-02T12:30:00+01:00"; team18:end "2015-03-02T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_13 a team18:time; team18:begin "2015-03-02T12:30:00+01:00"; team18:end "2015-03-02T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_14 a team18:time; team18:begin "2015-03-02T12:30:00+01:00"; team18:end "2015-03-02T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_15 a team18:time; team18:begin "2015-03-02T12:30:00+01:00"; team18:end "2015-03-02T14:00:00+01:00"; team18:room "Audimax".
+:time_100001_16 a team18:time; team18:begin "2015-03-02T12:30:00+01:00"; team18:end "2015-03-02T14:00:00+01:00"; team18:room "Audimax".
+
+:lect_883 a team18:lecturer;
+            team18:firstname "Arno";
+			team18:lastname "Dusini";
+			team18:pkey "883".
+
+:lect_41589 a team18:lecturer;
+            team18:firstname "Alexandra";
+			team18:lastname "Lenz";
+			team18:pkey "41589".
+
+:lect_42859 a team18:lecturer;
+            team18:firstname "Stephan";
+			team18:lastname "Müller";
+			team18:pkey "42859".
+			
+			
+
+:lect_54308 a team18:lecturer;
+            team18:firstname "Karen";
+			team18:lastname "Schramm";
+			team18:pkey "54308".
+
+
+
+#### DATA - Team3.xml ####
+
+:studies_701_1  a team18:studies;
+                team18:title "7.1. Bachelorstudium Geschichte 2012";
+				team18:id "701_1";
+				team18:module :module_701_2.
+
+              
+:module_701_2 a team18:module;
+               team18:name "01. Studieneingangs- und Orientierungsphase (StEOP)";
+			   team18:id "701_2";
+			   team18:module :submodule_701_2;
+			   team18:course :course_100001.
+
+:submodule_701_2 a team18:module;
+			       team18:name "StEOP: Pflichtmodul Einuehrung in ihr Studium";
+			   	   team18:id "701_2";
+			   	   team18:course :course_070128.
+
+:course_070128 a team18:course;
+               team18:title "STEOP: Das Studium der Geschichte an der Universitaet Wien";
+			   team18:courseid "070128";
+			   team18:type "VO";
+			   team18:ects "2,0";
+			   team18:spl "Studienprogrammleitung Geschichte";
+			   team18:group :group_070128.
+
+:group_070128 a team18:group;
+                team18:blocked "N";
+                team18:sign_language "N";
+                team18:livestream "N";
+                team18:language "German";
+                team18:link "https://moodle.univie.ac.at/course/view.php?id=39317";
+				team18:time :time_070128_1;
+				team18:time :time_070128_2;
+				team18:time :time_070128_3;
+				team18:time :time_070128_4;
+				team18:time :time_070128_5;
+				team18:time :time_070128_6;
+				team18:time :time_070128_7;
+				team18:time :time_070128_8;
+				team18:time :time_070128_9;
+				team18:time :time_070128_10;
+				team18:time :time_070128_11;
+				team18:time :time_070128_12;
+				team18:time :time_070128_13;
+				team18:time :time_070128_14;
+				team18:time :time_070128_15;
+				team18:lecture :lect_1234.
+
+
+
+:time_070128_1 a team18:time; team18:date "03-Mar-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_2 a team18:time; team18:date "10-Mar-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_3 a team18:time; team18:date "17-Mar-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_4 a team18:time; team18:date "24-Mar-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_5 a team18:time; team18:date "14-Apr-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_6 a team18:time; team18:date "21-Apr-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_7 a team18:time; team18:date "28-Apr-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_8 a team18:time; team18:date "05-May-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_9 a team18:time; team18:date "12-May-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_10 a team18:time; team18:date "19-May-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_11 a team18:time; team18:date "02-Jun-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_12 a team18:time; team18:date "09-Jun-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_13 a team18:time; team18:date "16-Jun-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_14 a team18:time; team18:date "23-Jun-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+:time_070128_15 a team18:time; team18:date "30-Jun-2015 00:00:00"; team18:begin "800"; team18:end "930"; team18:room "Universitaetsring 1".
+
+:lect_1 a team18:lecturer;
+           team18:firstname "Thomas";
+		   team18:lastname "Ertl";
+		   team18:pkey "1".
+
+
+

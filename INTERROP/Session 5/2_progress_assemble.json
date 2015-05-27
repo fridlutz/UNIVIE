@@ -1,0 +1,22 @@
+[
+  {
+    "action": "Add agiator and motor",
+    "duration": 10,
+    "tasktype": "manual"
+  },
+  {
+    "action": "Establish case and mount PCB plus control panel",
+    "duration": 15,
+    "tasktype": "robot"
+  },
+  {
+    "action": "Wire motor and valves",
+    "duration": 15,
+    "tasktype": "robot"
+  },	
+  {
+    "action": "Add tube and enclosures",
+    "duration": 10,
+    "tasktype": "robot"
+  }
+]

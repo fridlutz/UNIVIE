@@ -1,0 +1,18 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://univie.ac.at/cmoser/>
+PREFIX team18: <http://univie.ac.at/cmoser/team18/>
+PREFIX team4: <http://univie.ac.at/cmoser/team4/>
+PREFIX team3: <http://univie.ac.at/cmoser/team3/>
+PREFIX german: <http://univie.ac.at/cmoser/german/>
+
+#Geben Sie die Kurstitel mit Modul, Datum und Ort, an dem sie stattfinden, aus.
+
+SELECT ?course, ?coursename, ?modulename
+FROM <ontology.ttl>
+WHERE {
+	  ?course a team18:course.
+	  ?course team18:title ?coursename.
+	  ?modulename team18:course ?course.
+}

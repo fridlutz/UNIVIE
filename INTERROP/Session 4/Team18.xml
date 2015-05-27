@@ -1,0 +1,980 @@
+<?xml version="1.0" encoding="iso-8859-15"?>
+<studies title="24.02. Bachelorstudium Kultur- und Sozialanthropologie" id="2401_1">
+  <module name="1. Studieneingangs- und Orientierungsphase" id="2401_2">
+    <course title="STEOP: Introduction to Cultural and Social Anthropology" courseid="240001" ECTS="6,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="B" sign_language="N" livestream="Y" link="https://moodle.univie.ac.at/course/view.php?id=39730">
+        <time begin="1130" date="02-Mar-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="09-Mar-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="16-Mar-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="23-Mar-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="13-Apr-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="20-Apr-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="27-Apr-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="04-May-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="11-May-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="18-May-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="22-Jun-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1645" date="03-Mar-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1645" date="10-Mar-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1645" date="17-Mar-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1645" date="24-Mar-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1645" date="14-Apr-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1645" date="21-Apr-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1645" date="28-Mar-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1645" date="05-May-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1645" date="12-May-2015 00:00:00" end="1800" room="Hoersaal 1"/>
+        <time begin="1130" date="04-Mar-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="11-Mar-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="18-Mar-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="25-Mar-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="15-Apr-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="22-Apr-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="29-Apr-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="06-May-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <time begin="1130" date="13-May-2015 00:00:00" end="1300" room="Hoersaal 1"/>
+        <lecturer pkey="22847" firstname="Herta" lastname="Noebauer"/>
+      </groups>
+    </course>
+    <course title="STEOP: Propraedeuticum KSA" courseid="240002" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="B" sign_language="N" livestream="N" link="">
+        <time begin="1315" date="02-Mar-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="09-Mar-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="16-Mar-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="23-Mar-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="13-Apr-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="20-Apr-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="27-Apr-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="04-May-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="11-May-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="18-May-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <time begin="1315" date="22-Jun-2015 00:00:00" end="1445" room="Hoersaal 1"/>
+        <lecturer pkey="11759" firstname="Wolfgang" lastname="Kraus"/>
+      </groups>
+    </course>
+  </module>
+  <module name="2. Grundlagenphase" id="2401_3">
+    <course title="Social sciences and social change" courseid="21003" ECTS="5,0" immanent="N" type="VO" spl="Studienprogrammleitung Politikwissenschaft">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40461">
+        <time begin="1830" date="11-Mar-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="18-Mar-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="25-Mar-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="15-Apr-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="22-Apr-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="29-Apr-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="06-May-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="13-May-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="20-May-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="27-May-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="03-Jun-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="10-Jun-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="17-Jun-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1830" date="24-Jun-2015 00:00:00" end="2000" room="Hoersaal 33"/>
+        <time begin="1645" date="06-May-2015 00:00:00" end="1815" room="Hoersaal 3"/>
+        <time begin="1600" date="03-Jun-2015 00:00:00" end="1815" room="Hoersaal 3"/>
+        <time begin="1500" date="17-Jun-2015 00:00:00" end="1815" room="Hoersaal 3"/>
+        <time begin="1645" date="27-May-2015 00:00:00" end="1815" room="Hoersaal 3"/>
+        <lecturer pkey="7722" firstname="Johann" lastname="Dvorak"/>
+        <lecturer pkey="8103" firstname="Josef" lastname="Hochgerner"/>
+        <lecturer pkey="10154" firstname="Herrmann" lastname="Mueckler"/>
+        <lecturer pkey="29449" firstname="Thomas" lastname="Streitfellner"/>
+        <lecturer pkey="34516" firstname="Anna" lastname="Weiss"/>
+      </groups>
+    </course>
+    <course title="Basic of Sociological Thinking" courseid="24003" ECTS="5,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=42361">
+        <time begin="1315" date="13-Mar-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1315" date="17-Apr-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1315" date="15-May-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1315" date="12-Jun-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1315" date="26-Jun-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1315" date="24-Apr-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1315" date="22-May-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <lecturer pkey="88015" firstname="Patric" lastname="Kment"/>
+      </groups>
+    </course>
+    <course title="Introduction to scientific work in socio-scientific contexts" courseid="24004" ECTS="5,0" immanent="Y" type="PS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="B" sign_language="N" livestream="N" link="">
+        <time begin="0945" date="03-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="10-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="17-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="24-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <lecturer pkey="23723" firstname="Aurelia" lastname="Weikert"/>
+      </groups>
+      <groups blocked="B" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39035">
+        <time begin="0945" date="12-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="19-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="26-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="30-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <lecturer pkey="82432" firstname="Claudia" lastname="Trupp"/>
+      </groups>
+      <groups blocked="B" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39035">
+        <time begin="0945" date="02-Jun-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <time begin="0945" date="19-Jun-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <time begin="0945" date="26-Jun-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <time begin="0945" date="30-Jun-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <lecturer pkey="37647" firstname="Sabrina" lastname="Kopf"/>
+        <lecturer pkey="31387" firstname="Sanda" lastname="Uellen"/>
+      </groups>
+      <groups blocked="B" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39035">
+        <time begin="0945" date="02-Jun-2015 00:00:00" end="1300" room="Hörsaal C"/>
+        <time begin="0945" date="19-Jun-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="26-Jun-2015 00:00:00" end="1300" room="Hörsaal C"/>
+        <time begin="0945" date="30-Jun-2015 00:00:00" end="1300" room="Hörsaal C"/>
+        <lecturer pkey="18633" firstname="Peter" lastname="Rohrbacher"/>
+      </groups>
+    </course>
+    <course title="Introduction into the Gender Anthropology" courseid="240007" ECTS="4,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40277">
+        <time begin="1645" date="04-Mar-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="11-Mar-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="18-Mar-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="25-Mar-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="15-Apr-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="22-Apr-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="29-Apr-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="06-May-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="13-May-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="20-May-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="27-May-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="03-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="10-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="17-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="24-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <lecturer pkey="21194" firstname="Patricia" lastname="Zuckerhut"/>
+      </groups>
+    </course>
+    <course title="Introductory course: anthropological studies in colonialism, racism and ethnicity" courseid="240008" ECTS="4,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41024">
+        <time begin="1500" date="02-Mar-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="09-Mar-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="16-Mar-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="23-Mar-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="13-Apr-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="20-Apr-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="27-Apr-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="04-May-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="11-May-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="18-May-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="01-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="08-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="15-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="22-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="29-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <lecturer pkey="83560" firstname="Ulrike" lastname="Davis-Sulikowski"/>
+      </groups>
+    </course>
+    <course title="Introduction in forms of social organization" courseid="240009" ECTS="4,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39339">
+        <time begin="1600" date="27-Jun-2015 00:00:00" end="1800" room="Kleiner Hoersaal C2"/>
+        <time begin="1500" date="11-Mar-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="18-Mar-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="25-Mar-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="15-Apr-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="22-Apr-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="29-Apr-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="06-May-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="13-May-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="20-May-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="27-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="03-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="10-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <time begin="1500" date="17-Jun-2015 00:00:00" end="1630" room="Hoersaal 1"/>
+        <lecturer pkey="43480" firstname="Tatjana" lastname="Thelen"/>
+      </groups>
+    </course>
+    <course title="Introduction to Kinship Studies" courseid="240012" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41709">
+        <time begin="1830" date="01-Jul-2015 00:00:00" end="2000" room="Audimax"/>
+        <time begin="1130" date="04-Mar-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="11-Mar-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="18-Mar-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="25-Mar-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="15-Apr-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="22-Apr-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="29-Apr-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="06-May-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="13-May-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="20-May-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="27-May-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="03-Jun-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="10-Jun-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="17-Jun-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <time begin="1130" date="24-Jun-2015 00:00:00" end="1300" room="Hoersaal 2"/>
+        <lecturer pkey="11759" firstname="Wolfgang" lastname="Kraus"/>
+      </groups>
+    </course>
+    <course title="Anthropology of Law: AN Introduction" courseid="240013" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=42606">
+        <time begin="1500" date="25-Mar-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="15-Apr-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="22-Apr-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="29-Apr-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="06-May-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="13-May-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="20-May-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="27-May-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="03-Jun-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="10-Jun-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="17-Jun-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <time begin="1500" date="24-Jun-2015 00:00:00" end="1630" room="Hoersaal 3"/>
+        <lecturer pkey="40811" firstname="Manuela" lastname="Zips-Mairitsch"/>
+      </groups>
+    </course>
+    <course title="Anthropology of Religion" courseid="240014" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="B" sign_language="N" livestream="N" link="">
+        <time begin="1130" date="09-Mar-2015 00:00:00" end="1300" room="Hoersaal 3"/>
+        <time begin="1130" date="16-Mar-2015 00:00:00" end="1300" room="Hoersaal 3"/>
+        <time begin="1130" date="23-Mar-2015 00:00:00" end="1300" room="Hoersaal 3"/>
+        <time begin="0945" date="25-Mar-2015 00:00:00" end="1300" room="Kleiner Hoersaal C2"/>
+        <time begin="1130" date="13-Mar-2015 00:00:00" end="1300" room="Kleiner Hoersaal C2"/>
+        <time begin="0945" date="11-Mar-2015 00:00:00" end="1300" room="Kleiner Hoersaal C2"/>
+        <time begin="0945" date="18-Mar-2015 00:00:00" end="1300" room="Kleiner Hoersaal C2"/>
+        <time begin="1130" date="19-Mar-2015 00:00:00" end="1300" room="Hoersaal 31"/>
+        <time begin="0945" date="24-Mar-2015 00:00:00" end="1115" room="Hoersaal 3"/>
+        <time begin="0945" date="17-Mar-2015 00:00:00" end="1115" room="Hoersaal 3"/>
+        <time begin="0945" date="10-Mar-2015 00:00:00" end="1115" room="Hoersaal 3"/>
+        <lecturer pkey="50977" firstname="Andrea" lastname="De Antoni"/>
+      </groups>
+    </course>
+    <course title="Anthropology of Nature: An Introduction" courseid="240039" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=38287">
+        <time begin="1500" date="19-Mar-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="26-Mar-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="16-Apr-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="23-Apr-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="30-Apr-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="07-May-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="21-May-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="28-May-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="11-Jun-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="18-Jun-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <time begin="1500" date="25-Jun-2015 00:00:00" end="1630" room="Hoersaal 2"/>
+        <lecturer pkey="8594" firstname="Elke" lastname="Mader"/>
+      </groups>
+    </course>
+    <course title="Reading Anthropological Texts" courseid="240011" ECTS="5,0" immanent="Y" type="PS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40500">
+        <time begin="1130" date="02-Mar-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="09-Mar-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="16-Mar-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="23-Mar-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="13-Apr-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="27-Apr-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="04-May-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="11-May-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="01-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="08-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="15-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="22-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="29-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <lecturer pkey="18633" firstname="Peter" lastname="Rohrbacher"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40500">
+        <time begin="1645" date="10-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="17-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="24-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="14-Apr-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="21-Apr-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="28-Apr-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="05-May-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="12-May-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="19-May-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="02-Jun-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="09-Jun-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="16-Jun-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="23-Jun-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1645" date="30-Jun-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <lecturer pkey="27113" firstname="Gabriele" lastname="Habinger"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40812">
+        <time begin="1315" date="09-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="16-Mar-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="13-Apr-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="11-May-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="01-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="08-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="27-Apr-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <lecturer pkey="37647" firstname="Sabrina" lastname="Kopf"/>
+        <lecturer pkey="31387" firstname="Sanda" lastname="Uellen"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40009">
+        <time begin="1315" date="11-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="18-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="25-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="15-Apr-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="22-Apr-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="29-Apr-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="06-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="13-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="20-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="27-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="03-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="10-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="17-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="24-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <lecturer pkey="83784" firstname="Khaled" lastname="Hakami"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41044">
+        <time begin="1315" date="19-Mar-2015 00:00:00" end="1630" room="Hörsaal C"/>
+        <time begin="1315" date="26-Mar-2015 00:00:00" end="1630" room="Hörsaal C"/>
+        <time begin="1315" date="16-Apr-2015 00:00:00" end="1630" room="Hörsaal C"/>
+        <time begin="1315" date="30-Apr-2015 00:00:00" end="1630" room="Hörsaal C"/>
+        <time begin="1315" date="07-May-2015 00:00:00" end="1630" room="Hörsaal C"/>
+        <time begin="1315" date="21-May-2015 00:00:00" end="1630" room="Hörsaal C"/>
+        <lecturer pkey="24457" firstname="Gertrude" lastname="Eilmsteiner-Saxinger"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39801">
+        <time begin="0800" date="03-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="10-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="17-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="24-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="14-Apr-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="21-Apr-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="28-Apr-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="05-May-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="12-May-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="19-May-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="02-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="09-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="16-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="23-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <lecturer pkey="31327" firstname="Anja" lastname="Fischer"/>
+      </groups>
+    </course>
+    <course title="Introduction to the History of Theory in Cultural an Social Anthropology" courseid="240015" ECTS="4,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41005">
+        <time begin="1200" date="28-Jun-2015 00:00:00" end="1400" room="Kleiner Hoersaal C2"/>
+        <time begin="0945" date="19-Mar-2015 00:00:00" end="1115" room="Hoersaal 1"/>
+        <time begin="0945" date="26-Mar-2015 00:00:00" end="1115" room="Hoersaal 1"/>
+        <time begin="0945" date="16-Apr-2015 00:00:00" end="1115" room="Hoersaal 1"/>
+        <time begin="0945" date="23-Apr-2015 00:00:00" end="1115" room="Hoersaal 1"/>
+        <time begin="0945" date="30-Apr-2015 00:00:00" end="1115" room="Hoersaal 1"/>
+        <time begin="0945" date="07-May-2015 00:00:00" end="1115" room="Hoersaal 1"/>
+        <time begin="0945" date="21-May-2015 00:00:00" end="1115" room="Hoersaal 1"/>
+        <time begin="0945" date="25-Jun-2015 00:00:00" end="1115" room="Hoersaal 1"/>
+        <time begin="1500" date="13-Apr-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1500" date="20-Apr-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1500" date="27-Apr-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1500" date="04-May-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <time begin="1500" date="11-May-2015 00:00:00" end="1630" room="Hoersaal D"/>
+        <lecturer pkey="24457" firstname="Gertrude" lastname="Eilmsteiner-Saxinger"/>
+      </groups>
+    </course>
+    <course title="Introduction to Ethnohistory and Historical Anthropology" courseid="240016" ECTS="4,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41005">
+        <time begin="1645" date="09-Mar-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="16-Mar-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="23-Mar-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="13-Apr-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="20-Apr-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="27-Apr-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="04-May-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="11-May-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="18-May-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="01-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="08-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="15-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="22-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <time begin="1645" date="29-Jun-2015 00:00:00" end="1815" room="Hoersaal 1"/>
+        <lecturer pkey="11465" firstname="Marie-France" lastname="Chevron"/>
+      </groups>
+    </course>
+  </module>
+  <module name="3. Aufbauphase" id="2401_8">
+    <course title="Scientific Writing for Social and Cultural Anthropologists" courseid="240022" ECTS="5,0" immanent="Y" type="PS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41342">
+        <time begin="0945" date="05-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="19-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="26-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="16-Apr-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="30-Apr-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="07-May-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="21-May-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="28-May-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="11-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="18-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="25-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <lecturer pkey="31412" firstname="Anna" lastname="Ellmer"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40032">
+        <time begin="1500" date="09-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="16-Mar-2015 00:00:00" end="1815" room="Uebungsraum"/>
+        <time begin="1500" date="01-Jun-2015 00:00:00" end="1815" room="Uebungsraum"/>
+        <time begin="1500" date="02-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="08-Jun-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1500" date="15-Jun-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1500" date="27-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <lecturer pkey="42748" firstname="Sigrid" lastname="Schiesser"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39592">
+        <time begin="0800" date="04-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="11-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="18-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="25-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="15-Apr-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="22-Apr-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="29-Apr-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="06-May-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="13-May-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="20-May-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="27-May-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="03-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="10-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="17-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="24-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <lecturer pkey="23723" firstname="Aurelia" lastname="Weikert"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41054">
+        <time begin="1200" date="28-Jun-2015 00:00:00" end="1400" room="Kleiner Hoersaal C2"/>
+        <time begin="0945" date="03-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="10-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="17-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="24-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="14-Apr-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="21-Apr-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="05-May-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="12-May-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="19-May-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="02-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="09-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="16-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="30-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="23-Jun-2015 00:00:00" end="1115" room="Uebungsraum"/>
+        <lecturer pkey="16436" firstname="Martina" lastname="Steiner"/>
+      </groups>
+    </course>
+    <course title="Qualitative Research Methods" courseid="240026" ECTS="10,0" immanent="Y" type="PS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=38967">
+        <time begin="1500" date="05-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="19-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="26-Mar-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="16-Apr-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="23-Apr-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="30-Apr-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="07-May-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="21-May-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="28-May-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="11-Jun-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="18-Jun-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <time begin="1500" date="25-Jun-2015 00:00:00" end="1815" room="Seminarraum D"/>
+        <lecturer pkey="82119" firstname="Monika" lastname="Palmberger"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41715">
+        <time begin="1645" date="10-Mar-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="17-Mar-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="24-Mar-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="14-Apr-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="21-Apr-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="28-Apr-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="05-May-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="12-May-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="19-May-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="02-Jun-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="09-Jun-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="16-Jun-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="23-Jun-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <time begin="1645" date="30-Jun-2015 00:00:00" end="2000" room="Uebungsraum"/>
+        <lecturer pkey="21416" firstname="Gertraud" lastname="Seiser"/>
+        <lecturer pkey="53912" firstname="Ilona" lastname="Grabmaier"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=37883">
+        <time begin="1000" date="30-Jun-2015 00:00:00" end="1200" room="Grosser Hoersaal C1"/>
+        <time begin="1315" date="03-Mar-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="10-Mar-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="17-Mar-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="24-Mar-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="14-Apr-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="21-Apr-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="28-Apr-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="05-May-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="12-May-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="19-May-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="02-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="09-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="16-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="23-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="30-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <lecturer pkey="43480" firstname="Tatjana" lastname="Thelen"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=38430">
+        <time begin="0945" date="05-Mar-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="19-Mar-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="26-Mar-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="16-Apr-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="30-Apr-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="07-May-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="21-May-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="28-May-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="11-Jun-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="18-Jun-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="25-Jun-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="06-Jun-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0945" date="13-Jun-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <lecturer pkey="21659" firstname="Maria" lastname="Dabringer"/>
+      </groups>
+    </course>
+    <course title="Introduction to quantitative research methods" courseid="240030" ECTS="5,0" immanent="Y" type="PS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41324">
+        <time begin="1315" date="06-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="13-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="20-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="27-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="17-Apr-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="08-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="15-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="22-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="29-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="05-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="12-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="19-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1315" date="26-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <lecturer pkey="7779" firstname="Erwin" lastname="Ebermann"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="">
+        <time begin="1000" date="30-Jun-2015 00:00:00" end="1200" room="Grosser Hoersaal C1"/>
+        <time begin="1830" date="10-Mar-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="24-Mar-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="14-Apr-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="21-Apr-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="28-Apr-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="05-May-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="12-May-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="19-May-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="02-Jun-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="09-Jun-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="16-Jun-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="23-Jun-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <time begin="1830" date="30-Jun-2015 00:00:00" end="2000" room="Seminarraum D"/>
+        <lecturer pkey="82513" firstname="Aydin" lastname="Tunc"/>
+      </groups>
+    </course>
+    <course title="Anthropological Concepts and Conflict Prevention for Intercultural Projects" courseid="240034" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41475">
+        <time begin="0945" date="05-Mar-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="19-Mar-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="26-Mar-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="16-Apr-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="30-Apr-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="07-May-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="21-May-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="28-May-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="11-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="18-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="25-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <lecturer pkey="16436" firstname="Martina" lastname="Steiner"/>
+      </groups>
+    </course>
+    <course title="Activist Research with Indigenous Peoples in Latin America" courseid="240035" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=38101">
+        <time begin="1400" date="24-Jun-2015 00:00:00" end="1600" room="Hoersaal 1"/>
+        <time begin="0800" date="18-Mar-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0800" date="25-Mar-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0800" date="29-Apr-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0800" date="06-May-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0800" date="13-May-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0800" date="03-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0800" date="17-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="1130" date="11-Jun-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <lecturer pkey="11595" firstname="Georg" lastname="Gruenberg"/>
+      </groups>
+    </course>
+    <course title="Diversity, Housing and Neighborhood" courseid="240035" ECTS="4,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="">
+        <time begin="1100" date="30-May-2015 00:00:00" end="1300" room="Medien/Arbeitsraum"/>
+        <time begin="1315" date="14-Apr-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="21-Apr-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="28-Apr-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="05-May-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="12-May-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="19-May-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="02-Jun-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="09-Jun-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="16-Jun-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <lecturer pkey="32632" firstname="Daniele" lastname="Karasz"/>
+      </groups>
+    </course>
+    <course title="Anthropology of the asylum regime in Austria and EUrope" courseid="240037" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41646">
+        <time begin="1100" date="20-Jun-2015 00:00:00" end="1300" room="Medien/Arbeitsraum"/>
+        <time begin="0900" date="09-Mar-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0900" date="23-Mar-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0900" date="13-Apr-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0900" date="27-Apr-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0900" date="18-May-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="0900" date="15-Jun-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <lecturer pkey="15907" firstname="Herbert" lastname="Langthaler"/>
+        <lecturer pkey="30122" firstname="Helene" lastname="Trauner"/>
+      </groups>
+    </course>
+    <course title="Applied Anthropology in Intercultural Educational Settings" courseid="240038" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=37893">
+        <time begin="1315" date="09-Mar-2015 00:00:00" end="1445" room="Hoersaal C"/>
+        <time begin="1315" date="23-Mar-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="13-Apr-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="27-Apr-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="11-May-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="01-Jun-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="15-Jun-2015 00:00:00" end="1445" room="Hoersaal C"/>
+        <lecturer pkey="82510" firstname="Doris" lastname="Englisch-Stoelner"/>
+        <lecturer pkey="22364" firstname="Susanne" lastname="Binder"/>
+      </groups>
+    </course>
+    <course title="Indigenous Media and Visual Anthropology " courseid="240040" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39034">
+        <time begin="1645" date="10-Mar-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="17-Mar-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="24-Mar-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="14-Apr-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="21-Apr-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="28-Apr-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="05-May-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="12-May-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="19-May-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="02-Jun-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="09-Jun-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="16-Jun-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="23-Jun-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <time begin="1645" date="30-Jun-2015 00:00:00" end="1815" room="Hoersaal A"/>
+        <lecturer pkey="27218" firstname="Philipp" lastname="Budka"/>
+        <lecturer pkey="82432" firstname="Claudia" lastname="Trupp"/>
+      </groups>
+    </course>
+    <course title="Visual Representations of Orientalism and Exotism" courseid="240041" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39792">
+        <time begin="1130" date="26-Mar-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1130" date="30-Apr-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1130" date="21-May-2015 00:00:00" end="1815" room="Uebungsraum"/>
+        <time begin="1130" date="11-Jun-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1130" date="05-Mar-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <lecturer pkey="27113" firstname="Gabriele" lastname="Habinger"/>
+      </groups>
+    </course>
+    <course title="Media and visual anthropology's perspectives on comic books and manga" courseid="240042" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="">
+        <time begin="0945" date="02-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="16-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="23-Mar-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0800" date="13-Apr-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0800" date="20-Apr-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0800" date="11-May-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0945" date="01-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0800" date="15-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0800" date="22-Jun-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <lecturer pkey="81022" firstname="Peter" lastname="Karall"/>
+      </groups>
+    </course>
+    <course title="Anthropological Perspectives on Film: Text, Context and Ethnographic Field " courseid="240043" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=42610">
+        <time begin="1130" date="11-Mar-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="15-Apr-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="29-Apr-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="06-May-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="13-May-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="20-May-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="13-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="0945" date="12-Jun-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1130" date="24-Jun-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <lecturer pkey="51190" firstname="Hanna" lastname="Klien"/>
+      </groups>
+    </course>
+    <course title="Tourism - local, global, intersectional (" courseid="240044" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=39795">
+        <time begin="1315" date="10-Mar-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="17-Mar-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="24-Mar-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="14-Apr-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="21-Apr-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="28-Apr-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="05-May-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="12-May-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="19-May-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="02-Jun-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="09-Jun-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="16-Jun-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="23-Jun-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1315" date="30-Jun-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <lecturer pkey="27113" firstname="Gabriele" lastname="Habinger"/>
+      </groups>
+    </course>
+    <course title="Multidimensional Consumption - Introduction to the Anthropology of Consumption" courseid="240045" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=38431">
+        <time begin="1315" date="17-Apr-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1315" date="08-May-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1315" date="22-May-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1315" date="29-May-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1315" date="19-Jun-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1315" date="26-Jun-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <lecturer pkey="21659" firstname="Maria" lastname="Dabringer"/>
+      </groups>
+    </course>
+    <course title="Anthropology of Work" courseid="240046" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41717">
+        <time begin="1645" date="09-Mar-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="16-Mar-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="23-Mar-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="13-Apr-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="20-Apr-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="27-Apr-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="04-May-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="11-May-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="18-May-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="01-Jun-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="08-Jun-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="15-Jun-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="22-Jun-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <time begin="1645" date="29-Jun-2015 00:00:00" end="1815" room="Hoersaal C"/>
+        <lecturer pkey="21416" firstname="Gertraud" lastname="Seiser"/>
+      </groups>
+    </course>
+    <course title="Tourists and Migrants: Mobility and Othering in Austrian Discourses" courseid="240047" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40512">
+        <time begin="1315" date="05-Mar-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="19-Mar-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="16-Apr-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="30-Apr-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="28-May-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="11-Jun-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="25-Jun-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <lecturer pkey="88018" firstname="Heidi" lastname="Weinhaeupl"/>
+        <lecturer pkey="26067" firstname="Christa" lastname="Markom"/>
+      </groups>
+    </course>
+    <course title="Introduction to the Anthropology of Art " courseid="240049" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=42438">
+        <time begin="1500" date="18-Mar-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="25-Mar-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="15-Apr-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="22-Apr-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="29-Apr-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="06-May-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="13-May-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="20-May-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="27-May-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="03-Jun-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="10-Jun-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="17-Jun-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <time begin="1500" date="24-Jun-2015 00:00:00" end="1630" room="Hoersaal A"/>
+        <lecturer pkey="1128" firstname="Thomas" lastname="Fillitz"/>
+      </groups>
+    </course>
+    <course title="Aliens, nomads, criminals - Constructions of Roma and Sinti as the Other " courseid="240050" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="B" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41738">
+        <time begin="0945" date="09-Mar-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="16-Mar-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="23-Mar-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="13-Apr-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="20-Apr-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="27-Apr-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="04-May-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="11-May-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="18-May-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="01-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="08-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="15-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="22-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <time begin="0945" date="29-Jun-2015 00:00:00" end="1115" room="Hoersaal A"/>
+        <lecturer pkey="37647" firstname="Sabrina" lastname="Kopf"/>
+      </groups>
+    </course>
+    <course title="Film and Popular culture in Oceania: examples and interpretations" courseid="240051" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="">
+        <time begin="1315" date="09-Mar-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <time begin="1315" date="16-Mar-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <time begin="0800" date="19-Jun-2015 00:00:00" end="1630" room="Seminarraum A"/>
+        <time begin="0800" date="20-Jun-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <lecturer pkey="10153" firstname="Hermann" lastname="Mueckler"/>
+      </groups>
+    </course>
+    <course title="Media and Anthropology/Anthropology and Media" courseid="240052" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="">
+        <time begin="0800" date="02-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="16-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="23-Mar-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="17-Apr-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0800" date="08-May-2015 00:00:00" end="1115" room="Hoersaal C"/>
+        <time begin="0800" date="15-May-2015 00:00:00" end="1115" room="Seminarraum D"/>
+        <time begin="0800" date="01-Jun-2015 00:00:00" end="0930" room="Seminarraum D"/>
+        <time begin="0800" date="19-Jun-2015 00:00:00" end="1115" room="Hoersaal C"/>
+        <time begin="0800" date="26-Jun-2015 00:00:00" end="1115" room="Hoersaal C"/>
+        <lecturer pkey="81022" firstname="Peter" lastname="Karall"/>
+      </groups>
+    </course>
+    <course title="Extraordinary Bodies: Monster, Heterotopias, Freak- and Sideshows " courseid="240053" ECTS="4,0" immanent="Y" type="VS" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="">
+        <time begin="0945" date="13-Mar-2015 00:00:00" end="1115" room="Uebungsraum"/>
+        <time begin="0945" date="27-Mar-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="1130" date="17-Apr-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <time begin="0945" date="21-Apr-2015 00:00:00" end="1300" room="Hoersaal C"/>
+        <time begin="1130" date="15-May-2015 00:00:00" end="1445" room="Hoersaal C"/>
+        <time begin="0945" date="22-May-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="29-May-2015 00:00:00" end="1300" room="Seminarraum D"/>
+        <time begin="0945" date="05-Jun-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <lecturer pkey="21345" firstname="Igor" lastname="Eberhard"/>
+      </groups>
+    </course>
+    <course title="Introduction into the Anthropology of the Balkans" courseid="240054" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40920">
+        <time begin="1130" date="05-Mar-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="19-Mar-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="26-Mar-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="16-Apr-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="23-Apr-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="30-Apr-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="07-May-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="21-May-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="28-May-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="11-Jun-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="18-Jun-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="25-Jun-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <lecturer pkey="50457" firstname="Evangelos" lastname="Karagiannis"/>
+      </groups>
+    </course>
+    <course title="Introduction to the Anthropology of Oceania" courseid="240055" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="">
+        <time begin="1130" date="09-Mar-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="16-Mar-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="23-Mar-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="13-Apr-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="20-Apr-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="27-Apr-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="04-May-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="11-May-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="18-May-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="01-Jun-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="08-Jun-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="15-Jun-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="22-Jun-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <time begin="1130" date="29-Jun-2015 00:00:00" end="1345" room="Hoersaal 2"/>
+        <lecturer pkey="10154" firstname="Hermann" lastname="Mueckler"/>
+      </groups>
+    </course>
+    <course title="Introduction to the Anthropology of Africa" courseid="240056" ECTS="3,0" immanent="N" type="VO" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=42598">
+        <time begin="1300" date="28-Jun-2015 00:00:00" end="1430" room="Audimax"/>
+        <time begin="1645" date="03-Mar-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="10-Mar-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="17-Mar-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="24-Apr-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="21-Apr-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="28-Apr-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="05-May-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="12-May-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="19-May-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="02-Jun-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="09-Jun-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="16-Jun-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="23-Jun-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <time begin="1645" date="30-Jun-2015 00:00:00" end="1815" room="Hoersaal 2"/>
+        <lecturer pkey="83560" firstname="Ulrike" lastname="Davis-Sulikowski"/>
+      </groups>
+    </course>
+  </module>
+  <module name="4. Vertiefungsphase" id="2401_25">
+    <course title="Theoretical discourses" courseid="240058" ECTS="15,0" immanent="Y" type="SE" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41374">
+        <time begin="0945" date="03-Mar-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="24-Mar-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="12-May-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="16-Jun-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="13-Apr-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="30-Jun-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <lecturer pkey="4452" firstname="Gabriele" lastname="Rasuly"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=37878">
+        <time begin="1315" date="04-Mar-2015 00:00:00" end="1630" room="Seminarraum A"/>
+        <time begin="1315" date="18-Mar-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="15-Apr-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1315" date="06-May-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="27-May-2015 00:00:00" end="1630" room="Uebungsraum"/>
+        <time begin="1315" date="24-Jun-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <lecturer pkey="11960" firstname="Jana" lastname="Salat"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40276">
+        <time begin="1315" date="02-Mar-2015 00:00:00" end="1815" room="UebungsraumA"/>
+        <time begin="1130" date="16-Mar-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1645" date="16-Apr-2015 00:00:00" end="1815" room="Seminarraum A"/>
+        <time begin="1315" date="20-Apr-2015 00:00:00" end="1815" room="Uebungsraum"/>
+        <time begin="1315" date="04-May-2015 00:00:00" end="1630" room="Seminarraum D"/>
+        <time begin="1315" date="18-May-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1500" date="08-Jun-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1130" date="08-Jun-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1645" date="08-Jun-2015 00:00:00" end="1815" room="Seminarraum A"/>
+        <time begin="1315" date="22-Jun-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1500" date="22-Jun-2015 00:00:00" end="1630" room="Hoersaal C"/>
+        <time begin="1645" date="22-Jun-2015 00:00:00" end="1815" room="Seminarraum A"/>
+        <time begin="1645" date="04-Jun-2015 00:00:00" end="1815" room="Seminarraum A"/>
+        <lecturer pkey="21194" firstname="Patricia" lastname="Zuckerhut"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40715">
+        <time begin="1130" date="05-Mar-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1130" date="26-Mar-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1130" date="16-Apr-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="11-May-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1130" date="22-Jun-2015 00:00:00" end="1445" room="Hoersaal C"/>
+        <time begin="1500" date="15-Apr-2015 00:00:00" end="1815" room="Uebungsraum"/>
+        <time begin="1130" date="23-Jun-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <lecturer pkey="22847" firstname="Herta" lastname="Noebauer"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=42599">
+        <time begin="1130" date="11-Mar-2015 00:00:00" end="1445" room="Hoersaal C"/>
+        <time begin="1130" date="25-Mar-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1130" date="22-Apr-2015 00:00:00" end="1445" room="Hoersaal C"/>
+        <time begin="1130" date="13-May-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1130" date="27-May-2015 00:00:00" end="1445" room="Hoersaal C"/>
+        <time begin="1130" date="10-Jun-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <lecturer pkey="83560" firstname="Ulrike" lastname="Davis-Sulikowski"/>
+      </groups>
+    </course>
+    <course title="Bachelor Seminar: Empiric Data Collecting and Analysis" courseid="240063" ECTS="15,0" immanent="Y" type="SE" spl="Studienprogrammleitung Kultur- und Sozialanthropologie">
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41280">
+        <time begin="0945" date="04-Mar-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="18-Mar-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="15-Apr-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="06-May-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="27-May-2015 00:00:00" end="1300" room="Seminarraum A"/>
+        <time begin="0945" date="17-Jun-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <lecturer pkey="16436" firstname="Martina" lastname="Steiner"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=40776">
+        <time begin="0945" date="04-Mar-2015 00:00:00" end="1115" room="Uebungsraum"/>
+        <time begin="0945" date="18-Mar-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <time begin="0945" date="15-Apr-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <time begin="0945" date="06-May-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <time begin="0945" date="27-May-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <lecturer pkey="16438" firstname="Gabriele" lastname="Weichart"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=41719">
+        <time begin="1130" date="19-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="26-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="30-Apr-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="07-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="21-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="28-May-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="11-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="18-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="25-Jun-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <time begin="1130" date="05-Mar-2015 00:00:00" end="1445" room="Seminarraum D"/>
+        <lecturer pkey="11759" firstname="Wolfgang" lastname="Kraus"/>
+        <lecturer pkey="21416" firstname="Gertraud" lastname="Seiser"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=38288">
+        <time begin="1130" date="19-Mar-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1130" date="26-Mar-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1130" date="16-Apr-2015 00:00:00" end="1300" room="Uebungsraum"/>
+        <time begin="1130" date="07-May-2015 00:00:00" end="1445" room="Hoersaal A"/>
+        <time begin="1130" date="21-May-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <time begin="1130" date="18-Jun-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <lecturer pkey="8594" firstname="Elke" lastname="Mader"/>
+      </groups>
+      <groups blocked="N" sign_language="N" livestream="N" link="https://moodle.univie.ac.at/course/view.php?id=42625">
+        <time begin="1130" date="19-Mar-2015 00:00:00" end="1445" room="Uebungsraum"/>
+        <time begin="1130" date="26-Mar-2015 00:00:00" end="1445" room="Seminarraum A"/>
+        <time begin="1500" date="16-Apr-2015 00:00:00" end="1815" room="Seminarraum A"/>
+        <time begin="1315" date="07-May-2015 00:00:00" end="1630" room="Seminarraum A"/>
+        <time begin="1315" date="21-May-2015 00:00:00" end="1630" room="Seminarraum A"/>
+        <time begin="1315" date="18-Jun-2015 00:00:00" end="1630" room="Seminarraum A"/>
+        <lecturer pkey="6530" firstname="Werner" lastname="Zips"/>
+      </groups>
+    </course>
+  </module>
+</studies>

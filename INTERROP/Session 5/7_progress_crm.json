@@ -1,0 +1,12 @@
+[
+  {
+    "action": "Conclude order in CRM",
+    "duration": 10,
+    "tasktype": "manual"
+  },
+  {
+    "action": "Schedule after-sales re-contact",
+    "duration": 30,
+    "tasktype": "robot"
+  }
+]

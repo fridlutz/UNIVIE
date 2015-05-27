@@ -1,0 +1,110 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix : <http://univie.ac.at/>.
+@prefix study: <http://univie.ac.at/study/>.
+@prefix modulegroup: <http://univie.ac.at/study/modulegroup/>.
+@prefix module: <http://univie.ac.at/study/modulegroup/module/>.
+@prefix course: <http://univie.ac.at/study/modulegroup/module/course/>.
+@prefix group: <http://univie.ac.at/study/modulegroup/module/course/group/>.
+@prefix appointment: <http://univie.ac.at/study/modulegroup/module/course/group/appointment>.
+@prefix lecturer: <http://univie.ac.at/study/modulegroup/module/course/group/appointment/lecturer>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+
+# Author: Wilfrid Utz
+# Created: 2015-05-20 10:23
+# Description: N/A
+
+# this is the condensed version of all 3 xml
+
+:studybranch rdfs:label "Studies"@en;
+             rdfs:label "Studienrichtung"@de;
+			 a rdfs:Class;	   
+			 :hasID study:id;
+	         :hasName study:name;
+			 :hasStudy study:.
+
+study: rdfs:label "Study"@en;
+       rdfs:label "Studium"@de;
+	   :hasID study:id;
+	   :hasName study:name;
+	   study:hasModuleGroup modulegroup:.
+
+modulegroup: rdfs:label "Modulgruppe"@de;
+             rdfs:label "Modulegroup"@en;
+			 :hasId modulegroup:id;
+			 :hasName study:name;
+			 modulegroup:hasModule module:.
+
+module: rdfs:label "Module"@de;
+	    rdfs:label "Modules"@en;
+	    :hasId module:id;
+		:hasName module:name;
+		module:hasCourse course:.
+
+course: rdfs:label "Lehrveranstaltung"@de;
+	    rdfs:label "Course"@en;
+	    course:isContinouslyAssessed course:continousassessment;
+	    course:hasECTS course:ects;
+		course:hasHoursPerWeek course:hoursPerWeek;
+		:hasId course:id;
+		:hasName course:title;
+		:hasType course:type;
+		course:hasGroup group:.
+
+group: rdfs:label "Gruppe"@de;
+       rdfs:label "Group"@en;
+	   group:isBlocked group:block;
+	   :hasId group:id;
+	   group:hasLearningPlatform group:learningplatform;
+	   group:learningPlatformURL group:learningplatformurl;
+	   group:isStreamed group:livestream;
+	   group:inSignLanguage group:signlanguage;
+	   group:inLanguage group:courselanguages;
+       group:hasAppointment appointment:;
+	   group:hasLecturer lecturer:.
+
+appointment: rdfs:label "Appointment"@en;
+             rdfs:label "Termin"@de;
+			 appointment:hasDate appointment:date;
+			 appointment:hasStart appointment:start;
+			 appointment:hasEnd appointment:end;
+			 appointment:hasLocation appointment:location;
+			 appointment:hasRoom appointment:room;
+			 appointment:hasStreet appointment:street;
+			 appointment:hasZIP appointment:zip.
+
+lecturer: rdfs:label "Vortragender"@de;
+          rdfs:label "Lecturer"@en;
+		  lecturer:hasGiveName lecturer:givename;
+		  lecturer:hasSurname lecturer:surname;
+		  lecturer:hasRole lecturer:role.
+
+
+###################################
+###################################
+###################################
+###################################
+
+:706_1 a :studybranch.
+:706_1_id a study:id.
+:706_1_id :hasValue "706_1".
+:706_1 :hasID :706_1_id.
+
+
+
+#study:Geschichte :hasID "1234";
+#                 a study:.
+
+#study:Philio :hasID "4567";
+#             a study:.
+
+#:university :inGerman "Universität"@de .
+#:university :inEnglish "University"@en .
+#:university :offers study: .
+#study: :hasModuleGroup module:moduleGroup .
+#module:modulegroup module:hasModule module: .
+
+# content part/import datasets
+#:UniversityOfVienna rdfs:instanceOf :university .
+#:UniversityOfVienna dc:title "Universität Wien" .

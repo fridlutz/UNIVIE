@@ -1,0 +1,17 @@
+[
+  {
+    "action": "Package order",
+    "duration": 10,
+    "tasktype": "manual"
+  },
+  {
+    "action": "Move to inventory for logistics",
+    "duration": 30,
+    "tasktype": "robot"
+  },
+  {
+    "action": "Load means of transport",
+    "duration": 60,
+    "tasktype": "manual"
+  }
+]

@@ -1,0 +1,17 @@
+[
+  {
+    "action": "Retrieve sample",
+    "duration": 10,
+    "tasktype": "manual"
+  },
+  {
+    "action": "Quality check washing machine",
+    "duration": 30,
+    "tasktype": "robot"
+  },
+  {
+    "action": "Perform energy check",
+    "duration": 20,
+    "tasktype": "manual"
+  }
+]
