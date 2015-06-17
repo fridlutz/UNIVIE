@@ -22,7 +22,7 @@
   if ($rest->method=='GET' && preg_match('/^\/$/',$rest->url)){
     print('<h1>Progress management system</h1>');
     print('<p>Append and progress and state count (number between 1 and XY) to progress_mgmt.php to retrieve the progress.</p>');
-    print('<p>e.g. <a href="progress/0">progress/0</a>');
+    print('<p>e.g. <a href="http://wwwlab.cs.univie.ac.at/~a9902268/choreography/progress_mgmt.php/progress/0">progress/0</a>');
   }
   
   # case/operation to get authorname
@@ -42,9 +42,10 @@
     #var_dump($progress);
     $selectedStep = floatval($sp[2]);
     $currentStep = $progress[$selectedStep];
-    if($rest->accept=='application/json') {
-      print_r(json_encode($currentStep));
-    } else {
+    header('Content-Type: application/json');
+    //if($rest->accept=='application/json') {
+      echo (json_encode($currentStep));
+    /*} else {
 	  print('<h1>Current step: '.($selectedStep).' of '.count($progress).'</h1>');
 	  print('<p>Action: '.$currentStep['action'] .'</br>Duration: '.$currentStep['duration'].'</br>Tasktype: '.$currentStep['tasktype'].'</p>'); 
 	  if ($selectedStep > 0) {
@@ -52,8 +53,8 @@
 	  }
 	  if ($selectedStep < count($progress)-1) {
 		  print('<a href="'.($selectedStep+1).'">Next</a>');
-	  }  
-	}
+	  }
+	}*/
 
 	
   }

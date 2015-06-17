@@ -8,12 +8,11 @@
 
     $ret = new StdClass;
     $ret->url = $url;
+    $ret->headers = getallheaders();
     $ret->method = $method;
     $ret->arguments = $arguments;
     $ret->accept = $accept;
-    $ret->headers = $server;
     $ret->timestamp = date('Ymd-his', time());
-
     return $ret;
   }
 ?>

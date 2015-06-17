@@ -90,8 +90,13 @@
 	$selectedPartClass = $sp[3];
 	$product = findProductCategory($selectedPartCategory, $inventory);
 	$quantity = findQuantity ($selectedPartClass, $product);
+   header('Content-Type: application/json');
+   $quantityClass = new StdClass;
+   $quantityClass->menge = $quantity;
+   echo (json_encode($quantityClass));
 
-    if($rest->accept=='application/json') {
+
+   /*if($rest->accept=='application/json') {
 	  if ($quantity) {
 		  print_r ($quantity);
 	  }
@@ -104,7 +109,7 @@
 		  print ('Part type not available in stock.');
 	  }
 	  
-    }
+    }*/
   }
   # case operation to put quantities for a specific part
   elseif ($rest->method=='PUT' && preg_match('/^\/parts\/[a-z]+\/[A-Za-z0-9_.]+\/?$/',$rest->url)) {	
