@@ -119,3 +119,6 @@ Lookup pid: 1cbdbc5c62ddf9192fb7bf1262120316
 Run the callback (PUT): http://cpee.org:9298/482/callbacks/7661108269cd6d11a8be451bc9a7f344 for status 
 Lookup pid: a0fcd564c6e0182430e416bda184952b
 Run the callback (PUT): http://cpee.org:9298/500/callbacks/895dd27f27cacc2771427e196bbd3ea9 for status 
+Lookup pid: a0fcd564c6e0182430e416bda184952b
+Run the callback (PUT): http://cpee.org:9298/500/callbacks/b60fcaeebc3f02701cd74011b02c9a83 for status INTERMEDIATE
+New instance created at: http://cpee.org:9298/507
