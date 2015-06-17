@@ -41,7 +41,7 @@
   else if($rest->method=='POST' && $rest->headers['Content-Id'] =='producing') {
 	$jsonMessage = key($rest->arguments);
 	$json = json_decode($jsonMessage, false)  ;
-	file_put_contents('myProcessInstances.log', ($json->pid).$eol , FILE_APPEND | LOCK_EX);
+	file_put_contents('myProcessInstances.log', 'Lookup pid: '.($json->pid).$eol , FILE_APPEND | LOCK_EX);
 	$allInstances = json_decode(file_get_contents('correlation_rules.json'), true);
 	$callback ="";
 	//counting in loop, not elegant, but whatsoever
@@ -57,12 +57,11 @@
 	}
 	// if a callback is found, perform the PUT job and clean the rule
 	if (strlen($callback) != 0) {
-	  file_put_contents('myProcessInstances.log', $callback.$eol , FILE_APPEND | LOCK_EX);
+	  file_put_contents('myProcessInstances.log', 'Run the callback (PUT): '.$callback.' for status '.$value['progress'].$eol , FILE_APPEND | LOCK_EX);
+	  //delete the entry in file
+	  file_put_contents('correlation_rules.json', json_encode(array_values($allInstances)), LOCK_EX);
 	  //trigger the put
-	  $result = triggerCallback($callback, $jsonMessage);
-	  //delete the entry
-
-	  file_put_contents('correlation_rules.json', json_encode(array_values($allInstances)), LOCK_EX);	  
+	  $result = triggerCallback($callback, $jsonMessage);	  
 	}
 	
   } 
