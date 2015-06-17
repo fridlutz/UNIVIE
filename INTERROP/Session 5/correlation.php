@@ -15,12 +15,12 @@
   
   //if key message is present, create a new process instance
   if ($rest->method=='POST' &&  strlen($rest->arguments['message']) > 0) {
-	//auto-fill inventory, everytime a new order comes in.
+	//magic auto-fill of inventory, everytime a new order comes in the inventory is magically updated
 	file_put_contents('inventory.json', file_get_contents('inventory_.json'));
 	
 	//trigger process 
 	$instanceURL = triggerProcess();
-	file_put_contents('myProcessInstances.log', $instanceURL.$eol , FILE_APPEND | LOCK_EX);	  
+	file_put_contents('myProcessInstances.log', 'New instance created at: '.$instanceURL.$eol , FILE_APPEND | LOCK_EX);	  
   }
   
   //assumption that if an argument with key pid exists, a new process was triggered
@@ -39,6 +39,9 @@
   
   //if content-id header is set to producing, the PUT for progress has to happen, find pid in rules and put the whole message to the callback
   else if($rest->method=='POST' && $rest->headers['Content-Id'] =='producing') {
+	
+	//this looks crazy, but the return format does not seem to be as intended.
+	//Example: "{\"action\":\"Adjust_robots_for_assembly\",\"duration\":60,\"tasktype\":\"manual\",\"pid\":\"0e07e43bfcfb26d6ec0c93ac87c4092b\",\"progress\":\"INTERMEDIATE\"}": ""
 	$jsonMessage = key($rest->arguments);
 	$json = json_decode($jsonMessage, false)  ;
 	file_put_contents('myProcessInstances.log', 'Lookup pid: '.($json->pid).$eol , FILE_APPEND | LOCK_EX);
@@ -57,7 +60,7 @@
 	}
 	// if a callback is found, perform the PUT job and clean the rule
 	if (strlen($callback) != 0) {
-	  file_put_contents('myProcessInstances.log', 'Run the callback (PUT): '.$callback.' for status '.$value['progress'].$eol , FILE_APPEND | LOCK_EX);
+	  file_put_contents('myProcessInstances.log', 'Run the callback (PUT): '.$callback.' for status '.$json->progress.$eol , FILE_APPEND | LOCK_EX);
 	  //delete the entry in file
 	  file_put_contents('correlation_rules.json', json_encode(array_values($allInstances)), LOCK_EX);
 	  //trigger the put
