@@ -1,1 +1,2 @@
-# UNIVIE Lecture Notes and Result collection
+# UNIVIE Code Repository
+@author Wilfrid Utz (wilfrid.utz@univie.ac.at)
