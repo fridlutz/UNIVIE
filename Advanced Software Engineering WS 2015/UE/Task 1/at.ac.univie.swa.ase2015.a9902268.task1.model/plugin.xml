@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated model -->
       <package
-            uri="http://www.example.org/model"
+            uri="http://task1.a9902268.ase2015.swa.univie.ac.at/model"
             class="at.ac.univie.swa.ase2015.a9902268.task1.model.ModelPackage"
             genModel="model/model.genmodel"/>
    </extension>

@@ -1,50 +1,29 @@
 /**
- */
+ * @author Wilfrid Utz, a9902268, wilfrid.utz@gmail.com
+ * */
+
 package at.ac.univie.swa.ase2015.a9902268.task1.model;
 
-import org.eclipse.emf.ecore.EObject;
+import java.io.Serializable;
 
-/**
- * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Node</b></em>'.
- * <!-- end-user-doc -->
- *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task1.model.Node#getUri <em>Uri</em>}</li>
- * </ul>
- *
- * @see at.ac.univie.swa.ase2015.a9902268.task1.model.ModelPackage#getNode()
- * @model
- * @generated
- */
-public interface Node extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Uri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Uri</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Uri</em>' attribute.
-	 * @see #setUri(double)
-	 * @see at.ac.univie.swa.ase2015.a9902268.task1.model.ModelPackage#getNode_Uri()
-	 * @model
-	 * @generated
-	 */
-	double getUri();
-
-	/**
-	 * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task1.model.Node#getUri <em>Uri</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Uri</em>' attribute.
-	 * @see #getUri()
-	 * @generated
-	 */
-	void setUri(double value);
-
-} // Node
+public abstract class Node  implements Serializable{
+	
+	private static final long serialVersionUID = -2820625825172502547L;
+	String nodeName;
+	String nodePrefix;
+	
+	public String getNodeName () {
+		return nodeName;
+	}	
+	public void setNodeName (String name) {
+		this.nodeName = name;
+	}
+	public void setPrefix (String prefix) {
+		this.nodePrefix = prefix;
+	}
+	public String getPrefix () {
+		return nodePrefix;
+	}
+	
+	public abstract String renderHTML();
+}
