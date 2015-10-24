@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ASCII"?>
+<aSE_Task2:Library
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aSE_Task2="http://www.example.org/aSE_Task2"
+    xsi:schemaLocation="http://www.example.org/aSE_Task2 ../model/aSE_Task2.ecore">
+  <newMedia
+      xsi:type="aSE_Task2:Movie"/>
+  <newMedia
+      xsi:type="aSE_Task2:Music"/>
+  <newMedia
+      xsi:type="aSE_Task2:TV_Series"/>
+  <newMedia
+      xsi:type="aSE_Task2:RentalMovie"/>
+  <newMedia
+      xsi:type="aSE_Task2:RentalMusic"/>
+  <newMedia
+      xsi:type="aSE_Task2:RentalTV_Series"/>
+  <newAccount
+      leiht="//@newMedia.3">
+    <beinhaltet/>
+    <beinhaltet/>
+    <beinhaltet/>
+    <beinhaltet/>
+    <beinhaltet>
+      <writes>
+        <about
+            xsi:type="aSE_Task2:Movie"/>
+      </writes>
+    </beinhaltet>
+  </newAccount>
+</aSE_Task2:Library>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated aSE_Task2 -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="aSE_Task2.presentation.ASE_Task2ModelWizardID"
+            name="%_UI_ASE_Task2ModelWizard_label"
+            class="aSE_Task2.presentation.ASE_Task2ModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ASE_Task2ModelFile.gif">
+         <description>%_UI_ASE_Task2ModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated aSE_Task2 -->
+      <editor
+            id="aSE_Task2.presentation.ASE_Task2EditorID"
+            name="%_UI_ASE_Task2Editor_label"
+            icon="icons/full/obj16/ASE_Task2ModelFile.gif"
+            extensions="ase_task2"
+            class="aSE_Task2.presentation.ASE_Task2Editor"
+            contributorClass="aSE_Task2.presentation.ASE_Task2ActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

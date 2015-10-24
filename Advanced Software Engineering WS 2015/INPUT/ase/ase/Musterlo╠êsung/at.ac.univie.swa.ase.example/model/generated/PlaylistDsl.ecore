@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="playlistDsl" nsURI="http://www.ac.at/univie/swa/ase/example/PlaylistDsl"
+    nsPrefix="playlistDsl">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="distributors" upperBound="-1"
+        eType="#//Distributor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="songLibrary" upperBound="-1"
+        eType="#//Library" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playlists" upperBound="-1"
+        eType="#//Playlist" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Playlist" eSuperTypes="#//PlaylistItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//Item" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlaylistItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Library">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="songs" upperBound="-1"
+        eType="#//Song" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Item">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="item" eType="#//PlaylistItem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="excluded" unique="false"
+        upperBound="-1" eType="#//Song"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Song" eSuperTypes="#//PlaylistItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artist" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="distributor" eType="#//Distributor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="length" eType="#//Length"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="genre" eType="#//Genre"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Length">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minutes" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="seconds" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Distributor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iban" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bic" eType="ecore:EDataType platform:/resource/org.eclipse.emf.ecore/model/Ecore.ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Genre">
+    <eLiterals name="POP" literal="POP"/>
+    <eLiterals name="ROCK" value="1" literal="ROCK"/>
+    <eLiterals name="HARDROCK" value="2" literal="HARDROCK"/>
+    <eLiterals name="CLASSIC" value="3" literal="CLASSIC"/>
+    <eLiterals name="FOLK" value="4" literal="FOLK"/>
+    <eLiterals name="OTHER" value="5" literal="OTHER"/>
+  </eClassifiers>
+</ecore:EPackage>
