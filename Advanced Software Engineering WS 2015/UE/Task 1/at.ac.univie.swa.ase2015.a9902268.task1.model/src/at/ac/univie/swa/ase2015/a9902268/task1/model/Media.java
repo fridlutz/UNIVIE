@@ -3,7 +3,7 @@
  **/
 package at.ac.univie.swa.ase2015.a9902268.task1.model;
 
-import java.io.File;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,10 +12,10 @@ public class Media extends Content {
 	final static String nodePrefix = "File:";
 	List<Content> usage;
 	List<MetaData> meta;
-	File mediaFile;
+	URL mediaFile;
 	
 	
-	public Media(String nodeName, File media, User author) {
+	public Media(String nodeName, URL media, User author) {
 		super(nodeName, nodePrefix);
 		this.createNewRevision(media, author);
 		//initialize metaData
@@ -46,5 +46,19 @@ public class Media extends Content {
 	
 	List<MetaData> getMetaData () {
 		return meta;
+	}
+	
+	public String renderHTML(boolean contentOnly) {
+		if (contentOnly)
+			return this.getCurrentRevision().content.toString();
+		StringBuffer buffer = new StringBuffer();
+		buffer.append("<html><body>");
+		buffer.append("<p><i>URI: " + getURI() + "</i></p>");
+		buffer.append("<h1>" + this.nodeName + "</h1>");
+		buffer.append("<p><i>Last change date: " + this.getCurrentRevision().creationDate + "</i></p>");
+		buffer.append("<p><img src=\"" + ((URL) getCurrentRevision().content) + "\"/></p>");
+		buffer.append("</body></html>");
+System.out.println(buffer.toString());
+		return buffer.toString();
 	}
 }

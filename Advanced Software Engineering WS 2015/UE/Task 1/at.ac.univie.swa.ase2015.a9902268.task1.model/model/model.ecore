@@ -6,6 +6,7 @@
     <eOperations name="createNewRevision" eType="#//Revision"/>
     <eOperations name="addDiscussionItem"/>
     <eOperations name="renderHTML"/>
+    <eOperations name="render"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="revisions" lowerBound="1"
         upperBound="-1" eType="#//Revision"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="discussionPage" lowerBound="1"
@@ -44,6 +45,7 @@
     <eOperations name="getURI" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eOperations name="renderHTML" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eOperations name="getTypePrefix" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
+    <eOperations name="render"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodeName" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//String"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nodePrefix" lowerBound="1"

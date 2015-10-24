@@ -11,7 +11,7 @@ public class VersionHistory implements Serializable{
 
 	private static final long serialVersionUID = 5494741880051569060L;
 
-	public String renderHTML(List<Revision> revisions, Revision currentRevision) {
+	public String render(List<Revision> revisions, Revision currentRevision) {
 		// iterate through revisions
 		StringBuffer buffer = new StringBuffer();
 		Iterator<Revision> RevIt = revisions.iterator();
@@ -22,6 +22,17 @@ public class VersionHistory implements Serializable{
 				buffer.append(" - current");
 			}
 			buffer.append("\n");
+		}
+		return buffer.toString();
+	}
+	
+	public String renderHTML(List<Revision> revisions, Revision currentRevision) {
+		// iterate through revisions
+		StringBuffer buffer = new StringBuffer("<h1>Version History</h1>");
+		Iterator<Revision> RevIt = revisions.iterator();
+		while (RevIt.hasNext()) {
+			Revision revision = (Revision) RevIt.next();
+			buffer.append("<p>" + revision.creationDate + " - " + revision.author.getUserName() + "</p>");
 		}
 		return buffer.toString();
 	}

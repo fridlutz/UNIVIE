@@ -20,4 +20,16 @@ public class Revision implements Serializable {
 
 	}
 
+	public Date getCreationDate() {
+		return creationDate;
+	}
+
+	public User getAuthor() {
+		return author;
+	}
+
+	public Object getContent() {
+		return content;
+	}
+
 }

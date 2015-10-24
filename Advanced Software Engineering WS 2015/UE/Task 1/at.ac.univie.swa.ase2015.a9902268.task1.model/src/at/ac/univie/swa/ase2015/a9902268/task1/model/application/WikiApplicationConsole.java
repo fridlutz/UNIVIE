@@ -1,4 +1,6 @@
-package at.ac.univie.swa.ase2015.a9902268.task1.model.application;
+/**
+ * @author Wilfrid Utz, a9902268, wilfrid.utz@gmail.com
+ **/package at.ac.univie.swa.ase2015.a9902268.task1.model.application;
 
 import java.io.File;
 import java.util.Scanner;
@@ -9,7 +11,7 @@ import at.ac.univie.swa.ase2015.a9902268.task1.model.Internal;
 import at.ac.univie.swa.ase2015.a9902268.task1.model.Media;
 import at.ac.univie.swa.ase2015.a9902268.task1.model.User;
 
-public class WikiApplication {
+public class WikiApplicationConsole {
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {

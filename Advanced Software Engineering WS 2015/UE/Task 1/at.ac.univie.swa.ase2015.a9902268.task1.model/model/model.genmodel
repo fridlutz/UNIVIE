@@ -20,6 +20,7 @@
       <genOperations ecoreOperation="model.ecore#//Content/createNewRevision"/>
       <genOperations ecoreOperation="model.ecore#//Content/addDiscussionItem"/>
       <genOperations ecoreOperation="model.ecore#//Content/renderHTML"/>
+      <genOperations ecoreOperation="model.ecore#//Content/render"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//Article">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Article/typePrefix"/>
@@ -48,6 +49,7 @@
       <genOperations ecoreOperation="model.ecore#//Node/getURI"/>
       <genOperations ecoreOperation="model.ecore#//Node/renderHTML"/>
       <genOperations ecoreOperation="model.ecore#//Node/getTypePrefix"/>
+      <genOperations ecoreOperation="model.ecore#//Node/render"/>
     </genClasses>
     <genClasses ecoreClass="model.ecore#//User">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//User/isBlocked"/>

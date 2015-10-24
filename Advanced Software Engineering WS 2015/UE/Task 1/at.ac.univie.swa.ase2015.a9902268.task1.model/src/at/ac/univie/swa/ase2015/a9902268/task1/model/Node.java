@@ -25,5 +25,7 @@ public abstract class Node  implements Serializable{
 		return nodePrefix;
 	}
 	
-	public abstract String renderHTML();
+	public abstract String renderText();
+	
+	public abstract String renderHTML(boolean contentOnly);
 }

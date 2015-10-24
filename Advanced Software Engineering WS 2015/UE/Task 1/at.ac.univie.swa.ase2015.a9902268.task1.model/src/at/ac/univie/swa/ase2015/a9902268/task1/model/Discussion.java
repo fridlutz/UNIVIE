@@ -29,5 +29,8 @@ public class Discussion implements Serializable{
 		}
 		return buffer.toString();
 	}
+	public HashMap<Date, String> getDiscussions (){
+		return discussions;
+	}
 
 }
