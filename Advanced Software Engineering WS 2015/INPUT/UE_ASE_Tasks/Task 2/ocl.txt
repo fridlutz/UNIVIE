@@ -1,8 +1,0 @@
-context	Account
-inv: self.beinhaltet->size <= 5
-
-context Account
-inv: self.leiht.Land = "US"
-
-context Profile::writes(r:Review,m:Media)
-pre Account: self.beinhaltet(Profile).leiht(m)
