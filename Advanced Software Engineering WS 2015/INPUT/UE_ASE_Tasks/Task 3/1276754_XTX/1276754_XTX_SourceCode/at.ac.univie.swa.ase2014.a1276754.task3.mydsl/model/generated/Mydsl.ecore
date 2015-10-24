@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mydsl" nsURI="http://www.ac.at/univie/swa/ase2014/a1276754/task3/Mydsl"
+    nsPrefix="mydsl">
+  <eClassifiers xsi:type="ecore:EClass" name="Model">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="distributors" upperBound="-1"
+        eType="#//Distributor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="songs" upperBound="-1"
+        eType="#//Song" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="playlists" upperBound="-1"
+        eType="#//Playlist" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Distributor">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adresse" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="acc_info" eType="#//Account_Information"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Account_Information">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="iban" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="bic" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Song">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="artist" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dist" eType="#//Distributor"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="length" eType="#//Time"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="genre" eType="#//Genre"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="price" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Time">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sec" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Playlist">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="songs" unique="false" upperBound="-1"
+        eType="#//Song"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incl" unique="false" upperBound="-1"
+        eType="#//Playlist"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="excl" unique="false" upperBound="-1"
+        eType="#//Song"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Genre">
+    <eLiterals name="pop" literal="POP"/>
+    <eLiterals name="rock" value="1" literal="ROCK"/>
+    <eLiterals name="hardrock" value="2" literal="HARDROCK"/>
+    <eLiterals name="classic" value="3" literal="CLASSIC"/>
+    <eLiterals name="folk" value="4" literal="FOLK"/>
+    <eLiterals name="other" value="5" literal="OTHER"/>
+  </eClassifiers>
+</ecore:EPackage>

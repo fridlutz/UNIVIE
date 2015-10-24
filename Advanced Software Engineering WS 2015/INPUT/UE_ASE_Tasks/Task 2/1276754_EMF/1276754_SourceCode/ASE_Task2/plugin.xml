@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated aSE_Task2 -->
+      <package
+            uri="http://www.example.org/aSE_Task2"
+            class="aSE_Task2.ASE_Task2Package"
+            genModel="model/aSE_Task2.genmodel"/>
+   </extension>
+
+</plugin>
