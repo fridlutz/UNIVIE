@@ -58,7 +58,6 @@ public class Media extends Content {
 		buffer.append("<p><i>Last change date: " + this.getCurrentRevision().creationDate + "</i></p>");
 		buffer.append("<p><img src=\"" + ((URL) getCurrentRevision().content) + "\"/></p>");
 		buffer.append("</body></html>");
-System.out.println(buffer.toString());
 		return buffer.toString();
 	}
 }
