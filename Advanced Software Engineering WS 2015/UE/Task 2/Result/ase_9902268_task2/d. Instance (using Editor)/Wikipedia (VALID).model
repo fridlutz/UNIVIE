@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wikipedia:Wikipedia xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wikipedia="http://task2.a9902268.ase2015.swa.univie.ac.at/model" currentDateJD="2457336">
+  <content xsi:type="wikipedia:Article" title="Another wiki article">
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1"/>
+    <revision author="//@user.1"/>
+    <revision author="//@user.1"/>
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1" content=""/>
+    <revision author="//@user.1" content=""/>
+    <versionhistory/>
+    <discussion/>
+  </content>
+  <content xsi:type="wikipedia:Media" title="Great media file">
+    <revision author="//@user.1"/>
+    <revision author="//@user.1"/>
+    <revision author="//@user.1"/>
+    <revision author="//@user.1"/>
+    <versionhistory/>
+    <discussion/>
+  </content>
+  <content xsi:type="wikipedia:InternalContent" title="Just some internal content">
+    <revision author="//@user.1"/>
+    <revision author="//@user.1"/>
+    <revision author="//@user.1"/>
+    <revision author="//@user.1"/>
+    <versionhistory/>
+    <discussion/>
+  </content>
+  <content xsi:type="wikipedia:WikiProject" currentRevision="//@content.0/@revision.0" title="" content="HUGO MÜLLER" member="//@user.3 //@user.4 //@user.1 //@user.0"/>
+  <user xsi:type="wikipedia:SysOp" userName="Stephan SysAdmin" registrationDateJD="2457328"/>
+  <user xsi:type="wikipedia:RegisteredUser" userName="Wilfrid Utz" registrationDateJD="2457328"/>
+  <user xsi:type="wikipedia:UnregisteredUser" IPAddress="1.1.1.1"/>
+  <user xsi:type="wikipedia:Administrator" userName="Hermann Admin" registrationDateJD="2457328"/>
+  <user xsi:type="wikipedia:RegisteredUser" userName="Uwe Zdun" registrationDateJD="2457335"/>
+</wikipedia:Wikipedia>
