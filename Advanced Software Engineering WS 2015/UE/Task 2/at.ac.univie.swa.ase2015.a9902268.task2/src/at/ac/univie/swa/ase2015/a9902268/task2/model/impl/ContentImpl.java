@@ -34,26 +34,16 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl#getDiscussionPage <em>Discussion Page</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl#getCurrentRevision <em>Current Revision</em>}</li>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl#getVersionHistoryPage <em>Version History Page</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl#getRevision <em>Revision</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl#getVersionhistory <em>Versionhistory</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl#getDiscussion <em>Discussion</em>}</li>
  * </ul>
  *
  * @generated
  */
 public abstract class ContentImpl extends MinimalEObjectImpl.Container implements Content {
-	/**
-	 * The cached value of the '{@link #getDiscussionPage() <em>Discussion Page</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDiscussionPage()
-	 * @generated
-	 * @ordered
-	 */
-	protected Discussion discussionPage;
-
 	/**
 	 * The cached value of the '{@link #getCurrentRevision() <em>Current Revision</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -63,16 +53,6 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 	 * @ordered
 	 */
 	protected Revision currentRevision;
-
-	/**
-	 * The cached value of the '{@link #getVersionHistoryPage() <em>Version History Page</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getVersionHistoryPage()
-	 * @generated
-	 * @ordered
-	 */
-	protected VersionHistory versionHistoryPage;
 
 	/**
 	 * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
@@ -105,6 +85,26 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 	protected EList<Revision> revision;
 
 	/**
+	 * The cached value of the '{@link #getVersionhistory() <em>Versionhistory</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getVersionhistory()
+	 * @generated
+	 * @ordered
+	 */
+	protected VersionHistory versionhistory;
+
+	/**
+	 * The cached value of the '{@link #getDiscussion() <em>Discussion</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDiscussion()
+	 * @generated
+	 * @ordered
+	 */
+	protected Discussion discussion;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -121,44 +121,6 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	protected EClass eStaticClass() {
 		return ModelPackage.Literals.CONTENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Discussion getDiscussionPage() {
-		if (discussionPage != null && discussionPage.eIsProxy()) {
-			InternalEObject oldDiscussionPage = (InternalEObject)discussionPage;
-			discussionPage = (Discussion)eResolveProxy(oldDiscussionPage);
-			if (discussionPage != oldDiscussionPage) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CONTENT__DISCUSSION_PAGE, oldDiscussionPage, discussionPage));
-			}
-		}
-		return discussionPage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Discussion basicGetDiscussionPage() {
-		return discussionPage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDiscussionPage(Discussion newDiscussionPage) {
-		Discussion oldDiscussionPage = discussionPage;
-		discussionPage = newDiscussionPage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CONTENT__DISCUSSION_PAGE, oldDiscussionPage, discussionPage));
 	}
 
 	/**
@@ -204,44 +166,6 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VersionHistory getVersionHistoryPage() {
-		if (versionHistoryPage != null && versionHistoryPage.eIsProxy()) {
-			InternalEObject oldVersionHistoryPage = (InternalEObject)versionHistoryPage;
-			versionHistoryPage = (VersionHistory)eResolveProxy(oldVersionHistoryPage);
-			if (versionHistoryPage != oldVersionHistoryPage) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModelPackage.CONTENT__VERSION_HISTORY_PAGE, oldVersionHistoryPage, versionHistoryPage));
-			}
-		}
-		return versionHistoryPage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VersionHistory basicGetVersionHistoryPage() {
-		return versionHistoryPage;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVersionHistoryPage(VersionHistory newVersionHistoryPage) {
-		VersionHistory oldVersionHistoryPage = versionHistoryPage;
-		versionHistoryPage = newVersionHistoryPage;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CONTENT__VERSION_HISTORY_PAGE, oldVersionHistoryPage, versionHistoryPage));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getTitle() {
 		return title;
 	}
@@ -268,6 +192,92 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 			revision = new EObjectContainmentEList<Revision>(Revision.class, this, ModelPackage.CONTENT__REVISION);
 		}
 		return revision;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VersionHistory getVersionhistory() {
+		return versionhistory;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetVersionhistory(VersionHistory newVersionhistory, NotificationChain msgs) {
+		VersionHistory oldVersionhistory = versionhistory;
+		versionhistory = newVersionhistory;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.CONTENT__VERSIONHISTORY, oldVersionhistory, newVersionhistory);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVersionhistory(VersionHistory newVersionhistory) {
+		if (newVersionhistory != versionhistory) {
+			NotificationChain msgs = null;
+			if (versionhistory != null)
+				msgs = ((InternalEObject)versionhistory).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.CONTENT__VERSIONHISTORY, null, msgs);
+			if (newVersionhistory != null)
+				msgs = ((InternalEObject)newVersionhistory).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.CONTENT__VERSIONHISTORY, null, msgs);
+			msgs = basicSetVersionhistory(newVersionhistory, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CONTENT__VERSIONHISTORY, newVersionhistory, newVersionhistory));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Discussion getDiscussion() {
+		return discussion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetDiscussion(Discussion newDiscussion, NotificationChain msgs) {
+		Discussion oldDiscussion = discussion;
+		discussion = newDiscussion;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModelPackage.CONTENT__DISCUSSION, oldDiscussion, newDiscussion);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDiscussion(Discussion newDiscussion) {
+		if (newDiscussion != discussion) {
+			NotificationChain msgs = null;
+			if (discussion != null)
+				msgs = ((InternalEObject)discussion).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModelPackage.CONTENT__DISCUSSION, null, msgs);
+			if (newDiscussion != null)
+				msgs = ((InternalEObject)newDiscussion).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - ModelPackage.CONTENT__DISCUSSION, null, msgs);
+			msgs = basicSetDiscussion(newDiscussion, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.CONTENT__DISCUSSION, newDiscussion, newDiscussion));
 	}
 
 	/**
@@ -324,6 +334,10 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 		switch (featureID) {
 			case ModelPackage.CONTENT__REVISION:
 				return ((InternalEList<?>)getRevision()).basicRemove(otherEnd, msgs);
+			case ModelPackage.CONTENT__VERSIONHISTORY:
+				return basicSetVersionhistory(null, msgs);
+			case ModelPackage.CONTENT__DISCUSSION:
+				return basicSetDiscussion(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -336,19 +350,17 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModelPackage.CONTENT__DISCUSSION_PAGE:
-				if (resolve) return getDiscussionPage();
-				return basicGetDiscussionPage();
 			case ModelPackage.CONTENT__CURRENT_REVISION:
 				if (resolve) return getCurrentRevision();
 				return basicGetCurrentRevision();
-			case ModelPackage.CONTENT__VERSION_HISTORY_PAGE:
-				if (resolve) return getVersionHistoryPage();
-				return basicGetVersionHistoryPage();
 			case ModelPackage.CONTENT__TITLE:
 				return getTitle();
 			case ModelPackage.CONTENT__REVISION:
 				return getRevision();
+			case ModelPackage.CONTENT__VERSIONHISTORY:
+				return getVersionhistory();
+			case ModelPackage.CONTENT__DISCUSSION:
+				return getDiscussion();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -362,14 +374,8 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModelPackage.CONTENT__DISCUSSION_PAGE:
-				setDiscussionPage((Discussion)newValue);
-				return;
 			case ModelPackage.CONTENT__CURRENT_REVISION:
 				setCurrentRevision((Revision)newValue);
-				return;
-			case ModelPackage.CONTENT__VERSION_HISTORY_PAGE:
-				setVersionHistoryPage((VersionHistory)newValue);
 				return;
 			case ModelPackage.CONTENT__TITLE:
 				setTitle((String)newValue);
@@ -377,6 +383,12 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 			case ModelPackage.CONTENT__REVISION:
 				getRevision().clear();
 				getRevision().addAll((Collection<? extends Revision>)newValue);
+				return;
+			case ModelPackage.CONTENT__VERSIONHISTORY:
+				setVersionhistory((VersionHistory)newValue);
+				return;
+			case ModelPackage.CONTENT__DISCUSSION:
+				setDiscussion((Discussion)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -390,20 +402,20 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModelPackage.CONTENT__DISCUSSION_PAGE:
-				setDiscussionPage((Discussion)null);
-				return;
 			case ModelPackage.CONTENT__CURRENT_REVISION:
 				setCurrentRevision((Revision)null);
-				return;
-			case ModelPackage.CONTENT__VERSION_HISTORY_PAGE:
-				setVersionHistoryPage((VersionHistory)null);
 				return;
 			case ModelPackage.CONTENT__TITLE:
 				setTitle(TITLE_EDEFAULT);
 				return;
 			case ModelPackage.CONTENT__REVISION:
 				getRevision().clear();
+				return;
+			case ModelPackage.CONTENT__VERSIONHISTORY:
+				setVersionhistory((VersionHistory)null);
+				return;
+			case ModelPackage.CONTENT__DISCUSSION:
+				setDiscussion((Discussion)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -417,16 +429,16 @@ public abstract class ContentImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModelPackage.CONTENT__DISCUSSION_PAGE:
-				return discussionPage != null;
 			case ModelPackage.CONTENT__CURRENT_REVISION:
 				return currentRevision != null;
-			case ModelPackage.CONTENT__VERSION_HISTORY_PAGE:
-				return versionHistoryPage != null;
 			case ModelPackage.CONTENT__TITLE:
 				return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
 			case ModelPackage.CONTENT__REVISION:
 				return revision != null && !revision.isEmpty();
+			case ModelPackage.CONTENT__VERSIONHISTORY:
+				return versionhistory != null;
+			case ModelPackage.CONTENT__DISCUSSION:
+				return discussion != null;
 		}
 		return super.eIsSet(featureID);
 	}

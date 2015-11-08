@@ -4,7 +4,6 @@ package at.ac.univie.swa.ase2015.a9902268.task2.model.impl;
 
 import at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.Article;
-import at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.Content;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.Discussion;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.InternalContent;
@@ -18,17 +17,21 @@ import at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.UnregisteredUser;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.User;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.VersionHistory;
-import at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.WikiProject;
+import at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia;
+import at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions;
+import at.ac.univie.swa.ase2015.a9902268.task2.model.userType;
 
-import java.util.Date;
+import at.ac.univie.swa.ase2015.a9902268.task2.model.util.ModelValidator;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EValidator;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -41,6 +44,13 @@ import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
  * @generated
  */
 public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass wikipediaEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -81,13 +91,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass revisionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass registeredUserEClass = null;
 
 	/**
@@ -95,21 +98,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass autoConfirmedUserEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass administratorEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass sysOpEClass = null;
+	private EClass revisionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,7 +140,28 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass wikiPediaEClass = null;
+	private EClass administratorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass sysOpEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum userTypeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum adminActionsEEnum = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -159,13 +169,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	private EDataType objectEDataType = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EDataType dateEDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -222,6 +225,15 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Initialize created meta-data
 		theModelPackage.initializePackageContents();
 
+		// Register package validator
+		EValidator.Registry.INSTANCE.put
+			(theModelPackage, 
+			 new EValidator.Descriptor() {
+				 public EValidator getEValidator() {
+					 return ModelValidator.INSTANCE;
+				 }
+			 });
+
 		// Mark meta-data to indicate it can't be changed
 		theModelPackage.freeze();
 
@@ -229,6 +241,51 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ModelPackage.eNS_URI, theModelPackage);
 		return theModelPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getWikipedia() {
+		return wikipediaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWikipedia_CurrentDateJD() {
+		return (EAttribute)wikipediaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWikipedia_Content() {
+		return (EReference)wikipediaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getWikipedia_User() {
+		return (EReference)wikipediaEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getWikipedia_AverageEditedPagesPerUser() {
+		return (EAttribute)wikipediaEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -245,7 +302,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContent_DiscussionPage() {
+	public EReference getContent_CurrentRevision() {
 		return (EReference)contentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -254,26 +311,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getContent_CurrentRevision() {
-		return (EReference)contentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getContent_VersionHistoryPage() {
-		return (EReference)contentEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getContent_Title() {
-		return (EAttribute)contentEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)contentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -282,6 +321,24 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * @generated
 	 */
 	public EReference getContent_Revision() {
+		return (EReference)contentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getContent_Versionhistory() {
+		return (EReference)contentEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getContent_Discussion() {
 		return (EReference)contentEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -470,8 +527,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getRevision() {
-		return revisionEClass;
+	public EAttribute getUser_WikiTime() {
+		return (EAttribute)userEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -479,8 +536,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRevision_Author() {
-		return (EReference)revisionEClass.getEStructuralFeatures().get(0);
+	public EAttribute getUser_CountRevisions() {
+		return (EAttribute)userEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -488,8 +545,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRevision_Content() {
-		return (EAttribute)revisionEClass.getEStructuralFeatures().get(1);
+	public EReference getUser_AuthoredRevisions() {
+		return (EReference)userEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -515,7 +572,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRegisteredUser_RegistrationDate() {
+	public EAttribute getRegisteredUser_RegistrationDateJD() {
 		return (EAttribute)registeredUserEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -524,7 +581,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getRegisteredUser_NumberOfEdits() {
+	public EAttribute getRegisteredUser_RegisteredSinceDays() {
 		return (EAttribute)registeredUserEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -533,8 +590,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getAutoConfirmedUser() {
-		return autoConfirmedUserEClass;
+	public EAttribute getRegisteredUser_UserType() {
+		return (EAttribute)registeredUserEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -542,8 +599,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getAutoConfirmedUser_AutoConfirmedDate() {
-		return (EAttribute)autoConfirmedUserEClass.getEStructuralFeatures().get(0);
+	public EAttribute getRegisteredUser_AdminAction() {
+		return (EAttribute)registeredUserEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -551,8 +608,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAutoConfirmedUser__CreateArticle() {
-		return autoConfirmedUserEClass.getEOperations().get(0);
+	public EClass getRevision() {
+		return revisionEClass;
 	}
 
 	/**
@@ -560,8 +617,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAutoConfirmedUser__MoveArticle() {
-		return autoConfirmedUserEClass.getEOperations().get(1);
+	public EReference getRevision_Author() {
+		return (EReference)revisionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -569,80 +626,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EOperation getAutoConfirmedUser__UploadMedia() {
-		return autoConfirmedUserEClass.getEOperations().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAutoConfirmedUser__MoveMedia() {
-		return autoConfirmedUserEClass.getEOperations().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getAdministrator() {
-		return administratorEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAdministrator__BlockUser() {
-		return administratorEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getAdministrator__DeleteContent() {
-		return administratorEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSysOp() {
-		return sysOpEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSysOp__MakeAdmin() {
-		return sysOpEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSysOp__RemoveAdmin() {
-		return sysOpEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getSysOp__BlockAdmin() {
-		return sysOpEClass.getEOperations().get(2);
+	public EAttribute getRevision_Content() {
+		return (EAttribute)revisionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -758,8 +743,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getWikiPedia() {
-		return wikiPediaEClass;
+	public EClass getAdministrator() {
+		return administratorEClass;
 	}
 
 	/**
@@ -767,8 +752,8 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWikiPedia_Content() {
-		return (EReference)wikiPediaEClass.getEStructuralFeatures().get(0);
+	public EClass getSysOp() {
+		return sysOpEClass;
 	}
 
 	/**
@@ -776,8 +761,17 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWikiPedia_User() {
-		return (EReference)wikiPediaEClass.getEStructuralFeatures().get(1);
+	public EEnum getuserType() {
+		return userTypeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getadminActions() {
+		return adminActionsEEnum;
 	}
 
 	/**
@@ -787,15 +781,6 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 	 */
 	public EDataType getObject() {
 		return objectEDataType;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EDataType getDate() {
-		return dateEDataType;
 	}
 
 	/**
@@ -826,12 +811,18 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		isCreated = true;
 
 		// Create classes and their features
+		wikipediaEClass = createEClass(WIKIPEDIA);
+		createEAttribute(wikipediaEClass, WIKIPEDIA__CURRENT_DATE_JD);
+		createEReference(wikipediaEClass, WIKIPEDIA__CONTENT);
+		createEReference(wikipediaEClass, WIKIPEDIA__USER);
+		createEAttribute(wikipediaEClass, WIKIPEDIA__AVERAGE_EDITED_PAGES_PER_USER);
+
 		contentEClass = createEClass(CONTENT);
-		createEReference(contentEClass, CONTENT__DISCUSSION_PAGE);
 		createEReference(contentEClass, CONTENT__CURRENT_REVISION);
-		createEReference(contentEClass, CONTENT__VERSION_HISTORY_PAGE);
 		createEAttribute(contentEClass, CONTENT__TITLE);
 		createEReference(contentEClass, CONTENT__REVISION);
+		createEReference(contentEClass, CONTENT__VERSIONHISTORY);
+		createEReference(contentEClass, CONTENT__DISCUSSION);
 		createEOperation(contentEClass, CONTENT___CREATE_NEW_REVISION);
 		createEOperation(contentEClass, CONTENT___ADD_DISCUSSION_ITEM);
 		createEOperation(contentEClass, CONTENT___RENDER_HTML);
@@ -856,31 +847,20 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		createEAttribute(userEClass, USER__IS_BLOCKED);
 		createEAttribute(userEClass, USER__IS_READER);
 		createEAttribute(userEClass, USER__IS_EDITOR);
+		createEAttribute(userEClass, USER__WIKI_TIME);
+		createEAttribute(userEClass, USER__COUNT_REVISIONS);
+		createEReference(userEClass, USER__AUTHORED_REVISIONS);
+
+		registeredUserEClass = createEClass(REGISTERED_USER);
+		createEAttribute(registeredUserEClass, REGISTERED_USER__USER_NAME);
+		createEAttribute(registeredUserEClass, REGISTERED_USER__REGISTRATION_DATE_JD);
+		createEAttribute(registeredUserEClass, REGISTERED_USER__REGISTERED_SINCE_DAYS);
+		createEAttribute(registeredUserEClass, REGISTERED_USER__USER_TYPE);
+		createEAttribute(registeredUserEClass, REGISTERED_USER__ADMIN_ACTION);
 
 		revisionEClass = createEClass(REVISION);
 		createEReference(revisionEClass, REVISION__AUTHOR);
 		createEAttribute(revisionEClass, REVISION__CONTENT);
-
-		registeredUserEClass = createEClass(REGISTERED_USER);
-		createEAttribute(registeredUserEClass, REGISTERED_USER__USER_NAME);
-		createEAttribute(registeredUserEClass, REGISTERED_USER__REGISTRATION_DATE);
-		createEAttribute(registeredUserEClass, REGISTERED_USER__NUMBER_OF_EDITS);
-
-		autoConfirmedUserEClass = createEClass(AUTO_CONFIRMED_USER);
-		createEAttribute(autoConfirmedUserEClass, AUTO_CONFIRMED_USER__AUTO_CONFIRMED_DATE);
-		createEOperation(autoConfirmedUserEClass, AUTO_CONFIRMED_USER___CREATE_ARTICLE);
-		createEOperation(autoConfirmedUserEClass, AUTO_CONFIRMED_USER___MOVE_ARTICLE);
-		createEOperation(autoConfirmedUserEClass, AUTO_CONFIRMED_USER___UPLOAD_MEDIA);
-		createEOperation(autoConfirmedUserEClass, AUTO_CONFIRMED_USER___MOVE_MEDIA);
-
-		administratorEClass = createEClass(ADMINISTRATOR);
-		createEOperation(administratorEClass, ADMINISTRATOR___BLOCK_USER);
-		createEOperation(administratorEClass, ADMINISTRATOR___DELETE_CONTENT);
-
-		sysOpEClass = createEClass(SYS_OP);
-		createEOperation(sysOpEClass, SYS_OP___MAKE_ADMIN);
-		createEOperation(sysOpEClass, SYS_OP___REMOVE_ADMIN);
-		createEOperation(sysOpEClass, SYS_OP___BLOCK_ADMIN);
 
 		discussionEClass = createEClass(DISCUSSION);
 		createEOperation(discussionEClass, DISCUSSION___RENDER_HTML);
@@ -899,13 +879,16 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		unregisteredUserEClass = createEClass(UNREGISTERED_USER);
 		createEAttribute(unregisteredUserEClass, UNREGISTERED_USER__IP_ADDRESS);
 
-		wikiPediaEClass = createEClass(WIKI_PEDIA);
-		createEReference(wikiPediaEClass, WIKI_PEDIA__CONTENT);
-		createEReference(wikiPediaEClass, WIKI_PEDIA__USER);
+		administratorEClass = createEClass(ADMINISTRATOR);
+
+		sysOpEClass = createEClass(SYS_OP);
+
+		// Create enums
+		userTypeEEnum = createEEnum(USER_TYPE);
+		adminActionsEEnum = createEEnum(ADMIN_ACTIONS);
 
 		// Create data types
 		objectEDataType = createEDataType(OBJECT);
-		dateEDataType = createEDataType(DATE);
 	}
 
 	/**
@@ -943,19 +926,24 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		mediaEClass.getESuperTypes().add(this.getContent());
 		internalContentEClass.getESuperTypes().add(this.getContent());
 		registeredUserEClass.getESuperTypes().add(this.getUser());
-		autoConfirmedUserEClass.getESuperTypes().add(this.getRegisteredUser());
-		administratorEClass.getESuperTypes().add(this.getRegisteredUser());
-		sysOpEClass.getESuperTypes().add(this.getRegisteredUser());
 		wikiProjectEClass.getESuperTypes().add(this.getInternalContent());
 		unregisteredUserEClass.getESuperTypes().add(this.getUser());
+		administratorEClass.getESuperTypes().add(this.getRegisteredUser());
+		sysOpEClass.getESuperTypes().add(this.getRegisteredUser());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(wikipediaEClass, Wikipedia.class, "Wikipedia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getWikipedia_CurrentDateJD(), ecorePackage.getEBigInteger(), "currentDateJD", null, 1, 1, Wikipedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWikipedia_Content(), this.getContent(), null, "content", null, 0, -1, Wikipedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getWikipedia_User(), this.getUser(), null, "user", null, 0, -1, Wikipedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getWikipedia_AverageEditedPagesPerUser(), ecorePackage.getEBigDecimal(), "averageEditedPagesPerUser", null, 1, 1, Wikipedia.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
 		initEClass(contentEClass, Content.class, "Content", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getContent_DiscussionPage(), this.getDiscussion(), null, "discussionPage", null, 1, 1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContent_CurrentRevision(), this.getRevision(), null, "currentRevision", null, 1, 1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getContent_VersionHistoryPage(), this.getVersionHistory(), null, "versionHistoryPage", null, 1, 1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getContent_Title(), ecorePackage.getEString(), "title", null, 0, 1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getContent_Revision(), this.getRevision(), null, "revision", null, 0, -1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContent_Versionhistory(), this.getVersionHistory(), null, "versionhistory", null, 1, 1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getContent_Discussion(), this.getDiscussion(), null, "discussion", null, 1, 1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getContent__CreateNewRevision(), this.getRevision(), "createNewRevision", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -990,40 +978,20 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEAttribute(getUser_IsBlocked(), ecorePackage.getEBoolean(), "isBlocked", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUser_IsReader(), ecorePackage.getEBoolean(), "isReader", "true", 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getUser_IsEditor(), ecorePackage.getEBoolean(), "isEditor", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_WikiTime(), ecorePackage.getEBigInteger(), "wikiTime", null, 1, 1, User.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getUser_CountRevisions(), ecorePackage.getEBigInteger(), "countRevisions", null, 1, 1, User.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getUser_AuthoredRevisions(), this.getRevision(), null, "authoredRevisions", null, 0, -1, User.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, !IS_ORDERED);
+
+		initEClass(registeredUserEClass, RegisteredUser.class, "RegisteredUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRegisteredUser_UserName(), ecorePackage.getEString(), "userName", null, 1, 1, RegisteredUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRegisteredUser_RegistrationDateJD(), ecorePackage.getEBigInteger(), "registrationDateJD", null, 1, 1, RegisteredUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRegisteredUser_RegisteredSinceDays(), ecorePackage.getEBigInteger(), "registeredSinceDays", null, 1, 1, RegisteredUser.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRegisteredUser_UserType(), this.getuserType(), "userType", "RegisteredUser", 1, 1, RegisteredUser.class, !IS_TRANSIENT, IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRegisteredUser_AdminAction(), this.getadminActions(), "adminAction", null, 0, 1, RegisteredUser.class, !IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(revisionEClass, Revision.class, "Revision", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRevision_Author(), this.getUser(), null, "author", null, 1, 1, Revision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRevision_Content(), theXMLTypePackage.getAnySimpleType(), "content", null, 0, 1, Revision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(registeredUserEClass, RegisteredUser.class, "RegisteredUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRegisteredUser_UserName(), ecorePackage.getEString(), "userName", null, 1, 1, RegisteredUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRegisteredUser_RegistrationDate(), this.getDate(), "registrationDate", null, 0, 1, RegisteredUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRegisteredUser_NumberOfEdits(), theXMLTypePackage.getInt(), "numberOfEdits", "0", 0, 1, RegisteredUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(autoConfirmedUserEClass, AutoConfirmedUser.class, "AutoConfirmedUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getAutoConfirmedUser_AutoConfirmedDate(), this.getDate(), "autoConfirmedDate", null, 0, 1, AutoConfirmedUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEOperation(getAutoConfirmedUser__CreateArticle(), null, "createArticle", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAutoConfirmedUser__MoveArticle(), null, "moveArticle", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAutoConfirmedUser__UploadMedia(), null, "uploadMedia", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAutoConfirmedUser__MoveMedia(), null, "moveMedia", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(administratorEClass, Administrator.class, "Administrator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getAdministrator__BlockUser(), null, "blockUser", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getAdministrator__DeleteContent(), null, "deleteContent", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEClass(sysOpEClass, SysOp.class, "SysOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEOperation(getSysOp__MakeAdmin(), null, "makeAdmin", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getSysOp__RemoveAdmin(), null, "removeAdmin", 0, 1, IS_UNIQUE, IS_ORDERED);
-
-		initEOperation(getSysOp__BlockAdmin(), null, "blockAdmin", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(discussionEClass, Discussion.class, "Discussion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1045,13 +1013,21 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		initEClass(unregisteredUserEClass, UnregisteredUser.class, "UnregisteredUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getUnregisteredUser_IPAddress(), ecorePackage.getEString(), "IPAddress", null, 1, 1, UnregisteredUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(wikiPediaEClass, WikiPedia.class, "WikiPedia", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWikiPedia_Content(), this.getContent(), null, "content", null, 0, -1, WikiPedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getWikiPedia_User(), this.getUser(), null, "user", null, 0, -1, WikiPedia.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(administratorEClass, Administrator.class, "Administrator", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(sysOpEClass, SysOp.class, "SysOp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(userTypeEEnum, userType.class, "userType");
+		addEEnumLiteral(userTypeEEnum, userType.AUTO_CONFIRMED_USER);
+		addEEnumLiteral(userTypeEEnum, userType.REGISTERED_USER);
+
+		initEEnum(adminActionsEEnum, adminActions.class, "adminActions");
+		addEEnumLiteral(adminActionsEEnum, adminActions.CREATE_CONTENT);
+		addEEnumLiteral(adminActionsEEnum, adminActions.CREATE_DELETE_CONTENT);
 
 		// Initialize data types
 		initEDataType(objectEDataType, Object.class, "Object", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
-		initEDataType(dateEDataType, Date.class, "Date", IS_SERIALIZABLE, !IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
@@ -1059,6 +1035,10 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		// Create annotations
 		// http://www.eclipse.org/OCL/Import
 		createImportAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore
+		createEcoreAnnotations();
+		// http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot
+		createPivotAnnotations();
 	}
 
 	/**
@@ -1075,6 +1055,101 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		   new String[] {
 			 "ecore", "http://www.eclipse.org/emf/2002/Ecore",
 			 "ecore.xml.type", "http://www.eclipse.org/emf/2003/XMLType"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createEcoreAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore";	
+		addAnnotation
+		  (this, 
+		   source, 
+		   new String[] {
+			 "invocationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "settingDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot",
+			 "validationDelegates", "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot"
+		   });	
+		addAnnotation
+		  (wikipediaEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "atLeastOneSysOpOrAdminAvailable qualityOfWikipedia"
+		   });	
+		addAnnotation
+		  (registeredUserEClass, 
+		   source, 
+		   new String[] {
+			 "constraints", "timeIsCorrect"
+		   });
+	}
+
+	/**
+	 * Initializes the annotations for <b>http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot</b>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void createPivotAnnotations() {
+		String source = "http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot";	
+		addAnnotation
+		  (wikipediaEClass, 
+		   source, 
+		   new String[] {
+			 "atLeastOneSysOpOrAdminAvailable", "user->select(obj |\n\t\t\t\tobj.oclIsKindOf(RegisteredUser))->size() > 0 implies (user->select(obj |\n\t\t\t\tobj.oclIsKindOf(SysOp))->size() > 0 and user->select(obj | obj.oclIsKindOf(Administrator))->size() > 0)",
+			 "qualityOfWikipedia", "averageEditedPagesPerUser >= 1"
+		   });	
+		addAnnotation
+		  (getWikipedia_AverageEditedPagesPerUser(), 
+		   source, 
+		   new String[] {
+			 "derivation", "user.countRevisions->sum() / user->size()"
+		   });	
+		addAnnotation
+		  (getUser_WikiTime(), 
+		   source, 
+		   new String[] {
+			 "derivation", "self.Wikipedia.currentDateJD"
+		   });	
+		addAnnotation
+		  (getUser_CountRevisions(), 
+		   source, 
+		   new String[] {
+			 "derivation", "self.authoredRevisions->size()"
+		   });	
+		addAnnotation
+		  (getUser_AuthoredRevisions(), 
+		   source, 
+		   new String[] {
+			 "derivation", "Revision.allInstances()->select(author = self)"
+		   });	
+		addAnnotation
+		  (registeredUserEClass, 
+		   source, 
+		   new String[] {
+			 "timeIsCorrect", "wikiTime >= registrationDateJD"
+		   });	
+		addAnnotation
+		  (getRegisteredUser_RegisteredSinceDays(), 
+		   source, 
+		   new String[] {
+			 "derivation", "wikiTime - registrationDateJD"
+		   });	
+		addAnnotation
+		  (getRegisteredUser_UserType(), 
+		   source, 
+		   new String[] {
+			 "derivation", "if (self.countRevisions < 1 or registeredSinceDays < 7) then userType::RegisteredUser\n\t\t\t\t\t\t\t\telse userType::AutoConfirmedUser\n\t\t\t\t\t\t\t\tendif"
+		   });	
+		addAnnotation
+		  (getRegisteredUser_AdminAction(), 
+		   source, 
+		   new String[] {
+			 "derivation", "if (self.oclIsKindOf(Administrator) or self.oclIsKindOf(SysOp)) then adminActions::CreateDeleteContent\n\t\t\t\t\t\t\t\t\telse (if self.userType = userType::AutoConfirmedUser then adminActions::CreateContent\n\t\t\t\t\t\t\t\t\t\telse (null)\n\t\t\t\t\t\t\t\t\t\tendif) endif"
 		   });
 	}
 

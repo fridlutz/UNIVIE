@@ -22,6 +22,15 @@ public interface ModelFactory extends EFactory {
 	ModelFactory eINSTANCE = at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Wikipedia</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Wikipedia</em>'.
+	 * @generated
+	 */
+	Wikipedia createWikipedia();
+
+	/**
 	 * Returns a new object of class '<em>Article</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,15 +58,6 @@ public interface ModelFactory extends EFactory {
 	InternalContent createInternalContent();
 
 	/**
-	 * Returns a new object of class '<em>Revision</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Revision</em>'.
-	 * @generated
-	 */
-	Revision createRevision();
-
-	/**
 	 * Returns a new object of class '<em>Registered User</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,31 +67,13 @@ public interface ModelFactory extends EFactory {
 	RegisteredUser createRegisteredUser();
 
 	/**
-	 * Returns a new object of class '<em>Auto Confirmed User</em>'.
+	 * Returns a new object of class '<em>Revision</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Auto Confirmed User</em>'.
+	 * @return a new object of class '<em>Revision</em>'.
 	 * @generated
 	 */
-	AutoConfirmedUser createAutoConfirmedUser();
-
-	/**
-	 * Returns a new object of class '<em>Administrator</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Administrator</em>'.
-	 * @generated
-	 */
-	Administrator createAdministrator();
-
-	/**
-	 * Returns a new object of class '<em>Sys Op</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Sys Op</em>'.
-	 * @generated
-	 */
-	SysOp createSysOp();
+	Revision createRevision();
 
 	/**
 	 * Returns a new object of class '<em>Discussion</em>'.
@@ -139,13 +121,22 @@ public interface ModelFactory extends EFactory {
 	UnregisteredUser createUnregisteredUser();
 
 	/**
-	 * Returns a new object of class '<em>Wiki Pedia</em>'.
+	 * Returns a new object of class '<em>Administrator</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Wiki Pedia</em>'.
+	 * @return a new object of class '<em>Administrator</em>'.
 	 * @generated
 	 */
-	WikiPedia createWikiPedia();
+	Administrator createAdministrator();
+
+	/**
+	 * Returns a new object of class '<em>Sys Op</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Sys Op</em>'.
+	 * @generated
+	 */
+	SysOp createSysOp();
 
 	/**
 	 * Returns the package supported by this factory.

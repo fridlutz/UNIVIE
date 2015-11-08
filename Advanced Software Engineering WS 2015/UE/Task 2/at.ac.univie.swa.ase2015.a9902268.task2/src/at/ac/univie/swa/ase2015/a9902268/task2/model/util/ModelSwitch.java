@@ -66,6 +66,12 @@ public class ModelSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ModelPackage.WIKIPEDIA: {
+				Wikipedia wikipedia = (Wikipedia)theEObject;
+				T result = caseWikipedia(wikipedia);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ModelPackage.CONTENT: {
 				Content content = (Content)theEObject;
 				T result = caseContent(content);
@@ -99,12 +105,6 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.REVISION: {
-				Revision revision = (Revision)theEObject;
-				T result = caseRevision(revision);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ModelPackage.REGISTERED_USER: {
 				RegisteredUser registeredUser = (RegisteredUser)theEObject;
 				T result = caseRegisteredUser(registeredUser);
@@ -112,27 +112,9 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.AUTO_CONFIRMED_USER: {
-				AutoConfirmedUser autoConfirmedUser = (AutoConfirmedUser)theEObject;
-				T result = caseAutoConfirmedUser(autoConfirmedUser);
-				if (result == null) result = caseRegisteredUser(autoConfirmedUser);
-				if (result == null) result = caseUser(autoConfirmedUser);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ModelPackage.ADMINISTRATOR: {
-				Administrator administrator = (Administrator)theEObject;
-				T result = caseAdministrator(administrator);
-				if (result == null) result = caseRegisteredUser(administrator);
-				if (result == null) result = caseUser(administrator);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ModelPackage.SYS_OP: {
-				SysOp sysOp = (SysOp)theEObject;
-				T result = caseSysOp(sysOp);
-				if (result == null) result = caseRegisteredUser(sysOp);
-				if (result == null) result = caseUser(sysOp);
+			case ModelPackage.REVISION: {
+				Revision revision = (Revision)theEObject;
+				T result = caseRevision(revision);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -169,14 +151,39 @@ public class ModelSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ModelPackage.WIKI_PEDIA: {
-				WikiPedia wikiPedia = (WikiPedia)theEObject;
-				T result = caseWikiPedia(wikiPedia);
+			case ModelPackage.ADMINISTRATOR: {
+				Administrator administrator = (Administrator)theEObject;
+				T result = caseAdministrator(administrator);
+				if (result == null) result = caseRegisteredUser(administrator);
+				if (result == null) result = caseUser(administrator);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModelPackage.SYS_OP: {
+				SysOp sysOp = (SysOp)theEObject;
+				T result = caseSysOp(sysOp);
+				if (result == null) result = caseRegisteredUser(sysOp);
+				if (result == null) result = caseUser(sysOp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Wikipedia</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Wikipedia</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseWikipedia(Wikipedia object) {
+		return null;
 	}
 
 	/**
@@ -255,21 +262,6 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Revision</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Revision</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseRevision(Revision object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Registered User</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -285,47 +277,17 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Auto Confirmed User</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Revision</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Auto Confirmed User</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Revision</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseAutoConfirmedUser(AutoConfirmedUser object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Administrator</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Administrator</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseAdministrator(Administrator object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Sys Op</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Sys Op</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseSysOp(SysOp object) {
+	public T caseRevision(Revision object) {
 		return null;
 	}
 
@@ -405,17 +367,32 @@ public class ModelSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Wiki Pedia</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Administrator</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Wiki Pedia</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Administrator</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseWikiPedia(WikiPedia object) {
+	public T caseAdministrator(Administrator object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Sys Op</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Sys Op</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseSysOp(SysOp object) {
 		return null;
 	}
 

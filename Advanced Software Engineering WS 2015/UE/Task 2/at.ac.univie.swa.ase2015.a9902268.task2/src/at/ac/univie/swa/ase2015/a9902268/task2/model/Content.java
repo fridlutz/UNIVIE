@@ -15,11 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getDiscussionPage <em>Discussion Page</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getCurrentRevision <em>Current Revision</em>}</li>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getVersionHistoryPage <em>Version History Page</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getTitle <em>Title</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getRevision <em>Revision</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getVersionhistory <em>Versionhistory</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getDiscussion <em>Discussion</em>}</li>
  * </ul>
  *
  * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getContent()
@@ -27,32 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Content extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Discussion Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Discussion Page</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Discussion Page</em>' reference.
-	 * @see #setDiscussionPage(Discussion)
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getContent_DiscussionPage()
-	 * @model required="true"
-	 * @generated
-	 */
-	Discussion getDiscussionPage();
-
-	/**
-	 * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getDiscussionPage <em>Discussion Page</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Discussion Page</em>' reference.
-	 * @see #getDiscussionPage()
-	 * @generated
-	 */
-	void setDiscussionPage(Discussion value);
-
 	/**
 	 * Returns the value of the '<em><b>Current Revision</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -78,32 +52,6 @@ public interface Content extends EObject {
 	 * @generated
 	 */
 	void setCurrentRevision(Revision value);
-
-	/**
-	 * Returns the value of the '<em><b>Version History Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Version History Page</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Version History Page</em>' reference.
-	 * @see #setVersionHistoryPage(VersionHistory)
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getContent_VersionHistoryPage()
-	 * @model required="true"
-	 * @generated
-	 */
-	VersionHistory getVersionHistoryPage();
-
-	/**
-	 * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getVersionHistoryPage <em>Version History Page</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Version History Page</em>' reference.
-	 * @see #getVersionHistoryPage()
-	 * @generated
-	 */
-	void setVersionHistoryPage(VersionHistory value);
 
 	/**
 	 * Returns the value of the '<em><b>Title</b></em>' attribute.
@@ -146,6 +94,58 @@ public interface Content extends EObject {
 	 * @generated
 	 */
 	EList<Revision> getRevision();
+
+	/**
+	 * Returns the value of the '<em><b>Versionhistory</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Versionhistory</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Versionhistory</em>' containment reference.
+	 * @see #setVersionhistory(VersionHistory)
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getContent_Versionhistory()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	VersionHistory getVersionhistory();
+
+	/**
+	 * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getVersionhistory <em>Versionhistory</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Versionhistory</em>' containment reference.
+	 * @see #getVersionhistory()
+	 * @generated
+	 */
+	void setVersionhistory(VersionHistory value);
+
+	/**
+	 * Returns the value of the '<em><b>Discussion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Discussion</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Discussion</em>' containment reference.
+	 * @see #setDiscussion(Discussion)
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getContent_Discussion()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	Discussion getDiscussion();
+
+	/**
+	 * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getDiscussion <em>Discussion</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Discussion</em>' containment reference.
+	 * @see #getDiscussion()
+	 * @generated
+	 */
+	void setDiscussion(Discussion value);
 
 	/**
 	 * <!-- begin-user-doc -->

@@ -14,28 +14,4 @@ package at.ac.univie.swa.ase2015.a9902268.task2.model;
  * @generated
  */
 public interface SysOp extends RegisteredUser {
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void makeAdmin();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void removeAdmin();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void blockAdmin();
-
 } // SysOp

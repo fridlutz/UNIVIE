@@ -4,12 +4,15 @@ package at.ac.univie.swa.ase2015.a9902268.task2.model.impl;
 
 import at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser;
+import at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions;
+import at.ac.univie.swa.ase2015.a9902268.task2.model.userType;
 
-import java.util.Date;
+import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -22,8 +25,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl#getUserName <em>User Name</em>}</li>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl#getRegistrationDate <em>Registration Date</em>}</li>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl#getNumberOfEdits <em>Number Of Edits</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl#getRegistrationDateJD <em>Registration Date JD</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl#getRegisteredSinceDays <em>Registered Since Days</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl#getUserType <em>User Type</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl#getAdminAction <em>Admin Action</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,44 +55,54 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 	protected String userName = USER_NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getRegistrationDate() <em>Registration Date</em>}' attribute.
+	 * The default value of the '{@link #getRegistrationDateJD() <em>Registration Date JD</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegistrationDate()
+	 * @see #getRegistrationDateJD()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Date REGISTRATION_DATE_EDEFAULT = null;
+	protected static final BigInteger REGISTRATION_DATE_JD_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getRegistrationDate() <em>Registration Date</em>}' attribute.
+	 * The cached value of the '{@link #getRegistrationDateJD() <em>Registration Date JD</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRegistrationDate()
+	 * @see #getRegistrationDateJD()
 	 * @generated
 	 * @ordered
 	 */
-	protected Date registrationDate = REGISTRATION_DATE_EDEFAULT;
+	protected BigInteger registrationDateJD = REGISTRATION_DATE_JD_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getNumberOfEdits() <em>Number Of Edits</em>}' attribute.
+	 * The cached setting delegate for the '{@link #getRegisteredSinceDays() <em>Registered Since Days</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumberOfEdits()
+	 * @see #getRegisteredSinceDays()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final int NUMBER_OF_EDITS_EDEFAULT = 0;
+	protected EStructuralFeature.Internal.SettingDelegate REGISTERED_SINCE_DAYS__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ModelPackage.Literals.REGISTERED_USER__REGISTERED_SINCE_DAYS).getSettingDelegate();
 
 	/**
-	 * The cached value of the '{@link #getNumberOfEdits() <em>Number Of Edits</em>}' attribute.
+	 * The cached setting delegate for the '{@link #getUserType() <em>User Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNumberOfEdits()
+	 * @see #getUserType()
 	 * @generated
 	 * @ordered
 	 */
-	protected int numberOfEdits = NUMBER_OF_EDITS_EDEFAULT;
+	protected EStructuralFeature.Internal.SettingDelegate USER_TYPE__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ModelPackage.Literals.REGISTERED_USER__USER_TYPE).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getAdminAction() <em>Admin Action</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdminAction()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate ADMIN_ACTION__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ModelPackage.Literals.REGISTERED_USER__ADMIN_ACTION).getSettingDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -134,8 +149,8 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Date getRegistrationDate() {
-		return registrationDate;
+	public BigInteger getRegistrationDateJD() {
+		return registrationDateJD;
 	}
 
 	/**
@@ -143,11 +158,11 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setRegistrationDate(Date newRegistrationDate) {
-		Date oldRegistrationDate = registrationDate;
-		registrationDate = newRegistrationDate;
+	public void setRegistrationDateJD(BigInteger newRegistrationDateJD) {
+		BigInteger oldRegistrationDateJD = registrationDateJD;
+		registrationDateJD = newRegistrationDateJD;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REGISTERED_USER__REGISTRATION_DATE, oldRegistrationDate, registrationDate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REGISTERED_USER__REGISTRATION_DATE_JD, oldRegistrationDateJD, registrationDateJD));
 	}
 
 	/**
@@ -155,8 +170,8 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int getNumberOfEdits() {
-		return numberOfEdits;
+	public BigInteger getRegisteredSinceDays() {
+		return (BigInteger)REGISTERED_SINCE_DAYS__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -164,11 +179,17 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setNumberOfEdits(int newNumberOfEdits) {
-		int oldNumberOfEdits = numberOfEdits;
-		numberOfEdits = newNumberOfEdits;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModelPackage.REGISTERED_USER__NUMBER_OF_EDITS, oldNumberOfEdits, numberOfEdits));
+	public userType getUserType() {
+		return (userType)USER_TYPE__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public adminActions getAdminAction() {
+		return (adminActions)ADMIN_ACTION__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
 	}
 
 	/**
@@ -181,10 +202,14 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 		switch (featureID) {
 			case ModelPackage.REGISTERED_USER__USER_NAME:
 				return getUserName();
-			case ModelPackage.REGISTERED_USER__REGISTRATION_DATE:
-				return getRegistrationDate();
-			case ModelPackage.REGISTERED_USER__NUMBER_OF_EDITS:
-				return getNumberOfEdits();
+			case ModelPackage.REGISTERED_USER__REGISTRATION_DATE_JD:
+				return getRegistrationDateJD();
+			case ModelPackage.REGISTERED_USER__REGISTERED_SINCE_DAYS:
+				return getRegisteredSinceDays();
+			case ModelPackage.REGISTERED_USER__USER_TYPE:
+				return getUserType();
+			case ModelPackage.REGISTERED_USER__ADMIN_ACTION:
+				return getAdminAction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -200,11 +225,8 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 			case ModelPackage.REGISTERED_USER__USER_NAME:
 				setUserName((String)newValue);
 				return;
-			case ModelPackage.REGISTERED_USER__REGISTRATION_DATE:
-				setRegistrationDate((Date)newValue);
-				return;
-			case ModelPackage.REGISTERED_USER__NUMBER_OF_EDITS:
-				setNumberOfEdits((Integer)newValue);
+			case ModelPackage.REGISTERED_USER__REGISTRATION_DATE_JD:
+				setRegistrationDateJD((BigInteger)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -221,11 +243,8 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 			case ModelPackage.REGISTERED_USER__USER_NAME:
 				setUserName(USER_NAME_EDEFAULT);
 				return;
-			case ModelPackage.REGISTERED_USER__REGISTRATION_DATE:
-				setRegistrationDate(REGISTRATION_DATE_EDEFAULT);
-				return;
-			case ModelPackage.REGISTERED_USER__NUMBER_OF_EDITS:
-				setNumberOfEdits(NUMBER_OF_EDITS_EDEFAULT);
+			case ModelPackage.REGISTERED_USER__REGISTRATION_DATE_JD:
+				setRegistrationDateJD(REGISTRATION_DATE_JD_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -241,10 +260,14 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 		switch (featureID) {
 			case ModelPackage.REGISTERED_USER__USER_NAME:
 				return USER_NAME_EDEFAULT == null ? userName != null : !USER_NAME_EDEFAULT.equals(userName);
-			case ModelPackage.REGISTERED_USER__REGISTRATION_DATE:
-				return REGISTRATION_DATE_EDEFAULT == null ? registrationDate != null : !REGISTRATION_DATE_EDEFAULT.equals(registrationDate);
-			case ModelPackage.REGISTERED_USER__NUMBER_OF_EDITS:
-				return numberOfEdits != NUMBER_OF_EDITS_EDEFAULT;
+			case ModelPackage.REGISTERED_USER__REGISTRATION_DATE_JD:
+				return REGISTRATION_DATE_JD_EDEFAULT == null ? registrationDateJD != null : !REGISTRATION_DATE_JD_EDEFAULT.equals(registrationDateJD);
+			case ModelPackage.REGISTERED_USER__REGISTERED_SINCE_DAYS:
+				return REGISTERED_SINCE_DAYS__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case ModelPackage.REGISTERED_USER__USER_TYPE:
+				return USER_TYPE__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case ModelPackage.REGISTERED_USER__ADMIN_ACTION:
+				return ADMIN_ACTION__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -261,10 +284,8 @@ public class RegisteredUserImpl extends UserImpl implements RegisteredUser {
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (userName: ");
 		result.append(userName);
-		result.append(", registrationDate: ");
-		result.append(registrationDate);
-		result.append(", numberOfEdits: ");
-		result.append(numberOfEdits);
+		result.append(", registrationDateJD: ");
+		result.append(registrationDateJD);
 		result.append(')');
 		return result.toString();
 	}

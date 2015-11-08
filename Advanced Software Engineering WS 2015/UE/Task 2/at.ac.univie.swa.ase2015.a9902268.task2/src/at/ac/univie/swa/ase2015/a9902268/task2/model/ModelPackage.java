@@ -5,6 +5,7 @@ package at.ac.univie.swa.ase2015.a9902268.task2.model;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -24,6 +25,7 @@ import org.eclipse.emf.ecore.EReference;
  * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelFactory
  * @model kind="package"
  *        annotation="http://www.eclipse.org/OCL/Import ecore='http://www.eclipse.org/emf/2002/Ecore' ecore.xml.type='http://www.eclipse.org/emf/2003/XMLType'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore invocationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' settingDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot' validationDelegates='http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot'"
  * @generated
  */
 public interface ModelPackage extends EPackage {
@@ -60,6 +62,70 @@ public interface ModelPackage extends EPackage {
 	ModelPackage eINSTANCE = at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.WikipediaImpl <em>Wikipedia</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.WikipediaImpl
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getWikipedia()
+	 * @generated
+	 */
+	int WIKIPEDIA = 0;
+
+	/**
+	 * The feature id for the '<em><b>Current Date JD</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIKIPEDIA__CURRENT_DATE_JD = 0;
+
+	/**
+	 * The feature id for the '<em><b>Content</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIKIPEDIA__CONTENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>User</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIKIPEDIA__USER = 2;
+
+	/**
+	 * The feature id for the '<em><b>Average Edited Pages Per User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIKIPEDIA__AVERAGE_EDITED_PAGES_PER_USER = 3;
+
+	/**
+	 * The number of structural features of the '<em>Wikipedia</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIKIPEDIA_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Wikipedia</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIKIPEDIA_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl <em>Content</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -67,16 +133,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getContent()
 	 * @generated
 	 */
-	int CONTENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Discussion Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT__DISCUSSION_PAGE = 0;
+	int CONTENT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Current Revision</b></em>' reference.
@@ -85,16 +142,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT__CURRENT_REVISION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Version History Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CONTENT__VERSION_HISTORY_PAGE = 2;
+	int CONTENT__CURRENT_REVISION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -103,7 +151,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT__TITLE = 3;
+	int CONTENT__TITLE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Revision</b></em>' containment reference list.
@@ -112,7 +160,25 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTENT__REVISION = 4;
+	int CONTENT__REVISION = 2;
+
+	/**
+	 * The feature id for the '<em><b>Versionhistory</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT__VERSIONHISTORY = 3;
+
+	/**
+	 * The feature id for the '<em><b>Discussion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTENT__DISCUSSION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Content</em>' class.
@@ -176,16 +242,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getArticle()
 	 * @generated
 	 */
-	int ARTICLE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Discussion Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTICLE__DISCUSSION_PAGE = CONTENT__DISCUSSION_PAGE;
+	int ARTICLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Current Revision</b></em>' reference.
@@ -195,15 +252,6 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ARTICLE__CURRENT_REVISION = CONTENT__CURRENT_REVISION;
-
-	/**
-	 * The feature id for the '<em><b>Version History Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARTICLE__VERSION_HISTORY_PAGE = CONTENT__VERSION_HISTORY_PAGE;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -222,6 +270,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int ARTICLE__REVISION = CONTENT__REVISION;
+
+	/**
+	 * The feature id for the '<em><b>Versionhistory</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARTICLE__VERSIONHISTORY = CONTENT__VERSIONHISTORY;
+
+	/**
+	 * The feature id for the '<em><b>Discussion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARTICLE__DISCUSSION = CONTENT__DISCUSSION;
 
 	/**
 	 * The number of structural features of the '<em>Article</em>' class.
@@ -285,16 +351,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getMedia()
 	 * @generated
 	 */
-	int MEDIA = 2;
-
-	/**
-	 * The feature id for the '<em><b>Discussion Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDIA__DISCUSSION_PAGE = CONTENT__DISCUSSION_PAGE;
+	int MEDIA = 3;
 
 	/**
 	 * The feature id for the '<em><b>Current Revision</b></em>' reference.
@@ -304,15 +361,6 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int MEDIA__CURRENT_REVISION = CONTENT__CURRENT_REVISION;
-
-	/**
-	 * The feature id for the '<em><b>Version History Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MEDIA__VERSION_HISTORY_PAGE = CONTENT__VERSION_HISTORY_PAGE;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -331,6 +379,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int MEDIA__REVISION = CONTENT__REVISION;
+
+	/**
+	 * The feature id for the '<em><b>Versionhistory</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDIA__VERSIONHISTORY = CONTENT__VERSIONHISTORY;
+
+	/**
+	 * The feature id for the '<em><b>Discussion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEDIA__DISCUSSION = CONTENT__DISCUSSION;
 
 	/**
 	 * The feature id for the '<em><b>Usage</b></em>' reference list.
@@ -466,16 +532,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getInternalContent()
 	 * @generated
 	 */
-	int INTERNAL_CONTENT = 3;
-
-	/**
-	 * The feature id for the '<em><b>Discussion Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERNAL_CONTENT__DISCUSSION_PAGE = CONTENT__DISCUSSION_PAGE;
+	int INTERNAL_CONTENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Current Revision</b></em>' reference.
@@ -485,15 +542,6 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTERNAL_CONTENT__CURRENT_REVISION = CONTENT__CURRENT_REVISION;
-
-	/**
-	 * The feature id for the '<em><b>Version History Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERNAL_CONTENT__VERSION_HISTORY_PAGE = CONTENT__VERSION_HISTORY_PAGE;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -512,6 +560,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTERNAL_CONTENT__REVISION = CONTENT__REVISION;
+
+	/**
+	 * The feature id for the '<em><b>Versionhistory</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_CONTENT__VERSIONHISTORY = CONTENT__VERSIONHISTORY;
+
+	/**
+	 * The feature id for the '<em><b>Discussion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERNAL_CONTENT__DISCUSSION = CONTENT__DISCUSSION;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -584,7 +650,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getUser()
 	 * @generated
 	 */
-	int USER = 4;
+	int USER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Is Blocked</b></em>' attribute.
@@ -614,13 +680,40 @@ public interface ModelPackage extends EPackage {
 	int USER__IS_EDITOR = 2;
 
 	/**
+	 * The feature id for the '<em><b>Wiki Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__WIKI_TIME = 3;
+
+	/**
+	 * The feature id for the '<em><b>Count Revisions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__COUNT_REVISIONS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Authored Revisions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int USER__AUTHORED_REVISIONS = 5;
+
+	/**
 	 * The number of structural features of the '<em>User</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int USER_FEATURE_COUNT = 3;
+	int USER_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>User</em>' class.
@@ -630,52 +723,6 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int USER_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RevisionImpl <em>Revision</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RevisionImpl
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getRevision()
-	 * @generated
-	 */
-	int REVISION = 5;
-
-	/**
-	 * The feature id for the '<em><b>Author</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVISION__AUTHOR = 0;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVISION__CONTENT = 1;
-
-	/**
-	 * The number of structural features of the '<em>Revision</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVISION_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Revision</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REVISION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl <em>Registered User</em>}' class.
@@ -715,6 +762,33 @@ public interface ModelPackage extends EPackage {
 	int REGISTERED_USER__IS_EDITOR = USER__IS_EDITOR;
 
 	/**
+	 * The feature id for the '<em><b>Wiki Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_USER__WIKI_TIME = USER__WIKI_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Count Revisions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_USER__COUNT_REVISIONS = USER__COUNT_REVISIONS;
+
+	/**
+	 * The feature id for the '<em><b>Authored Revisions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_USER__AUTHORED_REVISIONS = USER__AUTHORED_REVISIONS;
+
+	/**
 	 * The feature id for the '<em><b>User Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -724,22 +798,40 @@ public interface ModelPackage extends EPackage {
 	int REGISTERED_USER__USER_NAME = USER_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Registration Date</b></em>' attribute.
+	 * The feature id for the '<em><b>Registration Date JD</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_USER__REGISTRATION_DATE = USER_FEATURE_COUNT + 1;
+	int REGISTERED_USER__REGISTRATION_DATE_JD = USER_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Number Of Edits</b></em>' attribute.
+	 * The feature id for the '<em><b>Registered Since Days</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_USER__NUMBER_OF_EDITS = USER_FEATURE_COUNT + 2;
+	int REGISTERED_USER__REGISTERED_SINCE_DAYS = USER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>User Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_USER__USER_TYPE = USER_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Admin Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGISTERED_USER__ADMIN_ACTION = USER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Registered User</em>' class.
@@ -748,7 +840,7 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGISTERED_USER_FEATURE_COUNT = USER_FEATURE_COUNT + 3;
+	int REGISTERED_USER_FEATURE_COUNT = USER_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Registered User</em>' class.
@@ -760,340 +852,50 @@ public interface ModelPackage extends EPackage {
 	int REGISTERED_USER_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AutoConfirmedUserImpl <em>Auto Confirmed User</em>}' class.
+	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RevisionImpl <em>Revision</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AutoConfirmedUserImpl
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getAutoConfirmedUser()
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RevisionImpl
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getRevision()
 	 * @generated
 	 */
-	int AUTO_CONFIRMED_USER = 7;
+	int REVISION = 7;
 
 	/**
-	 * The feature id for the '<em><b>Is Blocked</b></em>' attribute.
+	 * The feature id for the '<em><b>Author</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTO_CONFIRMED_USER__IS_BLOCKED = REGISTERED_USER__IS_BLOCKED;
+	int REVISION__AUTHOR = 0;
 
 	/**
-	 * The feature id for the '<em><b>Is Reader</b></em>' attribute.
+	 * The feature id for the '<em><b>Content</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTO_CONFIRMED_USER__IS_READER = REGISTERED_USER__IS_READER;
+	int REVISION__CONTENT = 1;
 
 	/**
-	 * The feature id for the '<em><b>Is Editor</b></em>' attribute.
+	 * The number of structural features of the '<em>Revision</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTO_CONFIRMED_USER__IS_EDITOR = REGISTERED_USER__IS_EDITOR;
+	int REVISION_FEATURE_COUNT = 2;
 
 	/**
-	 * The feature id for the '<em><b>User Name</b></em>' attribute.
+	 * The number of operations of the '<em>Revision</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTO_CONFIRMED_USER__USER_NAME = REGISTERED_USER__USER_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Registration Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER__REGISTRATION_DATE = REGISTERED_USER__REGISTRATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Number Of Edits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER__NUMBER_OF_EDITS = REGISTERED_USER__NUMBER_OF_EDITS;
-
-	/**
-	 * The feature id for the '<em><b>Auto Confirmed Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER__AUTO_CONFIRMED_DATE = REGISTERED_USER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Auto Confirmed User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER_FEATURE_COUNT = REGISTERED_USER_FEATURE_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Create Article</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER___CREATE_ARTICLE = REGISTERED_USER_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Move Article</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER___MOVE_ARTICLE = REGISTERED_USER_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Upload Media</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER___UPLOAD_MEDIA = REGISTERED_USER_OPERATION_COUNT + 2;
-
-	/**
-	 * The operation id for the '<em>Move Media</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER___MOVE_MEDIA = REGISTERED_USER_OPERATION_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Auto Confirmed User</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int AUTO_CONFIRMED_USER_OPERATION_COUNT = REGISTERED_USER_OPERATION_COUNT + 4;
-
-	/**
-	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AdministratorImpl <em>Administrator</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AdministratorImpl
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getAdministrator()
-	 * @generated
-	 */
-	int ADMINISTRATOR = 8;
-
-	/**
-	 * The feature id for the '<em><b>Is Blocked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR__IS_BLOCKED = REGISTERED_USER__IS_BLOCKED;
-
-	/**
-	 * The feature id for the '<em><b>Is Reader</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR__IS_READER = REGISTERED_USER__IS_READER;
-
-	/**
-	 * The feature id for the '<em><b>Is Editor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR__IS_EDITOR = REGISTERED_USER__IS_EDITOR;
-
-	/**
-	 * The feature id for the '<em><b>User Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR__USER_NAME = REGISTERED_USER__USER_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Registration Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR__REGISTRATION_DATE = REGISTERED_USER__REGISTRATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Number Of Edits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR__NUMBER_OF_EDITS = REGISTERED_USER__NUMBER_OF_EDITS;
-
-	/**
-	 * The number of structural features of the '<em>Administrator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR_FEATURE_COUNT = REGISTERED_USER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Block User</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR___BLOCK_USER = REGISTERED_USER_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Delete Content</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR___DELETE_CONTENT = REGISTERED_USER_OPERATION_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Administrator</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ADMINISTRATOR_OPERATION_COUNT = REGISTERED_USER_OPERATION_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.SysOpImpl <em>Sys Op</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.SysOpImpl
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getSysOp()
-	 * @generated
-	 */
-	int SYS_OP = 9;
-
-	/**
-	 * The feature id for the '<em><b>Is Blocked</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP__IS_BLOCKED = REGISTERED_USER__IS_BLOCKED;
-
-	/**
-	 * The feature id for the '<em><b>Is Reader</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP__IS_READER = REGISTERED_USER__IS_READER;
-
-	/**
-	 * The feature id for the '<em><b>Is Editor</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP__IS_EDITOR = REGISTERED_USER__IS_EDITOR;
-
-	/**
-	 * The feature id for the '<em><b>User Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP__USER_NAME = REGISTERED_USER__USER_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Registration Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP__REGISTRATION_DATE = REGISTERED_USER__REGISTRATION_DATE;
-
-	/**
-	 * The feature id for the '<em><b>Number Of Edits</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP__NUMBER_OF_EDITS = REGISTERED_USER__NUMBER_OF_EDITS;
-
-	/**
-	 * The number of structural features of the '<em>Sys Op</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP_FEATURE_COUNT = REGISTERED_USER_FEATURE_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Make Admin</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP___MAKE_ADMIN = REGISTERED_USER_OPERATION_COUNT + 0;
-
-	/**
-	 * The operation id for the '<em>Remove Admin</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP___REMOVE_ADMIN = REGISTERED_USER_OPERATION_COUNT + 1;
-
-	/**
-	 * The operation id for the '<em>Block Admin</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP___BLOCK_ADMIN = REGISTERED_USER_OPERATION_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Sys Op</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYS_OP_OPERATION_COUNT = REGISTERED_USER_OPERATION_COUNT + 3;
+	int REVISION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.DiscussionImpl <em>Discussion</em>}' class.
@@ -1103,7 +905,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getDiscussion()
 	 * @generated
 	 */
-	int DISCUSSION = 10;
+	int DISCUSSION = 8;
 
 	/**
 	 * The number of structural features of the '<em>Discussion</em>' class.
@@ -1149,7 +951,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getVersionHistory()
 	 * @generated
 	 */
-	int VERSION_HISTORY = 11;
+	int VERSION_HISTORY = 9;
 
 	/**
 	 * The number of structural features of the '<em>Version History</em>' class.
@@ -1186,7 +988,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getMetaData()
 	 * @generated
 	 */
-	int META_DATA = 12;
+	int META_DATA = 10;
 
 	/**
 	 * The feature id for the '<em><b>Key</b></em>' attribute.
@@ -1232,16 +1034,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getWikiProject()
 	 * @generated
 	 */
-	int WIKI_PROJECT = 13;
-
-	/**
-	 * The feature id for the '<em><b>Discussion Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIKI_PROJECT__DISCUSSION_PAGE = INTERNAL_CONTENT__DISCUSSION_PAGE;
+	int WIKI_PROJECT = 11;
 
 	/**
 	 * The feature id for the '<em><b>Current Revision</b></em>' reference.
@@ -1251,15 +1044,6 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int WIKI_PROJECT__CURRENT_REVISION = INTERNAL_CONTENT__CURRENT_REVISION;
-
-	/**
-	 * The feature id for the '<em><b>Version History Page</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WIKI_PROJECT__VERSION_HISTORY_PAGE = INTERNAL_CONTENT__VERSION_HISTORY_PAGE;
 
 	/**
 	 * The feature id for the '<em><b>Title</b></em>' attribute.
@@ -1278,6 +1062,24 @@ public interface ModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int WIKI_PROJECT__REVISION = INTERNAL_CONTENT__REVISION;
+
+	/**
+	 * The feature id for the '<em><b>Versionhistory</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIKI_PROJECT__VERSIONHISTORY = INTERNAL_CONTENT__VERSIONHISTORY;
+
+	/**
+	 * The feature id for the '<em><b>Discussion</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WIKI_PROJECT__DISCUSSION = INTERNAL_CONTENT__DISCUSSION;
 
 	/**
 	 * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1359,7 +1161,7 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getUnregisteredUser()
 	 * @generated
 	 */
-	int UNREGISTERED_USER = 14;
+	int UNREGISTERED_USER = 12;
 
 	/**
 	 * The feature id for the '<em><b>Is Blocked</b></em>' attribute.
@@ -1389,6 +1191,33 @@ public interface ModelPackage extends EPackage {
 	int UNREGISTERED_USER__IS_EDITOR = USER__IS_EDITOR;
 
 	/**
+	 * The feature id for the '<em><b>Wiki Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNREGISTERED_USER__WIKI_TIME = USER__WIKI_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Count Revisions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNREGISTERED_USER__COUNT_REVISIONS = USER__COUNT_REVISIONS;
+
+	/**
+	 * The feature id for the '<em><b>Authored Revisions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int UNREGISTERED_USER__AUTHORED_REVISIONS = USER__AUTHORED_REVISIONS;
+
+	/**
 	 * The feature id for the '<em><b>IP Address</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1416,50 +1245,278 @@ public interface ModelPackage extends EPackage {
 	int UNREGISTERED_USER_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.WikiPediaImpl <em>Wiki Pedia</em>}' class.
+	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AdministratorImpl <em>Administrator</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.WikiPediaImpl
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getWikiPedia()
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AdministratorImpl
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getAdministrator()
 	 * @generated
 	 */
-	int WIKI_PEDIA = 15;
+	int ADMINISTRATOR = 13;
 
 	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Is Blocked</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIKI_PEDIA__CONTENT = 0;
+	int ADMINISTRATOR__IS_BLOCKED = REGISTERED_USER__IS_BLOCKED;
 
 	/**
-	 * The feature id for the '<em><b>User</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Is Reader</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIKI_PEDIA__USER = 1;
+	int ADMINISTRATOR__IS_READER = REGISTERED_USER__IS_READER;
 
 	/**
-	 * The number of structural features of the '<em>Wiki Pedia</em>' class.
+	 * The feature id for the '<em><b>Is Editor</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIKI_PEDIA_FEATURE_COUNT = 2;
+	int ADMINISTRATOR__IS_EDITOR = REGISTERED_USER__IS_EDITOR;
 
 	/**
-	 * The number of operations of the '<em>Wiki Pedia</em>' class.
+	 * The feature id for the '<em><b>Wiki Time</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WIKI_PEDIA_OPERATION_COUNT = 0;
+	int ADMINISTRATOR__WIKI_TIME = REGISTERED_USER__WIKI_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Count Revisions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR__COUNT_REVISIONS = REGISTERED_USER__COUNT_REVISIONS;
+
+	/**
+	 * The feature id for the '<em><b>Authored Revisions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR__AUTHORED_REVISIONS = REGISTERED_USER__AUTHORED_REVISIONS;
+
+	/**
+	 * The feature id for the '<em><b>User Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR__USER_NAME = REGISTERED_USER__USER_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Registration Date JD</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR__REGISTRATION_DATE_JD = REGISTERED_USER__REGISTRATION_DATE_JD;
+
+	/**
+	 * The feature id for the '<em><b>Registered Since Days</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR__REGISTERED_SINCE_DAYS = REGISTERED_USER__REGISTERED_SINCE_DAYS;
+
+	/**
+	 * The feature id for the '<em><b>User Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR__USER_TYPE = REGISTERED_USER__USER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Admin Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR__ADMIN_ACTION = REGISTERED_USER__ADMIN_ACTION;
+
+	/**
+	 * The number of structural features of the '<em>Administrator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR_FEATURE_COUNT = REGISTERED_USER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Administrator</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMINISTRATOR_OPERATION_COUNT = REGISTERED_USER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.SysOpImpl <em>Sys Op</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.SysOpImpl
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getSysOp()
+	 * @generated
+	 */
+	int SYS_OP = 14;
+
+	/**
+	 * The feature id for the '<em><b>Is Blocked</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__IS_BLOCKED = REGISTERED_USER__IS_BLOCKED;
+
+	/**
+	 * The feature id for the '<em><b>Is Reader</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__IS_READER = REGISTERED_USER__IS_READER;
+
+	/**
+	 * The feature id for the '<em><b>Is Editor</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__IS_EDITOR = REGISTERED_USER__IS_EDITOR;
+
+	/**
+	 * The feature id for the '<em><b>Wiki Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__WIKI_TIME = REGISTERED_USER__WIKI_TIME;
+
+	/**
+	 * The feature id for the '<em><b>Count Revisions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__COUNT_REVISIONS = REGISTERED_USER__COUNT_REVISIONS;
+
+	/**
+	 * The feature id for the '<em><b>Authored Revisions</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__AUTHORED_REVISIONS = REGISTERED_USER__AUTHORED_REVISIONS;
+
+	/**
+	 * The feature id for the '<em><b>User Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__USER_NAME = REGISTERED_USER__USER_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Registration Date JD</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__REGISTRATION_DATE_JD = REGISTERED_USER__REGISTRATION_DATE_JD;
+
+	/**
+	 * The feature id for the '<em><b>Registered Since Days</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__REGISTERED_SINCE_DAYS = REGISTERED_USER__REGISTERED_SINCE_DAYS;
+
+	/**
+	 * The feature id for the '<em><b>User Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__USER_TYPE = REGISTERED_USER__USER_TYPE;
+
+	/**
+	 * The feature id for the '<em><b>Admin Action</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP__ADMIN_ACTION = REGISTERED_USER__ADMIN_ACTION;
+
+	/**
+	 * The number of structural features of the '<em>Sys Op</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP_FEATURE_COUNT = REGISTERED_USER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Sys Op</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYS_OP_OPERATION_COUNT = REGISTERED_USER_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.userType <em>user Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.userType
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getuserType()
+	 * @generated
+	 */
+	int USER_TYPE = 15;
+
+	/**
+	 * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions <em>admin Actions</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getadminActions()
+	 * @generated
+	 */
+	int ADMIN_ACTIONS = 16;
 
 	/**
 	 * The meta object id for the '<em>Object</em>' data type.
@@ -1469,18 +1526,62 @@ public interface ModelPackage extends EPackage {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getObject()
 	 * @generated
 	 */
-	int OBJECT = 16;
+	int OBJECT = 17;
+
 
 	/**
-	 * The meta object id for the '<em>Date</em>' data type.
+	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia <em>Wikipedia</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.util.Date
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getDate()
+	 * @return the meta object for class '<em>Wikipedia</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia
 	 * @generated
 	 */
-	int DATE = 17;
+	EClass getWikipedia();
 
+	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia#getCurrentDateJD <em>Current Date JD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Current Date JD</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia#getCurrentDateJD()
+	 * @see #getWikipedia()
+	 * @generated
+	 */
+	EAttribute getWikipedia_CurrentDateJD();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia#getContent <em>Content</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Content</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia#getContent()
+	 * @see #getWikipedia()
+	 * @generated
+	 */
+	EReference getWikipedia_Content();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia#getUser <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>User</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia#getUser()
+	 * @see #getWikipedia()
+	 * @generated
+	 */
+	EReference getWikipedia_User();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia#getAverageEditedPagesPerUser <em>Average Edited Pages Per User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Average Edited Pages Per User</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia#getAverageEditedPagesPerUser()
+	 * @see #getWikipedia()
+	 * @generated
+	 */
+	EAttribute getWikipedia_AverageEditedPagesPerUser();
 
 	/**
 	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content <em>Content</em>}'.
@@ -1493,17 +1594,6 @@ public interface ModelPackage extends EPackage {
 	EClass getContent();
 
 	/**
-	 * Returns the meta object for the reference '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getDiscussionPage <em>Discussion Page</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Discussion Page</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getDiscussionPage()
-	 * @see #getContent()
-	 * @generated
-	 */
-	EReference getContent_DiscussionPage();
-
-	/**
 	 * Returns the meta object for the reference '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getCurrentRevision <em>Current Revision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1513,17 +1603,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getContent_CurrentRevision();
-
-	/**
-	 * Returns the meta object for the reference '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getVersionHistoryPage <em>Version History Page</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Version History Page</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getVersionHistoryPage()
-	 * @see #getContent()
-	 * @generated
-	 */
-	EReference getContent_VersionHistoryPage();
 
 	/**
 	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getTitle <em>Title</em>}'.
@@ -1546,6 +1625,28 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getContent_Revision();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getVersionhistory <em>Versionhistory</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Versionhistory</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getVersionhistory()
+	 * @see #getContent()
+	 * @generated
+	 */
+	EReference getContent_Versionhistory();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getDiscussion <em>Discussion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Discussion</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Content#getDiscussion()
+	 * @see #getContent()
+	 * @generated
+	 */
+	EReference getContent_Discussion();
 
 	/**
 	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content#createNewRevision() <em>Create New Revision</em>}' operation.
@@ -1754,6 +1855,104 @@ public interface ModelPackage extends EPackage {
 	EAttribute getUser_IsEditor();
 
 	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#getWikiTime <em>Wiki Time</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Wiki Time</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.User#getWikiTime()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EAttribute getUser_WikiTime();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#getCountRevisions <em>Count Revisions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Count Revisions</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.User#getCountRevisions()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EAttribute getUser_CountRevisions();
+
+	/**
+	 * Returns the meta object for the reference list '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#getAuthoredRevisions <em>Authored Revisions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Authored Revisions</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.User#getAuthoredRevisions()
+	 * @see #getUser()
+	 * @generated
+	 */
+	EReference getUser_AuthoredRevisions();
+
+	/**
+	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser <em>Registered User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Registered User</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser
+	 * @generated
+	 */
+	EClass getRegisteredUser();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getUserName <em>User Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User Name</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getUserName()
+	 * @see #getRegisteredUser()
+	 * @generated
+	 */
+	EAttribute getRegisteredUser_UserName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegistrationDateJD <em>Registration Date JD</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Registration Date JD</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegistrationDateJD()
+	 * @see #getRegisteredUser()
+	 * @generated
+	 */
+	EAttribute getRegisteredUser_RegistrationDateJD();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegisteredSinceDays <em>Registered Since Days</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Registered Since Days</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegisteredSinceDays()
+	 * @see #getRegisteredUser()
+	 * @generated
+	 */
+	EAttribute getRegisteredUser_RegisteredSinceDays();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getUserType <em>User Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User Type</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getUserType()
+	 * @see #getRegisteredUser()
+	 * @generated
+	 */
+	EAttribute getRegisteredUser_UserType();
+
+	/**
+	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getAdminAction <em>Admin Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Admin Action</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getAdminAction()
+	 * @see #getRegisteredUser()
+	 * @generated
+	 */
+	EAttribute getRegisteredUser_AdminAction();
+
+	/**
 	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Revision <em>Revision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1784,180 +1983,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getRevision_Content();
-
-	/**
-	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser <em>Registered User</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Registered User</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser
-	 * @generated
-	 */
-	EClass getRegisteredUser();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getUserName <em>User Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>User Name</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getUserName()
-	 * @see #getRegisteredUser()
-	 * @generated
-	 */
-	EAttribute getRegisteredUser_UserName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegistrationDate <em>Registration Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Registration Date</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegistrationDate()
-	 * @see #getRegisteredUser()
-	 * @generated
-	 */
-	EAttribute getRegisteredUser_RegistrationDate();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getNumberOfEdits <em>Number Of Edits</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Number Of Edits</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getNumberOfEdits()
-	 * @see #getRegisteredUser()
-	 * @generated
-	 */
-	EAttribute getRegisteredUser_NumberOfEdits();
-
-	/**
-	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser <em>Auto Confirmed User</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Auto Confirmed User</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser
-	 * @generated
-	 */
-	EClass getAutoConfirmedUser();
-
-	/**
-	 * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#getAutoConfirmedDate <em>Auto Confirmed Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Auto Confirmed Date</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#getAutoConfirmedDate()
-	 * @see #getAutoConfirmedUser()
-	 * @generated
-	 */
-	EAttribute getAutoConfirmedUser_AutoConfirmedDate();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#createArticle() <em>Create Article</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Create Article</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#createArticle()
-	 * @generated
-	 */
-	EOperation getAutoConfirmedUser__CreateArticle();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#moveArticle() <em>Move Article</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Move Article</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#moveArticle()
-	 * @generated
-	 */
-	EOperation getAutoConfirmedUser__MoveArticle();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#uploadMedia() <em>Upload Media</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Upload Media</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#uploadMedia()
-	 * @generated
-	 */
-	EOperation getAutoConfirmedUser__UploadMedia();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#moveMedia() <em>Move Media</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Move Media</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser#moveMedia()
-	 * @generated
-	 */
-	EOperation getAutoConfirmedUser__MoveMedia();
-
-	/**
-	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator <em>Administrator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Administrator</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator
-	 * @generated
-	 */
-	EClass getAdministrator();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator#blockUser() <em>Block User</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Block User</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator#blockUser()
-	 * @generated
-	 */
-	EOperation getAdministrator__BlockUser();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator#deleteContent() <em>Delete Content</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Delete Content</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator#deleteContent()
-	 * @generated
-	 */
-	EOperation getAdministrator__DeleteContent();
-
-	/**
-	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp <em>Sys Op</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Sys Op</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp
-	 * @generated
-	 */
-	EClass getSysOp();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp#makeAdmin() <em>Make Admin</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Make Admin</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp#makeAdmin()
-	 * @generated
-	 */
-	EOperation getSysOp__MakeAdmin();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp#removeAdmin() <em>Remove Admin</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Remove Admin</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp#removeAdmin()
-	 * @generated
-	 */
-	EOperation getSysOp__RemoveAdmin();
-
-	/**
-	 * Returns the meta object for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp#blockAdmin() <em>Block Admin</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Block Admin</em>' operation.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp#blockAdmin()
-	 * @generated
-	 */
-	EOperation getSysOp__BlockAdmin();
 
 	/**
 	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Discussion <em>Discussion</em>}'.
@@ -2084,36 +2109,44 @@ public interface ModelPackage extends EPackage {
 	EAttribute getUnregisteredUser_IPAddress();
 
 	/**
-	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia <em>Wiki Pedia</em>}'.
+	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator <em>Administrator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Wiki Pedia</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia
+	 * @return the meta object for class '<em>Administrator</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator
 	 * @generated
 	 */
-	EClass getWikiPedia();
+	EClass getAdministrator();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia#getContent <em>Content</em>}'.
+	 * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp <em>Sys Op</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Content</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia#getContent()
-	 * @see #getWikiPedia()
+	 * @return the meta object for class '<em>Sys Op</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp
 	 * @generated
 	 */
-	EReference getWikiPedia_Content();
+	EClass getSysOp();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia#getUser <em>User</em>}'.
+	 * Returns the meta object for enum '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.userType <em>user Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>User</em>'.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia#getUser()
-	 * @see #getWikiPedia()
+	 * @return the meta object for enum '<em>user Type</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.userType
 	 * @generated
 	 */
-	EReference getWikiPedia_User();
+	EEnum getuserType();
+
+	/**
+	 * Returns the meta object for enum '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions <em>admin Actions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>admin Actions</em>'.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions
+	 * @generated
+	 */
+	EEnum getadminActions();
 
 	/**
 	 * Returns the meta object for data type '{@link java.lang.Object <em>Object</em>}'.
@@ -2125,17 +2158,6 @@ public interface ModelPackage extends EPackage {
 	 * @generated
 	 */
 	EDataType getObject();
-
-	/**
-	 * Returns the meta object for data type '{@link java.util.Date <em>Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>Date</em>'.
-	 * @see java.util.Date
-	 * @model instanceClass="java.util.Date"
-	 * @generated
-	 */
-	EDataType getDate();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2161,6 +2183,48 @@ public interface ModelPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.WikipediaImpl <em>Wikipedia</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.WikipediaImpl
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getWikipedia()
+		 * @generated
+		 */
+		EClass WIKIPEDIA = eINSTANCE.getWikipedia();
+
+		/**
+		 * The meta object literal for the '<em><b>Current Date JD</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIKIPEDIA__CURRENT_DATE_JD = eINSTANCE.getWikipedia_CurrentDateJD();
+
+		/**
+		 * The meta object literal for the '<em><b>Content</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WIKIPEDIA__CONTENT = eINSTANCE.getWikipedia_Content();
+
+		/**
+		 * The meta object literal for the '<em><b>User</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference WIKIPEDIA__USER = eINSTANCE.getWikipedia_User();
+
+		/**
+		 * The meta object literal for the '<em><b>Average Edited Pages Per User</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute WIKIPEDIA__AVERAGE_EDITED_PAGES_PER_USER = eINSTANCE.getWikipedia_AverageEditedPagesPerUser();
+
+		/**
 		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ContentImpl <em>Content</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2171,28 +2235,12 @@ public interface ModelPackage extends EPackage {
 		EClass CONTENT = eINSTANCE.getContent();
 
 		/**
-		 * The meta object literal for the '<em><b>Discussion Page</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTENT__DISCUSSION_PAGE = eINSTANCE.getContent_DiscussionPage();
-
-		/**
 		 * The meta object literal for the '<em><b>Current Revision</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference CONTENT__CURRENT_REVISION = eINSTANCE.getContent_CurrentRevision();
-
-		/**
-		 * The meta object literal for the '<em><b>Version History Page</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTENT__VERSION_HISTORY_PAGE = eINSTANCE.getContent_VersionHistoryPage();
 
 		/**
 		 * The meta object literal for the '<em><b>Title</b></em>' attribute feature.
@@ -2209,6 +2257,22 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONTENT__REVISION = eINSTANCE.getContent_Revision();
+
+		/**
+		 * The meta object literal for the '<em><b>Versionhistory</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTENT__VERSIONHISTORY = eINSTANCE.getContent_Versionhistory();
+
+		/**
+		 * The meta object literal for the '<em><b>Discussion</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CONTENT__DISCUSSION = eINSTANCE.getContent_Discussion();
 
 		/**
 		 * The meta object literal for the '<em><b>Create New Revision</b></em>' operation.
@@ -2379,6 +2443,80 @@ public interface ModelPackage extends EPackage {
 		EAttribute USER__IS_EDITOR = eINSTANCE.getUser_IsEditor();
 
 		/**
+		 * The meta object literal for the '<em><b>Wiki Time</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute USER__WIKI_TIME = eINSTANCE.getUser_WikiTime();
+
+		/**
+		 * The meta object literal for the '<em><b>Count Revisions</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute USER__COUNT_REVISIONS = eINSTANCE.getUser_CountRevisions();
+
+		/**
+		 * The meta object literal for the '<em><b>Authored Revisions</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference USER__AUTHORED_REVISIONS = eINSTANCE.getUser_AuthoredRevisions();
+
+		/**
+		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl <em>Registered User</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getRegisteredUser()
+		 * @generated
+		 */
+		EClass REGISTERED_USER = eINSTANCE.getRegisteredUser();
+
+		/**
+		 * The meta object literal for the '<em><b>User Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGISTERED_USER__USER_NAME = eINSTANCE.getRegisteredUser_UserName();
+
+		/**
+		 * The meta object literal for the '<em><b>Registration Date JD</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGISTERED_USER__REGISTRATION_DATE_JD = eINSTANCE.getRegisteredUser_RegistrationDateJD();
+
+		/**
+		 * The meta object literal for the '<em><b>Registered Since Days</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGISTERED_USER__REGISTERED_SINCE_DAYS = eINSTANCE.getRegisteredUser_RegisteredSinceDays();
+
+		/**
+		 * The meta object literal for the '<em><b>User Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGISTERED_USER__USER_TYPE = eINSTANCE.getRegisteredUser_UserType();
+
+		/**
+		 * The meta object literal for the '<em><b>Admin Action</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REGISTERED_USER__ADMIN_ACTION = eINSTANCE.getRegisteredUser_AdminAction();
+
+		/**
 		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RevisionImpl <em>Revision</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2403,150 +2541,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute REVISION__CONTENT = eINSTANCE.getRevision_Content();
-
-		/**
-		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl <em>Registered User</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.RegisteredUserImpl
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getRegisteredUser()
-		 * @generated
-		 */
-		EClass REGISTERED_USER = eINSTANCE.getRegisteredUser();
-
-		/**
-		 * The meta object literal for the '<em><b>User Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REGISTERED_USER__USER_NAME = eINSTANCE.getRegisteredUser_UserName();
-
-		/**
-		 * The meta object literal for the '<em><b>Registration Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REGISTERED_USER__REGISTRATION_DATE = eINSTANCE.getRegisteredUser_RegistrationDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Number Of Edits</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute REGISTERED_USER__NUMBER_OF_EDITS = eINSTANCE.getRegisteredUser_NumberOfEdits();
-
-		/**
-		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AutoConfirmedUserImpl <em>Auto Confirmed User</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AutoConfirmedUserImpl
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getAutoConfirmedUser()
-		 * @generated
-		 */
-		EClass AUTO_CONFIRMED_USER = eINSTANCE.getAutoConfirmedUser();
-
-		/**
-		 * The meta object literal for the '<em><b>Auto Confirmed Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute AUTO_CONFIRMED_USER__AUTO_CONFIRMED_DATE = eINSTANCE.getAutoConfirmedUser_AutoConfirmedDate();
-
-		/**
-		 * The meta object literal for the '<em><b>Create Article</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation AUTO_CONFIRMED_USER___CREATE_ARTICLE = eINSTANCE.getAutoConfirmedUser__CreateArticle();
-
-		/**
-		 * The meta object literal for the '<em><b>Move Article</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation AUTO_CONFIRMED_USER___MOVE_ARTICLE = eINSTANCE.getAutoConfirmedUser__MoveArticle();
-
-		/**
-		 * The meta object literal for the '<em><b>Upload Media</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation AUTO_CONFIRMED_USER___UPLOAD_MEDIA = eINSTANCE.getAutoConfirmedUser__UploadMedia();
-
-		/**
-		 * The meta object literal for the '<em><b>Move Media</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation AUTO_CONFIRMED_USER___MOVE_MEDIA = eINSTANCE.getAutoConfirmedUser__MoveMedia();
-
-		/**
-		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AdministratorImpl <em>Administrator</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AdministratorImpl
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getAdministrator()
-		 * @generated
-		 */
-		EClass ADMINISTRATOR = eINSTANCE.getAdministrator();
-
-		/**
-		 * The meta object literal for the '<em><b>Block User</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ADMINISTRATOR___BLOCK_USER = eINSTANCE.getAdministrator__BlockUser();
-
-		/**
-		 * The meta object literal for the '<em><b>Delete Content</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ADMINISTRATOR___DELETE_CONTENT = eINSTANCE.getAdministrator__DeleteContent();
-
-		/**
-		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.SysOpImpl <em>Sys Op</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.SysOpImpl
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getSysOp()
-		 * @generated
-		 */
-		EClass SYS_OP = eINSTANCE.getSysOp();
-
-		/**
-		 * The meta object literal for the '<em><b>Make Admin</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SYS_OP___MAKE_ADMIN = eINSTANCE.getSysOp__MakeAdmin();
-
-		/**
-		 * The meta object literal for the '<em><b>Remove Admin</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SYS_OP___REMOVE_ADMIN = eINSTANCE.getSysOp__RemoveAdmin();
-
-		/**
-		 * The meta object literal for the '<em><b>Block Admin</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation SYS_OP___BLOCK_ADMIN = eINSTANCE.getSysOp__BlockAdmin();
 
 		/**
 		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.DiscussionImpl <em>Discussion</em>}' class.
@@ -2655,30 +2649,44 @@ public interface ModelPackage extends EPackage {
 		EAttribute UNREGISTERED_USER__IP_ADDRESS = eINSTANCE.getUnregisteredUser_IPAddress();
 
 		/**
-		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.WikiPediaImpl <em>Wiki Pedia</em>}' class.
+		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AdministratorImpl <em>Administrator</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.WikiPediaImpl
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getWikiPedia()
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.AdministratorImpl
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getAdministrator()
 		 * @generated
 		 */
-		EClass WIKI_PEDIA = eINSTANCE.getWikiPedia();
+		EClass ADMINISTRATOR = eINSTANCE.getAdministrator();
 
 		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.SysOpImpl <em>Sys Op</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.SysOpImpl
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getSysOp()
 		 * @generated
 		 */
-		EReference WIKI_PEDIA__CONTENT = eINSTANCE.getWikiPedia_Content();
+		EClass SYS_OP = eINSTANCE.getSysOp();
 
 		/**
-		 * The meta object literal for the '<em><b>User</b></em>' containment reference list feature.
+		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.userType <em>user Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.userType
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getuserType()
 		 * @generated
 		 */
-		EReference WIKI_PEDIA__USER = eINSTANCE.getWikiPedia_User();
+		EEnum USER_TYPE = eINSTANCE.getuserType();
+
+		/**
+		 * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions <em>admin Actions</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions
+		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getadminActions()
+		 * @generated
+		 */
+		EEnum ADMIN_ACTIONS = eINSTANCE.getadminActions();
 
 		/**
 		 * The meta object literal for the '<em>Object</em>' data type.
@@ -2689,16 +2697,6 @@ public interface ModelPackage extends EPackage {
 		 * @generated
 		 */
 		EDataType OBJECT = eINSTANCE.getObject();
-
-		/**
-		 * The meta object literal for the '<em>Date</em>' data type.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see java.util.Date
-		 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.impl.ModelPackageImpl#getDate()
-		 * @generated
-		 */
-		EDataType DATE = eINSTANCE.getDate();
 
 	}
 

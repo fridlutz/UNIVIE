@@ -3,11 +3,17 @@
 package at.ac.univie.swa.ase2015.a9902268.task2.model.impl;
 
 import at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage;
+import at.ac.univie.swa.ase2015.a9902268.task2.model.Revision;
 import at.ac.univie.swa.ase2015.a9902268.task2.model.User;
+
+import java.math.BigInteger;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -23,6 +29,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.UserImpl#isIsBlocked <em>Is Blocked</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.UserImpl#isIsReader <em>Is Reader</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.UserImpl#isIsEditor <em>Is Editor</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.UserImpl#getWikiTime <em>Wiki Time</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.UserImpl#getCountRevisions <em>Count Revisions</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.impl.UserImpl#getAuthoredRevisions <em>Authored Revisions</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +96,36 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * @ordered
 	 */
 	protected boolean isEditor = IS_EDITOR_EDEFAULT;
+
+	/**
+	 * The cached setting delegate for the '{@link #getWikiTime() <em>Wiki Time</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getWikiTime()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate WIKI_TIME__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ModelPackage.Literals.USER__WIKI_TIME).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getCountRevisions() <em>Count Revisions</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCountRevisions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate COUNT_REVISIONS__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ModelPackage.Literals.USER__COUNT_REVISIONS).getSettingDelegate();
+
+	/**
+	 * The cached setting delegate for the '{@link #getAuthoredRevisions() <em>Authored Revisions</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAuthoredRevisions()
+	 * @generated
+	 * @ordered
+	 */
+	protected EStructuralFeature.Internal.SettingDelegate AUTHORED_REVISIONS__ESETTING_DELEGATE = ((EStructuralFeature.Internal)ModelPackage.Literals.USER__AUTHORED_REVISIONS).getSettingDelegate();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,6 +214,34 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public BigInteger getWikiTime() {
+		return (BigInteger)WIKI_TIME__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BigInteger getCountRevisions() {
+		return (BigInteger)COUNT_REVISIONS__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	public EList<Revision> getAuthoredRevisions() {
+		return (EList<Revision>)AUTHORED_REVISIONS__ESETTING_DELEGATE.dynamicGet(this, null, 0, true, false);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,6 +251,12 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				return isIsReader();
 			case ModelPackage.USER__IS_EDITOR:
 				return isIsEditor();
+			case ModelPackage.USER__WIKI_TIME:
+				return getWikiTime();
+			case ModelPackage.USER__COUNT_REVISIONS:
+				return getCountRevisions();
+			case ModelPackage.USER__AUTHORED_REVISIONS:
+				return getAuthoredRevisions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -244,6 +317,12 @@ public abstract class UserImpl extends MinimalEObjectImpl.Container implements U
 				return isReader != IS_READER_EDEFAULT;
 			case ModelPackage.USER__IS_EDITOR:
 				return isEditor != IS_EDITOR_EDEFAULT;
+			case ModelPackage.USER__WIKI_TIME:
+				return WIKI_TIME__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case ModelPackage.USER__COUNT_REVISIONS:
+				return COUNT_REVISIONS__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
+			case ModelPackage.USER__AUTHORED_REVISIONS:
+				return AUTHORED_REVISIONS__ESETTING_DELEGATE.dynamicIsSet(this, null, 0);
 		}
 		return super.eIsSet(featureID);
 	}

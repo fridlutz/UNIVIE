@@ -2,6 +2,10 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task2.model;
 
+import java.math.BigInteger;
+
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,6 +20,9 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#isIsBlocked <em>Is Blocked</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#isIsReader <em>Is Reader</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#isIsEditor <em>Is Editor</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#getWikiTime <em>Wiki Time</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#getCountRevisions <em>Count Revisions</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.User#getAuthoredRevisions <em>Authored Revisions</em>}</li>
  * </ul>
  *
  * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getUser()
@@ -101,5 +108,54 @@ public interface User extends EObject {
 	 * @generated
 	 */
 	void setIsEditor(boolean value);
+
+	/**
+	 * Returns the value of the '<em><b>Wiki Time</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Wiki Time</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Wiki Time</em>' attribute.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getUser_WikiTime()
+	 * @model required="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='self.Wikipedia.currentDateJD'"
+	 * @generated
+	 */
+	BigInteger getWikiTime();
+
+	/**
+	 * Returns the value of the '<em><b>Count Revisions</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Count Revisions</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Count Revisions</em>' attribute.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getUser_CountRevisions()
+	 * @model required="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='self.authoredRevisions->size()'"
+	 * @generated
+	 */
+	BigInteger getCountRevisions();
+
+	/**
+	 * Returns the value of the '<em><b>Authored Revisions</b></em>' reference list.
+	 * The list contents are of type {@link at.ac.univie.swa.ase2015.a9902268.task2.model.Revision}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Authored Revisions</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Authored Revisions</em>' reference list.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getUser_AuthoredRevisions()
+	 * @model changeable="false" volatile="true" derived="true" ordered="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='Revision.allInstances()->select(author = self)'"
+	 * @generated
+	 */
+	EList<Revision> getAuthoredRevisions();
 
 } // User

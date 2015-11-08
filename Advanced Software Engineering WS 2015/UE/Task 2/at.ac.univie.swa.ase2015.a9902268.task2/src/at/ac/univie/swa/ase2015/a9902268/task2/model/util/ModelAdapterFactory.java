@@ -68,6 +68,10 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	protected ModelSwitch<Adapter> modelSwitch =
 		new ModelSwitch<Adapter>() {
 			@Override
+			public Adapter caseWikipedia(Wikipedia object) {
+				return createWikipediaAdapter();
+			}
+			@Override
 			public Adapter caseContent(Content object) {
 				return createContentAdapter();
 			}
@@ -88,24 +92,12 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createUserAdapter();
 			}
 			@Override
-			public Adapter caseRevision(Revision object) {
-				return createRevisionAdapter();
-			}
-			@Override
 			public Adapter caseRegisteredUser(RegisteredUser object) {
 				return createRegisteredUserAdapter();
 			}
 			@Override
-			public Adapter caseAutoConfirmedUser(AutoConfirmedUser object) {
-				return createAutoConfirmedUserAdapter();
-			}
-			@Override
-			public Adapter caseAdministrator(Administrator object) {
-				return createAdministratorAdapter();
-			}
-			@Override
-			public Adapter caseSysOp(SysOp object) {
-				return createSysOpAdapter();
+			public Adapter caseRevision(Revision object) {
+				return createRevisionAdapter();
 			}
 			@Override
 			public Adapter caseDiscussion(Discussion object) {
@@ -128,8 +120,12 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 				return createUnregisteredUserAdapter();
 			}
 			@Override
-			public Adapter caseWikiPedia(WikiPedia object) {
-				return createWikiPediaAdapter();
+			public Adapter caseAdministrator(Administrator object) {
+				return createAdministratorAdapter();
+			}
+			@Override
+			public Adapter caseSysOp(SysOp object) {
+				return createSysOpAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -150,6 +146,20 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia <em>Wikipedia</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Wikipedia
+	 * @generated
+	 */
+	public Adapter createWikipediaAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Content <em>Content</em>}'.
@@ -222,20 +232,6 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Revision <em>Revision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Revision
-	 * @generated
-	 */
-	public Adapter createRevisionAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser <em>Registered User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -250,44 +246,16 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser <em>Auto Confirmed User</em>}'.
+	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Revision <em>Revision</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.AutoConfirmedUser
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Revision
 	 * @generated
 	 */
-	public Adapter createAutoConfirmedUserAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator <em>Administrator</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator
-	 * @generated
-	 */
-	public Adapter createAdministratorAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp <em>Sys Op</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp
-	 * @generated
-	 */
-	public Adapter createSysOpAdapter() {
+	public Adapter createRevisionAdapter() {
 		return null;
 	}
 
@@ -362,16 +330,30 @@ public class ModelAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia <em>Wiki Pedia</em>}'.
+	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator <em>Administrator</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.WikiPedia
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.Administrator
 	 * @generated
 	 */
-	public Adapter createWikiPediaAdapter() {
+	public Adapter createAdministratorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp <em>Sys Op</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.SysOp
+	 * @generated
+	 */
+	public Adapter createSysOpAdapter() {
 		return null;
 	}
 

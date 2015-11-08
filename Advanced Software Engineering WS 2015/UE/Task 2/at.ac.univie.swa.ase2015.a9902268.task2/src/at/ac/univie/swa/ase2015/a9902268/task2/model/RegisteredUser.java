@@ -2,7 +2,7 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task2.model;
 
-import java.util.Date;
+import java.math.BigInteger;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,12 +14,15 @@ import java.util.Date;
  * </p>
  * <ul>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getUserName <em>User Name</em>}</li>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegistrationDate <em>Registration Date</em>}</li>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getNumberOfEdits <em>Number Of Edits</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegistrationDateJD <em>Registration Date JD</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegisteredSinceDays <em>Registered Since Days</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getUserType <em>User Type</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getAdminAction <em>Admin Action</em>}</li>
  * </ul>
  *
  * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getRegisteredUser()
- * @model
+ * @model annotation="http://www.eclipse.org/emf/2002/Ecore constraints='timeIsCorrect'"
+ *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot timeIsCorrect='wikiTime >= registrationDateJD'"
  * @generated
  */
 public interface RegisteredUser extends User {
@@ -50,56 +53,82 @@ public interface RegisteredUser extends User {
 	void setUserName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Registration Date</b></em>' attribute.
+	 * Returns the value of the '<em><b>Registration Date JD</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Registration Date</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Registration Date JD</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Registration Date</em>' attribute.
-	 * @see #setRegistrationDate(Date)
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getRegisteredUser_RegistrationDate()
-	 * @model dataType="at.ac.univie.swa.ase2015.a9902268.task2.model.Date"
+	 * @return the value of the '<em>Registration Date JD</em>' attribute.
+	 * @see #setRegistrationDateJD(BigInteger)
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getRegisteredUser_RegistrationDateJD()
+	 * @model required="true"
 	 * @generated
 	 */
-	Date getRegistrationDate();
+	BigInteger getRegistrationDateJD();
 
 	/**
-	 * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegistrationDate <em>Registration Date</em>}' attribute.
+	 * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getRegistrationDateJD <em>Registration Date JD</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Registration Date</em>' attribute.
-	 * @see #getRegistrationDate()
+	 * @param value the new value of the '<em>Registration Date JD</em>' attribute.
+	 * @see #getRegistrationDateJD()
 	 * @generated
 	 */
-	void setRegistrationDate(Date value);
+	void setRegistrationDateJD(BigInteger value);
 
 	/**
-	 * Returns the value of the '<em><b>Number Of Edits</b></em>' attribute.
-	 * The default value is <code>"0"</code>.
+	 * Returns the value of the '<em><b>Registered Since Days</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Number Of Edits</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Registered Since Days</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Number Of Edits</em>' attribute.
-	 * @see #setNumberOfEdits(int)
-	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getRegisteredUser_NumberOfEdits()
-	 * @model default="0" dataType="org.eclipse.emf.ecore.xml.type.Int"
+	 * @return the value of the '<em>Registered Since Days</em>' attribute.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getRegisteredUser_RegisteredSinceDays()
+	 * @model required="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='wikiTime - registrationDateJD'"
 	 * @generated
 	 */
-	int getNumberOfEdits();
+	BigInteger getRegisteredSinceDays();
 
 	/**
-	 * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task2.model.RegisteredUser#getNumberOfEdits <em>Number Of Edits</em>}' attribute.
+	 * Returns the value of the '<em><b>User Type</b></em>' attribute.
+	 * The default value is <code>"RegisteredUser"</code>.
+	 * The literals are from the enumeration {@link at.ac.univie.swa.ase2015.a9902268.task2.model.userType}.
 	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>User Type</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Number Of Edits</em>' attribute.
-	 * @see #getNumberOfEdits()
+	 * @return the value of the '<em>User Type</em>' attribute.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.userType
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getRegisteredUser_UserType()
+	 * @model default="RegisteredUser" required="true" changeable="false" volatile="true" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='if (self.countRevisions < 1 or registeredSinceDays < 7) then userType::RegisteredUser\n\t\t\t\t\t\t\t\telse userType::AutoConfirmedUser\n\t\t\t\t\t\t\t\tendif'"
 	 * @generated
 	 */
-	void setNumberOfEdits(int value);
+	userType getUserType();
+
+	/**
+	 * Returns the value of the '<em><b>Admin Action</b></em>' attribute.
+	 * The literals are from the enumeration {@link at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Admin Action</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Admin Action</em>' attribute.
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.adminActions
+	 * @see at.ac.univie.swa.ase2015.a9902268.task2.model.ModelPackage#getRegisteredUser_AdminAction()
+	 * @model changeable="false" derived="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='if (self.oclIsKindOf(Administrator) or self.oclIsKindOf(SysOp)) then adminActions::CreateDeleteContent\n\t\t\t\t\t\t\t\t\telse (if self.userType = userType::AutoConfirmedUser then adminActions::CreateContent\n\t\t\t\t\t\t\t\t\t\telse (null)\n\t\t\t\t\t\t\t\t\t\tendif) endif'"
+	 * @generated
+	 */
+	adminActions getAdminAction();
 
 } // RegisteredUser
