@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/at.ac.univie.swa.ase2015.a9902268.task2/src" modelPluginID="at.ac.univie.swa.ase2015.a9902268.task2"
+    modelName="Model" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>model.ecore</foreignModel>
+  <genPackages prefix="Model" basePackage="at.ac.univie.swa.ase2015.a9902268.task2"
+      disposableProviderFactory="true" ecorePackage="model.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="model.ecore#//userType">
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//userType/Administrator"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//userType/SysOp"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//userType/AutoConfirmedUser"/>
+      <genEnumLiterals ecoreEnumLiteral="model.ecore#//userType/RegisteredUser"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="model.ecore#//Object"/>
+    <genClasses image="false" ecoreClass="model.ecore#//Content">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Content/currentRevision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Content/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Content/revision"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Content/versionhistory"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Content/discussion"/>
+      <genOperations ecoreOperation="model.ecore#//Content/createNewRevision"/>
+      <genOperations ecoreOperation="model.ecore#//Content/addDiscussionItem"/>
+      <genOperations ecoreOperation="model.ecore#//Content/renderHTML"/>
+      <genOperations ecoreOperation="model.ecore#//Content/render"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Article"/>
+    <genClasses ecoreClass="model.ecore#//Media">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Media/usage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Media/meta"/>
+      <genOperations ecoreOperation="model.ecore#//Media/addContentToFileUsage"/>
+      <genOperations ecoreOperation="model.ecore#//Media/removeContent"/>
+      <genOperations ecoreOperation="model.ecore#//Media/getFileUsage"/>
+      <genOperations ecoreOperation="model.ecore#//Media/addMetaData"/>
+      <genOperations ecoreOperation="model.ecore#//Media/removeMetaData"/>
+      <genOperations ecoreOperation="model.ecore#//Media/getMetaData"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//InternalContent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//InternalContent/content"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="model.ecore#//User">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//User/isBlocked"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//User/isReader"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//User/isEditor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//User/authoredRevisions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//User/numberOfAuthoredRevisions"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Revision">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//Revision/author"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Revision/content"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//RegisteredUser">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RegisteredUser/userName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RegisteredUser/registrationDate"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//RegisteredUser/userType"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Discussion">
+      <genOperations ecoreOperation="model.ecore#//Discussion/renderHTML"/>
+      <genOperations ecoreOperation="model.ecore#//Discussion/add"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//VersionHistory">
+      <genOperations ecoreOperation="model.ecore#//VersionHistory/renderHTML"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//MetaData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MetaData/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//MetaData/value"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//WikiProject">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//WikiProject/member"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//UnregisteredUser">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//UnregisteredUser/IPAddress"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Wikipedia">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Wikipedia/content"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Wikipedia/user"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

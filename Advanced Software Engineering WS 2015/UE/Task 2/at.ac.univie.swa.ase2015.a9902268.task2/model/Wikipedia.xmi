@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Wikipedia
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:model="http://task2.a9902268.ase2015.swa.univie.ac.at/model"
+    xsi:schemaLocation="http://task2.a9902268.ase2015.swa.univie.ac.at/model model.ecore"
+    currentDateJD="2457446">
+  <content xsi:type="model:Article"
+      currentRevision="//@content.0/@revision.0"
+      title="TITLE">
+    <revision
+        author="//@user.1"
+        content="TEXXT"/>
+    <revision
+        author="//@user.1"
+        content="TEXXT2"/>
+    <versionhistory/>
+    <discussion/>
+  </content>
+  <user xsi:type="model:UnregisteredUser"
+      IPAddress="12.12.12.12"/>
+  <user xsi:type="model:RegisteredUser"
+      userName="Wilfrid Utz"
+      registrationDateJD="2457333"/>
+  <user xsi:type="model:SysOp"
+      userName="SysOpUser"
+      registrationDateJD="0"/>
+  <user xsi:type="model:Administrator"
+      userName="AdministratorUser"
+      registrationDateJD="0"/>
+</model:Wikipedia>
