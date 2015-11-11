@@ -1,0 +1,36 @@
+grammar at.ac.univie.swa.ase2015.a9902268.task3.WikiML with org.eclipse.xtext.common.Terminals
+
+generate wikiML "http://www.ac.at/univie/swa/ase2015/a9902268/task3/WikiML"
+
+wikipage:
+//obligatory name of a page -> as defined by WikiML, should only occur once on a page
+//TODO: replace title with =
+	'title' name=InlineContent 'title\n'
+	//optionally, there is text below the main heading
+	content+=InlineContent?
+	sections+=AbstractSection (AbstractSections+=AbstractSection)*;
+	
+AbstractSection:
+	SubsectionLevel1 | SubsectionLevel2 | SubsectionLevel3 | SubsectionLevel4;
+
+SubsectionLevel1:
+//TODO: replace section1 with ==
+	'section1' name=InlineContent 'section1\n'
+	content=InlineContent?;
+
+SubsectionLevel2:
+//TODO: replace section2 with ===
+	'section2' name=InlineContent 'section2\n' content=InlineContent?;
+
+SubsectionLevel3:
+//TODO: replace section3 with ====
+	'section3' name=InlineContent 'section3\n'
+	content=InlineContent?;
+
+SubsectionLevel4:
+//TODO: replace section4 with =====
+	'section4' name=InlineContent 'section4\n' content=InlineContent?;
+
+InlineContent:
+	ID(ID)*
+;

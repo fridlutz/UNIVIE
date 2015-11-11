@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="wikiML" nsURI="http://www.ac.at/univie/swa/ase2015/a9902268/task3/WikiML"
+    nsPrefix="wikiML">
+  <eClassifiers xsi:type="ecore:EClass" name="wikipage">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" unique="false"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
+        eType="#//AbstractSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="AbstractSections" upperBound="-1"
+        eType="#//AbstractSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractSection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SubsectionLevel1" eSuperTypes="#//AbstractSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubsectionLevel2" eSuperTypes="#//AbstractSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubsectionLevel3" eSuperTypes="#//AbstractSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SubsectionLevel4" eSuperTypes="#//AbstractSection"/>
+</ecore:EPackage>
