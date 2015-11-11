@@ -38,25 +38,28 @@ public class WikiMLParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getAbstractSectionAccess().getAlternatives(), "rule__AbstractSection__Alternatives");
-					put(grammarAccess.getAbstractParagraphAccess().getAlternatives(), "rule__AbstractParagraph__Alternatives");
-					put(grammarAccess.getWikiMLPageAccess().getGroup(), "rule__WikiMLPage__Group__0");
-					put(grammarAccess.getPageTitleAccess().getGroup(), "rule__PageTitle__Group__0");
-					put(grammarAccess.getSubSectionAccess().getGroup(), "rule__SubSection__Group__0");
-					put(grammarAccess.getSubSubSectionAccess().getGroup(), "rule__SubSubSection__Group__0");
-					put(grammarAccess.getSubSubSubSectionAccess().getGroup(), "rule__SubSubSubSection__Group__0");
-					put(grammarAccess.getBoldParagraphAccess().getGroup(), "rule__BoldParagraph__Group__0");
-					put(grammarAccess.getItalicParagraphAccess().getGroup(), "rule__ItalicParagraph__Group__0");
-					put(grammarAccess.getWikiMLPageAccess().getTitleAssignment_0(), "rule__WikiMLPage__TitleAssignment_0");
-					put(grammarAccess.getWikiMLPageAccess().getSectionAssignment_1(), "rule__WikiMLPage__SectionAssignment_1");
-					put(grammarAccess.getPageTitleAccess().getNameAssignment_1(), "rule__PageTitle__NameAssignment_1");
-					put(grammarAccess.getPageTitleAccess().getContentAssignment_3(), "rule__PageTitle__ContentAssignment_3");
-					put(grammarAccess.getSubSectionAccess().getNameAssignment_1(), "rule__SubSection__NameAssignment_1");
-					put(grammarAccess.getSubSectionAccess().getContentAssignment_3(), "rule__SubSection__ContentAssignment_3");
-					put(grammarAccess.getSubSubSectionAccess().getNameAssignment_1(), "rule__SubSubSection__NameAssignment_1");
-					put(grammarAccess.getSubSubSectionAccess().getContentAssignment_3(), "rule__SubSubSection__ContentAssignment_3");
-					put(grammarAccess.getSubSubSubSectionAccess().getNameAssignment_1(), "rule__SubSubSubSection__NameAssignment_1");
-					put(grammarAccess.getSubSubSubSectionAccess().getContentAssignment_3(), "rule__SubSubSubSection__ContentAssignment_3");
-					put(grammarAccess.getNormalParagraphAccess().getNameAssignment(), "rule__NormalParagraph__NameAssignment");
+					put(grammarAccess.getInlineContentAccess().getAlternatives(), "rule__InlineContent__Alternatives");
+					put(grammarAccess.getWikipageAccess().getGroup(), "rule__Wikipage__Group__0");
+					put(grammarAccess.getWikipageAccess().getGroup_5(), "rule__Wikipage__Group_5__0");
+					put(grammarAccess.getSubsectionLevel1Access().getGroup(), "rule__SubsectionLevel1__Group__0");
+					put(grammarAccess.getSubsectionLevel2Access().getGroup(), "rule__SubsectionLevel2__Group__0");
+					put(grammarAccess.getSubsectionLevel3Access().getGroup(), "rule__SubsectionLevel3__Group__0");
+					put(grammarAccess.getSubsectionLevel4Access().getGroup(), "rule__SubsectionLevel4__Group__0");
+					put(grammarAccess.getFormattedContentAccess().getGroup(), "rule__FormattedContent__Group__0");
+					put(grammarAccess.getUnFormattedContentAccess().getGroup(), "rule__UnFormattedContent__Group__0");
+					put(grammarAccess.getWikipageAccess().getNameAssignment_1(), "rule__Wikipage__NameAssignment_1");
+					put(grammarAccess.getWikipageAccess().getContentAssignment_4(), "rule__Wikipage__ContentAssignment_4");
+					put(grammarAccess.getWikipageAccess().getContentAssignment_5_1(), "rule__Wikipage__ContentAssignment_5_1");
+					put(grammarAccess.getWikipageAccess().getSectionsAssignment_6(), "rule__Wikipage__SectionsAssignment_6");
+					put(grammarAccess.getWikipageAccess().getAbstractSectionsAssignment_7(), "rule__Wikipage__AbstractSectionsAssignment_7");
+					put(grammarAccess.getSubsectionLevel1Access().getNameAssignment_1(), "rule__SubsectionLevel1__NameAssignment_1");
+					put(grammarAccess.getSubsectionLevel1Access().getContentAssignment_3(), "rule__SubsectionLevel1__ContentAssignment_3");
+					put(grammarAccess.getSubsectionLevel2Access().getNameAssignment_1(), "rule__SubsectionLevel2__NameAssignment_1");
+					put(grammarAccess.getSubsectionLevel2Access().getContentAssignment_3(), "rule__SubsectionLevel2__ContentAssignment_3");
+					put(grammarAccess.getSubsectionLevel3Access().getNameAssignment_1(), "rule__SubsectionLevel3__NameAssignment_1");
+					put(grammarAccess.getSubsectionLevel3Access().getContentAssignment_3(), "rule__SubsectionLevel3__ContentAssignment_3");
+					put(grammarAccess.getSubsectionLevel4Access().getNameAssignment_1(), "rule__SubsectionLevel4__NameAssignment_1");
+					put(grammarAccess.getSubsectionLevel4Access().getContentAssignment_3(), "rule__SubsectionLevel4__ContentAssignment_3");
 				}
 			};
 		}
@@ -67,7 +70,7 @@ public class WikiMLParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			at.ac.univie.swa.ase2015.a9902268.task3.ui.contentassist.antlr.internal.InternalWikiMLParser typedParser = (at.ac.univie.swa.ase2015.a9902268.task3.ui.contentassist.antlr.internal.InternalWikiMLParser) parser;
-			typedParser.entryRuleWikiMLPage();
+			typedParser.entryRulewikipage();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);
