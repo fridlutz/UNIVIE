@@ -72,91 +72,165 @@ public class WikiMLSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case WikiMLPackage.WIKIPAGE:
+      case WikiMLPackage.WIKI:
       {
-        wikipage wikipage = (wikipage)theEObject;
-        T result = casewikipage(wikipage);
+        wiki wiki = (wiki)theEObject;
+        T result = casewiki(wiki);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.ABSTRACT_SECTION:
+      case WikiMLPackage.PARAGRAPH_TYPES:
       {
-        AbstractSection abstractSection = (AbstractSection)theEObject;
-        T result = caseAbstractSection(abstractSection);
+        ParagraphTypes paragraphTypes = (ParagraphTypes)theEObject;
+        T result = caseParagraphTypes(paragraphTypes);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.SUBSECTION_LEVEL1:
+      case WikiMLPackage.BLOCK_QUOTE:
       {
-        SubsectionLevel1 subsectionLevel1 = (SubsectionLevel1)theEObject;
-        T result = caseSubsectionLevel1(subsectionLevel1);
-        if (result == null) result = caseAbstractSection(subsectionLevel1);
+        BlockQuote blockQuote = (BlockQuote)theEObject;
+        T result = caseBlockQuote(blockQuote);
+        if (result == null) result = caseParagraphTypes(blockQuote);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.SUBSECTION_LEVEL2:
+      case WikiMLPackage.TEMPLATE:
       {
-        SubsectionLevel2 subsectionLevel2 = (SubsectionLevel2)theEObject;
-        T result = caseSubsectionLevel2(subsectionLevel2);
-        if (result == null) result = caseAbstractSection(subsectionLevel2);
+        Template template = (Template)theEObject;
+        T result = caseTemplate(template);
+        if (result == null) result = caseParagraphTypes(template);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.SUBSECTION_LEVEL3:
+      case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL2:
       {
-        SubsectionLevel3 subsectionLevel3 = (SubsectionLevel3)theEObject;
-        T result = caseSubsectionLevel3(subsectionLevel3);
-        if (result == null) result = caseAbstractSection(subsectionLevel3);
+        UnOrderListItemLevel2 unOrderListItemLevel2 = (UnOrderListItemLevel2)theEObject;
+        T result = caseUnOrderListItemLevel2(unOrderListItemLevel2);
+        if (result == null) result = caseParagraphTypes(unOrderListItemLevel2);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.SUBSECTION_LEVEL4:
+      case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1:
       {
-        SubsectionLevel4 subsectionLevel4 = (SubsectionLevel4)theEObject;
-        T result = caseSubsectionLevel4(subsectionLevel4);
-        if (result == null) result = caseAbstractSection(subsectionLevel4);
+        UnOrderListItemLevel1 unOrderListItemLevel1 = (UnOrderListItemLevel1)theEObject;
+        T result = caseUnOrderListItemLevel1(unOrderListItemLevel1);
+        if (result == null) result = caseParagraphTypes(unOrderListItemLevel1);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.INLINE_CONTENT:
+      case WikiMLPackage.ORDER_LIST_ITEM_LEVEL1:
       {
-        InlineContent inlineContent = (InlineContent)theEObject;
-        T result = caseInlineContent(inlineContent);
+        OrderListItemLevel1 orderListItemLevel1 = (OrderListItemLevel1)theEObject;
+        T result = caseOrderListItemLevel1(orderListItemLevel1);
+        if (result == null) result = caseParagraphTypes(orderListItemLevel1);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.FORMATTED_CONTENT:
+      case WikiMLPackage.FILE:
       {
-        FormattedContent formattedContent = (FormattedContent)theEObject;
-        T result = caseFormattedContent(formattedContent);
-        if (result == null) result = caseInlineContent(formattedContent);
+        File file = (File)theEObject;
+        T result = caseFile(file);
+        if (result == null) result = caseParagraphTypes(file);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.ITALIC_CONTENT:
+      case WikiMLPackage.CATEGORY:
       {
-        ItalicContent italicContent = (ItalicContent)theEObject;
-        T result = caseItalicContent(italicContent);
-        if (result == null) result = caseFormattedContent(italicContent);
-        if (result == null) result = caseInlineContent(italicContent);
+        Category category = (Category)theEObject;
+        T result = caseCategory(category);
+        if (result == null) result = caseParagraphTypes(category);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.BOLD_CONTENT:
+      case WikiMLPackage.HEADING1:
       {
-        BoldContent boldContent = (BoldContent)theEObject;
-        T result = caseBoldContent(boldContent);
-        if (result == null) result = caseFormattedContent(boldContent);
-        if (result == null) result = caseInlineContent(boldContent);
+        Heading1 heading1 = (Heading1)theEObject;
+        T result = caseHeading1(heading1);
+        if (result == null) result = casewiki(heading1);
+        if (result == null) result = caseParagraphTypes(heading1);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.BOLD_ITALIC_CONTENT:
+      case WikiMLPackage.HEADING2:
       {
-        BoldItalicContent boldItalicContent = (BoldItalicContent)theEObject;
-        T result = caseBoldItalicContent(boldItalicContent);
-        if (result == null) result = caseFormattedContent(boldItalicContent);
-        if (result == null) result = caseInlineContent(boldItalicContent);
+        Heading2 heading2 = (Heading2)theEObject;
+        T result = caseHeading2(heading2);
+        if (result == null) result = caseParagraphTypes(heading2);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.HEADING3:
+      {
+        Heading3 heading3 = (Heading3)theEObject;
+        T result = caseHeading3(heading3);
+        if (result == null) result = caseParagraphTypes(heading3);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.HEADING4:
+      {
+        Heading4 heading4 = (Heading4)theEObject;
+        T result = caseHeading4(heading4);
+        if (result == null) result = caseParagraphTypes(heading4);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.HEADING5:
+      {
+        Heading5 heading5 = (Heading5)theEObject;
+        T result = caseHeading5(heading5);
+        if (result == null) result = caseParagraphTypes(heading5);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.ABSTRACT_FORMATTED_INLINE_CONTENT:
+      {
+        AbstractFormattedInlineContent abstractFormattedInlineContent = (AbstractFormattedInlineContent)theEObject;
+        T result = caseAbstractFormattedInlineContent(abstractFormattedInlineContent);
+        if (result == null) result = caseParagraphTypes(abstractFormattedInlineContent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.BOLD:
+      {
+        Bold bold = (Bold)theEObject;
+        T result = caseBold(bold);
+        if (result == null) result = caseAbstractFormattedInlineContent(bold);
+        if (result == null) result = caseParagraphTypes(bold);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.ITALIC:
+      {
+        Italic italic = (Italic)theEObject;
+        T result = caseItalic(italic);
+        if (result == null) result = caseAbstractFormattedInlineContent(italic);
+        if (result == null) result = caseParagraphTypes(italic);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.ITALIC_BOLD:
+      {
+        ItalicBold italicBold = (ItalicBold)theEObject;
+        T result = caseItalicBold(italicBold);
+        if (result == null) result = caseAbstractFormattedInlineContent(italicBold);
+        if (result == null) result = caseParagraphTypes(italicBold);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.ABSTRACT_UNFORMATTED_INLINE_CONTENT:
+      {
+        AbstractUnformattedInlineContent abstractUnformattedInlineContent = (AbstractUnformattedInlineContent)theEObject;
+        T result = caseAbstractUnformattedInlineContent(abstractUnformattedInlineContent);
+        if (result == null) result = caseHeading2(abstractUnformattedInlineContent);
+        if (result == null) result = caseHeading3(abstractUnformattedInlineContent);
+        if (result == null) result = caseHeading4(abstractUnformattedInlineContent);
+        if (result == null) result = caseHeading5(abstractUnformattedInlineContent);
+        if (result == null) result = caseBold(abstractUnformattedInlineContent);
+        if (result == null) result = caseItalic(abstractUnformattedInlineContent);
+        if (result == null) result = caseItalicBold(abstractUnformattedInlineContent);
+        if (result == null) result = caseAbstractFormattedInlineContent(abstractUnformattedInlineContent);
+        if (result == null) result = caseParagraphTypes(abstractUnformattedInlineContent);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -164,93 +238,107 @@ public class WikiMLSwitch<T> extends Switch<T>
       {
         Text text = (Text)theEObject;
         T result = caseText(text);
-        if (result == null) result = caseItalicContent(text);
-        if (result == null) result = caseBoldContent(text);
-        if (result == null) result = caseBoldItalicContent(text);
-        if (result == null) result = caseFormattedContent(text);
-        if (result == null) result = caseInlineContent(text);
+        if (result == null) result = caseHeading1(text);
+        if (result == null) result = caseAbstractUnformattedInlineContent(text);
+        if (result == null) result = casewiki(text);
+        if (result == null) result = caseHeading2(text);
+        if (result == null) result = caseHeading3(text);
+        if (result == null) result = caseHeading4(text);
+        if (result == null) result = caseHeading5(text);
+        if (result == null) result = caseBold(text);
+        if (result == null) result = caseItalic(text);
+        if (result == null) result = caseItalicBold(text);
+        if (result == null) result = caseAbstractFormattedInlineContent(text);
+        if (result == null) result = caseParagraphTypes(text);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.UN_FORMATTED_TEXT:
+      case WikiMLPackage.HYPER_LINK:
       {
-        UnFormattedText unFormattedText = (UnFormattedText)theEObject;
-        T result = caseUnFormattedText(unFormattedText);
-        if (result == null) result = caseText(unFormattedText);
-        if (result == null) result = caseItalicContent(unFormattedText);
-        if (result == null) result = caseBoldContent(unFormattedText);
-        if (result == null) result = caseBoldItalicContent(unFormattedText);
-        if (result == null) result = caseFormattedContent(unFormattedText);
-        if (result == null) result = caseInlineContent(unFormattedText);
+        HyperLink hyperLink = (HyperLink)theEObject;
+        T result = caseHyperLink(hyperLink);
+        if (result == null) result = caseAbstractUnformattedInlineContent(hyperLink);
+        if (result == null) result = caseHeading2(hyperLink);
+        if (result == null) result = caseHeading3(hyperLink);
+        if (result == null) result = caseHeading4(hyperLink);
+        if (result == null) result = caseHeading5(hyperLink);
+        if (result == null) result = caseBold(hyperLink);
+        if (result == null) result = caseItalic(hyperLink);
+        if (result == null) result = caseItalicBold(hyperLink);
+        if (result == null) result = caseAbstractFormattedInlineContent(hyperLink);
+        if (result == null) result = caseParagraphTypes(hyperLink);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.HYPERLINK:
+      case WikiMLPackage.INTERNAL:
       {
-        Hyperlink hyperlink = (Hyperlink)theEObject;
-        T result = caseHyperlink(hyperlink);
-        if (result == null) result = caseText(hyperlink);
-        if (result == null) result = caseItalicContent(hyperlink);
-        if (result == null) result = caseBoldContent(hyperlink);
-        if (result == null) result = caseBoldItalicContent(hyperlink);
-        if (result == null) result = caseFormattedContent(hyperlink);
-        if (result == null) result = caseInlineContent(hyperlink);
+        Internal internal = (Internal)theEObject;
+        T result = caseInternal(internal);
+        if (result == null) result = caseHyperLink(internal);
+        if (result == null) result = caseAbstractUnformattedInlineContent(internal);
+        if (result == null) result = caseHeading2(internal);
+        if (result == null) result = caseHeading3(internal);
+        if (result == null) result = caseHeading4(internal);
+        if (result == null) result = caseHeading5(internal);
+        if (result == null) result = caseBold(internal);
+        if (result == null) result = caseItalic(internal);
+        if (result == null) result = caseItalicBold(internal);
+        if (result == null) result = caseAbstractFormattedInlineContent(internal);
+        if (result == null) result = caseParagraphTypes(internal);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.EXTERNAL_LINK:
+      case WikiMLPackage.INTERNAL_ALT:
       {
-        ExternalLink externalLink = (ExternalLink)theEObject;
-        T result = caseExternalLink(externalLink);
-        if (result == null) result = caseHyperlink(externalLink);
-        if (result == null) result = caseText(externalLink);
-        if (result == null) result = caseItalicContent(externalLink);
-        if (result == null) result = caseBoldContent(externalLink);
-        if (result == null) result = caseBoldItalicContent(externalLink);
-        if (result == null) result = caseFormattedContent(externalLink);
-        if (result == null) result = caseInlineContent(externalLink);
+        InternalAlt internalAlt = (InternalAlt)theEObject;
+        T result = caseInternalAlt(internalAlt);
+        if (result == null) result = caseHyperLink(internalAlt);
+        if (result == null) result = caseAbstractUnformattedInlineContent(internalAlt);
+        if (result == null) result = caseHeading2(internalAlt);
+        if (result == null) result = caseHeading3(internalAlt);
+        if (result == null) result = caseHeading4(internalAlt);
+        if (result == null) result = caseHeading5(internalAlt);
+        if (result == null) result = caseBold(internalAlt);
+        if (result == null) result = caseItalic(internalAlt);
+        if (result == null) result = caseItalicBold(internalAlt);
+        if (result == null) result = caseAbstractFormattedInlineContent(internalAlt);
+        if (result == null) result = caseParagraphTypes(internalAlt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.EXTERNAL_LINK_ALTERNATIVE:
+      case WikiMLPackage.EXTERNAL:
       {
-        ExternalLinkAlternative externalLinkAlternative = (ExternalLinkAlternative)theEObject;
-        T result = caseExternalLinkAlternative(externalLinkAlternative);
-        if (result == null) result = caseHyperlink(externalLinkAlternative);
-        if (result == null) result = caseText(externalLinkAlternative);
-        if (result == null) result = caseItalicContent(externalLinkAlternative);
-        if (result == null) result = caseBoldContent(externalLinkAlternative);
-        if (result == null) result = caseBoldItalicContent(externalLinkAlternative);
-        if (result == null) result = caseFormattedContent(externalLinkAlternative);
-        if (result == null) result = caseInlineContent(externalLinkAlternative);
+        External external = (External)theEObject;
+        T result = caseExternal(external);
+        if (result == null) result = caseHyperLink(external);
+        if (result == null) result = caseAbstractUnformattedInlineContent(external);
+        if (result == null) result = caseHeading2(external);
+        if (result == null) result = caseHeading3(external);
+        if (result == null) result = caseHeading4(external);
+        if (result == null) result = caseHeading5(external);
+        if (result == null) result = caseBold(external);
+        if (result == null) result = caseItalic(external);
+        if (result == null) result = caseItalicBold(external);
+        if (result == null) result = caseAbstractFormattedInlineContent(external);
+        if (result == null) result = caseParagraphTypes(external);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.INTERNAL_LINK:
+      case WikiMLPackage.EXTERNAL_ALT:
       {
-        InternalLink internalLink = (InternalLink)theEObject;
-        T result = caseInternalLink(internalLink);
-        if (result == null) result = caseHyperlink(internalLink);
-        if (result == null) result = caseText(internalLink);
-        if (result == null) result = caseItalicContent(internalLink);
-        if (result == null) result = caseBoldContent(internalLink);
-        if (result == null) result = caseBoldItalicContent(internalLink);
-        if (result == null) result = caseFormattedContent(internalLink);
-        if (result == null) result = caseInlineContent(internalLink);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case WikiMLPackage.INTERNAL_LINK_ALTERNATIVE:
-      {
-        InternalLinkAlternative internalLinkAlternative = (InternalLinkAlternative)theEObject;
-        T result = caseInternalLinkAlternative(internalLinkAlternative);
-        if (result == null) result = caseHyperlink(internalLinkAlternative);
-        if (result == null) result = caseText(internalLinkAlternative);
-        if (result == null) result = caseItalicContent(internalLinkAlternative);
-        if (result == null) result = caseBoldContent(internalLinkAlternative);
-        if (result == null) result = caseBoldItalicContent(internalLinkAlternative);
-        if (result == null) result = caseFormattedContent(internalLinkAlternative);
-        if (result == null) result = caseInlineContent(internalLinkAlternative);
+        ExternalAlt externalAlt = (ExternalAlt)theEObject;
+        T result = caseExternalAlt(externalAlt);
+        if (result == null) result = caseHyperLink(externalAlt);
+        if (result == null) result = caseAbstractUnformattedInlineContent(externalAlt);
+        if (result == null) result = caseHeading2(externalAlt);
+        if (result == null) result = caseHeading3(externalAlt);
+        if (result == null) result = caseHeading4(externalAlt);
+        if (result == null) result = caseHeading5(externalAlt);
+        if (result == null) result = caseBold(externalAlt);
+        if (result == null) result = caseItalic(externalAlt);
+        if (result == null) result = caseItalicBold(externalAlt);
+        if (result == null) result = caseAbstractFormattedInlineContent(externalAlt);
+        if (result == null) result = caseParagraphTypes(externalAlt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -259,177 +347,305 @@ public class WikiMLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>wikipage</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>wiki</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>wikipage</em>'.
+   * @return the result of interpreting the object as an instance of '<em>wiki</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casewikipage(wikipage object)
+  public T casewiki(wiki object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Abstract Section</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Paragraph Types</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Abstract Section</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Paragraph Types</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseAbstractSection(AbstractSection object)
+  public T caseParagraphTypes(ParagraphTypes object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Subsection Level1</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Block Quote</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Subsection Level1</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Block Quote</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubsectionLevel1(SubsectionLevel1 object)
+  public T caseBlockQuote(BlockQuote object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Subsection Level2</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Template</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Subsection Level2</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Template</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubsectionLevel2(SubsectionLevel2 object)
+  public T caseTemplate(Template object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Subsection Level3</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Un Order List Item Level2</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Subsection Level3</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Un Order List Item Level2</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubsectionLevel3(SubsectionLevel3 object)
+  public T caseUnOrderListItemLevel2(UnOrderListItemLevel2 object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Subsection Level4</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Un Order List Item Level1</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Subsection Level4</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Un Order List Item Level1</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseSubsectionLevel4(SubsectionLevel4 object)
+  public T caseUnOrderListItemLevel1(UnOrderListItemLevel1 object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Inline Content</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Order List Item Level1</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Inline Content</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Order List Item Level1</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseInlineContent(InlineContent object)
+  public T caseOrderListItemLevel1(OrderListItemLevel1 object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Formatted Content</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>File</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Formatted Content</em>'.
+   * @return the result of interpreting the object as an instance of '<em>File</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFormattedContent(FormattedContent object)
+  public T caseFile(File object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Italic Content</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Category</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Italic Content</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Category</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseItalicContent(ItalicContent object)
+  public T caseCategory(Category object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Bold Content</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Heading1</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Bold Content</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Heading1</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBoldContent(BoldContent object)
+  public T caseHeading1(Heading1 object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Bold Italic Content</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Heading2</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Bold Italic Content</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Heading2</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseBoldItalicContent(BoldItalicContent object)
+  public T caseHeading2(Heading2 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Heading3</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Heading3</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHeading3(Heading3 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Heading4</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Heading4</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHeading4(Heading4 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Heading5</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Heading5</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseHeading5(Heading5 object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Abstract Formatted Inline Content</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Abstract Formatted Inline Content</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAbstractFormattedInlineContent(AbstractFormattedInlineContent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Bold</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Bold</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseBold(Bold object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Italic</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Italic</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseItalic(Italic object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Italic Bold</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Italic Bold</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseItalicBold(ItalicBold object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Abstract Unformatted Inline Content</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Abstract Unformatted Inline Content</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAbstractUnformattedInlineContent(AbstractUnformattedInlineContent object)
   {
     return null;
   }
@@ -451,97 +667,81 @@ public class WikiMLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Un Formatted Text</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Hyper Link</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Un Formatted Text</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Hyper Link</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseUnFormattedText(UnFormattedText object)
+  public T caseHyperLink(HyperLink object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Hyperlink</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Internal</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Hyperlink</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Internal</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseHyperlink(Hyperlink object)
+  public T caseInternal(Internal object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>External Link</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Internal Alt</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>External Link</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Internal Alt</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseExternalLink(ExternalLink object)
+  public T caseInternalAlt(InternalAlt object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>External Link Alternative</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>External</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>External Link Alternative</em>'.
+   * @return the result of interpreting the object as an instance of '<em>External</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseExternalLinkAlternative(ExternalLinkAlternative object)
+  public T caseExternal(External object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Internal Link</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>External Alt</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Internal Link</em>'.
+   * @return the result of interpreting the object as an instance of '<em>External Alt</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseInternalLink(InternalLink object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Internal Link Alternative</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Internal Link Alternative</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInternalLinkAlternative(InternalLinkAlternative object)
+  public T caseExternalAlt(ExternalAlt object)
   {
     return null;
   }

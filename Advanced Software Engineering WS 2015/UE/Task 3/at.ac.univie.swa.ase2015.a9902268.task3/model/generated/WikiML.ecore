@@ -2,50 +2,76 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="wikiML" nsURI="http://www.ac.at/univie/swa/ase2015/a9902268/task3/WikiML"
     nsPrefix="wikiML">
-  <eClassifiers xsi:type="ecore:EClass" name="wikipage">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="title" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  <eClassifiers xsi:type="ecore:EClass" name="wiki"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ParagraphTypes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BlockQuote" eSuperTypes="#//ParagraphTypes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
-        eType="#//InlineContent" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sections" upperBound="-1"
-        eType="#//AbstractSection" containment="true"/>
+        eType="#//AbstractFormattedInlineContent" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="AbstractSection">
+  <eClassifiers xsi:type="ecore:EClass" name="Template" eSuperTypes="#//ParagraphTypes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Text" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
-        eType="#//InlineContent" containment="true"/>
+        eType="#//Text" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SubsectionLevel1" eSuperTypes="#//AbstractSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SubsectionLevel2" eSuperTypes="#//AbstractSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SubsectionLevel3" eSuperTypes="#//AbstractSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="SubsectionLevel4" eSuperTypes="#//AbstractSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="InlineContent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FormattedContent" eSuperTypes="#//InlineContent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ItalicContent" eSuperTypes="#//FormattedContent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BoldContent" eSuperTypes="#//FormattedContent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="BoldItalicContent" eSuperTypes="#//FormattedContent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//InlineContent #//ItalicContent #//BoldContent #//BoldItalicContent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="UnFormattedText" eSuperTypes="#//Text">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="words" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Hyperlink" eSuperTypes="#//Text"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ExternalLink" eSuperTypes="#//Hyperlink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pageName" eType="#//UnFormattedText"
+  <eClassifiers xsi:type="ecore:EClass" name="UnOrderListItemLevel2" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//AbstractFormattedInlineContent"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="list" upperBound="-1" eType="#//AbstractFormattedInlineContent"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExternalLinkAlternative" eSuperTypes="#//Hyperlink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="url" eType="#//UnFormattedText"
+  <eClassifiers xsi:type="ecore:EClass" name="UnOrderListItemLevel1" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//AbstractFormattedInlineContent"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alternativeText" eType="#//UnFormattedText"
-        containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InternalLink" eSuperTypes="#//Hyperlink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pageName" eType="#//UnFormattedText"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="list" upperBound="-1" eType="#//AbstractFormattedInlineContent"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InternalLinkAlternative" eSuperTypes="#//Hyperlink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pageName" eType="#//UnFormattedText"
+  <eClassifiers xsi:type="ecore:EClass" name="OrderListItemLevel1" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//AbstractFormattedInlineContent"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="alternativeText" eType="#//UnFormattedText"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="list" upperBound="-1" eType="#//AbstractFormattedInlineContent"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="File" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//AbstractUnformattedInlineContent"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="caption" upperBound="-1"
+        eType="#//AbstractFormattedInlineContent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Category" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//AbstractUnformattedInlineContent"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading1" eSuperTypes="#//wiki #//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
+        eType="#//ParagraphTypes" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading2" eSuperTypes="#//ParagraphTypes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading3" eSuperTypes="#//ParagraphTypes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading4" eSuperTypes="#//ParagraphTypes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Heading5" eSuperTypes="#//ParagraphTypes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractFormattedInlineContent" eSuperTypes="#//ParagraphTypes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Bold" eSuperTypes="#//AbstractFormattedInlineContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Italic" eSuperTypes="#//AbstractFormattedInlineContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ItalicBold" eSuperTypes="#//AbstractFormattedInlineContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AbstractUnformattedInlineContent" eSuperTypes="#//ParagraphTypes #//Heading2 #//Heading3 #//Heading4 #//Heading5 #//Bold #//Italic #//ItalicBold"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//Heading1 #//AbstractUnformattedInlineContent">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HyperLink" eSuperTypes="#//AbstractUnformattedInlineContent"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Internal" eSuperTypes="#//HyperLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Text" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InternalAlt" eSuperTypes="#//HyperLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Text" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="altText" eType="#//AbstractFormattedInlineContent"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="External" eSuperTypes="#//HyperLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExternalAlt" eSuperTypes="#//HyperLink">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="altText" eType="#//AbstractFormattedInlineContent"
         containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

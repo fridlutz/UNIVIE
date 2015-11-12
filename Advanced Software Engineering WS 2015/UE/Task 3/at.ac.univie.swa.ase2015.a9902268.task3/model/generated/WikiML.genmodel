@@ -8,42 +8,63 @@
     editorPluginID="at.ac.univie.swa.ase2015.a9902268.task3.editor" runtimeVersion="2.11">
   <genPackages prefix="WikiML" basePackage="at.ac.univie.swa.ase2015.a9902268.task3"
       disposableProviderFactory="true" fileExtensions="wikiml" ecorePackage="WikiML.ecore#/">
-    <genClasses ecoreClass="WikiML.ecore#//wikipage">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WikiML.ecore#//wikipage/title"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//wikipage/content"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//wikipage/sections"/>
+    <genClasses ecoreClass="WikiML.ecore#//wiki"/>
+    <genClasses ecoreClass="WikiML.ecore#//ParagraphTypes"/>
+    <genClasses ecoreClass="WikiML.ecore#//BlockQuote">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//BlockQuote/content"/>
     </genClasses>
-    <genClasses ecoreClass="WikiML.ecore#//AbstractSection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//AbstractSection/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//AbstractSection/content"/>
+    <genClasses ecoreClass="WikiML.ecore#//Template">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//Template/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//Template/content"/>
     </genClasses>
-    <genClasses ecoreClass="WikiML.ecore#//SubsectionLevel1"/>
-    <genClasses ecoreClass="WikiML.ecore#//SubsectionLevel2"/>
-    <genClasses ecoreClass="WikiML.ecore#//SubsectionLevel3"/>
-    <genClasses ecoreClass="WikiML.ecore#//SubsectionLevel4"/>
-    <genClasses ecoreClass="WikiML.ecore#//InlineContent"/>
-    <genClasses ecoreClass="WikiML.ecore#//FormattedContent"/>
-    <genClasses ecoreClass="WikiML.ecore#//ItalicContent"/>
-    <genClasses ecoreClass="WikiML.ecore#//BoldContent"/>
-    <genClasses ecoreClass="WikiML.ecore#//BoldItalicContent"/>
-    <genClasses ecoreClass="WikiML.ecore#//Text"/>
-    <genClasses ecoreClass="WikiML.ecore#//UnFormattedText">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WikiML.ecore#//UnFormattedText/words"/>
+    <genClasses ecoreClass="WikiML.ecore#//UnOrderListItemLevel2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//UnOrderListItemLevel2/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//UnOrderListItemLevel2/list"/>
     </genClasses>
-    <genClasses ecoreClass="WikiML.ecore#//Hyperlink"/>
-    <genClasses ecoreClass="WikiML.ecore#//ExternalLink">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//ExternalLink/pageName"/>
+    <genClasses ecoreClass="WikiML.ecore#//UnOrderListItemLevel1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//UnOrderListItemLevel1/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//UnOrderListItemLevel1/list"/>
     </genClasses>
-    <genClasses ecoreClass="WikiML.ecore#//ExternalLinkAlternative">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//ExternalLinkAlternative/url"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//ExternalLinkAlternative/alternativeText"/>
+    <genClasses ecoreClass="WikiML.ecore#//OrderListItemLevel1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//OrderListItemLevel1/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//OrderListItemLevel1/list"/>
     </genClasses>
-    <genClasses ecoreClass="WikiML.ecore#//InternalLink">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//InternalLink/pageName"/>
+    <genClasses ecoreClass="WikiML.ecore#//File">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//File/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//File/caption"/>
     </genClasses>
-    <genClasses ecoreClass="WikiML.ecore#//InternalLinkAlternative">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//InternalLinkAlternative/pageName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//InternalLinkAlternative/alternativeText"/>
+    <genClasses ecoreClass="WikiML.ecore#//Category">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//Category/name"/>
+    </genClasses>
+    <genClasses ecoreClass="WikiML.ecore#//Heading1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//Heading1/elements"/>
+    </genClasses>
+    <genClasses ecoreClass="WikiML.ecore#//Heading2"/>
+    <genClasses ecoreClass="WikiML.ecore#//Heading3"/>
+    <genClasses ecoreClass="WikiML.ecore#//Heading4"/>
+    <genClasses ecoreClass="WikiML.ecore#//Heading5"/>
+    <genClasses ecoreClass="WikiML.ecore#//AbstractFormattedInlineContent"/>
+    <genClasses ecoreClass="WikiML.ecore#//Bold"/>
+    <genClasses ecoreClass="WikiML.ecore#//Italic"/>
+    <genClasses ecoreClass="WikiML.ecore#//ItalicBold"/>
+    <genClasses ecoreClass="WikiML.ecore#//AbstractUnformattedInlineContent"/>
+    <genClasses ecoreClass="WikiML.ecore#//Text">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WikiML.ecore#//Text/name"/>
+    </genClasses>
+    <genClasses ecoreClass="WikiML.ecore#//HyperLink"/>
+    <genClasses ecoreClass="WikiML.ecore#//Internal">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//Internal/name"/>
+    </genClasses>
+    <genClasses ecoreClass="WikiML.ecore#//InternalAlt">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//InternalAlt/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//InternalAlt/altText"/>
+    </genClasses>
+    <genClasses ecoreClass="WikiML.ecore#//External">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WikiML.ecore#//External/name"/>
+    </genClasses>
+    <genClasses ecoreClass="WikiML.ecore#//ExternalAlt">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute WikiML.ecore#//ExternalAlt/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//ExternalAlt/altText"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

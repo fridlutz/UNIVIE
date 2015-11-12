@@ -2,70 +2,184 @@ grammar at.ac.univie.swa.ase2015.a9902268.task3.WikiML with org.eclipse.xtext.co
 
 generate wikiML "http://www.ac.at/univie/swa/ase2015/a9902268/task3/WikiML"
 
-wikipage:
-//obligatory name of a page -> as defined by WikiML, should only occur once on a page, is, can have multiple words and numbers
-//TODO: redefine terminal ID
-	'=' title=WIKITEXT (WIKITEXT)* '=' '\n'
-	//optionally, there is text below the main heading
-	(content+=InlineContent)* 
-	sections+=AbstractSection (sections+=AbstractSection)*;
+wiki:
+//according to wikitext documentation, one single title per page
+	Heading1
+	//a page could potentially also exist without content
+	(elements+=ParagraphTypes*);
+	/*	('paragraph' paragraph+=AbstractInlineContent*)*
+	('blockquote' blockquote+=AbstractInlineContent*)*; */
 
-AbstractSection:
-	SubsectionLevel1 | SubsectionLevel2 | SubsectionLevel3 | SubsectionLevel4;
+//handle all types of paragraphs
+ParagraphTypes:
+	(OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | File | Category | Template | AbstractFormattedInlineContent |
+	AbstractUnformattedInlineContent | BlockQuote | Heading1 | Heading2 | Heading3 | Heading4 | Heading5);
 
-SubsectionLevel1:
-	'==' name=Text '==' '\n' (content+=InlineContent)*;
+BlockQuote:
+	{BlockQuote} '<blockquote>' (content+=(AbstractUnformattedInlineContent | AbstractFormattedInlineContent)*)
+	'</blockquote>';
 
-SubsectionLevel2:
-	'===' name=Text '===' '\n' (content+=InlineContent)*;
+	//TODO Check how Templates work
+Template:
+	'{{' name=Text '|' content+=Text ('|' content+=Text)* '}}';
 
-SubsectionLevel3:
-	'====' name=Text '====' '\n' (content+=InlineContent)*;
+UnOrderListItemLevel2:
+	'**' name=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent) list+=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent)* ':LIST';
 
-SubsectionLevel4:
-	'=====' name=Text '=====' '\n' (content+=InlineContent)*;
+UnOrderListItemLevel1:
+	'*' name=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent) list+=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent)* ':LIST';
 
-InlineContent:
-	FormattedContent | Text;
+OrderListItemLevel1:
+	'#' name=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent) list+=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent)* ':LIST';
 
-	//Formatting basic elements with bold, italic or both
-FormattedContent:
-	ItalicContent | BoldContent | BoldItalicContent;
+	//TODO: CHeck for types, like thumb
+File:
+	'[[File:' name=AbstractUnformattedInlineContent '|' 'thumb' '|' caption+=(AbstractFormattedInlineContent |
+	AbstractUnformattedInlineContent)* ']]';
 
-ItalicContent:
-	'\'\'' Text '\'\'';
+Category:
+	'[[Category:' name=AbstractUnformattedInlineContent ('|*')? ']]';
 
-BoldContent:
-	'\'\'\'' Text '\'\'\'';
+Heading1:
+	'=' Text '=';
 
-BoldItalicContent:
-	'\'\'\'\'\'' Text '\'\'\'\'\'';
+Heading2:
+	'==' AbstractUnformattedInlineContent '==';
 
-	//basic elements to construct a paragraph in sections
+Heading3:
+	'===' AbstractUnformattedInlineContent '===';
+
+Heading4:
+	'====' AbstractUnformattedInlineContent '====';
+
+Heading5:
+	'=====' AbstractUnformattedInlineContent '=====';
+
+AbstractFormattedInlineContent:
+	(Bold | Italic | ItalicBold);
+
+Bold:
+	'\'\'\'' AbstractUnformattedInlineContent '\'\'\'';
+
+Italic:
+	'\'\'' AbstractUnformattedInlineContent '\'\'';
+
+ItalicBold:
+	'\'\'\'\'\'' AbstractUnformattedInlineContent '\'\'\'\'\'';
+
+	//UnformattedInlineContent
+AbstractUnformattedInlineContent:
+	(Text | HyperLink);
 
 Text:
-	UnFormattedText | Hyperlink;
+	name=Name;
 
-UnFormattedText:
-	words=WIKITEXT (WIKITEXT)*;
+HyperLink:
+	(Internal | InternalAlt | External | ExternalAlt);
 
-Hyperlink:
-	InternalLink | InternalLinkAlternative | ExternalLink | ExternalLinkAlternative;
+Internal:
+	'[[' name=Text ']]';
 
-ExternalLink:
-	'[' pageName=UnFormattedText ']';
+InternalAlt:
+	'[[' name=Text '|' altText=(AbstractUnformattedInlineContent | AbstractFormattedInlineContent) ']]';
 
-ExternalLinkAlternative:
-	'[' url=UnFormattedText ' ' alternativeText=UnFormattedText ']';
+External:
+	'[' name=URL ']';
 
-InternalLink:
-	'[[' pageName=UnFormattedText ']]';
+ExternalAlt:
+	'[' name=URL altText=(AbstractUnformattedInlineContent | AbstractFormattedInlineContent) ']';
 
-InternalLinkAlternative:
-	'[[' pageName=UnFormattedText '|' alternativeText=UnFormattedText ']]';
+Name:
+	ID (ID)*;
 
-	//everything allowed but Umlaute
-terminal WIKITEXT:
-	'^'? (!('=' | '\'' | '[' | ']' | '\n'))*;
-	
+	//override of terminals
+terminal ID:
+	('A'..'Z' | 'a'..'z' | '_' | '-' | '(' | ')' | ',' | '#' | '"' | '.' | ':' | '0'..'9')*;
+
+terminal STRING:
+	ID;
+
+terminal ML_COMMENT:
+	'<!--'->'-->';
+
+	//found online: https://xtexterience.wordpress.com/2011/06/08/urls-in-xtext/
+terminal URL:
+	('a'..'z')+ '://' // Protocol
+
+	( // Hostname
+	(('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+) |
+	(('a'..'z' | 'A'..'Z')
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))*
+	('.'
+	('a'..'z' | 'A'..'Z')
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))*)*))
+	(':' ('0'..'9')+)? // Portnumber
+
+	('/'
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	'~' |
+	'+' |
+	'.' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))*)* // Path
+
+	('?'
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	'=' |
+	'&' |
+	';' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))+
+	('+'
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	'=' |
+	'&' |
+	';' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))+)*)? // Query
+;
 	

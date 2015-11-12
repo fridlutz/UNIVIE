@@ -23,103 +23,175 @@ public interface WikiMLFactory extends EFactory
   WikiMLFactory eINSTANCE = at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>wikipage</em>'.
+   * Returns a new object of class '<em>wiki</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>wikipage</em>'.
+   * @return a new object of class '<em>wiki</em>'.
    * @generated
    */
-  wikipage createwikipage();
+  wiki createwiki();
 
   /**
-   * Returns a new object of class '<em>Abstract Section</em>'.
+   * Returns a new object of class '<em>Paragraph Types</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Abstract Section</em>'.
+   * @return a new object of class '<em>Paragraph Types</em>'.
    * @generated
    */
-  AbstractSection createAbstractSection();
+  ParagraphTypes createParagraphTypes();
 
   /**
-   * Returns a new object of class '<em>Subsection Level1</em>'.
+   * Returns a new object of class '<em>Block Quote</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Subsection Level1</em>'.
+   * @return a new object of class '<em>Block Quote</em>'.
    * @generated
    */
-  SubsectionLevel1 createSubsectionLevel1();
+  BlockQuote createBlockQuote();
 
   /**
-   * Returns a new object of class '<em>Subsection Level2</em>'.
+   * Returns a new object of class '<em>Template</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Subsection Level2</em>'.
+   * @return a new object of class '<em>Template</em>'.
    * @generated
    */
-  SubsectionLevel2 createSubsectionLevel2();
+  Template createTemplate();
 
   /**
-   * Returns a new object of class '<em>Subsection Level3</em>'.
+   * Returns a new object of class '<em>Un Order List Item Level2</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Subsection Level3</em>'.
+   * @return a new object of class '<em>Un Order List Item Level2</em>'.
    * @generated
    */
-  SubsectionLevel3 createSubsectionLevel3();
+  UnOrderListItemLevel2 createUnOrderListItemLevel2();
 
   /**
-   * Returns a new object of class '<em>Subsection Level4</em>'.
+   * Returns a new object of class '<em>Un Order List Item Level1</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Subsection Level4</em>'.
+   * @return a new object of class '<em>Un Order List Item Level1</em>'.
    * @generated
    */
-  SubsectionLevel4 createSubsectionLevel4();
+  UnOrderListItemLevel1 createUnOrderListItemLevel1();
 
   /**
-   * Returns a new object of class '<em>Inline Content</em>'.
+   * Returns a new object of class '<em>Order List Item Level1</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Inline Content</em>'.
+   * @return a new object of class '<em>Order List Item Level1</em>'.
    * @generated
    */
-  InlineContent createInlineContent();
+  OrderListItemLevel1 createOrderListItemLevel1();
 
   /**
-   * Returns a new object of class '<em>Formatted Content</em>'.
+   * Returns a new object of class '<em>File</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Formatted Content</em>'.
+   * @return a new object of class '<em>File</em>'.
    * @generated
    */
-  FormattedContent createFormattedContent();
+  File createFile();
 
   /**
-   * Returns a new object of class '<em>Italic Content</em>'.
+   * Returns a new object of class '<em>Category</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Italic Content</em>'.
+   * @return a new object of class '<em>Category</em>'.
    * @generated
    */
-  ItalicContent createItalicContent();
+  Category createCategory();
 
   /**
-   * Returns a new object of class '<em>Bold Content</em>'.
+   * Returns a new object of class '<em>Heading1</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Bold Content</em>'.
+   * @return a new object of class '<em>Heading1</em>'.
    * @generated
    */
-  BoldContent createBoldContent();
+  Heading1 createHeading1();
 
   /**
-   * Returns a new object of class '<em>Bold Italic Content</em>'.
+   * Returns a new object of class '<em>Heading2</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Bold Italic Content</em>'.
+   * @return a new object of class '<em>Heading2</em>'.
    * @generated
    */
-  BoldItalicContent createBoldItalicContent();
+  Heading2 createHeading2();
+
+  /**
+   * Returns a new object of class '<em>Heading3</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Heading3</em>'.
+   * @generated
+   */
+  Heading3 createHeading3();
+
+  /**
+   * Returns a new object of class '<em>Heading4</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Heading4</em>'.
+   * @generated
+   */
+  Heading4 createHeading4();
+
+  /**
+   * Returns a new object of class '<em>Heading5</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Heading5</em>'.
+   * @generated
+   */
+  Heading5 createHeading5();
+
+  /**
+   * Returns a new object of class '<em>Abstract Formatted Inline Content</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Abstract Formatted Inline Content</em>'.
+   * @generated
+   */
+  AbstractFormattedInlineContent createAbstractFormattedInlineContent();
+
+  /**
+   * Returns a new object of class '<em>Bold</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Bold</em>'.
+   * @generated
+   */
+  Bold createBold();
+
+  /**
+   * Returns a new object of class '<em>Italic</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Italic</em>'.
+   * @generated
+   */
+  Italic createItalic();
+
+  /**
+   * Returns a new object of class '<em>Italic Bold</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Italic Bold</em>'.
+   * @generated
+   */
+  ItalicBold createItalicBold();
+
+  /**
+   * Returns a new object of class '<em>Abstract Unformatted Inline Content</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Abstract Unformatted Inline Content</em>'.
+   * @generated
+   */
+  AbstractUnformattedInlineContent createAbstractUnformattedInlineContent();
 
   /**
    * Returns a new object of class '<em>Text</em>'.
@@ -131,58 +203,49 @@ public interface WikiMLFactory extends EFactory
   Text createText();
 
   /**
-   * Returns a new object of class '<em>Un Formatted Text</em>'.
+   * Returns a new object of class '<em>Hyper Link</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Un Formatted Text</em>'.
+   * @return a new object of class '<em>Hyper Link</em>'.
    * @generated
    */
-  UnFormattedText createUnFormattedText();
+  HyperLink createHyperLink();
 
   /**
-   * Returns a new object of class '<em>Hyperlink</em>'.
+   * Returns a new object of class '<em>Internal</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Hyperlink</em>'.
+   * @return a new object of class '<em>Internal</em>'.
    * @generated
    */
-  Hyperlink createHyperlink();
+  Internal createInternal();
 
   /**
-   * Returns a new object of class '<em>External Link</em>'.
+   * Returns a new object of class '<em>Internal Alt</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>External Link</em>'.
+   * @return a new object of class '<em>Internal Alt</em>'.
    * @generated
    */
-  ExternalLink createExternalLink();
+  InternalAlt createInternalAlt();
 
   /**
-   * Returns a new object of class '<em>External Link Alternative</em>'.
+   * Returns a new object of class '<em>External</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>External Link Alternative</em>'.
+   * @return a new object of class '<em>External</em>'.
    * @generated
    */
-  ExternalLinkAlternative createExternalLinkAlternative();
+  External createExternal();
 
   /**
-   * Returns a new object of class '<em>Internal Link</em>'.
+   * Returns a new object of class '<em>External Alt</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Internal Link</em>'.
+   * @return a new object of class '<em>External Alt</em>'.
    * @generated
    */
-  InternalLink createInternalLink();
-
-  /**
-   * Returns a new object of class '<em>Internal Link Alternative</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Internal Link Alternative</em>'.
-   * @generated
-   */
-  InternalLinkAlternative createInternalLinkAlternative();
+  ExternalAlt createExternalAlt();
 
   /**
    * Returns the package supported by this factory.

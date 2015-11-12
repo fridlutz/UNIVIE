@@ -64,24 +64,31 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
   {
     switch (eClass.getClassifierID())
     {
-      case WikiMLPackage.WIKIPAGE: return createwikipage();
-      case WikiMLPackage.ABSTRACT_SECTION: return createAbstractSection();
-      case WikiMLPackage.SUBSECTION_LEVEL1: return createSubsectionLevel1();
-      case WikiMLPackage.SUBSECTION_LEVEL2: return createSubsectionLevel2();
-      case WikiMLPackage.SUBSECTION_LEVEL3: return createSubsectionLevel3();
-      case WikiMLPackage.SUBSECTION_LEVEL4: return createSubsectionLevel4();
-      case WikiMLPackage.INLINE_CONTENT: return createInlineContent();
-      case WikiMLPackage.FORMATTED_CONTENT: return createFormattedContent();
-      case WikiMLPackage.ITALIC_CONTENT: return createItalicContent();
-      case WikiMLPackage.BOLD_CONTENT: return createBoldContent();
-      case WikiMLPackage.BOLD_ITALIC_CONTENT: return createBoldItalicContent();
+      case WikiMLPackage.WIKI: return createwiki();
+      case WikiMLPackage.PARAGRAPH_TYPES: return createParagraphTypes();
+      case WikiMLPackage.BLOCK_QUOTE: return createBlockQuote();
+      case WikiMLPackage.TEMPLATE: return createTemplate();
+      case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL2: return createUnOrderListItemLevel2();
+      case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1: return createUnOrderListItemLevel1();
+      case WikiMLPackage.ORDER_LIST_ITEM_LEVEL1: return createOrderListItemLevel1();
+      case WikiMLPackage.FILE: return createFile();
+      case WikiMLPackage.CATEGORY: return createCategory();
+      case WikiMLPackage.HEADING1: return createHeading1();
+      case WikiMLPackage.HEADING2: return createHeading2();
+      case WikiMLPackage.HEADING3: return createHeading3();
+      case WikiMLPackage.HEADING4: return createHeading4();
+      case WikiMLPackage.HEADING5: return createHeading5();
+      case WikiMLPackage.ABSTRACT_FORMATTED_INLINE_CONTENT: return createAbstractFormattedInlineContent();
+      case WikiMLPackage.BOLD: return createBold();
+      case WikiMLPackage.ITALIC: return createItalic();
+      case WikiMLPackage.ITALIC_BOLD: return createItalicBold();
+      case WikiMLPackage.ABSTRACT_UNFORMATTED_INLINE_CONTENT: return createAbstractUnformattedInlineContent();
       case WikiMLPackage.TEXT: return createText();
-      case WikiMLPackage.UN_FORMATTED_TEXT: return createUnFormattedText();
-      case WikiMLPackage.HYPERLINK: return createHyperlink();
-      case WikiMLPackage.EXTERNAL_LINK: return createExternalLink();
-      case WikiMLPackage.EXTERNAL_LINK_ALTERNATIVE: return createExternalLinkAlternative();
-      case WikiMLPackage.INTERNAL_LINK: return createInternalLink();
-      case WikiMLPackage.INTERNAL_LINK_ALTERNATIVE: return createInternalLinkAlternative();
+      case WikiMLPackage.HYPER_LINK: return createHyperLink();
+      case WikiMLPackage.INTERNAL: return createInternal();
+      case WikiMLPackage.INTERNAL_ALT: return createInternalAlt();
+      case WikiMLPackage.EXTERNAL: return createExternal();
+      case WikiMLPackage.EXTERNAL_ALT: return createExternalAlt();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -92,10 +99,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public wikipage createwikipage()
+  public wiki createwiki()
   {
-    wikipageImpl wikipage = new wikipageImpl();
-    return wikipage;
+    wikiImpl wiki = new wikiImpl();
+    return wiki;
   }
 
   /**
@@ -103,10 +110,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public AbstractSection createAbstractSection()
+  public ParagraphTypes createParagraphTypes()
   {
-    AbstractSectionImpl abstractSection = new AbstractSectionImpl();
-    return abstractSection;
+    ParagraphTypesImpl paragraphTypes = new ParagraphTypesImpl();
+    return paragraphTypes;
   }
 
   /**
@@ -114,10 +121,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubsectionLevel1 createSubsectionLevel1()
+  public BlockQuote createBlockQuote()
   {
-    SubsectionLevel1Impl subsectionLevel1 = new SubsectionLevel1Impl();
-    return subsectionLevel1;
+    BlockQuoteImpl blockQuote = new BlockQuoteImpl();
+    return blockQuote;
   }
 
   /**
@@ -125,10 +132,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubsectionLevel2 createSubsectionLevel2()
+  public Template createTemplate()
   {
-    SubsectionLevel2Impl subsectionLevel2 = new SubsectionLevel2Impl();
-    return subsectionLevel2;
+    TemplateImpl template = new TemplateImpl();
+    return template;
   }
 
   /**
@@ -136,10 +143,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubsectionLevel3 createSubsectionLevel3()
+  public UnOrderListItemLevel2 createUnOrderListItemLevel2()
   {
-    SubsectionLevel3Impl subsectionLevel3 = new SubsectionLevel3Impl();
-    return subsectionLevel3;
+    UnOrderListItemLevel2Impl unOrderListItemLevel2 = new UnOrderListItemLevel2Impl();
+    return unOrderListItemLevel2;
   }
 
   /**
@@ -147,10 +154,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public SubsectionLevel4 createSubsectionLevel4()
+  public UnOrderListItemLevel1 createUnOrderListItemLevel1()
   {
-    SubsectionLevel4Impl subsectionLevel4 = new SubsectionLevel4Impl();
-    return subsectionLevel4;
+    UnOrderListItemLevel1Impl unOrderListItemLevel1 = new UnOrderListItemLevel1Impl();
+    return unOrderListItemLevel1;
   }
 
   /**
@@ -158,10 +165,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public InlineContent createInlineContent()
+  public OrderListItemLevel1 createOrderListItemLevel1()
   {
-    InlineContentImpl inlineContent = new InlineContentImpl();
-    return inlineContent;
+    OrderListItemLevel1Impl orderListItemLevel1 = new OrderListItemLevel1Impl();
+    return orderListItemLevel1;
   }
 
   /**
@@ -169,10 +176,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public FormattedContent createFormattedContent()
+  public File createFile()
   {
-    FormattedContentImpl formattedContent = new FormattedContentImpl();
-    return formattedContent;
+    FileImpl file = new FileImpl();
+    return file;
   }
 
   /**
@@ -180,10 +187,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ItalicContent createItalicContent()
+  public Category createCategory()
   {
-    ItalicContentImpl italicContent = new ItalicContentImpl();
-    return italicContent;
+    CategoryImpl category = new CategoryImpl();
+    return category;
   }
 
   /**
@@ -191,10 +198,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public BoldContent createBoldContent()
+  public Heading1 createHeading1()
   {
-    BoldContentImpl boldContent = new BoldContentImpl();
-    return boldContent;
+    Heading1Impl heading1 = new Heading1Impl();
+    return heading1;
   }
 
   /**
@@ -202,10 +209,98 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public BoldItalicContent createBoldItalicContent()
+  public Heading2 createHeading2()
   {
-    BoldItalicContentImpl boldItalicContent = new BoldItalicContentImpl();
-    return boldItalicContent;
+    Heading2Impl heading2 = new Heading2Impl();
+    return heading2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Heading3 createHeading3()
+  {
+    Heading3Impl heading3 = new Heading3Impl();
+    return heading3;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Heading4 createHeading4()
+  {
+    Heading4Impl heading4 = new Heading4Impl();
+    return heading4;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Heading5 createHeading5()
+  {
+    Heading5Impl heading5 = new Heading5Impl();
+    return heading5;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AbstractFormattedInlineContent createAbstractFormattedInlineContent()
+  {
+    AbstractFormattedInlineContentImpl abstractFormattedInlineContent = new AbstractFormattedInlineContentImpl();
+    return abstractFormattedInlineContent;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Bold createBold()
+  {
+    BoldImpl bold = new BoldImpl();
+    return bold;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Italic createItalic()
+  {
+    ItalicImpl italic = new ItalicImpl();
+    return italic;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ItalicBold createItalicBold()
+  {
+    ItalicBoldImpl italicBold = new ItalicBoldImpl();
+    return italicBold;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AbstractUnformattedInlineContent createAbstractUnformattedInlineContent()
+  {
+    AbstractUnformattedInlineContentImpl abstractUnformattedInlineContent = new AbstractUnformattedInlineContentImpl();
+    return abstractUnformattedInlineContent;
   }
 
   /**
@@ -224,10 +319,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnFormattedText createUnFormattedText()
+  public HyperLink createHyperLink()
   {
-    UnFormattedTextImpl unFormattedText = new UnFormattedTextImpl();
-    return unFormattedText;
+    HyperLinkImpl hyperLink = new HyperLinkImpl();
+    return hyperLink;
   }
 
   /**
@@ -235,10 +330,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public Hyperlink createHyperlink()
+  public Internal createInternal()
   {
-    HyperlinkImpl hyperlink = new HyperlinkImpl();
-    return hyperlink;
+    InternalImpl internal = new InternalImpl();
+    return internal;
   }
 
   /**
@@ -246,10 +341,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExternalLink createExternalLink()
+  public InternalAlt createInternalAlt()
   {
-    ExternalLinkImpl externalLink = new ExternalLinkImpl();
-    return externalLink;
+    InternalAltImpl internalAlt = new InternalAltImpl();
+    return internalAlt;
   }
 
   /**
@@ -257,10 +352,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public ExternalLinkAlternative createExternalLinkAlternative()
+  public External createExternal()
   {
-    ExternalLinkAlternativeImpl externalLinkAlternative = new ExternalLinkAlternativeImpl();
-    return externalLinkAlternative;
+    ExternalImpl external = new ExternalImpl();
+    return external;
   }
 
   /**
@@ -268,21 +363,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public InternalLink createInternalLink()
+  public ExternalAlt createExternalAlt()
   {
-    InternalLinkImpl internalLink = new InternalLinkImpl();
-    return internalLink;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InternalLinkAlternative createInternalLinkAlternative()
-  {
-    InternalLinkAlternativeImpl internalLinkAlternative = new InternalLinkAlternativeImpl();
-    return internalLinkAlternative;
+    ExternalAltImpl externalAlt = new ExternalAltImpl();
+    return externalAlt;
   }
 
   /**
