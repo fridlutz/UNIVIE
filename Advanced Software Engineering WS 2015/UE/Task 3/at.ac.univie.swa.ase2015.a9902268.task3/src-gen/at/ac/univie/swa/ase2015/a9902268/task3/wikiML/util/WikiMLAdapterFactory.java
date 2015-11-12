@@ -105,6 +105,66 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
         return createSubsectionLevel4Adapter();
       }
       @Override
+      public Adapter caseInlineContent(InlineContent object)
+      {
+        return createInlineContentAdapter();
+      }
+      @Override
+      public Adapter caseFormattedContent(FormattedContent object)
+      {
+        return createFormattedContentAdapter();
+      }
+      @Override
+      public Adapter caseItalicContent(ItalicContent object)
+      {
+        return createItalicContentAdapter();
+      }
+      @Override
+      public Adapter caseBoldContent(BoldContent object)
+      {
+        return createBoldContentAdapter();
+      }
+      @Override
+      public Adapter caseBoldItalicContent(BoldItalicContent object)
+      {
+        return createBoldItalicContentAdapter();
+      }
+      @Override
+      public Adapter caseText(Text object)
+      {
+        return createTextAdapter();
+      }
+      @Override
+      public Adapter caseUnFormattedText(UnFormattedText object)
+      {
+        return createUnFormattedTextAdapter();
+      }
+      @Override
+      public Adapter caseHyperlink(Hyperlink object)
+      {
+        return createHyperlinkAdapter();
+      }
+      @Override
+      public Adapter caseExternalLink(ExternalLink object)
+      {
+        return createExternalLinkAdapter();
+      }
+      @Override
+      public Adapter caseExternalLinkAlternative(ExternalLinkAlternative object)
+      {
+        return createExternalLinkAlternativeAdapter();
+      }
+      @Override
+      public Adapter caseInternalLink(InternalLink object)
+      {
+        return createInternalLinkAdapter();
+      }
+      @Override
+      public Adapter caseInternalLinkAlternative(InternalLinkAlternative object)
+      {
+        return createInternalLinkAlternativeAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -212,6 +272,186 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSubsectionLevel4Adapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InlineContent <em>Inline Content</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InlineContent
+   * @generated
+   */
+  public Adapter createInlineContentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.FormattedContent <em>Formatted Content</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.FormattedContent
+   * @generated
+   */
+  public Adapter createFormattedContentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ItalicContent <em>Italic Content</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ItalicContent
+   * @generated
+   */
+  public Adapter createItalicContentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BoldContent <em>Bold Content</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BoldContent
+   * @generated
+   */
+  public Adapter createBoldContentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BoldItalicContent <em>Bold Italic Content</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BoldItalicContent
+   * @generated
+   */
+  public Adapter createBoldItalicContentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text
+   * @generated
+   */
+  public Adapter createTextAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnFormattedText <em>Un Formatted Text</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnFormattedText
+   * @generated
+   */
+  public Adapter createUnFormattedTextAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Hyperlink <em>Hyperlink</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Hyperlink
+   * @generated
+   */
+  public Adapter createHyperlinkAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalLink <em>External Link</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalLink
+   * @generated
+   */
+  public Adapter createExternalLinkAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalLinkAlternative <em>External Link Alternative</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalLinkAlternative
+   * @generated
+   */
+  public Adapter createExternalLinkAlternativeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalLink <em>Internal Link</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalLink
+   * @generated
+   */
+  public Adapter createInternalLinkAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalLinkAlternative <em>Internal Link Alternative</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalLinkAlternative
+   * @generated
+   */
+  public Adapter createInternalLinkAlternativeAdapter()
   {
     return null;
   }

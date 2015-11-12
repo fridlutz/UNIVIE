@@ -4,22 +4,30 @@
 package at.ac.univie.swa.ase2015.a9902268.task3.serializer;
 
 import at.ac.univie.swa.ase2015.a9902268.task3.services.WikiMLGrammarAccess;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalLink;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalLinkAlternative;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalLink;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalLinkAlternative;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.SubsectionLevel1;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.SubsectionLevel2;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.SubsectionLevel3;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.SubsectionLevel4;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnFormattedText;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.wikipage;
 import com.google.inject.Inject;
 import com.google.inject.Provider;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
+import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
 import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
+import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
 import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
 public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -30,6 +38,18 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	@Override
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == WikiMLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case WikiMLPackage.EXTERNAL_LINK:
+				sequence_ExternalLink(context, (ExternalLink) semanticObject); 
+				return; 
+			case WikiMLPackage.EXTERNAL_LINK_ALTERNATIVE:
+				sequence_ExternalLinkAlternative(context, (ExternalLinkAlternative) semanticObject); 
+				return; 
+			case WikiMLPackage.INTERNAL_LINK:
+				sequence_InternalLink(context, (InternalLink) semanticObject); 
+				return; 
+			case WikiMLPackage.INTERNAL_LINK_ALTERNATIVE:
+				sequence_InternalLinkAlternative(context, (InternalLinkAlternative) semanticObject); 
+				return; 
 			case WikiMLPackage.SUBSECTION_LEVEL1:
 				sequence_SubsectionLevel1(context, (SubsectionLevel1) semanticObject); 
 				return; 
@@ -42,6 +62,9 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case WikiMLPackage.SUBSECTION_LEVEL4:
 				sequence_SubsectionLevel4(context, (SubsectionLevel4) semanticObject); 
 				return; 
+			case WikiMLPackage.UN_FORMATTED_TEXT:
+				sequence_UnFormattedText(context, (UnFormattedText) semanticObject); 
+				return; 
 			case WikiMLPackage.WIKIPAGE:
 				sequence_wikipage(context, (wikipage) semanticObject); 
 				return; 
@@ -51,7 +74,77 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=InlineContent content=InlineContent?)
+	 *     (url=UnFormattedText alternativeText=UnFormattedText)
+	 */
+	protected void sequence_ExternalLinkAlternative(EObject context, ExternalLinkAlternative semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.EXTERNAL_LINK_ALTERNATIVE__URL) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.EXTERNAL_LINK_ALTERNATIVE__URL));
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.EXTERNAL_LINK_ALTERNATIVE__ALTERNATIVE_TEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.EXTERNAL_LINK_ALTERNATIVE__ALTERNATIVE_TEXT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getExternalLinkAlternativeAccess().getUrlUnFormattedTextParserRuleCall_1_0(), semanticObject.getUrl());
+		feeder.accept(grammarAccess.getExternalLinkAlternativeAccess().getAlternativeTextUnFormattedTextParserRuleCall_3_0(), semanticObject.getAlternativeText());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     pageName=UnFormattedText
+	 */
+	protected void sequence_ExternalLink(EObject context, ExternalLink semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.EXTERNAL_LINK__PAGE_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.EXTERNAL_LINK__PAGE_NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getExternalLinkAccess().getPageNameUnFormattedTextParserRuleCall_1_0(), semanticObject.getPageName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (pageName=UnFormattedText alternativeText=UnFormattedText)
+	 */
+	protected void sequence_InternalLinkAlternative(EObject context, InternalLinkAlternative semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.INTERNAL_LINK_ALTERNATIVE__PAGE_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.INTERNAL_LINK_ALTERNATIVE__PAGE_NAME));
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.INTERNAL_LINK_ALTERNATIVE__ALTERNATIVE_TEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.INTERNAL_LINK_ALTERNATIVE__ALTERNATIVE_TEXT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getInternalLinkAlternativeAccess().getPageNameUnFormattedTextParserRuleCall_1_0(), semanticObject.getPageName());
+		feeder.accept(grammarAccess.getInternalLinkAlternativeAccess().getAlternativeTextUnFormattedTextParserRuleCall_3_0(), semanticObject.getAlternativeText());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     pageName=UnFormattedText
+	 */
+	protected void sequence_InternalLink(EObject context, InternalLink semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.INTERNAL_LINK__PAGE_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.INTERNAL_LINK__PAGE_NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getInternalLinkAccess().getPageNameUnFormattedTextParserRuleCall_1_0(), semanticObject.getPageName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=Text content+=InlineContent*)
 	 */
 	protected void sequence_SubsectionLevel1(EObject context, SubsectionLevel1 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -60,7 +153,7 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=InlineContent content=InlineContent?)
+	 *     (name=Text content+=InlineContent*)
 	 */
 	protected void sequence_SubsectionLevel2(EObject context, SubsectionLevel2 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -69,7 +162,7 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=InlineContent content=InlineContent?)
+	 *     (name=Text content+=InlineContent*)
 	 */
 	protected void sequence_SubsectionLevel3(EObject context, SubsectionLevel3 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -78,7 +171,7 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=InlineContent content=InlineContent?)
+	 *     (name=Text content+=InlineContent*)
 	 */
 	protected void sequence_SubsectionLevel4(EObject context, SubsectionLevel4 semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -87,7 +180,23 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=InlineContent content+=InlineContent? sections+=AbstractSection AbstractSections+=AbstractSection*)
+	 *     words=WIKITEXT
+	 */
+	protected void sequence_UnFormattedText(EObject context, UnFormattedText semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.UN_FORMATTED_TEXT__WORDS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.UN_FORMATTED_TEXT__WORDS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getUnFormattedTextAccess().getWordsWIKITEXTTerminalRuleCall_0_0(), semanticObject.getWords());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (title=WIKITEXT content+=InlineContent* sections+=AbstractSection sections+=AbstractSection*)
 	 */
 	protected void sequence_wikipage(EObject context, wikipage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

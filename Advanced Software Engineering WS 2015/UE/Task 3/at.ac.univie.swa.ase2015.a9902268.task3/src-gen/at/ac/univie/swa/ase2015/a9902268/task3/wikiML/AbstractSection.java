@@ -2,6 +2,8 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,55 +26,45 @@ import org.eclipse.emf.ecore.EObject;
 public interface AbstractSection extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Name</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(Text)
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getAbstractSection_Name()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getName();
+  Text getName();
 
   /**
-   * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractSection#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractSection#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * @param value the new value of the '<em>Name</em>' containment reference.
    * @see #getName()
    * @generated
    */
-  void setName(String value);
+  void setName(Text value);
 
   /**
-   * Returns the value of the '<em><b>Content</b></em>' attribute.
+   * Returns the value of the '<em><b>Content</b></em>' containment reference list.
+   * The list contents are of type {@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InlineContent}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Content</em>' attribute isn't clear,
+   * If the meaning of the '<em>Content</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Content</em>' attribute.
-   * @see #setContent(String)
+   * @return the value of the '<em>Content</em>' containment reference list.
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getAbstractSection_Content()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getContent();
-
-  /**
-   * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractSection#getContent <em>Content</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Content</em>' attribute.
-   * @see #getContent()
-   * @generated
-   */
-  void setContent(String value);
+  EList<InlineContent> getContent();
 
 } // AbstractSection

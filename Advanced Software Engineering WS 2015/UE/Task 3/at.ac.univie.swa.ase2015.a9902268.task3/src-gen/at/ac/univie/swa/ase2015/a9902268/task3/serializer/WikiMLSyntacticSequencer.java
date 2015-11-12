@@ -11,6 +11,9 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
+import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -18,17 +21,36 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class WikiMLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected WikiMLGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_BoldContent_BoldItalicContent_ItalicContent_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0;
+	protected AbstractElementAlias match_BoldContent_BoldItalicContent_ItalicContent___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0__q;
+	protected AbstractElementAlias match_UnFormattedText_WIKITEXTTerminalRuleCall_1_a;
+	protected AbstractElementAlias match_wikipage_WIKITEXTTerminalRuleCall_2_a;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (WikiMLGrammarAccess) access;
+		match_BoldContent_BoldItalicContent_ItalicContent_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getBoldContentAccess().getApostropheApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getBoldItalicContentAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getItalicContentAccess().getApostropheApostropheKeyword_0()));
+		match_BoldContent_BoldItalicContent_ItalicContent___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getBoldContentAccess().getApostropheApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getBoldItalicContentAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getItalicContentAccess().getApostropheApostropheKeyword_0()));
+		match_UnFormattedText_WIKITEXTTerminalRuleCall_1_a = new TokenAlias(true, true, grammarAccess.getUnFormattedTextAccess().getWIKITEXTTerminalRuleCall_1());
+		match_wikipage_WIKITEXTTerminalRuleCall_2_a = new TokenAlias(true, true, grammarAccess.getWikipageAccess().getWIKITEXTTerminalRuleCall_2());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if(ruleCall.getRule() == grammarAccess.getWIKITEXTRule())
+			return getWIKITEXTToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * terminal WIKITEXT:
+	 * 	'^'? (!('=' | '\'' | '[' | ']' | '\n'))*;
+	 */
+	protected String getWIKITEXTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -36,8 +58,84 @@ public class WikiMLSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			acceptNodes(getLastNavigableState(), syntaxNodes);
+			if(match_BoldContent_BoldItalicContent_ItalicContent_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0.equals(syntax))
+				emit_BoldContent_BoldItalicContent_ItalicContent_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_BoldContent_BoldItalicContent_ItalicContent___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0__q.equals(syntax))
+				emit_BoldContent_BoldItalicContent_ItalicContent___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_UnFormattedText_WIKITEXTTerminalRuleCall_1_a.equals(syntax))
+				emit_UnFormattedText_WIKITEXTTerminalRuleCall_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_wikipage_WIKITEXTTerminalRuleCall_2_a.equals(syntax))
+				emit_wikipage_WIKITEXTTerminalRuleCall_2_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     '''' | ''''' | '''''''
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) '[' pageName=UnFormattedText
+	 *     (rule start) (ambiguity) '[' url=UnFormattedText
+	 *     (rule start) (ambiguity) '[[' pageName=UnFormattedText
+	 *     (rule start) (ambiguity) words=WIKITEXT
+	 */
+	protected void emit_BoldContent_BoldItalicContent_ItalicContent_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('''' | ''''' | ''''''')?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) '[' pageName=UnFormattedText
+	 *     (rule start) (ambiguity) '[' url=UnFormattedText
+	 *     (rule start) (ambiguity) '[[' pageName=UnFormattedText
+	 *     (rule start) (ambiguity) words=WIKITEXT
+	 */
+	protected void emit_BoldContent_BoldItalicContent_ItalicContent___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     WIKITEXT*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     words=WIKITEXT (ambiguity) '''' (rule end)
+	 *     words=WIKITEXT (ambiguity) ''''' (rule end)
+	 *     words=WIKITEXT (ambiguity) ''''''' (rule end)
+	 *     words=WIKITEXT (ambiguity) (rule end)
+	 */
+	protected void emit_UnFormattedText_WIKITEXTTerminalRuleCall_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     WIKITEXT*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (
+	 *         title=WIKITEXT 
+	 *         (ambiguity) 
+	 *         '=' 
+	 *         '
+	 *         ' 
+	 *         content+=InlineContent
+	 *     )
+	 *     (
+	 *         title=WIKITEXT 
+	 *         (ambiguity) 
+	 *         '=' 
+	 *         '
+	 *         ' 
+	 *         sections+=AbstractSection
+	 *     )
+	 */
+	protected void emit_wikipage_WIKITEXTTerminalRuleCall_2_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 }

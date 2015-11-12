@@ -3,6 +3,7 @@
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractSection;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InlineContent;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.wikipage;
 
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -31,10 +31,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikipageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikipageImpl#getTitle <em>Title</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikipageImpl#getContent <em>Content</em>}</li>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikipageImpl#getSections <em>Sections</em>}</li>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikipageImpl#getAbstractSections <em>Abstract Sections</em>}</li>
  * </ul>
  *
  * @generated
@@ -42,34 +41,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipage
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getTitle() <em>Title</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getTitle()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String TITLE_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getTitle() <em>Title</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getTitle()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String title = TITLE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getContent() <em>Content</em>}' attribute list.
+   * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getContent()
    * @generated
    * @ordered
    */
-  protected EList<String> content;
+  protected EList<InlineContent> content;
 
   /**
    * The cached value of the '{@link #getSections() <em>Sections</em>}' containment reference list.
@@ -80,16 +79,6 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
    * @ordered
    */
   protected EList<AbstractSection> sections;
-
-  /**
-   * The cached value of the '{@link #getAbstractSections() <em>Abstract Sections</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAbstractSections()
-   * @generated
-   * @ordered
-   */
-  protected EList<AbstractSection> abstractSections;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,9 +106,9 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getTitle()
   {
-    return name;
+    return title;
   }
 
   /**
@@ -127,12 +116,12 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setTitle(String newTitle)
   {
-    String oldName = name;
-    name = newName;
+    String oldTitle = title;
+    title = newTitle;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.WIKIPAGE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.WIKIPAGE__TITLE, oldTitle, title));
   }
 
   /**
@@ -140,11 +129,11 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getContent()
+  public EList<InlineContent> getContent()
   {
     if (content == null)
     {
-      content = new EDataTypeEList<String>(String.class, this, WikiMLPackage.WIKIPAGE__CONTENT);
+      content = new EObjectContainmentEList<InlineContent>(InlineContent.class, this, WikiMLPackage.WIKIPAGE__CONTENT);
     }
     return content;
   }
@@ -168,29 +157,15 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AbstractSection> getAbstractSections()
-  {
-    if (abstractSections == null)
-    {
-      abstractSections = new EObjectContainmentEList<AbstractSection>(AbstractSection.class, this, WikiMLPackage.WIKIPAGE__ABSTRACT_SECTIONS);
-    }
-    return abstractSections;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
+      case WikiMLPackage.WIKIPAGE__CONTENT:
+        return ((InternalEList<?>)getContent()).basicRemove(otherEnd, msgs);
       case WikiMLPackage.WIKIPAGE__SECTIONS:
         return ((InternalEList<?>)getSections()).basicRemove(otherEnd, msgs);
-      case WikiMLPackage.WIKIPAGE__ABSTRACT_SECTIONS:
-        return ((InternalEList<?>)getAbstractSections()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -205,14 +180,12 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
   {
     switch (featureID)
     {
-      case WikiMLPackage.WIKIPAGE__NAME:
-        return getName();
+      case WikiMLPackage.WIKIPAGE__TITLE:
+        return getTitle();
       case WikiMLPackage.WIKIPAGE__CONTENT:
         return getContent();
       case WikiMLPackage.WIKIPAGE__SECTIONS:
         return getSections();
-      case WikiMLPackage.WIKIPAGE__ABSTRACT_SECTIONS:
-        return getAbstractSections();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -228,20 +201,16 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
   {
     switch (featureID)
     {
-      case WikiMLPackage.WIKIPAGE__NAME:
-        setName((String)newValue);
+      case WikiMLPackage.WIKIPAGE__TITLE:
+        setTitle((String)newValue);
         return;
       case WikiMLPackage.WIKIPAGE__CONTENT:
         getContent().clear();
-        getContent().addAll((Collection<? extends String>)newValue);
+        getContent().addAll((Collection<? extends InlineContent>)newValue);
         return;
       case WikiMLPackage.WIKIPAGE__SECTIONS:
         getSections().clear();
         getSections().addAll((Collection<? extends AbstractSection>)newValue);
-        return;
-      case WikiMLPackage.WIKIPAGE__ABSTRACT_SECTIONS:
-        getAbstractSections().clear();
-        getAbstractSections().addAll((Collection<? extends AbstractSection>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -257,17 +226,14 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
   {
     switch (featureID)
     {
-      case WikiMLPackage.WIKIPAGE__NAME:
-        setName(NAME_EDEFAULT);
+      case WikiMLPackage.WIKIPAGE__TITLE:
+        setTitle(TITLE_EDEFAULT);
         return;
       case WikiMLPackage.WIKIPAGE__CONTENT:
         getContent().clear();
         return;
       case WikiMLPackage.WIKIPAGE__SECTIONS:
         getSections().clear();
-        return;
-      case WikiMLPackage.WIKIPAGE__ABSTRACT_SECTIONS:
-        getAbstractSections().clear();
         return;
     }
     super.eUnset(featureID);
@@ -283,14 +249,12 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
   {
     switch (featureID)
     {
-      case WikiMLPackage.WIKIPAGE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case WikiMLPackage.WIKIPAGE__TITLE:
+        return TITLE_EDEFAULT == null ? title != null : !TITLE_EDEFAULT.equals(title);
       case WikiMLPackage.WIKIPAGE__CONTENT:
         return content != null && !content.isEmpty();
       case WikiMLPackage.WIKIPAGE__SECTIONS:
         return sections != null && !sections.isEmpty();
-      case WikiMLPackage.WIKIPAGE__ABSTRACT_SECTIONS:
-        return abstractSections != null && !abstractSections.isEmpty();
     }
     return super.eIsSet(featureID);
   }
@@ -306,10 +270,8 @@ public class wikipageImpl extends MinimalEObjectImpl.Container implements wikipa
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", content: ");
-    result.append(content);
+    result.append(" (title: ");
+    result.append(title);
     result.append(')');
     return result.toString();
   }
