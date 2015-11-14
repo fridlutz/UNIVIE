@@ -19,7 +19,7 @@ package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
  * @model
  * @generated
  */
-public interface Text extends Heading1, AbstractUnformattedInlineContent
+public interface Text extends AbstractUnformattedInlineContent
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

@@ -23,13 +23,13 @@ public interface WikiMLFactory extends EFactory
   WikiMLFactory eINSTANCE = at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLFactoryImpl.init();
 
   /**
-   * Returns a new object of class '<em>wiki</em>'.
+   * Returns a new object of class '<em>Wiki Page</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>wiki</em>'.
+   * @return a new object of class '<em>Wiki Page</em>'.
    * @generated
    */
-  wiki createwiki();
+  WikiPage createWikiPage();
 
   /**
    * Returns a new object of class '<em>Paragraph Types</em>'.
@@ -86,13 +86,13 @@ public interface WikiMLFactory extends EFactory
   OrderListItemLevel1 createOrderListItemLevel1();
 
   /**
-   * Returns a new object of class '<em>File</em>'.
+   * Returns a new object of class '<em>Image</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>File</em>'.
+   * @return a new object of class '<em>Image</em>'.
    * @generated
    */
-  File createFile();
+  Image createImage();
 
   /**
    * Returns a new object of class '<em>Category</em>'.
@@ -246,6 +246,24 @@ public interface WikiMLFactory extends EFactory
    * @generated
    */
   ExternalAlt createExternalAlt();
+
+  /**
+   * Returns a new object of class '<em>Any Text Sequence</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Any Text Sequence</em>'.
+   * @generated
+   */
+  AnyTextSequence createAnyTextSequence();
+
+  /**
+   * Returns a new object of class '<em>Any Text</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Any Text</em>'.
+   * @generated
+   */
+  AnyText createAnyText();
 
   /**
    * Returns the package supported by this factory.

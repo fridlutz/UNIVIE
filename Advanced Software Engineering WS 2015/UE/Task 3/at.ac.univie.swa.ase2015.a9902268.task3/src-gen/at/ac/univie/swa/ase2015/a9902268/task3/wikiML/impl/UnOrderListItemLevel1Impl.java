@@ -2,24 +2,18 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,17 +39,17 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
    * @generated
    * @ordered
    */
-  protected AbstractFormattedInlineContent name;
+  protected AnyText name;
 
   /**
-   * The cached value of the '{@link #getList() <em>List</em>}' containment reference list.
+   * The cached value of the '{@link #getList() <em>List</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getList()
    * @generated
    * @ordered
    */
-  protected EList<AbstractFormattedInlineContent> list;
+  protected AnyTextSequence list;
 
   /**
    * <!-- begin-user-doc -->
@@ -83,7 +77,7 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
    * <!-- end-user-doc -->
    * @generated
    */
-  public AbstractFormattedInlineContent getName()
+  public AnyText getName()
   {
     return name;
   }
@@ -93,9 +87,9 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(AbstractFormattedInlineContent newName, NotificationChain msgs)
+  public NotificationChain basicSetName(AnyText newName, NotificationChain msgs)
   {
-    AbstractFormattedInlineContent oldName = name;
+    AnyText oldName = name;
     name = newName;
     if (eNotificationRequired())
     {
@@ -110,7 +104,7 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(AbstractFormattedInlineContent newName)
+  public void setName(AnyText newName)
   {
     if (newName != name)
     {
@@ -131,13 +125,47 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AbstractFormattedInlineContent> getList()
+  public AnyTextSequence getList()
   {
-    if (list == null)
-    {
-      list = new EObjectContainmentEList<AbstractFormattedInlineContent>(AbstractFormattedInlineContent.class, this, WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST);
-    }
     return list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetList(AnyTextSequence newList, NotificationChain msgs)
+  {
+    AnyTextSequence oldList = list;
+    list = newList;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST, oldList, newList);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setList(AnyTextSequence newList)
+  {
+    if (newList != list)
+    {
+      NotificationChain msgs = null;
+      if (list != null)
+        msgs = ((InternalEObject)list).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST, null, msgs);
+      if (newList != null)
+        msgs = ((InternalEObject)newList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST, null, msgs);
+      msgs = basicSetList(newList, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST, newList, newList));
   }
 
   /**
@@ -153,7 +181,7 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__NAME:
         return basicSetName(null, msgs);
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST:
-        return ((InternalEList<?>)getList()).basicRemove(otherEnd, msgs);
+        return basicSetList(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -181,18 +209,16 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__NAME:
-        setName((AbstractFormattedInlineContent)newValue);
+        setName((AnyText)newValue);
         return;
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST:
-        getList().clear();
-        getList().addAll((Collection<? extends AbstractFormattedInlineContent>)newValue);
+        setList((AnyTextSequence)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -209,10 +235,10 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
     switch (featureID)
     {
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__NAME:
-        setName((AbstractFormattedInlineContent)null);
+        setName((AnyText)null);
         return;
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST:
-        getList().clear();
+        setList((AnyTextSequence)null);
         return;
     }
     super.eUnset(featureID);
@@ -231,7 +257,7 @@ public class UnOrderListItemLevel1Impl extends ParagraphTypesImpl implements UnO
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__NAME:
         return name != null;
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1__LIST:
-        return list != null && !list.isEmpty();
+        return list != null;
     }
     return super.eIsSet(featureID);
   }

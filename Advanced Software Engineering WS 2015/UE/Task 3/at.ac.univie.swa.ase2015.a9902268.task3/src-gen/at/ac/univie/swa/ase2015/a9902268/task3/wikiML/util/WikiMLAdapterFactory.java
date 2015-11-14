@@ -75,9 +75,9 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
     new WikiMLSwitch<Adapter>()
     {
       @Override
-      public Adapter casewiki(wiki object)
+      public Adapter caseWikiPage(WikiPage object)
       {
-        return createwikiAdapter();
+        return createWikiPageAdapter();
       }
       @Override
       public Adapter caseParagraphTypes(ParagraphTypes object)
@@ -110,9 +110,9 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
         return createOrderListItemLevel1Adapter();
       }
       @Override
-      public Adapter caseFile(File object)
+      public Adapter caseImage(Image object)
       {
-        return createFileAdapter();
+        return createImageAdapter();
       }
       @Override
       public Adapter caseCategory(Category object)
@@ -200,6 +200,16 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
         return createExternalAltAdapter();
       }
       @Override
+      public Adapter caseAnyTextSequence(AnyTextSequence object)
+      {
+        return createAnyTextSequenceAdapter();
+      }
+      @Override
+      public Adapter caseAnyText(AnyText object)
+      {
+        return createAnyTextAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -222,16 +232,16 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
 
 
   /**
-   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.wiki <em>wiki</em>}'.
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage <em>Wiki Page</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.wiki
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage
    * @generated
    */
-  public Adapter createwikiAdapter()
+  public Adapter createWikiPageAdapter()
   {
     return null;
   }
@@ -327,16 +337,16 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File <em>File</em>}'.
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image <em>Image</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image
    * @generated
    */
-  public Adapter createFileAdapter()
+  public Adapter createImageAdapter()
   {
     return null;
   }
@@ -592,6 +602,36 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExternalAltAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence <em>Any Text Sequence</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence
+   * @generated
+   */
+  public Adapter createAnyTextSequenceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText <em>Any Text</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText
+   * @generated
+   */
+  public Adapter createAnyTextAdapter()
   {
     return null;
   }

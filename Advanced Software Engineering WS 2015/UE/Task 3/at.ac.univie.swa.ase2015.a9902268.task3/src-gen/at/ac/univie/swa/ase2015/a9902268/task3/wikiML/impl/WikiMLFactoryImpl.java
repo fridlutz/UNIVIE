@@ -5,6 +5,7 @@ package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -64,14 +65,14 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
   {
     switch (eClass.getClassifierID())
     {
-      case WikiMLPackage.WIKI: return createwiki();
+      case WikiMLPackage.WIKI_PAGE: return createWikiPage();
       case WikiMLPackage.PARAGRAPH_TYPES: return createParagraphTypes();
       case WikiMLPackage.BLOCK_QUOTE: return createBlockQuote();
       case WikiMLPackage.TEMPLATE: return createTemplate();
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL2: return createUnOrderListItemLevel2();
       case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1: return createUnOrderListItemLevel1();
       case WikiMLPackage.ORDER_LIST_ITEM_LEVEL1: return createOrderListItemLevel1();
-      case WikiMLPackage.FILE: return createFile();
+      case WikiMLPackage.IMAGE: return createImage();
       case WikiMLPackage.CATEGORY: return createCategory();
       case WikiMLPackage.HEADING1: return createHeading1();
       case WikiMLPackage.HEADING2: return createHeading2();
@@ -89,6 +90,8 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
       case WikiMLPackage.INTERNAL_ALT: return createInternalAlt();
       case WikiMLPackage.EXTERNAL: return createExternal();
       case WikiMLPackage.EXTERNAL_ALT: return createExternalAlt();
+      case WikiMLPackage.ANY_TEXT_SEQUENCE: return createAnyTextSequence();
+      case WikiMLPackage.ANY_TEXT: return createAnyText();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -99,10 +102,48 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public wiki createwiki()
+  @Override
+  public Object createFromString(EDataType eDataType, String initialValue)
   {
-    wikiImpl wiki = new wikiImpl();
-    return wiki;
+    switch (eDataType.getClassifierID())
+    {
+      case WikiMLPackage.VIEW_TYPE:
+        return createViewTypeFromString(eDataType, initialValue);
+      case WikiMLPackage.HORIZONTAL_ALIGN:
+        return createHorizontalAlignFromString(eDataType, initialValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String convertToString(EDataType eDataType, Object instanceValue)
+  {
+    switch (eDataType.getClassifierID())
+    {
+      case WikiMLPackage.VIEW_TYPE:
+        return convertViewTypeToString(eDataType, instanceValue);
+      case WikiMLPackage.HORIZONTAL_ALIGN:
+        return convertHorizontalAlignToString(eDataType, instanceValue);
+      default:
+        throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+    }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public WikiPage createWikiPage()
+  {
+    WikiPageImpl wikiPage = new WikiPageImpl();
+    return wikiPage;
   }
 
   /**
@@ -176,10 +217,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public File createFile()
+  public Image createImage()
   {
-    FileImpl file = new FileImpl();
-    return file;
+    ImageImpl image = new ImageImpl();
+    return image;
   }
 
   /**
@@ -367,6 +408,72 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
   {
     ExternalAltImpl externalAlt = new ExternalAltImpl();
     return externalAlt;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AnyTextSequence createAnyTextSequence()
+  {
+    AnyTextSequenceImpl anyTextSequence = new AnyTextSequenceImpl();
+    return anyTextSequence;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AnyText createAnyText()
+  {
+    AnyTextImpl anyText = new AnyTextImpl();
+    return anyText;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ViewType createViewTypeFromString(EDataType eDataType, String initialValue)
+  {
+    ViewType result = ViewType.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertViewTypeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HorizontalAlign createHorizontalAlignFromString(EDataType eDataType, String initialValue)
+  {
+    HorizontalAlign result = HorizontalAlign.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertHorizontalAlignToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
   }
 
   /**

@@ -2,8 +2,8 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractUnformattedInlineContent;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.CategoryImpl#getName <em>Name</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.CategoryImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,7 +38,27 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
    * @generated
    * @ordered
    */
-  protected AbstractUnformattedInlineContent name;
+  protected Text name;
+
+  /**
+   * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected static final String VALUE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getValue()
+   * @generated
+   * @ordered
+   */
+  protected String value = VALUE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,7 +86,7 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
    * <!-- end-user-doc -->
    * @generated
    */
-  public AbstractUnformattedInlineContent getName()
+  public Text getName()
   {
     return name;
   }
@@ -75,9 +96,9 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(AbstractUnformattedInlineContent newName, NotificationChain msgs)
+  public NotificationChain basicSetName(Text newName, NotificationChain msgs)
   {
-    AbstractUnformattedInlineContent oldName = name;
+    Text oldName = name;
     name = newName;
     if (eNotificationRequired())
     {
@@ -92,7 +113,7 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(AbstractUnformattedInlineContent newName)
+  public void setName(Text newName)
   {
     if (newName != name)
     {
@@ -106,6 +127,29 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
     }
     else if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.CATEGORY__NAME, newName, newName));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getValue()
+  {
+    return value;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setValue(String newValue)
+  {
+    String oldValue = value;
+    value = newValue;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.CATEGORY__VALUE, oldValue, value));
   }
 
   /**
@@ -136,6 +180,8 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
     {
       case WikiMLPackage.CATEGORY__NAME:
         return getName();
+      case WikiMLPackage.CATEGORY__VALUE:
+        return getValue();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,7 +197,10 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
     switch (featureID)
     {
       case WikiMLPackage.CATEGORY__NAME:
-        setName((AbstractUnformattedInlineContent)newValue);
+        setName((Text)newValue);
+        return;
+      case WikiMLPackage.CATEGORY__VALUE:
+        setValue((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,7 +217,10 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
     switch (featureID)
     {
       case WikiMLPackage.CATEGORY__NAME:
-        setName((AbstractUnformattedInlineContent)null);
+        setName((Text)null);
+        return;
+      case WikiMLPackage.CATEGORY__VALUE:
+        setValue(VALUE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -186,8 +238,27 @@ public class CategoryImpl extends ParagraphTypesImpl implements Category
     {
       case WikiMLPackage.CATEGORY__NAME:
         return name != null;
+      case WikiMLPackage.CATEGORY__VALUE:
+        return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (value: ");
+    result.append(value);
+    result.append(')');
+    return result.toString();
   }
 
 } //CategoryImpl

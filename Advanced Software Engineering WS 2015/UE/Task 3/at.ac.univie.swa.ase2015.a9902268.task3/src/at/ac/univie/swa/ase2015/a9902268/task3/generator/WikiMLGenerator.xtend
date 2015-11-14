@@ -3,9 +3,36 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.generator
 
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractUnformattedInlineContent
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Bold
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.External
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalAlt
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading2
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading3
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading4
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading5
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HyperLink
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Internal
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalAlt
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Italic
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ItalicBold
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage
 import org.eclipse.emf.ecore.resource.Resource
-import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.xtext.generator.IGenerator
 
 /**
  * Generates code from your model files on save.
@@ -13,12 +40,176 @@ import org.eclipse.xtext.generator.IFileSystemAccess
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#code-generation
  */
 class WikiMLGenerator implements IGenerator {
-	
+
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+		for (page : resource.allContents.toIterable.filter(WikiPage)) {
+			fsa.generateFile(page.name.headingValue1.name + ".html", page.compile)
+		}
 	}
+
+	def compile(
+		WikiPage page
+	) '''
+		<html>
+		  <head>
+		    <title>«page.name.headingValue1.name»</title>
+		  </head>
+		  <body>
+		  <h1 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.8em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">«page.name.headingValue1.name»</h1>
+		  «FOR paragraphType : page.elements»
+		  	«paragraphType.compile»
+		  «ENDFOR»
+		  </body
+		</html>"
+	'''
+
+	def compile(ParagraphTypes paragraph) '''
+		«/*Plain Text*/»
+		«IF paragraph instanceof Text»
+			«paragraph.compile»
+	    «ENDIF»
+		«/*Headings*/»
+		«IF paragraph instanceof Heading1»
+			«paragraph.compile»
+		«ENDIF»
+		«IF paragraph instanceof Heading2»
+			«paragraph.compile»
+		«ENDIF»
+		«IF paragraph instanceof Heading3»
+			«paragraph.compile»
+		«ENDIF»
+		«IF paragraph instanceof Heading4»
+			«paragraph.compile»
+		«ENDIF»
+		«IF paragraph instanceof Heading5»
+			«paragraph.compile»
+		«ENDIF»
+		«/*BlockQuote */»
+		«IF paragraph instanceof BlockQuote»
+			«paragraph.compile»
+		«ENDIF»	
+		«IF paragraph instanceof OrderListItemLevel1»
+			«paragraph.compile»
+		«ENDIF»
+
+		
+	'''
+
+	def compile(OrderListItemLevel1 ol1) '''
+	<ol>«ol1.name.compile»</ol>
+
+    '''
+
+	def compile(UnOrderListItemLevel1 ul1) '''
+
+    '''
+
+	def compile(UnOrderListItemLevel2 ul2) '''
+
+    '''
+
+	def compile(Image image) '''
+
+    '''
+
+	def compile(Category cat) '''
+
+    '''
+
+	def compile(Template template) '''
+
+    '''
+
+	def compile(AbstractFormattedInlineContent abstractFormat) '''
+
+    '''
+
+	def compile(AbstractUnformattedInlineContent abstractUnFormat) '''
+	«IF abstractUnFormat instanceof HyperLink»
+	   «abstractUnFormat.compile»
+	«ENDIF»
+	«IF abstractUnFormat instanceof Text»
+	  «abstractUnFormat.compile»
+	«ENDIF»
+    '''
+
+	def compile(BlockQuote blockquote) '''
+     <blockquote>«blockquote.content.compile»</blockquote>
+    '''
+
+	def compile(Heading1 h1) '''
+      <h1 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.8em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">«h1.headingValue1.name»</h1>
+    '''
+
+	def compile(Heading2 h2) '''
+	  <h2 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.5em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">«h2.getHeadingValue2().compile»</h2>
+    '''
+
+	def compile(Heading3 h3) '''
+	  <h3 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.17em; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h3.getHeadingValue3().compile»</h3>
+    '''
+
+	def compile(Heading4 h4) '''
+	  <h4 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 100%; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h4.getHeadingValue4().compile»</h4>
+    '''
+
+	def compile(Heading5 h5) '''
+	  <h5 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 100%; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h5.getHeadingValue5().compile» </h5>
+    '''
+
+	def compile(Bold b) '''
+    '''
+
+	def compile(Italic i) '''
+    '''
+
+	def compile(ItalicBold ib) '''
+    '''
+
+    //returns plain text, TODO: improve to add also linebreaks, xtext first
+	def compile(Text text) '''
+		«text.name»
+	'''
+
+	def compile(HyperLink a) '''
+	  «IF a instanceof Internal»
+	    «a.compile»
+	  «ENDIF»
+	  «IF a instanceof InternalAlt»
+	    «a.compile»
+	  «ENDIF»
+	  «IF a instanceof External»
+	    «a.compile»
+	  «ENDIF»
+	  «IF a instanceof ExternalAlt»
+	    «a.compile»
+	  «ENDIF»
+    '''
+
+	def compile(Internal i) '''
+	  <a href="«i.name.compile»">«i.name.compile»</a>
+    '''
+
+	def compile(InternalAlt ialt) '''
+	  «ialt.toString»
+    '''
+
+	def compile(External e) '''
+	  <a href="«e.name»">«e.name»</a>
+    '''
+
+	def compile(ExternalAlt ea) '''
+	  «ea.toString»
+    '''
+	
+	def compile(AnyTextSequence anytextSequence) '''
+	  «FOR anyText : anytextSequence.content»
+	    «anyText.compile»
+	  «ENDFOR»
+    '''
+
+	def compile(AnyText anyText) '''
+	«anyText.name.compile»
+    '''
+
 }

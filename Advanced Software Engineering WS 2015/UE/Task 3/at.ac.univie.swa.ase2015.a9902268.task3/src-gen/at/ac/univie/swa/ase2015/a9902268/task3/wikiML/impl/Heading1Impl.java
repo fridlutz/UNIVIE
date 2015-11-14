@@ -3,20 +3,16 @@
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,22 +22,22 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading1Impl#getElements <em>Elements</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading1Impl#getHeadingValue1 <em>Heading Value1</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Heading1Impl extends wikiImpl implements Heading1
+public class Heading1Impl extends ParagraphTypesImpl implements Heading1
 {
   /**
-   * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
+   * The cached value of the '{@link #getHeadingValue1() <em>Heading Value1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getElements()
+   * @see #getHeadingValue1()
    * @generated
    * @ordered
    */
-  protected EList<ParagraphTypes> elements;
+  protected Text headingValue1;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,13 +65,47 @@ public class Heading1Impl extends wikiImpl implements Heading1
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ParagraphTypes> getElements()
+  public Text getHeadingValue1()
   {
-    if (elements == null)
+    return headingValue1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetHeadingValue1(Text newHeadingValue1, NotificationChain msgs)
+  {
+    Text oldHeadingValue1 = headingValue1;
+    headingValue1 = newHeadingValue1;
+    if (eNotificationRequired())
     {
-      elements = new EObjectContainmentEList<ParagraphTypes>(ParagraphTypes.class, this, WikiMLPackage.HEADING1__ELEMENTS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.HEADING1__HEADING_VALUE1, oldHeadingValue1, newHeadingValue1);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return elements;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHeadingValue1(Text newHeadingValue1)
+  {
+    if (newHeadingValue1 != headingValue1)
+    {
+      NotificationChain msgs = null;
+      if (headingValue1 != null)
+        msgs = ((InternalEObject)headingValue1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.HEADING1__HEADING_VALUE1, null, msgs);
+      if (newHeadingValue1 != null)
+        msgs = ((InternalEObject)newHeadingValue1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.HEADING1__HEADING_VALUE1, null, msgs);
+      msgs = basicSetHeadingValue1(newHeadingValue1, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.HEADING1__HEADING_VALUE1, newHeadingValue1, newHeadingValue1));
   }
 
   /**
@@ -88,8 +118,8 @@ public class Heading1Impl extends wikiImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__ELEMENTS:
-        return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
+      case WikiMLPackage.HEADING1__HEADING_VALUE1:
+        return basicSetHeadingValue1(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -104,8 +134,8 @@ public class Heading1Impl extends wikiImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__ELEMENTS:
-        return getElements();
+      case WikiMLPackage.HEADING1__HEADING_VALUE1:
+        return getHeadingValue1();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -115,15 +145,13 @@ public class Heading1Impl extends wikiImpl implements Heading1
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__ELEMENTS:
-        getElements().clear();
-        getElements().addAll((Collection<? extends ParagraphTypes>)newValue);
+      case WikiMLPackage.HEADING1__HEADING_VALUE1:
+        setHeadingValue1((Text)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,8 +167,8 @@ public class Heading1Impl extends wikiImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__ELEMENTS:
-        getElements().clear();
+      case WikiMLPackage.HEADING1__HEADING_VALUE1:
+        setHeadingValue1((Text)null);
         return;
     }
     super.eUnset(featureID);
@@ -156,8 +184,8 @@ public class Heading1Impl extends wikiImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__ELEMENTS:
-        return elements != null && !elements.isEmpty();
+      case WikiMLPackage.HEADING1__HEADING_VALUE1:
+        return headingValue1 != null;
     }
     return super.eIsSet(featureID);
   }

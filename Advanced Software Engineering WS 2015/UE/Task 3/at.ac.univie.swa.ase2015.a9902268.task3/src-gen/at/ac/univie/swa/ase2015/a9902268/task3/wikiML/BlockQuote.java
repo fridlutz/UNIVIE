@@ -2,7 +2,6 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,19 +22,29 @@ import org.eclipse.emf.common.util.EList;
 public interface BlockQuote extends ParagraphTypes
 {
   /**
-   * Returns the value of the '<em><b>Content</b></em>' containment reference list.
-   * The list contents are of type {@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent}.
+   * Returns the value of the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Content</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Content</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Content</em>' containment reference list.
+   * @return the value of the '<em>Content</em>' containment reference.
+   * @see #setContent(AnyTextSequence)
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getBlockQuote_Content()
    * @model containment="true"
    * @generated
    */
-  EList<AbstractFormattedInlineContent> getContent();
+  AnyTextSequence getContent();
+
+  /**
+   * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote#getContent <em>Content</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Content</em>' containment reference.
+   * @see #getContent()
+   * @generated
+   */
+  void setContent(AnyTextSequence value);
 
 } // BlockQuote

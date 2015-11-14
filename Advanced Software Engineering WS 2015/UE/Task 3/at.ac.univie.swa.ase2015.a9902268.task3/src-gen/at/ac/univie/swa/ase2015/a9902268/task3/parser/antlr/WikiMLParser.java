@@ -25,7 +25,7 @@ public class WikiMLParser extends org.eclipse.xtext.parser.antlr.AbstractAntlrPa
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "wiki";
+		return "WikiPage";
 	}
 	
 	public WikiMLGrammarAccess getGrammarAccess() {

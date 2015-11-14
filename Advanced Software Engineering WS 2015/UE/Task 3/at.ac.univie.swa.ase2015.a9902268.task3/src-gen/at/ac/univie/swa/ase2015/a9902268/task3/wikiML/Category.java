@@ -13,6 +13,7 @@ package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
  * </p>
  * <ul>
  *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category#getName <em>Name</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getCategory()
@@ -30,12 +31,12 @@ public interface Category extends ParagraphTypes
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' containment reference.
-   * @see #setName(AbstractUnformattedInlineContent)
+   * @see #setName(Text)
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getCategory_Name()
    * @model containment="true"
    * @generated
    */
-  AbstractUnformattedInlineContent getName();
+  Text getName();
 
   /**
    * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category#getName <em>Name</em>}' containment reference.
@@ -45,6 +46,32 @@ public interface Category extends ParagraphTypes
    * @see #getName()
    * @generated
    */
-  void setName(AbstractUnformattedInlineContent value);
+  void setName(Text value);
+
+  /**
+   * Returns the value of the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Value</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Value</em>' attribute.
+   * @see #setValue(String)
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getCategory_Value()
+   * @model
+   * @generated
+   */
+  String getValue();
+
+  /**
+   * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category#getValue <em>Value</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Value</em>' attribute.
+   * @see #getValue()
+   * @generated
+   */
+  void setValue(String value);
 
 } // Category

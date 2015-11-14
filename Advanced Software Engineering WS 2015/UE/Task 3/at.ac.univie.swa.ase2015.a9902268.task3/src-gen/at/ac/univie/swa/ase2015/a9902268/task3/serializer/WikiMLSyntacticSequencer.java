@@ -11,9 +11,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -21,18 +18,10 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class WikiMLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected WikiMLGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Bold_Heading1_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0_or_EqualsSignKeyword_0__q;
-	protected AbstractElementAlias match_Bold_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0__q;
-	protected AbstractElementAlias match_Bold_Italic_ItalicBold_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0;
-	protected AbstractElementAlias match_Category_VerticalLineAsteriskKeyword_2_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (WikiMLGrammarAccess) access;
-		match_Bold_Heading1_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0_or_EqualsSignKeyword_0__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getBoldAccess().getApostropheApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading1Access().getEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading2Access().getEqualsSignEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading3Access().getEqualsSignEqualsSignEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading4Access().getEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading5Access().getEqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getItalicAccess().getApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getItalicBoldAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_0()));
-		match_Bold_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getBoldAccess().getApostropheApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading2Access().getEqualsSignEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading3Access().getEqualsSignEqualsSignEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading4Access().getEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getHeading5Access().getEqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0()), new TokenAlias(false, false, grammarAccess.getItalicAccess().getApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getItalicBoldAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_0()));
-		match_Bold_Italic_ItalicBold_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getBoldAccess().getApostropheApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getItalicAccess().getApostropheApostropheKeyword_0()), new TokenAlias(false, false, grammarAccess.getItalicBoldAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_0()));
-		match_Category_VerticalLineAsteriskKeyword_2_q = new TokenAlias(false, true, grammarAccess.getCategoryAccess().getVerticalLineAsteriskKeyword_2());
 	}
 	
 	@Override
@@ -47,80 +36,8 @@ public class WikiMLSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_Bold_Heading1_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0_or_EqualsSignKeyword_0__q.equals(syntax))
-				emit_Bold_Heading1_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0_or_EqualsSignKeyword_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Bold_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0__q.equals(syntax))
-				emit_Bold_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Bold_Italic_ItalicBold_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0.equals(syntax))
-				emit_Bold_Italic_ItalicBold_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Category_VerticalLineAsteriskKeyword_2_q.equals(syntax))
-				emit_Category_VerticalLineAsteriskKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     (
-	  *         '=' | 
-	  *         '==' | 
-	  *         '===' | 
-	  *         '====' | 
-	  *         '=====' | 
-	  *         ''''' | 
-	  *         '''' | 
-	  *         '''''''
-	  *     )?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) name=Name
-	 */
-	protected void emit_Bold_Heading1_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0_or_EqualsSignKeyword_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     (
-	  *         '==' | 
-	  *         '===' | 
-	  *         '====' | 
-	  *         '=====' | 
-	  *         ''''' | 
-	  *         '''' | 
-	  *         '''''''
-	  *     )?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) '[' name=URL
-	 *     (rule start) (ambiguity) '[[' name=Text
-	 */
-	protected void emit_Bold_Heading2_Heading3_Heading4_Heading5_Italic_ItalicBold___ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignEqualsSignKeyword_0_or_EqualsSignEqualsSignKeyword_0__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ''''' | '''' | '''''''
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) '[' name=URL
-	 *     (rule start) (ambiguity) '[[' name=Text
-	 *     (rule start) (ambiguity) name=Name
-	 */
-	protected void emit_Bold_Italic_ItalicBold_ApostropheApostropheApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheApostropheKeyword_0_or_ApostropheApostropheKeyword_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '|*'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     name=AbstractUnformattedInlineContent (ambiguity) ']]' (rule end)
-	 */
-	protected void emit_Category_VerticalLineAsteriskKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }

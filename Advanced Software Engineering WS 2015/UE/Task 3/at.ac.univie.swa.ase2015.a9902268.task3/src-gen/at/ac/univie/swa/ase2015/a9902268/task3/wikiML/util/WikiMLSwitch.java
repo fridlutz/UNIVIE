@@ -72,10 +72,10 @@ public class WikiMLSwitch<T> extends Switch<T>
   {
     switch (classifierID)
     {
-      case WikiMLPackage.WIKI:
+      case WikiMLPackage.WIKI_PAGE:
       {
-        wiki wiki = (wiki)theEObject;
-        T result = casewiki(wiki);
+        WikiPage wikiPage = (WikiPage)theEObject;
+        T result = caseWikiPage(wikiPage);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -126,11 +126,11 @@ public class WikiMLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.FILE:
+      case WikiMLPackage.IMAGE:
       {
-        File file = (File)theEObject;
-        T result = caseFile(file);
-        if (result == null) result = caseParagraphTypes(file);
+        Image image = (Image)theEObject;
+        T result = caseImage(image);
+        if (result == null) result = caseParagraphTypes(image);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -146,7 +146,6 @@ public class WikiMLSwitch<T> extends Switch<T>
       {
         Heading1 heading1 = (Heading1)theEObject;
         T result = caseHeading1(heading1);
-        if (result == null) result = casewiki(heading1);
         if (result == null) result = caseParagraphTypes(heading1);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -222,14 +221,6 @@ public class WikiMLSwitch<T> extends Switch<T>
       {
         AbstractUnformattedInlineContent abstractUnformattedInlineContent = (AbstractUnformattedInlineContent)theEObject;
         T result = caseAbstractUnformattedInlineContent(abstractUnformattedInlineContent);
-        if (result == null) result = caseHeading2(abstractUnformattedInlineContent);
-        if (result == null) result = caseHeading3(abstractUnformattedInlineContent);
-        if (result == null) result = caseHeading4(abstractUnformattedInlineContent);
-        if (result == null) result = caseHeading5(abstractUnformattedInlineContent);
-        if (result == null) result = caseBold(abstractUnformattedInlineContent);
-        if (result == null) result = caseItalic(abstractUnformattedInlineContent);
-        if (result == null) result = caseItalicBold(abstractUnformattedInlineContent);
-        if (result == null) result = caseAbstractFormattedInlineContent(abstractUnformattedInlineContent);
         if (result == null) result = caseParagraphTypes(abstractUnformattedInlineContent);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -238,17 +229,7 @@ public class WikiMLSwitch<T> extends Switch<T>
       {
         Text text = (Text)theEObject;
         T result = caseText(text);
-        if (result == null) result = caseHeading1(text);
         if (result == null) result = caseAbstractUnformattedInlineContent(text);
-        if (result == null) result = casewiki(text);
-        if (result == null) result = caseHeading2(text);
-        if (result == null) result = caseHeading3(text);
-        if (result == null) result = caseHeading4(text);
-        if (result == null) result = caseHeading5(text);
-        if (result == null) result = caseBold(text);
-        if (result == null) result = caseItalic(text);
-        if (result == null) result = caseItalicBold(text);
-        if (result == null) result = caseAbstractFormattedInlineContent(text);
         if (result == null) result = caseParagraphTypes(text);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -258,14 +239,6 @@ public class WikiMLSwitch<T> extends Switch<T>
         HyperLink hyperLink = (HyperLink)theEObject;
         T result = caseHyperLink(hyperLink);
         if (result == null) result = caseAbstractUnformattedInlineContent(hyperLink);
-        if (result == null) result = caseHeading2(hyperLink);
-        if (result == null) result = caseHeading3(hyperLink);
-        if (result == null) result = caseHeading4(hyperLink);
-        if (result == null) result = caseHeading5(hyperLink);
-        if (result == null) result = caseBold(hyperLink);
-        if (result == null) result = caseItalic(hyperLink);
-        if (result == null) result = caseItalicBold(hyperLink);
-        if (result == null) result = caseAbstractFormattedInlineContent(hyperLink);
         if (result == null) result = caseParagraphTypes(hyperLink);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -276,14 +249,6 @@ public class WikiMLSwitch<T> extends Switch<T>
         T result = caseInternal(internal);
         if (result == null) result = caseHyperLink(internal);
         if (result == null) result = caseAbstractUnformattedInlineContent(internal);
-        if (result == null) result = caseHeading2(internal);
-        if (result == null) result = caseHeading3(internal);
-        if (result == null) result = caseHeading4(internal);
-        if (result == null) result = caseHeading5(internal);
-        if (result == null) result = caseBold(internal);
-        if (result == null) result = caseItalic(internal);
-        if (result == null) result = caseItalicBold(internal);
-        if (result == null) result = caseAbstractFormattedInlineContent(internal);
         if (result == null) result = caseParagraphTypes(internal);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -294,14 +259,6 @@ public class WikiMLSwitch<T> extends Switch<T>
         T result = caseInternalAlt(internalAlt);
         if (result == null) result = caseHyperLink(internalAlt);
         if (result == null) result = caseAbstractUnformattedInlineContent(internalAlt);
-        if (result == null) result = caseHeading2(internalAlt);
-        if (result == null) result = caseHeading3(internalAlt);
-        if (result == null) result = caseHeading4(internalAlt);
-        if (result == null) result = caseHeading5(internalAlt);
-        if (result == null) result = caseBold(internalAlt);
-        if (result == null) result = caseItalic(internalAlt);
-        if (result == null) result = caseItalicBold(internalAlt);
-        if (result == null) result = caseAbstractFormattedInlineContent(internalAlt);
         if (result == null) result = caseParagraphTypes(internalAlt);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -312,14 +269,6 @@ public class WikiMLSwitch<T> extends Switch<T>
         T result = caseExternal(external);
         if (result == null) result = caseHyperLink(external);
         if (result == null) result = caseAbstractUnformattedInlineContent(external);
-        if (result == null) result = caseHeading2(external);
-        if (result == null) result = caseHeading3(external);
-        if (result == null) result = caseHeading4(external);
-        if (result == null) result = caseHeading5(external);
-        if (result == null) result = caseBold(external);
-        if (result == null) result = caseItalic(external);
-        if (result == null) result = caseItalicBold(external);
-        if (result == null) result = caseAbstractFormattedInlineContent(external);
         if (result == null) result = caseParagraphTypes(external);
         if (result == null) result = defaultCase(theEObject);
         return result;
@@ -330,15 +279,21 @@ public class WikiMLSwitch<T> extends Switch<T>
         T result = caseExternalAlt(externalAlt);
         if (result == null) result = caseHyperLink(externalAlt);
         if (result == null) result = caseAbstractUnformattedInlineContent(externalAlt);
-        if (result == null) result = caseHeading2(externalAlt);
-        if (result == null) result = caseHeading3(externalAlt);
-        if (result == null) result = caseHeading4(externalAlt);
-        if (result == null) result = caseHeading5(externalAlt);
-        if (result == null) result = caseBold(externalAlt);
-        if (result == null) result = caseItalic(externalAlt);
-        if (result == null) result = caseItalicBold(externalAlt);
-        if (result == null) result = caseAbstractFormattedInlineContent(externalAlt);
         if (result == null) result = caseParagraphTypes(externalAlt);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.ANY_TEXT_SEQUENCE:
+      {
+        AnyTextSequence anyTextSequence = (AnyTextSequence)theEObject;
+        T result = caseAnyTextSequence(anyTextSequence);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.ANY_TEXT:
+      {
+        AnyText anyText = (AnyText)theEObject;
+        T result = caseAnyText(anyText);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -347,17 +302,17 @@ public class WikiMLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>wiki</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Wiki Page</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>wiki</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Wiki Page</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casewiki(wiki object)
+  public T caseWikiPage(WikiPage object)
   {
     return null;
   }
@@ -459,17 +414,17 @@ public class WikiMLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>File</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Image</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>File</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Image</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFile(File object)
+  public T caseImage(Image object)
   {
     return null;
   }
@@ -742,6 +697,38 @@ public class WikiMLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExternalAlt(ExternalAlt object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Any Text Sequence</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Any Text Sequence</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAnyTextSequence(AnyTextSequence object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Any Text</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Any Text</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAnyText(AnyText object)
   {
     return null;
   }

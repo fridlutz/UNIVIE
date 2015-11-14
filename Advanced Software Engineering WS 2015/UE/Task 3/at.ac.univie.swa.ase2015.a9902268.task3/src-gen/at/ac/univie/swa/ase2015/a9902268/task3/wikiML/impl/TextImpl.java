@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class TextImpl extends Heading1Impl implements Text
+public class TextImpl extends AbstractUnformattedInlineContentImpl implements Text
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.

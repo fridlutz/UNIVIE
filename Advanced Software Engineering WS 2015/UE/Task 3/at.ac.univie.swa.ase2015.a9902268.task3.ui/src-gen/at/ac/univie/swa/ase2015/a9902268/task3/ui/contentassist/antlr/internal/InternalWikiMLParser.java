@@ -22,29 +22,17 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_URL", "RULE_STRING", "RULE_ML_COMMENT", "RULE_INT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<blockquote>'", "'</blockquote>'", "'{{'", "'|'", "'}}'", "'**'", "':LIST'", "'*'", "'#'", "'[[File:'", "'thumb'", "']]'", "'[[Category:'", "'|*'", "'='", "'=='", "'==='", "'===='", "'====='", "'\\'\\'\\''", "'\\'\\''", "'\\'\\'\\'\\'\\''", "'[['", "'['", "']'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_URL", "RULE_ML_COMMENT", "RULE_STRING", "RULE_INT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'thumb'", "'thumbnail'", "'frame'", "'framed'", "'frameless'", "'right'", "'left'", "'center'", "'none'", "'<blockquote>'", "'</blockquote>'", "'{{'", "'}}'", "'|'", "'**'", "':LIST'", "'*'", "'#'", "'[['", "'File:'", "']]'", "'|alt='", "'Category:'", "'='", "'=='", "'==='", "'===='", "'====='", "'\\'\\'\\''", "'\\'\\''", "'\\'\\'\\'\\'\\''", "'['", "']'", "'|*?'"
     };
-    public static final int RULE_STRING=6;
-    public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
-    public static final int T__33=33;
     public static final int T__12=12;
-    public static final int T__34=34;
     public static final int T__13=13;
-    public static final int T__35=35;
     public static final int T__14=14;
-    public static final int T__36=36;
-    public static final int EOF=-1;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
     public static final int RULE_ID=4;
-    public static final int RULE_WS=10;
-    public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -52,12 +40,33 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     public static final int T__29=29;
     public static final int RULE_URL=5;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=7;
+    public static final int RULE_ML_COMMENT=6;
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
     public static final int T__20=20;
     public static final int T__21=21;
+    public static final int RULE_STRING=7;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int T__37=37;
+    public static final int T__38=38;
+    public static final int T__39=39;
+    public static final int T__33=33;
+    public static final int T__34=34;
+    public static final int T__35=35;
+    public static final int T__36=36;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
+    public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__44=44;
+    public static final int T__45=45;
+    public static final int T__40=40;
+    public static final int T__41=41;
+    public static final int T__42=42;
+    public static final int T__43=43;
 
     // delegates
     // delegators
@@ -96,21 +105,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
 
-    // $ANTLR start "entryRulewiki"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:60:1: entryRulewiki : rulewiki EOF ;
-    public final void entryRulewiki() throws RecognitionException {
+    // $ANTLR start "entryRuleWikiPage"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:60:1: entryRuleWikiPage : ruleWikiPage EOF ;
+    public final void entryRuleWikiPage() throws RecognitionException {
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:61:1: ( rulewiki EOF )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:62:1: rulewiki EOF
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:61:1: ( ruleWikiPage EOF )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:62:1: ruleWikiPage EOF
             {
-             before(grammarAccess.getWikiRule()); 
-            pushFollow(FOLLOW_rulewiki_in_entryRulewiki61);
-            rulewiki();
+             before(grammarAccess.getWikiPageRule()); 
+            pushFollow(FOLLOW_ruleWikiPage_in_entryRuleWikiPage61);
+            ruleWikiPage();
 
             state._fsp--;
 
-             after(grammarAccess.getWikiRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRulewiki68); 
+             after(grammarAccess.getWikiPageRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleWikiPage68); 
 
             }
 
@@ -123,35 +132,35 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRulewiki"
+    // $ANTLR end "entryRuleWikiPage"
 
 
-    // $ANTLR start "rulewiki"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:69:1: rulewiki : ( ( rule__Wiki__Group__0 ) ) ;
-    public final void rulewiki() throws RecognitionException {
+    // $ANTLR start "ruleWikiPage"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:69:1: ruleWikiPage : ( ( rule__WikiPage__Group__0 ) ) ;
+    public final void ruleWikiPage() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:73:2: ( ( ( rule__Wiki__Group__0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:74:1: ( ( rule__Wiki__Group__0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:73:2: ( ( ( rule__WikiPage__Group__0 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:74:1: ( ( rule__WikiPage__Group__0 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:74:1: ( ( rule__Wiki__Group__0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:75:1: ( rule__Wiki__Group__0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:74:1: ( ( rule__WikiPage__Group__0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:75:1: ( rule__WikiPage__Group__0 )
             {
-             before(grammarAccess.getWikiAccess().getGroup()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:76:1: ( rule__Wiki__Group__0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:76:2: rule__Wiki__Group__0
+             before(grammarAccess.getWikiPageAccess().getGroup()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:76:1: ( rule__WikiPage__Group__0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:76:2: rule__WikiPage__Group__0
             {
-            pushFollow(FOLLOW_rule__Wiki__Group__0_in_rulewiki94);
-            rule__Wiki__Group__0();
+            pushFollow(FOLLOW_rule__WikiPage__Group__0_in_ruleWikiPage94);
+            rule__WikiPage__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getWikiAccess().getGroup()); 
+             after(grammarAccess.getWikiPageAccess().getGroup()); 
 
             }
 
@@ -170,7 +179,7 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rulewiki"
+    // $ANTLR end "ruleWikiPage"
 
 
     // $ANTLR start "entryRuleParagraphTypes"
@@ -635,21 +644,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleOrderListItemLevel1"
 
 
-    // $ANTLR start "entryRuleFile"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:256:1: entryRuleFile : ruleFile EOF ;
-    public final void entryRuleFile() throws RecognitionException {
+    // $ANTLR start "entryRuleImage"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:256:1: entryRuleImage : ruleImage EOF ;
+    public final void entryRuleImage() throws RecognitionException {
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:257:1: ( ruleFile EOF )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:258:1: ruleFile EOF
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:257:1: ( ruleImage EOF )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:258:1: ruleImage EOF
             {
-             before(grammarAccess.getFileRule()); 
-            pushFollow(FOLLOW_ruleFile_in_entryRuleFile481);
-            ruleFile();
+             before(grammarAccess.getImageRule()); 
+            pushFollow(FOLLOW_ruleImage_in_entryRuleImage481);
+            ruleImage();
 
             state._fsp--;
 
-             after(grammarAccess.getFileRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFile488); 
+             after(grammarAccess.getImageRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImage488); 
 
             }
 
@@ -662,35 +671,35 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "entryRuleFile"
+    // $ANTLR end "entryRuleImage"
 
 
-    // $ANTLR start "ruleFile"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:265:1: ruleFile : ( ( rule__File__Group__0 ) ) ;
-    public final void ruleFile() throws RecognitionException {
+    // $ANTLR start "ruleImage"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:265:1: ruleImage : ( ( rule__Image__Group__0 ) ) ;
+    public final void ruleImage() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:269:2: ( ( ( rule__File__Group__0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:270:1: ( ( rule__File__Group__0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:269:2: ( ( ( rule__Image__Group__0 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:270:1: ( ( rule__Image__Group__0 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:270:1: ( ( rule__File__Group__0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:271:1: ( rule__File__Group__0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:270:1: ( ( rule__Image__Group__0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:271:1: ( rule__Image__Group__0 )
             {
-             before(grammarAccess.getFileAccess().getGroup()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:272:1: ( rule__File__Group__0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:272:2: rule__File__Group__0
+             before(grammarAccess.getImageAccess().getGroup()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:272:1: ( rule__Image__Group__0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:272:2: rule__Image__Group__0
             {
-            pushFollow(FOLLOW_rule__File__Group__0_in_ruleFile514);
-            rule__File__Group__0();
+            pushFollow(FOLLOW_rule__Image__Group__0_in_ruleImage514);
+            rule__Image__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getFileAccess().getGroup()); 
+             after(grammarAccess.getImageAccess().getGroup()); 
 
             }
 
@@ -709,7 +718,7 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "ruleFile"
+    // $ANTLR end "ruleImage"
 
 
     // $ANTLR start "entryRuleCategory"
@@ -2021,21 +2030,175 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleExternalAlt"
 
 
+    // $ANTLR start "entryRuleAnyTextSequence"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:760:1: entryRuleAnyTextSequence : ruleAnyTextSequence EOF ;
+    public final void entryRuleAnyTextSequence() throws RecognitionException {
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:761:1: ( ruleAnyTextSequence EOF )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:762:1: ruleAnyTextSequence EOF
+            {
+             before(grammarAccess.getAnyTextSequenceRule()); 
+            pushFollow(FOLLOW_ruleAnyTextSequence_in_entryRuleAnyTextSequence1561);
+            ruleAnyTextSequence();
+
+            state._fsp--;
+
+             after(grammarAccess.getAnyTextSequenceRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnyTextSequence1568); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleAnyTextSequence"
+
+
+    // $ANTLR start "ruleAnyTextSequence"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:769:1: ruleAnyTextSequence : ( ( rule__AnyTextSequence__Group__0 ) ) ;
+    public final void ruleAnyTextSequence() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:773:2: ( ( ( rule__AnyTextSequence__Group__0 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:774:1: ( ( rule__AnyTextSequence__Group__0 ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:774:1: ( ( rule__AnyTextSequence__Group__0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:775:1: ( rule__AnyTextSequence__Group__0 )
+            {
+             before(grammarAccess.getAnyTextSequenceAccess().getGroup()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:776:1: ( rule__AnyTextSequence__Group__0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:776:2: rule__AnyTextSequence__Group__0
+            {
+            pushFollow(FOLLOW_rule__AnyTextSequence__Group__0_in_ruleAnyTextSequence1594);
+            rule__AnyTextSequence__Group__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAnyTextSequenceAccess().getGroup()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleAnyTextSequence"
+
+
+    // $ANTLR start "entryRuleAnyText"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:788:1: entryRuleAnyText : ruleAnyText EOF ;
+    public final void entryRuleAnyText() throws RecognitionException {
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:789:1: ( ruleAnyText EOF )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:790:1: ruleAnyText EOF
+            {
+             before(grammarAccess.getAnyTextRule()); 
+            pushFollow(FOLLOW_ruleAnyText_in_entryRuleAnyText1621);
+            ruleAnyText();
+
+            state._fsp--;
+
+             after(grammarAccess.getAnyTextRule()); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleAnyText1628); 
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+        }
+        return ;
+    }
+    // $ANTLR end "entryRuleAnyText"
+
+
+    // $ANTLR start "ruleAnyText"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:797:1: ruleAnyText : ( ( rule__AnyText__NameAssignment ) ) ;
+    public final void ruleAnyText() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:801:2: ( ( ( rule__AnyText__NameAssignment ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:802:1: ( ( rule__AnyText__NameAssignment ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:802:1: ( ( rule__AnyText__NameAssignment ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:803:1: ( rule__AnyText__NameAssignment )
+            {
+             before(grammarAccess.getAnyTextAccess().getNameAssignment()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:804:1: ( rule__AnyText__NameAssignment )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:804:2: rule__AnyText__NameAssignment
+            {
+            pushFollow(FOLLOW_rule__AnyText__NameAssignment_in_ruleAnyText1654);
+            rule__AnyText__NameAssignment();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAnyTextAccess().getNameAssignment()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleAnyText"
+
+
     // $ANTLR start "entryRuleName"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:760:1: entryRuleName : ruleName EOF ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:816:1: entryRuleName : ruleName EOF ;
     public final void entryRuleName() throws RecognitionException {
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:761:1: ( ruleName EOF )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:762:1: ruleName EOF
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:817:1: ( ruleName EOF )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:818:1: ruleName EOF
             {
              before(grammarAccess.getNameRule()); 
-            pushFollow(FOLLOW_ruleName_in_entryRuleName1561);
+            pushFollow(FOLLOW_ruleName_in_entryRuleName1681);
             ruleName();
 
             state._fsp--;
 
              after(grammarAccess.getNameRule()); 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleName1568); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleName1688); 
 
             }
 
@@ -2052,23 +2215,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "ruleName"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:769:1: ruleName : ( ( rule__Name__Group__0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:825:1: ruleName : ( ( rule__Name__Group__0 ) ) ;
     public final void ruleName() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:773:2: ( ( ( rule__Name__Group__0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:774:1: ( ( rule__Name__Group__0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:829:2: ( ( ( rule__Name__Group__0 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:830:1: ( ( rule__Name__Group__0 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:774:1: ( ( rule__Name__Group__0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:775:1: ( rule__Name__Group__0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:830:1: ( ( rule__Name__Group__0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:831:1: ( rule__Name__Group__0 )
             {
              before(grammarAccess.getNameAccess().getGroup()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:776:1: ( rule__Name__Group__0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:776:2: rule__Name__Group__0
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:832:1: ( rule__Name__Group__0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:832:2: rule__Name__Group__0
             {
-            pushFollow(FOLLOW_rule__Name__Group__0_in_ruleName1594);
+            pushFollow(FOLLOW_rule__Name__Group__0_in_ruleName1714);
             rule__Name__Group__0();
 
             state._fsp--;
@@ -2098,106 +2261,119 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "ruleName"
 
 
+    // $ANTLR start "ruleViewType"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:845:1: ruleViewType : ( ( rule__ViewType__Alternatives ) ) ;
+    public final void ruleViewType() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:849:1: ( ( ( rule__ViewType__Alternatives ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:850:1: ( ( rule__ViewType__Alternatives ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:850:1: ( ( rule__ViewType__Alternatives ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:851:1: ( rule__ViewType__Alternatives )
+            {
+             before(grammarAccess.getViewTypeAccess().getAlternatives()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:852:1: ( rule__ViewType__Alternatives )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:852:2: rule__ViewType__Alternatives
+            {
+            pushFollow(FOLLOW_rule__ViewType__Alternatives_in_ruleViewType1751);
+            rule__ViewType__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getViewTypeAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleViewType"
+
+
+    // $ANTLR start "ruleHorizontalAlign"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:864:1: ruleHorizontalAlign : ( ( rule__HorizontalAlign__Alternatives ) ) ;
+    public final void ruleHorizontalAlign() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:868:1: ( ( ( rule__HorizontalAlign__Alternatives ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:869:1: ( ( rule__HorizontalAlign__Alternatives ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:869:1: ( ( rule__HorizontalAlign__Alternatives ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:870:1: ( rule__HorizontalAlign__Alternatives )
+            {
+             before(grammarAccess.getHorizontalAlignAccess().getAlternatives()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:871:1: ( rule__HorizontalAlign__Alternatives )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:871:2: rule__HorizontalAlign__Alternatives
+            {
+            pushFollow(FOLLOW_rule__HorizontalAlign__Alternatives_in_ruleHorizontalAlign1787);
+            rule__HorizontalAlign__Alternatives();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getHorizontalAlignAccess().getAlternatives()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "ruleHorizontalAlign"
+
+
     // $ANTLR start "rule__ParagraphTypes__Alternatives"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:788:1: rule__ParagraphTypes__Alternatives : ( ( ruleOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel2 ) | ( ruleFile ) | ( ruleCategory ) | ( ruleTemplate ) | ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) | ( ruleBlockQuote ) | ( ruleHeading1 ) | ( ruleHeading2 ) | ( ruleHeading3 ) | ( ruleHeading4 ) | ( ruleHeading5 ) );
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:882:1: rule__ParagraphTypes__Alternatives : ( ( ruleOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel2 ) | ( ruleImage ) | ( ruleCategory ) | ( ruleTemplate ) | ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) | ( ruleBlockQuote ) | ( ruleHeading1 ) | ( ruleHeading2 ) | ( ruleHeading3 ) | ( ruleHeading4 ) | ( ruleHeading5 ) );
     public final void rule__ParagraphTypes__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:792:1: ( ( ruleOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel2 ) | ( ruleFile ) | ( ruleCategory ) | ( ruleTemplate ) | ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) | ( ruleBlockQuote ) | ( ruleHeading1 ) | ( ruleHeading2 ) | ( ruleHeading3 ) | ( ruleHeading4 ) | ( ruleHeading5 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:886:1: ( ( ruleOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel2 ) | ( ruleImage ) | ( ruleCategory ) | ( ruleTemplate ) | ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) | ( ruleBlockQuote ) | ( ruleHeading1 ) | ( ruleHeading2 ) | ( ruleHeading3 ) | ( ruleHeading4 ) | ( ruleHeading5 ) )
             int alt1=14;
-            switch ( input.LA(1) ) {
-            case 20:
-                {
-                alt1=1;
-                }
-                break;
-            case 19:
-                {
-                alt1=2;
-                }
-                break;
-            case 17:
-                {
-                alt1=3;
-                }
-                break;
-            case 21:
-                {
-                alt1=4;
-                }
-                break;
-            case 24:
-                {
-                alt1=5;
-                }
-                break;
-            case 14:
-                {
-                alt1=6;
-                }
-                break;
-            case 31:
-            case 32:
-            case 33:
-                {
-                alt1=7;
-                }
-                break;
-            case RULE_ID:
-            case 34:
-            case 35:
-                {
-                alt1=8;
-                }
-                break;
-            case 12:
-                {
-                alt1=9;
-                }
-                break;
-            case 26:
-                {
-                alt1=10;
-                }
-                break;
-            case 27:
-                {
-                alt1=11;
-                }
-                break;
-            case 28:
-                {
-                alt1=12;
-                }
-                break;
-            case 29:
-                {
-                alt1=13;
-                }
-                break;
-            case 30:
-                {
-                alt1=14;
-                }
-                break;
-            default:
-                NoViableAltException nvae =
-                    new NoViableAltException("", 1, 0, input);
-
-                throw nvae;
-            }
-
+            alt1 = dfa1.predict(input);
             switch (alt1) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:793:1: ( ruleOrderListItemLevel1 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:887:1: ( ruleOrderListItemLevel1 )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:793:1: ( ruleOrderListItemLevel1 )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:794:1: ruleOrderListItemLevel1
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:887:1: ( ruleOrderListItemLevel1 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:888:1: ruleOrderListItemLevel1
                     {
                      before(grammarAccess.getParagraphTypesAccess().getOrderListItemLevel1ParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleOrderListItemLevel1_in_rule__ParagraphTypes__Alternatives1630);
+                    pushFollow(FOLLOW_ruleOrderListItemLevel1_in_rule__ParagraphTypes__Alternatives1822);
                     ruleOrderListItemLevel1();
 
                     state._fsp--;
@@ -2210,13 +2386,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:799:6: ( ruleUnOrderListItemLevel1 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:893:6: ( ruleUnOrderListItemLevel1 )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:799:6: ( ruleUnOrderListItemLevel1 )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:800:1: ruleUnOrderListItemLevel1
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:893:6: ( ruleUnOrderListItemLevel1 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:894:1: ruleUnOrderListItemLevel1
                     {
                      before(grammarAccess.getParagraphTypesAccess().getUnOrderListItemLevel1ParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleUnOrderListItemLevel1_in_rule__ParagraphTypes__Alternatives1647);
+                    pushFollow(FOLLOW_ruleUnOrderListItemLevel1_in_rule__ParagraphTypes__Alternatives1839);
                     ruleUnOrderListItemLevel1();
 
                     state._fsp--;
@@ -2229,13 +2405,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:805:6: ( ruleUnOrderListItemLevel2 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:899:6: ( ruleUnOrderListItemLevel2 )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:805:6: ( ruleUnOrderListItemLevel2 )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:806:1: ruleUnOrderListItemLevel2
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:899:6: ( ruleUnOrderListItemLevel2 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:900:1: ruleUnOrderListItemLevel2
                     {
                      before(grammarAccess.getParagraphTypesAccess().getUnOrderListItemLevel2ParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleUnOrderListItemLevel2_in_rule__ParagraphTypes__Alternatives1664);
+                    pushFollow(FOLLOW_ruleUnOrderListItemLevel2_in_rule__ParagraphTypes__Alternatives1856);
                     ruleUnOrderListItemLevel2();
 
                     state._fsp--;
@@ -2248,18 +2424,18 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:811:6: ( ruleFile )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:905:6: ( ruleImage )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:811:6: ( ruleFile )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:812:1: ruleFile
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:905:6: ( ruleImage )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:906:1: ruleImage
                     {
-                     before(grammarAccess.getParagraphTypesAccess().getFileParserRuleCall_3()); 
-                    pushFollow(FOLLOW_ruleFile_in_rule__ParagraphTypes__Alternatives1681);
-                    ruleFile();
+                     before(grammarAccess.getParagraphTypesAccess().getImageParserRuleCall_3()); 
+                    pushFollow(FOLLOW_ruleImage_in_rule__ParagraphTypes__Alternatives1873);
+                    ruleImage();
 
                     state._fsp--;
 
-                     after(grammarAccess.getParagraphTypesAccess().getFileParserRuleCall_3()); 
+                     after(grammarAccess.getParagraphTypesAccess().getImageParserRuleCall_3()); 
 
                     }
 
@@ -2267,13 +2443,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 5 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:817:6: ( ruleCategory )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:911:6: ( ruleCategory )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:817:6: ( ruleCategory )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:818:1: ruleCategory
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:911:6: ( ruleCategory )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:912:1: ruleCategory
                     {
                      before(grammarAccess.getParagraphTypesAccess().getCategoryParserRuleCall_4()); 
-                    pushFollow(FOLLOW_ruleCategory_in_rule__ParagraphTypes__Alternatives1698);
+                    pushFollow(FOLLOW_ruleCategory_in_rule__ParagraphTypes__Alternatives1890);
                     ruleCategory();
 
                     state._fsp--;
@@ -2286,13 +2462,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 6 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:823:6: ( ruleTemplate )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:917:6: ( ruleTemplate )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:823:6: ( ruleTemplate )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:824:1: ruleTemplate
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:917:6: ( ruleTemplate )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:918:1: ruleTemplate
                     {
                      before(grammarAccess.getParagraphTypesAccess().getTemplateParserRuleCall_5()); 
-                    pushFollow(FOLLOW_ruleTemplate_in_rule__ParagraphTypes__Alternatives1715);
+                    pushFollow(FOLLOW_ruleTemplate_in_rule__ParagraphTypes__Alternatives1907);
                     ruleTemplate();
 
                     state._fsp--;
@@ -2305,13 +2481,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 7 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:829:6: ( ruleAbstractFormattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:923:6: ( ruleAbstractFormattedInlineContent )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:829:6: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:830:1: ruleAbstractFormattedInlineContent
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:923:6: ( ruleAbstractFormattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:924:1: ruleAbstractFormattedInlineContent
                     {
                      before(grammarAccess.getParagraphTypesAccess().getAbstractFormattedInlineContentParserRuleCall_6()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__ParagraphTypes__Alternatives1732);
+                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__ParagraphTypes__Alternatives1924);
                     ruleAbstractFormattedInlineContent();
 
                     state._fsp--;
@@ -2324,13 +2500,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 8 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:835:6: ( ruleAbstractUnformattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:929:6: ( ruleAbstractUnformattedInlineContent )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:835:6: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:836:1: ruleAbstractUnformattedInlineContent
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:929:6: ( ruleAbstractUnformattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:930:1: ruleAbstractUnformattedInlineContent
                     {
                      before(grammarAccess.getParagraphTypesAccess().getAbstractUnformattedInlineContentParserRuleCall_7()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ParagraphTypes__Alternatives1749);
+                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ParagraphTypes__Alternatives1941);
                     ruleAbstractUnformattedInlineContent();
 
                     state._fsp--;
@@ -2343,13 +2519,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 9 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:841:6: ( ruleBlockQuote )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:935:6: ( ruleBlockQuote )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:841:6: ( ruleBlockQuote )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:842:1: ruleBlockQuote
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:935:6: ( ruleBlockQuote )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:936:1: ruleBlockQuote
                     {
                      before(grammarAccess.getParagraphTypesAccess().getBlockQuoteParserRuleCall_8()); 
-                    pushFollow(FOLLOW_ruleBlockQuote_in_rule__ParagraphTypes__Alternatives1766);
+                    pushFollow(FOLLOW_ruleBlockQuote_in_rule__ParagraphTypes__Alternatives1958);
                     ruleBlockQuote();
 
                     state._fsp--;
@@ -2362,13 +2538,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 10 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:847:6: ( ruleHeading1 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:941:6: ( ruleHeading1 )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:847:6: ( ruleHeading1 )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:848:1: ruleHeading1
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:941:6: ( ruleHeading1 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:942:1: ruleHeading1
                     {
                      before(grammarAccess.getParagraphTypesAccess().getHeading1ParserRuleCall_9()); 
-                    pushFollow(FOLLOW_ruleHeading1_in_rule__ParagraphTypes__Alternatives1783);
+                    pushFollow(FOLLOW_ruleHeading1_in_rule__ParagraphTypes__Alternatives1975);
                     ruleHeading1();
 
                     state._fsp--;
@@ -2381,13 +2557,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 11 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:853:6: ( ruleHeading2 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:947:6: ( ruleHeading2 )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:853:6: ( ruleHeading2 )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:854:1: ruleHeading2
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:947:6: ( ruleHeading2 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:948:1: ruleHeading2
                     {
                      before(grammarAccess.getParagraphTypesAccess().getHeading2ParserRuleCall_10()); 
-                    pushFollow(FOLLOW_ruleHeading2_in_rule__ParagraphTypes__Alternatives1800);
+                    pushFollow(FOLLOW_ruleHeading2_in_rule__ParagraphTypes__Alternatives1992);
                     ruleHeading2();
 
                     state._fsp--;
@@ -2400,13 +2576,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 12 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:859:6: ( ruleHeading3 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:953:6: ( ruleHeading3 )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:859:6: ( ruleHeading3 )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:860:1: ruleHeading3
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:953:6: ( ruleHeading3 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:954:1: ruleHeading3
                     {
                      before(grammarAccess.getParagraphTypesAccess().getHeading3ParserRuleCall_11()); 
-                    pushFollow(FOLLOW_ruleHeading3_in_rule__ParagraphTypes__Alternatives1817);
+                    pushFollow(FOLLOW_ruleHeading3_in_rule__ParagraphTypes__Alternatives2009);
                     ruleHeading3();
 
                     state._fsp--;
@@ -2419,13 +2595,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 13 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:865:6: ( ruleHeading4 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:959:6: ( ruleHeading4 )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:865:6: ( ruleHeading4 )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:866:1: ruleHeading4
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:959:6: ( ruleHeading4 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:960:1: ruleHeading4
                     {
                      before(grammarAccess.getParagraphTypesAccess().getHeading4ParserRuleCall_12()); 
-                    pushFollow(FOLLOW_ruleHeading4_in_rule__ParagraphTypes__Alternatives1834);
+                    pushFollow(FOLLOW_ruleHeading4_in_rule__ParagraphTypes__Alternatives2026);
                     ruleHeading4();
 
                     state._fsp--;
@@ -2438,13 +2614,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 14 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:871:6: ( ruleHeading5 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:965:6: ( ruleHeading5 )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:871:6: ( ruleHeading5 )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:872:1: ruleHeading5
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:965:6: ( ruleHeading5 )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:966:1: ruleHeading5
                     {
                      before(grammarAccess.getParagraphTypesAccess().getHeading5ParserRuleCall_13()); 
-                    pushFollow(FOLLOW_ruleHeading5_in_rule__ParagraphTypes__Alternatives1851);
+                    pushFollow(FOLLOW_ruleHeading5_in_rule__ParagraphTypes__Alternatives2043);
                     ruleHeading5();
 
                     state._fsp--;
@@ -2473,679 +2649,47 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ParagraphTypes__Alternatives"
 
 
-    // $ANTLR start "rule__BlockQuote__ContentAlternatives_2_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:882:1: rule__BlockQuote__ContentAlternatives_2_0 : ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) );
-    public final void rule__BlockQuote__ContentAlternatives_2_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:886:1: ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) )
-            int alt2=2;
-            int LA2_0 = input.LA(1);
-
-            if ( (LA2_0==RULE_ID||(LA2_0>=34 && LA2_0<=35)) ) {
-                alt2=1;
-            }
-            else if ( ((LA2_0>=31 && LA2_0<=33)) ) {
-                alt2=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 2, 0, input);
-
-                throw nvae;
-            }
-            switch (alt2) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:887:1: ( ruleAbstractUnformattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:887:1: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:888:1: ruleAbstractUnformattedInlineContent
-                    {
-                     before(grammarAccess.getBlockQuoteAccess().getContentAbstractUnformattedInlineContentParserRuleCall_2_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__BlockQuote__ContentAlternatives_2_01883);
-                    ruleAbstractUnformattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getBlockQuoteAccess().getContentAbstractUnformattedInlineContentParserRuleCall_2_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:893:6: ( ruleAbstractFormattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:893:6: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:894:1: ruleAbstractFormattedInlineContent
-                    {
-                     before(grammarAccess.getBlockQuoteAccess().getContentAbstractFormattedInlineContentParserRuleCall_2_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__BlockQuote__ContentAlternatives_2_01900);
-                    ruleAbstractFormattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getBlockQuoteAccess().getContentAbstractFormattedInlineContentParserRuleCall_2_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__BlockQuote__ContentAlternatives_2_0"
-
-
-    // $ANTLR start "rule__UnOrderListItemLevel2__NameAlternatives_1_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:904:1: rule__UnOrderListItemLevel2__NameAlternatives_1_0 : ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) );
-    public final void rule__UnOrderListItemLevel2__NameAlternatives_1_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:908:1: ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) )
-            int alt3=2;
-            int LA3_0 = input.LA(1);
-
-            if ( ((LA3_0>=31 && LA3_0<=33)) ) {
-                alt3=1;
-            }
-            else if ( (LA3_0==RULE_ID||(LA3_0>=34 && LA3_0<=35)) ) {
-                alt3=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 3, 0, input);
-
-                throw nvae;
-            }
-            switch (alt3) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:909:1: ( ruleAbstractFormattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:909:1: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:910:1: ruleAbstractFormattedInlineContent
-                    {
-                     before(grammarAccess.getUnOrderListItemLevel2Access().getNameAbstractFormattedInlineContentParserRuleCall_1_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__UnOrderListItemLevel2__NameAlternatives_1_01932);
-                    ruleAbstractFormattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getUnOrderListItemLevel2Access().getNameAbstractFormattedInlineContentParserRuleCall_1_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:915:6: ( ruleAbstractUnformattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:915:6: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:916:1: ruleAbstractUnformattedInlineContent
-                    {
-                     before(grammarAccess.getUnOrderListItemLevel2Access().getNameAbstractUnformattedInlineContentParserRuleCall_1_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__UnOrderListItemLevel2__NameAlternatives_1_01949);
-                    ruleAbstractUnformattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getUnOrderListItemLevel2Access().getNameAbstractUnformattedInlineContentParserRuleCall_1_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__UnOrderListItemLevel2__NameAlternatives_1_0"
-
-
-    // $ANTLR start "rule__UnOrderListItemLevel2__ListAlternatives_2_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:926:1: rule__UnOrderListItemLevel2__ListAlternatives_2_0 : ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) );
-    public final void rule__UnOrderListItemLevel2__ListAlternatives_2_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:930:1: ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( ((LA4_0>=31 && LA4_0<=33)) ) {
-                alt4=1;
-            }
-            else if ( (LA4_0==RULE_ID||(LA4_0>=34 && LA4_0<=35)) ) {
-                alt4=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 4, 0, input);
-
-                throw nvae;
-            }
-            switch (alt4) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:931:1: ( ruleAbstractFormattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:931:1: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:932:1: ruleAbstractFormattedInlineContent
-                    {
-                     before(grammarAccess.getUnOrderListItemLevel2Access().getListAbstractFormattedInlineContentParserRuleCall_2_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__UnOrderListItemLevel2__ListAlternatives_2_01981);
-                    ruleAbstractFormattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getUnOrderListItemLevel2Access().getListAbstractFormattedInlineContentParserRuleCall_2_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:937:6: ( ruleAbstractUnformattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:937:6: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:938:1: ruleAbstractUnformattedInlineContent
-                    {
-                     before(grammarAccess.getUnOrderListItemLevel2Access().getListAbstractUnformattedInlineContentParserRuleCall_2_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__UnOrderListItemLevel2__ListAlternatives_2_01998);
-                    ruleAbstractUnformattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getUnOrderListItemLevel2Access().getListAbstractUnformattedInlineContentParserRuleCall_2_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__UnOrderListItemLevel2__ListAlternatives_2_0"
-
-
-    // $ANTLR start "rule__UnOrderListItemLevel1__NameAlternatives_1_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:948:1: rule__UnOrderListItemLevel1__NameAlternatives_1_0 : ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) );
-    public final void rule__UnOrderListItemLevel1__NameAlternatives_1_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:952:1: ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) )
-            int alt5=2;
-            int LA5_0 = input.LA(1);
-
-            if ( ((LA5_0>=31 && LA5_0<=33)) ) {
-                alt5=1;
-            }
-            else if ( (LA5_0==RULE_ID||(LA5_0>=34 && LA5_0<=35)) ) {
-                alt5=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
-
-                throw nvae;
-            }
-            switch (alt5) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:953:1: ( ruleAbstractFormattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:953:1: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:954:1: ruleAbstractFormattedInlineContent
-                    {
-                     before(grammarAccess.getUnOrderListItemLevel1Access().getNameAbstractFormattedInlineContentParserRuleCall_1_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__UnOrderListItemLevel1__NameAlternatives_1_02030);
-                    ruleAbstractFormattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getUnOrderListItemLevel1Access().getNameAbstractFormattedInlineContentParserRuleCall_1_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:959:6: ( ruleAbstractUnformattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:959:6: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:960:1: ruleAbstractUnformattedInlineContent
-                    {
-                     before(grammarAccess.getUnOrderListItemLevel1Access().getNameAbstractUnformattedInlineContentParserRuleCall_1_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__UnOrderListItemLevel1__NameAlternatives_1_02047);
-                    ruleAbstractUnformattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getUnOrderListItemLevel1Access().getNameAbstractUnformattedInlineContentParserRuleCall_1_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__UnOrderListItemLevel1__NameAlternatives_1_0"
-
-
-    // $ANTLR start "rule__UnOrderListItemLevel1__ListAlternatives_2_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:970:1: rule__UnOrderListItemLevel1__ListAlternatives_2_0 : ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) );
-    public final void rule__UnOrderListItemLevel1__ListAlternatives_2_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:974:1: ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) )
-            int alt6=2;
-            int LA6_0 = input.LA(1);
-
-            if ( ((LA6_0>=31 && LA6_0<=33)) ) {
-                alt6=1;
-            }
-            else if ( (LA6_0==RULE_ID||(LA6_0>=34 && LA6_0<=35)) ) {
-                alt6=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 6, 0, input);
-
-                throw nvae;
-            }
-            switch (alt6) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:975:1: ( ruleAbstractFormattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:975:1: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:976:1: ruleAbstractFormattedInlineContent
-                    {
-                     before(grammarAccess.getUnOrderListItemLevel1Access().getListAbstractFormattedInlineContentParserRuleCall_2_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__UnOrderListItemLevel1__ListAlternatives_2_02079);
-                    ruleAbstractFormattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getUnOrderListItemLevel1Access().getListAbstractFormattedInlineContentParserRuleCall_2_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:981:6: ( ruleAbstractUnformattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:981:6: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:982:1: ruleAbstractUnformattedInlineContent
-                    {
-                     before(grammarAccess.getUnOrderListItemLevel1Access().getListAbstractUnformattedInlineContentParserRuleCall_2_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__UnOrderListItemLevel1__ListAlternatives_2_02096);
-                    ruleAbstractUnformattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getUnOrderListItemLevel1Access().getListAbstractUnformattedInlineContentParserRuleCall_2_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__UnOrderListItemLevel1__ListAlternatives_2_0"
-
-
-    // $ANTLR start "rule__OrderListItemLevel1__NameAlternatives_1_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:992:1: rule__OrderListItemLevel1__NameAlternatives_1_0 : ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) );
-    public final void rule__OrderListItemLevel1__NameAlternatives_1_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:996:1: ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) )
-            int alt7=2;
-            int LA7_0 = input.LA(1);
-
-            if ( ((LA7_0>=31 && LA7_0<=33)) ) {
-                alt7=1;
-            }
-            else if ( (LA7_0==RULE_ID||(LA7_0>=34 && LA7_0<=35)) ) {
-                alt7=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 7, 0, input);
-
-                throw nvae;
-            }
-            switch (alt7) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:997:1: ( ruleAbstractFormattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:997:1: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:998:1: ruleAbstractFormattedInlineContent
-                    {
-                     before(grammarAccess.getOrderListItemLevel1Access().getNameAbstractFormattedInlineContentParserRuleCall_1_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__OrderListItemLevel1__NameAlternatives_1_02128);
-                    ruleAbstractFormattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getOrderListItemLevel1Access().getNameAbstractFormattedInlineContentParserRuleCall_1_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1003:6: ( ruleAbstractUnformattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1003:6: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1004:1: ruleAbstractUnformattedInlineContent
-                    {
-                     before(grammarAccess.getOrderListItemLevel1Access().getNameAbstractUnformattedInlineContentParserRuleCall_1_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__OrderListItemLevel1__NameAlternatives_1_02145);
-                    ruleAbstractUnformattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getOrderListItemLevel1Access().getNameAbstractUnformattedInlineContentParserRuleCall_1_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__OrderListItemLevel1__NameAlternatives_1_0"
-
-
-    // $ANTLR start "rule__OrderListItemLevel1__ListAlternatives_2_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1014:1: rule__OrderListItemLevel1__ListAlternatives_2_0 : ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) );
-    public final void rule__OrderListItemLevel1__ListAlternatives_2_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1018:1: ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) )
-            int alt8=2;
-            int LA8_0 = input.LA(1);
-
-            if ( ((LA8_0>=31 && LA8_0<=33)) ) {
-                alt8=1;
-            }
-            else if ( (LA8_0==RULE_ID||(LA8_0>=34 && LA8_0<=35)) ) {
-                alt8=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 8, 0, input);
-
-                throw nvae;
-            }
-            switch (alt8) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1019:1: ( ruleAbstractFormattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1019:1: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1020:1: ruleAbstractFormattedInlineContent
-                    {
-                     before(grammarAccess.getOrderListItemLevel1Access().getListAbstractFormattedInlineContentParserRuleCall_2_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__OrderListItemLevel1__ListAlternatives_2_02177);
-                    ruleAbstractFormattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getOrderListItemLevel1Access().getListAbstractFormattedInlineContentParserRuleCall_2_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1025:6: ( ruleAbstractUnformattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1025:6: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1026:1: ruleAbstractUnformattedInlineContent
-                    {
-                     before(grammarAccess.getOrderListItemLevel1Access().getListAbstractUnformattedInlineContentParserRuleCall_2_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__OrderListItemLevel1__ListAlternatives_2_02194);
-                    ruleAbstractUnformattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getOrderListItemLevel1Access().getListAbstractUnformattedInlineContentParserRuleCall_2_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__OrderListItemLevel1__ListAlternatives_2_0"
-
-
-    // $ANTLR start "rule__File__CaptionAlternatives_5_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1036:1: rule__File__CaptionAlternatives_5_0 : ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) );
-    public final void rule__File__CaptionAlternatives_5_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1040:1: ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) )
-            int alt9=2;
-            int LA9_0 = input.LA(1);
-
-            if ( ((LA9_0>=31 && LA9_0<=33)) ) {
-                alt9=1;
-            }
-            else if ( (LA9_0==RULE_ID||(LA9_0>=34 && LA9_0<=35)) ) {
-                alt9=2;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 9, 0, input);
-
-                throw nvae;
-            }
-            switch (alt9) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1041:1: ( ruleAbstractFormattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1041:1: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1042:1: ruleAbstractFormattedInlineContent
-                    {
-                     before(grammarAccess.getFileAccess().getCaptionAbstractFormattedInlineContentParserRuleCall_5_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__File__CaptionAlternatives_5_02226);
-                    ruleAbstractFormattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getFileAccess().getCaptionAbstractFormattedInlineContentParserRuleCall_5_0_0()); 
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1047:6: ( ruleAbstractUnformattedInlineContent )
-                    {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1047:6: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1048:1: ruleAbstractUnformattedInlineContent
-                    {
-                     before(grammarAccess.getFileAccess().getCaptionAbstractUnformattedInlineContentParserRuleCall_5_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__File__CaptionAlternatives_5_02243);
-                    ruleAbstractUnformattedInlineContent();
-
-                    state._fsp--;
-
-                     after(grammarAccess.getFileAccess().getCaptionAbstractUnformattedInlineContentParserRuleCall_5_0_1()); 
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__File__CaptionAlternatives_5_0"
-
-
     // $ANTLR start "rule__AbstractFormattedInlineContent__Alternatives"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1058:1: rule__AbstractFormattedInlineContent__Alternatives : ( ( ruleBold ) | ( ruleItalic ) | ( ruleItalicBold ) );
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:976:1: rule__AbstractFormattedInlineContent__Alternatives : ( ( ruleBold ) | ( ruleItalic ) | ( ruleItalicBold ) );
     public final void rule__AbstractFormattedInlineContent__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1062:1: ( ( ruleBold ) | ( ruleItalic ) | ( ruleItalicBold ) )
-            int alt10=3;
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:980:1: ( ( ruleBold ) | ( ruleItalic ) | ( ruleItalicBold ) )
+            int alt2=3;
             switch ( input.LA(1) ) {
-            case 31:
+            case 40:
                 {
-                alt10=1;
+                alt2=1;
                 }
                 break;
-            case 32:
+            case 41:
                 {
-                alt10=2;
+                alt2=2;
                 }
                 break;
-            case 33:
+            case 42:
                 {
-                alt10=3;
+                alt2=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 10, 0, input);
+                    new NoViableAltException("", 2, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt10) {
+            switch (alt2) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1063:1: ( ruleBold )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:981:1: ( ruleBold )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1063:1: ( ruleBold )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1064:1: ruleBold
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:981:1: ( ruleBold )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:982:1: ruleBold
                     {
                      before(grammarAccess.getAbstractFormattedInlineContentAccess().getBoldParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleBold_in_rule__AbstractFormattedInlineContent__Alternatives2275);
+                    pushFollow(FOLLOW_ruleBold_in_rule__AbstractFormattedInlineContent__Alternatives2075);
                     ruleBold();
 
                     state._fsp--;
@@ -3158,13 +2702,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1069:6: ( ruleItalic )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:987:6: ( ruleItalic )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1069:6: ( ruleItalic )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1070:1: ruleItalic
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:987:6: ( ruleItalic )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:988:1: ruleItalic
                     {
                      before(grammarAccess.getAbstractFormattedInlineContentAccess().getItalicParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleItalic_in_rule__AbstractFormattedInlineContent__Alternatives2292);
+                    pushFollow(FOLLOW_ruleItalic_in_rule__AbstractFormattedInlineContent__Alternatives2092);
                     ruleItalic();
 
                     state._fsp--;
@@ -3177,13 +2721,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1075:6: ( ruleItalicBold )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:993:6: ( ruleItalicBold )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1075:6: ( ruleItalicBold )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1076:1: ruleItalicBold
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:993:6: ( ruleItalicBold )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:994:1: ruleItalicBold
                     {
                      before(grammarAccess.getAbstractFormattedInlineContentAccess().getItalicBoldParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleItalicBold_in_rule__AbstractFormattedInlineContent__Alternatives2309);
+                    pushFollow(FOLLOW_ruleItalicBold_in_rule__AbstractFormattedInlineContent__Alternatives2109);
                     ruleItalicBold();
 
                     state._fsp--;
@@ -3213,37 +2757,37 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AbstractUnformattedInlineContent__Alternatives"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1086:1: rule__AbstractUnformattedInlineContent__Alternatives : ( ( ruleText ) | ( ruleHyperLink ) );
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1004:1: rule__AbstractUnformattedInlineContent__Alternatives : ( ( ruleText ) | ( ruleHyperLink ) );
     public final void rule__AbstractUnformattedInlineContent__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1090:1: ( ( ruleText ) | ( ruleHyperLink ) )
-            int alt11=2;
-            int LA11_0 = input.LA(1);
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1008:1: ( ( ruleText ) | ( ruleHyperLink ) )
+            int alt3=2;
+            int LA3_0 = input.LA(1);
 
-            if ( (LA11_0==RULE_ID) ) {
-                alt11=1;
+            if ( (LA3_0==RULE_ID) ) {
+                alt3=1;
             }
-            else if ( ((LA11_0>=34 && LA11_0<=35)) ) {
-                alt11=2;
+            else if ( (LA3_0==30||LA3_0==43) ) {
+                alt3=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 11, 0, input);
+                    new NoViableAltException("", 3, 0, input);
 
                 throw nvae;
             }
-            switch (alt11) {
+            switch (alt3) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1091:1: ( ruleText )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1009:1: ( ruleText )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1091:1: ( ruleText )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1092:1: ruleText
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1009:1: ( ruleText )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1010:1: ruleText
                     {
                      before(grammarAccess.getAbstractUnformattedInlineContentAccess().getTextParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleText_in_rule__AbstractUnformattedInlineContent__Alternatives2341);
+                    pushFollow(FOLLOW_ruleText_in_rule__AbstractUnformattedInlineContent__Alternatives2141);
                     ruleText();
 
                     state._fsp--;
@@ -3256,13 +2800,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1097:6: ( ruleHyperLink )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1015:6: ( ruleHyperLink )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1097:6: ( ruleHyperLink )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1098:1: ruleHyperLink
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1015:6: ( ruleHyperLink )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1016:1: ruleHyperLink
                     {
                      before(grammarAccess.getAbstractUnformattedInlineContentAccess().getHyperLinkParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleHyperLink_in_rule__AbstractUnformattedInlineContent__Alternatives2358);
+                    pushFollow(FOLLOW_ruleHyperLink_in_rule__AbstractUnformattedInlineContent__Alternatives2158);
                     ruleHyperLink();
 
                     state._fsp--;
@@ -3292,24 +2836,24 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HyperLink__Alternatives"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1108:1: rule__HyperLink__Alternatives : ( ( ruleInternal ) | ( ruleInternalAlt ) | ( ruleExternal ) | ( ruleExternalAlt ) );
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1026:1: rule__HyperLink__Alternatives : ( ( ruleInternal ) | ( ruleInternalAlt ) | ( ruleExternal ) | ( ruleExternalAlt ) );
     public final void rule__HyperLink__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1112:1: ( ( ruleInternal ) | ( ruleInternalAlt ) | ( ruleExternal ) | ( ruleExternalAlt ) )
-            int alt12=4;
-            alt12 = dfa12.predict(input);
-            switch (alt12) {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1030:1: ( ( ruleInternal ) | ( ruleInternalAlt ) | ( ruleExternal ) | ( ruleExternalAlt ) )
+            int alt4=4;
+            alt4 = dfa4.predict(input);
+            switch (alt4) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1113:1: ( ruleInternal )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1031:1: ( ruleInternal )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1113:1: ( ruleInternal )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1114:1: ruleInternal
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1031:1: ( ruleInternal )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1032:1: ruleInternal
                     {
                      before(grammarAccess.getHyperLinkAccess().getInternalParserRuleCall_0()); 
-                    pushFollow(FOLLOW_ruleInternal_in_rule__HyperLink__Alternatives2390);
+                    pushFollow(FOLLOW_ruleInternal_in_rule__HyperLink__Alternatives2190);
                     ruleInternal();
 
                     state._fsp--;
@@ -3322,13 +2866,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1119:6: ( ruleInternalAlt )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1037:6: ( ruleInternalAlt )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1119:6: ( ruleInternalAlt )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1120:1: ruleInternalAlt
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1037:6: ( ruleInternalAlt )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1038:1: ruleInternalAlt
                     {
                      before(grammarAccess.getHyperLinkAccess().getInternalAltParserRuleCall_1()); 
-                    pushFollow(FOLLOW_ruleInternalAlt_in_rule__HyperLink__Alternatives2407);
+                    pushFollow(FOLLOW_ruleInternalAlt_in_rule__HyperLink__Alternatives2207);
                     ruleInternalAlt();
 
                     state._fsp--;
@@ -3341,13 +2885,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1125:6: ( ruleExternal )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1043:6: ( ruleExternal )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1125:6: ( ruleExternal )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1126:1: ruleExternal
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1043:6: ( ruleExternal )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1044:1: ruleExternal
                     {
                      before(grammarAccess.getHyperLinkAccess().getExternalParserRuleCall_2()); 
-                    pushFollow(FOLLOW_ruleExternal_in_rule__HyperLink__Alternatives2424);
+                    pushFollow(FOLLOW_ruleExternal_in_rule__HyperLink__Alternatives2224);
                     ruleExternal();
 
                     state._fsp--;
@@ -3360,13 +2904,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 4 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1131:6: ( ruleExternalAlt )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1049:6: ( ruleExternalAlt )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1131:6: ( ruleExternalAlt )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1132:1: ruleExternalAlt
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1049:6: ( ruleExternalAlt )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1050:1: ruleExternalAlt
                     {
                      before(grammarAccess.getHyperLinkAccess().getExternalAltParserRuleCall_3()); 
-                    pushFollow(FOLLOW_ruleExternalAlt_in_rule__HyperLink__Alternatives2441);
+                    pushFollow(FOLLOW_ruleExternalAlt_in_rule__HyperLink__Alternatives2241);
                     ruleExternalAlt();
 
                     state._fsp--;
@@ -3396,37 +2940,37 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__AltTextAlternatives_3_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1142:1: rule__InternalAlt__AltTextAlternatives_3_0 : ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) );
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1060:1: rule__InternalAlt__AltTextAlternatives_3_0 : ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) );
     public final void rule__InternalAlt__AltTextAlternatives_3_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1146:1: ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) )
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1064:1: ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) )
+            int alt5=2;
+            int LA5_0 = input.LA(1);
 
-            if ( (LA13_0==RULE_ID||(LA13_0>=34 && LA13_0<=35)) ) {
-                alt13=1;
+            if ( (LA5_0==RULE_ID||LA5_0==30||LA5_0==43) ) {
+                alt5=1;
             }
-            else if ( ((LA13_0>=31 && LA13_0<=33)) ) {
-                alt13=2;
+            else if ( ((LA5_0>=40 && LA5_0<=42)) ) {
+                alt5=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 13, 0, input);
+                    new NoViableAltException("", 5, 0, input);
 
                 throw nvae;
             }
-            switch (alt13) {
+            switch (alt5) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1147:1: ( ruleAbstractUnformattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1065:1: ( ruleAbstractUnformattedInlineContent )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1147:1: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1148:1: ruleAbstractUnformattedInlineContent
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1065:1: ( ruleAbstractUnformattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1066:1: ruleAbstractUnformattedInlineContent
                     {
                      before(grammarAccess.getInternalAltAccess().getAltTextAbstractUnformattedInlineContentParserRuleCall_3_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__InternalAlt__AltTextAlternatives_3_02473);
+                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__InternalAlt__AltTextAlternatives_3_02273);
                     ruleAbstractUnformattedInlineContent();
 
                     state._fsp--;
@@ -3439,13 +2983,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1153:6: ( ruleAbstractFormattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1071:6: ( ruleAbstractFormattedInlineContent )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1153:6: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1154:1: ruleAbstractFormattedInlineContent
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1071:6: ( ruleAbstractFormattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1072:1: ruleAbstractFormattedInlineContent
                     {
                      before(grammarAccess.getInternalAltAccess().getAltTextAbstractFormattedInlineContentParserRuleCall_3_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__InternalAlt__AltTextAlternatives_3_02490);
+                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__InternalAlt__AltTextAlternatives_3_02290);
                     ruleAbstractFormattedInlineContent();
 
                     state._fsp--;
@@ -3475,37 +3019,37 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__AltTextAlternatives_2_0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1164:1: rule__ExternalAlt__AltTextAlternatives_2_0 : ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) );
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1082:1: rule__ExternalAlt__AltTextAlternatives_2_0 : ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) );
     public final void rule__ExternalAlt__AltTextAlternatives_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1168:1: ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) )
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1086:1: ( ( ruleAbstractUnformattedInlineContent ) | ( ruleAbstractFormattedInlineContent ) )
+            int alt6=2;
+            int LA6_0 = input.LA(1);
 
-            if ( (LA14_0==RULE_ID||(LA14_0>=34 && LA14_0<=35)) ) {
-                alt14=1;
+            if ( (LA6_0==RULE_ID||LA6_0==30||LA6_0==43) ) {
+                alt6=1;
             }
-            else if ( ((LA14_0>=31 && LA14_0<=33)) ) {
-                alt14=2;
+            else if ( ((LA6_0>=40 && LA6_0<=42)) ) {
+                alt6=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 14, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
-            switch (alt14) {
+            switch (alt6) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1169:1: ( ruleAbstractUnformattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1087:1: ( ruleAbstractUnformattedInlineContent )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1169:1: ( ruleAbstractUnformattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1170:1: ruleAbstractUnformattedInlineContent
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1087:1: ( ruleAbstractUnformattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1088:1: ruleAbstractUnformattedInlineContent
                     {
                      before(grammarAccess.getExternalAltAccess().getAltTextAbstractUnformattedInlineContentParserRuleCall_2_0_0()); 
-                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ExternalAlt__AltTextAlternatives_2_02522);
+                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ExternalAlt__AltTextAlternatives_2_02322);
                     ruleAbstractUnformattedInlineContent();
 
                     state._fsp--;
@@ -3518,13 +3062,13 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1175:6: ( ruleAbstractFormattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1093:6: ( ruleAbstractFormattedInlineContent )
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1175:6: ( ruleAbstractFormattedInlineContent )
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1176:1: ruleAbstractFormattedInlineContent
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1093:6: ( ruleAbstractFormattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1094:1: ruleAbstractFormattedInlineContent
                     {
                      before(grammarAccess.getExternalAltAccess().getAltTextAbstractFormattedInlineContentParserRuleCall_2_0_1()); 
-                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__ExternalAlt__AltTextAlternatives_2_02539);
+                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__ExternalAlt__AltTextAlternatives_2_02339);
                     ruleAbstractFormattedInlineContent();
 
                     state._fsp--;
@@ -3553,23 +3097,406 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ExternalAlt__AltTextAlternatives_2_0"
 
 
-    // $ANTLR start "rule__Wiki__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1188:1: rule__Wiki__Group__0 : rule__Wiki__Group__0__Impl rule__Wiki__Group__1 ;
-    public final void rule__Wiki__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__AnyText__NameAlternatives_0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1104:1: rule__AnyText__NameAlternatives_0 : ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) );
+    public final void rule__AnyText__NameAlternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1192:1: ( rule__Wiki__Group__0__Impl rule__Wiki__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1193:2: rule__Wiki__Group__0__Impl rule__Wiki__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1108:1: ( ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) )
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( ((LA7_0>=40 && LA7_0<=42)) ) {
+                alt7=1;
+            }
+            else if ( (LA7_0==RULE_ID||LA7_0==30||LA7_0==43) ) {
+                alt7=2;
+            }
+            else {
+                NoViableAltException nvae =
+                    new NoViableAltException("", 7, 0, input);
+
+                throw nvae;
+            }
+            switch (alt7) {
+                case 1 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1109:1: ( ruleAbstractFormattedInlineContent )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1109:1: ( ruleAbstractFormattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1110:1: ruleAbstractFormattedInlineContent
+                    {
+                     before(grammarAccess.getAnyTextAccess().getNameAbstractFormattedInlineContentParserRuleCall_0_0()); 
+                    pushFollow(FOLLOW_ruleAbstractFormattedInlineContent_in_rule__AnyText__NameAlternatives_02371);
+                    ruleAbstractFormattedInlineContent();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getAnyTextAccess().getNameAbstractFormattedInlineContentParserRuleCall_0_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1115:6: ( ruleAbstractUnformattedInlineContent )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1115:6: ( ruleAbstractUnformattedInlineContent )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1116:1: ruleAbstractUnformattedInlineContent
+                    {
+                     before(grammarAccess.getAnyTextAccess().getNameAbstractUnformattedInlineContentParserRuleCall_0_1()); 
+                    pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__AnyText__NameAlternatives_02388);
+                    ruleAbstractUnformattedInlineContent();
+
+                    state._fsp--;
+
+                     after(grammarAccess.getAnyTextAccess().getNameAbstractUnformattedInlineContentParserRuleCall_0_1()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AnyText__NameAlternatives_0"
+
+
+    // $ANTLR start "rule__ViewType__Alternatives"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1126:1: rule__ViewType__Alternatives : ( ( ( 'thumb' ) ) | ( ( 'thumbnail' ) ) | ( ( 'frame' ) ) | ( ( 'framed' ) ) | ( ( 'frameless' ) ) );
+    public final void rule__ViewType__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1130:1: ( ( ( 'thumb' ) ) | ( ( 'thumbnail' ) ) | ( ( 'frame' ) ) | ( ( 'framed' ) ) | ( ( 'frameless' ) ) )
+            int alt8=5;
+            switch ( input.LA(1) ) {
+            case 12:
+                {
+                alt8=1;
+                }
+                break;
+            case 13:
+                {
+                alt8=2;
+                }
+                break;
+            case 14:
+                {
+                alt8=3;
+                }
+                break;
+            case 15:
+                {
+                alt8=4;
+                }
+                break;
+            case 16:
+                {
+                alt8=5;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 8, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt8) {
+                case 1 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1131:1: ( ( 'thumb' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1131:1: ( ( 'thumb' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1132:1: ( 'thumb' )
+                    {
+                     before(grammarAccess.getViewTypeAccess().getThumbEnumLiteralDeclaration_0()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1133:1: ( 'thumb' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1133:3: 'thumb'
+                    {
+                    match(input,12,FOLLOW_12_in_rule__ViewType__Alternatives2421); 
+
+                    }
+
+                     after(grammarAccess.getViewTypeAccess().getThumbEnumLiteralDeclaration_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1138:6: ( ( 'thumbnail' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1138:6: ( ( 'thumbnail' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1139:1: ( 'thumbnail' )
+                    {
+                     before(grammarAccess.getViewTypeAccess().getThumbnailEnumLiteralDeclaration_1()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1140:1: ( 'thumbnail' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1140:3: 'thumbnail'
+                    {
+                    match(input,13,FOLLOW_13_in_rule__ViewType__Alternatives2442); 
+
+                    }
+
+                     after(grammarAccess.getViewTypeAccess().getThumbnailEnumLiteralDeclaration_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1145:6: ( ( 'frame' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1145:6: ( ( 'frame' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1146:1: ( 'frame' )
+                    {
+                     before(grammarAccess.getViewTypeAccess().getFrameEnumLiteralDeclaration_2()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1147:1: ( 'frame' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1147:3: 'frame'
+                    {
+                    match(input,14,FOLLOW_14_in_rule__ViewType__Alternatives2463); 
+
+                    }
+
+                     after(grammarAccess.getViewTypeAccess().getFrameEnumLiteralDeclaration_2()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1152:6: ( ( 'framed' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1152:6: ( ( 'framed' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1153:1: ( 'framed' )
+                    {
+                     before(grammarAccess.getViewTypeAccess().getFramedEnumLiteralDeclaration_3()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1154:1: ( 'framed' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1154:3: 'framed'
+                    {
+                    match(input,15,FOLLOW_15_in_rule__ViewType__Alternatives2484); 
+
+                    }
+
+                     after(grammarAccess.getViewTypeAccess().getFramedEnumLiteralDeclaration_3()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1159:6: ( ( 'frameless' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1159:6: ( ( 'frameless' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1160:1: ( 'frameless' )
+                    {
+                     before(grammarAccess.getViewTypeAccess().getFramelessEnumLiteralDeclaration_4()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1161:1: ( 'frameless' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1161:3: 'frameless'
+                    {
+                    match(input,16,FOLLOW_16_in_rule__ViewType__Alternatives2505); 
+
+                    }
+
+                     after(grammarAccess.getViewTypeAccess().getFramelessEnumLiteralDeclaration_4()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ViewType__Alternatives"
+
+
+    // $ANTLR start "rule__HorizontalAlign__Alternatives"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1171:1: rule__HorizontalAlign__Alternatives : ( ( ( 'right' ) ) | ( ( 'left' ) ) | ( ( 'center' ) ) | ( ( 'none' ) ) );
+    public final void rule__HorizontalAlign__Alternatives() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1175:1: ( ( ( 'right' ) ) | ( ( 'left' ) ) | ( ( 'center' ) ) | ( ( 'none' ) ) )
+            int alt9=4;
+            switch ( input.LA(1) ) {
+            case 17:
+                {
+                alt9=1;
+                }
+                break;
+            case 18:
+                {
+                alt9=2;
+                }
+                break;
+            case 19:
+                {
+                alt9=3;
+                }
+                break;
+            case 20:
+                {
+                alt9=4;
+                }
+                break;
+            default:
+                NoViableAltException nvae =
+                    new NoViableAltException("", 9, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt9) {
+                case 1 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1176:1: ( ( 'right' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1176:1: ( ( 'right' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1177:1: ( 'right' )
+                    {
+                     before(grammarAccess.getHorizontalAlignAccess().getRightEnumLiteralDeclaration_0()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1178:1: ( 'right' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1178:3: 'right'
+                    {
+                    match(input,17,FOLLOW_17_in_rule__HorizontalAlign__Alternatives2541); 
+
+                    }
+
+                     after(grammarAccess.getHorizontalAlignAccess().getRightEnumLiteralDeclaration_0()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1183:6: ( ( 'left' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1183:6: ( ( 'left' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1184:1: ( 'left' )
+                    {
+                     before(grammarAccess.getHorizontalAlignAccess().getLeftEnumLiteralDeclaration_1()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1185:1: ( 'left' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1185:3: 'left'
+                    {
+                    match(input,18,FOLLOW_18_in_rule__HorizontalAlign__Alternatives2562); 
+
+                    }
+
+                     after(grammarAccess.getHorizontalAlignAccess().getLeftEnumLiteralDeclaration_1()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1190:6: ( ( 'center' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1190:6: ( ( 'center' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1191:1: ( 'center' )
+                    {
+                     before(grammarAccess.getHorizontalAlignAccess().getCenterEnumLiteralDeclaration_2()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1192:1: ( 'center' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1192:3: 'center'
+                    {
+                    match(input,19,FOLLOW_19_in_rule__HorizontalAlign__Alternatives2583); 
+
+                    }
+
+                     after(grammarAccess.getHorizontalAlignAccess().getCenterEnumLiteralDeclaration_2()); 
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1197:6: ( ( 'none' ) )
+                    {
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1197:6: ( ( 'none' ) )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1198:1: ( 'none' )
+                    {
+                     before(grammarAccess.getHorizontalAlignAccess().getNoneEnumLiteralDeclaration_3()); 
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1199:1: ( 'none' )
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1199:3: 'none'
+                    {
+                    match(input,20,FOLLOW_20_in_rule__HorizontalAlign__Alternatives2604); 
+
+                    }
+
+                     after(grammarAccess.getHorizontalAlignAccess().getNoneEnumLiteralDeclaration_3()); 
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__HorizontalAlign__Alternatives"
+
+
+    // $ANTLR start "rule__WikiPage__Group__0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1211:1: rule__WikiPage__Group__0 : rule__WikiPage__Group__0__Impl rule__WikiPage__Group__1 ;
+    public final void rule__WikiPage__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1215:1: ( rule__WikiPage__Group__0__Impl rule__WikiPage__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1216:2: rule__WikiPage__Group__0__Impl rule__WikiPage__Group__1
             {
-            pushFollow(FOLLOW_rule__Wiki__Group__0__Impl_in_rule__Wiki__Group__02569);
-            rule__Wiki__Group__0__Impl();
+            pushFollow(FOLLOW_rule__WikiPage__Group__0__Impl_in_rule__WikiPage__Group__02637);
+            rule__WikiPage__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Wiki__Group__1_in_rule__Wiki__Group__02572);
-            rule__Wiki__Group__1();
+            pushFollow(FOLLOW_rule__WikiPage__Group__1_in_rule__WikiPage__Group__02640);
+            rule__WikiPage__Group__1();
 
             state._fsp--;
 
@@ -3588,29 +3515,35 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Wiki__Group__0"
+    // $ANTLR end "rule__WikiPage__Group__0"
 
 
-    // $ANTLR start "rule__Wiki__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1200:1: rule__Wiki__Group__0__Impl : ( ruleHeading1 ) ;
-    public final void rule__Wiki__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WikiPage__Group__0__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1223:1: rule__WikiPage__Group__0__Impl : ( ( rule__WikiPage__NameAssignment_0 ) ) ;
+    public final void rule__WikiPage__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1204:1: ( ( ruleHeading1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1205:1: ( ruleHeading1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1227:1: ( ( ( rule__WikiPage__NameAssignment_0 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1228:1: ( ( rule__WikiPage__NameAssignment_0 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1205:1: ( ruleHeading1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1206:1: ruleHeading1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1228:1: ( ( rule__WikiPage__NameAssignment_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1229:1: ( rule__WikiPage__NameAssignment_0 )
             {
-             before(grammarAccess.getWikiAccess().getHeading1ParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleHeading1_in_rule__Wiki__Group__0__Impl2599);
-            ruleHeading1();
+             before(grammarAccess.getWikiPageAccess().getNameAssignment_0()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1230:1: ( rule__WikiPage__NameAssignment_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1230:2: rule__WikiPage__NameAssignment_0
+            {
+            pushFollow(FOLLOW_rule__WikiPage__NameAssignment_0_in_rule__WikiPage__Group__0__Impl2667);
+            rule__WikiPage__NameAssignment_0();
 
             state._fsp--;
 
-             after(grammarAccess.getWikiAccess().getHeading1ParserRuleCall_0()); 
+
+            }
+
+             after(grammarAccess.getWikiPageAccess().getNameAssignment_0()); 
 
             }
 
@@ -3629,21 +3562,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Wiki__Group__0__Impl"
+    // $ANTLR end "rule__WikiPage__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Wiki__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1217:1: rule__Wiki__Group__1 : rule__Wiki__Group__1__Impl ;
-    public final void rule__Wiki__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__WikiPage__Group__1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1240:1: rule__WikiPage__Group__1 : rule__WikiPage__Group__1__Impl ;
+    public final void rule__WikiPage__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1221:1: ( rule__Wiki__Group__1__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1222:2: rule__Wiki__Group__1__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1244:1: ( rule__WikiPage__Group__1__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1245:2: rule__WikiPage__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Wiki__Group__1__Impl_in_rule__Wiki__Group__12628);
-            rule__Wiki__Group__1__Impl();
+            pushFollow(FOLLOW_rule__WikiPage__Group__1__Impl_in_rule__WikiPage__Group__12697);
+            rule__WikiPage__Group__1__Impl();
 
             state._fsp--;
 
@@ -3662,40 +3595,40 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Wiki__Group__1"
+    // $ANTLR end "rule__WikiPage__Group__1"
 
 
-    // $ANTLR start "rule__Wiki__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1228:1: rule__Wiki__Group__1__Impl : ( ( rule__Wiki__ElementsAssignment_1 )* ) ;
-    public final void rule__Wiki__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__WikiPage__Group__1__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1251:1: rule__WikiPage__Group__1__Impl : ( ( rule__WikiPage__ElementsAssignment_1 )* ) ;
+    public final void rule__WikiPage__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1232:1: ( ( ( rule__Wiki__ElementsAssignment_1 )* ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1233:1: ( ( rule__Wiki__ElementsAssignment_1 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1255:1: ( ( ( rule__WikiPage__ElementsAssignment_1 )* ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1256:1: ( ( rule__WikiPage__ElementsAssignment_1 )* )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1233:1: ( ( rule__Wiki__ElementsAssignment_1 )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1234:1: ( rule__Wiki__ElementsAssignment_1 )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1256:1: ( ( rule__WikiPage__ElementsAssignment_1 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1257:1: ( rule__WikiPage__ElementsAssignment_1 )*
             {
-             before(grammarAccess.getWikiAccess().getElementsAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1235:1: ( rule__Wiki__ElementsAssignment_1 )*
-            loop15:
+             before(grammarAccess.getWikiPageAccess().getElementsAssignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1258:1: ( rule__WikiPage__ElementsAssignment_1 )*
+            loop10:
             do {
-                int alt15=2;
-                int LA15_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA15_0==RULE_ID||LA15_0==12||LA15_0==14||LA15_0==17||(LA15_0>=19 && LA15_0<=21)||LA15_0==24||(LA15_0>=26 && LA15_0<=35)) ) {
-                    alt15=1;
+                if ( (LA10_0==RULE_ID||LA10_0==21||LA10_0==23||LA10_0==26||(LA10_0>=28 && LA10_0<=30)||(LA10_0>=35 && LA10_0<=43)) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt15) {
+                switch (alt10) {
             	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1235:2: rule__Wiki__ElementsAssignment_1
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1258:2: rule__WikiPage__ElementsAssignment_1
             	    {
-            	    pushFollow(FOLLOW_rule__Wiki__ElementsAssignment_1_in_rule__Wiki__Group__1__Impl2655);
-            	    rule__Wiki__ElementsAssignment_1();
+            	    pushFollow(FOLLOW_rule__WikiPage__ElementsAssignment_1_in_rule__WikiPage__Group__1__Impl2724);
+            	    rule__WikiPage__ElementsAssignment_1();
 
             	    state._fsp--;
 
@@ -3704,11 +3637,11 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
             	    break;
 
             	default :
-            	    break loop15;
+            	    break loop10;
                 }
             } while (true);
 
-             after(grammarAccess.getWikiAccess().getElementsAssignment_1()); 
+             after(grammarAccess.getWikiPageAccess().getElementsAssignment_1()); 
 
             }
 
@@ -3727,25 +3660,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Wiki__Group__1__Impl"
+    // $ANTLR end "rule__WikiPage__Group__1__Impl"
 
 
     // $ANTLR start "rule__BlockQuote__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1249:1: rule__BlockQuote__Group__0 : rule__BlockQuote__Group__0__Impl rule__BlockQuote__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1272:1: rule__BlockQuote__Group__0 : rule__BlockQuote__Group__0__Impl rule__BlockQuote__Group__1 ;
     public final void rule__BlockQuote__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1253:1: ( rule__BlockQuote__Group__0__Impl rule__BlockQuote__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1254:2: rule__BlockQuote__Group__0__Impl rule__BlockQuote__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1276:1: ( rule__BlockQuote__Group__0__Impl rule__BlockQuote__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1277:2: rule__BlockQuote__Group__0__Impl rule__BlockQuote__Group__1
             {
-            pushFollow(FOLLOW_rule__BlockQuote__Group__0__Impl_in_rule__BlockQuote__Group__02690);
+            pushFollow(FOLLOW_rule__BlockQuote__Group__0__Impl_in_rule__BlockQuote__Group__02759);
             rule__BlockQuote__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BlockQuote__Group__1_in_rule__BlockQuote__Group__02693);
+            pushFollow(FOLLOW_rule__BlockQuote__Group__1_in_rule__BlockQuote__Group__02762);
             rule__BlockQuote__Group__1();
 
             state._fsp--;
@@ -3769,21 +3702,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockQuote__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1261:1: rule__BlockQuote__Group__0__Impl : ( () ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1284:1: rule__BlockQuote__Group__0__Impl : ( () ) ;
     public final void rule__BlockQuote__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1265:1: ( ( () ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1266:1: ( () )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1288:1: ( ( () ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1289:1: ( () )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1266:1: ( () )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1267:1: ()
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1289:1: ( () )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1290:1: ()
             {
              before(grammarAccess.getBlockQuoteAccess().getBlockQuoteAction_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1268:1: ()
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1270:1: 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1291:1: ()
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1293:1: 
             {
             }
 
@@ -3806,21 +3739,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockQuote__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1280:1: rule__BlockQuote__Group__1 : rule__BlockQuote__Group__1__Impl rule__BlockQuote__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1303:1: rule__BlockQuote__Group__1 : rule__BlockQuote__Group__1__Impl rule__BlockQuote__Group__2 ;
     public final void rule__BlockQuote__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1284:1: ( rule__BlockQuote__Group__1__Impl rule__BlockQuote__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1285:2: rule__BlockQuote__Group__1__Impl rule__BlockQuote__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1307:1: ( rule__BlockQuote__Group__1__Impl rule__BlockQuote__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1308:2: rule__BlockQuote__Group__1__Impl rule__BlockQuote__Group__2
             {
-            pushFollow(FOLLOW_rule__BlockQuote__Group__1__Impl_in_rule__BlockQuote__Group__12751);
+            pushFollow(FOLLOW_rule__BlockQuote__Group__1__Impl_in_rule__BlockQuote__Group__12820);
             rule__BlockQuote__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BlockQuote__Group__2_in_rule__BlockQuote__Group__12754);
+            pushFollow(FOLLOW_rule__BlockQuote__Group__2_in_rule__BlockQuote__Group__12823);
             rule__BlockQuote__Group__2();
 
             state._fsp--;
@@ -3844,20 +3777,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockQuote__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1292:1: rule__BlockQuote__Group__1__Impl : ( '<blockquote>' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1315:1: rule__BlockQuote__Group__1__Impl : ( '<blockquote>' ) ;
     public final void rule__BlockQuote__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1296:1: ( ( '<blockquote>' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1297:1: ( '<blockquote>' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1319:1: ( ( '<blockquote>' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1320:1: ( '<blockquote>' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1297:1: ( '<blockquote>' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1298:1: '<blockquote>'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1320:1: ( '<blockquote>' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1321:1: '<blockquote>'
             {
              before(grammarAccess.getBlockQuoteAccess().getBlockquoteKeyword_1()); 
-            match(input,12,FOLLOW_12_in_rule__BlockQuote__Group__1__Impl2782); 
+            match(input,21,FOLLOW_21_in_rule__BlockQuote__Group__1__Impl2851); 
              after(grammarAccess.getBlockQuoteAccess().getBlockquoteKeyword_1()); 
 
             }
@@ -3881,21 +3814,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockQuote__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1311:1: rule__BlockQuote__Group__2 : rule__BlockQuote__Group__2__Impl rule__BlockQuote__Group__3 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1334:1: rule__BlockQuote__Group__2 : rule__BlockQuote__Group__2__Impl rule__BlockQuote__Group__3 ;
     public final void rule__BlockQuote__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1315:1: ( rule__BlockQuote__Group__2__Impl rule__BlockQuote__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1316:2: rule__BlockQuote__Group__2__Impl rule__BlockQuote__Group__3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1338:1: ( rule__BlockQuote__Group__2__Impl rule__BlockQuote__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1339:2: rule__BlockQuote__Group__2__Impl rule__BlockQuote__Group__3
             {
-            pushFollow(FOLLOW_rule__BlockQuote__Group__2__Impl_in_rule__BlockQuote__Group__22813);
+            pushFollow(FOLLOW_rule__BlockQuote__Group__2__Impl_in_rule__BlockQuote__Group__22882);
             rule__BlockQuote__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__BlockQuote__Group__3_in_rule__BlockQuote__Group__22816);
+            pushFollow(FOLLOW_rule__BlockQuote__Group__3_in_rule__BlockQuote__Group__22885);
             rule__BlockQuote__Group__3();
 
             state._fsp--;
@@ -3919,47 +3852,29 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockQuote__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1323:1: rule__BlockQuote__Group__2__Impl : ( ( rule__BlockQuote__ContentAssignment_2 )* ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1346:1: rule__BlockQuote__Group__2__Impl : ( ( rule__BlockQuote__ContentAssignment_2 ) ) ;
     public final void rule__BlockQuote__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1327:1: ( ( ( rule__BlockQuote__ContentAssignment_2 )* ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1328:1: ( ( rule__BlockQuote__ContentAssignment_2 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1350:1: ( ( ( rule__BlockQuote__ContentAssignment_2 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1351:1: ( ( rule__BlockQuote__ContentAssignment_2 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1328:1: ( ( rule__BlockQuote__ContentAssignment_2 )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1329:1: ( rule__BlockQuote__ContentAssignment_2 )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1351:1: ( ( rule__BlockQuote__ContentAssignment_2 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1352:1: ( rule__BlockQuote__ContentAssignment_2 )
             {
              before(grammarAccess.getBlockQuoteAccess().getContentAssignment_2()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1330:1: ( rule__BlockQuote__ContentAssignment_2 )*
-            loop16:
-            do {
-                int alt16=2;
-                int LA16_0 = input.LA(1);
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1353:1: ( rule__BlockQuote__ContentAssignment_2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1353:2: rule__BlockQuote__ContentAssignment_2
+            {
+            pushFollow(FOLLOW_rule__BlockQuote__ContentAssignment_2_in_rule__BlockQuote__Group__2__Impl2912);
+            rule__BlockQuote__ContentAssignment_2();
 
-                if ( (LA16_0==RULE_ID||(LA16_0>=31 && LA16_0<=35)) ) {
-                    alt16=1;
-                }
+            state._fsp--;
 
 
-                switch (alt16) {
-            	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1330:2: rule__BlockQuote__ContentAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_rule__BlockQuote__ContentAssignment_2_in_rule__BlockQuote__Group__2__Impl2843);
-            	    rule__BlockQuote__ContentAssignment_2();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop16;
-                }
-            } while (true);
+            }
 
              after(grammarAccess.getBlockQuoteAccess().getContentAssignment_2()); 
 
@@ -3984,16 +3899,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockQuote__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1340:1: rule__BlockQuote__Group__3 : rule__BlockQuote__Group__3__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1363:1: rule__BlockQuote__Group__3 : rule__BlockQuote__Group__3__Impl ;
     public final void rule__BlockQuote__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1344:1: ( rule__BlockQuote__Group__3__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1345:2: rule__BlockQuote__Group__3__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1367:1: ( rule__BlockQuote__Group__3__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1368:2: rule__BlockQuote__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__BlockQuote__Group__3__Impl_in_rule__BlockQuote__Group__32874);
+            pushFollow(FOLLOW_rule__BlockQuote__Group__3__Impl_in_rule__BlockQuote__Group__32942);
             rule__BlockQuote__Group__3__Impl();
 
             state._fsp--;
@@ -4017,20 +3932,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__BlockQuote__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1351:1: rule__BlockQuote__Group__3__Impl : ( '</blockquote>' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1374:1: rule__BlockQuote__Group__3__Impl : ( '</blockquote>' ) ;
     public final void rule__BlockQuote__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1355:1: ( ( '</blockquote>' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1356:1: ( '</blockquote>' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1378:1: ( ( '</blockquote>' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1379:1: ( '</blockquote>' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1356:1: ( '</blockquote>' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1357:1: '</blockquote>'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1379:1: ( '</blockquote>' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1380:1: '</blockquote>'
             {
              before(grammarAccess.getBlockQuoteAccess().getBlockquoteKeyword_3()); 
-            match(input,13,FOLLOW_13_in_rule__BlockQuote__Group__3__Impl2902); 
+            match(input,22,FOLLOW_22_in_rule__BlockQuote__Group__3__Impl2970); 
              after(grammarAccess.getBlockQuoteAccess().getBlockquoteKeyword_3()); 
 
             }
@@ -4054,21 +3969,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Template__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1378:1: rule__Template__Group__0 : rule__Template__Group__0__Impl rule__Template__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1401:1: rule__Template__Group__0 : rule__Template__Group__0__Impl rule__Template__Group__1 ;
     public final void rule__Template__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1382:1: ( rule__Template__Group__0__Impl rule__Template__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1383:2: rule__Template__Group__0__Impl rule__Template__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1405:1: ( rule__Template__Group__0__Impl rule__Template__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1406:2: rule__Template__Group__0__Impl rule__Template__Group__1
             {
-            pushFollow(FOLLOW_rule__Template__Group__0__Impl_in_rule__Template__Group__02941);
+            pushFollow(FOLLOW_rule__Template__Group__0__Impl_in_rule__Template__Group__03009);
             rule__Template__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Template__Group__1_in_rule__Template__Group__02944);
+            pushFollow(FOLLOW_rule__Template__Group__1_in_rule__Template__Group__03012);
             rule__Template__Group__1();
 
             state._fsp--;
@@ -4092,20 +4007,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Template__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1390:1: rule__Template__Group__0__Impl : ( '{{' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1413:1: rule__Template__Group__0__Impl : ( '{{' ) ;
     public final void rule__Template__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1394:1: ( ( '{{' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1395:1: ( '{{' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1417:1: ( ( '{{' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1418:1: ( '{{' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1395:1: ( '{{' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1396:1: '{{'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1418:1: ( '{{' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1419:1: '{{'
             {
              before(grammarAccess.getTemplateAccess().getLeftCurlyBracketLeftCurlyBracketKeyword_0()); 
-            match(input,14,FOLLOW_14_in_rule__Template__Group__0__Impl2972); 
+            match(input,23,FOLLOW_23_in_rule__Template__Group__0__Impl3040); 
              after(grammarAccess.getTemplateAccess().getLeftCurlyBracketLeftCurlyBracketKeyword_0()); 
 
             }
@@ -4129,21 +4044,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Template__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1409:1: rule__Template__Group__1 : rule__Template__Group__1__Impl rule__Template__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1432:1: rule__Template__Group__1 : rule__Template__Group__1__Impl rule__Template__Group__2 ;
     public final void rule__Template__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1413:1: ( rule__Template__Group__1__Impl rule__Template__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1414:2: rule__Template__Group__1__Impl rule__Template__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1436:1: ( rule__Template__Group__1__Impl rule__Template__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1437:2: rule__Template__Group__1__Impl rule__Template__Group__2
             {
-            pushFollow(FOLLOW_rule__Template__Group__1__Impl_in_rule__Template__Group__13003);
+            pushFollow(FOLLOW_rule__Template__Group__1__Impl_in_rule__Template__Group__13071);
             rule__Template__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Template__Group__2_in_rule__Template__Group__13006);
+            pushFollow(FOLLOW_rule__Template__Group__2_in_rule__Template__Group__13074);
             rule__Template__Group__2();
 
             state._fsp--;
@@ -4167,31 +4082,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Template__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1421:1: rule__Template__Group__1__Impl : ( ( rule__Template__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1444:1: rule__Template__Group__1__Impl : ( ( rule__Template__ContentAssignment_1 ) ) ;
     public final void rule__Template__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1425:1: ( ( ( rule__Template__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1426:1: ( ( rule__Template__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1448:1: ( ( ( rule__Template__ContentAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1449:1: ( ( rule__Template__ContentAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1426:1: ( ( rule__Template__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1427:1: ( rule__Template__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1449:1: ( ( rule__Template__ContentAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1450:1: ( rule__Template__ContentAssignment_1 )
             {
-             before(grammarAccess.getTemplateAccess().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1428:1: ( rule__Template__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1428:2: rule__Template__NameAssignment_1
+             before(grammarAccess.getTemplateAccess().getContentAssignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1451:1: ( rule__Template__ContentAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1451:2: rule__Template__ContentAssignment_1
             {
-            pushFollow(FOLLOW_rule__Template__NameAssignment_1_in_rule__Template__Group__1__Impl3033);
-            rule__Template__NameAssignment_1();
+            pushFollow(FOLLOW_rule__Template__ContentAssignment_1_in_rule__Template__Group__1__Impl3101);
+            rule__Template__ContentAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getTemplateAccess().getNameAssignment_1()); 
+             after(grammarAccess.getTemplateAccess().getContentAssignment_1()); 
 
             }
 
@@ -4214,21 +4129,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Template__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1438:1: rule__Template__Group__2 : rule__Template__Group__2__Impl rule__Template__Group__3 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1461:1: rule__Template__Group__2 : rule__Template__Group__2__Impl rule__Template__Group__3 ;
     public final void rule__Template__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1442:1: ( rule__Template__Group__2__Impl rule__Template__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1443:2: rule__Template__Group__2__Impl rule__Template__Group__3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1465:1: ( rule__Template__Group__2__Impl rule__Template__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1466:2: rule__Template__Group__2__Impl rule__Template__Group__3
             {
-            pushFollow(FOLLOW_rule__Template__Group__2__Impl_in_rule__Template__Group__23063);
+            pushFollow(FOLLOW_rule__Template__Group__2__Impl_in_rule__Template__Group__23131);
             rule__Template__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Template__Group__3_in_rule__Template__Group__23066);
+            pushFollow(FOLLOW_rule__Template__Group__3_in_rule__Template__Group__23134);
             rule__Template__Group__3();
 
             state._fsp--;
@@ -4252,21 +4167,74 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Template__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1450:1: rule__Template__Group__2__Impl : ( '|' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1473:1: rule__Template__Group__2__Impl : ( ( ( rule__Template__Group_2__0 ) ) ( ( rule__Template__Group_2__0 )* ) ) ;
     public final void rule__Template__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1454:1: ( ( '|' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1455:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1477:1: ( ( ( ( rule__Template__Group_2__0 ) ) ( ( rule__Template__Group_2__0 )* ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1478:1: ( ( ( rule__Template__Group_2__0 ) ) ( ( rule__Template__Group_2__0 )* ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1455:1: ( '|' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1456:1: '|'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1478:1: ( ( ( rule__Template__Group_2__0 ) ) ( ( rule__Template__Group_2__0 )* ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1479:1: ( ( rule__Template__Group_2__0 ) ) ( ( rule__Template__Group_2__0 )* )
             {
-             before(grammarAccess.getTemplateAccess().getVerticalLineKeyword_2()); 
-            match(input,15,FOLLOW_15_in_rule__Template__Group__2__Impl3094); 
-             after(grammarAccess.getTemplateAccess().getVerticalLineKeyword_2()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1479:1: ( ( rule__Template__Group_2__0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1480:1: ( rule__Template__Group_2__0 )
+            {
+             before(grammarAccess.getTemplateAccess().getGroup_2()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1481:1: ( rule__Template__Group_2__0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1481:2: rule__Template__Group_2__0
+            {
+            pushFollow(FOLLOW_rule__Template__Group_2__0_in_rule__Template__Group__2__Impl3163);
+            rule__Template__Group_2__0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getTemplateAccess().getGroup_2()); 
+
+            }
+
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1484:1: ( ( rule__Template__Group_2__0 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1485:1: ( rule__Template__Group_2__0 )*
+            {
+             before(grammarAccess.getTemplateAccess().getGroup_2()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1486:1: ( rule__Template__Group_2__0 )*
+            loop11:
+            do {
+                int alt11=2;
+                int LA11_0 = input.LA(1);
+
+                if ( (LA11_0==25) ) {
+                    alt11=1;
+                }
+
+
+                switch (alt11) {
+            	case 1 :
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1486:2: rule__Template__Group_2__0
+            	    {
+            	    pushFollow(FOLLOW_rule__Template__Group_2__0_in_rule__Template__Group__2__Impl3175);
+            	    rule__Template__Group_2__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop11;
+                }
+            } while (true);
+
+             after(grammarAccess.getTemplateAccess().getGroup_2()); 
+
+            }
+
 
             }
 
@@ -4289,22 +4257,17 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Template__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1469:1: rule__Template__Group__3 : rule__Template__Group__3__Impl rule__Template__Group__4 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1497:1: rule__Template__Group__3 : rule__Template__Group__3__Impl ;
     public final void rule__Template__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1473:1: ( rule__Template__Group__3__Impl rule__Template__Group__4 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1474:2: rule__Template__Group__3__Impl rule__Template__Group__4
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1501:1: ( rule__Template__Group__3__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1502:2: rule__Template__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__Template__Group__3__Impl_in_rule__Template__Group__33125);
+            pushFollow(FOLLOW_rule__Template__Group__3__Impl_in_rule__Template__Group__33208);
             rule__Template__Group__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Template__Group__4_in_rule__Template__Group__33128);
-            rule__Template__Group__4();
 
             state._fsp--;
 
@@ -4327,31 +4290,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Template__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1481:1: rule__Template__Group__3__Impl : ( ( rule__Template__ContentAssignment_3 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1508:1: rule__Template__Group__3__Impl : ( '}}' ) ;
     public final void rule__Template__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1485:1: ( ( ( rule__Template__ContentAssignment_3 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1486:1: ( ( rule__Template__ContentAssignment_3 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1512:1: ( ( '}}' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1513:1: ( '}}' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1486:1: ( ( rule__Template__ContentAssignment_3 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1487:1: ( rule__Template__ContentAssignment_3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1513:1: ( '}}' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1514:1: '}}'
             {
-             before(grammarAccess.getTemplateAccess().getContentAssignment_3()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1488:1: ( rule__Template__ContentAssignment_3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1488:2: rule__Template__ContentAssignment_3
-            {
-            pushFollow(FOLLOW_rule__Template__ContentAssignment_3_in_rule__Template__Group__3__Impl3155);
-            rule__Template__ContentAssignment_3();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getTemplateAccess().getContentAssignment_3()); 
+             before(grammarAccess.getTemplateAccess().getRightCurlyBracketRightCurlyBracketKeyword_3()); 
+            match(input,24,FOLLOW_24_in_rule__Template__Group__3__Impl3236); 
+             after(grammarAccess.getTemplateAccess().getRightCurlyBracketRightCurlyBracketKeyword_3()); 
 
             }
 
@@ -4373,121 +4326,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Template__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Template__Group__4"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1498:1: rule__Template__Group__4 : rule__Template__Group__4__Impl rule__Template__Group__5 ;
-    public final void rule__Template__Group__4() throws RecognitionException {
+    // $ANTLR start "rule__Template__Group_2__0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1535:1: rule__Template__Group_2__0 : rule__Template__Group_2__0__Impl rule__Template__Group_2__1 ;
+    public final void rule__Template__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1502:1: ( rule__Template__Group__4__Impl rule__Template__Group__5 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1503:2: rule__Template__Group__4__Impl rule__Template__Group__5
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1539:1: ( rule__Template__Group_2__0__Impl rule__Template__Group_2__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1540:2: rule__Template__Group_2__0__Impl rule__Template__Group_2__1
             {
-            pushFollow(FOLLOW_rule__Template__Group__4__Impl_in_rule__Template__Group__43185);
-            rule__Template__Group__4__Impl();
+            pushFollow(FOLLOW_rule__Template__Group_2__0__Impl_in_rule__Template__Group_2__03275);
+            rule__Template__Group_2__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Template__Group__5_in_rule__Template__Group__43188);
-            rule__Template__Group__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Template__Group__4"
-
-
-    // $ANTLR start "rule__Template__Group__4__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1510:1: rule__Template__Group__4__Impl : ( ( rule__Template__Group_4__0 )* ) ;
-    public final void rule__Template__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1514:1: ( ( ( rule__Template__Group_4__0 )* ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1515:1: ( ( rule__Template__Group_4__0 )* )
-            {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1515:1: ( ( rule__Template__Group_4__0 )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1516:1: ( rule__Template__Group_4__0 )*
-            {
-             before(grammarAccess.getTemplateAccess().getGroup_4()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1517:1: ( rule__Template__Group_4__0 )*
-            loop17:
-            do {
-                int alt17=2;
-                int LA17_0 = input.LA(1);
-
-                if ( (LA17_0==15) ) {
-                    alt17=1;
-                }
-
-
-                switch (alt17) {
-            	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1517:2: rule__Template__Group_4__0
-            	    {
-            	    pushFollow(FOLLOW_rule__Template__Group_4__0_in_rule__Template__Group__4__Impl3215);
-            	    rule__Template__Group_4__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop17;
-                }
-            } while (true);
-
-             after(grammarAccess.getTemplateAccess().getGroup_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Template__Group__4__Impl"
-
-
-    // $ANTLR start "rule__Template__Group__5"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1527:1: rule__Template__Group__5 : rule__Template__Group__5__Impl ;
-    public final void rule__Template__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1531:1: ( rule__Template__Group__5__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1532:2: rule__Template__Group__5__Impl
-            {
-            pushFollow(FOLLOW_rule__Template__Group__5__Impl_in_rule__Template__Group__53246);
-            rule__Template__Group__5__Impl();
+            pushFollow(FOLLOW_rule__Template__Group_2__1_in_rule__Template__Group_2__03278);
+            rule__Template__Group_2__1();
 
             state._fsp--;
 
@@ -4506,25 +4361,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Template__Group__5"
+    // $ANTLR end "rule__Template__Group_2__0"
 
 
-    // $ANTLR start "rule__Template__Group__5__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1538:1: rule__Template__Group__5__Impl : ( '}}' ) ;
-    public final void rule__Template__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Template__Group_2__0__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1547:1: rule__Template__Group_2__0__Impl : ( '|' ) ;
+    public final void rule__Template__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1542:1: ( ( '}}' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1543:1: ( '}}' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1551:1: ( ( '|' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1552:1: ( '|' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1543:1: ( '}}' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1544:1: '}}'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1552:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1553:1: '|'
             {
-             before(grammarAccess.getTemplateAccess().getRightCurlyBracketRightCurlyBracketKeyword_5()); 
-            match(input,16,FOLLOW_16_in_rule__Template__Group__5__Impl3274); 
-             after(grammarAccess.getTemplateAccess().getRightCurlyBracketRightCurlyBracketKeyword_5()); 
+             before(grammarAccess.getTemplateAccess().getVerticalLineKeyword_2_0()); 
+            match(input,25,FOLLOW_25_in_rule__Template__Group_2__0__Impl3306); 
+             after(grammarAccess.getTemplateAccess().getVerticalLineKeyword_2_0()); 
 
             }
 
@@ -4543,26 +4398,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Template__Group__5__Impl"
+    // $ANTLR end "rule__Template__Group_2__0__Impl"
 
 
-    // $ANTLR start "rule__Template__Group_4__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1569:1: rule__Template__Group_4__0 : rule__Template__Group_4__0__Impl rule__Template__Group_4__1 ;
-    public final void rule__Template__Group_4__0() throws RecognitionException {
+    // $ANTLR start "rule__Template__Group_2__1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1566:1: rule__Template__Group_2__1 : rule__Template__Group_2__1__Impl ;
+    public final void rule__Template__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1573:1: ( rule__Template__Group_4__0__Impl rule__Template__Group_4__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1574:2: rule__Template__Group_4__0__Impl rule__Template__Group_4__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1570:1: ( rule__Template__Group_2__1__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1571:2: rule__Template__Group_2__1__Impl
             {
-            pushFollow(FOLLOW_rule__Template__Group_4__0__Impl_in_rule__Template__Group_4__03317);
-            rule__Template__Group_4__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__Template__Group_4__1_in_rule__Template__Group_4__03320);
-            rule__Template__Group_4__1();
+            pushFollow(FOLLOW_rule__Template__Group_2__1__Impl_in_rule__Template__Group_2__13337);
+            rule__Template__Group_2__1__Impl();
 
             state._fsp--;
 
@@ -4581,105 +4431,35 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Template__Group_4__0"
+    // $ANTLR end "rule__Template__Group_2__1"
 
 
-    // $ANTLR start "rule__Template__Group_4__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1581:1: rule__Template__Group_4__0__Impl : ( '|' ) ;
-    public final void rule__Template__Group_4__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1585:1: ( ( '|' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1586:1: ( '|' )
-            {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1586:1: ( '|' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1587:1: '|'
-            {
-             before(grammarAccess.getTemplateAccess().getVerticalLineKeyword_4_0()); 
-            match(input,15,FOLLOW_15_in_rule__Template__Group_4__0__Impl3348); 
-             after(grammarAccess.getTemplateAccess().getVerticalLineKeyword_4_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Template__Group_4__0__Impl"
-
-
-    // $ANTLR start "rule__Template__Group_4__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1600:1: rule__Template__Group_4__1 : rule__Template__Group_4__1__Impl ;
-    public final void rule__Template__Group_4__1() throws RecognitionException {
+    // $ANTLR start "rule__Template__Group_2__1__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1577:1: rule__Template__Group_2__1__Impl : ( ( rule__Template__ContentAssignment_2_1 ) ) ;
+    public final void rule__Template__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1604:1: ( rule__Template__Group_4__1__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1605:2: rule__Template__Group_4__1__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1581:1: ( ( ( rule__Template__ContentAssignment_2_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1582:1: ( ( rule__Template__ContentAssignment_2_1 ) )
             {
-            pushFollow(FOLLOW_rule__Template__Group_4__1__Impl_in_rule__Template__Group_4__13379);
-            rule__Template__Group_4__1__Impl();
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1582:1: ( ( rule__Template__ContentAssignment_2_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1583:1: ( rule__Template__ContentAssignment_2_1 )
+            {
+             before(grammarAccess.getTemplateAccess().getContentAssignment_2_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1584:1: ( rule__Template__ContentAssignment_2_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1584:2: rule__Template__ContentAssignment_2_1
+            {
+            pushFollow(FOLLOW_rule__Template__ContentAssignment_2_1_in_rule__Template__Group_2__1__Impl3364);
+            rule__Template__ContentAssignment_2_1();
 
             state._fsp--;
 
 
             }
 
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Template__Group_4__1"
-
-
-    // $ANTLR start "rule__Template__Group_4__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1611:1: rule__Template__Group_4__1__Impl : ( ( rule__Template__ContentAssignment_4_1 ) ) ;
-    public final void rule__Template__Group_4__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1615:1: ( ( ( rule__Template__ContentAssignment_4_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1616:1: ( ( rule__Template__ContentAssignment_4_1 ) )
-            {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1616:1: ( ( rule__Template__ContentAssignment_4_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1617:1: ( rule__Template__ContentAssignment_4_1 )
-            {
-             before(grammarAccess.getTemplateAccess().getContentAssignment_4_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1618:1: ( rule__Template__ContentAssignment_4_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1618:2: rule__Template__ContentAssignment_4_1
-            {
-            pushFollow(FOLLOW_rule__Template__ContentAssignment_4_1_in_rule__Template__Group_4__1__Impl3406);
-            rule__Template__ContentAssignment_4_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getTemplateAccess().getContentAssignment_4_1()); 
+             after(grammarAccess.getTemplateAccess().getContentAssignment_2_1()); 
 
             }
 
@@ -4698,25 +4478,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Template__Group_4__1__Impl"
+    // $ANTLR end "rule__Template__Group_2__1__Impl"
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1632:1: rule__UnOrderListItemLevel2__Group__0 : rule__UnOrderListItemLevel2__Group__0__Impl rule__UnOrderListItemLevel2__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1598:1: rule__UnOrderListItemLevel2__Group__0 : rule__UnOrderListItemLevel2__Group__0__Impl rule__UnOrderListItemLevel2__Group__1 ;
     public final void rule__UnOrderListItemLevel2__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1636:1: ( rule__UnOrderListItemLevel2__Group__0__Impl rule__UnOrderListItemLevel2__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1637:2: rule__UnOrderListItemLevel2__Group__0__Impl rule__UnOrderListItemLevel2__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1602:1: ( rule__UnOrderListItemLevel2__Group__0__Impl rule__UnOrderListItemLevel2__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1603:2: rule__UnOrderListItemLevel2__Group__0__Impl rule__UnOrderListItemLevel2__Group__1
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__0__Impl_in_rule__UnOrderListItemLevel2__Group__03440);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__0__Impl_in_rule__UnOrderListItemLevel2__Group__03398);
             rule__UnOrderListItemLevel2__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__1_in_rule__UnOrderListItemLevel2__Group__03443);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__1_in_rule__UnOrderListItemLevel2__Group__03401);
             rule__UnOrderListItemLevel2__Group__1();
 
             state._fsp--;
@@ -4740,20 +4520,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1644:1: rule__UnOrderListItemLevel2__Group__0__Impl : ( '**' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1610:1: rule__UnOrderListItemLevel2__Group__0__Impl : ( '**' ) ;
     public final void rule__UnOrderListItemLevel2__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1648:1: ( ( '**' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1649:1: ( '**' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1614:1: ( ( '**' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1615:1: ( '**' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1649:1: ( '**' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1650:1: '**'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1615:1: ( '**' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1616:1: '**'
             {
              before(grammarAccess.getUnOrderListItemLevel2Access().getAsteriskAsteriskKeyword_0()); 
-            match(input,17,FOLLOW_17_in_rule__UnOrderListItemLevel2__Group__0__Impl3471); 
+            match(input,26,FOLLOW_26_in_rule__UnOrderListItemLevel2__Group__0__Impl3429); 
              after(grammarAccess.getUnOrderListItemLevel2Access().getAsteriskAsteriskKeyword_0()); 
 
             }
@@ -4777,21 +4557,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1663:1: rule__UnOrderListItemLevel2__Group__1 : rule__UnOrderListItemLevel2__Group__1__Impl rule__UnOrderListItemLevel2__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1629:1: rule__UnOrderListItemLevel2__Group__1 : rule__UnOrderListItemLevel2__Group__1__Impl rule__UnOrderListItemLevel2__Group__2 ;
     public final void rule__UnOrderListItemLevel2__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1667:1: ( rule__UnOrderListItemLevel2__Group__1__Impl rule__UnOrderListItemLevel2__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1668:2: rule__UnOrderListItemLevel2__Group__1__Impl rule__UnOrderListItemLevel2__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1633:1: ( rule__UnOrderListItemLevel2__Group__1__Impl rule__UnOrderListItemLevel2__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1634:2: rule__UnOrderListItemLevel2__Group__1__Impl rule__UnOrderListItemLevel2__Group__2
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__1__Impl_in_rule__UnOrderListItemLevel2__Group__13502);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__1__Impl_in_rule__UnOrderListItemLevel2__Group__13460);
             rule__UnOrderListItemLevel2__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__2_in_rule__UnOrderListItemLevel2__Group__13505);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__2_in_rule__UnOrderListItemLevel2__Group__13463);
             rule__UnOrderListItemLevel2__Group__2();
 
             state._fsp--;
@@ -4815,23 +4595,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1675:1: rule__UnOrderListItemLevel2__Group__1__Impl : ( ( rule__UnOrderListItemLevel2__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1641:1: rule__UnOrderListItemLevel2__Group__1__Impl : ( ( rule__UnOrderListItemLevel2__NameAssignment_1 ) ) ;
     public final void rule__UnOrderListItemLevel2__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1679:1: ( ( ( rule__UnOrderListItemLevel2__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1680:1: ( ( rule__UnOrderListItemLevel2__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1645:1: ( ( ( rule__UnOrderListItemLevel2__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1646:1: ( ( rule__UnOrderListItemLevel2__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1680:1: ( ( rule__UnOrderListItemLevel2__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1681:1: ( rule__UnOrderListItemLevel2__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1646:1: ( ( rule__UnOrderListItemLevel2__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1647:1: ( rule__UnOrderListItemLevel2__NameAssignment_1 )
             {
              before(grammarAccess.getUnOrderListItemLevel2Access().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1682:1: ( rule__UnOrderListItemLevel2__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1682:2: rule__UnOrderListItemLevel2__NameAssignment_1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1648:1: ( rule__UnOrderListItemLevel2__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1648:2: rule__UnOrderListItemLevel2__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__NameAssignment_1_in_rule__UnOrderListItemLevel2__Group__1__Impl3532);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__NameAssignment_1_in_rule__UnOrderListItemLevel2__Group__1__Impl3490);
             rule__UnOrderListItemLevel2__NameAssignment_1();
 
             state._fsp--;
@@ -4862,21 +4642,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1692:1: rule__UnOrderListItemLevel2__Group__2 : rule__UnOrderListItemLevel2__Group__2__Impl rule__UnOrderListItemLevel2__Group__3 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1658:1: rule__UnOrderListItemLevel2__Group__2 : rule__UnOrderListItemLevel2__Group__2__Impl rule__UnOrderListItemLevel2__Group__3 ;
     public final void rule__UnOrderListItemLevel2__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1696:1: ( rule__UnOrderListItemLevel2__Group__2__Impl rule__UnOrderListItemLevel2__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1697:2: rule__UnOrderListItemLevel2__Group__2__Impl rule__UnOrderListItemLevel2__Group__3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1662:1: ( rule__UnOrderListItemLevel2__Group__2__Impl rule__UnOrderListItemLevel2__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1663:2: rule__UnOrderListItemLevel2__Group__2__Impl rule__UnOrderListItemLevel2__Group__3
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__2__Impl_in_rule__UnOrderListItemLevel2__Group__23562);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__2__Impl_in_rule__UnOrderListItemLevel2__Group__23520);
             rule__UnOrderListItemLevel2__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__3_in_rule__UnOrderListItemLevel2__Group__23565);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__3_in_rule__UnOrderListItemLevel2__Group__23523);
             rule__UnOrderListItemLevel2__Group__3();
 
             state._fsp--;
@@ -4900,47 +4680,29 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1704:1: rule__UnOrderListItemLevel2__Group__2__Impl : ( ( rule__UnOrderListItemLevel2__ListAssignment_2 )* ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1670:1: rule__UnOrderListItemLevel2__Group__2__Impl : ( ( rule__UnOrderListItemLevel2__ListAssignment_2 ) ) ;
     public final void rule__UnOrderListItemLevel2__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1708:1: ( ( ( rule__UnOrderListItemLevel2__ListAssignment_2 )* ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1709:1: ( ( rule__UnOrderListItemLevel2__ListAssignment_2 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1674:1: ( ( ( rule__UnOrderListItemLevel2__ListAssignment_2 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1675:1: ( ( rule__UnOrderListItemLevel2__ListAssignment_2 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1709:1: ( ( rule__UnOrderListItemLevel2__ListAssignment_2 )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1710:1: ( rule__UnOrderListItemLevel2__ListAssignment_2 )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1675:1: ( ( rule__UnOrderListItemLevel2__ListAssignment_2 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1676:1: ( rule__UnOrderListItemLevel2__ListAssignment_2 )
             {
              before(grammarAccess.getUnOrderListItemLevel2Access().getListAssignment_2()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1711:1: ( rule__UnOrderListItemLevel2__ListAssignment_2 )*
-            loop18:
-            do {
-                int alt18=2;
-                int LA18_0 = input.LA(1);
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1677:1: ( rule__UnOrderListItemLevel2__ListAssignment_2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1677:2: rule__UnOrderListItemLevel2__ListAssignment_2
+            {
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__ListAssignment_2_in_rule__UnOrderListItemLevel2__Group__2__Impl3550);
+            rule__UnOrderListItemLevel2__ListAssignment_2();
 
-                if ( (LA18_0==RULE_ID||(LA18_0>=31 && LA18_0<=35)) ) {
-                    alt18=1;
-                }
+            state._fsp--;
 
 
-                switch (alt18) {
-            	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1711:2: rule__UnOrderListItemLevel2__ListAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_rule__UnOrderListItemLevel2__ListAssignment_2_in_rule__UnOrderListItemLevel2__Group__2__Impl3592);
-            	    rule__UnOrderListItemLevel2__ListAssignment_2();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop18;
-                }
-            } while (true);
+            }
 
              after(grammarAccess.getUnOrderListItemLevel2Access().getListAssignment_2()); 
 
@@ -4965,16 +4727,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1721:1: rule__UnOrderListItemLevel2__Group__3 : rule__UnOrderListItemLevel2__Group__3__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1687:1: rule__UnOrderListItemLevel2__Group__3 : rule__UnOrderListItemLevel2__Group__3__Impl ;
     public final void rule__UnOrderListItemLevel2__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1725:1: ( rule__UnOrderListItemLevel2__Group__3__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1726:2: rule__UnOrderListItemLevel2__Group__3__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1691:1: ( rule__UnOrderListItemLevel2__Group__3__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1692:2: rule__UnOrderListItemLevel2__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__3__Impl_in_rule__UnOrderListItemLevel2__Group__33623);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__Group__3__Impl_in_rule__UnOrderListItemLevel2__Group__33580);
             rule__UnOrderListItemLevel2__Group__3__Impl();
 
             state._fsp--;
@@ -4998,20 +4760,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1732:1: rule__UnOrderListItemLevel2__Group__3__Impl : ( ':LIST' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1698:1: rule__UnOrderListItemLevel2__Group__3__Impl : ( ':LIST' ) ;
     public final void rule__UnOrderListItemLevel2__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1736:1: ( ( ':LIST' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1737:1: ( ':LIST' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1702:1: ( ( ':LIST' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1703:1: ( ':LIST' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1737:1: ( ':LIST' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1738:1: ':LIST'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1703:1: ( ':LIST' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1704:1: ':LIST'
             {
              before(grammarAccess.getUnOrderListItemLevel2Access().getLISTKeyword_3()); 
-            match(input,18,FOLLOW_18_in_rule__UnOrderListItemLevel2__Group__3__Impl3651); 
+            match(input,27,FOLLOW_27_in_rule__UnOrderListItemLevel2__Group__3__Impl3608); 
              after(grammarAccess.getUnOrderListItemLevel2Access().getLISTKeyword_3()); 
 
             }
@@ -5035,21 +4797,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1759:1: rule__UnOrderListItemLevel1__Group__0 : rule__UnOrderListItemLevel1__Group__0__Impl rule__UnOrderListItemLevel1__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1725:1: rule__UnOrderListItemLevel1__Group__0 : rule__UnOrderListItemLevel1__Group__0__Impl rule__UnOrderListItemLevel1__Group__1 ;
     public final void rule__UnOrderListItemLevel1__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1763:1: ( rule__UnOrderListItemLevel1__Group__0__Impl rule__UnOrderListItemLevel1__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1764:2: rule__UnOrderListItemLevel1__Group__0__Impl rule__UnOrderListItemLevel1__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1729:1: ( rule__UnOrderListItemLevel1__Group__0__Impl rule__UnOrderListItemLevel1__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1730:2: rule__UnOrderListItemLevel1__Group__0__Impl rule__UnOrderListItemLevel1__Group__1
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__0__Impl_in_rule__UnOrderListItemLevel1__Group__03690);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__0__Impl_in_rule__UnOrderListItemLevel1__Group__03647);
             rule__UnOrderListItemLevel1__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__1_in_rule__UnOrderListItemLevel1__Group__03693);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__1_in_rule__UnOrderListItemLevel1__Group__03650);
             rule__UnOrderListItemLevel1__Group__1();
 
             state._fsp--;
@@ -5073,20 +4835,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1771:1: rule__UnOrderListItemLevel1__Group__0__Impl : ( '*' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1737:1: rule__UnOrderListItemLevel1__Group__0__Impl : ( '*' ) ;
     public final void rule__UnOrderListItemLevel1__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1775:1: ( ( '*' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1776:1: ( '*' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1741:1: ( ( '*' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1742:1: ( '*' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1776:1: ( '*' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1777:1: '*'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1742:1: ( '*' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1743:1: '*'
             {
              before(grammarAccess.getUnOrderListItemLevel1Access().getAsteriskKeyword_0()); 
-            match(input,19,FOLLOW_19_in_rule__UnOrderListItemLevel1__Group__0__Impl3721); 
+            match(input,28,FOLLOW_28_in_rule__UnOrderListItemLevel1__Group__0__Impl3678); 
              after(grammarAccess.getUnOrderListItemLevel1Access().getAsteriskKeyword_0()); 
 
             }
@@ -5110,21 +4872,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1790:1: rule__UnOrderListItemLevel1__Group__1 : rule__UnOrderListItemLevel1__Group__1__Impl rule__UnOrderListItemLevel1__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1756:1: rule__UnOrderListItemLevel1__Group__1 : rule__UnOrderListItemLevel1__Group__1__Impl rule__UnOrderListItemLevel1__Group__2 ;
     public final void rule__UnOrderListItemLevel1__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1794:1: ( rule__UnOrderListItemLevel1__Group__1__Impl rule__UnOrderListItemLevel1__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1795:2: rule__UnOrderListItemLevel1__Group__1__Impl rule__UnOrderListItemLevel1__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1760:1: ( rule__UnOrderListItemLevel1__Group__1__Impl rule__UnOrderListItemLevel1__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1761:2: rule__UnOrderListItemLevel1__Group__1__Impl rule__UnOrderListItemLevel1__Group__2
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__1__Impl_in_rule__UnOrderListItemLevel1__Group__13752);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__1__Impl_in_rule__UnOrderListItemLevel1__Group__13709);
             rule__UnOrderListItemLevel1__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__2_in_rule__UnOrderListItemLevel1__Group__13755);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__2_in_rule__UnOrderListItemLevel1__Group__13712);
             rule__UnOrderListItemLevel1__Group__2();
 
             state._fsp--;
@@ -5148,23 +4910,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1802:1: rule__UnOrderListItemLevel1__Group__1__Impl : ( ( rule__UnOrderListItemLevel1__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1768:1: rule__UnOrderListItemLevel1__Group__1__Impl : ( ( rule__UnOrderListItemLevel1__NameAssignment_1 ) ) ;
     public final void rule__UnOrderListItemLevel1__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1806:1: ( ( ( rule__UnOrderListItemLevel1__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1807:1: ( ( rule__UnOrderListItemLevel1__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1772:1: ( ( ( rule__UnOrderListItemLevel1__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1773:1: ( ( rule__UnOrderListItemLevel1__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1807:1: ( ( rule__UnOrderListItemLevel1__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1808:1: ( rule__UnOrderListItemLevel1__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1773:1: ( ( rule__UnOrderListItemLevel1__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1774:1: ( rule__UnOrderListItemLevel1__NameAssignment_1 )
             {
              before(grammarAccess.getUnOrderListItemLevel1Access().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1809:1: ( rule__UnOrderListItemLevel1__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1809:2: rule__UnOrderListItemLevel1__NameAssignment_1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1775:1: ( rule__UnOrderListItemLevel1__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1775:2: rule__UnOrderListItemLevel1__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__NameAssignment_1_in_rule__UnOrderListItemLevel1__Group__1__Impl3782);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__NameAssignment_1_in_rule__UnOrderListItemLevel1__Group__1__Impl3739);
             rule__UnOrderListItemLevel1__NameAssignment_1();
 
             state._fsp--;
@@ -5195,21 +4957,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1819:1: rule__UnOrderListItemLevel1__Group__2 : rule__UnOrderListItemLevel1__Group__2__Impl rule__UnOrderListItemLevel1__Group__3 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1785:1: rule__UnOrderListItemLevel1__Group__2 : rule__UnOrderListItemLevel1__Group__2__Impl rule__UnOrderListItemLevel1__Group__3 ;
     public final void rule__UnOrderListItemLevel1__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1823:1: ( rule__UnOrderListItemLevel1__Group__2__Impl rule__UnOrderListItemLevel1__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1824:2: rule__UnOrderListItemLevel1__Group__2__Impl rule__UnOrderListItemLevel1__Group__3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1789:1: ( rule__UnOrderListItemLevel1__Group__2__Impl rule__UnOrderListItemLevel1__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1790:2: rule__UnOrderListItemLevel1__Group__2__Impl rule__UnOrderListItemLevel1__Group__3
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__2__Impl_in_rule__UnOrderListItemLevel1__Group__23812);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__2__Impl_in_rule__UnOrderListItemLevel1__Group__23769);
             rule__UnOrderListItemLevel1__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__3_in_rule__UnOrderListItemLevel1__Group__23815);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__3_in_rule__UnOrderListItemLevel1__Group__23772);
             rule__UnOrderListItemLevel1__Group__3();
 
             state._fsp--;
@@ -5233,47 +4995,29 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1831:1: rule__UnOrderListItemLevel1__Group__2__Impl : ( ( rule__UnOrderListItemLevel1__ListAssignment_2 )* ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1797:1: rule__UnOrderListItemLevel1__Group__2__Impl : ( ( rule__UnOrderListItemLevel1__ListAssignment_2 ) ) ;
     public final void rule__UnOrderListItemLevel1__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1835:1: ( ( ( rule__UnOrderListItemLevel1__ListAssignment_2 )* ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1836:1: ( ( rule__UnOrderListItemLevel1__ListAssignment_2 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1801:1: ( ( ( rule__UnOrderListItemLevel1__ListAssignment_2 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1802:1: ( ( rule__UnOrderListItemLevel1__ListAssignment_2 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1836:1: ( ( rule__UnOrderListItemLevel1__ListAssignment_2 )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1837:1: ( rule__UnOrderListItemLevel1__ListAssignment_2 )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1802:1: ( ( rule__UnOrderListItemLevel1__ListAssignment_2 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1803:1: ( rule__UnOrderListItemLevel1__ListAssignment_2 )
             {
              before(grammarAccess.getUnOrderListItemLevel1Access().getListAssignment_2()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1838:1: ( rule__UnOrderListItemLevel1__ListAssignment_2 )*
-            loop19:
-            do {
-                int alt19=2;
-                int LA19_0 = input.LA(1);
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1804:1: ( rule__UnOrderListItemLevel1__ListAssignment_2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1804:2: rule__UnOrderListItemLevel1__ListAssignment_2
+            {
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__ListAssignment_2_in_rule__UnOrderListItemLevel1__Group__2__Impl3799);
+            rule__UnOrderListItemLevel1__ListAssignment_2();
 
-                if ( (LA19_0==RULE_ID||(LA19_0>=31 && LA19_0<=35)) ) {
-                    alt19=1;
-                }
+            state._fsp--;
 
 
-                switch (alt19) {
-            	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1838:2: rule__UnOrderListItemLevel1__ListAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_rule__UnOrderListItemLevel1__ListAssignment_2_in_rule__UnOrderListItemLevel1__Group__2__Impl3842);
-            	    rule__UnOrderListItemLevel1__ListAssignment_2();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop19;
-                }
-            } while (true);
+            }
 
              after(grammarAccess.getUnOrderListItemLevel1Access().getListAssignment_2()); 
 
@@ -5298,16 +5042,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1848:1: rule__UnOrderListItemLevel1__Group__3 : rule__UnOrderListItemLevel1__Group__3__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1814:1: rule__UnOrderListItemLevel1__Group__3 : rule__UnOrderListItemLevel1__Group__3__Impl ;
     public final void rule__UnOrderListItemLevel1__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1852:1: ( rule__UnOrderListItemLevel1__Group__3__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1853:2: rule__UnOrderListItemLevel1__Group__3__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1818:1: ( rule__UnOrderListItemLevel1__Group__3__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1819:2: rule__UnOrderListItemLevel1__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__3__Impl_in_rule__UnOrderListItemLevel1__Group__33873);
+            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__Group__3__Impl_in_rule__UnOrderListItemLevel1__Group__33829);
             rule__UnOrderListItemLevel1__Group__3__Impl();
 
             state._fsp--;
@@ -5331,20 +5075,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1859:1: rule__UnOrderListItemLevel1__Group__3__Impl : ( ':LIST' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1825:1: rule__UnOrderListItemLevel1__Group__3__Impl : ( ':LIST' ) ;
     public final void rule__UnOrderListItemLevel1__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1863:1: ( ( ':LIST' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1864:1: ( ':LIST' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1829:1: ( ( ':LIST' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1830:1: ( ':LIST' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1864:1: ( ':LIST' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1865:1: ':LIST'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1830:1: ( ':LIST' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1831:1: ':LIST'
             {
              before(grammarAccess.getUnOrderListItemLevel1Access().getLISTKeyword_3()); 
-            match(input,18,FOLLOW_18_in_rule__UnOrderListItemLevel1__Group__3__Impl3901); 
+            match(input,27,FOLLOW_27_in_rule__UnOrderListItemLevel1__Group__3__Impl3857); 
              after(grammarAccess.getUnOrderListItemLevel1Access().getLISTKeyword_3()); 
 
             }
@@ -5368,21 +5112,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1886:1: rule__OrderListItemLevel1__Group__0 : rule__OrderListItemLevel1__Group__0__Impl rule__OrderListItemLevel1__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1852:1: rule__OrderListItemLevel1__Group__0 : rule__OrderListItemLevel1__Group__0__Impl rule__OrderListItemLevel1__Group__1 ;
     public final void rule__OrderListItemLevel1__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1890:1: ( rule__OrderListItemLevel1__Group__0__Impl rule__OrderListItemLevel1__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1891:2: rule__OrderListItemLevel1__Group__0__Impl rule__OrderListItemLevel1__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1856:1: ( rule__OrderListItemLevel1__Group__0__Impl rule__OrderListItemLevel1__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1857:2: rule__OrderListItemLevel1__Group__0__Impl rule__OrderListItemLevel1__Group__1
             {
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__0__Impl_in_rule__OrderListItemLevel1__Group__03940);
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__0__Impl_in_rule__OrderListItemLevel1__Group__03896);
             rule__OrderListItemLevel1__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__1_in_rule__OrderListItemLevel1__Group__03943);
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__1_in_rule__OrderListItemLevel1__Group__03899);
             rule__OrderListItemLevel1__Group__1();
 
             state._fsp--;
@@ -5406,20 +5150,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1898:1: rule__OrderListItemLevel1__Group__0__Impl : ( '#' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1864:1: rule__OrderListItemLevel1__Group__0__Impl : ( '#' ) ;
     public final void rule__OrderListItemLevel1__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1902:1: ( ( '#' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1903:1: ( '#' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1868:1: ( ( '#' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1869:1: ( '#' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1903:1: ( '#' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1904:1: '#'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1869:1: ( '#' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1870:1: '#'
             {
              before(grammarAccess.getOrderListItemLevel1Access().getNumberSignKeyword_0()); 
-            match(input,20,FOLLOW_20_in_rule__OrderListItemLevel1__Group__0__Impl3971); 
+            match(input,29,FOLLOW_29_in_rule__OrderListItemLevel1__Group__0__Impl3927); 
              after(grammarAccess.getOrderListItemLevel1Access().getNumberSignKeyword_0()); 
 
             }
@@ -5443,21 +5187,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1917:1: rule__OrderListItemLevel1__Group__1 : rule__OrderListItemLevel1__Group__1__Impl rule__OrderListItemLevel1__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1883:1: rule__OrderListItemLevel1__Group__1 : rule__OrderListItemLevel1__Group__1__Impl rule__OrderListItemLevel1__Group__2 ;
     public final void rule__OrderListItemLevel1__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1921:1: ( rule__OrderListItemLevel1__Group__1__Impl rule__OrderListItemLevel1__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1922:2: rule__OrderListItemLevel1__Group__1__Impl rule__OrderListItemLevel1__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1887:1: ( rule__OrderListItemLevel1__Group__1__Impl rule__OrderListItemLevel1__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1888:2: rule__OrderListItemLevel1__Group__1__Impl rule__OrderListItemLevel1__Group__2
             {
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__1__Impl_in_rule__OrderListItemLevel1__Group__14002);
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__1__Impl_in_rule__OrderListItemLevel1__Group__13958);
             rule__OrderListItemLevel1__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__2_in_rule__OrderListItemLevel1__Group__14005);
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__2_in_rule__OrderListItemLevel1__Group__13961);
             rule__OrderListItemLevel1__Group__2();
 
             state._fsp--;
@@ -5481,23 +5225,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1929:1: rule__OrderListItemLevel1__Group__1__Impl : ( ( rule__OrderListItemLevel1__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1895:1: rule__OrderListItemLevel1__Group__1__Impl : ( ( rule__OrderListItemLevel1__NameAssignment_1 ) ) ;
     public final void rule__OrderListItemLevel1__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1933:1: ( ( ( rule__OrderListItemLevel1__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1934:1: ( ( rule__OrderListItemLevel1__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1899:1: ( ( ( rule__OrderListItemLevel1__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1900:1: ( ( rule__OrderListItemLevel1__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1934:1: ( ( rule__OrderListItemLevel1__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1935:1: ( rule__OrderListItemLevel1__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1900:1: ( ( rule__OrderListItemLevel1__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1901:1: ( rule__OrderListItemLevel1__NameAssignment_1 )
             {
              before(grammarAccess.getOrderListItemLevel1Access().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1936:1: ( rule__OrderListItemLevel1__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1936:2: rule__OrderListItemLevel1__NameAssignment_1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1902:1: ( rule__OrderListItemLevel1__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1902:2: rule__OrderListItemLevel1__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__NameAssignment_1_in_rule__OrderListItemLevel1__Group__1__Impl4032);
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__NameAssignment_1_in_rule__OrderListItemLevel1__Group__1__Impl3988);
             rule__OrderListItemLevel1__NameAssignment_1();
 
             state._fsp--;
@@ -5528,21 +5272,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1946:1: rule__OrderListItemLevel1__Group__2 : rule__OrderListItemLevel1__Group__2__Impl rule__OrderListItemLevel1__Group__3 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1912:1: rule__OrderListItemLevel1__Group__2 : rule__OrderListItemLevel1__Group__2__Impl rule__OrderListItemLevel1__Group__3 ;
     public final void rule__OrderListItemLevel1__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1950:1: ( rule__OrderListItemLevel1__Group__2__Impl rule__OrderListItemLevel1__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1951:2: rule__OrderListItemLevel1__Group__2__Impl rule__OrderListItemLevel1__Group__3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1916:1: ( rule__OrderListItemLevel1__Group__2__Impl rule__OrderListItemLevel1__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1917:2: rule__OrderListItemLevel1__Group__2__Impl rule__OrderListItemLevel1__Group__3
             {
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__2__Impl_in_rule__OrderListItemLevel1__Group__24062);
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__2__Impl_in_rule__OrderListItemLevel1__Group__24018);
             rule__OrderListItemLevel1__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__3_in_rule__OrderListItemLevel1__Group__24065);
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__3_in_rule__OrderListItemLevel1__Group__24021);
             rule__OrderListItemLevel1__Group__3();
 
             state._fsp--;
@@ -5566,47 +5310,29 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1958:1: rule__OrderListItemLevel1__Group__2__Impl : ( ( rule__OrderListItemLevel1__ListAssignment_2 )* ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1924:1: rule__OrderListItemLevel1__Group__2__Impl : ( ( rule__OrderListItemLevel1__ListAssignment_2 ) ) ;
     public final void rule__OrderListItemLevel1__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1962:1: ( ( ( rule__OrderListItemLevel1__ListAssignment_2 )* ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1963:1: ( ( rule__OrderListItemLevel1__ListAssignment_2 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1928:1: ( ( ( rule__OrderListItemLevel1__ListAssignment_2 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1929:1: ( ( rule__OrderListItemLevel1__ListAssignment_2 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1963:1: ( ( rule__OrderListItemLevel1__ListAssignment_2 )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1964:1: ( rule__OrderListItemLevel1__ListAssignment_2 )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1929:1: ( ( rule__OrderListItemLevel1__ListAssignment_2 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1930:1: ( rule__OrderListItemLevel1__ListAssignment_2 )
             {
              before(grammarAccess.getOrderListItemLevel1Access().getListAssignment_2()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1965:1: ( rule__OrderListItemLevel1__ListAssignment_2 )*
-            loop20:
-            do {
-                int alt20=2;
-                int LA20_0 = input.LA(1);
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1931:1: ( rule__OrderListItemLevel1__ListAssignment_2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1931:2: rule__OrderListItemLevel1__ListAssignment_2
+            {
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__ListAssignment_2_in_rule__OrderListItemLevel1__Group__2__Impl4048);
+            rule__OrderListItemLevel1__ListAssignment_2();
 
-                if ( (LA20_0==RULE_ID||(LA20_0>=31 && LA20_0<=35)) ) {
-                    alt20=1;
-                }
+            state._fsp--;
 
 
-                switch (alt20) {
-            	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1965:2: rule__OrderListItemLevel1__ListAssignment_2
-            	    {
-            	    pushFollow(FOLLOW_rule__OrderListItemLevel1__ListAssignment_2_in_rule__OrderListItemLevel1__Group__2__Impl4092);
-            	    rule__OrderListItemLevel1__ListAssignment_2();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop20;
-                }
-            } while (true);
+            }
 
              after(grammarAccess.getOrderListItemLevel1Access().getListAssignment_2()); 
 
@@ -5631,16 +5357,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1975:1: rule__OrderListItemLevel1__Group__3 : rule__OrderListItemLevel1__Group__3__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1941:1: rule__OrderListItemLevel1__Group__3 : rule__OrderListItemLevel1__Group__3__Impl ;
     public final void rule__OrderListItemLevel1__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1979:1: ( rule__OrderListItemLevel1__Group__3__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1980:2: rule__OrderListItemLevel1__Group__3__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1945:1: ( rule__OrderListItemLevel1__Group__3__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1946:2: rule__OrderListItemLevel1__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__3__Impl_in_rule__OrderListItemLevel1__Group__34123);
+            pushFollow(FOLLOW_rule__OrderListItemLevel1__Group__3__Impl_in_rule__OrderListItemLevel1__Group__34078);
             rule__OrderListItemLevel1__Group__3__Impl();
 
             state._fsp--;
@@ -5664,20 +5390,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1986:1: rule__OrderListItemLevel1__Group__3__Impl : ( ':LIST' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1952:1: rule__OrderListItemLevel1__Group__3__Impl : ( ':LIST' ) ;
     public final void rule__OrderListItemLevel1__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1990:1: ( ( ':LIST' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1991:1: ( ':LIST' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1956:1: ( ( ':LIST' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1957:1: ( ':LIST' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1991:1: ( ':LIST' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1992:1: ':LIST'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1957:1: ( ':LIST' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1958:1: ':LIST'
             {
              before(grammarAccess.getOrderListItemLevel1Access().getLISTKeyword_3()); 
-            match(input,18,FOLLOW_18_in_rule__OrderListItemLevel1__Group__3__Impl4151); 
+            match(input,27,FOLLOW_27_in_rule__OrderListItemLevel1__Group__3__Impl4106); 
              after(grammarAccess.getOrderListItemLevel1Access().getLISTKeyword_3()); 
 
             }
@@ -5700,23 +5426,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__OrderListItemLevel1__Group__3__Impl"
 
 
-    // $ANTLR start "rule__File__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2013:1: rule__File__Group__0 : rule__File__Group__0__Impl rule__File__Group__1 ;
-    public final void rule__File__Group__0() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1979:1: rule__Image__Group__0 : rule__Image__Group__0__Impl rule__Image__Group__1 ;
+    public final void rule__Image__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2017:1: ( rule__File__Group__0__Impl rule__File__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2018:2: rule__File__Group__0__Impl rule__File__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1983:1: ( rule__Image__Group__0__Impl rule__Image__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1984:2: rule__Image__Group__0__Impl rule__Image__Group__1
             {
-            pushFollow(FOLLOW_rule__File__Group__0__Impl_in_rule__File__Group__04190);
-            rule__File__Group__0__Impl();
+            pushFollow(FOLLOW_rule__Image__Group__0__Impl_in_rule__Image__Group__04145);
+            rule__Image__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__File__Group__1_in_rule__File__Group__04193);
-            rule__File__Group__1();
+            pushFollow(FOLLOW_rule__Image__Group__1_in_rule__Image__Group__04148);
+            rule__Image__Group__1();
 
             state._fsp--;
 
@@ -5735,25 +5461,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__0"
+    // $ANTLR end "rule__Image__Group__0"
 
 
-    // $ANTLR start "rule__File__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2025:1: rule__File__Group__0__Impl : ( '[[File:' ) ;
-    public final void rule__File__Group__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__0__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1991:1: rule__Image__Group__0__Impl : ( '[[' ) ;
+    public final void rule__Image__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2029:1: ( ( '[[File:' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2030:1: ( '[[File:' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1995:1: ( ( '[[' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1996:1: ( '[[' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2030:1: ( '[[File:' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2031:1: '[[File:'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1996:1: ( '[[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1997:1: '[['
             {
-             before(grammarAccess.getFileAccess().getFileKeyword_0()); 
-            match(input,21,FOLLOW_21_in_rule__File__Group__0__Impl4221); 
-             after(grammarAccess.getFileAccess().getFileKeyword_0()); 
+             before(grammarAccess.getImageAccess().getLeftSquareBracketLeftSquareBracketKeyword_0()); 
+            match(input,30,FOLLOW_30_in_rule__Image__Group__0__Impl4176); 
+             after(grammarAccess.getImageAccess().getLeftSquareBracketLeftSquareBracketKeyword_0()); 
 
             }
 
@@ -5772,26 +5498,26 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__0__Impl"
+    // $ANTLR end "rule__Image__Group__0__Impl"
 
 
-    // $ANTLR start "rule__File__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2044:1: rule__File__Group__1 : rule__File__Group__1__Impl rule__File__Group__2 ;
-    public final void rule__File__Group__1() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2010:1: rule__Image__Group__1 : rule__Image__Group__1__Impl rule__Image__Group__2 ;
+    public final void rule__Image__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2048:1: ( rule__File__Group__1__Impl rule__File__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2049:2: rule__File__Group__1__Impl rule__File__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2014:1: ( rule__Image__Group__1__Impl rule__Image__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2015:2: rule__Image__Group__1__Impl rule__Image__Group__2
             {
-            pushFollow(FOLLOW_rule__File__Group__1__Impl_in_rule__File__Group__14252);
-            rule__File__Group__1__Impl();
+            pushFollow(FOLLOW_rule__Image__Group__1__Impl_in_rule__Image__Group__14207);
+            rule__Image__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__File__Group__2_in_rule__File__Group__14255);
-            rule__File__Group__2();
+            pushFollow(FOLLOW_rule__Image__Group__2_in_rule__Image__Group__14210);
+            rule__Image__Group__2();
 
             state._fsp--;
 
@@ -5810,35 +5536,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__1"
+    // $ANTLR end "rule__Image__Group__1"
 
 
-    // $ANTLR start "rule__File__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2056:1: rule__File__Group__1__Impl : ( ( rule__File__NameAssignment_1 ) ) ;
-    public final void rule__File__Group__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__1__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2022:1: rule__Image__Group__1__Impl : ( 'File:' ) ;
+    public final void rule__Image__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2060:1: ( ( ( rule__File__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2061:1: ( ( rule__File__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2026:1: ( ( 'File:' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2027:1: ( 'File:' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2061:1: ( ( rule__File__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2062:1: ( rule__File__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2027:1: ( 'File:' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2028:1: 'File:'
             {
-             before(grammarAccess.getFileAccess().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2063:1: ( rule__File__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2063:2: rule__File__NameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__File__NameAssignment_1_in_rule__File__Group__1__Impl4282);
-            rule__File__NameAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getFileAccess().getNameAssignment_1()); 
+             before(grammarAccess.getImageAccess().getFileKeyword_1()); 
+            match(input,31,FOLLOW_31_in_rule__Image__Group__1__Impl4238); 
+             after(grammarAccess.getImageAccess().getFileKeyword_1()); 
 
             }
 
@@ -5857,101 +5573,26 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__1__Impl"
+    // $ANTLR end "rule__Image__Group__1__Impl"
 
 
-    // $ANTLR start "rule__File__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2073:1: rule__File__Group__2 : rule__File__Group__2__Impl rule__File__Group__3 ;
-    public final void rule__File__Group__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2077:1: ( rule__File__Group__2__Impl rule__File__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2078:2: rule__File__Group__2__Impl rule__File__Group__3
-            {
-            pushFollow(FOLLOW_rule__File__Group__2__Impl_in_rule__File__Group__24312);
-            rule__File__Group__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__File__Group__3_in_rule__File__Group__24315);
-            rule__File__Group__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__File__Group__2"
-
-
-    // $ANTLR start "rule__File__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2085:1: rule__File__Group__2__Impl : ( '|' ) ;
-    public final void rule__File__Group__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__2"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2041:1: rule__Image__Group__2 : rule__Image__Group__2__Impl rule__Image__Group__3 ;
+    public final void rule__Image__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2089:1: ( ( '|' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2090:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2045:1: ( rule__Image__Group__2__Impl rule__Image__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2046:2: rule__Image__Group__2__Impl rule__Image__Group__3
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2090:1: ( '|' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2091:1: '|'
-            {
-             before(grammarAccess.getFileAccess().getVerticalLineKeyword_2()); 
-            match(input,15,FOLLOW_15_in_rule__File__Group__2__Impl4343); 
-             after(grammarAccess.getFileAccess().getVerticalLineKeyword_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__File__Group__2__Impl"
-
-
-    // $ANTLR start "rule__File__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2104:1: rule__File__Group__3 : rule__File__Group__3__Impl rule__File__Group__4 ;
-    public final void rule__File__Group__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2108:1: ( rule__File__Group__3__Impl rule__File__Group__4 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2109:2: rule__File__Group__3__Impl rule__File__Group__4
-            {
-            pushFollow(FOLLOW_rule__File__Group__3__Impl_in_rule__File__Group__34374);
-            rule__File__Group__3__Impl();
+            pushFollow(FOLLOW_rule__Image__Group__2__Impl_in_rule__Image__Group__24269);
+            rule__Image__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__File__Group__4_in_rule__File__Group__34377);
-            rule__File__Group__4();
+            pushFollow(FOLLOW_rule__Image__Group__3_in_rule__Image__Group__24272);
+            rule__Image__Group__3();
 
             state._fsp--;
 
@@ -5970,25 +5611,35 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__3"
+    // $ANTLR end "rule__Image__Group__2"
 
 
-    // $ANTLR start "rule__File__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2116:1: rule__File__Group__3__Impl : ( 'thumb' ) ;
-    public final void rule__File__Group__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__2__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2053:1: rule__Image__Group__2__Impl : ( ( rule__Image__NameAssignment_2 ) ) ;
+    public final void rule__Image__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2120:1: ( ( 'thumb' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2121:1: ( 'thumb' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2057:1: ( ( ( rule__Image__NameAssignment_2 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2058:1: ( ( rule__Image__NameAssignment_2 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2121:1: ( 'thumb' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2122:1: 'thumb'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2058:1: ( ( rule__Image__NameAssignment_2 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2059:1: ( rule__Image__NameAssignment_2 )
             {
-             before(grammarAccess.getFileAccess().getThumbKeyword_3()); 
-            match(input,22,FOLLOW_22_in_rule__File__Group__3__Impl4405); 
-             after(grammarAccess.getFileAccess().getThumbKeyword_3()); 
+             before(grammarAccess.getImageAccess().getNameAssignment_2()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2060:1: ( rule__Image__NameAssignment_2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2060:2: rule__Image__NameAssignment_2
+            {
+            pushFollow(FOLLOW_rule__Image__NameAssignment_2_in_rule__Image__Group__2__Impl4299);
+            rule__Image__NameAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getImageAccess().getNameAssignment_2()); 
 
             }
 
@@ -6007,101 +5658,26 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__3__Impl"
+    // $ANTLR end "rule__Image__Group__2__Impl"
 
 
-    // $ANTLR start "rule__File__Group__4"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2135:1: rule__File__Group__4 : rule__File__Group__4__Impl rule__File__Group__5 ;
-    public final void rule__File__Group__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2139:1: ( rule__File__Group__4__Impl rule__File__Group__5 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2140:2: rule__File__Group__4__Impl rule__File__Group__5
-            {
-            pushFollow(FOLLOW_rule__File__Group__4__Impl_in_rule__File__Group__44436);
-            rule__File__Group__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_rule__File__Group__5_in_rule__File__Group__44439);
-            rule__File__Group__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__File__Group__4"
-
-
-    // $ANTLR start "rule__File__Group__4__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2147:1: rule__File__Group__4__Impl : ( '|' ) ;
-    public final void rule__File__Group__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__3"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2070:1: rule__Image__Group__3 : rule__Image__Group__3__Impl rule__Image__Group__4 ;
+    public final void rule__Image__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2151:1: ( ( '|' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2152:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2074:1: ( rule__Image__Group__3__Impl rule__Image__Group__4 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2075:2: rule__Image__Group__3__Impl rule__Image__Group__4
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2152:1: ( '|' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2153:1: '|'
-            {
-             before(grammarAccess.getFileAccess().getVerticalLineKeyword_4()); 
-            match(input,15,FOLLOW_15_in_rule__File__Group__4__Impl4467); 
-             after(grammarAccess.getFileAccess().getVerticalLineKeyword_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__File__Group__4__Impl"
-
-
-    // $ANTLR start "rule__File__Group__5"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2166:1: rule__File__Group__5 : rule__File__Group__5__Impl rule__File__Group__6 ;
-    public final void rule__File__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2170:1: ( rule__File__Group__5__Impl rule__File__Group__6 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2171:2: rule__File__Group__5__Impl rule__File__Group__6
-            {
-            pushFollow(FOLLOW_rule__File__Group__5__Impl_in_rule__File__Group__54498);
-            rule__File__Group__5__Impl();
+            pushFollow(FOLLOW_rule__Image__Group__3__Impl_in_rule__Image__Group__34329);
+            rule__Image__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__File__Group__6_in_rule__File__Group__54501);
-            rule__File__Group__6();
+            pushFollow(FOLLOW_rule__Image__Group__4_in_rule__Image__Group__34332);
+            rule__Image__Group__4();
 
             state._fsp--;
 
@@ -6120,53 +5696,50 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__5"
+    // $ANTLR end "rule__Image__Group__3"
 
 
-    // $ANTLR start "rule__File__Group__5__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2178:1: rule__File__Group__5__Impl : ( ( rule__File__CaptionAssignment_5 )* ) ;
-    public final void rule__File__Group__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__3__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2082:1: rule__Image__Group__3__Impl : ( ( rule__Image__Group_3__0 )? ) ;
+    public final void rule__Image__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2182:1: ( ( ( rule__File__CaptionAssignment_5 )* ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2183:1: ( ( rule__File__CaptionAssignment_5 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2086:1: ( ( ( rule__Image__Group_3__0 )? ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2087:1: ( ( rule__Image__Group_3__0 )? )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2183:1: ( ( rule__File__CaptionAssignment_5 )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2184:1: ( rule__File__CaptionAssignment_5 )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2087:1: ( ( rule__Image__Group_3__0 )? )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2088:1: ( rule__Image__Group_3__0 )?
             {
-             before(grammarAccess.getFileAccess().getCaptionAssignment_5()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2185:1: ( rule__File__CaptionAssignment_5 )*
-            loop21:
-            do {
-                int alt21=2;
-                int LA21_0 = input.LA(1);
+             before(grammarAccess.getImageAccess().getGroup_3()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2089:1: ( rule__Image__Group_3__0 )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-                if ( (LA21_0==RULE_ID||(LA21_0>=31 && LA21_0<=35)) ) {
-                    alt21=1;
+            if ( (LA12_0==25) ) {
+                int LA12_1 = input.LA(2);
+
+                if ( ((LA12_1>=12 && LA12_1<=16)) ) {
+                    alt12=1;
                 }
+            }
+            switch (alt12) {
+                case 1 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2089:2: rule__Image__Group_3__0
+                    {
+                    pushFollow(FOLLOW_rule__Image__Group_3__0_in_rule__Image__Group__3__Impl4359);
+                    rule__Image__Group_3__0();
+
+                    state._fsp--;
 
 
-                switch (alt21) {
-            	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2185:2: rule__File__CaptionAssignment_5
-            	    {
-            	    pushFollow(FOLLOW_rule__File__CaptionAssignment_5_in_rule__File__Group__5__Impl4528);
-            	    rule__File__CaptionAssignment_5();
+                    }
+                    break;
 
-            	    state._fsp--;
+            }
 
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop21;
-                }
-            } while (true);
-
-             after(grammarAccess.getFileAccess().getCaptionAssignment_5()); 
+             after(grammarAccess.getImageAccess().getGroup_3()); 
 
             }
 
@@ -6185,21 +5758,26 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__5__Impl"
+    // $ANTLR end "rule__Image__Group__3__Impl"
 
 
-    // $ANTLR start "rule__File__Group__6"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2195:1: rule__File__Group__6 : rule__File__Group__6__Impl ;
-    public final void rule__File__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__4"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2099:1: rule__Image__Group__4 : rule__Image__Group__4__Impl rule__Image__Group__5 ;
+    public final void rule__Image__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2199:1: ( rule__File__Group__6__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2200:2: rule__File__Group__6__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2103:1: ( rule__Image__Group__4__Impl rule__Image__Group__5 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2104:2: rule__Image__Group__4__Impl rule__Image__Group__5
             {
-            pushFollow(FOLLOW_rule__File__Group__6__Impl_in_rule__File__Group__64559);
-            rule__File__Group__6__Impl();
+            pushFollow(FOLLOW_rule__Image__Group__4__Impl_in_rule__Image__Group__44390);
+            rule__Image__Group__4__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Image__Group__5_in_rule__Image__Group__44393);
+            rule__Image__Group__5();
 
             state._fsp--;
 
@@ -6218,25 +5796,50 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__6"
+    // $ANTLR end "rule__Image__Group__4"
 
 
-    // $ANTLR start "rule__File__Group__6__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2206:1: rule__File__Group__6__Impl : ( ']]' ) ;
-    public final void rule__File__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Image__Group__4__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2111:1: rule__Image__Group__4__Impl : ( ( rule__Image__Group_4__0 )? ) ;
+    public final void rule__Image__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2210:1: ( ( ']]' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2211:1: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2115:1: ( ( ( rule__Image__Group_4__0 )? ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2116:1: ( ( rule__Image__Group_4__0 )? )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2211:1: ( ']]' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2212:1: ']]'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2116:1: ( ( rule__Image__Group_4__0 )? )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2117:1: ( rule__Image__Group_4__0 )?
             {
-             before(grammarAccess.getFileAccess().getRightSquareBracketRightSquareBracketKeyword_6()); 
-            match(input,23,FOLLOW_23_in_rule__File__Group__6__Impl4587); 
-             after(grammarAccess.getFileAccess().getRightSquareBracketRightSquareBracketKeyword_6()); 
+             before(grammarAccess.getImageAccess().getGroup_4()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2118:1: ( rule__Image__Group_4__0 )?
+            int alt13=2;
+            int LA13_0 = input.LA(1);
+
+            if ( (LA13_0==25) ) {
+                int LA13_1 = input.LA(2);
+
+                if ( ((LA13_1>=17 && LA13_1<=20)) ) {
+                    alt13=1;
+                }
+            }
+            switch (alt13) {
+                case 1 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2118:2: rule__Image__Group_4__0
+                    {
+                    pushFollow(FOLLOW_rule__Image__Group_4__0_in_rule__Image__Group__4__Impl4420);
+                    rule__Image__Group_4__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getImageAccess().getGroup_4()); 
 
             }
 
@@ -6255,25 +5858,816 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__Group__6__Impl"
+    // $ANTLR end "rule__Image__Group__4__Impl"
+
+
+    // $ANTLR start "rule__Image__Group__5"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2128:1: rule__Image__Group__5 : rule__Image__Group__5__Impl rule__Image__Group__6 ;
+    public final void rule__Image__Group__5() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2132:1: ( rule__Image__Group__5__Impl rule__Image__Group__6 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2133:2: rule__Image__Group__5__Impl rule__Image__Group__6
+            {
+            pushFollow(FOLLOW_rule__Image__Group__5__Impl_in_rule__Image__Group__54451);
+            rule__Image__Group__5__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Image__Group__6_in_rule__Image__Group__54454);
+            rule__Image__Group__6();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group__5"
+
+
+    // $ANTLR start "rule__Image__Group__5__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2140:1: rule__Image__Group__5__Impl : ( ( rule__Image__Group_5__0 )? ) ;
+    public final void rule__Image__Group__5__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2144:1: ( ( ( rule__Image__Group_5__0 )? ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2145:1: ( ( rule__Image__Group_5__0 )? )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2145:1: ( ( rule__Image__Group_5__0 )? )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2146:1: ( rule__Image__Group_5__0 )?
+            {
+             before(grammarAccess.getImageAccess().getGroup_5()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2147:1: ( rule__Image__Group_5__0 )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
+
+            if ( (LA14_0==33) ) {
+                alt14=1;
+            }
+            switch (alt14) {
+                case 1 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2147:2: rule__Image__Group_5__0
+                    {
+                    pushFollow(FOLLOW_rule__Image__Group_5__0_in_rule__Image__Group__5__Impl4481);
+                    rule__Image__Group_5__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getImageAccess().getGroup_5()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group__5__Impl"
+
+
+    // $ANTLR start "rule__Image__Group__6"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2157:1: rule__Image__Group__6 : rule__Image__Group__6__Impl rule__Image__Group__7 ;
+    public final void rule__Image__Group__6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2161:1: ( rule__Image__Group__6__Impl rule__Image__Group__7 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2162:2: rule__Image__Group__6__Impl rule__Image__Group__7
+            {
+            pushFollow(FOLLOW_rule__Image__Group__6__Impl_in_rule__Image__Group__64512);
+            rule__Image__Group__6__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Image__Group__7_in_rule__Image__Group__64515);
+            rule__Image__Group__7();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group__6"
+
+
+    // $ANTLR start "rule__Image__Group__6__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2169:1: rule__Image__Group__6__Impl : ( '|' ) ;
+    public final void rule__Image__Group__6__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2173:1: ( ( '|' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2174:1: ( '|' )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2174:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2175:1: '|'
+            {
+             before(grammarAccess.getImageAccess().getVerticalLineKeyword_6()); 
+            match(input,25,FOLLOW_25_in_rule__Image__Group__6__Impl4543); 
+             after(grammarAccess.getImageAccess().getVerticalLineKeyword_6()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group__6__Impl"
+
+
+    // $ANTLR start "rule__Image__Group__7"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2188:1: rule__Image__Group__7 : rule__Image__Group__7__Impl rule__Image__Group__8 ;
+    public final void rule__Image__Group__7() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2192:1: ( rule__Image__Group__7__Impl rule__Image__Group__8 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2193:2: rule__Image__Group__7__Impl rule__Image__Group__8
+            {
+            pushFollow(FOLLOW_rule__Image__Group__7__Impl_in_rule__Image__Group__74574);
+            rule__Image__Group__7__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Image__Group__8_in_rule__Image__Group__74577);
+            rule__Image__Group__8();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group__7"
+
+
+    // $ANTLR start "rule__Image__Group__7__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2200:1: rule__Image__Group__7__Impl : ( ( rule__Image__CaptionAssignment_7 ) ) ;
+    public final void rule__Image__Group__7__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2204:1: ( ( ( rule__Image__CaptionAssignment_7 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2205:1: ( ( rule__Image__CaptionAssignment_7 ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2205:1: ( ( rule__Image__CaptionAssignment_7 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2206:1: ( rule__Image__CaptionAssignment_7 )
+            {
+             before(grammarAccess.getImageAccess().getCaptionAssignment_7()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2207:1: ( rule__Image__CaptionAssignment_7 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2207:2: rule__Image__CaptionAssignment_7
+            {
+            pushFollow(FOLLOW_rule__Image__CaptionAssignment_7_in_rule__Image__Group__7__Impl4604);
+            rule__Image__CaptionAssignment_7();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getImageAccess().getCaptionAssignment_7()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group__7__Impl"
+
+
+    // $ANTLR start "rule__Image__Group__8"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2217:1: rule__Image__Group__8 : rule__Image__Group__8__Impl ;
+    public final void rule__Image__Group__8() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2221:1: ( rule__Image__Group__8__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2222:2: rule__Image__Group__8__Impl
+            {
+            pushFollow(FOLLOW_rule__Image__Group__8__Impl_in_rule__Image__Group__84634);
+            rule__Image__Group__8__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group__8"
+
+
+    // $ANTLR start "rule__Image__Group__8__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2228:1: rule__Image__Group__8__Impl : ( ']]' ) ;
+    public final void rule__Image__Group__8__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2232:1: ( ( ']]' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2233:1: ( ']]' )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2233:1: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2234:1: ']]'
+            {
+             before(grammarAccess.getImageAccess().getRightSquareBracketRightSquareBracketKeyword_8()); 
+            match(input,32,FOLLOW_32_in_rule__Image__Group__8__Impl4662); 
+             after(grammarAccess.getImageAccess().getRightSquareBracketRightSquareBracketKeyword_8()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group__8__Impl"
+
+
+    // $ANTLR start "rule__Image__Group_3__0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2265:1: rule__Image__Group_3__0 : rule__Image__Group_3__0__Impl rule__Image__Group_3__1 ;
+    public final void rule__Image__Group_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2269:1: ( rule__Image__Group_3__0__Impl rule__Image__Group_3__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2270:2: rule__Image__Group_3__0__Impl rule__Image__Group_3__1
+            {
+            pushFollow(FOLLOW_rule__Image__Group_3__0__Impl_in_rule__Image__Group_3__04711);
+            rule__Image__Group_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Image__Group_3__1_in_rule__Image__Group_3__04714);
+            rule__Image__Group_3__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_3__0"
+
+
+    // $ANTLR start "rule__Image__Group_3__0__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2277:1: rule__Image__Group_3__0__Impl : ( '|' ) ;
+    public final void rule__Image__Group_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2281:1: ( ( '|' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2282:1: ( '|' )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2282:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2283:1: '|'
+            {
+             before(grammarAccess.getImageAccess().getVerticalLineKeyword_3_0()); 
+            match(input,25,FOLLOW_25_in_rule__Image__Group_3__0__Impl4742); 
+             after(grammarAccess.getImageAccess().getVerticalLineKeyword_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_3__0__Impl"
+
+
+    // $ANTLR start "rule__Image__Group_3__1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2296:1: rule__Image__Group_3__1 : rule__Image__Group_3__1__Impl ;
+    public final void rule__Image__Group_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2300:1: ( rule__Image__Group_3__1__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2301:2: rule__Image__Group_3__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Image__Group_3__1__Impl_in_rule__Image__Group_3__14773);
+            rule__Image__Group_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_3__1"
+
+
+    // $ANTLR start "rule__Image__Group_3__1__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2307:1: rule__Image__Group_3__1__Impl : ( ( rule__Image__TypeAssignment_3_1 ) ) ;
+    public final void rule__Image__Group_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2311:1: ( ( ( rule__Image__TypeAssignment_3_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2312:1: ( ( rule__Image__TypeAssignment_3_1 ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2312:1: ( ( rule__Image__TypeAssignment_3_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2313:1: ( rule__Image__TypeAssignment_3_1 )
+            {
+             before(grammarAccess.getImageAccess().getTypeAssignment_3_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2314:1: ( rule__Image__TypeAssignment_3_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2314:2: rule__Image__TypeAssignment_3_1
+            {
+            pushFollow(FOLLOW_rule__Image__TypeAssignment_3_1_in_rule__Image__Group_3__1__Impl4800);
+            rule__Image__TypeAssignment_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getImageAccess().getTypeAssignment_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_3__1__Impl"
+
+
+    // $ANTLR start "rule__Image__Group_4__0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2328:1: rule__Image__Group_4__0 : rule__Image__Group_4__0__Impl rule__Image__Group_4__1 ;
+    public final void rule__Image__Group_4__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2332:1: ( rule__Image__Group_4__0__Impl rule__Image__Group_4__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2333:2: rule__Image__Group_4__0__Impl rule__Image__Group_4__1
+            {
+            pushFollow(FOLLOW_rule__Image__Group_4__0__Impl_in_rule__Image__Group_4__04834);
+            rule__Image__Group_4__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Image__Group_4__1_in_rule__Image__Group_4__04837);
+            rule__Image__Group_4__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_4__0"
+
+
+    // $ANTLR start "rule__Image__Group_4__0__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2340:1: rule__Image__Group_4__0__Impl : ( '|' ) ;
+    public final void rule__Image__Group_4__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2344:1: ( ( '|' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2345:1: ( '|' )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2345:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2346:1: '|'
+            {
+             before(grammarAccess.getImageAccess().getVerticalLineKeyword_4_0()); 
+            match(input,25,FOLLOW_25_in_rule__Image__Group_4__0__Impl4865); 
+             after(grammarAccess.getImageAccess().getVerticalLineKeyword_4_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_4__0__Impl"
+
+
+    // $ANTLR start "rule__Image__Group_4__1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2359:1: rule__Image__Group_4__1 : rule__Image__Group_4__1__Impl ;
+    public final void rule__Image__Group_4__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2363:1: ( rule__Image__Group_4__1__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2364:2: rule__Image__Group_4__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Image__Group_4__1__Impl_in_rule__Image__Group_4__14896);
+            rule__Image__Group_4__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_4__1"
+
+
+    // $ANTLR start "rule__Image__Group_4__1__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2370:1: rule__Image__Group_4__1__Impl : ( ( rule__Image__HAlignAssignment_4_1 ) ) ;
+    public final void rule__Image__Group_4__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2374:1: ( ( ( rule__Image__HAlignAssignment_4_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2375:1: ( ( rule__Image__HAlignAssignment_4_1 ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2375:1: ( ( rule__Image__HAlignAssignment_4_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2376:1: ( rule__Image__HAlignAssignment_4_1 )
+            {
+             before(grammarAccess.getImageAccess().getHAlignAssignment_4_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2377:1: ( rule__Image__HAlignAssignment_4_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2377:2: rule__Image__HAlignAssignment_4_1
+            {
+            pushFollow(FOLLOW_rule__Image__HAlignAssignment_4_1_in_rule__Image__Group_4__1__Impl4923);
+            rule__Image__HAlignAssignment_4_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getImageAccess().getHAlignAssignment_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_4__1__Impl"
+
+
+    // $ANTLR start "rule__Image__Group_5__0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2391:1: rule__Image__Group_5__0 : rule__Image__Group_5__0__Impl rule__Image__Group_5__1 ;
+    public final void rule__Image__Group_5__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2395:1: ( rule__Image__Group_5__0__Impl rule__Image__Group_5__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2396:2: rule__Image__Group_5__0__Impl rule__Image__Group_5__1
+            {
+            pushFollow(FOLLOW_rule__Image__Group_5__0__Impl_in_rule__Image__Group_5__04957);
+            rule__Image__Group_5__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Image__Group_5__1_in_rule__Image__Group_5__04960);
+            rule__Image__Group_5__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_5__0"
+
+
+    // $ANTLR start "rule__Image__Group_5__0__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2403:1: rule__Image__Group_5__0__Impl : ( '|alt=' ) ;
+    public final void rule__Image__Group_5__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2407:1: ( ( '|alt=' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2408:1: ( '|alt=' )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2408:1: ( '|alt=' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2409:1: '|alt='
+            {
+             before(grammarAccess.getImageAccess().getAltKeyword_5_0()); 
+            match(input,33,FOLLOW_33_in_rule__Image__Group_5__0__Impl4988); 
+             after(grammarAccess.getImageAccess().getAltKeyword_5_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_5__0__Impl"
+
+
+    // $ANTLR start "rule__Image__Group_5__1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2422:1: rule__Image__Group_5__1 : rule__Image__Group_5__1__Impl ;
+    public final void rule__Image__Group_5__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2426:1: ( rule__Image__Group_5__1__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2427:2: rule__Image__Group_5__1__Impl
+            {
+            pushFollow(FOLLOW_rule__Image__Group_5__1__Impl_in_rule__Image__Group_5__15019);
+            rule__Image__Group_5__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_5__1"
+
+
+    // $ANTLR start "rule__Image__Group_5__1__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2433:1: rule__Image__Group_5__1__Impl : ( ( rule__Image__AltTextAssignment_5_1 ) ) ;
+    public final void rule__Image__Group_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2437:1: ( ( ( rule__Image__AltTextAssignment_5_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2438:1: ( ( rule__Image__AltTextAssignment_5_1 ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2438:1: ( ( rule__Image__AltTextAssignment_5_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2439:1: ( rule__Image__AltTextAssignment_5_1 )
+            {
+             before(grammarAccess.getImageAccess().getAltTextAssignment_5_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2440:1: ( rule__Image__AltTextAssignment_5_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2440:2: rule__Image__AltTextAssignment_5_1
+            {
+            pushFollow(FOLLOW_rule__Image__AltTextAssignment_5_1_in_rule__Image__Group_5__1__Impl5046);
+            rule__Image__AltTextAssignment_5_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getImageAccess().getAltTextAssignment_5_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__Group_5__1__Impl"
 
 
     // $ANTLR start "rule__Category__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2239:1: rule__Category__Group__0 : rule__Category__Group__0__Impl rule__Category__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2454:1: rule__Category__Group__0 : rule__Category__Group__0__Impl rule__Category__Group__1 ;
     public final void rule__Category__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2243:1: ( rule__Category__Group__0__Impl rule__Category__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2244:2: rule__Category__Group__0__Impl rule__Category__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2458:1: ( rule__Category__Group__0__Impl rule__Category__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2459:2: rule__Category__Group__0__Impl rule__Category__Group__1
             {
-            pushFollow(FOLLOW_rule__Category__Group__0__Impl_in_rule__Category__Group__04632);
+            pushFollow(FOLLOW_rule__Category__Group__0__Impl_in_rule__Category__Group__05080);
             rule__Category__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Category__Group__1_in_rule__Category__Group__04635);
+            pushFollow(FOLLOW_rule__Category__Group__1_in_rule__Category__Group__05083);
             rule__Category__Group__1();
 
             state._fsp--;
@@ -6297,21 +6691,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Category__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2251:1: rule__Category__Group__0__Impl : ( '[[Category:' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2466:1: rule__Category__Group__0__Impl : ( '[[' ) ;
     public final void rule__Category__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2255:1: ( ( '[[Category:' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2256:1: ( '[[Category:' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2470:1: ( ( '[[' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2471:1: ( '[[' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2256:1: ( '[[Category:' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2257:1: '[[Category:'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2471:1: ( '[[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2472:1: '[['
             {
-             before(grammarAccess.getCategoryAccess().getCategoryKeyword_0()); 
-            match(input,24,FOLLOW_24_in_rule__Category__Group__0__Impl4663); 
-             after(grammarAccess.getCategoryAccess().getCategoryKeyword_0()); 
+             before(grammarAccess.getCategoryAccess().getLeftSquareBracketLeftSquareBracketKeyword_0()); 
+            match(input,30,FOLLOW_30_in_rule__Category__Group__0__Impl5111); 
+             after(grammarAccess.getCategoryAccess().getLeftSquareBracketLeftSquareBracketKeyword_0()); 
 
             }
 
@@ -6334,21 +6728,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Category__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2270:1: rule__Category__Group__1 : rule__Category__Group__1__Impl rule__Category__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2485:1: rule__Category__Group__1 : rule__Category__Group__1__Impl rule__Category__Group__2 ;
     public final void rule__Category__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2274:1: ( rule__Category__Group__1__Impl rule__Category__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2275:2: rule__Category__Group__1__Impl rule__Category__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2489:1: ( rule__Category__Group__1__Impl rule__Category__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2490:2: rule__Category__Group__1__Impl rule__Category__Group__2
             {
-            pushFollow(FOLLOW_rule__Category__Group__1__Impl_in_rule__Category__Group__14694);
+            pushFollow(FOLLOW_rule__Category__Group__1__Impl_in_rule__Category__Group__15142);
             rule__Category__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Category__Group__2_in_rule__Category__Group__14697);
+            pushFollow(FOLLOW_rule__Category__Group__2_in_rule__Category__Group__15145);
             rule__Category__Group__2();
 
             state._fsp--;
@@ -6372,31 +6766,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Category__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2282:1: rule__Category__Group__1__Impl : ( ( rule__Category__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2497:1: rule__Category__Group__1__Impl : ( 'Category:' ) ;
     public final void rule__Category__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2286:1: ( ( ( rule__Category__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2287:1: ( ( rule__Category__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2501:1: ( ( 'Category:' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2502:1: ( 'Category:' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2287:1: ( ( rule__Category__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2288:1: ( rule__Category__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2502:1: ( 'Category:' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2503:1: 'Category:'
             {
-             before(grammarAccess.getCategoryAccess().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2289:1: ( rule__Category__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2289:2: rule__Category__NameAssignment_1
-            {
-            pushFollow(FOLLOW_rule__Category__NameAssignment_1_in_rule__Category__Group__1__Impl4724);
-            rule__Category__NameAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getCategoryAccess().getNameAssignment_1()); 
+             before(grammarAccess.getCategoryAccess().getCategoryKeyword_1()); 
+            match(input,34,FOLLOW_34_in_rule__Category__Group__1__Impl5173); 
+             after(grammarAccess.getCategoryAccess().getCategoryKeyword_1()); 
 
             }
 
@@ -6419,21 +6803,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Category__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2299:1: rule__Category__Group__2 : rule__Category__Group__2__Impl rule__Category__Group__3 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2516:1: rule__Category__Group__2 : rule__Category__Group__2__Impl rule__Category__Group__3 ;
     public final void rule__Category__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2303:1: ( rule__Category__Group__2__Impl rule__Category__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2304:2: rule__Category__Group__2__Impl rule__Category__Group__3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2520:1: ( rule__Category__Group__2__Impl rule__Category__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2521:2: rule__Category__Group__2__Impl rule__Category__Group__3
             {
-            pushFollow(FOLLOW_rule__Category__Group__2__Impl_in_rule__Category__Group__24754);
+            pushFollow(FOLLOW_rule__Category__Group__2__Impl_in_rule__Category__Group__25204);
             rule__Category__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Category__Group__3_in_rule__Category__Group__24757);
+            pushFollow(FOLLOW_rule__Category__Group__3_in_rule__Category__Group__25207);
             rule__Category__Group__3();
 
             state._fsp--;
@@ -6457,38 +6841,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Category__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2311:1: rule__Category__Group__2__Impl : ( ( '|*' )? ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2528:1: rule__Category__Group__2__Impl : ( ( rule__Category__NameAssignment_2 ) ) ;
     public final void rule__Category__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2315:1: ( ( ( '|*' )? ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2316:1: ( ( '|*' )? )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2532:1: ( ( ( rule__Category__NameAssignment_2 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2533:1: ( ( rule__Category__NameAssignment_2 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2316:1: ( ( '|*' )? )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2317:1: ( '|*' )?
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2533:1: ( ( rule__Category__NameAssignment_2 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2534:1: ( rule__Category__NameAssignment_2 )
             {
-             before(grammarAccess.getCategoryAccess().getVerticalLineAsteriskKeyword_2()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2318:1: ( '|*' )?
-            int alt22=2;
-            int LA22_0 = input.LA(1);
+             before(grammarAccess.getCategoryAccess().getNameAssignment_2()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2535:1: ( rule__Category__NameAssignment_2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2535:2: rule__Category__NameAssignment_2
+            {
+            pushFollow(FOLLOW_rule__Category__NameAssignment_2_in_rule__Category__Group__2__Impl5234);
+            rule__Category__NameAssignment_2();
 
-            if ( (LA22_0==25) ) {
-                alt22=1;
-            }
-            switch (alt22) {
-                case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2319:2: '|*'
-                    {
-                    match(input,25,FOLLOW_25_in_rule__Category__Group__2__Impl4786); 
+            state._fsp--;
 
-                    }
-                    break;
 
             }
 
-             after(grammarAccess.getCategoryAccess().getVerticalLineAsteriskKeyword_2()); 
+             after(grammarAccess.getCategoryAccess().getNameAssignment_2()); 
 
             }
 
@@ -6511,17 +6888,22 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Category__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2330:1: rule__Category__Group__3 : rule__Category__Group__3__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2545:1: rule__Category__Group__3 : rule__Category__Group__3__Impl rule__Category__Group__4 ;
     public final void rule__Category__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2334:1: ( rule__Category__Group__3__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2335:2: rule__Category__Group__3__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2549:1: ( rule__Category__Group__3__Impl rule__Category__Group__4 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2550:2: rule__Category__Group__3__Impl rule__Category__Group__4
             {
-            pushFollow(FOLLOW_rule__Category__Group__3__Impl_in_rule__Category__Group__34819);
+            pushFollow(FOLLOW_rule__Category__Group__3__Impl_in_rule__Category__Group__35264);
             rule__Category__Group__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__Category__Group__4_in_rule__Category__Group__35267);
+            rule__Category__Group__4();
 
             state._fsp--;
 
@@ -6544,21 +6926,42 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Category__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2341:1: rule__Category__Group__3__Impl : ( ']]' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2557:1: rule__Category__Group__3__Impl : ( ( rule__Category__ValueAssignment_3 )? ) ;
     public final void rule__Category__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2345:1: ( ( ']]' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2346:1: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2561:1: ( ( ( rule__Category__ValueAssignment_3 )? ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2562:1: ( ( rule__Category__ValueAssignment_3 )? )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2346:1: ( ']]' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2347:1: ']]'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2562:1: ( ( rule__Category__ValueAssignment_3 )? )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2563:1: ( rule__Category__ValueAssignment_3 )?
             {
-             before(grammarAccess.getCategoryAccess().getRightSquareBracketRightSquareBracketKeyword_3()); 
-            match(input,23,FOLLOW_23_in_rule__Category__Group__3__Impl4847); 
-             after(grammarAccess.getCategoryAccess().getRightSquareBracketRightSquareBracketKeyword_3()); 
+             before(grammarAccess.getCategoryAccess().getValueAssignment_3()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2564:1: ( rule__Category__ValueAssignment_3 )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
+
+            if ( (LA15_0==45) ) {
+                alt15=1;
+            }
+            switch (alt15) {
+                case 1 :
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2564:2: rule__Category__ValueAssignment_3
+                    {
+                    pushFollow(FOLLOW_rule__Category__ValueAssignment_3_in_rule__Category__Group__3__Impl5294);
+                    rule__Category__ValueAssignment_3();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getCategoryAccess().getValueAssignment_3()); 
 
             }
 
@@ -6580,22 +6983,92 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Category__Group__3__Impl"
 
 
+    // $ANTLR start "rule__Category__Group__4"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2574:1: rule__Category__Group__4 : rule__Category__Group__4__Impl ;
+    public final void rule__Category__Group__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2578:1: ( rule__Category__Group__4__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2579:2: rule__Category__Group__4__Impl
+            {
+            pushFollow(FOLLOW_rule__Category__Group__4__Impl_in_rule__Category__Group__45325);
+            rule__Category__Group__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Category__Group__4"
+
+
+    // $ANTLR start "rule__Category__Group__4__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2585:1: rule__Category__Group__4__Impl : ( ']]' ) ;
+    public final void rule__Category__Group__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2589:1: ( ( ']]' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2590:1: ( ']]' )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2590:1: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2591:1: ']]'
+            {
+             before(grammarAccess.getCategoryAccess().getRightSquareBracketRightSquareBracketKeyword_4()); 
+            match(input,32,FOLLOW_32_in_rule__Category__Group__4__Impl5353); 
+             after(grammarAccess.getCategoryAccess().getRightSquareBracketRightSquareBracketKeyword_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Category__Group__4__Impl"
+
+
     // $ANTLR start "rule__Heading1__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2368:1: rule__Heading1__Group__0 : rule__Heading1__Group__0__Impl rule__Heading1__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2614:1: rule__Heading1__Group__0 : rule__Heading1__Group__0__Impl rule__Heading1__Group__1 ;
     public final void rule__Heading1__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2372:1: ( rule__Heading1__Group__0__Impl rule__Heading1__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2373:2: rule__Heading1__Group__0__Impl rule__Heading1__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2618:1: ( rule__Heading1__Group__0__Impl rule__Heading1__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2619:2: rule__Heading1__Group__0__Impl rule__Heading1__Group__1
             {
-            pushFollow(FOLLOW_rule__Heading1__Group__0__Impl_in_rule__Heading1__Group__04886);
+            pushFollow(FOLLOW_rule__Heading1__Group__0__Impl_in_rule__Heading1__Group__05394);
             rule__Heading1__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading1__Group__1_in_rule__Heading1__Group__04889);
+            pushFollow(FOLLOW_rule__Heading1__Group__1_in_rule__Heading1__Group__05397);
             rule__Heading1__Group__1();
 
             state._fsp--;
@@ -6619,20 +7092,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading1__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2380:1: rule__Heading1__Group__0__Impl : ( '=' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2626:1: rule__Heading1__Group__0__Impl : ( '=' ) ;
     public final void rule__Heading1__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2384:1: ( ( '=' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2385:1: ( '=' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2630:1: ( ( '=' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2631:1: ( '=' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2385:1: ( '=' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2386:1: '='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2631:1: ( '=' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2632:1: '='
             {
              before(grammarAccess.getHeading1Access().getEqualsSignKeyword_0()); 
-            match(input,26,FOLLOW_26_in_rule__Heading1__Group__0__Impl4917); 
+            match(input,35,FOLLOW_35_in_rule__Heading1__Group__0__Impl5425); 
              after(grammarAccess.getHeading1Access().getEqualsSignKeyword_0()); 
 
             }
@@ -6656,21 +7129,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading1__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2399:1: rule__Heading1__Group__1 : rule__Heading1__Group__1__Impl rule__Heading1__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2645:1: rule__Heading1__Group__1 : rule__Heading1__Group__1__Impl rule__Heading1__Group__2 ;
     public final void rule__Heading1__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2403:1: ( rule__Heading1__Group__1__Impl rule__Heading1__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2404:2: rule__Heading1__Group__1__Impl rule__Heading1__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2649:1: ( rule__Heading1__Group__1__Impl rule__Heading1__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2650:2: rule__Heading1__Group__1__Impl rule__Heading1__Group__2
             {
-            pushFollow(FOLLOW_rule__Heading1__Group__1__Impl_in_rule__Heading1__Group__14948);
+            pushFollow(FOLLOW_rule__Heading1__Group__1__Impl_in_rule__Heading1__Group__15456);
             rule__Heading1__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading1__Group__2_in_rule__Heading1__Group__14951);
+            pushFollow(FOLLOW_rule__Heading1__Group__2_in_rule__Heading1__Group__15459);
             rule__Heading1__Group__2();
 
             state._fsp--;
@@ -6694,25 +7167,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading1__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2411:1: rule__Heading1__Group__1__Impl : ( ruleText ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2657:1: rule__Heading1__Group__1__Impl : ( ( rule__Heading1__HeadingValue1Assignment_1 ) ) ;
     public final void rule__Heading1__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2415:1: ( ( ruleText ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2416:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2661:1: ( ( ( rule__Heading1__HeadingValue1Assignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2662:1: ( ( rule__Heading1__HeadingValue1Assignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2416:1: ( ruleText )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2417:1: ruleText
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2662:1: ( ( rule__Heading1__HeadingValue1Assignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2663:1: ( rule__Heading1__HeadingValue1Assignment_1 )
             {
-             before(grammarAccess.getHeading1Access().getTextParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleText_in_rule__Heading1__Group__1__Impl4978);
-            ruleText();
+             before(grammarAccess.getHeading1Access().getHeadingValue1Assignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2664:1: ( rule__Heading1__HeadingValue1Assignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2664:2: rule__Heading1__HeadingValue1Assignment_1
+            {
+            pushFollow(FOLLOW_rule__Heading1__HeadingValue1Assignment_1_in_rule__Heading1__Group__1__Impl5486);
+            rule__Heading1__HeadingValue1Assignment_1();
 
             state._fsp--;
 
-             after(grammarAccess.getHeading1Access().getTextParserRuleCall_1()); 
+
+            }
+
+             after(grammarAccess.getHeading1Access().getHeadingValue1Assignment_1()); 
 
             }
 
@@ -6735,16 +7214,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading1__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2428:1: rule__Heading1__Group__2 : rule__Heading1__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2674:1: rule__Heading1__Group__2 : rule__Heading1__Group__2__Impl ;
     public final void rule__Heading1__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2432:1: ( rule__Heading1__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2433:2: rule__Heading1__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2678:1: ( rule__Heading1__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2679:2: rule__Heading1__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Heading1__Group__2__Impl_in_rule__Heading1__Group__25007);
+            pushFollow(FOLLOW_rule__Heading1__Group__2__Impl_in_rule__Heading1__Group__25516);
             rule__Heading1__Group__2__Impl();
 
             state._fsp--;
@@ -6768,20 +7247,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading1__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2439:1: rule__Heading1__Group__2__Impl : ( '=' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2685:1: rule__Heading1__Group__2__Impl : ( '=' ) ;
     public final void rule__Heading1__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2443:1: ( ( '=' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2444:1: ( '=' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2689:1: ( ( '=' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2690:1: ( '=' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2444:1: ( '=' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2445:1: '='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2690:1: ( '=' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2691:1: '='
             {
              before(grammarAccess.getHeading1Access().getEqualsSignKeyword_2()); 
-            match(input,26,FOLLOW_26_in_rule__Heading1__Group__2__Impl5035); 
+            match(input,35,FOLLOW_35_in_rule__Heading1__Group__2__Impl5544); 
              after(grammarAccess.getHeading1Access().getEqualsSignKeyword_2()); 
 
             }
@@ -6805,21 +7284,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading2__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2464:1: rule__Heading2__Group__0 : rule__Heading2__Group__0__Impl rule__Heading2__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2710:1: rule__Heading2__Group__0 : rule__Heading2__Group__0__Impl rule__Heading2__Group__1 ;
     public final void rule__Heading2__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2468:1: ( rule__Heading2__Group__0__Impl rule__Heading2__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2469:2: rule__Heading2__Group__0__Impl rule__Heading2__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2714:1: ( rule__Heading2__Group__0__Impl rule__Heading2__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2715:2: rule__Heading2__Group__0__Impl rule__Heading2__Group__1
             {
-            pushFollow(FOLLOW_rule__Heading2__Group__0__Impl_in_rule__Heading2__Group__05072);
+            pushFollow(FOLLOW_rule__Heading2__Group__0__Impl_in_rule__Heading2__Group__05581);
             rule__Heading2__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading2__Group__1_in_rule__Heading2__Group__05075);
+            pushFollow(FOLLOW_rule__Heading2__Group__1_in_rule__Heading2__Group__05584);
             rule__Heading2__Group__1();
 
             state._fsp--;
@@ -6843,20 +7322,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading2__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2476:1: rule__Heading2__Group__0__Impl : ( '==' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2722:1: rule__Heading2__Group__0__Impl : ( '==' ) ;
     public final void rule__Heading2__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2480:1: ( ( '==' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2481:1: ( '==' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2726:1: ( ( '==' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2727:1: ( '==' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2481:1: ( '==' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2482:1: '=='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2727:1: ( '==' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2728:1: '=='
             {
              before(grammarAccess.getHeading2Access().getEqualsSignEqualsSignKeyword_0()); 
-            match(input,27,FOLLOW_27_in_rule__Heading2__Group__0__Impl5103); 
+            match(input,36,FOLLOW_36_in_rule__Heading2__Group__0__Impl5612); 
              after(grammarAccess.getHeading2Access().getEqualsSignEqualsSignKeyword_0()); 
 
             }
@@ -6880,21 +7359,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading2__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2495:1: rule__Heading2__Group__1 : rule__Heading2__Group__1__Impl rule__Heading2__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2741:1: rule__Heading2__Group__1 : rule__Heading2__Group__1__Impl rule__Heading2__Group__2 ;
     public final void rule__Heading2__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2499:1: ( rule__Heading2__Group__1__Impl rule__Heading2__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2500:2: rule__Heading2__Group__1__Impl rule__Heading2__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2745:1: ( rule__Heading2__Group__1__Impl rule__Heading2__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2746:2: rule__Heading2__Group__1__Impl rule__Heading2__Group__2
             {
-            pushFollow(FOLLOW_rule__Heading2__Group__1__Impl_in_rule__Heading2__Group__15134);
+            pushFollow(FOLLOW_rule__Heading2__Group__1__Impl_in_rule__Heading2__Group__15643);
             rule__Heading2__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading2__Group__2_in_rule__Heading2__Group__15137);
+            pushFollow(FOLLOW_rule__Heading2__Group__2_in_rule__Heading2__Group__15646);
             rule__Heading2__Group__2();
 
             state._fsp--;
@@ -6918,25 +7397,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading2__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2507:1: rule__Heading2__Group__1__Impl : ( ruleAbstractUnformattedInlineContent ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2753:1: rule__Heading2__Group__1__Impl : ( ( rule__Heading2__HeadingValue2Assignment_1 ) ) ;
     public final void rule__Heading2__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2511:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2512:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2757:1: ( ( ( rule__Heading2__HeadingValue2Assignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2758:1: ( ( rule__Heading2__HeadingValue2Assignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2512:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2513:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2758:1: ( ( rule__Heading2__HeadingValue2Assignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2759:1: ( rule__Heading2__HeadingValue2Assignment_1 )
             {
-             before(grammarAccess.getHeading2Access().getAbstractUnformattedInlineContentParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading2__Group__1__Impl5164);
-            ruleAbstractUnformattedInlineContent();
+             before(grammarAccess.getHeading2Access().getHeadingValue2Assignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2760:1: ( rule__Heading2__HeadingValue2Assignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2760:2: rule__Heading2__HeadingValue2Assignment_1
+            {
+            pushFollow(FOLLOW_rule__Heading2__HeadingValue2Assignment_1_in_rule__Heading2__Group__1__Impl5673);
+            rule__Heading2__HeadingValue2Assignment_1();
 
             state._fsp--;
 
-             after(grammarAccess.getHeading2Access().getAbstractUnformattedInlineContentParserRuleCall_1()); 
+
+            }
+
+             after(grammarAccess.getHeading2Access().getHeadingValue2Assignment_1()); 
 
             }
 
@@ -6959,16 +7444,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading2__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2524:1: rule__Heading2__Group__2 : rule__Heading2__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2770:1: rule__Heading2__Group__2 : rule__Heading2__Group__2__Impl ;
     public final void rule__Heading2__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2528:1: ( rule__Heading2__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2529:2: rule__Heading2__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2774:1: ( rule__Heading2__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2775:2: rule__Heading2__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Heading2__Group__2__Impl_in_rule__Heading2__Group__25193);
+            pushFollow(FOLLOW_rule__Heading2__Group__2__Impl_in_rule__Heading2__Group__25703);
             rule__Heading2__Group__2__Impl();
 
             state._fsp--;
@@ -6992,20 +7477,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading2__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2535:1: rule__Heading2__Group__2__Impl : ( '==' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2781:1: rule__Heading2__Group__2__Impl : ( '==' ) ;
     public final void rule__Heading2__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2539:1: ( ( '==' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2540:1: ( '==' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2785:1: ( ( '==' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2786:1: ( '==' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2540:1: ( '==' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2541:1: '=='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2786:1: ( '==' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2787:1: '=='
             {
              before(grammarAccess.getHeading2Access().getEqualsSignEqualsSignKeyword_2()); 
-            match(input,27,FOLLOW_27_in_rule__Heading2__Group__2__Impl5221); 
+            match(input,36,FOLLOW_36_in_rule__Heading2__Group__2__Impl5731); 
              after(grammarAccess.getHeading2Access().getEqualsSignEqualsSignKeyword_2()); 
 
             }
@@ -7029,21 +7514,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading3__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2560:1: rule__Heading3__Group__0 : rule__Heading3__Group__0__Impl rule__Heading3__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2806:1: rule__Heading3__Group__0 : rule__Heading3__Group__0__Impl rule__Heading3__Group__1 ;
     public final void rule__Heading3__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2564:1: ( rule__Heading3__Group__0__Impl rule__Heading3__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2565:2: rule__Heading3__Group__0__Impl rule__Heading3__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2810:1: ( rule__Heading3__Group__0__Impl rule__Heading3__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2811:2: rule__Heading3__Group__0__Impl rule__Heading3__Group__1
             {
-            pushFollow(FOLLOW_rule__Heading3__Group__0__Impl_in_rule__Heading3__Group__05258);
+            pushFollow(FOLLOW_rule__Heading3__Group__0__Impl_in_rule__Heading3__Group__05768);
             rule__Heading3__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading3__Group__1_in_rule__Heading3__Group__05261);
+            pushFollow(FOLLOW_rule__Heading3__Group__1_in_rule__Heading3__Group__05771);
             rule__Heading3__Group__1();
 
             state._fsp--;
@@ -7067,20 +7552,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading3__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2572:1: rule__Heading3__Group__0__Impl : ( '===' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2818:1: rule__Heading3__Group__0__Impl : ( '===' ) ;
     public final void rule__Heading3__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2576:1: ( ( '===' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2577:1: ( '===' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2822:1: ( ( '===' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2823:1: ( '===' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2577:1: ( '===' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2578:1: '==='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2823:1: ( '===' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2824:1: '==='
             {
              before(grammarAccess.getHeading3Access().getEqualsSignEqualsSignEqualsSignKeyword_0()); 
-            match(input,28,FOLLOW_28_in_rule__Heading3__Group__0__Impl5289); 
+            match(input,37,FOLLOW_37_in_rule__Heading3__Group__0__Impl5799); 
              after(grammarAccess.getHeading3Access().getEqualsSignEqualsSignEqualsSignKeyword_0()); 
 
             }
@@ -7104,21 +7589,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading3__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2591:1: rule__Heading3__Group__1 : rule__Heading3__Group__1__Impl rule__Heading3__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2837:1: rule__Heading3__Group__1 : rule__Heading3__Group__1__Impl rule__Heading3__Group__2 ;
     public final void rule__Heading3__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2595:1: ( rule__Heading3__Group__1__Impl rule__Heading3__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2596:2: rule__Heading3__Group__1__Impl rule__Heading3__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2841:1: ( rule__Heading3__Group__1__Impl rule__Heading3__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2842:2: rule__Heading3__Group__1__Impl rule__Heading3__Group__2
             {
-            pushFollow(FOLLOW_rule__Heading3__Group__1__Impl_in_rule__Heading3__Group__15320);
+            pushFollow(FOLLOW_rule__Heading3__Group__1__Impl_in_rule__Heading3__Group__15830);
             rule__Heading3__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading3__Group__2_in_rule__Heading3__Group__15323);
+            pushFollow(FOLLOW_rule__Heading3__Group__2_in_rule__Heading3__Group__15833);
             rule__Heading3__Group__2();
 
             state._fsp--;
@@ -7142,25 +7627,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading3__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2603:1: rule__Heading3__Group__1__Impl : ( ruleAbstractUnformattedInlineContent ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2849:1: rule__Heading3__Group__1__Impl : ( ( rule__Heading3__HeadingValue3Assignment_1 ) ) ;
     public final void rule__Heading3__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2607:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2608:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2853:1: ( ( ( rule__Heading3__HeadingValue3Assignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2854:1: ( ( rule__Heading3__HeadingValue3Assignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2608:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2609:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2854:1: ( ( rule__Heading3__HeadingValue3Assignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2855:1: ( rule__Heading3__HeadingValue3Assignment_1 )
             {
-             before(grammarAccess.getHeading3Access().getAbstractUnformattedInlineContentParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading3__Group__1__Impl5350);
-            ruleAbstractUnformattedInlineContent();
+             before(grammarAccess.getHeading3Access().getHeadingValue3Assignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2856:1: ( rule__Heading3__HeadingValue3Assignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2856:2: rule__Heading3__HeadingValue3Assignment_1
+            {
+            pushFollow(FOLLOW_rule__Heading3__HeadingValue3Assignment_1_in_rule__Heading3__Group__1__Impl5860);
+            rule__Heading3__HeadingValue3Assignment_1();
 
             state._fsp--;
 
-             after(grammarAccess.getHeading3Access().getAbstractUnformattedInlineContentParserRuleCall_1()); 
+
+            }
+
+             after(grammarAccess.getHeading3Access().getHeadingValue3Assignment_1()); 
 
             }
 
@@ -7183,16 +7674,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading3__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2620:1: rule__Heading3__Group__2 : rule__Heading3__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2866:1: rule__Heading3__Group__2 : rule__Heading3__Group__2__Impl ;
     public final void rule__Heading3__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2624:1: ( rule__Heading3__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2625:2: rule__Heading3__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2870:1: ( rule__Heading3__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2871:2: rule__Heading3__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Heading3__Group__2__Impl_in_rule__Heading3__Group__25379);
+            pushFollow(FOLLOW_rule__Heading3__Group__2__Impl_in_rule__Heading3__Group__25890);
             rule__Heading3__Group__2__Impl();
 
             state._fsp--;
@@ -7216,20 +7707,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading3__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2631:1: rule__Heading3__Group__2__Impl : ( '===' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2877:1: rule__Heading3__Group__2__Impl : ( '===' ) ;
     public final void rule__Heading3__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2635:1: ( ( '===' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2636:1: ( '===' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2881:1: ( ( '===' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2882:1: ( '===' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2636:1: ( '===' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2637:1: '==='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2882:1: ( '===' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2883:1: '==='
             {
              before(grammarAccess.getHeading3Access().getEqualsSignEqualsSignEqualsSignKeyword_2()); 
-            match(input,28,FOLLOW_28_in_rule__Heading3__Group__2__Impl5407); 
+            match(input,37,FOLLOW_37_in_rule__Heading3__Group__2__Impl5918); 
              after(grammarAccess.getHeading3Access().getEqualsSignEqualsSignEqualsSignKeyword_2()); 
 
             }
@@ -7253,21 +7744,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading4__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2656:1: rule__Heading4__Group__0 : rule__Heading4__Group__0__Impl rule__Heading4__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2902:1: rule__Heading4__Group__0 : rule__Heading4__Group__0__Impl rule__Heading4__Group__1 ;
     public final void rule__Heading4__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2660:1: ( rule__Heading4__Group__0__Impl rule__Heading4__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2661:2: rule__Heading4__Group__0__Impl rule__Heading4__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2906:1: ( rule__Heading4__Group__0__Impl rule__Heading4__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2907:2: rule__Heading4__Group__0__Impl rule__Heading4__Group__1
             {
-            pushFollow(FOLLOW_rule__Heading4__Group__0__Impl_in_rule__Heading4__Group__05444);
+            pushFollow(FOLLOW_rule__Heading4__Group__0__Impl_in_rule__Heading4__Group__05955);
             rule__Heading4__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading4__Group__1_in_rule__Heading4__Group__05447);
+            pushFollow(FOLLOW_rule__Heading4__Group__1_in_rule__Heading4__Group__05958);
             rule__Heading4__Group__1();
 
             state._fsp--;
@@ -7291,20 +7782,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading4__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2668:1: rule__Heading4__Group__0__Impl : ( '====' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2914:1: rule__Heading4__Group__0__Impl : ( '====' ) ;
     public final void rule__Heading4__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2672:1: ( ( '====' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2673:1: ( '====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2918:1: ( ( '====' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2919:1: ( '====' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2673:1: ( '====' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2674:1: '===='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2919:1: ( '====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2920:1: '===='
             {
              before(grammarAccess.getHeading4Access().getEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0()); 
-            match(input,29,FOLLOW_29_in_rule__Heading4__Group__0__Impl5475); 
+            match(input,38,FOLLOW_38_in_rule__Heading4__Group__0__Impl5986); 
              after(grammarAccess.getHeading4Access().getEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0()); 
 
             }
@@ -7328,21 +7819,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading4__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2687:1: rule__Heading4__Group__1 : rule__Heading4__Group__1__Impl rule__Heading4__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2933:1: rule__Heading4__Group__1 : rule__Heading4__Group__1__Impl rule__Heading4__Group__2 ;
     public final void rule__Heading4__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2691:1: ( rule__Heading4__Group__1__Impl rule__Heading4__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2692:2: rule__Heading4__Group__1__Impl rule__Heading4__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2937:1: ( rule__Heading4__Group__1__Impl rule__Heading4__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2938:2: rule__Heading4__Group__1__Impl rule__Heading4__Group__2
             {
-            pushFollow(FOLLOW_rule__Heading4__Group__1__Impl_in_rule__Heading4__Group__15506);
+            pushFollow(FOLLOW_rule__Heading4__Group__1__Impl_in_rule__Heading4__Group__16017);
             rule__Heading4__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading4__Group__2_in_rule__Heading4__Group__15509);
+            pushFollow(FOLLOW_rule__Heading4__Group__2_in_rule__Heading4__Group__16020);
             rule__Heading4__Group__2();
 
             state._fsp--;
@@ -7366,25 +7857,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading4__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2699:1: rule__Heading4__Group__1__Impl : ( ruleAbstractUnformattedInlineContent ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2945:1: rule__Heading4__Group__1__Impl : ( ( rule__Heading4__HeadingValue4Assignment_1 ) ) ;
     public final void rule__Heading4__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2703:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2704:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2949:1: ( ( ( rule__Heading4__HeadingValue4Assignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2950:1: ( ( rule__Heading4__HeadingValue4Assignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2704:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2705:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2950:1: ( ( rule__Heading4__HeadingValue4Assignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2951:1: ( rule__Heading4__HeadingValue4Assignment_1 )
             {
-             before(grammarAccess.getHeading4Access().getAbstractUnformattedInlineContentParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading4__Group__1__Impl5536);
-            ruleAbstractUnformattedInlineContent();
+             before(grammarAccess.getHeading4Access().getHeadingValue4Assignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2952:1: ( rule__Heading4__HeadingValue4Assignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2952:2: rule__Heading4__HeadingValue4Assignment_1
+            {
+            pushFollow(FOLLOW_rule__Heading4__HeadingValue4Assignment_1_in_rule__Heading4__Group__1__Impl6047);
+            rule__Heading4__HeadingValue4Assignment_1();
 
             state._fsp--;
 
-             after(grammarAccess.getHeading4Access().getAbstractUnformattedInlineContentParserRuleCall_1()); 
+
+            }
+
+             after(grammarAccess.getHeading4Access().getHeadingValue4Assignment_1()); 
 
             }
 
@@ -7407,16 +7904,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading4__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2716:1: rule__Heading4__Group__2 : rule__Heading4__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2962:1: rule__Heading4__Group__2 : rule__Heading4__Group__2__Impl ;
     public final void rule__Heading4__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2720:1: ( rule__Heading4__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2721:2: rule__Heading4__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2966:1: ( rule__Heading4__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2967:2: rule__Heading4__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Heading4__Group__2__Impl_in_rule__Heading4__Group__25565);
+            pushFollow(FOLLOW_rule__Heading4__Group__2__Impl_in_rule__Heading4__Group__26077);
             rule__Heading4__Group__2__Impl();
 
             state._fsp--;
@@ -7440,20 +7937,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading4__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2727:1: rule__Heading4__Group__2__Impl : ( '====' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2973:1: rule__Heading4__Group__2__Impl : ( '====' ) ;
     public final void rule__Heading4__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2731:1: ( ( '====' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2732:1: ( '====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2977:1: ( ( '====' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2978:1: ( '====' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2732:1: ( '====' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2733:1: '===='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2978:1: ( '====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2979:1: '===='
             {
              before(grammarAccess.getHeading4Access().getEqualsSignEqualsSignEqualsSignEqualsSignKeyword_2()); 
-            match(input,29,FOLLOW_29_in_rule__Heading4__Group__2__Impl5593); 
+            match(input,38,FOLLOW_38_in_rule__Heading4__Group__2__Impl6105); 
              after(grammarAccess.getHeading4Access().getEqualsSignEqualsSignEqualsSignEqualsSignKeyword_2()); 
 
             }
@@ -7477,21 +7974,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading5__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2752:1: rule__Heading5__Group__0 : rule__Heading5__Group__0__Impl rule__Heading5__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2998:1: rule__Heading5__Group__0 : rule__Heading5__Group__0__Impl rule__Heading5__Group__1 ;
     public final void rule__Heading5__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2756:1: ( rule__Heading5__Group__0__Impl rule__Heading5__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2757:2: rule__Heading5__Group__0__Impl rule__Heading5__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3002:1: ( rule__Heading5__Group__0__Impl rule__Heading5__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3003:2: rule__Heading5__Group__0__Impl rule__Heading5__Group__1
             {
-            pushFollow(FOLLOW_rule__Heading5__Group__0__Impl_in_rule__Heading5__Group__05630);
+            pushFollow(FOLLOW_rule__Heading5__Group__0__Impl_in_rule__Heading5__Group__06142);
             rule__Heading5__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading5__Group__1_in_rule__Heading5__Group__05633);
+            pushFollow(FOLLOW_rule__Heading5__Group__1_in_rule__Heading5__Group__06145);
             rule__Heading5__Group__1();
 
             state._fsp--;
@@ -7515,20 +8012,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading5__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2764:1: rule__Heading5__Group__0__Impl : ( '=====' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3010:1: rule__Heading5__Group__0__Impl : ( '=====' ) ;
     public final void rule__Heading5__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2768:1: ( ( '=====' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2769:1: ( '=====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3014:1: ( ( '=====' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3015:1: ( '=====' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2769:1: ( '=====' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2770:1: '====='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3015:1: ( '=====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3016:1: '====='
             {
              before(grammarAccess.getHeading5Access().getEqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0()); 
-            match(input,30,FOLLOW_30_in_rule__Heading5__Group__0__Impl5661); 
+            match(input,39,FOLLOW_39_in_rule__Heading5__Group__0__Impl6173); 
              after(grammarAccess.getHeading5Access().getEqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_0()); 
 
             }
@@ -7552,21 +8049,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading5__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2783:1: rule__Heading5__Group__1 : rule__Heading5__Group__1__Impl rule__Heading5__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3029:1: rule__Heading5__Group__1 : rule__Heading5__Group__1__Impl rule__Heading5__Group__2 ;
     public final void rule__Heading5__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2787:1: ( rule__Heading5__Group__1__Impl rule__Heading5__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2788:2: rule__Heading5__Group__1__Impl rule__Heading5__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3033:1: ( rule__Heading5__Group__1__Impl rule__Heading5__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3034:2: rule__Heading5__Group__1__Impl rule__Heading5__Group__2
             {
-            pushFollow(FOLLOW_rule__Heading5__Group__1__Impl_in_rule__Heading5__Group__15692);
+            pushFollow(FOLLOW_rule__Heading5__Group__1__Impl_in_rule__Heading5__Group__16204);
             rule__Heading5__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Heading5__Group__2_in_rule__Heading5__Group__15695);
+            pushFollow(FOLLOW_rule__Heading5__Group__2_in_rule__Heading5__Group__16207);
             rule__Heading5__Group__2();
 
             state._fsp--;
@@ -7590,25 +8087,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading5__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2795:1: rule__Heading5__Group__1__Impl : ( ruleAbstractUnformattedInlineContent ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3041:1: rule__Heading5__Group__1__Impl : ( ( rule__Heading5__HeadingValue5Assignment_1 ) ) ;
     public final void rule__Heading5__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2799:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2800:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3045:1: ( ( ( rule__Heading5__HeadingValue5Assignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3046:1: ( ( rule__Heading5__HeadingValue5Assignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2800:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2801:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3046:1: ( ( rule__Heading5__HeadingValue5Assignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3047:1: ( rule__Heading5__HeadingValue5Assignment_1 )
             {
-             before(grammarAccess.getHeading5Access().getAbstractUnformattedInlineContentParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading5__Group__1__Impl5722);
-            ruleAbstractUnformattedInlineContent();
+             before(grammarAccess.getHeading5Access().getHeadingValue5Assignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3048:1: ( rule__Heading5__HeadingValue5Assignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3048:2: rule__Heading5__HeadingValue5Assignment_1
+            {
+            pushFollow(FOLLOW_rule__Heading5__HeadingValue5Assignment_1_in_rule__Heading5__Group__1__Impl6234);
+            rule__Heading5__HeadingValue5Assignment_1();
 
             state._fsp--;
 
-             after(grammarAccess.getHeading5Access().getAbstractUnformattedInlineContentParserRuleCall_1()); 
+
+            }
+
+             after(grammarAccess.getHeading5Access().getHeadingValue5Assignment_1()); 
 
             }
 
@@ -7631,16 +8134,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading5__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2812:1: rule__Heading5__Group__2 : rule__Heading5__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3058:1: rule__Heading5__Group__2 : rule__Heading5__Group__2__Impl ;
     public final void rule__Heading5__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2816:1: ( rule__Heading5__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2817:2: rule__Heading5__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3062:1: ( rule__Heading5__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3063:2: rule__Heading5__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Heading5__Group__2__Impl_in_rule__Heading5__Group__25751);
+            pushFollow(FOLLOW_rule__Heading5__Group__2__Impl_in_rule__Heading5__Group__26264);
             rule__Heading5__Group__2__Impl();
 
             state._fsp--;
@@ -7664,20 +8167,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Heading5__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2823:1: rule__Heading5__Group__2__Impl : ( '=====' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3069:1: rule__Heading5__Group__2__Impl : ( '=====' ) ;
     public final void rule__Heading5__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2827:1: ( ( '=====' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2828:1: ( '=====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3073:1: ( ( '=====' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3074:1: ( '=====' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2828:1: ( '=====' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2829:1: '====='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3074:1: ( '=====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3075:1: '====='
             {
              before(grammarAccess.getHeading5Access().getEqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_2()); 
-            match(input,30,FOLLOW_30_in_rule__Heading5__Group__2__Impl5779); 
+            match(input,39,FOLLOW_39_in_rule__Heading5__Group__2__Impl6292); 
              after(grammarAccess.getHeading5Access().getEqualsSignEqualsSignEqualsSignEqualsSignEqualsSignKeyword_2()); 
 
             }
@@ -7701,21 +8204,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bold__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2848:1: rule__Bold__Group__0 : rule__Bold__Group__0__Impl rule__Bold__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3094:1: rule__Bold__Group__0 : rule__Bold__Group__0__Impl rule__Bold__Group__1 ;
     public final void rule__Bold__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2852:1: ( rule__Bold__Group__0__Impl rule__Bold__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2853:2: rule__Bold__Group__0__Impl rule__Bold__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3098:1: ( rule__Bold__Group__0__Impl rule__Bold__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3099:2: rule__Bold__Group__0__Impl rule__Bold__Group__1
             {
-            pushFollow(FOLLOW_rule__Bold__Group__0__Impl_in_rule__Bold__Group__05816);
+            pushFollow(FOLLOW_rule__Bold__Group__0__Impl_in_rule__Bold__Group__06329);
             rule__Bold__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bold__Group__1_in_rule__Bold__Group__05819);
+            pushFollow(FOLLOW_rule__Bold__Group__1_in_rule__Bold__Group__06332);
             rule__Bold__Group__1();
 
             state._fsp--;
@@ -7739,20 +8242,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bold__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2860:1: rule__Bold__Group__0__Impl : ( '\\'\\'\\'' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3106:1: rule__Bold__Group__0__Impl : ( '\\'\\'\\'' ) ;
     public final void rule__Bold__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2864:1: ( ( '\\'\\'\\'' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2865:1: ( '\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3110:1: ( ( '\\'\\'\\'' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3111:1: ( '\\'\\'\\'' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2865:1: ( '\\'\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2866:1: '\\'\\'\\''
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3111:1: ( '\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3112:1: '\\'\\'\\''
             {
              before(grammarAccess.getBoldAccess().getApostropheApostropheApostropheKeyword_0()); 
-            match(input,31,FOLLOW_31_in_rule__Bold__Group__0__Impl5847); 
+            match(input,40,FOLLOW_40_in_rule__Bold__Group__0__Impl6360); 
              after(grammarAccess.getBoldAccess().getApostropheApostropheApostropheKeyword_0()); 
 
             }
@@ -7776,21 +8279,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bold__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2879:1: rule__Bold__Group__1 : rule__Bold__Group__1__Impl rule__Bold__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3125:1: rule__Bold__Group__1 : rule__Bold__Group__1__Impl rule__Bold__Group__2 ;
     public final void rule__Bold__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2883:1: ( rule__Bold__Group__1__Impl rule__Bold__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2884:2: rule__Bold__Group__1__Impl rule__Bold__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3129:1: ( rule__Bold__Group__1__Impl rule__Bold__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3130:2: rule__Bold__Group__1__Impl rule__Bold__Group__2
             {
-            pushFollow(FOLLOW_rule__Bold__Group__1__Impl_in_rule__Bold__Group__15878);
+            pushFollow(FOLLOW_rule__Bold__Group__1__Impl_in_rule__Bold__Group__16391);
             rule__Bold__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Bold__Group__2_in_rule__Bold__Group__15881);
+            pushFollow(FOLLOW_rule__Bold__Group__2_in_rule__Bold__Group__16394);
             rule__Bold__Group__2();
 
             state._fsp--;
@@ -7814,25 +8317,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bold__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2891:1: rule__Bold__Group__1__Impl : ( ruleAbstractUnformattedInlineContent ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3137:1: rule__Bold__Group__1__Impl : ( ( rule__Bold__NameAssignment_1 ) ) ;
     public final void rule__Bold__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2895:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2896:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3141:1: ( ( ( rule__Bold__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3142:1: ( ( rule__Bold__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2896:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2897:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3142:1: ( ( rule__Bold__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3143:1: ( rule__Bold__NameAssignment_1 )
             {
-             before(grammarAccess.getBoldAccess().getAbstractUnformattedInlineContentParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Bold__Group__1__Impl5908);
-            ruleAbstractUnformattedInlineContent();
+             before(grammarAccess.getBoldAccess().getNameAssignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3144:1: ( rule__Bold__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3144:2: rule__Bold__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__Bold__NameAssignment_1_in_rule__Bold__Group__1__Impl6421);
+            rule__Bold__NameAssignment_1();
 
             state._fsp--;
 
-             after(grammarAccess.getBoldAccess().getAbstractUnformattedInlineContentParserRuleCall_1()); 
+
+            }
+
+             after(grammarAccess.getBoldAccess().getNameAssignment_1()); 
 
             }
 
@@ -7855,16 +8364,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bold__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2908:1: rule__Bold__Group__2 : rule__Bold__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3154:1: rule__Bold__Group__2 : rule__Bold__Group__2__Impl ;
     public final void rule__Bold__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2912:1: ( rule__Bold__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2913:2: rule__Bold__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3158:1: ( rule__Bold__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3159:2: rule__Bold__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Bold__Group__2__Impl_in_rule__Bold__Group__25937);
+            pushFollow(FOLLOW_rule__Bold__Group__2__Impl_in_rule__Bold__Group__26451);
             rule__Bold__Group__2__Impl();
 
             state._fsp--;
@@ -7888,20 +8397,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Bold__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2919:1: rule__Bold__Group__2__Impl : ( '\\'\\'\\'' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3165:1: rule__Bold__Group__2__Impl : ( '\\'\\'\\'' ) ;
     public final void rule__Bold__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2923:1: ( ( '\\'\\'\\'' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2924:1: ( '\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3169:1: ( ( '\\'\\'\\'' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3170:1: ( '\\'\\'\\'' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2924:1: ( '\\'\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2925:1: '\\'\\'\\''
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3170:1: ( '\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3171:1: '\\'\\'\\''
             {
              before(grammarAccess.getBoldAccess().getApostropheApostropheApostropheKeyword_2()); 
-            match(input,31,FOLLOW_31_in_rule__Bold__Group__2__Impl5965); 
+            match(input,40,FOLLOW_40_in_rule__Bold__Group__2__Impl6479); 
              after(grammarAccess.getBoldAccess().getApostropheApostropheApostropheKeyword_2()); 
 
             }
@@ -7925,21 +8434,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Italic__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2944:1: rule__Italic__Group__0 : rule__Italic__Group__0__Impl rule__Italic__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3190:1: rule__Italic__Group__0 : rule__Italic__Group__0__Impl rule__Italic__Group__1 ;
     public final void rule__Italic__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2948:1: ( rule__Italic__Group__0__Impl rule__Italic__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2949:2: rule__Italic__Group__0__Impl rule__Italic__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3194:1: ( rule__Italic__Group__0__Impl rule__Italic__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3195:2: rule__Italic__Group__0__Impl rule__Italic__Group__1
             {
-            pushFollow(FOLLOW_rule__Italic__Group__0__Impl_in_rule__Italic__Group__06002);
+            pushFollow(FOLLOW_rule__Italic__Group__0__Impl_in_rule__Italic__Group__06516);
             rule__Italic__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Italic__Group__1_in_rule__Italic__Group__06005);
+            pushFollow(FOLLOW_rule__Italic__Group__1_in_rule__Italic__Group__06519);
             rule__Italic__Group__1();
 
             state._fsp--;
@@ -7963,20 +8472,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Italic__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2956:1: rule__Italic__Group__0__Impl : ( '\\'\\'' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3202:1: rule__Italic__Group__0__Impl : ( '\\'\\'' ) ;
     public final void rule__Italic__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2960:1: ( ( '\\'\\'' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2961:1: ( '\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3206:1: ( ( '\\'\\'' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3207:1: ( '\\'\\'' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2961:1: ( '\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2962:1: '\\'\\''
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3207:1: ( '\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3208:1: '\\'\\''
             {
              before(grammarAccess.getItalicAccess().getApostropheApostropheKeyword_0()); 
-            match(input,32,FOLLOW_32_in_rule__Italic__Group__0__Impl6033); 
+            match(input,41,FOLLOW_41_in_rule__Italic__Group__0__Impl6547); 
              after(grammarAccess.getItalicAccess().getApostropheApostropheKeyword_0()); 
 
             }
@@ -8000,21 +8509,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Italic__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2975:1: rule__Italic__Group__1 : rule__Italic__Group__1__Impl rule__Italic__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3221:1: rule__Italic__Group__1 : rule__Italic__Group__1__Impl rule__Italic__Group__2 ;
     public final void rule__Italic__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2979:1: ( rule__Italic__Group__1__Impl rule__Italic__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2980:2: rule__Italic__Group__1__Impl rule__Italic__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3225:1: ( rule__Italic__Group__1__Impl rule__Italic__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3226:2: rule__Italic__Group__1__Impl rule__Italic__Group__2
             {
-            pushFollow(FOLLOW_rule__Italic__Group__1__Impl_in_rule__Italic__Group__16064);
+            pushFollow(FOLLOW_rule__Italic__Group__1__Impl_in_rule__Italic__Group__16578);
             rule__Italic__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Italic__Group__2_in_rule__Italic__Group__16067);
+            pushFollow(FOLLOW_rule__Italic__Group__2_in_rule__Italic__Group__16581);
             rule__Italic__Group__2();
 
             state._fsp--;
@@ -8038,25 +8547,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Italic__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2987:1: rule__Italic__Group__1__Impl : ( ruleAbstractUnformattedInlineContent ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3233:1: rule__Italic__Group__1__Impl : ( ( rule__Italic__NameAssignment_1 ) ) ;
     public final void rule__Italic__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2991:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2992:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3237:1: ( ( ( rule__Italic__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3238:1: ( ( rule__Italic__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2992:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:2993:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3238:1: ( ( rule__Italic__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3239:1: ( rule__Italic__NameAssignment_1 )
             {
-             before(grammarAccess.getItalicAccess().getAbstractUnformattedInlineContentParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Italic__Group__1__Impl6094);
-            ruleAbstractUnformattedInlineContent();
+             before(grammarAccess.getItalicAccess().getNameAssignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3240:1: ( rule__Italic__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3240:2: rule__Italic__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__Italic__NameAssignment_1_in_rule__Italic__Group__1__Impl6608);
+            rule__Italic__NameAssignment_1();
 
             state._fsp--;
 
-             after(grammarAccess.getItalicAccess().getAbstractUnformattedInlineContentParserRuleCall_1()); 
+
+            }
+
+             after(grammarAccess.getItalicAccess().getNameAssignment_1()); 
 
             }
 
@@ -8079,16 +8594,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Italic__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3004:1: rule__Italic__Group__2 : rule__Italic__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3250:1: rule__Italic__Group__2 : rule__Italic__Group__2__Impl ;
     public final void rule__Italic__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3008:1: ( rule__Italic__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3009:2: rule__Italic__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3254:1: ( rule__Italic__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3255:2: rule__Italic__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Italic__Group__2__Impl_in_rule__Italic__Group__26123);
+            pushFollow(FOLLOW_rule__Italic__Group__2__Impl_in_rule__Italic__Group__26638);
             rule__Italic__Group__2__Impl();
 
             state._fsp--;
@@ -8112,20 +8627,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Italic__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3015:1: rule__Italic__Group__2__Impl : ( '\\'\\'' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3261:1: rule__Italic__Group__2__Impl : ( '\\'\\'' ) ;
     public final void rule__Italic__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3019:1: ( ( '\\'\\'' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3020:1: ( '\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3265:1: ( ( '\\'\\'' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3266:1: ( '\\'\\'' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3020:1: ( '\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3021:1: '\\'\\''
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3266:1: ( '\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3267:1: '\\'\\''
             {
              before(grammarAccess.getItalicAccess().getApostropheApostropheKeyword_2()); 
-            match(input,32,FOLLOW_32_in_rule__Italic__Group__2__Impl6151); 
+            match(input,41,FOLLOW_41_in_rule__Italic__Group__2__Impl6666); 
              after(grammarAccess.getItalicAccess().getApostropheApostropheKeyword_2()); 
 
             }
@@ -8149,21 +8664,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItalicBold__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3040:1: rule__ItalicBold__Group__0 : rule__ItalicBold__Group__0__Impl rule__ItalicBold__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3286:1: rule__ItalicBold__Group__0 : rule__ItalicBold__Group__0__Impl rule__ItalicBold__Group__1 ;
     public final void rule__ItalicBold__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3044:1: ( rule__ItalicBold__Group__0__Impl rule__ItalicBold__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3045:2: rule__ItalicBold__Group__0__Impl rule__ItalicBold__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3290:1: ( rule__ItalicBold__Group__0__Impl rule__ItalicBold__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3291:2: rule__ItalicBold__Group__0__Impl rule__ItalicBold__Group__1
             {
-            pushFollow(FOLLOW_rule__ItalicBold__Group__0__Impl_in_rule__ItalicBold__Group__06188);
+            pushFollow(FOLLOW_rule__ItalicBold__Group__0__Impl_in_rule__ItalicBold__Group__06703);
             rule__ItalicBold__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ItalicBold__Group__1_in_rule__ItalicBold__Group__06191);
+            pushFollow(FOLLOW_rule__ItalicBold__Group__1_in_rule__ItalicBold__Group__06706);
             rule__ItalicBold__Group__1();
 
             state._fsp--;
@@ -8187,20 +8702,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItalicBold__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3052:1: rule__ItalicBold__Group__0__Impl : ( '\\'\\'\\'\\'\\'' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3298:1: rule__ItalicBold__Group__0__Impl : ( '\\'\\'\\'\\'\\'' ) ;
     public final void rule__ItalicBold__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3056:1: ( ( '\\'\\'\\'\\'\\'' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3057:1: ( '\\'\\'\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3302:1: ( ( '\\'\\'\\'\\'\\'' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3303:1: ( '\\'\\'\\'\\'\\'' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3057:1: ( '\\'\\'\\'\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3058:1: '\\'\\'\\'\\'\\''
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3303:1: ( '\\'\\'\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3304:1: '\\'\\'\\'\\'\\''
             {
              before(grammarAccess.getItalicBoldAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_0()); 
-            match(input,33,FOLLOW_33_in_rule__ItalicBold__Group__0__Impl6219); 
+            match(input,42,FOLLOW_42_in_rule__ItalicBold__Group__0__Impl6734); 
              after(grammarAccess.getItalicBoldAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_0()); 
 
             }
@@ -8224,21 +8739,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItalicBold__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3071:1: rule__ItalicBold__Group__1 : rule__ItalicBold__Group__1__Impl rule__ItalicBold__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3317:1: rule__ItalicBold__Group__1 : rule__ItalicBold__Group__1__Impl rule__ItalicBold__Group__2 ;
     public final void rule__ItalicBold__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3075:1: ( rule__ItalicBold__Group__1__Impl rule__ItalicBold__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3076:2: rule__ItalicBold__Group__1__Impl rule__ItalicBold__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3321:1: ( rule__ItalicBold__Group__1__Impl rule__ItalicBold__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3322:2: rule__ItalicBold__Group__1__Impl rule__ItalicBold__Group__2
             {
-            pushFollow(FOLLOW_rule__ItalicBold__Group__1__Impl_in_rule__ItalicBold__Group__16250);
+            pushFollow(FOLLOW_rule__ItalicBold__Group__1__Impl_in_rule__ItalicBold__Group__16765);
             rule__ItalicBold__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ItalicBold__Group__2_in_rule__ItalicBold__Group__16253);
+            pushFollow(FOLLOW_rule__ItalicBold__Group__2_in_rule__ItalicBold__Group__16768);
             rule__ItalicBold__Group__2();
 
             state._fsp--;
@@ -8262,25 +8777,31 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItalicBold__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3083:1: rule__ItalicBold__Group__1__Impl : ( ruleAbstractUnformattedInlineContent ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3329:1: rule__ItalicBold__Group__1__Impl : ( ( rule__ItalicBold__NameAssignment_1 ) ) ;
     public final void rule__ItalicBold__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3087:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3088:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3333:1: ( ( ( rule__ItalicBold__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3334:1: ( ( rule__ItalicBold__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3088:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3089:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3334:1: ( ( rule__ItalicBold__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3335:1: ( rule__ItalicBold__NameAssignment_1 )
             {
-             before(grammarAccess.getItalicBoldAccess().getAbstractUnformattedInlineContentParserRuleCall_1()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ItalicBold__Group__1__Impl6280);
-            ruleAbstractUnformattedInlineContent();
+             before(grammarAccess.getItalicBoldAccess().getNameAssignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3336:1: ( rule__ItalicBold__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3336:2: rule__ItalicBold__NameAssignment_1
+            {
+            pushFollow(FOLLOW_rule__ItalicBold__NameAssignment_1_in_rule__ItalicBold__Group__1__Impl6795);
+            rule__ItalicBold__NameAssignment_1();
 
             state._fsp--;
 
-             after(grammarAccess.getItalicBoldAccess().getAbstractUnformattedInlineContentParserRuleCall_1()); 
+
+            }
+
+             after(grammarAccess.getItalicBoldAccess().getNameAssignment_1()); 
 
             }
 
@@ -8303,16 +8824,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItalicBold__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3100:1: rule__ItalicBold__Group__2 : rule__ItalicBold__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3346:1: rule__ItalicBold__Group__2 : rule__ItalicBold__Group__2__Impl ;
     public final void rule__ItalicBold__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3104:1: ( rule__ItalicBold__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3105:2: rule__ItalicBold__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3350:1: ( rule__ItalicBold__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3351:2: rule__ItalicBold__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__ItalicBold__Group__2__Impl_in_rule__ItalicBold__Group__26309);
+            pushFollow(FOLLOW_rule__ItalicBold__Group__2__Impl_in_rule__ItalicBold__Group__26825);
             rule__ItalicBold__Group__2__Impl();
 
             state._fsp--;
@@ -8336,20 +8857,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ItalicBold__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3111:1: rule__ItalicBold__Group__2__Impl : ( '\\'\\'\\'\\'\\'' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3357:1: rule__ItalicBold__Group__2__Impl : ( '\\'\\'\\'\\'\\'' ) ;
     public final void rule__ItalicBold__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3115:1: ( ( '\\'\\'\\'\\'\\'' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3116:1: ( '\\'\\'\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3361:1: ( ( '\\'\\'\\'\\'\\'' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3362:1: ( '\\'\\'\\'\\'\\'' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3116:1: ( '\\'\\'\\'\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3117:1: '\\'\\'\\'\\'\\''
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3362:1: ( '\\'\\'\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3363:1: '\\'\\'\\'\\'\\''
             {
              before(grammarAccess.getItalicBoldAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_2()); 
-            match(input,33,FOLLOW_33_in_rule__ItalicBold__Group__2__Impl6337); 
+            match(input,42,FOLLOW_42_in_rule__ItalicBold__Group__2__Impl6853); 
              after(grammarAccess.getItalicBoldAccess().getApostropheApostropheApostropheApostropheApostropheKeyword_2()); 
 
             }
@@ -8373,21 +8894,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Internal__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3136:1: rule__Internal__Group__0 : rule__Internal__Group__0__Impl rule__Internal__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3382:1: rule__Internal__Group__0 : rule__Internal__Group__0__Impl rule__Internal__Group__1 ;
     public final void rule__Internal__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3140:1: ( rule__Internal__Group__0__Impl rule__Internal__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3141:2: rule__Internal__Group__0__Impl rule__Internal__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3386:1: ( rule__Internal__Group__0__Impl rule__Internal__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3387:2: rule__Internal__Group__0__Impl rule__Internal__Group__1
             {
-            pushFollow(FOLLOW_rule__Internal__Group__0__Impl_in_rule__Internal__Group__06374);
+            pushFollow(FOLLOW_rule__Internal__Group__0__Impl_in_rule__Internal__Group__06890);
             rule__Internal__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Internal__Group__1_in_rule__Internal__Group__06377);
+            pushFollow(FOLLOW_rule__Internal__Group__1_in_rule__Internal__Group__06893);
             rule__Internal__Group__1();
 
             state._fsp--;
@@ -8411,20 +8932,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Internal__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3148:1: rule__Internal__Group__0__Impl : ( '[[' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3394:1: rule__Internal__Group__0__Impl : ( '[[' ) ;
     public final void rule__Internal__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3152:1: ( ( '[[' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3153:1: ( '[[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3398:1: ( ( '[[' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3399:1: ( '[[' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3153:1: ( '[[' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3154:1: '[['
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3399:1: ( '[[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3400:1: '[['
             {
              before(grammarAccess.getInternalAccess().getLeftSquareBracketLeftSquareBracketKeyword_0()); 
-            match(input,34,FOLLOW_34_in_rule__Internal__Group__0__Impl6405); 
+            match(input,30,FOLLOW_30_in_rule__Internal__Group__0__Impl6921); 
              after(grammarAccess.getInternalAccess().getLeftSquareBracketLeftSquareBracketKeyword_0()); 
 
             }
@@ -8448,21 +8969,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Internal__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3167:1: rule__Internal__Group__1 : rule__Internal__Group__1__Impl rule__Internal__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3413:1: rule__Internal__Group__1 : rule__Internal__Group__1__Impl rule__Internal__Group__2 ;
     public final void rule__Internal__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3171:1: ( rule__Internal__Group__1__Impl rule__Internal__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3172:2: rule__Internal__Group__1__Impl rule__Internal__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3417:1: ( rule__Internal__Group__1__Impl rule__Internal__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3418:2: rule__Internal__Group__1__Impl rule__Internal__Group__2
             {
-            pushFollow(FOLLOW_rule__Internal__Group__1__Impl_in_rule__Internal__Group__16436);
+            pushFollow(FOLLOW_rule__Internal__Group__1__Impl_in_rule__Internal__Group__16952);
             rule__Internal__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Internal__Group__2_in_rule__Internal__Group__16439);
+            pushFollow(FOLLOW_rule__Internal__Group__2_in_rule__Internal__Group__16955);
             rule__Internal__Group__2();
 
             state._fsp--;
@@ -8486,23 +9007,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Internal__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3179:1: rule__Internal__Group__1__Impl : ( ( rule__Internal__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3425:1: rule__Internal__Group__1__Impl : ( ( rule__Internal__NameAssignment_1 ) ) ;
     public final void rule__Internal__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3183:1: ( ( ( rule__Internal__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3184:1: ( ( rule__Internal__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3429:1: ( ( ( rule__Internal__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3430:1: ( ( rule__Internal__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3184:1: ( ( rule__Internal__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3185:1: ( rule__Internal__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3430:1: ( ( rule__Internal__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3431:1: ( rule__Internal__NameAssignment_1 )
             {
              before(grammarAccess.getInternalAccess().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3186:1: ( rule__Internal__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3186:2: rule__Internal__NameAssignment_1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3432:1: ( rule__Internal__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3432:2: rule__Internal__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__Internal__NameAssignment_1_in_rule__Internal__Group__1__Impl6466);
+            pushFollow(FOLLOW_rule__Internal__NameAssignment_1_in_rule__Internal__Group__1__Impl6982);
             rule__Internal__NameAssignment_1();
 
             state._fsp--;
@@ -8533,16 +9054,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Internal__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3196:1: rule__Internal__Group__2 : rule__Internal__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3442:1: rule__Internal__Group__2 : rule__Internal__Group__2__Impl ;
     public final void rule__Internal__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3200:1: ( rule__Internal__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3201:2: rule__Internal__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3446:1: ( rule__Internal__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3447:2: rule__Internal__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__Internal__Group__2__Impl_in_rule__Internal__Group__26496);
+            pushFollow(FOLLOW_rule__Internal__Group__2__Impl_in_rule__Internal__Group__27012);
             rule__Internal__Group__2__Impl();
 
             state._fsp--;
@@ -8566,20 +9087,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Internal__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3207:1: rule__Internal__Group__2__Impl : ( ']]' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3453:1: rule__Internal__Group__2__Impl : ( ']]' ) ;
     public final void rule__Internal__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3211:1: ( ( ']]' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3212:1: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3457:1: ( ( ']]' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3458:1: ( ']]' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3212:1: ( ']]' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3213:1: ']]'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3458:1: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3459:1: ']]'
             {
              before(grammarAccess.getInternalAccess().getRightSquareBracketRightSquareBracketKeyword_2()); 
-            match(input,23,FOLLOW_23_in_rule__Internal__Group__2__Impl6524); 
+            match(input,32,FOLLOW_32_in_rule__Internal__Group__2__Impl7040); 
              after(grammarAccess.getInternalAccess().getRightSquareBracketRightSquareBracketKeyword_2()); 
 
             }
@@ -8603,21 +9124,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3232:1: rule__InternalAlt__Group__0 : rule__InternalAlt__Group__0__Impl rule__InternalAlt__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3478:1: rule__InternalAlt__Group__0 : rule__InternalAlt__Group__0__Impl rule__InternalAlt__Group__1 ;
     public final void rule__InternalAlt__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3236:1: ( rule__InternalAlt__Group__0__Impl rule__InternalAlt__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3237:2: rule__InternalAlt__Group__0__Impl rule__InternalAlt__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3482:1: ( rule__InternalAlt__Group__0__Impl rule__InternalAlt__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3483:2: rule__InternalAlt__Group__0__Impl rule__InternalAlt__Group__1
             {
-            pushFollow(FOLLOW_rule__InternalAlt__Group__0__Impl_in_rule__InternalAlt__Group__06561);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__0__Impl_in_rule__InternalAlt__Group__07077);
             rule__InternalAlt__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InternalAlt__Group__1_in_rule__InternalAlt__Group__06564);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__1_in_rule__InternalAlt__Group__07080);
             rule__InternalAlt__Group__1();
 
             state._fsp--;
@@ -8641,20 +9162,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3244:1: rule__InternalAlt__Group__0__Impl : ( '[[' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3490:1: rule__InternalAlt__Group__0__Impl : ( '[[' ) ;
     public final void rule__InternalAlt__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3248:1: ( ( '[[' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3249:1: ( '[[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3494:1: ( ( '[[' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3495:1: ( '[[' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3249:1: ( '[[' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3250:1: '[['
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3495:1: ( '[[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3496:1: '[['
             {
              before(grammarAccess.getInternalAltAccess().getLeftSquareBracketLeftSquareBracketKeyword_0()); 
-            match(input,34,FOLLOW_34_in_rule__InternalAlt__Group__0__Impl6592); 
+            match(input,30,FOLLOW_30_in_rule__InternalAlt__Group__0__Impl7108); 
              after(grammarAccess.getInternalAltAccess().getLeftSquareBracketLeftSquareBracketKeyword_0()); 
 
             }
@@ -8678,21 +9199,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3263:1: rule__InternalAlt__Group__1 : rule__InternalAlt__Group__1__Impl rule__InternalAlt__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3509:1: rule__InternalAlt__Group__1 : rule__InternalAlt__Group__1__Impl rule__InternalAlt__Group__2 ;
     public final void rule__InternalAlt__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3267:1: ( rule__InternalAlt__Group__1__Impl rule__InternalAlt__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3268:2: rule__InternalAlt__Group__1__Impl rule__InternalAlt__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3513:1: ( rule__InternalAlt__Group__1__Impl rule__InternalAlt__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3514:2: rule__InternalAlt__Group__1__Impl rule__InternalAlt__Group__2
             {
-            pushFollow(FOLLOW_rule__InternalAlt__Group__1__Impl_in_rule__InternalAlt__Group__16623);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__1__Impl_in_rule__InternalAlt__Group__17139);
             rule__InternalAlt__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InternalAlt__Group__2_in_rule__InternalAlt__Group__16626);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__2_in_rule__InternalAlt__Group__17142);
             rule__InternalAlt__Group__2();
 
             state._fsp--;
@@ -8716,23 +9237,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3275:1: rule__InternalAlt__Group__1__Impl : ( ( rule__InternalAlt__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3521:1: rule__InternalAlt__Group__1__Impl : ( ( rule__InternalAlt__NameAssignment_1 ) ) ;
     public final void rule__InternalAlt__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3279:1: ( ( ( rule__InternalAlt__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3280:1: ( ( rule__InternalAlt__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3525:1: ( ( ( rule__InternalAlt__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3526:1: ( ( rule__InternalAlt__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3280:1: ( ( rule__InternalAlt__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3281:1: ( rule__InternalAlt__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3526:1: ( ( rule__InternalAlt__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3527:1: ( rule__InternalAlt__NameAssignment_1 )
             {
              before(grammarAccess.getInternalAltAccess().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3282:1: ( rule__InternalAlt__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3282:2: rule__InternalAlt__NameAssignment_1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3528:1: ( rule__InternalAlt__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3528:2: rule__InternalAlt__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__InternalAlt__NameAssignment_1_in_rule__InternalAlt__Group__1__Impl6653);
+            pushFollow(FOLLOW_rule__InternalAlt__NameAssignment_1_in_rule__InternalAlt__Group__1__Impl7169);
             rule__InternalAlt__NameAssignment_1();
 
             state._fsp--;
@@ -8763,21 +9284,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3292:1: rule__InternalAlt__Group__2 : rule__InternalAlt__Group__2__Impl rule__InternalAlt__Group__3 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3538:1: rule__InternalAlt__Group__2 : rule__InternalAlt__Group__2__Impl rule__InternalAlt__Group__3 ;
     public final void rule__InternalAlt__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3296:1: ( rule__InternalAlt__Group__2__Impl rule__InternalAlt__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3297:2: rule__InternalAlt__Group__2__Impl rule__InternalAlt__Group__3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3542:1: ( rule__InternalAlt__Group__2__Impl rule__InternalAlt__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3543:2: rule__InternalAlt__Group__2__Impl rule__InternalAlt__Group__3
             {
-            pushFollow(FOLLOW_rule__InternalAlt__Group__2__Impl_in_rule__InternalAlt__Group__26683);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__2__Impl_in_rule__InternalAlt__Group__27199);
             rule__InternalAlt__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InternalAlt__Group__3_in_rule__InternalAlt__Group__26686);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__3_in_rule__InternalAlt__Group__27202);
             rule__InternalAlt__Group__3();
 
             state._fsp--;
@@ -8801,20 +9322,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3304:1: rule__InternalAlt__Group__2__Impl : ( '|' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3550:1: rule__InternalAlt__Group__2__Impl : ( '|' ) ;
     public final void rule__InternalAlt__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3308:1: ( ( '|' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3309:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3554:1: ( ( '|' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3555:1: ( '|' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3309:1: ( '|' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3310:1: '|'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3555:1: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3556:1: '|'
             {
              before(grammarAccess.getInternalAltAccess().getVerticalLineKeyword_2()); 
-            match(input,15,FOLLOW_15_in_rule__InternalAlt__Group__2__Impl6714); 
+            match(input,25,FOLLOW_25_in_rule__InternalAlt__Group__2__Impl7230); 
              after(grammarAccess.getInternalAltAccess().getVerticalLineKeyword_2()); 
 
             }
@@ -8838,21 +9359,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3323:1: rule__InternalAlt__Group__3 : rule__InternalAlt__Group__3__Impl rule__InternalAlt__Group__4 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3569:1: rule__InternalAlt__Group__3 : rule__InternalAlt__Group__3__Impl rule__InternalAlt__Group__4 ;
     public final void rule__InternalAlt__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3327:1: ( rule__InternalAlt__Group__3__Impl rule__InternalAlt__Group__4 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3328:2: rule__InternalAlt__Group__3__Impl rule__InternalAlt__Group__4
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3573:1: ( rule__InternalAlt__Group__3__Impl rule__InternalAlt__Group__4 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3574:2: rule__InternalAlt__Group__3__Impl rule__InternalAlt__Group__4
             {
-            pushFollow(FOLLOW_rule__InternalAlt__Group__3__Impl_in_rule__InternalAlt__Group__36745);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__3__Impl_in_rule__InternalAlt__Group__37261);
             rule__InternalAlt__Group__3__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__InternalAlt__Group__4_in_rule__InternalAlt__Group__36748);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__4_in_rule__InternalAlt__Group__37264);
             rule__InternalAlt__Group__4();
 
             state._fsp--;
@@ -8876,23 +9397,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3335:1: rule__InternalAlt__Group__3__Impl : ( ( rule__InternalAlt__AltTextAssignment_3 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3581:1: rule__InternalAlt__Group__3__Impl : ( ( rule__InternalAlt__AltTextAssignment_3 ) ) ;
     public final void rule__InternalAlt__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3339:1: ( ( ( rule__InternalAlt__AltTextAssignment_3 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3340:1: ( ( rule__InternalAlt__AltTextAssignment_3 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3585:1: ( ( ( rule__InternalAlt__AltTextAssignment_3 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3586:1: ( ( rule__InternalAlt__AltTextAssignment_3 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3340:1: ( ( rule__InternalAlt__AltTextAssignment_3 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3341:1: ( rule__InternalAlt__AltTextAssignment_3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3586:1: ( ( rule__InternalAlt__AltTextAssignment_3 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3587:1: ( rule__InternalAlt__AltTextAssignment_3 )
             {
              before(grammarAccess.getInternalAltAccess().getAltTextAssignment_3()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3342:1: ( rule__InternalAlt__AltTextAssignment_3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3342:2: rule__InternalAlt__AltTextAssignment_3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3588:1: ( rule__InternalAlt__AltTextAssignment_3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3588:2: rule__InternalAlt__AltTextAssignment_3
             {
-            pushFollow(FOLLOW_rule__InternalAlt__AltTextAssignment_3_in_rule__InternalAlt__Group__3__Impl6775);
+            pushFollow(FOLLOW_rule__InternalAlt__AltTextAssignment_3_in_rule__InternalAlt__Group__3__Impl7291);
             rule__InternalAlt__AltTextAssignment_3();
 
             state._fsp--;
@@ -8923,16 +9444,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__4"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3352:1: rule__InternalAlt__Group__4 : rule__InternalAlt__Group__4__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3598:1: rule__InternalAlt__Group__4 : rule__InternalAlt__Group__4__Impl ;
     public final void rule__InternalAlt__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3356:1: ( rule__InternalAlt__Group__4__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3357:2: rule__InternalAlt__Group__4__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3602:1: ( rule__InternalAlt__Group__4__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3603:2: rule__InternalAlt__Group__4__Impl
             {
-            pushFollow(FOLLOW_rule__InternalAlt__Group__4__Impl_in_rule__InternalAlt__Group__46805);
+            pushFollow(FOLLOW_rule__InternalAlt__Group__4__Impl_in_rule__InternalAlt__Group__47321);
             rule__InternalAlt__Group__4__Impl();
 
             state._fsp--;
@@ -8956,20 +9477,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__Group__4__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3363:1: rule__InternalAlt__Group__4__Impl : ( ']]' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3609:1: rule__InternalAlt__Group__4__Impl : ( ']]' ) ;
     public final void rule__InternalAlt__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3367:1: ( ( ']]' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3368:1: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3613:1: ( ( ']]' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3614:1: ( ']]' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3368:1: ( ']]' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3369:1: ']]'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3614:1: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3615:1: ']]'
             {
              before(grammarAccess.getInternalAltAccess().getRightSquareBracketRightSquareBracketKeyword_4()); 
-            match(input,23,FOLLOW_23_in_rule__InternalAlt__Group__4__Impl6833); 
+            match(input,32,FOLLOW_32_in_rule__InternalAlt__Group__4__Impl7349); 
              after(grammarAccess.getInternalAltAccess().getRightSquareBracketRightSquareBracketKeyword_4()); 
 
             }
@@ -8993,21 +9514,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__External__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3392:1: rule__External__Group__0 : rule__External__Group__0__Impl rule__External__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3638:1: rule__External__Group__0 : rule__External__Group__0__Impl rule__External__Group__1 ;
     public final void rule__External__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3396:1: ( rule__External__Group__0__Impl rule__External__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3397:2: rule__External__Group__0__Impl rule__External__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3642:1: ( rule__External__Group__0__Impl rule__External__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3643:2: rule__External__Group__0__Impl rule__External__Group__1
             {
-            pushFollow(FOLLOW_rule__External__Group__0__Impl_in_rule__External__Group__06874);
+            pushFollow(FOLLOW_rule__External__Group__0__Impl_in_rule__External__Group__07390);
             rule__External__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__External__Group__1_in_rule__External__Group__06877);
+            pushFollow(FOLLOW_rule__External__Group__1_in_rule__External__Group__07393);
             rule__External__Group__1();
 
             state._fsp--;
@@ -9031,20 +9552,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__External__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3404:1: rule__External__Group__0__Impl : ( '[' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3650:1: rule__External__Group__0__Impl : ( '[' ) ;
     public final void rule__External__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3408:1: ( ( '[' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3409:1: ( '[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3654:1: ( ( '[' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3655:1: ( '[' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3409:1: ( '[' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3410:1: '['
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3655:1: ( '[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3656:1: '['
             {
              before(grammarAccess.getExternalAccess().getLeftSquareBracketKeyword_0()); 
-            match(input,35,FOLLOW_35_in_rule__External__Group__0__Impl6905); 
+            match(input,43,FOLLOW_43_in_rule__External__Group__0__Impl7421); 
              after(grammarAccess.getExternalAccess().getLeftSquareBracketKeyword_0()); 
 
             }
@@ -9068,21 +9589,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__External__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3423:1: rule__External__Group__1 : rule__External__Group__1__Impl rule__External__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3669:1: rule__External__Group__1 : rule__External__Group__1__Impl rule__External__Group__2 ;
     public final void rule__External__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3427:1: ( rule__External__Group__1__Impl rule__External__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3428:2: rule__External__Group__1__Impl rule__External__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3673:1: ( rule__External__Group__1__Impl rule__External__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3674:2: rule__External__Group__1__Impl rule__External__Group__2
             {
-            pushFollow(FOLLOW_rule__External__Group__1__Impl_in_rule__External__Group__16936);
+            pushFollow(FOLLOW_rule__External__Group__1__Impl_in_rule__External__Group__17452);
             rule__External__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__External__Group__2_in_rule__External__Group__16939);
+            pushFollow(FOLLOW_rule__External__Group__2_in_rule__External__Group__17455);
             rule__External__Group__2();
 
             state._fsp--;
@@ -9106,23 +9627,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__External__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3435:1: rule__External__Group__1__Impl : ( ( rule__External__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3681:1: rule__External__Group__1__Impl : ( ( rule__External__NameAssignment_1 ) ) ;
     public final void rule__External__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3439:1: ( ( ( rule__External__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3440:1: ( ( rule__External__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3685:1: ( ( ( rule__External__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3686:1: ( ( rule__External__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3440:1: ( ( rule__External__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3441:1: ( rule__External__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3686:1: ( ( rule__External__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3687:1: ( rule__External__NameAssignment_1 )
             {
              before(grammarAccess.getExternalAccess().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3442:1: ( rule__External__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3442:2: rule__External__NameAssignment_1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3688:1: ( rule__External__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3688:2: rule__External__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__External__NameAssignment_1_in_rule__External__Group__1__Impl6966);
+            pushFollow(FOLLOW_rule__External__NameAssignment_1_in_rule__External__Group__1__Impl7482);
             rule__External__NameAssignment_1();
 
             state._fsp--;
@@ -9153,16 +9674,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__External__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3452:1: rule__External__Group__2 : rule__External__Group__2__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3698:1: rule__External__Group__2 : rule__External__Group__2__Impl ;
     public final void rule__External__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3456:1: ( rule__External__Group__2__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3457:2: rule__External__Group__2__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3702:1: ( rule__External__Group__2__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3703:2: rule__External__Group__2__Impl
             {
-            pushFollow(FOLLOW_rule__External__Group__2__Impl_in_rule__External__Group__26996);
+            pushFollow(FOLLOW_rule__External__Group__2__Impl_in_rule__External__Group__27512);
             rule__External__Group__2__Impl();
 
             state._fsp--;
@@ -9186,20 +9707,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__External__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3463:1: rule__External__Group__2__Impl : ( ']' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3709:1: rule__External__Group__2__Impl : ( ']' ) ;
     public final void rule__External__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3467:1: ( ( ']' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3468:1: ( ']' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3713:1: ( ( ']' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3714:1: ( ']' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3468:1: ( ']' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3469:1: ']'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3714:1: ( ']' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3715:1: ']'
             {
              before(grammarAccess.getExternalAccess().getRightSquareBracketKeyword_2()); 
-            match(input,36,FOLLOW_36_in_rule__External__Group__2__Impl7024); 
+            match(input,44,FOLLOW_44_in_rule__External__Group__2__Impl7540); 
              after(grammarAccess.getExternalAccess().getRightSquareBracketKeyword_2()); 
 
             }
@@ -9223,21 +9744,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3488:1: rule__ExternalAlt__Group__0 : rule__ExternalAlt__Group__0__Impl rule__ExternalAlt__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3734:1: rule__ExternalAlt__Group__0 : rule__ExternalAlt__Group__0__Impl rule__ExternalAlt__Group__1 ;
     public final void rule__ExternalAlt__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3492:1: ( rule__ExternalAlt__Group__0__Impl rule__ExternalAlt__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3493:2: rule__ExternalAlt__Group__0__Impl rule__ExternalAlt__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3738:1: ( rule__ExternalAlt__Group__0__Impl rule__ExternalAlt__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3739:2: rule__ExternalAlt__Group__0__Impl rule__ExternalAlt__Group__1
             {
-            pushFollow(FOLLOW_rule__ExternalAlt__Group__0__Impl_in_rule__ExternalAlt__Group__07061);
+            pushFollow(FOLLOW_rule__ExternalAlt__Group__0__Impl_in_rule__ExternalAlt__Group__07577);
             rule__ExternalAlt__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ExternalAlt__Group__1_in_rule__ExternalAlt__Group__07064);
+            pushFollow(FOLLOW_rule__ExternalAlt__Group__1_in_rule__ExternalAlt__Group__07580);
             rule__ExternalAlt__Group__1();
 
             state._fsp--;
@@ -9261,20 +9782,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3500:1: rule__ExternalAlt__Group__0__Impl : ( '[' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3746:1: rule__ExternalAlt__Group__0__Impl : ( '[' ) ;
     public final void rule__ExternalAlt__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3504:1: ( ( '[' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3505:1: ( '[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3750:1: ( ( '[' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3751:1: ( '[' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3505:1: ( '[' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3506:1: '['
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3751:1: ( '[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3752:1: '['
             {
              before(grammarAccess.getExternalAltAccess().getLeftSquareBracketKeyword_0()); 
-            match(input,35,FOLLOW_35_in_rule__ExternalAlt__Group__0__Impl7092); 
+            match(input,43,FOLLOW_43_in_rule__ExternalAlt__Group__0__Impl7608); 
              after(grammarAccess.getExternalAltAccess().getLeftSquareBracketKeyword_0()); 
 
             }
@@ -9298,21 +9819,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3519:1: rule__ExternalAlt__Group__1 : rule__ExternalAlt__Group__1__Impl rule__ExternalAlt__Group__2 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3765:1: rule__ExternalAlt__Group__1 : rule__ExternalAlt__Group__1__Impl rule__ExternalAlt__Group__2 ;
     public final void rule__ExternalAlt__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3523:1: ( rule__ExternalAlt__Group__1__Impl rule__ExternalAlt__Group__2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3524:2: rule__ExternalAlt__Group__1__Impl rule__ExternalAlt__Group__2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3769:1: ( rule__ExternalAlt__Group__1__Impl rule__ExternalAlt__Group__2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3770:2: rule__ExternalAlt__Group__1__Impl rule__ExternalAlt__Group__2
             {
-            pushFollow(FOLLOW_rule__ExternalAlt__Group__1__Impl_in_rule__ExternalAlt__Group__17123);
+            pushFollow(FOLLOW_rule__ExternalAlt__Group__1__Impl_in_rule__ExternalAlt__Group__17639);
             rule__ExternalAlt__Group__1__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ExternalAlt__Group__2_in_rule__ExternalAlt__Group__17126);
+            pushFollow(FOLLOW_rule__ExternalAlt__Group__2_in_rule__ExternalAlt__Group__17642);
             rule__ExternalAlt__Group__2();
 
             state._fsp--;
@@ -9336,23 +9857,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3531:1: rule__ExternalAlt__Group__1__Impl : ( ( rule__ExternalAlt__NameAssignment_1 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3777:1: rule__ExternalAlt__Group__1__Impl : ( ( rule__ExternalAlt__NameAssignment_1 ) ) ;
     public final void rule__ExternalAlt__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3535:1: ( ( ( rule__ExternalAlt__NameAssignment_1 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3536:1: ( ( rule__ExternalAlt__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3781:1: ( ( ( rule__ExternalAlt__NameAssignment_1 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3782:1: ( ( rule__ExternalAlt__NameAssignment_1 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3536:1: ( ( rule__ExternalAlt__NameAssignment_1 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3537:1: ( rule__ExternalAlt__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3782:1: ( ( rule__ExternalAlt__NameAssignment_1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3783:1: ( rule__ExternalAlt__NameAssignment_1 )
             {
              before(grammarAccess.getExternalAltAccess().getNameAssignment_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3538:1: ( rule__ExternalAlt__NameAssignment_1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3538:2: rule__ExternalAlt__NameAssignment_1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3784:1: ( rule__ExternalAlt__NameAssignment_1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3784:2: rule__ExternalAlt__NameAssignment_1
             {
-            pushFollow(FOLLOW_rule__ExternalAlt__NameAssignment_1_in_rule__ExternalAlt__Group__1__Impl7153);
+            pushFollow(FOLLOW_rule__ExternalAlt__NameAssignment_1_in_rule__ExternalAlt__Group__1__Impl7669);
             rule__ExternalAlt__NameAssignment_1();
 
             state._fsp--;
@@ -9383,21 +9904,21 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__Group__2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3548:1: rule__ExternalAlt__Group__2 : rule__ExternalAlt__Group__2__Impl rule__ExternalAlt__Group__3 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3794:1: rule__ExternalAlt__Group__2 : rule__ExternalAlt__Group__2__Impl rule__ExternalAlt__Group__3 ;
     public final void rule__ExternalAlt__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3552:1: ( rule__ExternalAlt__Group__2__Impl rule__ExternalAlt__Group__3 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3553:2: rule__ExternalAlt__Group__2__Impl rule__ExternalAlt__Group__3
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3798:1: ( rule__ExternalAlt__Group__2__Impl rule__ExternalAlt__Group__3 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3799:2: rule__ExternalAlt__Group__2__Impl rule__ExternalAlt__Group__3
             {
-            pushFollow(FOLLOW_rule__ExternalAlt__Group__2__Impl_in_rule__ExternalAlt__Group__27183);
+            pushFollow(FOLLOW_rule__ExternalAlt__Group__2__Impl_in_rule__ExternalAlt__Group__27699);
             rule__ExternalAlt__Group__2__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__ExternalAlt__Group__3_in_rule__ExternalAlt__Group__27186);
+            pushFollow(FOLLOW_rule__ExternalAlt__Group__3_in_rule__ExternalAlt__Group__27702);
             rule__ExternalAlt__Group__3();
 
             state._fsp--;
@@ -9421,23 +9942,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__Group__2__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3560:1: rule__ExternalAlt__Group__2__Impl : ( ( rule__ExternalAlt__AltTextAssignment_2 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3806:1: rule__ExternalAlt__Group__2__Impl : ( ( rule__ExternalAlt__AltTextAssignment_2 ) ) ;
     public final void rule__ExternalAlt__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3564:1: ( ( ( rule__ExternalAlt__AltTextAssignment_2 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3565:1: ( ( rule__ExternalAlt__AltTextAssignment_2 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3810:1: ( ( ( rule__ExternalAlt__AltTextAssignment_2 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3811:1: ( ( rule__ExternalAlt__AltTextAssignment_2 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3565:1: ( ( rule__ExternalAlt__AltTextAssignment_2 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3566:1: ( rule__ExternalAlt__AltTextAssignment_2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3811:1: ( ( rule__ExternalAlt__AltTextAssignment_2 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3812:1: ( rule__ExternalAlt__AltTextAssignment_2 )
             {
              before(grammarAccess.getExternalAltAccess().getAltTextAssignment_2()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3567:1: ( rule__ExternalAlt__AltTextAssignment_2 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3567:2: rule__ExternalAlt__AltTextAssignment_2
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3813:1: ( rule__ExternalAlt__AltTextAssignment_2 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3813:2: rule__ExternalAlt__AltTextAssignment_2
             {
-            pushFollow(FOLLOW_rule__ExternalAlt__AltTextAssignment_2_in_rule__ExternalAlt__Group__2__Impl7213);
+            pushFollow(FOLLOW_rule__ExternalAlt__AltTextAssignment_2_in_rule__ExternalAlt__Group__2__Impl7729);
             rule__ExternalAlt__AltTextAssignment_2();
 
             state._fsp--;
@@ -9468,16 +9989,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__Group__3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3577:1: rule__ExternalAlt__Group__3 : rule__ExternalAlt__Group__3__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3823:1: rule__ExternalAlt__Group__3 : rule__ExternalAlt__Group__3__Impl ;
     public final void rule__ExternalAlt__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3581:1: ( rule__ExternalAlt__Group__3__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3582:2: rule__ExternalAlt__Group__3__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3827:1: ( rule__ExternalAlt__Group__3__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3828:2: rule__ExternalAlt__Group__3__Impl
             {
-            pushFollow(FOLLOW_rule__ExternalAlt__Group__3__Impl_in_rule__ExternalAlt__Group__37243);
+            pushFollow(FOLLOW_rule__ExternalAlt__Group__3__Impl_in_rule__ExternalAlt__Group__37759);
             rule__ExternalAlt__Group__3__Impl();
 
             state._fsp--;
@@ -9501,20 +10022,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__Group__3__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3588:1: rule__ExternalAlt__Group__3__Impl : ( ']' ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3834:1: rule__ExternalAlt__Group__3__Impl : ( ']' ) ;
     public final void rule__ExternalAlt__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3592:1: ( ( ']' ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3593:1: ( ']' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3838:1: ( ( ']' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3839:1: ( ']' )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3593:1: ( ']' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3594:1: ']'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3839:1: ( ']' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3840:1: ']'
             {
              before(grammarAccess.getExternalAltAccess().getRightSquareBracketKeyword_3()); 
-            match(input,36,FOLLOW_36_in_rule__ExternalAlt__Group__3__Impl7271); 
+            match(input,44,FOLLOW_44_in_rule__ExternalAlt__Group__3__Impl7787); 
              after(grammarAccess.getExternalAltAccess().getRightSquareBracketKeyword_3()); 
 
             }
@@ -9537,22 +10058,195 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__ExternalAlt__Group__3__Impl"
 
 
+    // $ANTLR start "rule__AnyTextSequence__Group__0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3861:1: rule__AnyTextSequence__Group__0 : rule__AnyTextSequence__Group__0__Impl rule__AnyTextSequence__Group__1 ;
+    public final void rule__AnyTextSequence__Group__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3865:1: ( rule__AnyTextSequence__Group__0__Impl rule__AnyTextSequence__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3866:2: rule__AnyTextSequence__Group__0__Impl rule__AnyTextSequence__Group__1
+            {
+            pushFollow(FOLLOW_rule__AnyTextSequence__Group__0__Impl_in_rule__AnyTextSequence__Group__07826);
+            rule__AnyTextSequence__Group__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_rule__AnyTextSequence__Group__1_in_rule__AnyTextSequence__Group__07829);
+            rule__AnyTextSequence__Group__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AnyTextSequence__Group__0"
+
+
+    // $ANTLR start "rule__AnyTextSequence__Group__0__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3873:1: rule__AnyTextSequence__Group__0__Impl : ( () ) ;
+    public final void rule__AnyTextSequence__Group__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3877:1: ( ( () ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3878:1: ( () )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3878:1: ( () )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3879:1: ()
+            {
+             before(grammarAccess.getAnyTextSequenceAccess().getAnyTextSequenceAction_0()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3880:1: ()
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3882:1: 
+            {
+            }
+
+             after(grammarAccess.getAnyTextSequenceAccess().getAnyTextSequenceAction_0()); 
+
+            }
+
+
+            }
+
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AnyTextSequence__Group__0__Impl"
+
+
+    // $ANTLR start "rule__AnyTextSequence__Group__1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3892:1: rule__AnyTextSequence__Group__1 : rule__AnyTextSequence__Group__1__Impl ;
+    public final void rule__AnyTextSequence__Group__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3896:1: ( rule__AnyTextSequence__Group__1__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3897:2: rule__AnyTextSequence__Group__1__Impl
+            {
+            pushFollow(FOLLOW_rule__AnyTextSequence__Group__1__Impl_in_rule__AnyTextSequence__Group__17887);
+            rule__AnyTextSequence__Group__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AnyTextSequence__Group__1"
+
+
+    // $ANTLR start "rule__AnyTextSequence__Group__1__Impl"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3903:1: rule__AnyTextSequence__Group__1__Impl : ( ( rule__AnyTextSequence__ContentAssignment_1 )* ) ;
+    public final void rule__AnyTextSequence__Group__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3907:1: ( ( ( rule__AnyTextSequence__ContentAssignment_1 )* ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3908:1: ( ( rule__AnyTextSequence__ContentAssignment_1 )* )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3908:1: ( ( rule__AnyTextSequence__ContentAssignment_1 )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3909:1: ( rule__AnyTextSequence__ContentAssignment_1 )*
+            {
+             before(grammarAccess.getAnyTextSequenceAccess().getContentAssignment_1()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3910:1: ( rule__AnyTextSequence__ContentAssignment_1 )*
+            loop16:
+            do {
+                int alt16=2;
+                int LA16_0 = input.LA(1);
+
+                if ( (LA16_0==RULE_ID||LA16_0==30||(LA16_0>=40 && LA16_0<=43)) ) {
+                    alt16=1;
+                }
+
+
+                switch (alt16) {
+            	case 1 :
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3910:2: rule__AnyTextSequence__ContentAssignment_1
+            	    {
+            	    pushFollow(FOLLOW_rule__AnyTextSequence__ContentAssignment_1_in_rule__AnyTextSequence__Group__1__Impl7914);
+            	    rule__AnyTextSequence__ContentAssignment_1();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop16;
+                }
+            } while (true);
+
+             after(grammarAccess.getAnyTextSequenceAccess().getContentAssignment_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AnyTextSequence__Group__1__Impl"
+
+
     // $ANTLR start "rule__Name__Group__0"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3615:1: rule__Name__Group__0 : rule__Name__Group__0__Impl rule__Name__Group__1 ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3924:1: rule__Name__Group__0 : rule__Name__Group__0__Impl rule__Name__Group__1 ;
     public final void rule__Name__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3619:1: ( rule__Name__Group__0__Impl rule__Name__Group__1 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3620:2: rule__Name__Group__0__Impl rule__Name__Group__1
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3928:1: ( rule__Name__Group__0__Impl rule__Name__Group__1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3929:2: rule__Name__Group__0__Impl rule__Name__Group__1
             {
-            pushFollow(FOLLOW_rule__Name__Group__0__Impl_in_rule__Name__Group__07310);
+            pushFollow(FOLLOW_rule__Name__Group__0__Impl_in_rule__Name__Group__07949);
             rule__Name__Group__0__Impl();
 
             state._fsp--;
 
-            pushFollow(FOLLOW_rule__Name__Group__1_in_rule__Name__Group__07313);
+            pushFollow(FOLLOW_rule__Name__Group__1_in_rule__Name__Group__07952);
             rule__Name__Group__1();
 
             state._fsp--;
@@ -9576,20 +10270,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Name__Group__0__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3627:1: rule__Name__Group__0__Impl : ( RULE_ID ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3936:1: rule__Name__Group__0__Impl : ( RULE_ID ) ;
     public final void rule__Name__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3631:1: ( ( RULE_ID ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3632:1: ( RULE_ID )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3940:1: ( ( RULE_ID ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3941:1: ( RULE_ID )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3632:1: ( RULE_ID )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3633:1: RULE_ID
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3941:1: ( RULE_ID )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3942:1: RULE_ID
             {
              before(grammarAccess.getNameAccess().getIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Name__Group__0__Impl7340); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Name__Group__0__Impl7979); 
              after(grammarAccess.getNameAccess().getIDTerminalRuleCall_0()); 
 
             }
@@ -9613,16 +10307,16 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Name__Group__1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3644:1: rule__Name__Group__1 : rule__Name__Group__1__Impl ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3953:1: rule__Name__Group__1 : rule__Name__Group__1__Impl ;
     public final void rule__Name__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3648:1: ( rule__Name__Group__1__Impl )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3649:2: rule__Name__Group__1__Impl
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3957:1: ( rule__Name__Group__1__Impl )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3958:2: rule__Name__Group__1__Impl
             {
-            pushFollow(FOLLOW_rule__Name__Group__1__Impl_in_rule__Name__Group__17369);
+            pushFollow(FOLLOW_rule__Name__Group__1__Impl_in_rule__Name__Group__18008);
             rule__Name__Group__1__Impl();
 
             state._fsp--;
@@ -9646,41 +10340,41 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Name__Group__1__Impl"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3655:1: rule__Name__Group__1__Impl : ( ( RULE_ID )* ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3964:1: rule__Name__Group__1__Impl : ( ( RULE_ID )* ) ;
     public final void rule__Name__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3659:1: ( ( ( RULE_ID )* ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3660:1: ( ( RULE_ID )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3968:1: ( ( ( RULE_ID )* ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3969:1: ( ( RULE_ID )* )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3660:1: ( ( RULE_ID )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3661:1: ( RULE_ID )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3969:1: ( ( RULE_ID )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3970:1: ( RULE_ID )*
             {
              before(grammarAccess.getNameAccess().getIDTerminalRuleCall_1()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3662:1: ( RULE_ID )*
-            loop23:
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3971:1: ( RULE_ID )*
+            loop17:
             do {
-                int alt23=2;
-                int LA23_0 = input.LA(1);
+                int alt17=2;
+                int LA17_0 = input.LA(1);
 
-                if ( (LA23_0==RULE_ID) ) {
-                    alt23=1;
+                if ( (LA17_0==RULE_ID) ) {
+                    alt17=1;
                 }
 
 
-                switch (alt23) {
+                switch (alt17) {
             	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3662:3: RULE_ID
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3971:3: RULE_ID
             	    {
-            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Name__Group__1__Impl7397); 
+            	    match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Name__Group__1__Impl8036); 
 
             	    }
             	    break;
 
             	default :
-            	    break loop23;
+            	    break loop17;
                 }
             } while (true);
 
@@ -9706,26 +10400,26 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__Name__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Wiki__ElementsAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3677:1: rule__Wiki__ElementsAssignment_1 : ( ruleParagraphTypes ) ;
-    public final void rule__Wiki__ElementsAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__WikiPage__NameAssignment_0"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3986:1: rule__WikiPage__NameAssignment_0 : ( ruleHeading1 ) ;
+    public final void rule__WikiPage__NameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3681:1: ( ( ruleParagraphTypes ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3682:1: ( ruleParagraphTypes )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3990:1: ( ( ruleHeading1 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3991:1: ( ruleHeading1 )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3682:1: ( ruleParagraphTypes )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3683:1: ruleParagraphTypes
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3991:1: ( ruleHeading1 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3992:1: ruleHeading1
             {
-             before(grammarAccess.getWikiAccess().getElementsParagraphTypesParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleParagraphTypes_in_rule__Wiki__ElementsAssignment_17437);
-            ruleParagraphTypes();
+             before(grammarAccess.getWikiPageAccess().getNameHeading1ParserRuleCall_0_0()); 
+            pushFollow(FOLLOW_ruleHeading1_in_rule__WikiPage__NameAssignment_08076);
+            ruleHeading1();
 
             state._fsp--;
 
-             after(grammarAccess.getWikiAccess().getElementsParagraphTypesParserRuleCall_1_0()); 
+             after(grammarAccess.getWikiPageAccess().getNameHeading1ParserRuleCall_0_0()); 
 
             }
 
@@ -9744,35 +10438,70 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Wiki__ElementsAssignment_1"
+    // $ANTLR end "rule__WikiPage__NameAssignment_0"
+
+
+    // $ANTLR start "rule__WikiPage__ElementsAssignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4001:1: rule__WikiPage__ElementsAssignment_1 : ( ruleParagraphTypes ) ;
+    public final void rule__WikiPage__ElementsAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4005:1: ( ( ruleParagraphTypes ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4006:1: ( ruleParagraphTypes )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4006:1: ( ruleParagraphTypes )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4007:1: ruleParagraphTypes
+            {
+             before(grammarAccess.getWikiPageAccess().getElementsParagraphTypesParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleParagraphTypes_in_rule__WikiPage__ElementsAssignment_18107);
+            ruleParagraphTypes();
+
+            state._fsp--;
+
+             after(grammarAccess.getWikiPageAccess().getElementsParagraphTypesParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__WikiPage__ElementsAssignment_1"
 
 
     // $ANTLR start "rule__BlockQuote__ContentAssignment_2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3692:1: rule__BlockQuote__ContentAssignment_2 : ( ( rule__BlockQuote__ContentAlternatives_2_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4016:1: rule__BlockQuote__ContentAssignment_2 : ( ruleAnyTextSequence ) ;
     public final void rule__BlockQuote__ContentAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3696:1: ( ( ( rule__BlockQuote__ContentAlternatives_2_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3697:1: ( ( rule__BlockQuote__ContentAlternatives_2_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4020:1: ( ( ruleAnyTextSequence ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4021:1: ( ruleAnyTextSequence )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3697:1: ( ( rule__BlockQuote__ContentAlternatives_2_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3698:1: ( rule__BlockQuote__ContentAlternatives_2_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4021:1: ( ruleAnyTextSequence )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4022:1: ruleAnyTextSequence
             {
-             before(grammarAccess.getBlockQuoteAccess().getContentAlternatives_2_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3699:1: ( rule__BlockQuote__ContentAlternatives_2_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3699:2: rule__BlockQuote__ContentAlternatives_2_0
-            {
-            pushFollow(FOLLOW_rule__BlockQuote__ContentAlternatives_2_0_in_rule__BlockQuote__ContentAssignment_27468);
-            rule__BlockQuote__ContentAlternatives_2_0();
+             before(grammarAccess.getBlockQuoteAccess().getContentAnyTextSequenceParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleAnyTextSequence_in_rule__BlockQuote__ContentAssignment_28138);
+            ruleAnyTextSequence();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getBlockQuoteAccess().getContentAlternatives_2_0()); 
+             after(grammarAccess.getBlockQuoteAccess().getContentAnyTextSequenceParserRuleCall_2_0()); 
 
             }
 
@@ -9794,26 +10523,26 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__BlockQuote__ContentAssignment_2"
 
 
-    // $ANTLR start "rule__Template__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3708:1: rule__Template__NameAssignment_1 : ( ruleText ) ;
-    public final void rule__Template__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Template__ContentAssignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4031:1: rule__Template__ContentAssignment_1 : ( ruleText ) ;
+    public final void rule__Template__ContentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3712:1: ( ( ruleText ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3713:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4035:1: ( ( ruleText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4036:1: ( ruleText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3713:1: ( ruleText )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3714:1: ruleText
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4036:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4037:1: ruleText
             {
-             before(grammarAccess.getTemplateAccess().getNameTextParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleText_in_rule__Template__NameAssignment_17501);
+             before(grammarAccess.getTemplateAccess().getContentTextParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleText_in_rule__Template__ContentAssignment_18169);
             ruleText();
 
             state._fsp--;
 
-             after(grammarAccess.getTemplateAccess().getNameTextParserRuleCall_1_0()); 
+             after(grammarAccess.getTemplateAccess().getContentTextParserRuleCall_1_0()); 
 
             }
 
@@ -9832,29 +10561,29 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Template__NameAssignment_1"
+    // $ANTLR end "rule__Template__ContentAssignment_1"
 
 
-    // $ANTLR start "rule__Template__ContentAssignment_3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3723:1: rule__Template__ContentAssignment_3 : ( ruleText ) ;
-    public final void rule__Template__ContentAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Template__ContentAssignment_2_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4046:1: rule__Template__ContentAssignment_2_1 : ( ruleText ) ;
+    public final void rule__Template__ContentAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3727:1: ( ( ruleText ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3728:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4050:1: ( ( ruleText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4051:1: ( ruleText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3728:1: ( ruleText )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3729:1: ruleText
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4051:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4052:1: ruleText
             {
-             before(grammarAccess.getTemplateAccess().getContentTextParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleText_in_rule__Template__ContentAssignment_37532);
+             before(grammarAccess.getTemplateAccess().getContentTextParserRuleCall_2_1_0()); 
+            pushFollow(FOLLOW_ruleText_in_rule__Template__ContentAssignment_2_18200);
             ruleText();
 
             state._fsp--;
 
-             after(grammarAccess.getTemplateAccess().getContentTextParserRuleCall_3_0()); 
+             after(grammarAccess.getTemplateAccess().getContentTextParserRuleCall_2_1_0()); 
 
             }
 
@@ -9873,76 +10602,29 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Template__ContentAssignment_3"
-
-
-    // $ANTLR start "rule__Template__ContentAssignment_4_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3738:1: rule__Template__ContentAssignment_4_1 : ( ruleText ) ;
-    public final void rule__Template__ContentAssignment_4_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-            
-        try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3742:1: ( ( ruleText ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3743:1: ( ruleText )
-            {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3743:1: ( ruleText )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3744:1: ruleText
-            {
-             before(grammarAccess.getTemplateAccess().getContentTextParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleText_in_rule__Template__ContentAssignment_4_17563);
-            ruleText();
-
-            state._fsp--;
-
-             after(grammarAccess.getTemplateAccess().getContentTextParserRuleCall_4_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Template__ContentAssignment_4_1"
+    // $ANTLR end "rule__Template__ContentAssignment_2_1"
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3753:1: rule__UnOrderListItemLevel2__NameAssignment_1 : ( ( rule__UnOrderListItemLevel2__NameAlternatives_1_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4061:1: rule__UnOrderListItemLevel2__NameAssignment_1 : ( ruleAnyText ) ;
     public final void rule__UnOrderListItemLevel2__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3757:1: ( ( ( rule__UnOrderListItemLevel2__NameAlternatives_1_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3758:1: ( ( rule__UnOrderListItemLevel2__NameAlternatives_1_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4065:1: ( ( ruleAnyText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4066:1: ( ruleAnyText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3758:1: ( ( rule__UnOrderListItemLevel2__NameAlternatives_1_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3759:1: ( rule__UnOrderListItemLevel2__NameAlternatives_1_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4066:1: ( ruleAnyText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4067:1: ruleAnyText
             {
-             before(grammarAccess.getUnOrderListItemLevel2Access().getNameAlternatives_1_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3760:1: ( rule__UnOrderListItemLevel2__NameAlternatives_1_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3760:2: rule__UnOrderListItemLevel2__NameAlternatives_1_0
-            {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__NameAlternatives_1_0_in_rule__UnOrderListItemLevel2__NameAssignment_17594);
-            rule__UnOrderListItemLevel2__NameAlternatives_1_0();
+             before(grammarAccess.getUnOrderListItemLevel2Access().getNameAnyTextParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAnyText_in_rule__UnOrderListItemLevel2__NameAssignment_18231);
+            ruleAnyText();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getUnOrderListItemLevel2Access().getNameAlternatives_1_0()); 
+             after(grammarAccess.getUnOrderListItemLevel2Access().getNameAnyTextParserRuleCall_1_0()); 
 
             }
 
@@ -9965,31 +10647,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel2__ListAssignment_2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3769:1: rule__UnOrderListItemLevel2__ListAssignment_2 : ( ( rule__UnOrderListItemLevel2__ListAlternatives_2_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4076:1: rule__UnOrderListItemLevel2__ListAssignment_2 : ( ruleAnyTextSequence ) ;
     public final void rule__UnOrderListItemLevel2__ListAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3773:1: ( ( ( rule__UnOrderListItemLevel2__ListAlternatives_2_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3774:1: ( ( rule__UnOrderListItemLevel2__ListAlternatives_2_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4080:1: ( ( ruleAnyTextSequence ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4081:1: ( ruleAnyTextSequence )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3774:1: ( ( rule__UnOrderListItemLevel2__ListAlternatives_2_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3775:1: ( rule__UnOrderListItemLevel2__ListAlternatives_2_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4081:1: ( ruleAnyTextSequence )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4082:1: ruleAnyTextSequence
             {
-             before(grammarAccess.getUnOrderListItemLevel2Access().getListAlternatives_2_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3776:1: ( rule__UnOrderListItemLevel2__ListAlternatives_2_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3776:2: rule__UnOrderListItemLevel2__ListAlternatives_2_0
-            {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel2__ListAlternatives_2_0_in_rule__UnOrderListItemLevel2__ListAssignment_27627);
-            rule__UnOrderListItemLevel2__ListAlternatives_2_0();
+             before(grammarAccess.getUnOrderListItemLevel2Access().getListAnyTextSequenceParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleAnyTextSequence_in_rule__UnOrderListItemLevel2__ListAssignment_28262);
+            ruleAnyTextSequence();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getUnOrderListItemLevel2Access().getListAlternatives_2_0()); 
+             after(grammarAccess.getUnOrderListItemLevel2Access().getListAnyTextSequenceParserRuleCall_2_0()); 
 
             }
 
@@ -10012,31 +10688,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3785:1: rule__UnOrderListItemLevel1__NameAssignment_1 : ( ( rule__UnOrderListItemLevel1__NameAlternatives_1_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4091:1: rule__UnOrderListItemLevel1__NameAssignment_1 : ( ruleAnyText ) ;
     public final void rule__UnOrderListItemLevel1__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3789:1: ( ( ( rule__UnOrderListItemLevel1__NameAlternatives_1_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3790:1: ( ( rule__UnOrderListItemLevel1__NameAlternatives_1_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4095:1: ( ( ruleAnyText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4096:1: ( ruleAnyText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3790:1: ( ( rule__UnOrderListItemLevel1__NameAlternatives_1_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3791:1: ( rule__UnOrderListItemLevel1__NameAlternatives_1_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4096:1: ( ruleAnyText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4097:1: ruleAnyText
             {
-             before(grammarAccess.getUnOrderListItemLevel1Access().getNameAlternatives_1_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3792:1: ( rule__UnOrderListItemLevel1__NameAlternatives_1_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3792:2: rule__UnOrderListItemLevel1__NameAlternatives_1_0
-            {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__NameAlternatives_1_0_in_rule__UnOrderListItemLevel1__NameAssignment_17660);
-            rule__UnOrderListItemLevel1__NameAlternatives_1_0();
+             before(grammarAccess.getUnOrderListItemLevel1Access().getNameAnyTextParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAnyText_in_rule__UnOrderListItemLevel1__NameAssignment_18293);
+            ruleAnyText();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getUnOrderListItemLevel1Access().getNameAlternatives_1_0()); 
+             after(grammarAccess.getUnOrderListItemLevel1Access().getNameAnyTextParserRuleCall_1_0()); 
 
             }
 
@@ -10059,31 +10729,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__UnOrderListItemLevel1__ListAssignment_2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3801:1: rule__UnOrderListItemLevel1__ListAssignment_2 : ( ( rule__UnOrderListItemLevel1__ListAlternatives_2_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4106:1: rule__UnOrderListItemLevel1__ListAssignment_2 : ( ruleAnyTextSequence ) ;
     public final void rule__UnOrderListItemLevel1__ListAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3805:1: ( ( ( rule__UnOrderListItemLevel1__ListAlternatives_2_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3806:1: ( ( rule__UnOrderListItemLevel1__ListAlternatives_2_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4110:1: ( ( ruleAnyTextSequence ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4111:1: ( ruleAnyTextSequence )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3806:1: ( ( rule__UnOrderListItemLevel1__ListAlternatives_2_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3807:1: ( rule__UnOrderListItemLevel1__ListAlternatives_2_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4111:1: ( ruleAnyTextSequence )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4112:1: ruleAnyTextSequence
             {
-             before(grammarAccess.getUnOrderListItemLevel1Access().getListAlternatives_2_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3808:1: ( rule__UnOrderListItemLevel1__ListAlternatives_2_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3808:2: rule__UnOrderListItemLevel1__ListAlternatives_2_0
-            {
-            pushFollow(FOLLOW_rule__UnOrderListItemLevel1__ListAlternatives_2_0_in_rule__UnOrderListItemLevel1__ListAssignment_27693);
-            rule__UnOrderListItemLevel1__ListAlternatives_2_0();
+             before(grammarAccess.getUnOrderListItemLevel1Access().getListAnyTextSequenceParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleAnyTextSequence_in_rule__UnOrderListItemLevel1__ListAssignment_28324);
+            ruleAnyTextSequence();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getUnOrderListItemLevel1Access().getListAlternatives_2_0()); 
+             after(grammarAccess.getUnOrderListItemLevel1Access().getListAnyTextSequenceParserRuleCall_2_0()); 
 
             }
 
@@ -10106,31 +10770,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3817:1: rule__OrderListItemLevel1__NameAssignment_1 : ( ( rule__OrderListItemLevel1__NameAlternatives_1_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4121:1: rule__OrderListItemLevel1__NameAssignment_1 : ( ruleAnyText ) ;
     public final void rule__OrderListItemLevel1__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3821:1: ( ( ( rule__OrderListItemLevel1__NameAlternatives_1_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3822:1: ( ( rule__OrderListItemLevel1__NameAlternatives_1_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4125:1: ( ( ruleAnyText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4126:1: ( ruleAnyText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3822:1: ( ( rule__OrderListItemLevel1__NameAlternatives_1_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3823:1: ( rule__OrderListItemLevel1__NameAlternatives_1_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4126:1: ( ruleAnyText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4127:1: ruleAnyText
             {
-             before(grammarAccess.getOrderListItemLevel1Access().getNameAlternatives_1_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3824:1: ( rule__OrderListItemLevel1__NameAlternatives_1_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3824:2: rule__OrderListItemLevel1__NameAlternatives_1_0
-            {
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__NameAlternatives_1_0_in_rule__OrderListItemLevel1__NameAssignment_17726);
-            rule__OrderListItemLevel1__NameAlternatives_1_0();
+             before(grammarAccess.getOrderListItemLevel1Access().getNameAnyTextParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAnyText_in_rule__OrderListItemLevel1__NameAssignment_18355);
+            ruleAnyText();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getOrderListItemLevel1Access().getNameAlternatives_1_0()); 
+             after(grammarAccess.getOrderListItemLevel1Access().getNameAnyTextParserRuleCall_1_0()); 
 
             }
 
@@ -10153,31 +10811,25 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__OrderListItemLevel1__ListAssignment_2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3833:1: rule__OrderListItemLevel1__ListAssignment_2 : ( ( rule__OrderListItemLevel1__ListAlternatives_2_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4136:1: rule__OrderListItemLevel1__ListAssignment_2 : ( ruleAnyTextSequence ) ;
     public final void rule__OrderListItemLevel1__ListAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3837:1: ( ( ( rule__OrderListItemLevel1__ListAlternatives_2_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3838:1: ( ( rule__OrderListItemLevel1__ListAlternatives_2_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4140:1: ( ( ruleAnyTextSequence ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4141:1: ( ruleAnyTextSequence )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3838:1: ( ( rule__OrderListItemLevel1__ListAlternatives_2_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3839:1: ( rule__OrderListItemLevel1__ListAlternatives_2_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4141:1: ( ruleAnyTextSequence )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4142:1: ruleAnyTextSequence
             {
-             before(grammarAccess.getOrderListItemLevel1Access().getListAlternatives_2_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3840:1: ( rule__OrderListItemLevel1__ListAlternatives_2_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3840:2: rule__OrderListItemLevel1__ListAlternatives_2_0
-            {
-            pushFollow(FOLLOW_rule__OrderListItemLevel1__ListAlternatives_2_0_in_rule__OrderListItemLevel1__ListAssignment_27759);
-            rule__OrderListItemLevel1__ListAlternatives_2_0();
+             before(grammarAccess.getOrderListItemLevel1Access().getListAnyTextSequenceParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleAnyTextSequence_in_rule__OrderListItemLevel1__ListAssignment_28386);
+            ruleAnyTextSequence();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getOrderListItemLevel1Access().getListAlternatives_2_0()); 
+             after(grammarAccess.getOrderListItemLevel1Access().getListAnyTextSequenceParserRuleCall_2_0()); 
 
             }
 
@@ -10199,26 +10851,149 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__OrderListItemLevel1__ListAssignment_2"
 
 
-    // $ANTLR start "rule__File__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3849:1: rule__File__NameAssignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
-    public final void rule__File__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Image__NameAssignment_2"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4151:1: rule__Image__NameAssignment_2 : ( ruleText ) ;
+    public final void rule__Image__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3853:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3854:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4155:1: ( ( ruleText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4156:1: ( ruleText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3854:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3855:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4156:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4157:1: ruleText
             {
-             before(grammarAccess.getFileAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__File__NameAssignment_17792);
+             before(grammarAccess.getImageAccess().getNameTextParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleText_in_rule__Image__NameAssignment_28417);
+            ruleText();
+
+            state._fsp--;
+
+             after(grammarAccess.getImageAccess().getNameTextParserRuleCall_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__NameAssignment_2"
+
+
+    // $ANTLR start "rule__Image__TypeAssignment_3_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4166:1: rule__Image__TypeAssignment_3_1 : ( ruleViewType ) ;
+    public final void rule__Image__TypeAssignment_3_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4170:1: ( ( ruleViewType ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4171:1: ( ruleViewType )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4171:1: ( ruleViewType )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4172:1: ruleViewType
+            {
+             before(grammarAccess.getImageAccess().getTypeViewTypeEnumRuleCall_3_1_0()); 
+            pushFollow(FOLLOW_ruleViewType_in_rule__Image__TypeAssignment_3_18448);
+            ruleViewType();
+
+            state._fsp--;
+
+             after(grammarAccess.getImageAccess().getTypeViewTypeEnumRuleCall_3_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__TypeAssignment_3_1"
+
+
+    // $ANTLR start "rule__Image__HAlignAssignment_4_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4181:1: rule__Image__HAlignAssignment_4_1 : ( ruleHorizontalAlign ) ;
+    public final void rule__Image__HAlignAssignment_4_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4185:1: ( ( ruleHorizontalAlign ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4186:1: ( ruleHorizontalAlign )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4186:1: ( ruleHorizontalAlign )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4187:1: ruleHorizontalAlign
+            {
+             before(grammarAccess.getImageAccess().getHAlignHorizontalAlignEnumRuleCall_4_1_0()); 
+            pushFollow(FOLLOW_ruleHorizontalAlign_in_rule__Image__HAlignAssignment_4_18479);
+            ruleHorizontalAlign();
+
+            state._fsp--;
+
+             after(grammarAccess.getImageAccess().getHAlignHorizontalAlignEnumRuleCall_4_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Image__HAlignAssignment_4_1"
+
+
+    // $ANTLR start "rule__Image__AltTextAssignment_5_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4196:1: rule__Image__AltTextAssignment_5_1 : ( ruleAbstractUnformattedInlineContent ) ;
+    public final void rule__Image__AltTextAssignment_5_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4200:1: ( ( ruleAbstractUnformattedInlineContent ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4201:1: ( ruleAbstractUnformattedInlineContent )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4201:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4202:1: ruleAbstractUnformattedInlineContent
+            {
+             before(grammarAccess.getImageAccess().getAltTextAbstractUnformattedInlineContentParserRuleCall_5_1_0()); 
+            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Image__AltTextAssignment_5_18510);
             ruleAbstractUnformattedInlineContent();
 
             state._fsp--;
 
-             after(grammarAccess.getFileAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
+             after(grammarAccess.getImageAccess().getAltTextAbstractUnformattedInlineContentParserRuleCall_5_1_0()); 
 
             }
 
@@ -10237,35 +11012,29 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__NameAssignment_1"
+    // $ANTLR end "rule__Image__AltTextAssignment_5_1"
 
 
-    // $ANTLR start "rule__File__CaptionAssignment_5"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3864:1: rule__File__CaptionAssignment_5 : ( ( rule__File__CaptionAlternatives_5_0 ) ) ;
-    public final void rule__File__CaptionAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Image__CaptionAssignment_7"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4211:1: rule__Image__CaptionAssignment_7 : ( ruleAnyTextSequence ) ;
+    public final void rule__Image__CaptionAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3868:1: ( ( ( rule__File__CaptionAlternatives_5_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3869:1: ( ( rule__File__CaptionAlternatives_5_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4215:1: ( ( ruleAnyTextSequence ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4216:1: ( ruleAnyTextSequence )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3869:1: ( ( rule__File__CaptionAlternatives_5_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3870:1: ( rule__File__CaptionAlternatives_5_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4216:1: ( ruleAnyTextSequence )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4217:1: ruleAnyTextSequence
             {
-             before(grammarAccess.getFileAccess().getCaptionAlternatives_5_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3871:1: ( rule__File__CaptionAlternatives_5_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3871:2: rule__File__CaptionAlternatives_5_0
-            {
-            pushFollow(FOLLOW_rule__File__CaptionAlternatives_5_0_in_rule__File__CaptionAssignment_57823);
-            rule__File__CaptionAlternatives_5_0();
+             before(grammarAccess.getImageAccess().getCaptionAnyTextSequenceParserRuleCall_7_0()); 
+            pushFollow(FOLLOW_ruleAnyTextSequence_in_rule__Image__CaptionAssignment_78541);
+            ruleAnyTextSequence();
 
             state._fsp--;
 
-
-            }
-
-             after(grammarAccess.getFileAccess().getCaptionAlternatives_5_0()); 
+             after(grammarAccess.getImageAccess().getCaptionAnyTextSequenceParserRuleCall_7_0()); 
 
             }
 
@@ -10284,29 +11053,156 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__File__CaptionAssignment_5"
+    // $ANTLR end "rule__Image__CaptionAssignment_7"
 
 
-    // $ANTLR start "rule__Category__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3880:1: rule__Category__NameAssignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
-    public final void rule__Category__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Category__NameAssignment_2"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4226:1: rule__Category__NameAssignment_2 : ( ruleText ) ;
+    public final void rule__Category__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3884:1: ( ( ruleAbstractUnformattedInlineContent ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3885:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4230:1: ( ( ruleText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4231:1: ( ruleText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3885:1: ( ruleAbstractUnformattedInlineContent )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3886:1: ruleAbstractUnformattedInlineContent
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4231:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4232:1: ruleText
             {
-             before(grammarAccess.getCategoryAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Category__NameAssignment_17856);
+             before(grammarAccess.getCategoryAccess().getNameTextParserRuleCall_2_0()); 
+            pushFollow(FOLLOW_ruleText_in_rule__Category__NameAssignment_28572);
+            ruleText();
+
+            state._fsp--;
+
+             after(grammarAccess.getCategoryAccess().getNameTextParserRuleCall_2_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Category__NameAssignment_2"
+
+
+    // $ANTLR start "rule__Category__ValueAssignment_3"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4241:1: rule__Category__ValueAssignment_3 : ( ( '|*?' ) ) ;
+    public final void rule__Category__ValueAssignment_3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4245:1: ( ( ( '|*?' ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4246:1: ( ( '|*?' ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4246:1: ( ( '|*?' ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4247:1: ( '|*?' )
+            {
+             before(grammarAccess.getCategoryAccess().getValueVerticalLineAsteriskQuestionMarkKeyword_3_0()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4248:1: ( '|*?' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4249:1: '|*?'
+            {
+             before(grammarAccess.getCategoryAccess().getValueVerticalLineAsteriskQuestionMarkKeyword_3_0()); 
+            match(input,45,FOLLOW_45_in_rule__Category__ValueAssignment_38608); 
+             after(grammarAccess.getCategoryAccess().getValueVerticalLineAsteriskQuestionMarkKeyword_3_0()); 
+
+            }
+
+             after(grammarAccess.getCategoryAccess().getValueVerticalLineAsteriskQuestionMarkKeyword_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Category__ValueAssignment_3"
+
+
+    // $ANTLR start "rule__Heading1__HeadingValue1Assignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4264:1: rule__Heading1__HeadingValue1Assignment_1 : ( ruleText ) ;
+    public final void rule__Heading1__HeadingValue1Assignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4268:1: ( ( ruleText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4269:1: ( ruleText )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4269:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4270:1: ruleText
+            {
+             before(grammarAccess.getHeading1Access().getHeadingValue1TextParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleText_in_rule__Heading1__HeadingValue1Assignment_18647);
+            ruleText();
+
+            state._fsp--;
+
+             after(grammarAccess.getHeading1Access().getHeadingValue1TextParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Heading1__HeadingValue1Assignment_1"
+
+
+    // $ANTLR start "rule__Heading2__HeadingValue2Assignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4279:1: rule__Heading2__HeadingValue2Assignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
+    public final void rule__Heading2__HeadingValue2Assignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4283:1: ( ( ruleAbstractUnformattedInlineContent ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4284:1: ( ruleAbstractUnformattedInlineContent )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4284:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4285:1: ruleAbstractUnformattedInlineContent
+            {
+             before(grammarAccess.getHeading2Access().getHeadingValue2AbstractUnformattedInlineContentParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading2__HeadingValue2Assignment_18678);
             ruleAbstractUnformattedInlineContent();
 
             state._fsp--;
 
-             after(grammarAccess.getCategoryAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
+             after(grammarAccess.getHeading2Access().getHeadingValue2AbstractUnformattedInlineContentParserRuleCall_1_0()); 
 
             }
 
@@ -10325,24 +11221,270 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__Category__NameAssignment_1"
+    // $ANTLR end "rule__Heading2__HeadingValue2Assignment_1"
+
+
+    // $ANTLR start "rule__Heading3__HeadingValue3Assignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4294:1: rule__Heading3__HeadingValue3Assignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
+    public final void rule__Heading3__HeadingValue3Assignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4298:1: ( ( ruleAbstractUnformattedInlineContent ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4299:1: ( ruleAbstractUnformattedInlineContent )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4299:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4300:1: ruleAbstractUnformattedInlineContent
+            {
+             before(grammarAccess.getHeading3Access().getHeadingValue3AbstractUnformattedInlineContentParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading3__HeadingValue3Assignment_18709);
+            ruleAbstractUnformattedInlineContent();
+
+            state._fsp--;
+
+             after(grammarAccess.getHeading3Access().getHeadingValue3AbstractUnformattedInlineContentParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Heading3__HeadingValue3Assignment_1"
+
+
+    // $ANTLR start "rule__Heading4__HeadingValue4Assignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4309:1: rule__Heading4__HeadingValue4Assignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
+    public final void rule__Heading4__HeadingValue4Assignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4313:1: ( ( ruleAbstractUnformattedInlineContent ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4314:1: ( ruleAbstractUnformattedInlineContent )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4314:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4315:1: ruleAbstractUnformattedInlineContent
+            {
+             before(grammarAccess.getHeading4Access().getHeadingValue4AbstractUnformattedInlineContentParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading4__HeadingValue4Assignment_18740);
+            ruleAbstractUnformattedInlineContent();
+
+            state._fsp--;
+
+             after(grammarAccess.getHeading4Access().getHeadingValue4AbstractUnformattedInlineContentParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Heading4__HeadingValue4Assignment_1"
+
+
+    // $ANTLR start "rule__Heading5__HeadingValue5Assignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4324:1: rule__Heading5__HeadingValue5Assignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
+    public final void rule__Heading5__HeadingValue5Assignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4328:1: ( ( ruleAbstractUnformattedInlineContent ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4329:1: ( ruleAbstractUnformattedInlineContent )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4329:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4330:1: ruleAbstractUnformattedInlineContent
+            {
+             before(grammarAccess.getHeading5Access().getHeadingValue5AbstractUnformattedInlineContentParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading5__HeadingValue5Assignment_18771);
+            ruleAbstractUnformattedInlineContent();
+
+            state._fsp--;
+
+             after(grammarAccess.getHeading5Access().getHeadingValue5AbstractUnformattedInlineContentParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Heading5__HeadingValue5Assignment_1"
+
+
+    // $ANTLR start "rule__Bold__NameAssignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4339:1: rule__Bold__NameAssignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
+    public final void rule__Bold__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4343:1: ( ( ruleAbstractUnformattedInlineContent ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4344:1: ( ruleAbstractUnformattedInlineContent )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4344:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4345:1: ruleAbstractUnformattedInlineContent
+            {
+             before(grammarAccess.getBoldAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Bold__NameAssignment_18802);
+            ruleAbstractUnformattedInlineContent();
+
+            state._fsp--;
+
+             after(grammarAccess.getBoldAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Bold__NameAssignment_1"
+
+
+    // $ANTLR start "rule__Italic__NameAssignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4354:1: rule__Italic__NameAssignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
+    public final void rule__Italic__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4358:1: ( ( ruleAbstractUnformattedInlineContent ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4359:1: ( ruleAbstractUnformattedInlineContent )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4359:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4360:1: ruleAbstractUnformattedInlineContent
+            {
+             before(grammarAccess.getItalicAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Italic__NameAssignment_18833);
+            ruleAbstractUnformattedInlineContent();
+
+            state._fsp--;
+
+             after(grammarAccess.getItalicAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Italic__NameAssignment_1"
+
+
+    // $ANTLR start "rule__ItalicBold__NameAssignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4369:1: rule__ItalicBold__NameAssignment_1 : ( ruleAbstractUnformattedInlineContent ) ;
+    public final void rule__ItalicBold__NameAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4373:1: ( ( ruleAbstractUnformattedInlineContent ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4374:1: ( ruleAbstractUnformattedInlineContent )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4374:1: ( ruleAbstractUnformattedInlineContent )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4375:1: ruleAbstractUnformattedInlineContent
+            {
+             before(grammarAccess.getItalicBoldAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ItalicBold__NameAssignment_18864);
+            ruleAbstractUnformattedInlineContent();
+
+            state._fsp--;
+
+             after(grammarAccess.getItalicBoldAccess().getNameAbstractUnformattedInlineContentParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__ItalicBold__NameAssignment_1"
 
 
     // $ANTLR start "rule__Text__NameAssignment"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3895:1: rule__Text__NameAssignment : ( ruleName ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4384:1: rule__Text__NameAssignment : ( ruleName ) ;
     public final void rule__Text__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3899:1: ( ( ruleName ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3900:1: ( ruleName )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4388:1: ( ( ruleName ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4389:1: ( ruleName )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3900:1: ( ruleName )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3901:1: ruleName
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4389:1: ( ruleName )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4390:1: ruleName
             {
              before(grammarAccess.getTextAccess().getNameNameParserRuleCall_0()); 
-            pushFollow(FOLLOW_ruleName_in_rule__Text__NameAssignment7887);
+            pushFollow(FOLLOW_ruleName_in_rule__Text__NameAssignment8895);
             ruleName();
 
             state._fsp--;
@@ -10370,20 +11512,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__Internal__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3910:1: rule__Internal__NameAssignment_1 : ( ruleText ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4399:1: rule__Internal__NameAssignment_1 : ( ruleText ) ;
     public final void rule__Internal__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3914:1: ( ( ruleText ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3915:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4403:1: ( ( ruleText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4404:1: ( ruleText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3915:1: ( ruleText )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3916:1: ruleText
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4404:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4405:1: ruleText
             {
              before(grammarAccess.getInternalAccess().getNameTextParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleText_in_rule__Internal__NameAssignment_17918);
+            pushFollow(FOLLOW_ruleText_in_rule__Internal__NameAssignment_18926);
             ruleText();
 
             state._fsp--;
@@ -10411,20 +11553,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3925:1: rule__InternalAlt__NameAssignment_1 : ( ruleText ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4414:1: rule__InternalAlt__NameAssignment_1 : ( ruleText ) ;
     public final void rule__InternalAlt__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3929:1: ( ( ruleText ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3930:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4418:1: ( ( ruleText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4419:1: ( ruleText )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3930:1: ( ruleText )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3931:1: ruleText
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4419:1: ( ruleText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4420:1: ruleText
             {
              before(grammarAccess.getInternalAltAccess().getNameTextParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_ruleText_in_rule__InternalAlt__NameAssignment_17949);
+            pushFollow(FOLLOW_ruleText_in_rule__InternalAlt__NameAssignment_18957);
             ruleText();
 
             state._fsp--;
@@ -10452,23 +11594,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__InternalAlt__AltTextAssignment_3"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3940:1: rule__InternalAlt__AltTextAssignment_3 : ( ( rule__InternalAlt__AltTextAlternatives_3_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4429:1: rule__InternalAlt__AltTextAssignment_3 : ( ( rule__InternalAlt__AltTextAlternatives_3_0 ) ) ;
     public final void rule__InternalAlt__AltTextAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3944:1: ( ( ( rule__InternalAlt__AltTextAlternatives_3_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3945:1: ( ( rule__InternalAlt__AltTextAlternatives_3_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4433:1: ( ( ( rule__InternalAlt__AltTextAlternatives_3_0 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4434:1: ( ( rule__InternalAlt__AltTextAlternatives_3_0 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3945:1: ( ( rule__InternalAlt__AltTextAlternatives_3_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3946:1: ( rule__InternalAlt__AltTextAlternatives_3_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4434:1: ( ( rule__InternalAlt__AltTextAlternatives_3_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4435:1: ( rule__InternalAlt__AltTextAlternatives_3_0 )
             {
              before(grammarAccess.getInternalAltAccess().getAltTextAlternatives_3_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3947:1: ( rule__InternalAlt__AltTextAlternatives_3_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3947:2: rule__InternalAlt__AltTextAlternatives_3_0
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4436:1: ( rule__InternalAlt__AltTextAlternatives_3_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4436:2: rule__InternalAlt__AltTextAlternatives_3_0
             {
-            pushFollow(FOLLOW_rule__InternalAlt__AltTextAlternatives_3_0_in_rule__InternalAlt__AltTextAssignment_37980);
+            pushFollow(FOLLOW_rule__InternalAlt__AltTextAlternatives_3_0_in_rule__InternalAlt__AltTextAssignment_38988);
             rule__InternalAlt__AltTextAlternatives_3_0();
 
             state._fsp--;
@@ -10499,20 +11641,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__External__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3956:1: rule__External__NameAssignment_1 : ( RULE_URL ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4445:1: rule__External__NameAssignment_1 : ( RULE_URL ) ;
     public final void rule__External__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3960:1: ( ( RULE_URL ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3961:1: ( RULE_URL )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4449:1: ( ( RULE_URL ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4450:1: ( RULE_URL )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3961:1: ( RULE_URL )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3962:1: RULE_URL
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4450:1: ( RULE_URL )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4451:1: RULE_URL
             {
              before(grammarAccess.getExternalAccess().getNameURLTerminalRuleCall_1_0()); 
-            match(input,RULE_URL,FOLLOW_RULE_URL_in_rule__External__NameAssignment_18013); 
+            match(input,RULE_URL,FOLLOW_RULE_URL_in_rule__External__NameAssignment_19021); 
              after(grammarAccess.getExternalAccess().getNameURLTerminalRuleCall_1_0()); 
 
             }
@@ -10536,20 +11678,20 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__NameAssignment_1"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3971:1: rule__ExternalAlt__NameAssignment_1 : ( RULE_URL ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4460:1: rule__ExternalAlt__NameAssignment_1 : ( RULE_URL ) ;
     public final void rule__ExternalAlt__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3975:1: ( ( RULE_URL ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3976:1: ( RULE_URL )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4464:1: ( ( RULE_URL ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4465:1: ( RULE_URL )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3976:1: ( RULE_URL )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3977:1: RULE_URL
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4465:1: ( RULE_URL )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4466:1: RULE_URL
             {
              before(grammarAccess.getExternalAltAccess().getNameURLTerminalRuleCall_1_0()); 
-            match(input,RULE_URL,FOLLOW_RULE_URL_in_rule__ExternalAlt__NameAssignment_18044); 
+            match(input,RULE_URL,FOLLOW_RULE_URL_in_rule__ExternalAlt__NameAssignment_19052); 
              after(grammarAccess.getExternalAltAccess().getNameURLTerminalRuleCall_1_0()); 
 
             }
@@ -10573,23 +11715,23 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__ExternalAlt__AltTextAssignment_2"
-    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3986:1: rule__ExternalAlt__AltTextAssignment_2 : ( ( rule__ExternalAlt__AltTextAlternatives_2_0 ) ) ;
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4475:1: rule__ExternalAlt__AltTextAssignment_2 : ( ( rule__ExternalAlt__AltTextAlternatives_2_0 ) ) ;
     public final void rule__ExternalAlt__AltTextAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3990:1: ( ( ( rule__ExternalAlt__AltTextAlternatives_2_0 ) ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3991:1: ( ( rule__ExternalAlt__AltTextAlternatives_2_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4479:1: ( ( ( rule__ExternalAlt__AltTextAlternatives_2_0 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4480:1: ( ( rule__ExternalAlt__AltTextAlternatives_2_0 ) )
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3991:1: ( ( rule__ExternalAlt__AltTextAlternatives_2_0 ) )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3992:1: ( rule__ExternalAlt__AltTextAlternatives_2_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4480:1: ( ( rule__ExternalAlt__AltTextAlternatives_2_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4481:1: ( rule__ExternalAlt__AltTextAlternatives_2_0 )
             {
              before(grammarAccess.getExternalAltAccess().getAltTextAlternatives_2_0()); 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3993:1: ( rule__ExternalAlt__AltTextAlternatives_2_0 )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:3993:2: rule__ExternalAlt__AltTextAlternatives_2_0
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4482:1: ( rule__ExternalAlt__AltTextAlternatives_2_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4482:2: rule__ExternalAlt__AltTextAlternatives_2_0
             {
-            pushFollow(FOLLOW_rule__ExternalAlt__AltTextAlternatives_2_0_in_rule__ExternalAlt__AltTextAssignment_28075);
+            pushFollow(FOLLOW_rule__ExternalAlt__AltTextAlternatives_2_0_in_rule__ExternalAlt__AltTextAssignment_29083);
             rule__ExternalAlt__AltTextAlternatives_2_0();
 
             state._fsp--;
@@ -10618,73 +11760,228 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     }
     // $ANTLR end "rule__ExternalAlt__AltTextAssignment_2"
 
+
+    // $ANTLR start "rule__AnyTextSequence__ContentAssignment_1"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4491:1: rule__AnyTextSequence__ContentAssignment_1 : ( ruleAnyText ) ;
+    public final void rule__AnyTextSequence__ContentAssignment_1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4495:1: ( ( ruleAnyText ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4496:1: ( ruleAnyText )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4496:1: ( ruleAnyText )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4497:1: ruleAnyText
+            {
+             before(grammarAccess.getAnyTextSequenceAccess().getContentAnyTextParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_ruleAnyText_in_rule__AnyTextSequence__ContentAssignment_19116);
+            ruleAnyText();
+
+            state._fsp--;
+
+             after(grammarAccess.getAnyTextSequenceAccess().getContentAnyTextParserRuleCall_1_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AnyTextSequence__ContentAssignment_1"
+
+
+    // $ANTLR start "rule__AnyText__NameAssignment"
+    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4506:1: rule__AnyText__NameAssignment : ( ( rule__AnyText__NameAlternatives_0 ) ) ;
+    public final void rule__AnyText__NameAssignment() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+            
+        try {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4510:1: ( ( ( rule__AnyText__NameAlternatives_0 ) ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:1: ( ( rule__AnyText__NameAlternatives_0 ) )
+            {
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:1: ( ( rule__AnyText__NameAlternatives_0 ) )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4512:1: ( rule__AnyText__NameAlternatives_0 )
+            {
+             before(grammarAccess.getAnyTextAccess().getNameAlternatives_0()); 
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4513:1: ( rule__AnyText__NameAlternatives_0 )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4513:2: rule__AnyText__NameAlternatives_0
+            {
+            pushFollow(FOLLOW_rule__AnyText__NameAlternatives_0_in_rule__AnyText__NameAssignment9147);
+            rule__AnyText__NameAlternatives_0();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getAnyTextAccess().getNameAlternatives_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__AnyText__NameAssignment"
+
     // Delegated rules
 
 
-    protected DFA12 dfa12 = new DFA12(this);
-    static final String DFA12_eotS =
-        "\12\uffff";
-    static final String DFA12_eofS =
-        "\12\uffff";
-    static final String DFA12_minS =
-        "\1\42\1\4\1\5\3\4\4\uffff";
-    static final String DFA12_maxS =
-        "\1\43\1\4\1\5\1\27\1\44\1\27\4\uffff";
-    static final String DFA12_acceptS =
-        "\6\uffff\1\1\1\2\1\3\1\4";
-    static final String DFA12_specialS =
-        "\12\uffff}>";
-    static final String[] DFA12_transitionS = {
-            "\1\1\1\2",
-            "\1\3",
-            "\1\4",
-            "\1\5\12\uffff\1\7\7\uffff\1\6",
-            "\1\11\32\uffff\5\11\1\10",
-            "\1\5\12\uffff\1\7\7\uffff\1\6",
+    protected DFA1 dfa1 = new DFA1(this);
+    protected DFA4 dfa4 = new DFA4(this);
+    static final String DFA1_eotS =
+        "\20\uffff";
+    static final String DFA1_eofS =
+        "\20\uffff";
+    static final String DFA1_minS =
+        "\1\4\3\uffff\1\4\13\uffff";
+    static final String DFA1_maxS =
+        "\1\53\3\uffff\1\42\13\uffff";
+    static final String DFA1_acceptS =
+        "\1\uffff\1\1\1\2\1\3\1\uffff\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1"+
+        "\15\1\16\1\5\1\4";
+    static final String DFA1_specialS =
+        "\20\uffff}>";
+    static final String[] DFA1_transitionS = {
+            "\1\7\20\uffff\1\10\1\uffff\1\5\2\uffff\1\3\1\uffff\1\2\1\1"+
+            "\1\4\4\uffff\1\11\1\12\1\13\1\14\1\15\3\6\1\7",
+            "",
+            "",
+            "",
+            "\1\7\32\uffff\1\17\2\uffff\1\16",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "",
             "",
             "",
             ""
     };
 
-    static final short[] DFA12_eot = DFA.unpackEncodedString(DFA12_eotS);
-    static final short[] DFA12_eof = DFA.unpackEncodedString(DFA12_eofS);
-    static final char[] DFA12_min = DFA.unpackEncodedStringToUnsignedChars(DFA12_minS);
-    static final char[] DFA12_max = DFA.unpackEncodedStringToUnsignedChars(DFA12_maxS);
-    static final short[] DFA12_accept = DFA.unpackEncodedString(DFA12_acceptS);
-    static final short[] DFA12_special = DFA.unpackEncodedString(DFA12_specialS);
-    static final short[][] DFA12_transition;
+    static final short[] DFA1_eot = DFA.unpackEncodedString(DFA1_eotS);
+    static final short[] DFA1_eof = DFA.unpackEncodedString(DFA1_eofS);
+    static final char[] DFA1_min = DFA.unpackEncodedStringToUnsignedChars(DFA1_minS);
+    static final char[] DFA1_max = DFA.unpackEncodedStringToUnsignedChars(DFA1_maxS);
+    static final short[] DFA1_accept = DFA.unpackEncodedString(DFA1_acceptS);
+    static final short[] DFA1_special = DFA.unpackEncodedString(DFA1_specialS);
+    static final short[][] DFA1_transition;
 
     static {
-        int numStates = DFA12_transitionS.length;
-        DFA12_transition = new short[numStates][];
+        int numStates = DFA1_transitionS.length;
+        DFA1_transition = new short[numStates][];
         for (int i=0; i<numStates; i++) {
-            DFA12_transition[i] = DFA.unpackEncodedString(DFA12_transitionS[i]);
+            DFA1_transition[i] = DFA.unpackEncodedString(DFA1_transitionS[i]);
         }
     }
 
-    class DFA12 extends DFA {
+    class DFA1 extends DFA {
 
-        public DFA12(BaseRecognizer recognizer) {
+        public DFA1(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 12;
-            this.eot = DFA12_eot;
-            this.eof = DFA12_eof;
-            this.min = DFA12_min;
-            this.max = DFA12_max;
-            this.accept = DFA12_accept;
-            this.special = DFA12_special;
-            this.transition = DFA12_transition;
+            this.decisionNumber = 1;
+            this.eot = DFA1_eot;
+            this.eof = DFA1_eof;
+            this.min = DFA1_min;
+            this.max = DFA1_max;
+            this.accept = DFA1_accept;
+            this.special = DFA1_special;
+            this.transition = DFA1_transition;
         }
         public String getDescription() {
-            return "1108:1: rule__HyperLink__Alternatives : ( ( ruleInternal ) | ( ruleInternalAlt ) | ( ruleExternal ) | ( ruleExternalAlt ) );";
+            return "882:1: rule__ParagraphTypes__Alternatives : ( ( ruleOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel1 ) | ( ruleUnOrderListItemLevel2 ) | ( ruleImage ) | ( ruleCategory ) | ( ruleTemplate ) | ( ruleAbstractFormattedInlineContent ) | ( ruleAbstractUnformattedInlineContent ) | ( ruleBlockQuote ) | ( ruleHeading1 ) | ( ruleHeading2 ) | ( ruleHeading3 ) | ( ruleHeading4 ) | ( ruleHeading5 ) );";
+        }
+    }
+    static final String DFA4_eotS =
+        "\12\uffff";
+    static final String DFA4_eofS =
+        "\12\uffff";
+    static final String DFA4_minS =
+        "\1\36\1\4\1\5\3\4\4\uffff";
+    static final String DFA4_maxS =
+        "\1\53\1\4\1\5\1\40\1\54\1\40\4\uffff";
+    static final String DFA4_acceptS =
+        "\6\uffff\1\1\1\2\1\3\1\4";
+    static final String DFA4_specialS =
+        "\12\uffff}>";
+    static final String[] DFA4_transitionS = {
+            "\1\1\14\uffff\1\2",
+            "\1\3",
+            "\1\4",
+            "\1\5\24\uffff\1\7\6\uffff\1\6",
+            "\1\11\31\uffff\1\11\11\uffff\4\11\1\10",
+            "\1\5\24\uffff\1\7\6\uffff\1\6",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] DFA4_eot = DFA.unpackEncodedString(DFA4_eotS);
+    static final short[] DFA4_eof = DFA.unpackEncodedString(DFA4_eofS);
+    static final char[] DFA4_min = DFA.unpackEncodedStringToUnsignedChars(DFA4_minS);
+    static final char[] DFA4_max = DFA.unpackEncodedStringToUnsignedChars(DFA4_maxS);
+    static final short[] DFA4_accept = DFA.unpackEncodedString(DFA4_acceptS);
+    static final short[] DFA4_special = DFA.unpackEncodedString(DFA4_specialS);
+    static final short[][] DFA4_transition;
+
+    static {
+        int numStates = DFA4_transitionS.length;
+        DFA4_transition = new short[numStates][];
+        for (int i=0; i<numStates; i++) {
+            DFA4_transition[i] = DFA.unpackEncodedString(DFA4_transitionS[i]);
+        }
+    }
+
+    class DFA4 extends DFA {
+
+        public DFA4(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 4;
+            this.eot = DFA4_eot;
+            this.eof = DFA4_eof;
+            this.min = DFA4_min;
+            this.max = DFA4_max;
+            this.accept = DFA4_accept;
+            this.special = DFA4_special;
+            this.transition = DFA4_transition;
+        }
+        public String getDescription() {
+            return "1026:1: rule__HyperLink__Alternatives : ( ( ruleInternal ) | ( ruleInternalAlt ) | ( ruleExternal ) | ( ruleExternalAlt ) );";
         }
     }
  
 
-    public static final BitSet FOLLOW_rulewiki_in_entryRulewiki61 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulewiki68 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Wiki__Group__0_in_rulewiki94 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWikiPage_in_entryRuleWikiPage61 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleWikiPage68 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WikiPage__Group__0_in_ruleWikiPage94 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleParagraphTypes_in_entryRuleParagraphTypes121 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleParagraphTypes128 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ParagraphTypes__Alternatives_in_ruleParagraphTypes154 = new BitSet(new long[]{0x0000000000000002L});
@@ -10703,9 +12000,9 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleOrderListItemLevel1_in_entryRuleOrderListItemLevel1421 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOrderListItemLevel1428 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__0_in_ruleOrderListItemLevel1454 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFile_in_entryRuleFile481 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFile488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__Group__0_in_ruleFile514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImage_in_entryRuleImage481 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImage488 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__0_in_ruleImage514 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleCategory_in_entryRuleCategory541 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleCategory548 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Category__Group__0_in_ruleCategory574 = new BitSet(new long[]{0x0000000000000002L});
@@ -10757,283 +12054,323 @@ public class InternalWikiMLParser extends AbstractInternalContentAssistParser {
     public static final BitSet FOLLOW_ruleExternalAlt_in_entryRuleExternalAlt1501 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleExternalAlt1508 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__ExternalAlt__Group__0_in_ruleExternalAlt1534 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_entryRuleName1561 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleName1568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Name__Group__0_in_ruleName1594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrderListItemLevel1_in_rule__ParagraphTypes__Alternatives1630 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnOrderListItemLevel1_in_rule__ParagraphTypes__Alternatives1647 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleUnOrderListItemLevel2_in_rule__ParagraphTypes__Alternatives1664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFile_in_rule__ParagraphTypes__Alternatives1681 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCategory_in_rule__ParagraphTypes__Alternatives1698 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTemplate_in_rule__ParagraphTypes__Alternatives1715 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__ParagraphTypes__Alternatives1732 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ParagraphTypes__Alternatives1749 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBlockQuote_in_rule__ParagraphTypes__Alternatives1766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHeading1_in_rule__ParagraphTypes__Alternatives1783 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHeading2_in_rule__ParagraphTypes__Alternatives1800 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHeading3_in_rule__ParagraphTypes__Alternatives1817 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHeading4_in_rule__ParagraphTypes__Alternatives1834 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHeading5_in_rule__ParagraphTypes__Alternatives1851 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__BlockQuote__ContentAlternatives_2_01883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__BlockQuote__ContentAlternatives_2_01900 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__UnOrderListItemLevel2__NameAlternatives_1_01932 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__UnOrderListItemLevel2__NameAlternatives_1_01949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__UnOrderListItemLevel2__ListAlternatives_2_01981 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__UnOrderListItemLevel2__ListAlternatives_2_01998 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__UnOrderListItemLevel1__NameAlternatives_1_02030 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__UnOrderListItemLevel1__NameAlternatives_1_02047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__UnOrderListItemLevel1__ListAlternatives_2_02079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__UnOrderListItemLevel1__ListAlternatives_2_02096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__OrderListItemLevel1__NameAlternatives_1_02128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__OrderListItemLevel1__NameAlternatives_1_02145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__OrderListItemLevel1__ListAlternatives_2_02177 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__OrderListItemLevel1__ListAlternatives_2_02194 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__File__CaptionAlternatives_5_02226 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__File__CaptionAlternatives_5_02243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleBold_in_rule__AbstractFormattedInlineContent__Alternatives2275 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleItalic_in_rule__AbstractFormattedInlineContent__Alternatives2292 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleItalicBold_in_rule__AbstractFormattedInlineContent__Alternatives2309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleText_in_rule__AbstractUnformattedInlineContent__Alternatives2341 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHyperLink_in_rule__AbstractUnformattedInlineContent__Alternatives2358 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInternal_in_rule__HyperLink__Alternatives2390 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleInternalAlt_in_rule__HyperLink__Alternatives2407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExternal_in_rule__HyperLink__Alternatives2424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleExternalAlt_in_rule__HyperLink__Alternatives2441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__InternalAlt__AltTextAlternatives_3_02473 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__InternalAlt__AltTextAlternatives_3_02490 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ExternalAlt__AltTextAlternatives_2_02522 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__ExternalAlt__AltTextAlternatives_2_02539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Wiki__Group__0__Impl_in_rule__Wiki__Group__02569 = new BitSet(new long[]{0x0000000FFD3A5010L});
-    public static final BitSet FOLLOW_rule__Wiki__Group__1_in_rule__Wiki__Group__02572 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHeading1_in_rule__Wiki__Group__0__Impl2599 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Wiki__Group__1__Impl_in_rule__Wiki__Group__12628 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Wiki__ElementsAssignment_1_in_rule__Wiki__Group__1__Impl2655 = new BitSet(new long[]{0x0000000FFD3A5012L});
-    public static final BitSet FOLLOW_rule__BlockQuote__Group__0__Impl_in_rule__BlockQuote__Group__02690 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_rule__BlockQuote__Group__1_in_rule__BlockQuote__Group__02693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockQuote__Group__1__Impl_in_rule__BlockQuote__Group__12751 = new BitSet(new long[]{0x0000000F80002010L});
-    public static final BitSet FOLLOW_rule__BlockQuote__Group__2_in_rule__BlockQuote__Group__12754 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rule__BlockQuote__Group__1__Impl2782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockQuote__Group__2__Impl_in_rule__BlockQuote__Group__22813 = new BitSet(new long[]{0x0000000F80002010L});
-    public static final BitSet FOLLOW_rule__BlockQuote__Group__3_in_rule__BlockQuote__Group__22816 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockQuote__ContentAssignment_2_in_rule__BlockQuote__Group__2__Impl2843 = new BitSet(new long[]{0x0000000F80000012L});
-    public static final BitSet FOLLOW_rule__BlockQuote__Group__3__Impl_in_rule__BlockQuote__Group__32874 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_rule__BlockQuote__Group__3__Impl2902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__Group__0__Impl_in_rule__Template__Group__02941 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Template__Group__1_in_rule__Template__Group__02944 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_14_in_rule__Template__Group__0__Impl2972 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__Group__1__Impl_in_rule__Template__Group__13003 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__Template__Group__2_in_rule__Template__Group__13006 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__NameAssignment_1_in_rule__Template__Group__1__Impl3033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__Group__2__Impl_in_rule__Template__Group__23063 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Template__Group__3_in_rule__Template__Group__23066 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Template__Group__2__Impl3094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__Group__3__Impl_in_rule__Template__Group__33125 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_rule__Template__Group__4_in_rule__Template__Group__33128 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__ContentAssignment_3_in_rule__Template__Group__3__Impl3155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__Group__4__Impl_in_rule__Template__Group__43185 = new BitSet(new long[]{0x0000000000018000L});
-    public static final BitSet FOLLOW_rule__Template__Group__5_in_rule__Template__Group__43188 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__Group_4__0_in_rule__Template__Group__4__Impl3215 = new BitSet(new long[]{0x0000000000008002L});
-    public static final BitSet FOLLOW_rule__Template__Group__5__Impl_in_rule__Template__Group__53246 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_16_in_rule__Template__Group__5__Impl3274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__Group_4__0__Impl_in_rule__Template__Group_4__03317 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Template__Group_4__1_in_rule__Template__Group_4__03320 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__Template__Group_4__0__Impl3348 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__Group_4__1__Impl_in_rule__Template__Group_4__13379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Template__ContentAssignment_4_1_in_rule__Template__Group_4__1__Impl3406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__0__Impl_in_rule__UnOrderListItemLevel2__Group__03440 = new BitSet(new long[]{0x0000000F80000010L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__1_in_rule__UnOrderListItemLevel2__Group__03443 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_17_in_rule__UnOrderListItemLevel2__Group__0__Impl3471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__1__Impl_in_rule__UnOrderListItemLevel2__Group__13502 = new BitSet(new long[]{0x0000000F80040010L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__2_in_rule__UnOrderListItemLevel2__Group__13505 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__NameAssignment_1_in_rule__UnOrderListItemLevel2__Group__1__Impl3532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__2__Impl_in_rule__UnOrderListItemLevel2__Group__23562 = new BitSet(new long[]{0x0000000F80040010L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__3_in_rule__UnOrderListItemLevel2__Group__23565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__ListAssignment_2_in_rule__UnOrderListItemLevel2__Group__2__Impl3592 = new BitSet(new long[]{0x0000000F80000012L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__3__Impl_in_rule__UnOrderListItemLevel2__Group__33623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__UnOrderListItemLevel2__Group__3__Impl3651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__0__Impl_in_rule__UnOrderListItemLevel1__Group__03690 = new BitSet(new long[]{0x0000000F80000010L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__1_in_rule__UnOrderListItemLevel1__Group__03693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_rule__UnOrderListItemLevel1__Group__0__Impl3721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__1__Impl_in_rule__UnOrderListItemLevel1__Group__13752 = new BitSet(new long[]{0x0000000F80040010L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__2_in_rule__UnOrderListItemLevel1__Group__13755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__NameAssignment_1_in_rule__UnOrderListItemLevel1__Group__1__Impl3782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__2__Impl_in_rule__UnOrderListItemLevel1__Group__23812 = new BitSet(new long[]{0x0000000F80040010L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__3_in_rule__UnOrderListItemLevel1__Group__23815 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__ListAssignment_2_in_rule__UnOrderListItemLevel1__Group__2__Impl3842 = new BitSet(new long[]{0x0000000F80000012L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__3__Impl_in_rule__UnOrderListItemLevel1__Group__33873 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__UnOrderListItemLevel1__Group__3__Impl3901 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__0__Impl_in_rule__OrderListItemLevel1__Group__03940 = new BitSet(new long[]{0x0000000F80000010L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__1_in_rule__OrderListItemLevel1__Group__03943 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_20_in_rule__OrderListItemLevel1__Group__0__Impl3971 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__1__Impl_in_rule__OrderListItemLevel1__Group__14002 = new BitSet(new long[]{0x0000000F80040010L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__2_in_rule__OrderListItemLevel1__Group__14005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__NameAssignment_1_in_rule__OrderListItemLevel1__Group__1__Impl4032 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__2__Impl_in_rule__OrderListItemLevel1__Group__24062 = new BitSet(new long[]{0x0000000F80040010L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__3_in_rule__OrderListItemLevel1__Group__24065 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__ListAssignment_2_in_rule__OrderListItemLevel1__Group__2__Impl4092 = new BitSet(new long[]{0x0000000F80000012L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__3__Impl_in_rule__OrderListItemLevel1__Group__34123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rule__OrderListItemLevel1__Group__3__Impl4151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__Group__0__Impl_in_rule__File__Group__04190 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__File__Group__1_in_rule__File__Group__04193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rule__File__Group__0__Impl4221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__Group__1__Impl_in_rule__File__Group__14252 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__File__Group__2_in_rule__File__Group__14255 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__NameAssignment_1_in_rule__File__Group__1__Impl4282 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__Group__2__Impl_in_rule__File__Group__24312 = new BitSet(new long[]{0x0000000000400000L});
-    public static final BitSet FOLLOW_rule__File__Group__3_in_rule__File__Group__24315 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__File__Group__2__Impl4343 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__Group__3__Impl_in_rule__File__Group__34374 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__File__Group__4_in_rule__File__Group__34377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rule__File__Group__3__Impl4405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__Group__4__Impl_in_rule__File__Group__44436 = new BitSet(new long[]{0x0000000F80800010L});
-    public static final BitSet FOLLOW_rule__File__Group__5_in_rule__File__Group__44439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__File__Group__4__Impl4467 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__Group__5__Impl_in_rule__File__Group__54498 = new BitSet(new long[]{0x0000000F80800010L});
-    public static final BitSet FOLLOW_rule__File__Group__6_in_rule__File__Group__54501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__CaptionAssignment_5_in_rule__File__Group__5__Impl4528 = new BitSet(new long[]{0x0000000F80000012L});
-    public static final BitSet FOLLOW_rule__File__Group__6__Impl_in_rule__File__Group__64559 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__File__Group__6__Impl4587 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Category__Group__0__Impl_in_rule__Category__Group__04632 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__Category__Group__1_in_rule__Category__Group__04635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rule__Category__Group__0__Impl4663 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Category__Group__1__Impl_in_rule__Category__Group__14694 = new BitSet(new long[]{0x0000000002800000L});
-    public static final BitSet FOLLOW_rule__Category__Group__2_in_rule__Category__Group__14697 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Category__NameAssignment_1_in_rule__Category__Group__1__Impl4724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Category__Group__2__Impl_in_rule__Category__Group__24754 = new BitSet(new long[]{0x0000000002800000L});
-    public static final BitSet FOLLOW_rule__Category__Group__3_in_rule__Category__Group__24757 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rule__Category__Group__2__Impl4786 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Category__Group__3__Impl_in_rule__Category__Group__34819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Category__Group__3__Impl4847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading1__Group__0__Impl_in_rule__Heading1__Group__04886 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Heading1__Group__1_in_rule__Heading1__Group__04889 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Heading1__Group__0__Impl4917 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading1__Group__1__Impl_in_rule__Heading1__Group__14948 = new BitSet(new long[]{0x0000000004000000L});
-    public static final BitSet FOLLOW_rule__Heading1__Group__2_in_rule__Heading1__Group__14951 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleText_in_rule__Heading1__Group__1__Impl4978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading1__Group__2__Impl_in_rule__Heading1__Group__25007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rule__Heading1__Group__2__Impl5035 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading2__Group__0__Impl_in_rule__Heading2__Group__05072 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__Heading2__Group__1_in_rule__Heading2__Group__05075 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Heading2__Group__0__Impl5103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading2__Group__1__Impl_in_rule__Heading2__Group__15134 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_rule__Heading2__Group__2_in_rule__Heading2__Group__15137 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading2__Group__1__Impl5164 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading2__Group__2__Impl_in_rule__Heading2__Group__25193 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rule__Heading2__Group__2__Impl5221 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading3__Group__0__Impl_in_rule__Heading3__Group__05258 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__Heading3__Group__1_in_rule__Heading3__Group__05261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Heading3__Group__0__Impl5289 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading3__Group__1__Impl_in_rule__Heading3__Group__15320 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_rule__Heading3__Group__2_in_rule__Heading3__Group__15323 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading3__Group__1__Impl5350 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading3__Group__2__Impl_in_rule__Heading3__Group__25379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rule__Heading3__Group__2__Impl5407 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading4__Group__0__Impl_in_rule__Heading4__Group__05444 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__Heading4__Group__1_in_rule__Heading4__Group__05447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Heading4__Group__0__Impl5475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading4__Group__1__Impl_in_rule__Heading4__Group__15506 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_rule__Heading4__Group__2_in_rule__Heading4__Group__15509 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading4__Group__1__Impl5536 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading4__Group__2__Impl_in_rule__Heading4__Group__25565 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rule__Heading4__Group__2__Impl5593 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading5__Group__0__Impl_in_rule__Heading5__Group__05630 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__Heading5__Group__1_in_rule__Heading5__Group__05633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Heading5__Group__0__Impl5661 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading5__Group__1__Impl_in_rule__Heading5__Group__15692 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_rule__Heading5__Group__2_in_rule__Heading5__Group__15695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading5__Group__1__Impl5722 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Heading5__Group__2__Impl_in_rule__Heading5__Group__25751 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_30_in_rule__Heading5__Group__2__Impl5779 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bold__Group__0__Impl_in_rule__Bold__Group__05816 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__Bold__Group__1_in_rule__Bold__Group__05819 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Bold__Group__0__Impl5847 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bold__Group__1__Impl_in_rule__Bold__Group__15878 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_rule__Bold__Group__2_in_rule__Bold__Group__15881 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Bold__Group__1__Impl5908 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Bold__Group__2__Impl_in_rule__Bold__Group__25937 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_rule__Bold__Group__2__Impl5965 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Italic__Group__0__Impl_in_rule__Italic__Group__06002 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__Italic__Group__1_in_rule__Italic__Group__06005 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Italic__Group__0__Impl6033 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Italic__Group__1__Impl_in_rule__Italic__Group__16064 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_rule__Italic__Group__2_in_rule__Italic__Group__16067 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Italic__Group__1__Impl6094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Italic__Group__2__Impl_in_rule__Italic__Group__26123 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rule__Italic__Group__2__Impl6151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ItalicBold__Group__0__Impl_in_rule__ItalicBold__Group__06188 = new BitSet(new long[]{0x0000000C00000010L});
-    public static final BitSet FOLLOW_rule__ItalicBold__Group__1_in_rule__ItalicBold__Group__06191 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__ItalicBold__Group__0__Impl6219 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ItalicBold__Group__1__Impl_in_rule__ItalicBold__Group__16250 = new BitSet(new long[]{0x0000000200000000L});
-    public static final BitSet FOLLOW_rule__ItalicBold__Group__2_in_rule__ItalicBold__Group__16253 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ItalicBold__Group__1__Impl6280 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ItalicBold__Group__2__Impl_in_rule__ItalicBold__Group__26309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rule__ItalicBold__Group__2__Impl6337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Internal__Group__0__Impl_in_rule__Internal__Group__06374 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Internal__Group__1_in_rule__Internal__Group__06377 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__Internal__Group__0__Impl6405 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Internal__Group__1__Impl_in_rule__Internal__Group__16436 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__Internal__Group__2_in_rule__Internal__Group__16439 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Internal__NameAssignment_1_in_rule__Internal__Group__1__Impl6466 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Internal__Group__2__Impl_in_rule__Internal__Group__26496 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__Internal__Group__2__Impl6524 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__0__Impl_in_rule__InternalAlt__Group__06561 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__1_in_rule__InternalAlt__Group__06564 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rule__InternalAlt__Group__0__Impl6592 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__1__Impl_in_rule__InternalAlt__Group__16623 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__2_in_rule__InternalAlt__Group__16626 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InternalAlt__NameAssignment_1_in_rule__InternalAlt__Group__1__Impl6653 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__2__Impl_in_rule__InternalAlt__Group__26683 = new BitSet(new long[]{0x0000000F80000010L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__3_in_rule__InternalAlt__Group__26686 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_15_in_rule__InternalAlt__Group__2__Impl6714 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__3__Impl_in_rule__InternalAlt__Group__36745 = new BitSet(new long[]{0x0000000000800000L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__4_in_rule__InternalAlt__Group__36748 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InternalAlt__AltTextAssignment_3_in_rule__InternalAlt__Group__3__Impl6775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InternalAlt__Group__4__Impl_in_rule__InternalAlt__Group__46805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rule__InternalAlt__Group__4__Impl6833 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__External__Group__0__Impl_in_rule__External__Group__06874 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__External__Group__1_in_rule__External__Group__06877 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__External__Group__0__Impl6905 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__External__Group__1__Impl_in_rule__External__Group__16936 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__External__Group__2_in_rule__External__Group__16939 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__External__NameAssignment_1_in_rule__External__Group__1__Impl6966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__External__Group__2__Impl_in_rule__External__Group__26996 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__External__Group__2__Impl7024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__Group__0__Impl_in_rule__ExternalAlt__Group__07061 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__Group__1_in_rule__ExternalAlt__Group__07064 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rule__ExternalAlt__Group__0__Impl7092 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__Group__1__Impl_in_rule__ExternalAlt__Group__17123 = new BitSet(new long[]{0x0000000F80000010L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__Group__2_in_rule__ExternalAlt__Group__17126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__NameAssignment_1_in_rule__ExternalAlt__Group__1__Impl7153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__Group__2__Impl_in_rule__ExternalAlt__Group__27183 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__Group__3_in_rule__ExternalAlt__Group__27186 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__AltTextAssignment_2_in_rule__ExternalAlt__Group__2__Impl7213 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__Group__3__Impl_in_rule__ExternalAlt__Group__37243 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_rule__ExternalAlt__Group__3__Impl7271 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Name__Group__0__Impl_in_rule__Name__Group__07310 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rule__Name__Group__1_in_rule__Name__Group__07313 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Name__Group__0__Impl7340 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Name__Group__1__Impl_in_rule__Name__Group__17369 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Name__Group__1__Impl7397 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleParagraphTypes_in_rule__Wiki__ElementsAssignment_17437 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__BlockQuote__ContentAlternatives_2_0_in_rule__BlockQuote__ContentAssignment_27468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleText_in_rule__Template__NameAssignment_17501 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleText_in_rule__Template__ContentAssignment_37532 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleText_in_rule__Template__ContentAssignment_4_17563 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__NameAlternatives_1_0_in_rule__UnOrderListItemLevel2__NameAssignment_17594 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__ListAlternatives_2_0_in_rule__UnOrderListItemLevel2__ListAssignment_27627 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__NameAlternatives_1_0_in_rule__UnOrderListItemLevel1__NameAssignment_17660 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__ListAlternatives_2_0_in_rule__UnOrderListItemLevel1__ListAssignment_27693 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__NameAlternatives_1_0_in_rule__OrderListItemLevel1__NameAssignment_17726 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__OrderListItemLevel1__ListAlternatives_2_0_in_rule__OrderListItemLevel1__ListAssignment_27759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__File__NameAssignment_17792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__File__CaptionAlternatives_5_0_in_rule__File__CaptionAssignment_57823 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Category__NameAssignment_17856 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleName_in_rule__Text__NameAssignment7887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleText_in_rule__Internal__NameAssignment_17918 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleText_in_rule__InternalAlt__NameAssignment_17949 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__InternalAlt__AltTextAlternatives_3_0_in_rule__InternalAlt__AltTextAssignment_37980 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_URL_in_rule__External__NameAssignment_18013 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_URL_in_rule__ExternalAlt__NameAssignment_18044 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__ExternalAlt__AltTextAlternatives_2_0_in_rule__ExternalAlt__AltTextAssignment_28075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyTextSequence_in_entryRuleAnyTextSequence1561 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAnyTextSequence1568 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AnyTextSequence__Group__0_in_ruleAnyTextSequence1594 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyText_in_entryRuleAnyText1621 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleAnyText1628 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AnyText__NameAssignment_in_ruleAnyText1654 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleName_in_entryRuleName1681 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleName1688 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Name__Group__0_in_ruleName1714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ViewType__Alternatives_in_ruleViewType1751 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__HorizontalAlign__Alternatives_in_ruleHorizontalAlign1787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrderListItemLevel1_in_rule__ParagraphTypes__Alternatives1822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnOrderListItemLevel1_in_rule__ParagraphTypes__Alternatives1839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleUnOrderListItemLevel2_in_rule__ParagraphTypes__Alternatives1856 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImage_in_rule__ParagraphTypes__Alternatives1873 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCategory_in_rule__ParagraphTypes__Alternatives1890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTemplate_in_rule__ParagraphTypes__Alternatives1907 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__ParagraphTypes__Alternatives1924 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ParagraphTypes__Alternatives1941 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBlockQuote_in_rule__ParagraphTypes__Alternatives1958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHeading1_in_rule__ParagraphTypes__Alternatives1975 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHeading2_in_rule__ParagraphTypes__Alternatives1992 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHeading3_in_rule__ParagraphTypes__Alternatives2009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHeading4_in_rule__ParagraphTypes__Alternatives2026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHeading5_in_rule__ParagraphTypes__Alternatives2043 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleBold_in_rule__AbstractFormattedInlineContent__Alternatives2075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleItalic_in_rule__AbstractFormattedInlineContent__Alternatives2092 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleItalicBold_in_rule__AbstractFormattedInlineContent__Alternatives2109 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleText_in_rule__AbstractUnformattedInlineContent__Alternatives2141 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHyperLink_in_rule__AbstractUnformattedInlineContent__Alternatives2158 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInternal_in_rule__HyperLink__Alternatives2190 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleInternalAlt_in_rule__HyperLink__Alternatives2207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExternal_in_rule__HyperLink__Alternatives2224 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleExternalAlt_in_rule__HyperLink__Alternatives2241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__InternalAlt__AltTextAlternatives_3_02273 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__InternalAlt__AltTextAlternatives_3_02290 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ExternalAlt__AltTextAlternatives_2_02322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__ExternalAlt__AltTextAlternatives_2_02339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractFormattedInlineContent_in_rule__AnyText__NameAlternatives_02371 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__AnyText__NameAlternatives_02388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_rule__ViewType__Alternatives2421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_13_in_rule__ViewType__Alternatives2442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_14_in_rule__ViewType__Alternatives2463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_15_in_rule__ViewType__Alternatives2484 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_16_in_rule__ViewType__Alternatives2505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rule__HorizontalAlign__Alternatives2541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_18_in_rule__HorizontalAlign__Alternatives2562 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_rule__HorizontalAlign__Alternatives2583 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rule__HorizontalAlign__Alternatives2604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WikiPage__Group__0__Impl_in_rule__WikiPage__Group__02637 = new BitSet(new long[]{0x00000FF874A00010L});
+    public static final BitSet FOLLOW_rule__WikiPage__Group__1_in_rule__WikiPage__Group__02640 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WikiPage__NameAssignment_0_in_rule__WikiPage__Group__0__Impl2667 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WikiPage__Group__1__Impl_in_rule__WikiPage__Group__12697 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__WikiPage__ElementsAssignment_1_in_rule__WikiPage__Group__1__Impl2724 = new BitSet(new long[]{0x00000FF874A00012L});
+    public static final BitSet FOLLOW_rule__BlockQuote__Group__0__Impl_in_rule__BlockQuote__Group__02759 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_rule__BlockQuote__Group__1_in_rule__BlockQuote__Group__02762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockQuote__Group__1__Impl_in_rule__BlockQuote__Group__12820 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__BlockQuote__Group__2_in_rule__BlockQuote__Group__12823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rule__BlockQuote__Group__1__Impl2851 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockQuote__Group__2__Impl_in_rule__BlockQuote__Group__22882 = new BitSet(new long[]{0x0000000000400000L});
+    public static final BitSet FOLLOW_rule__BlockQuote__Group__3_in_rule__BlockQuote__Group__22885 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockQuote__ContentAssignment_2_in_rule__BlockQuote__Group__2__Impl2912 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__BlockQuote__Group__3__Impl_in_rule__BlockQuote__Group__32942 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rule__BlockQuote__Group__3__Impl2970 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Template__Group__0__Impl_in_rule__Template__Group__03009 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Template__Group__1_in_rule__Template__Group__03012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rule__Template__Group__0__Impl3040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Template__Group__1__Impl_in_rule__Template__Group__13071 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__Template__Group__2_in_rule__Template__Group__13074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Template__ContentAssignment_1_in_rule__Template__Group__1__Impl3101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Template__Group__2__Impl_in_rule__Template__Group__23131 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_rule__Template__Group__3_in_rule__Template__Group__23134 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Template__Group_2__0_in_rule__Template__Group__2__Impl3163 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_rule__Template__Group_2__0_in_rule__Template__Group__2__Impl3175 = new BitSet(new long[]{0x0000000002000002L});
+    public static final BitSet FOLLOW_rule__Template__Group__3__Impl_in_rule__Template__Group__33208 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rule__Template__Group__3__Impl3236 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Template__Group_2__0__Impl_in_rule__Template__Group_2__03275 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Template__Group_2__1_in_rule__Template__Group_2__03278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Template__Group_2__0__Impl3306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Template__Group_2__1__Impl_in_rule__Template__Group_2__13337 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Template__ContentAssignment_2_1_in_rule__Template__Group_2__1__Impl3364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__0__Impl_in_rule__UnOrderListItemLevel2__Group__03398 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__1_in_rule__UnOrderListItemLevel2__Group__03401 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rule__UnOrderListItemLevel2__Group__0__Impl3429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__1__Impl_in_rule__UnOrderListItemLevel2__Group__13460 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__2_in_rule__UnOrderListItemLevel2__Group__13463 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__NameAssignment_1_in_rule__UnOrderListItemLevel2__Group__1__Impl3490 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__2__Impl_in_rule__UnOrderListItemLevel2__Group__23520 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__3_in_rule__UnOrderListItemLevel2__Group__23523 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__ListAssignment_2_in_rule__UnOrderListItemLevel2__Group__2__Impl3550 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel2__Group__3__Impl_in_rule__UnOrderListItemLevel2__Group__33580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__UnOrderListItemLevel2__Group__3__Impl3608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__0__Impl_in_rule__UnOrderListItemLevel1__Group__03647 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__1_in_rule__UnOrderListItemLevel1__Group__03650 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rule__UnOrderListItemLevel1__Group__0__Impl3678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__1__Impl_in_rule__UnOrderListItemLevel1__Group__13709 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__2_in_rule__UnOrderListItemLevel1__Group__13712 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__NameAssignment_1_in_rule__UnOrderListItemLevel1__Group__1__Impl3739 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__2__Impl_in_rule__UnOrderListItemLevel1__Group__23769 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__3_in_rule__UnOrderListItemLevel1__Group__23772 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__ListAssignment_2_in_rule__UnOrderListItemLevel1__Group__2__Impl3799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__UnOrderListItemLevel1__Group__3__Impl_in_rule__UnOrderListItemLevel1__Group__33829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__UnOrderListItemLevel1__Group__3__Impl3857 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__0__Impl_in_rule__OrderListItemLevel1__Group__03896 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__1_in_rule__OrderListItemLevel1__Group__03899 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_29_in_rule__OrderListItemLevel1__Group__0__Impl3927 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__1__Impl_in_rule__OrderListItemLevel1__Group__13958 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__2_in_rule__OrderListItemLevel1__Group__13961 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__NameAssignment_1_in_rule__OrderListItemLevel1__Group__1__Impl3988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__2__Impl_in_rule__OrderListItemLevel1__Group__24018 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__3_in_rule__OrderListItemLevel1__Group__24021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__ListAssignment_2_in_rule__OrderListItemLevel1__Group__2__Impl4048 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__OrderListItemLevel1__Group__3__Impl_in_rule__OrderListItemLevel1__Group__34078 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rule__OrderListItemLevel1__Group__3__Impl4106 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__0__Impl_in_rule__Image__Group__04145 = new BitSet(new long[]{0x0000000080000000L});
+    public static final BitSet FOLLOW_rule__Image__Group__1_in_rule__Image__Group__04148 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Image__Group__0__Impl4176 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__1__Impl_in_rule__Image__Group__14207 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Image__Group__2_in_rule__Image__Group__14210 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rule__Image__Group__1__Impl4238 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__2__Impl_in_rule__Image__Group__24269 = new BitSet(new long[]{0x0000000202000000L});
+    public static final BitSet FOLLOW_rule__Image__Group__3_in_rule__Image__Group__24272 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__NameAssignment_2_in_rule__Image__Group__2__Impl4299 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__3__Impl_in_rule__Image__Group__34329 = new BitSet(new long[]{0x0000000202000000L});
+    public static final BitSet FOLLOW_rule__Image__Group__4_in_rule__Image__Group__34332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_3__0_in_rule__Image__Group__3__Impl4359 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__4__Impl_in_rule__Image__Group__44390 = new BitSet(new long[]{0x0000000202000000L});
+    public static final BitSet FOLLOW_rule__Image__Group__5_in_rule__Image__Group__44393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_4__0_in_rule__Image__Group__4__Impl4420 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__5__Impl_in_rule__Image__Group__54451 = new BitSet(new long[]{0x0000000202000000L});
+    public static final BitSet FOLLOW_rule__Image__Group__6_in_rule__Image__Group__54454 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_5__0_in_rule__Image__Group__5__Impl4481 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__6__Impl_in_rule__Image__Group__64512 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__Image__Group__7_in_rule__Image__Group__64515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Image__Group__6__Impl4543 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__7__Impl_in_rule__Image__Group__74574 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Image__Group__8_in_rule__Image__Group__74577 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__CaptionAssignment_7_in_rule__Image__Group__7__Impl4604 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group__8__Impl_in_rule__Image__Group__84634 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Image__Group__8__Impl4662 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_3__0__Impl_in_rule__Image__Group_3__04711 = new BitSet(new long[]{0x000000000001F000L});
+    public static final BitSet FOLLOW_rule__Image__Group_3__1_in_rule__Image__Group_3__04714 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Image__Group_3__0__Impl4742 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_3__1__Impl_in_rule__Image__Group_3__14773 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__TypeAssignment_3_1_in_rule__Image__Group_3__1__Impl4800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_4__0__Impl_in_rule__Image__Group_4__04834 = new BitSet(new long[]{0x00000000001E0000L});
+    public static final BitSet FOLLOW_rule__Image__Group_4__1_in_rule__Image__Group_4__04837 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__Image__Group_4__0__Impl4865 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_4__1__Impl_in_rule__Image__Group_4__14896 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__HAlignAssignment_4_1_in_rule__Image__Group_4__1__Impl4923 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_5__0__Impl_in_rule__Image__Group_5__04957 = new BitSet(new long[]{0x0000080040000010L});
+    public static final BitSet FOLLOW_rule__Image__Group_5__1_in_rule__Image__Group_5__04960 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rule__Image__Group_5__0__Impl4988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__Group_5__1__Impl_in_rule__Image__Group_5__15019 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Image__AltTextAssignment_5_1_in_rule__Image__Group_5__1__Impl5046 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Category__Group__0__Impl_in_rule__Category__Group__05080 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_rule__Category__Group__1_in_rule__Category__Group__05083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Category__Group__0__Impl5111 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Category__Group__1__Impl_in_rule__Category__Group__15142 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Category__Group__2_in_rule__Category__Group__15145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rule__Category__Group__1__Impl5173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Category__Group__2__Impl_in_rule__Category__Group__25204 = new BitSet(new long[]{0x0000200100000000L});
+    public static final BitSet FOLLOW_rule__Category__Group__3_in_rule__Category__Group__25207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Category__NameAssignment_2_in_rule__Category__Group__2__Impl5234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Category__Group__3__Impl_in_rule__Category__Group__35264 = new BitSet(new long[]{0x0000200100000000L});
+    public static final BitSet FOLLOW_rule__Category__Group__4_in_rule__Category__Group__35267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Category__ValueAssignment_3_in_rule__Category__Group__3__Impl5294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Category__Group__4__Impl_in_rule__Category__Group__45325 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Category__Group__4__Impl5353 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading1__Group__0__Impl_in_rule__Heading1__Group__05394 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Heading1__Group__1_in_rule__Heading1__Group__05397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Heading1__Group__0__Impl5425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading1__Group__1__Impl_in_rule__Heading1__Group__15456 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_rule__Heading1__Group__2_in_rule__Heading1__Group__15459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading1__HeadingValue1Assignment_1_in_rule__Heading1__Group__1__Impl5486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading1__Group__2__Impl_in_rule__Heading1__Group__25516 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_rule__Heading1__Group__2__Impl5544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading2__Group__0__Impl_in_rule__Heading2__Group__05581 = new BitSet(new long[]{0x0000080040000010L});
+    public static final BitSet FOLLOW_rule__Heading2__Group__1_in_rule__Heading2__Group__05584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Heading2__Group__0__Impl5612 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading2__Group__1__Impl_in_rule__Heading2__Group__15643 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_rule__Heading2__Group__2_in_rule__Heading2__Group__15646 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading2__HeadingValue2Assignment_1_in_rule__Heading2__Group__1__Impl5673 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading2__Group__2__Impl_in_rule__Heading2__Group__25703 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_rule__Heading2__Group__2__Impl5731 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading3__Group__0__Impl_in_rule__Heading3__Group__05768 = new BitSet(new long[]{0x0000080040000010L});
+    public static final BitSet FOLLOW_rule__Heading3__Group__1_in_rule__Heading3__Group__05771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Heading3__Group__0__Impl5799 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading3__Group__1__Impl_in_rule__Heading3__Group__15830 = new BitSet(new long[]{0x0000002000000000L});
+    public static final BitSet FOLLOW_rule__Heading3__Group__2_in_rule__Heading3__Group__15833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading3__HeadingValue3Assignment_1_in_rule__Heading3__Group__1__Impl5860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading3__Group__2__Impl_in_rule__Heading3__Group__25890 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rule__Heading3__Group__2__Impl5918 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading4__Group__0__Impl_in_rule__Heading4__Group__05955 = new BitSet(new long[]{0x0000080040000010L});
+    public static final BitSet FOLLOW_rule__Heading4__Group__1_in_rule__Heading4__Group__05958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Heading4__Group__0__Impl5986 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading4__Group__1__Impl_in_rule__Heading4__Group__16017 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_rule__Heading4__Group__2_in_rule__Heading4__Group__16020 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading4__HeadingValue4Assignment_1_in_rule__Heading4__Group__1__Impl6047 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading4__Group__2__Impl_in_rule__Heading4__Group__26077 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_rule__Heading4__Group__2__Impl6105 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading5__Group__0__Impl_in_rule__Heading5__Group__06142 = new BitSet(new long[]{0x0000080040000010L});
+    public static final BitSet FOLLOW_rule__Heading5__Group__1_in_rule__Heading5__Group__06145 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Heading5__Group__0__Impl6173 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading5__Group__1__Impl_in_rule__Heading5__Group__16204 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_rule__Heading5__Group__2_in_rule__Heading5__Group__16207 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading5__HeadingValue5Assignment_1_in_rule__Heading5__Group__1__Impl6234 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Heading5__Group__2__Impl_in_rule__Heading5__Group__26264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_rule__Heading5__Group__2__Impl6292 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bold__Group__0__Impl_in_rule__Bold__Group__06329 = new BitSet(new long[]{0x0000080040000010L});
+    public static final BitSet FOLLOW_rule__Bold__Group__1_in_rule__Bold__Group__06332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Bold__Group__0__Impl6360 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bold__Group__1__Impl_in_rule__Bold__Group__16391 = new BitSet(new long[]{0x0000010000000000L});
+    public static final BitSet FOLLOW_rule__Bold__Group__2_in_rule__Bold__Group__16394 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bold__NameAssignment_1_in_rule__Bold__Group__1__Impl6421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Bold__Group__2__Impl_in_rule__Bold__Group__26451 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_rule__Bold__Group__2__Impl6479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Italic__Group__0__Impl_in_rule__Italic__Group__06516 = new BitSet(new long[]{0x0000080040000010L});
+    public static final BitSet FOLLOW_rule__Italic__Group__1_in_rule__Italic__Group__06519 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Italic__Group__0__Impl6547 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Italic__Group__1__Impl_in_rule__Italic__Group__16578 = new BitSet(new long[]{0x0000020000000000L});
+    public static final BitSet FOLLOW_rule__Italic__Group__2_in_rule__Italic__Group__16581 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Italic__NameAssignment_1_in_rule__Italic__Group__1__Impl6608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Italic__Group__2__Impl_in_rule__Italic__Group__26638 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_rule__Italic__Group__2__Impl6666 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ItalicBold__Group__0__Impl_in_rule__ItalicBold__Group__06703 = new BitSet(new long[]{0x0000080040000010L});
+    public static final BitSet FOLLOW_rule__ItalicBold__Group__1_in_rule__ItalicBold__Group__06706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__ItalicBold__Group__0__Impl6734 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ItalicBold__Group__1__Impl_in_rule__ItalicBold__Group__16765 = new BitSet(new long[]{0x0000040000000000L});
+    public static final BitSet FOLLOW_rule__ItalicBold__Group__2_in_rule__ItalicBold__Group__16768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ItalicBold__NameAssignment_1_in_rule__ItalicBold__Group__1__Impl6795 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ItalicBold__Group__2__Impl_in_rule__ItalicBold__Group__26825 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_rule__ItalicBold__Group__2__Impl6853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Internal__Group__0__Impl_in_rule__Internal__Group__06890 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Internal__Group__1_in_rule__Internal__Group__06893 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__Internal__Group__0__Impl6921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Internal__Group__1__Impl_in_rule__Internal__Group__16952 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__Internal__Group__2_in_rule__Internal__Group__16955 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Internal__NameAssignment_1_in_rule__Internal__Group__1__Impl6982 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Internal__Group__2__Impl_in_rule__Internal__Group__27012 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__Internal__Group__2__Impl7040 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__0__Impl_in_rule__InternalAlt__Group__07077 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__1_in_rule__InternalAlt__Group__07080 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_30_in_rule__InternalAlt__Group__0__Impl7108 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__1__Impl_in_rule__InternalAlt__Group__17139 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__2_in_rule__InternalAlt__Group__17142 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InternalAlt__NameAssignment_1_in_rule__InternalAlt__Group__1__Impl7169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__2__Impl_in_rule__InternalAlt__Group__27199 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__3_in_rule__InternalAlt__Group__27202 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rule__InternalAlt__Group__2__Impl7230 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__3__Impl_in_rule__InternalAlt__Group__37261 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__4_in_rule__InternalAlt__Group__37264 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InternalAlt__AltTextAssignment_3_in_rule__InternalAlt__Group__3__Impl7291 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InternalAlt__Group__4__Impl_in_rule__InternalAlt__Group__47321 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rule__InternalAlt__Group__4__Impl7349 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__External__Group__0__Impl_in_rule__External__Group__07390 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__External__Group__1_in_rule__External__Group__07393 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__External__Group__0__Impl7421 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__External__Group__1__Impl_in_rule__External__Group__17452 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_rule__External__Group__2_in_rule__External__Group__17455 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__External__NameAssignment_1_in_rule__External__Group__1__Impl7482 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__External__Group__2__Impl_in_rule__External__Group__27512 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__External__Group__2__Impl7540 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__Group__0__Impl_in_rule__ExternalAlt__Group__07577 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__Group__1_in_rule__ExternalAlt__Group__07580 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_43_in_rule__ExternalAlt__Group__0__Impl7608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__Group__1__Impl_in_rule__ExternalAlt__Group__17639 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__Group__2_in_rule__ExternalAlt__Group__17642 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__NameAssignment_1_in_rule__ExternalAlt__Group__1__Impl7669 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__Group__2__Impl_in_rule__ExternalAlt__Group__27699 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__Group__3_in_rule__ExternalAlt__Group__27702 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__AltTextAssignment_2_in_rule__ExternalAlt__Group__2__Impl7729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__Group__3__Impl_in_rule__ExternalAlt__Group__37759 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_44_in_rule__ExternalAlt__Group__3__Impl7787 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AnyTextSequence__Group__0__Impl_in_rule__AnyTextSequence__Group__07826 = new BitSet(new long[]{0x00000F0040000010L});
+    public static final BitSet FOLLOW_rule__AnyTextSequence__Group__1_in_rule__AnyTextSequence__Group__07829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AnyTextSequence__Group__1__Impl_in_rule__AnyTextSequence__Group__17887 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AnyTextSequence__ContentAssignment_1_in_rule__AnyTextSequence__Group__1__Impl7914 = new BitSet(new long[]{0x00000F0040000012L});
+    public static final BitSet FOLLOW_rule__Name__Group__0__Impl_in_rule__Name__Group__07949 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rule__Name__Group__1_in_rule__Name__Group__07952 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Name__Group__0__Impl7979 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Name__Group__1__Impl_in_rule__Name__Group__18008 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Name__Group__1__Impl8036 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleHeading1_in_rule__WikiPage__NameAssignment_08076 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleParagraphTypes_in_rule__WikiPage__ElementsAssignment_18107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyTextSequence_in_rule__BlockQuote__ContentAssignment_28138 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleText_in_rule__Template__ContentAssignment_18169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleText_in_rule__Template__ContentAssignment_2_18200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyText_in_rule__UnOrderListItemLevel2__NameAssignment_18231 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyTextSequence_in_rule__UnOrderListItemLevel2__ListAssignment_28262 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyText_in_rule__UnOrderListItemLevel1__NameAssignment_18293 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyTextSequence_in_rule__UnOrderListItemLevel1__ListAssignment_28324 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyText_in_rule__OrderListItemLevel1__NameAssignment_18355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyTextSequence_in_rule__OrderListItemLevel1__ListAssignment_28386 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleText_in_rule__Image__NameAssignment_28417 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleViewType_in_rule__Image__TypeAssignment_3_18448 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHorizontalAlign_in_rule__Image__HAlignAssignment_4_18479 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Image__AltTextAssignment_5_18510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyTextSequence_in_rule__Image__CaptionAssignment_78541 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleText_in_rule__Category__NameAssignment_28572 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_rule__Category__ValueAssignment_38608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleText_in_rule__Heading1__HeadingValue1Assignment_18647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading2__HeadingValue2Assignment_18678 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading3__HeadingValue3Assignment_18709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading4__HeadingValue4Assignment_18740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Heading5__HeadingValue5Assignment_18771 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Bold__NameAssignment_18802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__Italic__NameAssignment_18833 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAbstractUnformattedInlineContent_in_rule__ItalicBold__NameAssignment_18864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleName_in_rule__Text__NameAssignment8895 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleText_in_rule__Internal__NameAssignment_18926 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleText_in_rule__InternalAlt__NameAssignment_18957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__InternalAlt__AltTextAlternatives_3_0_in_rule__InternalAlt__AltTextAssignment_38988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_URL_in_rule__External__NameAssignment_19021 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_URL_in_rule__ExternalAlt__NameAssignment_19052 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__ExternalAlt__AltTextAlternatives_2_0_in_rule__ExternalAlt__AltTextAssignment_29083 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleAnyText_in_rule__AnyTextSequence__ContentAssignment_19116 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__AnyText__NameAlternatives_0_in_rule__AnyText__NameAssignment9147 = new BitSet(new long[]{0x0000000000000002L});
 
 }

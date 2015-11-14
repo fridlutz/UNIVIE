@@ -2,8 +2,8 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
 import java.util.Collection;
@@ -15,23 +15,25 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Template</b></em>'.
+ * An implementation of the model object '<em><b>Any Text Sequence</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.TemplateImpl#getContent <em>Content</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextSequenceImpl#getContent <em>Content</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TemplateImpl extends ParagraphTypesImpl implements Template
+public class AnyTextSequenceImpl extends MinimalEObjectImpl.Container implements AnyTextSequence
 {
   /**
    * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference list.
@@ -41,14 +43,14 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
    * @generated
    * @ordered
    */
-  protected EList<Text> content;
+  protected EList<AnyText> content;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TemplateImpl()
+  protected AnyTextSequenceImpl()
   {
     super();
   }
@@ -61,7 +63,7 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   @Override
   protected EClass eStaticClass()
   {
-    return WikiMLPackage.Literals.TEMPLATE;
+    return WikiMLPackage.Literals.ANY_TEXT_SEQUENCE;
   }
 
   /**
@@ -69,11 +71,11 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<Text> getContent()
+  public EList<AnyText> getContent()
   {
     if (content == null)
     {
-      content = new EObjectContainmentEList<Text>(Text.class, this, WikiMLPackage.TEMPLATE__CONTENT);
+      content = new EObjectContainmentEList<AnyText>(AnyText.class, this, WikiMLPackage.ANY_TEXT_SEQUENCE__CONTENT);
     }
     return content;
   }
@@ -88,7 +90,7 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__CONTENT:
+      case WikiMLPackage.ANY_TEXT_SEQUENCE__CONTENT:
         return ((InternalEList<?>)getContent()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -104,7 +106,7 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__CONTENT:
+      case WikiMLPackage.ANY_TEXT_SEQUENCE__CONTENT:
         return getContent();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -121,9 +123,9 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__CONTENT:
+      case WikiMLPackage.ANY_TEXT_SEQUENCE__CONTENT:
         getContent().clear();
-        getContent().addAll((Collection<? extends Text>)newValue);
+        getContent().addAll((Collection<? extends AnyText>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -139,7 +141,7 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__CONTENT:
+      case WikiMLPackage.ANY_TEXT_SEQUENCE__CONTENT:
         getContent().clear();
         return;
     }
@@ -156,10 +158,10 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__CONTENT:
+      case WikiMLPackage.ANY_TEXT_SEQUENCE__CONTENT:
         return content != null && !content.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //TemplateImpl
+} //AnyTextSequenceImpl

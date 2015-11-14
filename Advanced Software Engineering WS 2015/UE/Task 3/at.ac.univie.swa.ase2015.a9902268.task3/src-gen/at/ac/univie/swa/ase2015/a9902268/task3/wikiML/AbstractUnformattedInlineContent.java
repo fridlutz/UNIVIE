@@ -13,6 +13,6 @@ package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
  * @model
  * @generated
  */
-public interface AbstractUnformattedInlineContent extends ParagraphTypes, Heading2, Heading3, Heading4, Heading5, Bold, Italic, ItalicBold
+public interface AbstractUnformattedInlineContent extends ParagraphTypes
 {
 } // AbstractUnformattedInlineContent

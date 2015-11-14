@@ -4,6 +4,7 @@ package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -57,23 +58,41 @@ public interface WikiMLPackage extends EPackage
   WikiMLPackage eINSTANCE = at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl.init();
 
   /**
-   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikiImpl <em>wiki</em>}' class.
+   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiPageImpl <em>Wiki Page</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikiImpl
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getwiki()
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiPageImpl
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getWikiPage()
    * @generated
    */
-  int WIKI = 0;
+  int WIKI_PAGE = 0;
 
   /**
-   * The number of structural features of the '<em>wiki</em>' class.
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int WIKI_FEATURE_COUNT = 0;
+  int WIKI_PAGE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WIKI_PAGE__ELEMENTS = 1;
+
+  /**
+   * The number of structural features of the '<em>Wiki Page</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WIKI_PAGE_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.ParagraphTypesImpl <em>Paragraph Types</em>}' class.
@@ -105,7 +124,7 @@ public interface WikiMLPackage extends EPackage
   int BLOCK_QUOTE = 2;
 
   /**
-   * The feature id for the '<em><b>Content</b></em>' containment reference list.
+   * The feature id for the '<em><b>Content</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -133,22 +152,13 @@ public interface WikiMLPackage extends EPackage
   int TEMPLATE = 3;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEMPLATE__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Content</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEMPLATE__CONTENT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
+  int TEMPLATE__CONTENT = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Template</em>' class.
@@ -157,7 +167,7 @@ public interface WikiMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEMPLATE_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 2;
+  int TEMPLATE_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.UnOrderListItemLevel2Impl <em>Un Order List Item Level2</em>}' class.
@@ -179,7 +189,7 @@ public interface WikiMLPackage extends EPackage
   int UN_ORDER_LIST_ITEM_LEVEL2__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>List</b></em>' containment reference list.
+   * The feature id for the '<em><b>List</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -216,7 +226,7 @@ public interface WikiMLPackage extends EPackage
   int UN_ORDER_LIST_ITEM_LEVEL1__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>List</b></em>' containment reference list.
+   * The feature id for the '<em><b>List</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -253,7 +263,7 @@ public interface WikiMLPackage extends EPackage
   int ORDER_LIST_ITEM_LEVEL1__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>List</b></em>' containment reference list.
+   * The feature id for the '<em><b>List</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -271,14 +281,14 @@ public interface WikiMLPackage extends EPackage
   int ORDER_LIST_ITEM_LEVEL1_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 2;
 
   /**
-   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.FileImpl <em>File</em>}' class.
+   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.ImageImpl <em>Image</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.FileImpl
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getFile()
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.ImageImpl
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getImage()
    * @generated
    */
-  int FILE = 7;
+  int IMAGE = 7;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -287,25 +297,52 @@ public interface WikiMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FILE__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+  int IMAGE__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Caption</b></em>' containment reference list.
+   * The feature id for the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FILE__CAPTION = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
+  int IMAGE__TYPE = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
-   * The number of structural features of the '<em>File</em>' class.
+   * The feature id for the '<em><b>HAlign</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FILE_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 2;
+  int IMAGE__HALIGN = PARAGRAPH_TYPES_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Alt Text</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE__ALT_TEXT = PARAGRAPH_TYPES_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Caption</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE__CAPTION = PARAGRAPH_TYPES_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Image</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.CategoryImpl <em>Category</em>}' class.
@@ -327,13 +364,22 @@ public interface WikiMLPackage extends EPackage
   int CATEGORY__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CATEGORY__VALUE = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Category</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CATEGORY_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
+  int CATEGORY_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading1Impl <em>Heading1</em>}' class.
@@ -346,13 +392,13 @@ public interface WikiMLPackage extends EPackage
   int HEADING1 = 9;
 
   /**
-   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+   * The feature id for the '<em><b>Heading Value1</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HEADING1__ELEMENTS = WIKI_FEATURE_COUNT + 0;
+  int HEADING1__HEADING_VALUE1 = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Heading1</em>' class.
@@ -361,7 +407,7 @@ public interface WikiMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int HEADING1_FEATURE_COUNT = WIKI_FEATURE_COUNT + 1;
+  int HEADING1_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading2Impl <em>Heading2</em>}' class.
@@ -374,13 +420,22 @@ public interface WikiMLPackage extends EPackage
   int HEADING2 = 10;
 
   /**
+   * The feature id for the '<em><b>Heading Value2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HEADING2__HEADING_VALUE2 = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Heading2</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HEADING2_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+  int HEADING2_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading3Impl <em>Heading3</em>}' class.
@@ -393,13 +448,22 @@ public interface WikiMLPackage extends EPackage
   int HEADING3 = 11;
 
   /**
+   * The feature id for the '<em><b>Heading Value3</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HEADING3__HEADING_VALUE3 = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Heading3</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HEADING3_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+  int HEADING3_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading4Impl <em>Heading4</em>}' class.
@@ -412,13 +476,22 @@ public interface WikiMLPackage extends EPackage
   int HEADING4 = 12;
 
   /**
+   * The feature id for the '<em><b>Heading Value4</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HEADING4__HEADING_VALUE4 = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Heading4</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HEADING4_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+  int HEADING4_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading5Impl <em>Heading5</em>}' class.
@@ -431,13 +504,22 @@ public interface WikiMLPackage extends EPackage
   int HEADING5 = 13;
 
   /**
+   * The feature id for the '<em><b>Heading Value5</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int HEADING5__HEADING_VALUE5 = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Heading5</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int HEADING5_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+  int HEADING5_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AbstractFormattedInlineContentImpl <em>Abstract Formatted Inline Content</em>}' class.
@@ -450,13 +532,22 @@ public interface WikiMLPackage extends EPackage
   int ABSTRACT_FORMATTED_INLINE_CONTENT = 14;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ABSTRACT_FORMATTED_INLINE_CONTENT__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Abstract Formatted Inline Content</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ABSTRACT_FORMATTED_INLINE_CONTENT_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+  int ABSTRACT_FORMATTED_INLINE_CONTENT_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.BoldImpl <em>Bold</em>}' class.
@@ -467,6 +558,15 @@ public interface WikiMLPackage extends EPackage
    * @generated
    */
   int BOLD = 15;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BOLD__NAME = ABSTRACT_FORMATTED_INLINE_CONTENT__NAME;
 
   /**
    * The number of structural features of the '<em>Bold</em>' class.
@@ -488,6 +588,15 @@ public interface WikiMLPackage extends EPackage
   int ITALIC = 16;
 
   /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITALIC__NAME = ABSTRACT_FORMATTED_INLINE_CONTENT__NAME;
+
+  /**
    * The number of structural features of the '<em>Italic</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -505,6 +614,15 @@ public interface WikiMLPackage extends EPackage
    * @generated
    */
   int ITALIC_BOLD = 17;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ITALIC_BOLD__NAME = ABSTRACT_FORMATTED_INLINE_CONTENT__NAME;
 
   /**
    * The number of structural features of the '<em>Italic Bold</em>' class.
@@ -545,22 +663,13 @@ public interface WikiMLPackage extends EPackage
   int TEXT = 19;
 
   /**
-   * The feature id for the '<em><b>Elements</b></em>' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEXT__ELEMENTS = HEADING1__ELEMENTS;
-
-  /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEXT__NAME = HEADING1_FEATURE_COUNT + 0;
+  int TEXT__NAME = ABSTRACT_UNFORMATTED_INLINE_CONTENT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Text</em>' class.
@@ -569,7 +678,7 @@ public interface WikiMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEXT_FEATURE_COUNT = HEADING1_FEATURE_COUNT + 1;
+  int TEXT_FEATURE_COUNT = ABSTRACT_UNFORMATTED_INLINE_CONTENT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.HyperLinkImpl <em>Hyper Link</em>}' class.
@@ -720,16 +829,114 @@ public interface WikiMLPackage extends EPackage
    */
   int EXTERNAL_ALT_FEATURE_COUNT = HYPER_LINK_FEATURE_COUNT + 2;
 
-
   /**
-   * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.wiki <em>wiki</em>}'.
+   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextSequenceImpl <em>Any Text Sequence</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>wiki</em>'.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.wiki
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextSequenceImpl
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getAnyTextSequence()
    * @generated
    */
-  EClass getwiki();
+  int ANY_TEXT_SEQUENCE = 25;
+
+  /**
+   * The feature id for the '<em><b>Content</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANY_TEXT_SEQUENCE__CONTENT = 0;
+
+  /**
+   * The number of structural features of the '<em>Any Text Sequence</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANY_TEXT_SEQUENCE_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl <em>Any Text</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getAnyText()
+   * @generated
+   */
+  int ANY_TEXT = 26;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANY_TEXT__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Any Text</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANY_TEXT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType <em>View Type</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getViewType()
+   * @generated
+   */
+  int VIEW_TYPE = 27;
+
+  /**
+   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HorizontalAlign <em>Horizontal Align</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HorizontalAlign
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getHorizontalAlign()
+   * @generated
+   */
+  int HORIZONTAL_ALIGN = 28;
+
+
+  /**
+   * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage <em>Wiki Page</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Wiki Page</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage
+   * @generated
+   */
+  EClass getWikiPage();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage#getName()
+   * @see #getWikiPage()
+   * @generated
+   */
+  EReference getWikiPage_Name();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage#getElements <em>Elements</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Elements</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage#getElements()
+   * @see #getWikiPage()
+   * @generated
+   */
+  EReference getWikiPage_Elements();
 
   /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes <em>Paragraph Types</em>}'.
@@ -752,10 +959,10 @@ public interface WikiMLPackage extends EPackage
   EClass getBlockQuote();
 
   /**
-   * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote#getContent <em>Content</em>}'.
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote#getContent <em>Content</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Content</em>'.
+   * @return the meta object for the containment reference '<em>Content</em>'.
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote#getContent()
    * @see #getBlockQuote()
    * @generated
@@ -771,17 +978,6 @@ public interface WikiMLPackage extends EPackage
    * @generated
    */
   EClass getTemplate();
-
-  /**
-   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template#getName()
-   * @see #getTemplate()
-   * @generated
-   */
-  EReference getTemplate_Name();
 
   /**
    * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template#getContent <em>Content</em>}'.
@@ -816,10 +1012,10 @@ public interface WikiMLPackage extends EPackage
   EReference getUnOrderListItemLevel2_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2#getList <em>List</em>}'.
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2#getList <em>List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>List</em>'.
+   * @return the meta object for the containment reference '<em>List</em>'.
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2#getList()
    * @see #getUnOrderListItemLevel2()
    * @generated
@@ -848,10 +1044,10 @@ public interface WikiMLPackage extends EPackage
   EReference getUnOrderListItemLevel1_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1#getList <em>List</em>}'.
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1#getList <em>List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>List</em>'.
+   * @return the meta object for the containment reference '<em>List</em>'.
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1#getList()
    * @see #getUnOrderListItemLevel1()
    * @generated
@@ -880,10 +1076,10 @@ public interface WikiMLPackage extends EPackage
   EReference getOrderListItemLevel1_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1#getList <em>List</em>}'.
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1#getList <em>List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>List</em>'.
+   * @return the meta object for the containment reference '<em>List</em>'.
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1#getList()
    * @see #getOrderListItemLevel1()
    * @generated
@@ -891,36 +1087,69 @@ public interface WikiMLPackage extends EPackage
   EReference getOrderListItemLevel1_List();
 
   /**
-   * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File <em>File</em>}'.
+   * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image <em>Image</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>File</em>'.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File
+   * @return the meta object for class '<em>Image</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image
    * @generated
    */
-  EClass getFile();
+  EClass getImage();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File#getName <em>Name</em>}'.
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>Name</em>'.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File#getName()
-   * @see #getFile()
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getName()
+   * @see #getImage()
    * @generated
    */
-  EReference getFile_Name();
+  EReference getImage_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File#getCaption <em>Caption</em>}'.
+   * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getType <em>Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Caption</em>'.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File#getCaption()
-   * @see #getFile()
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getType()
+   * @see #getImage()
    * @generated
    */
-  EReference getFile_Caption();
+  EAttribute getImage_Type();
+
+  /**
+   * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getHAlign <em>HAlign</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>HAlign</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getHAlign()
+   * @see #getImage()
+   * @generated
+   */
+  EAttribute getImage_HAlign();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getAltText <em>Alt Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Alt Text</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getAltText()
+   * @see #getImage()
+   * @generated
+   */
+  EReference getImage_AltText();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getCaption <em>Caption</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Caption</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image#getCaption()
+   * @see #getImage()
+   * @generated
+   */
+  EReference getImage_Caption();
 
   /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category <em>Category</em>}'.
@@ -944,6 +1173,17 @@ public interface WikiMLPackage extends EPackage
   EReference getCategory_Name();
 
   /**
+   * Returns the meta object for the attribute '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category#getValue()
+   * @see #getCategory()
+   * @generated
+   */
+  EAttribute getCategory_Value();
+
+  /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1 <em>Heading1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -954,15 +1194,15 @@ public interface WikiMLPackage extends EPackage
   EClass getHeading1();
 
   /**
-   * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1#getElements <em>Elements</em>}'.
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1#getHeadingValue1 <em>Heading Value1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Elements</em>'.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1#getElements()
+   * @return the meta object for the containment reference '<em>Heading Value1</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1#getHeadingValue1()
    * @see #getHeading1()
    * @generated
    */
-  EReference getHeading1_Elements();
+  EReference getHeading1_HeadingValue1();
 
   /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading2 <em>Heading2</em>}'.
@@ -975,6 +1215,17 @@ public interface WikiMLPackage extends EPackage
   EClass getHeading2();
 
   /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading2#getHeadingValue2 <em>Heading Value2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Heading Value2</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading2#getHeadingValue2()
+   * @see #getHeading2()
+   * @generated
+   */
+  EReference getHeading2_HeadingValue2();
+
+  /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading3 <em>Heading3</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -983,6 +1234,17 @@ public interface WikiMLPackage extends EPackage
    * @generated
    */
   EClass getHeading3();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading3#getHeadingValue3 <em>Heading Value3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Heading Value3</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading3#getHeadingValue3()
+   * @see #getHeading3()
+   * @generated
+   */
+  EReference getHeading3_HeadingValue3();
 
   /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading4 <em>Heading4</em>}'.
@@ -995,6 +1257,17 @@ public interface WikiMLPackage extends EPackage
   EClass getHeading4();
 
   /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading4#getHeadingValue4 <em>Heading Value4</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Heading Value4</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading4#getHeadingValue4()
+   * @see #getHeading4()
+   * @generated
+   */
+  EReference getHeading4_HeadingValue4();
+
+  /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading5 <em>Heading5</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1005,6 +1278,17 @@ public interface WikiMLPackage extends EPackage
   EClass getHeading5();
 
   /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading5#getHeadingValue5 <em>Heading Value5</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Heading Value5</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading5#getHeadingValue5()
+   * @see #getHeading5()
+   * @generated
+   */
+  EReference getHeading5_HeadingValue5();
+
+  /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent <em>Abstract Formatted Inline Content</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1013,6 +1297,17 @@ public interface WikiMLPackage extends EPackage
    * @generated
    */
   EClass getAbstractFormattedInlineContent();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent#getName()
+   * @see #getAbstractFormattedInlineContent()
+   * @generated
+   */
+  EReference getAbstractFormattedInlineContent_Name();
 
   /**
    * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Bold <em>Bold</em>}'.
@@ -1192,6 +1487,68 @@ public interface WikiMLPackage extends EPackage
   EReference getExternalAlt_AltText();
 
   /**
+   * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence <em>Any Text Sequence</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Any Text Sequence</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence
+   * @generated
+   */
+  EClass getAnyTextSequence();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence#getContent <em>Content</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Content</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence#getContent()
+   * @see #getAnyTextSequence()
+   * @generated
+   */
+  EReference getAnyTextSequence_Content();
+
+  /**
+   * Returns the meta object for class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText <em>Any Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Any Text</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText
+   * @generated
+   */
+  EClass getAnyText();
+
+  /**
+   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Name</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText#getName()
+   * @see #getAnyText()
+   * @generated
+   */
+  EReference getAnyText_Name();
+
+  /**
+   * Returns the meta object for enum '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType <em>View Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>View Type</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType
+   * @generated
+   */
+  EEnum getViewType();
+
+  /**
+   * Returns the meta object for enum '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HorizontalAlign <em>Horizontal Align</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Horizontal Align</em>'.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HorizontalAlign
+   * @generated
+   */
+  EEnum getHorizontalAlign();
+
+  /**
    * Returns the factory that creates the instances of the model.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1215,14 +1572,30 @@ public interface WikiMLPackage extends EPackage
   interface Literals
   {
     /**
-     * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikiImpl <em>wiki</em>}' class.
+     * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiPageImpl <em>Wiki Page</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.wikiImpl
-     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getwiki()
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiPageImpl
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getWikiPage()
      * @generated
      */
-    EClass WIKI = eINSTANCE.getwiki();
+    EClass WIKI_PAGE = eINSTANCE.getWikiPage();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference WIKI_PAGE__NAME = eINSTANCE.getWikiPage_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference WIKI_PAGE__ELEMENTS = eINSTANCE.getWikiPage_Elements();
 
     /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.ParagraphTypesImpl <em>Paragraph Types</em>}' class.
@@ -1245,7 +1618,7 @@ public interface WikiMLPackage extends EPackage
     EClass BLOCK_QUOTE = eINSTANCE.getBlockQuote();
 
     /**
-     * The meta object literal for the '<em><b>Content</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1261,14 +1634,6 @@ public interface WikiMLPackage extends EPackage
      * @generated
      */
     EClass TEMPLATE = eINSTANCE.getTemplate();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference TEMPLATE__NAME = eINSTANCE.getTemplate_Name();
 
     /**
      * The meta object literal for the '<em><b>Content</b></em>' containment reference list feature.
@@ -1297,7 +1662,7 @@ public interface WikiMLPackage extends EPackage
     EReference UN_ORDER_LIST_ITEM_LEVEL2__NAME = eINSTANCE.getUnOrderListItemLevel2_Name();
 
     /**
-     * The meta object literal for the '<em><b>List</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>List</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1323,7 +1688,7 @@ public interface WikiMLPackage extends EPackage
     EReference UN_ORDER_LIST_ITEM_LEVEL1__NAME = eINSTANCE.getUnOrderListItemLevel1_Name();
 
     /**
-     * The meta object literal for the '<em><b>List</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>List</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1349,7 +1714,7 @@ public interface WikiMLPackage extends EPackage
     EReference ORDER_LIST_ITEM_LEVEL1__NAME = eINSTANCE.getOrderListItemLevel1_Name();
 
     /**
-     * The meta object literal for the '<em><b>List</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>List</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
@@ -1357,14 +1722,14 @@ public interface WikiMLPackage extends EPackage
     EReference ORDER_LIST_ITEM_LEVEL1__LIST = eINSTANCE.getOrderListItemLevel1_List();
 
     /**
-     * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.FileImpl <em>File</em>}' class.
+     * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.ImageImpl <em>Image</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.FileImpl
-     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getFile()
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.ImageImpl
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getImage()
      * @generated
      */
-    EClass FILE = eINSTANCE.getFile();
+    EClass IMAGE = eINSTANCE.getImage();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
@@ -1372,15 +1737,39 @@ public interface WikiMLPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FILE__NAME = eINSTANCE.getFile_Name();
+    EReference IMAGE__NAME = eINSTANCE.getImage_Name();
 
     /**
-     * The meta object literal for the '<em><b>Caption</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference FILE__CAPTION = eINSTANCE.getFile_Caption();
+    EAttribute IMAGE__TYPE = eINSTANCE.getImage_Type();
+
+    /**
+     * The meta object literal for the '<em><b>HAlign</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE__HALIGN = eINSTANCE.getImage_HAlign();
+
+    /**
+     * The meta object literal for the '<em><b>Alt Text</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IMAGE__ALT_TEXT = eINSTANCE.getImage_AltText();
+
+    /**
+     * The meta object literal for the '<em><b>Caption</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IMAGE__CAPTION = eINSTANCE.getImage_Caption();
 
     /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.CategoryImpl <em>Category</em>}' class.
@@ -1401,6 +1790,14 @@ public interface WikiMLPackage extends EPackage
     EReference CATEGORY__NAME = eINSTANCE.getCategory_Name();
 
     /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CATEGORY__VALUE = eINSTANCE.getCategory_Value();
+
+    /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading1Impl <em>Heading1</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1411,12 +1808,12 @@ public interface WikiMLPackage extends EPackage
     EClass HEADING1 = eINSTANCE.getHeading1();
 
     /**
-     * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Heading Value1</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference HEADING1__ELEMENTS = eINSTANCE.getHeading1_Elements();
+    EReference HEADING1__HEADING_VALUE1 = eINSTANCE.getHeading1_HeadingValue1();
 
     /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading2Impl <em>Heading2</em>}' class.
@@ -1429,6 +1826,14 @@ public interface WikiMLPackage extends EPackage
     EClass HEADING2 = eINSTANCE.getHeading2();
 
     /**
+     * The meta object literal for the '<em><b>Heading Value2</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HEADING2__HEADING_VALUE2 = eINSTANCE.getHeading2_HeadingValue2();
+
+    /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading3Impl <em>Heading3</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1437,6 +1842,14 @@ public interface WikiMLPackage extends EPackage
      * @generated
      */
     EClass HEADING3 = eINSTANCE.getHeading3();
+
+    /**
+     * The meta object literal for the '<em><b>Heading Value3</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HEADING3__HEADING_VALUE3 = eINSTANCE.getHeading3_HeadingValue3();
 
     /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading4Impl <em>Heading4</em>}' class.
@@ -1449,6 +1862,14 @@ public interface WikiMLPackage extends EPackage
     EClass HEADING4 = eINSTANCE.getHeading4();
 
     /**
+     * The meta object literal for the '<em><b>Heading Value4</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HEADING4__HEADING_VALUE4 = eINSTANCE.getHeading4_HeadingValue4();
+
+    /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading5Impl <em>Heading5</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1459,6 +1880,14 @@ public interface WikiMLPackage extends EPackage
     EClass HEADING5 = eINSTANCE.getHeading5();
 
     /**
+     * The meta object literal for the '<em><b>Heading Value5</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference HEADING5__HEADING_VALUE5 = eINSTANCE.getHeading5_HeadingValue5();
+
+    /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AbstractFormattedInlineContentImpl <em>Abstract Formatted Inline Content</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1467,6 +1896,14 @@ public interface WikiMLPackage extends EPackage
      * @generated
      */
     EClass ABSTRACT_FORMATTED_INLINE_CONTENT = eINSTANCE.getAbstractFormattedInlineContent();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ABSTRACT_FORMATTED_INLINE_CONTENT__NAME = eINSTANCE.getAbstractFormattedInlineContent_Name();
 
     /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.BoldImpl <em>Bold</em>}' class.
@@ -1623,6 +2060,62 @@ public interface WikiMLPackage extends EPackage
      * @generated
      */
     EReference EXTERNAL_ALT__ALT_TEXT = eINSTANCE.getExternalAlt_AltText();
+
+    /**
+     * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextSequenceImpl <em>Any Text Sequence</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextSequenceImpl
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getAnyTextSequence()
+     * @generated
+     */
+    EClass ANY_TEXT_SEQUENCE = eINSTANCE.getAnyTextSequence();
+
+    /**
+     * The meta object literal for the '<em><b>Content</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANY_TEXT_SEQUENCE__CONTENT = eINSTANCE.getAnyTextSequence_Content();
+
+    /**
+     * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl <em>Any Text</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getAnyText()
+     * @generated
+     */
+    EClass ANY_TEXT = eINSTANCE.getAnyText();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ANY_TEXT__NAME = eINSTANCE.getAnyText_Name();
+
+    /**
+     * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType <em>View Type</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getViewType()
+     * @generated
+     */
+    EEnum VIEW_TYPE = eINSTANCE.getViewType();
+
+    /**
+     * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HorizontalAlign <em>Horizontal Align</em>}' enum.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HorizontalAlign
+     * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getHorizontalAlign()
+     * @generated
+     */
+    EEnum HORIZONTAL_ALIGN = eINSTANCE.getHorizontalAlign();
 
   }
 

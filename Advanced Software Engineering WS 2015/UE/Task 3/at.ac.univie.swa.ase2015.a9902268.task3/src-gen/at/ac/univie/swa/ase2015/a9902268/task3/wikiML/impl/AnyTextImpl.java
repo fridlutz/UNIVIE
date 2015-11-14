@@ -2,8 +2,8 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractUnformattedInlineContent;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading3;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,38 +13,39 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Heading3</b></em>'.
+ * An implementation of the model object '<em><b>Any Text</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading3Impl#getHeadingValue3 <em>Heading Value3</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Heading3Impl extends ParagraphTypesImpl implements Heading3
+public class AnyTextImpl extends MinimalEObjectImpl.Container implements AnyText
 {
   /**
-   * The cached value of the '{@link #getHeadingValue3() <em>Heading Value3</em>}' containment reference.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getHeadingValue3()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected AbstractUnformattedInlineContent headingValue3;
+  protected ParagraphTypes name;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected Heading3Impl()
+  protected AnyTextImpl()
   {
     super();
   }
@@ -57,7 +58,7 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
   @Override
   protected EClass eStaticClass()
   {
-    return WikiMLPackage.Literals.HEADING3;
+    return WikiMLPackage.Literals.ANY_TEXT;
   }
 
   /**
@@ -65,9 +66,9 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
    * <!-- end-user-doc -->
    * @generated
    */
-  public AbstractUnformattedInlineContent getHeadingValue3()
+  public ParagraphTypes getName()
   {
-    return headingValue3;
+    return name;
   }
 
   /**
@@ -75,13 +76,13 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetHeadingValue3(AbstractUnformattedInlineContent newHeadingValue3, NotificationChain msgs)
+  public NotificationChain basicSetName(ParagraphTypes newName, NotificationChain msgs)
   {
-    AbstractUnformattedInlineContent oldHeadingValue3 = headingValue3;
-    headingValue3 = newHeadingValue3;
+    ParagraphTypes oldName = name;
+    name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.HEADING3__HEADING_VALUE3, oldHeadingValue3, newHeadingValue3);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.ANY_TEXT__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +93,20 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setHeadingValue3(AbstractUnformattedInlineContent newHeadingValue3)
+  public void setName(ParagraphTypes newName)
   {
-    if (newHeadingValue3 != headingValue3)
+    if (newName != name)
     {
       NotificationChain msgs = null;
-      if (headingValue3 != null)
-        msgs = ((InternalEObject)headingValue3).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.HEADING3__HEADING_VALUE3, null, msgs);
-      if (newHeadingValue3 != null)
-        msgs = ((InternalEObject)newHeadingValue3).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.HEADING3__HEADING_VALUE3, null, msgs);
-      msgs = basicSetHeadingValue3(newHeadingValue3, msgs);
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.ANY_TEXT__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.ANY_TEXT__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.HEADING3__HEADING_VALUE3, newHeadingValue3, newHeadingValue3));
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.ANY_TEXT__NAME, newName, newName));
   }
 
   /**
@@ -118,8 +119,8 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING3__HEADING_VALUE3:
-        return basicSetHeadingValue3(null, msgs);
+      case WikiMLPackage.ANY_TEXT__NAME:
+        return basicSetName(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,8 +135,8 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING3__HEADING_VALUE3:
-        return getHeadingValue3();
+      case WikiMLPackage.ANY_TEXT__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +151,8 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING3__HEADING_VALUE3:
-        setHeadingValue3((AbstractUnformattedInlineContent)newValue);
+      case WikiMLPackage.ANY_TEXT__NAME:
+        setName((ParagraphTypes)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +168,8 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING3__HEADING_VALUE3:
-        setHeadingValue3((AbstractUnformattedInlineContent)null);
+      case WikiMLPackage.ANY_TEXT__NAME:
+        setName((ParagraphTypes)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,10 +185,10 @@ public class Heading3Impl extends ParagraphTypesImpl implements Heading3
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING3__HEADING_VALUE3:
-        return headingValue3 != null;
+      case WikiMLPackage.ANY_TEXT__NAME:
+        return name != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //Heading3Impl
+} //AnyTextImpl

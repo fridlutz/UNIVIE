@@ -2,10 +2,10 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractUnformattedInlineContent;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.File;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage;
 
 import java.util.Collection;
 
@@ -18,25 +18,26 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>File</b></em>'.
+ * An implementation of the model object '<em><b>Wiki Page</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.FileImpl#getName <em>Name</em>}</li>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.FileImpl#getCaption <em>Caption</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiPageImpl#getName <em>Name</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiPageImpl#getElements <em>Elements</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FileImpl extends ParagraphTypesImpl implements File
+public class WikiPageImpl extends MinimalEObjectImpl.Container implements WikiPage
 {
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
@@ -46,24 +47,24 @@ public class FileImpl extends ParagraphTypesImpl implements File
    * @generated
    * @ordered
    */
-  protected AbstractUnformattedInlineContent name;
+  protected Heading1 name;
 
   /**
-   * The cached value of the '{@link #getCaption() <em>Caption</em>}' containment reference list.
+   * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCaption()
+   * @see #getElements()
    * @generated
    * @ordered
    */
-  protected EList<AbstractFormattedInlineContent> caption;
+  protected EList<ParagraphTypes> elements;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected FileImpl()
+  protected WikiPageImpl()
   {
     super();
   }
@@ -76,7 +77,7 @@ public class FileImpl extends ParagraphTypesImpl implements File
   @Override
   protected EClass eStaticClass()
   {
-    return WikiMLPackage.Literals.FILE;
+    return WikiMLPackage.Literals.WIKI_PAGE;
   }
 
   /**
@@ -84,7 +85,7 @@ public class FileImpl extends ParagraphTypesImpl implements File
    * <!-- end-user-doc -->
    * @generated
    */
-  public AbstractUnformattedInlineContent getName()
+  public Heading1 getName()
   {
     return name;
   }
@@ -94,13 +95,13 @@ public class FileImpl extends ParagraphTypesImpl implements File
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(AbstractUnformattedInlineContent newName, NotificationChain msgs)
+  public NotificationChain basicSetName(Heading1 newName, NotificationChain msgs)
   {
-    AbstractUnformattedInlineContent oldName = name;
+    Heading1 oldName = name;
     name = newName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.FILE__NAME, oldName, newName);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.WIKI_PAGE__NAME, oldName, newName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -111,20 +112,20 @@ public class FileImpl extends ParagraphTypesImpl implements File
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(AbstractUnformattedInlineContent newName)
+  public void setName(Heading1 newName)
   {
     if (newName != name)
     {
       NotificationChain msgs = null;
       if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.FILE__NAME, null, msgs);
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.WIKI_PAGE__NAME, null, msgs);
       if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.FILE__NAME, null, msgs);
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.WIKI_PAGE__NAME, null, msgs);
       msgs = basicSetName(newName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.FILE__NAME, newName, newName));
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.WIKI_PAGE__NAME, newName, newName));
   }
 
   /**
@@ -132,13 +133,13 @@ public class FileImpl extends ParagraphTypesImpl implements File
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AbstractFormattedInlineContent> getCaption()
+  public EList<ParagraphTypes> getElements()
   {
-    if (caption == null)
+    if (elements == null)
     {
-      caption = new EObjectContainmentEList<AbstractFormattedInlineContent>(AbstractFormattedInlineContent.class, this, WikiMLPackage.FILE__CAPTION);
+      elements = new EObjectContainmentEList<ParagraphTypes>(ParagraphTypes.class, this, WikiMLPackage.WIKI_PAGE__ELEMENTS);
     }
-    return caption;
+    return elements;
   }
 
   /**
@@ -151,10 +152,10 @@ public class FileImpl extends ParagraphTypesImpl implements File
   {
     switch (featureID)
     {
-      case WikiMLPackage.FILE__NAME:
+      case WikiMLPackage.WIKI_PAGE__NAME:
         return basicSetName(null, msgs);
-      case WikiMLPackage.FILE__CAPTION:
-        return ((InternalEList<?>)getCaption()).basicRemove(otherEnd, msgs);
+      case WikiMLPackage.WIKI_PAGE__ELEMENTS:
+        return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -169,10 +170,10 @@ public class FileImpl extends ParagraphTypesImpl implements File
   {
     switch (featureID)
     {
-      case WikiMLPackage.FILE__NAME:
+      case WikiMLPackage.WIKI_PAGE__NAME:
         return getName();
-      case WikiMLPackage.FILE__CAPTION:
-        return getCaption();
+      case WikiMLPackage.WIKI_PAGE__ELEMENTS:
+        return getElements();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -188,12 +189,12 @@ public class FileImpl extends ParagraphTypesImpl implements File
   {
     switch (featureID)
     {
-      case WikiMLPackage.FILE__NAME:
-        setName((AbstractUnformattedInlineContent)newValue);
+      case WikiMLPackage.WIKI_PAGE__NAME:
+        setName((Heading1)newValue);
         return;
-      case WikiMLPackage.FILE__CAPTION:
-        getCaption().clear();
-        getCaption().addAll((Collection<? extends AbstractFormattedInlineContent>)newValue);
+      case WikiMLPackage.WIKI_PAGE__ELEMENTS:
+        getElements().clear();
+        getElements().addAll((Collection<? extends ParagraphTypes>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -209,11 +210,11 @@ public class FileImpl extends ParagraphTypesImpl implements File
   {
     switch (featureID)
     {
-      case WikiMLPackage.FILE__NAME:
-        setName((AbstractUnformattedInlineContent)null);
+      case WikiMLPackage.WIKI_PAGE__NAME:
+        setName((Heading1)null);
         return;
-      case WikiMLPackage.FILE__CAPTION:
-        getCaption().clear();
+      case WikiMLPackage.WIKI_PAGE__ELEMENTS:
+        getElements().clear();
         return;
     }
     super.eUnset(featureID);
@@ -229,12 +230,12 @@ public class FileImpl extends ParagraphTypesImpl implements File
   {
     switch (featureID)
     {
-      case WikiMLPackage.FILE__NAME:
+      case WikiMLPackage.WIKI_PAGE__NAME:
         return name != null;
-      case WikiMLPackage.FILE__CAPTION:
-        return caption != null && !caption.isEmpty();
+      case WikiMLPackage.WIKI_PAGE__ELEMENTS:
+        return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-} //FileImpl
+} //WikiPageImpl

@@ -2,7 +2,6 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,12 +31,12 @@ public interface OrderListItemLevel1 extends ParagraphTypes
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' containment reference.
-   * @see #setName(AbstractFormattedInlineContent)
+   * @see #setName(AnyText)
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getOrderListItemLevel1_Name()
    * @model containment="true"
    * @generated
    */
-  AbstractFormattedInlineContent getName();
+  AnyText getName();
 
   /**
    * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1#getName <em>Name</em>}' containment reference.
@@ -47,22 +46,32 @@ public interface OrderListItemLevel1 extends ParagraphTypes
    * @see #getName()
    * @generated
    */
-  void setName(AbstractFormattedInlineContent value);
+  void setName(AnyText value);
 
   /**
-   * Returns the value of the '<em><b>List</b></em>' containment reference list.
-   * The list contents are of type {@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent}.
+   * Returns the value of the '<em><b>List</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>List</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>List</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>List</em>' containment reference list.
+   * @return the value of the '<em>List</em>' containment reference.
+   * @see #setList(AnyTextSequence)
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getOrderListItemLevel1_List()
    * @model containment="true"
    * @generated
    */
-  EList<AbstractFormattedInlineContent> getList();
+  AnyTextSequence getList();
+
+  /**
+   * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1#getList <em>List</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>List</em>' containment reference.
+   * @see #getList()
+   * @generated
+   */
+  void setList(AnyTextSequence value);
 
 } // OrderListItemLevel1

@@ -2,21 +2,17 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,14 +30,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class BlockQuoteImpl extends ParagraphTypesImpl implements BlockQuote
 {
   /**
-   * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference list.
+   * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getContent()
    * @generated
    * @ordered
    */
-  protected EList<AbstractFormattedInlineContent> content;
+  protected AnyTextSequence content;
 
   /**
    * <!-- begin-user-doc -->
@@ -69,13 +65,47 @@ public class BlockQuoteImpl extends ParagraphTypesImpl implements BlockQuote
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AbstractFormattedInlineContent> getContent()
+  public AnyTextSequence getContent()
   {
-    if (content == null)
-    {
-      content = new EObjectContainmentEList<AbstractFormattedInlineContent>(AbstractFormattedInlineContent.class, this, WikiMLPackage.BLOCK_QUOTE__CONTENT);
-    }
     return content;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetContent(AnyTextSequence newContent, NotificationChain msgs)
+  {
+    AnyTextSequence oldContent = content;
+    content = newContent;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.BLOCK_QUOTE__CONTENT, oldContent, newContent);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setContent(AnyTextSequence newContent)
+  {
+    if (newContent != content)
+    {
+      NotificationChain msgs = null;
+      if (content != null)
+        msgs = ((InternalEObject)content).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.BLOCK_QUOTE__CONTENT, null, msgs);
+      if (newContent != null)
+        msgs = ((InternalEObject)newContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.BLOCK_QUOTE__CONTENT, null, msgs);
+      msgs = basicSetContent(newContent, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.BLOCK_QUOTE__CONTENT, newContent, newContent));
   }
 
   /**
@@ -89,7 +119,7 @@ public class BlockQuoteImpl extends ParagraphTypesImpl implements BlockQuote
     switch (featureID)
     {
       case WikiMLPackage.BLOCK_QUOTE__CONTENT:
-        return ((InternalEList<?>)getContent()).basicRemove(otherEnd, msgs);
+        return basicSetContent(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -115,15 +145,13 @@ public class BlockQuoteImpl extends ParagraphTypesImpl implements BlockQuote
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case WikiMLPackage.BLOCK_QUOTE__CONTENT:
-        getContent().clear();
-        getContent().addAll((Collection<? extends AbstractFormattedInlineContent>)newValue);
+        setContent((AnyTextSequence)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -140,7 +168,7 @@ public class BlockQuoteImpl extends ParagraphTypesImpl implements BlockQuote
     switch (featureID)
     {
       case WikiMLPackage.BLOCK_QUOTE__CONTENT:
-        getContent().clear();
+        setContent((AnyTextSequence)null);
         return;
     }
     super.eUnset(featureID);
@@ -157,7 +185,7 @@ public class BlockQuoteImpl extends ParagraphTypesImpl implements BlockQuote
     switch (featureID)
     {
       case WikiMLPackage.BLOCK_QUOTE__CONTENT:
-        return content != null && !content.isEmpty();
+        return content != null;
     }
     return super.eIsSet(featureID);
   }

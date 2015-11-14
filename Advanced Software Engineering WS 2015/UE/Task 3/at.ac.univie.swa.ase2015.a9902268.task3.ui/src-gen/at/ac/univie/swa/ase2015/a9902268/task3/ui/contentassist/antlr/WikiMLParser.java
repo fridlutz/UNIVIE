@@ -38,27 +38,25 @@ public class WikiMLParser extends AbstractContentAssistParser {
 				private static final long serialVersionUID = 1L;
 				{
 					put(grammarAccess.getParagraphTypesAccess().getAlternatives(), "rule__ParagraphTypes__Alternatives");
-					put(grammarAccess.getBlockQuoteAccess().getContentAlternatives_2_0(), "rule__BlockQuote__ContentAlternatives_2_0");
-					put(grammarAccess.getUnOrderListItemLevel2Access().getNameAlternatives_1_0(), "rule__UnOrderListItemLevel2__NameAlternatives_1_0");
-					put(grammarAccess.getUnOrderListItemLevel2Access().getListAlternatives_2_0(), "rule__UnOrderListItemLevel2__ListAlternatives_2_0");
-					put(grammarAccess.getUnOrderListItemLevel1Access().getNameAlternatives_1_0(), "rule__UnOrderListItemLevel1__NameAlternatives_1_0");
-					put(grammarAccess.getUnOrderListItemLevel1Access().getListAlternatives_2_0(), "rule__UnOrderListItemLevel1__ListAlternatives_2_0");
-					put(grammarAccess.getOrderListItemLevel1Access().getNameAlternatives_1_0(), "rule__OrderListItemLevel1__NameAlternatives_1_0");
-					put(grammarAccess.getOrderListItemLevel1Access().getListAlternatives_2_0(), "rule__OrderListItemLevel1__ListAlternatives_2_0");
-					put(grammarAccess.getFileAccess().getCaptionAlternatives_5_0(), "rule__File__CaptionAlternatives_5_0");
 					put(grammarAccess.getAbstractFormattedInlineContentAccess().getAlternatives(), "rule__AbstractFormattedInlineContent__Alternatives");
 					put(grammarAccess.getAbstractUnformattedInlineContentAccess().getAlternatives(), "rule__AbstractUnformattedInlineContent__Alternatives");
 					put(grammarAccess.getHyperLinkAccess().getAlternatives(), "rule__HyperLink__Alternatives");
 					put(grammarAccess.getInternalAltAccess().getAltTextAlternatives_3_0(), "rule__InternalAlt__AltTextAlternatives_3_0");
 					put(grammarAccess.getExternalAltAccess().getAltTextAlternatives_2_0(), "rule__ExternalAlt__AltTextAlternatives_2_0");
-					put(grammarAccess.getWikiAccess().getGroup(), "rule__Wiki__Group__0");
+					put(grammarAccess.getAnyTextAccess().getNameAlternatives_0(), "rule__AnyText__NameAlternatives_0");
+					put(grammarAccess.getViewTypeAccess().getAlternatives(), "rule__ViewType__Alternatives");
+					put(grammarAccess.getHorizontalAlignAccess().getAlternatives(), "rule__HorizontalAlign__Alternatives");
+					put(grammarAccess.getWikiPageAccess().getGroup(), "rule__WikiPage__Group__0");
 					put(grammarAccess.getBlockQuoteAccess().getGroup(), "rule__BlockQuote__Group__0");
 					put(grammarAccess.getTemplateAccess().getGroup(), "rule__Template__Group__0");
-					put(grammarAccess.getTemplateAccess().getGroup_4(), "rule__Template__Group_4__0");
+					put(grammarAccess.getTemplateAccess().getGroup_2(), "rule__Template__Group_2__0");
 					put(grammarAccess.getUnOrderListItemLevel2Access().getGroup(), "rule__UnOrderListItemLevel2__Group__0");
 					put(grammarAccess.getUnOrderListItemLevel1Access().getGroup(), "rule__UnOrderListItemLevel1__Group__0");
 					put(grammarAccess.getOrderListItemLevel1Access().getGroup(), "rule__OrderListItemLevel1__Group__0");
-					put(grammarAccess.getFileAccess().getGroup(), "rule__File__Group__0");
+					put(grammarAccess.getImageAccess().getGroup(), "rule__Image__Group__0");
+					put(grammarAccess.getImageAccess().getGroup_3(), "rule__Image__Group_3__0");
+					put(grammarAccess.getImageAccess().getGroup_4(), "rule__Image__Group_4__0");
+					put(grammarAccess.getImageAccess().getGroup_5(), "rule__Image__Group_5__0");
 					put(grammarAccess.getCategoryAccess().getGroup(), "rule__Category__Group__0");
 					put(grammarAccess.getHeading1Access().getGroup(), "rule__Heading1__Group__0");
 					put(grammarAccess.getHeading2Access().getGroup(), "rule__Heading2__Group__0");
@@ -72,21 +70,34 @@ public class WikiMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getInternalAltAccess().getGroup(), "rule__InternalAlt__Group__0");
 					put(grammarAccess.getExternalAccess().getGroup(), "rule__External__Group__0");
 					put(grammarAccess.getExternalAltAccess().getGroup(), "rule__ExternalAlt__Group__0");
+					put(grammarAccess.getAnyTextSequenceAccess().getGroup(), "rule__AnyTextSequence__Group__0");
 					put(grammarAccess.getNameAccess().getGroup(), "rule__Name__Group__0");
-					put(grammarAccess.getWikiAccess().getElementsAssignment_1(), "rule__Wiki__ElementsAssignment_1");
+					put(grammarAccess.getWikiPageAccess().getNameAssignment_0(), "rule__WikiPage__NameAssignment_0");
+					put(grammarAccess.getWikiPageAccess().getElementsAssignment_1(), "rule__WikiPage__ElementsAssignment_1");
 					put(grammarAccess.getBlockQuoteAccess().getContentAssignment_2(), "rule__BlockQuote__ContentAssignment_2");
-					put(grammarAccess.getTemplateAccess().getNameAssignment_1(), "rule__Template__NameAssignment_1");
-					put(grammarAccess.getTemplateAccess().getContentAssignment_3(), "rule__Template__ContentAssignment_3");
-					put(grammarAccess.getTemplateAccess().getContentAssignment_4_1(), "rule__Template__ContentAssignment_4_1");
+					put(grammarAccess.getTemplateAccess().getContentAssignment_1(), "rule__Template__ContentAssignment_1");
+					put(grammarAccess.getTemplateAccess().getContentAssignment_2_1(), "rule__Template__ContentAssignment_2_1");
 					put(grammarAccess.getUnOrderListItemLevel2Access().getNameAssignment_1(), "rule__UnOrderListItemLevel2__NameAssignment_1");
 					put(grammarAccess.getUnOrderListItemLevel2Access().getListAssignment_2(), "rule__UnOrderListItemLevel2__ListAssignment_2");
 					put(grammarAccess.getUnOrderListItemLevel1Access().getNameAssignment_1(), "rule__UnOrderListItemLevel1__NameAssignment_1");
 					put(grammarAccess.getUnOrderListItemLevel1Access().getListAssignment_2(), "rule__UnOrderListItemLevel1__ListAssignment_2");
 					put(grammarAccess.getOrderListItemLevel1Access().getNameAssignment_1(), "rule__OrderListItemLevel1__NameAssignment_1");
 					put(grammarAccess.getOrderListItemLevel1Access().getListAssignment_2(), "rule__OrderListItemLevel1__ListAssignment_2");
-					put(grammarAccess.getFileAccess().getNameAssignment_1(), "rule__File__NameAssignment_1");
-					put(grammarAccess.getFileAccess().getCaptionAssignment_5(), "rule__File__CaptionAssignment_5");
-					put(grammarAccess.getCategoryAccess().getNameAssignment_1(), "rule__Category__NameAssignment_1");
+					put(grammarAccess.getImageAccess().getNameAssignment_2(), "rule__Image__NameAssignment_2");
+					put(grammarAccess.getImageAccess().getTypeAssignment_3_1(), "rule__Image__TypeAssignment_3_1");
+					put(grammarAccess.getImageAccess().getHAlignAssignment_4_1(), "rule__Image__HAlignAssignment_4_1");
+					put(grammarAccess.getImageAccess().getAltTextAssignment_5_1(), "rule__Image__AltTextAssignment_5_1");
+					put(grammarAccess.getImageAccess().getCaptionAssignment_7(), "rule__Image__CaptionAssignment_7");
+					put(grammarAccess.getCategoryAccess().getNameAssignment_2(), "rule__Category__NameAssignment_2");
+					put(grammarAccess.getCategoryAccess().getValueAssignment_3(), "rule__Category__ValueAssignment_3");
+					put(grammarAccess.getHeading1Access().getHeadingValue1Assignment_1(), "rule__Heading1__HeadingValue1Assignment_1");
+					put(grammarAccess.getHeading2Access().getHeadingValue2Assignment_1(), "rule__Heading2__HeadingValue2Assignment_1");
+					put(grammarAccess.getHeading3Access().getHeadingValue3Assignment_1(), "rule__Heading3__HeadingValue3Assignment_1");
+					put(grammarAccess.getHeading4Access().getHeadingValue4Assignment_1(), "rule__Heading4__HeadingValue4Assignment_1");
+					put(grammarAccess.getHeading5Access().getHeadingValue5Assignment_1(), "rule__Heading5__HeadingValue5Assignment_1");
+					put(grammarAccess.getBoldAccess().getNameAssignment_1(), "rule__Bold__NameAssignment_1");
+					put(grammarAccess.getItalicAccess().getNameAssignment_1(), "rule__Italic__NameAssignment_1");
+					put(grammarAccess.getItalicBoldAccess().getNameAssignment_1(), "rule__ItalicBold__NameAssignment_1");
 					put(grammarAccess.getTextAccess().getNameAssignment(), "rule__Text__NameAssignment");
 					put(grammarAccess.getInternalAccess().getNameAssignment_1(), "rule__Internal__NameAssignment_1");
 					put(grammarAccess.getInternalAltAccess().getNameAssignment_1(), "rule__InternalAlt__NameAssignment_1");
@@ -94,6 +105,8 @@ public class WikiMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExternalAccess().getNameAssignment_1(), "rule__External__NameAssignment_1");
 					put(grammarAccess.getExternalAltAccess().getNameAssignment_1(), "rule__ExternalAlt__NameAssignment_1");
 					put(grammarAccess.getExternalAltAccess().getAltTextAssignment_2(), "rule__ExternalAlt__AltTextAssignment_2");
+					put(grammarAccess.getAnyTextSequenceAccess().getContentAssignment_1(), "rule__AnyTextSequence__ContentAssignment_1");
+					put(grammarAccess.getAnyTextAccess().getNameAssignment(), "rule__AnyText__NameAssignment");
 				}
 			};
 		}
@@ -104,7 +117,7 @@ public class WikiMLParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			at.ac.univie.swa.ase2015.a9902268.task3.ui.contentassist.antlr.internal.InternalWikiMLParser typedParser = (at.ac.univie.swa.ase2015.a9902268.task3.ui.contentassist.antlr.internal.InternalWikiMLParser) parser;
-			typedParser.entryRulewiki();
+			typedParser.entryRuleWikiPage();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);
