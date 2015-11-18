@@ -901,16 +901,6 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getAnyText_Name()
-  {
-    return (EReference)anyTextEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EEnum getViewType()
   {
     return viewTypeEEnum;
@@ -1040,7 +1030,6 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     createEReference(anyTextSequenceEClass, ANY_TEXT_SEQUENCE__CONTENT);
 
     anyTextEClass = createEClass(ANY_TEXT);
-    createEReference(anyTextEClass, ANY_TEXT__NAME);
 
     // Create enums
     viewTypeEEnum = createEEnum(VIEW_TYPE);
@@ -1088,17 +1077,18 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     heading3EClass.getESuperTypes().add(this.getParagraphTypes());
     heading4EClass.getESuperTypes().add(this.getParagraphTypes());
     heading5EClass.getESuperTypes().add(this.getParagraphTypes());
-    abstractFormattedInlineContentEClass.getESuperTypes().add(this.getParagraphTypes());
+    abstractFormattedInlineContentEClass.getESuperTypes().add(this.getAnyText());
     boldEClass.getESuperTypes().add(this.getAbstractFormattedInlineContent());
     italicEClass.getESuperTypes().add(this.getAbstractFormattedInlineContent());
     italicBoldEClass.getESuperTypes().add(this.getAbstractFormattedInlineContent());
-    abstractUnformattedInlineContentEClass.getESuperTypes().add(this.getParagraphTypes());
+    abstractUnformattedInlineContentEClass.getESuperTypes().add(this.getAnyText());
     textEClass.getESuperTypes().add(this.getAbstractUnformattedInlineContent());
     hyperLinkEClass.getESuperTypes().add(this.getAbstractUnformattedInlineContent());
     internalEClass.getESuperTypes().add(this.getHyperLink());
     internalAltEClass.getESuperTypes().add(this.getHyperLink());
     externalEClass.getESuperTypes().add(this.getHyperLink());
     externalAltEClass.getESuperTypes().add(this.getHyperLink());
+    anyTextEClass.getESuperTypes().add(this.getParagraphTypes());
 
     // Initialize classes and features; add operations and parameters
     initEClass(wikiPageEClass, WikiPage.class, "WikiPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1172,20 +1162,19 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
 
     initEClass(internalAltEClass, InternalAlt.class, "InternalAlt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getInternalAlt_Name(), this.getText(), null, "name", null, 0, 1, InternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInternalAlt_AltText(), this.getParagraphTypes(), null, "altText", null, 0, 1, InternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInternalAlt_AltText(), this.getAnyText(), null, "altText", null, 0, 1, InternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(externalEClass, External.class, "External", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getExternal_Name(), ecorePackage.getEString(), "name", null, 0, 1, External.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(externalAltEClass, ExternalAlt.class, "ExternalAlt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getExternalAlt_Name(), ecorePackage.getEString(), "name", null, 0, 1, ExternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExternalAlt_AltText(), this.getParagraphTypes(), null, "altText", null, 0, 1, ExternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getExternalAlt_AltText(), this.getAnyText(), null, "altText", null, 0, 1, ExternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(anyTextSequenceEClass, AnyTextSequence.class, "AnyTextSequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAnyTextSequence_Content(), this.getAnyText(), null, "content", null, 0, -1, AnyTextSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(anyTextEClass, AnyText.class, "AnyText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getAnyText_Name(), this.getParagraphTypes(), null, "name", null, 0, 1, AnyText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(viewTypeEEnum, ViewType.class, "ViewType");

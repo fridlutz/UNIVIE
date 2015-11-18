@@ -57,12 +57,12 @@ public interface ExternalAlt extends HyperLink
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Alt Text</em>' containment reference.
-   * @see #setAltText(ParagraphTypes)
+   * @see #setAltText(AnyText)
    * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getExternalAlt_AltText()
    * @model containment="true"
    * @generated
    */
-  ParagraphTypes getAltText();
+  AnyText getAltText();
 
   /**
    * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalAlt#getAltText <em>Alt Text</em>}' containment reference.
@@ -72,6 +72,6 @@ public interface ExternalAlt extends HyperLink
    * @see #getAltText()
    * @generated
    */
-  void setAltText(ParagraphTypes value);
+  void setAltText(AnyText value);
 
 } // ExternalAlt

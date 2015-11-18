@@ -43,7 +43,7 @@ public class WikiMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getHyperLinkAccess().getAlternatives(), "rule__HyperLink__Alternatives");
 					put(grammarAccess.getInternalAltAccess().getAltTextAlternatives_3_0(), "rule__InternalAlt__AltTextAlternatives_3_0");
 					put(grammarAccess.getExternalAltAccess().getAltTextAlternatives_2_0(), "rule__ExternalAlt__AltTextAlternatives_2_0");
-					put(grammarAccess.getAnyTextAccess().getNameAlternatives_0(), "rule__AnyText__NameAlternatives_0");
+					put(grammarAccess.getAnyTextAccess().getAlternatives(), "rule__AnyText__Alternatives");
 					put(grammarAccess.getViewTypeAccess().getAlternatives(), "rule__ViewType__Alternatives");
 					put(grammarAccess.getHorizontalAlignAccess().getAlternatives(), "rule__HorizontalAlign__Alternatives");
 					put(grammarAccess.getWikiPageAccess().getGroup(), "rule__WikiPage__Group__0");
@@ -106,7 +106,6 @@ public class WikiMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getExternalAltAccess().getNameAssignment_1(), "rule__ExternalAlt__NameAssignment_1");
 					put(grammarAccess.getExternalAltAccess().getAltTextAssignment_2(), "rule__ExternalAlt__AltTextAssignment_2");
 					put(grammarAccess.getAnyTextSequenceAccess().getContentAssignment_1(), "rule__AnyTextSequence__ContentAssignment_1");
-					put(grammarAccess.getAnyTextAccess().getNameAssignment(), "rule__AnyText__NameAssignment");
 				}
 			};
 		}

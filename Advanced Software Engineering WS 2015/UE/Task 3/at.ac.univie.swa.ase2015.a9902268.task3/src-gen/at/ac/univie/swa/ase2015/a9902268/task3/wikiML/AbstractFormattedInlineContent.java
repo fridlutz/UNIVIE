@@ -19,7 +19,7 @@ package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
  * @model
  * @generated
  */
-public interface AbstractFormattedInlineContent extends ParagraphTypes
+public interface AbstractFormattedInlineContent extends AnyText
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' containment reference.

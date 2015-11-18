@@ -522,6 +522,25 @@ public interface WikiMLPackage extends EPackage
   int HEADING5_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
 
   /**
+   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl <em>Any Text</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getAnyText()
+   * @generated
+   */
+  int ANY_TEXT = 26;
+
+  /**
+   * The number of structural features of the '<em>Any Text</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ANY_TEXT_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+
+  /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AbstractFormattedInlineContentImpl <em>Abstract Formatted Inline Content</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -538,7 +557,7 @@ public interface WikiMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ABSTRACT_FORMATTED_INLINE_CONTENT__NAME = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+  int ABSTRACT_FORMATTED_INLINE_CONTENT__NAME = ANY_TEXT_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>Abstract Formatted Inline Content</em>' class.
@@ -547,7 +566,7 @@ public interface WikiMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ABSTRACT_FORMATTED_INLINE_CONTENT_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 1;
+  int ABSTRACT_FORMATTED_INLINE_CONTENT_FEATURE_COUNT = ANY_TEXT_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.BoldImpl <em>Bold</em>}' class.
@@ -650,7 +669,7 @@ public interface WikiMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ABSTRACT_UNFORMATTED_INLINE_CONTENT_FEATURE_COUNT = PARAGRAPH_TYPES_FEATURE_COUNT + 0;
+  int ABSTRACT_UNFORMATTED_INLINE_CONTENT_FEATURE_COUNT = ANY_TEXT_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.TextImpl <em>Text</em>}' class.
@@ -856,34 +875,6 @@ public interface WikiMLPackage extends EPackage
    * @ordered
    */
   int ANY_TEXT_SEQUENCE_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl <em>Any Text</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.AnyTextImpl
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.WikiMLPackageImpl#getAnyText()
-   * @generated
-   */
-  int ANY_TEXT = 26;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANY_TEXT__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Any Text</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int ANY_TEXT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType <em>View Type</em>}' enum.
@@ -1518,17 +1509,6 @@ public interface WikiMLPackage extends EPackage
   EClass getAnyText();
 
   /**
-   * Returns the meta object for the containment reference '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Name</em>'.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText#getName()
-   * @see #getAnyText()
-   * @generated
-   */
-  EReference getAnyText_Name();
-
-  /**
    * Returns the meta object for enum '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType <em>View Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2088,14 +2068,6 @@ public interface WikiMLPackage extends EPackage
      * @generated
      */
     EClass ANY_TEXT = eINSTANCE.getAnyText();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference ANY_TEXT__NAME = eINSTANCE.getAnyText_Name();
 
     /**
      * The meta object literal for the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType <em>View Type</em>}' enum.

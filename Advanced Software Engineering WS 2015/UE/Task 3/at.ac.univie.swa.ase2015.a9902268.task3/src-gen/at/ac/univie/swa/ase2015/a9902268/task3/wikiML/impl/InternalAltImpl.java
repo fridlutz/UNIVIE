@@ -2,8 +2,8 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalAlt;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
@@ -49,7 +49,7 @@ public class InternalAltImpl extends HyperLinkImpl implements InternalAlt
    * @generated
    * @ordered
    */
-  protected ParagraphTypes altText;
+  protected AnyText altText;
 
   /**
    * <!-- begin-user-doc -->
@@ -125,7 +125,7 @@ public class InternalAltImpl extends HyperLinkImpl implements InternalAlt
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParagraphTypes getAltText()
+  public AnyText getAltText()
   {
     return altText;
   }
@@ -135,9 +135,9 @@ public class InternalAltImpl extends HyperLinkImpl implements InternalAlt
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAltText(ParagraphTypes newAltText, NotificationChain msgs)
+  public NotificationChain basicSetAltText(AnyText newAltText, NotificationChain msgs)
   {
-    ParagraphTypes oldAltText = altText;
+    AnyText oldAltText = altText;
     altText = newAltText;
     if (eNotificationRequired())
     {
@@ -152,7 +152,7 @@ public class InternalAltImpl extends HyperLinkImpl implements InternalAlt
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAltText(ParagraphTypes newAltText)
+  public void setAltText(AnyText newAltText)
   {
     if (newAltText != altText)
     {
@@ -218,7 +218,7 @@ public class InternalAltImpl extends HyperLinkImpl implements InternalAlt
         setName((Text)newValue);
         return;
       case WikiMLPackage.INTERNAL_ALT__ALT_TEXT:
-        setAltText((ParagraphTypes)newValue);
+        setAltText((AnyText)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -238,7 +238,7 @@ public class InternalAltImpl extends HyperLinkImpl implements InternalAlt
         setName((Text)null);
         return;
       case WikiMLPackage.INTERNAL_ALT__ALT_TEXT:
-        setAltText((ParagraphTypes)null);
+        setAltText((AnyText)null);
         return;
     }
     super.eUnset(featureID);

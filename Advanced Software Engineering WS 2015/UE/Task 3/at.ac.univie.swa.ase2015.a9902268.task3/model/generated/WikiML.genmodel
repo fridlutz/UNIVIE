@@ -98,8 +98,6 @@
     <genClasses ecoreClass="WikiML.ecore#//AnyTextSequence">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//AnyTextSequence/content"/>
     </genClasses>
-    <genClasses ecoreClass="WikiML.ecore#//AnyText">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference WikiML.ecore#//AnyText/name"/>
-    </genClasses>
+    <genClasses ecoreClass="WikiML.ecore#//AnyText"/>
   </genPackages>
 </genmodel:GenModel>

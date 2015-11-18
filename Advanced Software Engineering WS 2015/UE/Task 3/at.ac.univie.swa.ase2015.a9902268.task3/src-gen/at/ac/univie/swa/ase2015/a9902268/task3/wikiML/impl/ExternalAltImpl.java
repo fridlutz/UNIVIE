@@ -2,8 +2,8 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalAlt;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -58,7 +58,7 @@ public class ExternalAltImpl extends HyperLinkImpl implements ExternalAlt
    * @generated
    * @ordered
    */
-  protected ParagraphTypes altText;
+  protected AnyText altText;
 
   /**
    * <!-- begin-user-doc -->
@@ -109,7 +109,7 @@ public class ExternalAltImpl extends HyperLinkImpl implements ExternalAlt
    * <!-- end-user-doc -->
    * @generated
    */
-  public ParagraphTypes getAltText()
+  public AnyText getAltText()
   {
     return altText;
   }
@@ -119,9 +119,9 @@ public class ExternalAltImpl extends HyperLinkImpl implements ExternalAlt
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetAltText(ParagraphTypes newAltText, NotificationChain msgs)
+  public NotificationChain basicSetAltText(AnyText newAltText, NotificationChain msgs)
   {
-    ParagraphTypes oldAltText = altText;
+    AnyText oldAltText = altText;
     altText = newAltText;
     if (eNotificationRequired())
     {
@@ -136,7 +136,7 @@ public class ExternalAltImpl extends HyperLinkImpl implements ExternalAlt
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setAltText(ParagraphTypes newAltText)
+  public void setAltText(AnyText newAltText)
   {
     if (newAltText != altText)
     {
@@ -200,7 +200,7 @@ public class ExternalAltImpl extends HyperLinkImpl implements ExternalAlt
         setName((String)newValue);
         return;
       case WikiMLPackage.EXTERNAL_ALT__ALT_TEXT:
-        setAltText((ParagraphTypes)newValue);
+        setAltText((AnyText)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -220,7 +220,7 @@ public class ExternalAltImpl extends HyperLinkImpl implements ExternalAlt
         setName(NAME_EDEFAULT);
         return;
       case WikiMLPackage.EXTERNAL_ALT__ALT_TEXT:
-        setAltText((ParagraphTypes)null);
+        setAltText((AnyText)null);
         return;
     }
     super.eUnset(featureID);

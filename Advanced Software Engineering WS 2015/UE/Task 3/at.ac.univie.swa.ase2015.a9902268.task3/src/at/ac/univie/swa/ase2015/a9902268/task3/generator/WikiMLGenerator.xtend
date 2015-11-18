@@ -18,18 +18,14 @@ import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading3
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading4
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading5
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HyperLink
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Internal
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalAlt
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Italic
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ItalicBold
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage
+import java.net.URLEncoder
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IFileSystemAccess
 import org.eclipse.xtext.generator.IGenerator
@@ -41,13 +37,18 @@ import org.eclipse.xtext.generator.IGenerator
  */
 class WikiMLGenerator implements IGenerator {
 
+//sources used: https://www.mediawiki.org/wiki/Markup_spec/EBNF
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
 		for (page : resource.allContents.toIterable.filter(WikiPage)) {
-			fsa.generateFile(page.name.headingValue1.name + ".html", page.compile)
+			fsa.generateFile(page.name.headingValue1.name + ".html", page.renderWikiPage)
+		}
+		for (category : resource.allContents.toIterable.filter(Category)) {
+			fsa.generateFile("Category_" + category.name.renderText + ".html",
+				category.renderCategoryPage(resource.allContents.toIterable.filter(WikiPage)))
 		}
 	}
 
-	def compile(
+	def renderWikiPage(
 		WikiPage page
 	) '''
 		<html>
@@ -56,160 +57,177 @@ class WikiMLGenerator implements IGenerator {
 		  </head>
 		  <body>
 		  <h1 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.8em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">«page.name.headingValue1.name»</h1>
-		  «FOR paragraphType : page.elements»
-		  	«paragraphType.compile»
+		  «FOR contentType : page.elements»
+		  	«contentType.renderHTML»
 		  «ENDFOR»
+		 <!-- categories at the end of the page -->
+		 <div style="border: 1px solid #AAA;background-color: #F9F9F9;padding: 5px;margin-top: 1em;clear: both;">
+		   <a href="https://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories:</a>
+		   <ul style="display: inline;margin: 0px;padding: 0px;list-style: outside none none;">
+		   «var counter=0»
+		  «FOR contentType : page.elements.filter(Category)»
+		  	«contentType.renderCategory(counter)»
+		  	<!--«counter++»-->
+		  «ENDFOR»
+		  </ul>
+		  </div>
 		  </body
-		</html>"
+		</html>
 	'''
 
-	def compile(ParagraphTypes paragraph) '''
-		«/*Plain Text*/»
-		«IF paragraph instanceof Text»
-			«paragraph.compile»
-	    «ENDIF»
-		«/*Headings*/»
-		«IF paragraph instanceof Heading1»
-			«paragraph.compile»
-		«ENDIF»
-		«IF paragraph instanceof Heading2»
-			«paragraph.compile»
-		«ENDIF»
-		«IF paragraph instanceof Heading3»
-			«paragraph.compile»
-		«ENDIF»
-		«IF paragraph instanceof Heading4»
-			«paragraph.compile»
-		«ENDIF»
-		«IF paragraph instanceof Heading5»
-			«paragraph.compile»
-		«ENDIF»
-		«/*BlockQuote */»
-		«IF paragraph instanceof BlockQuote»
-			«paragraph.compile»
-		«ENDIF»	
-		«IF paragraph instanceof OrderListItemLevel1»
-			«paragraph.compile»
-		«ENDIF»
+	def renderCategoryPage(Category category, Iterable<WikiPage> pages) {
+		'''
+			<html>
+			  <head>
+			    <title>Category: «category.name.renderText»</title>
+			  </head>
+			  <body>
+			    <h1 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.8em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">Category: «category.name.renderText»</h1>
+			          Find all pages that use category and list here
+			          <ul>
+			          «FOR page : pages»
+			          	<li>«page.name.headingValue1.name»</li>
+			          «ENDFOR»
+			          </ul>
+			  </body
+			</html>
+		'''
+	}
+
+	def renderCategory(Category category, int counter) {
+		if (counter == 0) {
+			'''<li style="padding-left: 0.25em;border-left: medium none;display: inline-block;line-height: 1.25em;margin: 0.125em 0px;"><a href="Category_«category.name.renderText».html">«category.name.renderText»</a></li>'''
+		} else {
+			'''<li style="padding-left: 0.25em;border-left: 1px solid #AAA; display: inline-block;line-height: 1.25em;margin: 0.125em 0px;"><a href="Category_«category.name.renderText».html">«category.name.renderText»</a></li>'''
+		}
+	}
+
+	def renderHTML(ParagraphTypes content) {
+		switch content {
+			AnyText:
+				content.renderAnyText
+			Heading1:
+				content.renderHeading1
+			Heading2:
+				content.renderHeading2
+			Heading3:
+				content.renderHeading3
+			Heading4:
+				content.renderHeading4
+			Heading5:
+				content.renderHeading5
+			BlockQuote:
+				content.renderBlockQuote
+			// do not do anything, categories always at bottom, done above
+			Category: ''''''
+			// should never happen - this is for development purposes
+			default: '''«content.class»
+			'''
+		}
+	}
+
+	// Definition according to: https://en.wikipedia.org/wiki/Help:Wiki_markup
+	// Anchor as defined: https://meta.wikimedia.org/wiki/Help:Anchors
+	def renderHeading1(
+		Heading1 h1
+	) '''<a name="«h1.headingValue1.name»"><h1 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.8em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">«h1.headingValue1.name»</h1>'''
+
+	def renderHeading2(
+		Heading2 h2
+	) '''<a name="«h2.headingValue2.renderPlainText»"><h2 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.5em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">«h2.headingValue2.renderUnformattedContent»</h2>'''
+
+	def renderHeading3(
+		Heading3 h3
+	) '''<a name="«h3.headingValue3.renderPlainText»"><h3 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.17em; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h3.headingValue3.renderUnformattedContent»</h3>'''
+
+	def renderHeading4(
+		Heading4 h4
+	) '''<a name="«h4.headingValue4.renderPlainText»"><h4 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 100%; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h4.headingValue4.renderUnformattedContent»</h4>'''
+
+	def renderHeading5(
+		Heading5 h5
+	) '''<a name="«h5.headingValue5.renderPlainText»"><h5 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 100%; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h5.headingValue5.renderUnformattedContent» </h5>'''
+
+	// returns plain text, TODO: improve to add also linebreaks, xtext first
+	def renderText(Text text) '''«text.name»'''
+
+	// found here: http://stackoverflow.com/questions/4737841/urlencoder-not-able-to-translate-space-character, keep #
+	def renderURL(
+		Text text) '''«URLEncoder.encode(text.name, "UTF-8").replaceAll("\\+", "%20").replaceAll("%23", "#")»'''
+
+	def renderBlockQuote(
+		BlockQuote blockquote) '''<blockquote>«blockquote.content.renderAnyTextSequence»</blockquote>'''
 
 		
+
+	/*	def renderList(OrderedList list) '''<ol>
+	 * 	«FOR listitem : list.listitems»
+	 * 		<li>«listitem.list.renderAnyTextSequence»</li>
+	 * 	«ENDFOR»
+	 * 	</ol>'''
+	 *  
+	 * 	def renderUnorderedList(UnorderedList list) '''<ul>
+	 * 	«FOR listitem : list.listitems»
+	 * 		<li>«listitem.list.renderAnyTextSequence» </li>
+	 * 	«ENDFOR»
+	 * 	</ul>'''
+	 */
+	def renderAnyTextSequence(AnyTextSequence anytextSequence) '''
+		«FOR anyText : anytextSequence.content»
+			«anyText.renderAnyText»
+		«ENDFOR»
 	'''
 
-	def compile(OrderListItemLevel1 ol1) '''
-	<ol>«ol1.name.compile»</ol>
+	def renderAnyText(AnyText anyText) {
+		switch anyText {
+			AbstractFormattedInlineContent:
+				anyText.renderformattedContent
+			AbstractUnformattedInlineContent:
+				anyText.renderUnformattedContent
+			default: '''«anyText.class»'''
+		}
+	}
 
-    '''
+	def renderformattedContent(AbstractFormattedInlineContent abstractFormat) {
+		switch abstractFormat {
+			Bold: '''<b>«abstractFormat.name.renderUnformattedContent»</b>'''
+			Italic: '''<i>«abstractFormat.name.renderUnformattedContent»</i>'''
+			ItalicBold: '''<i><b>«abstractFormat.name.renderUnformattedContent»</b></i>'''
+			default: '''«abstractFormat.class»'''
+		}
+	}
 
-	def compile(UnOrderListItemLevel1 ul1) '''
+	def renderUnformattedContent(AbstractUnformattedInlineContent abstractUnFormat) {
+		switch abstractUnFormat {
+			HyperLink:
+				abstractUnFormat.renderHyperlink
+			Text:
+				abstractUnFormat.renderText
+			default: ''''''
+		}
+	}
 
-    '''
+	// anchorImplementation
+	def renderPlainText(AbstractUnformattedInlineContent abstractUnFormat) {
+		switch abstractUnFormat {
+			HyperLink:
+				switch abstractUnFormat {
+					Internal: '''«abstractUnFormat.name.renderText»'''
+					default: '''«abstractUnFormat.class»'''
+				}
+			Text:
+				abstractUnFormat.renderText
+			default: ''''''
+		}
+	}
 
-	def compile(UnOrderListItemLevel2 ul2) '''
-
-    '''
-
-	def compile(Image image) '''
-
-    '''
-
-	def compile(Category cat) '''
-
-    '''
-
-	def compile(Template template) '''
-
-    '''
-
-	def compile(AbstractFormattedInlineContent abstractFormat) '''
-
-    '''
-
-	def compile(AbstractUnformattedInlineContent abstractUnFormat) '''
-	«IF abstractUnFormat instanceof HyperLink»
-	   «abstractUnFormat.compile»
-	«ENDIF»
-	«IF abstractUnFormat instanceof Text»
-	  «abstractUnFormat.compile»
-	«ENDIF»
-    '''
-
-	def compile(BlockQuote blockquote) '''
-     <blockquote>«blockquote.content.compile»</blockquote>
-    '''
-
-	def compile(Heading1 h1) '''
-      <h1 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.8em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">«h1.headingValue1.name»</h1>
-    '''
-
-	def compile(Heading2 h2) '''
-	  <h2 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.5em; font-family: Georgia,Times,serif; margin-top: 1em; margin-bottom: 0.25em; line-height: 1.3; padding: 0; border-bottom: 1px solid #AAAAAA;">«h2.getHeadingValue2().compile»</h2>
-    '''
-
-	def compile(Heading3 h3) '''
-	  <h3 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 1.17em; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h3.getHeadingValue3().compile»</h3>
-    '''
-
-	def compile(Heading4 h4) '''
-	  <h4 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 100%; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h4.getHeadingValue4().compile»</h4>
-    '''
-
-	def compile(Heading5 h5) '''
-	  <h5 style="color: #000000; background: none; overflow: hidden; page-break-after: avoid; font-size: 100%; font-weight: bold; margin-top: 0.3em; margin-bottom: 0; line-height: 1.6; padding-top: 0.5em; padding-bottom: 0;">«h5.getHeadingValue5().compile» </h5>
-    '''
-
-	def compile(Bold b) '''
-    '''
-
-	def compile(Italic i) '''
-    '''
-
-	def compile(ItalicBold ib) '''
-    '''
-
-    //returns plain text, TODO: improve to add also linebreaks, xtext first
-	def compile(Text text) '''
-		«text.name»
-	'''
-
-	def compile(HyperLink a) '''
-	  «IF a instanceof Internal»
-	    «a.compile»
-	  «ENDIF»
-	  «IF a instanceof InternalAlt»
-	    «a.compile»
-	  «ENDIF»
-	  «IF a instanceof External»
-	    «a.compile»
-	  «ENDIF»
-	  «IF a instanceof ExternalAlt»
-	    «a.compile»
-	  «ENDIF»
-    '''
-
-	def compile(Internal i) '''
-	  <a href="«i.name.compile»">«i.name.compile»</a>
-    '''
-
-	def compile(InternalAlt ialt) '''
-	  «ialt.toString»
-    '''
-
-	def compile(External e) '''
-	  <a href="«e.name»">«e.name»</a>
-    '''
-
-	def compile(ExternalAlt ea) '''
-	  «ea.toString»
-    '''
-	
-	def compile(AnyTextSequence anytextSequence) '''
-	  «FOR anyText : anytextSequence.content»
-	    «anyText.compile»
-	  «ENDFOR»
-    '''
-
-	def compile(AnyText anyText) '''
-	«anyText.name.compile»
-    '''
-
+	def renderHyperlink(HyperLink hyperLinkContent) {
+		switch hyperLinkContent {
+			Internal: '''<a href=«hyperLinkContent.name.renderURL»>«hyperLinkContent.name.renderText»</a>'''
+			InternalAlt: '''<a href=«hyperLinkContent.name.renderURL»>«hyperLinkContent.altText.renderAnyText»</a>'''
+			External: '''<a href=«hyperLinkContent.name»>«hyperLinkContent.name»</a>'''
+			ExternalAlt: '''<a href=«hyperLinkContent.name»>«hyperLinkContent.altText.renderAnyText»</a>'''
+			default: '''«hyperLinkContent.class»'''
+		}
+	}
 }

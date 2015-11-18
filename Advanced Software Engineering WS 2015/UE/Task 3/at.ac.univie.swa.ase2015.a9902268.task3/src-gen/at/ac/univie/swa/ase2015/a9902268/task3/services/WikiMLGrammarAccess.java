@@ -61,26 +61,23 @@ public class WikiMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImageParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
 		private final RuleCall cCategoryParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cTemplateParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cAbstractFormattedInlineContentParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cAbstractUnformattedInlineContentParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cBlockQuoteParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cHeading1ParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cHeading2ParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cHeading3ParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cHeading4ParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cHeading5ParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cAnyTextParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cBlockQuoteParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cHeading1ParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cHeading2ParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cHeading3ParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cHeading4ParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cHeading5ParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
 		
 		////handle all types of paragraphs
 		////FIXME: this list needs to be ordered, from general cases to specifics
 		//ParagraphTypes:
-		//	OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template |
-		//	AbstractFormattedInlineContent | AbstractUnformattedInlineContent | BlockQuote | Heading1 | Heading2 | Heading3 |
-		//	Heading4 | Heading5;
+		//	OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template | AnyText |
+		//	BlockQuote | Heading1 | Heading2 | Heading3 | Heading4 | Heading5;
 		@Override public ParserRule getRule() { return rule; }
 
-		//OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template |
-		//AbstractFormattedInlineContent | AbstractUnformattedInlineContent | BlockQuote | Heading1 | Heading2 | Heading3 |
-		//Heading4 | Heading5
+		//OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template | AnyText | BlockQuote
+		//| Heading1 | Heading2 | Heading3 | Heading4 | Heading5
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//OrderListItemLevel1
@@ -101,29 +98,26 @@ public class WikiMLGrammarAccess extends AbstractGrammarElementFinder {
 		//Template
 		public RuleCall getTemplateParserRuleCall_5() { return cTemplateParserRuleCall_5; }
 
-		//AbstractFormattedInlineContent
-		public RuleCall getAbstractFormattedInlineContentParserRuleCall_6() { return cAbstractFormattedInlineContentParserRuleCall_6; }
-
-		//AbstractUnformattedInlineContent
-		public RuleCall getAbstractUnformattedInlineContentParserRuleCall_7() { return cAbstractUnformattedInlineContentParserRuleCall_7; }
+		//AnyText
+		public RuleCall getAnyTextParserRuleCall_6() { return cAnyTextParserRuleCall_6; }
 
 		//BlockQuote
-		public RuleCall getBlockQuoteParserRuleCall_8() { return cBlockQuoteParserRuleCall_8; }
+		public RuleCall getBlockQuoteParserRuleCall_7() { return cBlockQuoteParserRuleCall_7; }
 
 		//Heading1
-		public RuleCall getHeading1ParserRuleCall_9() { return cHeading1ParserRuleCall_9; }
+		public RuleCall getHeading1ParserRuleCall_8() { return cHeading1ParserRuleCall_8; }
 
 		//Heading2
-		public RuleCall getHeading2ParserRuleCall_10() { return cHeading2ParserRuleCall_10; }
+		public RuleCall getHeading2ParserRuleCall_9() { return cHeading2ParserRuleCall_9; }
 
 		//Heading3
-		public RuleCall getHeading3ParserRuleCall_11() { return cHeading3ParserRuleCall_11; }
+		public RuleCall getHeading3ParserRuleCall_10() { return cHeading3ParserRuleCall_10; }
 
 		//Heading4
-		public RuleCall getHeading4ParserRuleCall_12() { return cHeading4ParserRuleCall_12; }
+		public RuleCall getHeading4ParserRuleCall_11() { return cHeading4ParserRuleCall_11; }
 
 		//Heading5
-		public RuleCall getHeading5ParserRuleCall_13() { return cHeading5ParserRuleCall_13; }
+		public RuleCall getHeading5ParserRuleCall_12() { return cHeading5ParserRuleCall_12; }
 	}
 
 	public class BlockQuoteElements extends AbstractParserRuleElementFinder {
@@ -335,7 +329,9 @@ public class WikiMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCaptionAnyTextSequenceParserRuleCall_7_0 = (RuleCall)cCaptionAssignment_7.eContents().get(0);
 		private final Keyword cRightSquareBracketRightSquareBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		////TODO: terminal rule for filename and supported formats
+		/// *OrderList:
+		//	'#' name=(AnyText) list=(AnyTextSequence) ':LIST';
+		// * / //TODO: terminal rule for filename and supported formats
 		/// * Supported file types 
 		//    jpg/jpeg – recommended for photographic images.
 		//    svg – a vector format recommended for drawings and line-art illustration.
@@ -938,26 +934,22 @@ public class WikiMLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class AnyTextElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AnyText");
-		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
-		private final Alternatives cNameAlternatives_0 = (Alternatives)cNameAssignment.eContents().get(0);
-		private final RuleCall cNameAbstractFormattedInlineContentParserRuleCall_0_0 = (RuleCall)cNameAlternatives_0.eContents().get(0);
-		private final RuleCall cNameAbstractUnformattedInlineContentParserRuleCall_0_1 = (RuleCall)cNameAlternatives_0.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cAbstractFormattedInlineContentParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cAbstractUnformattedInlineContentParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//AnyText:
-		//	name=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent);
+		//	AbstractFormattedInlineContent | AbstractUnformattedInlineContent;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent)
-		public Assignment getNameAssignment() { return cNameAssignment; }
-
 		//AbstractFormattedInlineContent | AbstractUnformattedInlineContent
-		public Alternatives getNameAlternatives_0() { return cNameAlternatives_0; }
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//AbstractFormattedInlineContent
-		public RuleCall getNameAbstractFormattedInlineContentParserRuleCall_0_0() { return cNameAbstractFormattedInlineContentParserRuleCall_0_0; }
+		public RuleCall getAbstractFormattedInlineContentParserRuleCall_0() { return cAbstractFormattedInlineContentParserRuleCall_0; }
 
 		//AbstractUnformattedInlineContent
-		public RuleCall getNameAbstractUnformattedInlineContentParserRuleCall_0_1() { return cNameAbstractUnformattedInlineContentParserRuleCall_0_1; }
+		public RuleCall getAbstractUnformattedInlineContentParserRuleCall_1() { return cAbstractUnformattedInlineContentParserRuleCall_1; }
 	}
 
 	public class NameElements extends AbstractParserRuleElementFinder {
@@ -1201,9 +1193,8 @@ public class WikiMLGrammarAccess extends AbstractGrammarElementFinder {
 	////handle all types of paragraphs
 	////FIXME: this list needs to be ordered, from general cases to specifics
 	//ParagraphTypes:
-	//	OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template |
-	//	AbstractFormattedInlineContent | AbstractUnformattedInlineContent | BlockQuote | Heading1 | Heading2 | Heading3 |
-	//	Heading4 | Heading5;
+	//	OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template | AnyText |
+	//	BlockQuote | Heading1 | Heading2 | Heading3 | Heading4 | Heading5;
 	public ParagraphTypesElements getParagraphTypesAccess() {
 		return pParagraphTypes;
 	}
@@ -1263,7 +1254,9 @@ public class WikiMLGrammarAccess extends AbstractGrammarElementFinder {
 		return getOrderListItemLevel1Access().getRule();
 	}
 
-	////TODO: terminal rule for filename and supported formats
+	/// *OrderList:
+	//	'#' name=(AnyText) list=(AnyTextSequence) ':LIST';
+	// * / //TODO: terminal rule for filename and supported formats
 	/// * Supported file types 
 	//    jpg/jpeg – recommended for photographic images.
 	//    svg – a vector format recommended for drawings and line-art illustration.
@@ -1484,7 +1477,7 @@ public class WikiMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AnyText:
-	//	name=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent);
+	//	AbstractFormattedInlineContent | AbstractUnformattedInlineContent;
 	public AnyTextElements getAnyTextAccess() {
 		return pAnyText;
 	}

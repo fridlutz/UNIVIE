@@ -4,7 +4,6 @@
 package at.ac.univie.swa.ase2015.a9902268.task3.serializer;
 
 import at.ac.univie.swa.ase2015.a9902268.task3.services.WikiMLGrammarAccess;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Bold;
@@ -51,9 +50,6 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	@Override
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == WikiMLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
-			case WikiMLPackage.ANY_TEXT:
-				sequence_AnyText(context, (AnyText) semanticObject); 
-				return; 
 			case WikiMLPackage.ANY_TEXT_SEQUENCE:
 				sequence_AnyTextSequence(context, (AnyTextSequence) semanticObject); 
 				return; 
@@ -129,15 +125,6 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	 *     (content+=AnyText*)
 	 */
 	protected void sequence_AnyTextSequence(EObject context, AnyTextSequence semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (name=AbstractFormattedInlineContent | name=AbstractUnformattedInlineContent)
-	 */
-	protected void sequence_AnyText(EObject context, AnyText semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

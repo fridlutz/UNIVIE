@@ -12,9 +12,9 @@ WikiPage:
 	//handle all types of paragraphs
 //FIXME: this list needs to be ordered, from general cases to specifics
 ParagraphTypes:
-	(OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template |
-	AbstractFormattedInlineContent | AbstractUnformattedInlineContent | BlockQuote | Heading1 | Heading2 | Heading3 |
-	Heading4 | Heading5);
+    OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template |
+	AnyText | BlockQuote | Heading1 | Heading2 | Heading3 |
+	Heading4 | Heading5;
 
 BlockQuote:
 	{BlockQuote} '<blockquote>' (content=(AnyTextSequence)) '</blockquote>';
@@ -32,6 +32,9 @@ UnOrderListItemLevel1:
 OrderListItemLevel1:
 	'#' name=(AnyText) list=(AnyTextSequence) ':LIST';
 
+/*OrderList:
+	'#' name=(AnyText) list=(AnyTextSequence) ':LIST';
+*/
 	//TODO: terminal rule for filename and supported formats
 /* Supported file types 
     jpg/jpeg – recommended for photographic images.
@@ -107,7 +110,7 @@ AnyTextSequence /*hidden()*/:
 	{AnyTextSequence} content+=(AnyText)*;
 
 AnyText:
-	name=(AbstractFormattedInlineContent | AbstractUnformattedInlineContent);
+	(AbstractFormattedInlineContent | AbstractUnformattedInlineContent);
 
 
 
@@ -123,7 +126,7 @@ terminal ML_COMMENT:
 	'<!--'->'-->';
 
 terminal STRING:
-('A'..'Z' | 'a'..'z' | '_' | '-' | '(' | ')' | ',' | '#' | '"' | '.' | ':' | '0'..'9')*
+('A'..'Z' | 'a'..'z' | '_' | '-' | '(' | ')' | ',' | '#' | '"' | '.' | ':' | '0'..'9' )*
 ;
 	//found online: https://xtexterience.wordpress.com/2011/06/08/urls-in-xtext/
 terminal URL:

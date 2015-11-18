@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class AbstractUnformattedInlineContentImpl extends ParagraphTypesImpl implements AbstractUnformattedInlineContent
+public class AbstractUnformattedInlineContentImpl extends AnyTextImpl implements AbstractUnformattedInlineContent
 {
   /**
    * <!-- begin-user-doc -->

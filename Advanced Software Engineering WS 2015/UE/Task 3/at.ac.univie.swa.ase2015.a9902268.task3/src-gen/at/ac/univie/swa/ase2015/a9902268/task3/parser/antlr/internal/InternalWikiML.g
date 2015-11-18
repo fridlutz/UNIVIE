@@ -197,81 +197,71 @@ ruleParagraphTypes returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getParagraphTypesAccess().getAbstractFormattedInlineContentParserRuleCall_6()); 
+        newCompositeNode(grammarAccess.getParagraphTypesAccess().getAnyTextParserRuleCall_6()); 
     }
-    this_AbstractFormattedInlineContent_6=ruleAbstractFormattedInlineContent
+    this_AnyText_6=ruleAnyText
     { 
-        $current = $this_AbstractFormattedInlineContent_6.current; 
+        $current = $this_AnyText_6.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getParagraphTypesAccess().getAbstractUnformattedInlineContentParserRuleCall_7()); 
+        newCompositeNode(grammarAccess.getParagraphTypesAccess().getBlockQuoteParserRuleCall_7()); 
     }
-    this_AbstractUnformattedInlineContent_7=ruleAbstractUnformattedInlineContent
+    this_BlockQuote_7=ruleBlockQuote
     { 
-        $current = $this_AbstractUnformattedInlineContent_7.current; 
+        $current = $this_BlockQuote_7.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getParagraphTypesAccess().getBlockQuoteParserRuleCall_8()); 
+        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading1ParserRuleCall_8()); 
     }
-    this_BlockQuote_8=ruleBlockQuote
+    this_Heading1_8=ruleHeading1
     { 
-        $current = $this_BlockQuote_8.current; 
+        $current = $this_Heading1_8.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading1ParserRuleCall_9()); 
+        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading2ParserRuleCall_9()); 
     }
-    this_Heading1_9=ruleHeading1
+    this_Heading2_9=ruleHeading2
     { 
-        $current = $this_Heading1_9.current; 
+        $current = $this_Heading2_9.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading2ParserRuleCall_10()); 
+        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading3ParserRuleCall_10()); 
     }
-    this_Heading2_10=ruleHeading2
+    this_Heading3_10=ruleHeading3
     { 
-        $current = $this_Heading2_10.current; 
+        $current = $this_Heading3_10.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading3ParserRuleCall_11()); 
+        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading4ParserRuleCall_11()); 
     }
-    this_Heading3_11=ruleHeading3
+    this_Heading4_11=ruleHeading4
     { 
-        $current = $this_Heading3_11.current; 
+        $current = $this_Heading4_11.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading4ParserRuleCall_12()); 
+        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading5ParserRuleCall_12()); 
     }
-    this_Heading4_12=ruleHeading4
+    this_Heading5_12=ruleHeading5
     { 
-        $current = $this_Heading4_12.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getParagraphTypesAccess().getHeading5ParserRuleCall_13()); 
-    }
-    this_Heading5_13=ruleHeading5
-    { 
-        $current = $this_Heading5_13.current; 
+        $current = $this_Heading5_12.current; 
         afterParserOrEnumRuleCall();
     }
 )
@@ -1692,41 +1682,24 @@ ruleAnyText returns [EObject current=null]
     }
     @after { leaveRule(); }:
 (
-(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getAnyTextAccess().getNameAbstractFormattedInlineContentParserRuleCall_0_0()); 
-	    }
-		lv_name_0_1=ruleAbstractFormattedInlineContent		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getAnyTextRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_1, 
-        		"AbstractFormattedInlineContent");
-	        afterParserOrEnumRuleCall();
-	    }
+    { 
+        newCompositeNode(grammarAccess.getAnyTextAccess().getAbstractFormattedInlineContentParserRuleCall_0()); 
+    }
+    this_AbstractFormattedInlineContent_0=ruleAbstractFormattedInlineContent
+    { 
+        $current = $this_AbstractFormattedInlineContent_0.current; 
+        afterParserOrEnumRuleCall();
+    }
 
-    |		{ 
-	        newCompositeNode(grammarAccess.getAnyTextAccess().getNameAbstractUnformattedInlineContentParserRuleCall_0_1()); 
-	    }
-		lv_name_0_2=ruleAbstractUnformattedInlineContent		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getAnyTextRule());
-	        }
-       		set(
-       			$current, 
-       			"name",
-        		lv_name_0_2, 
-        		"AbstractUnformattedInlineContent");
-	        afterParserOrEnumRuleCall();
-	    }
-
-)
-
-)
+    |
+    { 
+        newCompositeNode(grammarAccess.getAnyTextAccess().getAbstractUnformattedInlineContentParserRuleCall_1()); 
+    }
+    this_AbstractUnformattedInlineContent_1=ruleAbstractUnformattedInlineContent
+    { 
+        $current = $this_AbstractUnformattedInlineContent_1.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 

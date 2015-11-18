@@ -13,6 +13,6 @@ package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
  * @model
  * @generated
  */
-public interface AbstractUnformattedInlineContent extends ParagraphTypes
+public interface AbstractUnformattedInlineContent extends AnyText
 {
 } // AbstractUnformattedInlineContent

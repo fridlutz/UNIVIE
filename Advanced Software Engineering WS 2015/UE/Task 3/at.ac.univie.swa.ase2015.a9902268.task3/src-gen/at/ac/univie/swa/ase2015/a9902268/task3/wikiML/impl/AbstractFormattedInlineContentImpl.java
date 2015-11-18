@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class AbstractFormattedInlineContentImpl extends ParagraphTypesImpl implements AbstractFormattedInlineContent
+public class AbstractFormattedInlineContentImpl extends AnyTextImpl implements AbstractFormattedInlineContent
 {
   /**
    * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
