@@ -2,6 +2,7 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AboutTemplate;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractFormattedInlineContent;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractUnformattedInlineContent;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyText;
@@ -10,8 +11,6 @@ import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Bold;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.External;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalAlt;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading2;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading3;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading4;
@@ -20,15 +19,18 @@ import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HorizontalAlign;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HyperLink;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Internal;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalAlt;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Italic;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ItalicBold;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.MainTemplate;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItem;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderedList;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Paragraph;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.QuoteTemplate;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnorderListItem;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnorderedList;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLFactory;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
@@ -83,21 +85,49 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass unOrderListItemLevel2EClass = null;
+  private EClass aboutTemplateEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass unOrderListItemLevel1EClass = null;
+  private EClass mainTemplateEClass = null;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass orderListItemLevel1EClass = null;
+  private EClass quoteTemplateEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass orderedListEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass unorderedListEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass unorderListItemEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass orderListItemEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -112,13 +142,6 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * @generated
    */
   private EClass categoryEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass heading1EClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -209,21 +232,7 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass internalAltEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass externalEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass externalAltEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -238,6 +247,13 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * @generated
    */
   private EClass anyTextEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass paragraphEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -331,9 +347,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getWikiPage_Name()
+  public EAttribute getWikiPage_Name()
   {
-    return (EReference)wikiPageEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)wikiPageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -391,9 +407,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTemplate_Content()
+  public EAttribute getTemplate_Type()
   {
-    return (EReference)templateEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)templateEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -401,9 +417,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getUnOrderListItemLevel2()
+  public EClass getAboutTemplate()
   {
-    return unOrderListItemLevel2EClass;
+    return aboutTemplateEClass;
   }
 
   /**
@@ -411,9 +427,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUnOrderListItemLevel2_Name()
+  public EReference getAboutTemplate_Content()
   {
-    return (EReference)unOrderListItemLevel2EClass.getEStructuralFeatures().get(0);
+    return (EReference)aboutTemplateEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -421,9 +437,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUnOrderListItemLevel2_List()
+  public EClass getMainTemplate()
   {
-    return (EReference)unOrderListItemLevel2EClass.getEStructuralFeatures().get(1);
+    return mainTemplateEClass;
   }
 
   /**
@@ -431,9 +447,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getUnOrderListItemLevel1()
+  public EReference getMainTemplate_Content()
   {
-    return unOrderListItemLevel1EClass;
+    return (EReference)mainTemplateEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -441,9 +457,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUnOrderListItemLevel1_Name()
+  public EClass getQuoteTemplate()
   {
-    return (EReference)unOrderListItemLevel1EClass.getEStructuralFeatures().get(0);
+    return quoteTemplateEClass;
   }
 
   /**
@@ -451,9 +467,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getUnOrderListItemLevel1_List()
+  public EClass getOrderedList()
   {
-    return (EReference)unOrderListItemLevel1EClass.getEStructuralFeatures().get(1);
+    return orderedListEClass;
   }
 
   /**
@@ -461,9 +477,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getOrderListItemLevel1()
+  public EReference getOrderedList_Items()
   {
-    return orderListItemLevel1EClass;
+    return (EReference)orderedListEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -471,9 +487,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOrderListItemLevel1_Name()
+  public EReference getOrderedList_End()
   {
-    return (EReference)orderListItemLevel1EClass.getEStructuralFeatures().get(0);
+    return (EReference)orderedListEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -481,9 +497,79 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOrderListItemLevel1_List()
+  public EClass getUnorderedList()
   {
-    return (EReference)orderListItemLevel1EClass.getEStructuralFeatures().get(1);
+    return unorderedListEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getUnorderedList_Items()
+  {
+    return (EReference)unorderedListEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getUnorderedList_End()
+  {
+    return (EReference)unorderedListEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getUnorderListItem()
+  {
+    return unorderListItemEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getUnorderListItem_Level()
+  {
+    return (EAttribute)unorderListItemEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getUnorderListItem_Itemtext()
+  {
+    return (EReference)unorderListItemEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getOrderListItem()
+  {
+    return orderListItemEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getOrderListItem_Itemtext()
+  {
+    return (EReference)orderListItemEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -501,9 +587,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getImage_Name()
+  public EAttribute getImage_Name()
   {
-    return (EReference)imageEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)imageEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -574,26 +660,6 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
   public EAttribute getCategory_Value()
   {
     return (EAttribute)categoryEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getHeading1()
-  {
-    return heading1EClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getHeading1_HeadingValue1()
-  {
-    return (EReference)heading1EClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -771,6 +837,16 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getHyperLink_AltText()
+  {
+    return (EReference)hyperLinkEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getInternal()
   {
     return internalEClass;
@@ -781,7 +857,7 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getInternal_Name()
+  public EReference getInternal_Link()
   {
     return (EReference)internalEClass.getEStructuralFeatures().get(0);
   }
@@ -791,29 +867,9 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getInternalAlt()
+  public EReference getInternal_Anchor()
   {
-    return internalAltEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getInternalAlt_Name()
-  {
-    return (EReference)internalAltEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getInternalAlt_AltText()
-  {
-    return (EReference)internalAltEClass.getEStructuralFeatures().get(1);
+    return (EReference)internalEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -834,36 +890,6 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
   public EAttribute getExternal_Name()
   {
     return (EAttribute)externalEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EClass getExternalAlt()
-  {
-    return externalAltEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getExternalAlt_Name()
-  {
-    return (EAttribute)externalAltEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getExternalAlt_AltText()
-  {
-    return (EReference)externalAltEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -894,6 +920,26 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
   public EClass getAnyText()
   {
     return anyTextEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getParagraph()
+  {
+    return paragraphEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getParagraph_Paragraph()
+  {
+    return (EAttribute)paragraphEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -947,7 +993,7 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
 
     // Create classes and their features
     wikiPageEClass = createEClass(WIKI_PAGE);
-    createEReference(wikiPageEClass, WIKI_PAGE__NAME);
+    createEAttribute(wikiPageEClass, WIKI_PAGE__NAME);
     createEReference(wikiPageEClass, WIKI_PAGE__ELEMENTS);
 
     paragraphTypesEClass = createEClass(PARAGRAPH_TYPES);
@@ -956,22 +1002,33 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     createEReference(blockQuoteEClass, BLOCK_QUOTE__CONTENT);
 
     templateEClass = createEClass(TEMPLATE);
-    createEReference(templateEClass, TEMPLATE__CONTENT);
+    createEAttribute(templateEClass, TEMPLATE__TYPE);
 
-    unOrderListItemLevel2EClass = createEClass(UN_ORDER_LIST_ITEM_LEVEL2);
-    createEReference(unOrderListItemLevel2EClass, UN_ORDER_LIST_ITEM_LEVEL2__NAME);
-    createEReference(unOrderListItemLevel2EClass, UN_ORDER_LIST_ITEM_LEVEL2__LIST);
+    aboutTemplateEClass = createEClass(ABOUT_TEMPLATE);
+    createEReference(aboutTemplateEClass, ABOUT_TEMPLATE__CONTENT);
 
-    unOrderListItemLevel1EClass = createEClass(UN_ORDER_LIST_ITEM_LEVEL1);
-    createEReference(unOrderListItemLevel1EClass, UN_ORDER_LIST_ITEM_LEVEL1__NAME);
-    createEReference(unOrderListItemLevel1EClass, UN_ORDER_LIST_ITEM_LEVEL1__LIST);
+    mainTemplateEClass = createEClass(MAIN_TEMPLATE);
+    createEReference(mainTemplateEClass, MAIN_TEMPLATE__CONTENT);
 
-    orderListItemLevel1EClass = createEClass(ORDER_LIST_ITEM_LEVEL1);
-    createEReference(orderListItemLevel1EClass, ORDER_LIST_ITEM_LEVEL1__NAME);
-    createEReference(orderListItemLevel1EClass, ORDER_LIST_ITEM_LEVEL1__LIST);
+    quoteTemplateEClass = createEClass(QUOTE_TEMPLATE);
+
+    orderedListEClass = createEClass(ORDERED_LIST);
+    createEReference(orderedListEClass, ORDERED_LIST__ITEMS);
+    createEReference(orderedListEClass, ORDERED_LIST__END);
+
+    unorderedListEClass = createEClass(UNORDERED_LIST);
+    createEReference(unorderedListEClass, UNORDERED_LIST__ITEMS);
+    createEReference(unorderedListEClass, UNORDERED_LIST__END);
+
+    unorderListItemEClass = createEClass(UNORDER_LIST_ITEM);
+    createEAttribute(unorderListItemEClass, UNORDER_LIST_ITEM__LEVEL);
+    createEReference(unorderListItemEClass, UNORDER_LIST_ITEM__ITEMTEXT);
+
+    orderListItemEClass = createEClass(ORDER_LIST_ITEM);
+    createEReference(orderListItemEClass, ORDER_LIST_ITEM__ITEMTEXT);
 
     imageEClass = createEClass(IMAGE);
-    createEReference(imageEClass, IMAGE__NAME);
+    createEAttribute(imageEClass, IMAGE__NAME);
     createEAttribute(imageEClass, IMAGE__TYPE);
     createEAttribute(imageEClass, IMAGE__HALIGN);
     createEReference(imageEClass, IMAGE__ALT_TEXT);
@@ -980,9 +1037,6 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     categoryEClass = createEClass(CATEGORY);
     createEReference(categoryEClass, CATEGORY__NAME);
     createEAttribute(categoryEClass, CATEGORY__VALUE);
-
-    heading1EClass = createEClass(HEADING1);
-    createEReference(heading1EClass, HEADING1__HEADING_VALUE1);
 
     heading2EClass = createEClass(HEADING2);
     createEReference(heading2EClass, HEADING2__HEADING_VALUE2);
@@ -1011,25 +1065,22 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     createEAttribute(textEClass, TEXT__NAME);
 
     hyperLinkEClass = createEClass(HYPER_LINK);
+    createEReference(hyperLinkEClass, HYPER_LINK__ALT_TEXT);
 
     internalEClass = createEClass(INTERNAL);
-    createEReference(internalEClass, INTERNAL__NAME);
-
-    internalAltEClass = createEClass(INTERNAL_ALT);
-    createEReference(internalAltEClass, INTERNAL_ALT__NAME);
-    createEReference(internalAltEClass, INTERNAL_ALT__ALT_TEXT);
+    createEReference(internalEClass, INTERNAL__LINK);
+    createEReference(internalEClass, INTERNAL__ANCHOR);
 
     externalEClass = createEClass(EXTERNAL);
     createEAttribute(externalEClass, EXTERNAL__NAME);
-
-    externalAltEClass = createEClass(EXTERNAL_ALT);
-    createEAttribute(externalAltEClass, EXTERNAL_ALT__NAME);
-    createEReference(externalAltEClass, EXTERNAL_ALT__ALT_TEXT);
 
     anyTextSequenceEClass = createEClass(ANY_TEXT_SEQUENCE);
     createEReference(anyTextSequenceEClass, ANY_TEXT_SEQUENCE__CONTENT);
 
     anyTextEClass = createEClass(ANY_TEXT);
+
+    paragraphEClass = createEClass(PARAGRAPH);
+    createEAttribute(paragraphEClass, PARAGRAPH__PARAGRAPH);
 
     // Create enums
     viewTypeEEnum = createEEnum(VIEW_TYPE);
@@ -1067,12 +1118,13 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     // Add supertypes to classes
     blockQuoteEClass.getESuperTypes().add(this.getParagraphTypes());
     templateEClass.getESuperTypes().add(this.getParagraphTypes());
-    unOrderListItemLevel2EClass.getESuperTypes().add(this.getParagraphTypes());
-    unOrderListItemLevel1EClass.getESuperTypes().add(this.getParagraphTypes());
-    orderListItemLevel1EClass.getESuperTypes().add(this.getParagraphTypes());
+    aboutTemplateEClass.getESuperTypes().add(this.getTemplate());
+    mainTemplateEClass.getESuperTypes().add(this.getTemplate());
+    quoteTemplateEClass.getESuperTypes().add(this.getTemplate());
+    orderedListEClass.getESuperTypes().add(this.getParagraphTypes());
+    unorderedListEClass.getESuperTypes().add(this.getParagraphTypes());
     imageEClass.getESuperTypes().add(this.getParagraphTypes());
     categoryEClass.getESuperTypes().add(this.getParagraphTypes());
-    heading1EClass.getESuperTypes().add(this.getParagraphTypes());
     heading2EClass.getESuperTypes().add(this.getParagraphTypes());
     heading3EClass.getESuperTypes().add(this.getParagraphTypes());
     heading4EClass.getESuperTypes().add(this.getParagraphTypes());
@@ -1085,14 +1137,13 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     textEClass.getESuperTypes().add(this.getAbstractUnformattedInlineContent());
     hyperLinkEClass.getESuperTypes().add(this.getAbstractUnformattedInlineContent());
     internalEClass.getESuperTypes().add(this.getHyperLink());
-    internalAltEClass.getESuperTypes().add(this.getHyperLink());
     externalEClass.getESuperTypes().add(this.getHyperLink());
-    externalAltEClass.getESuperTypes().add(this.getHyperLink());
     anyTextEClass.getESuperTypes().add(this.getParagraphTypes());
+    paragraphEClass.getESuperTypes().add(this.getParagraphTypes());
 
     // Initialize classes and features; add operations and parameters
     initEClass(wikiPageEClass, WikiPage.class, "WikiPage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getWikiPage_Name(), this.getHeading1(), null, "name", null, 0, 1, WikiPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWikiPage_Name(), ecorePackage.getEString(), "name", null, 0, 1, WikiPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getWikiPage_Elements(), this.getParagraphTypes(), null, "elements", null, 0, -1, WikiPage.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(paragraphTypesEClass, ParagraphTypes.class, "ParagraphTypes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1101,22 +1152,33 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     initEReference(getBlockQuote_Content(), this.getAnyTextSequence(), null, "content", null, 0, 1, BlockQuote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(templateEClass, Template.class, "Template", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTemplate_Content(), this.getText(), null, "content", null, 0, -1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTemplate_Type(), ecorePackage.getEString(), "type", null, 0, 1, Template.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(unOrderListItemLevel2EClass, UnOrderListItemLevel2.class, "UnOrderListItemLevel2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getUnOrderListItemLevel2_Name(), this.getAnyText(), null, "name", null, 0, 1, UnOrderListItemLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUnOrderListItemLevel2_List(), this.getAnyTextSequence(), null, "list", null, 0, 1, UnOrderListItemLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(aboutTemplateEClass, AboutTemplate.class, "AboutTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAboutTemplate_Content(), this.getAnyTextSequence(), null, "content", null, 0, -1, AboutTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(unOrderListItemLevel1EClass, UnOrderListItemLevel1.class, "UnOrderListItemLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getUnOrderListItemLevel1_Name(), this.getAnyText(), null, "name", null, 0, 1, UnOrderListItemLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getUnOrderListItemLevel1_List(), this.getAnyTextSequence(), null, "list", null, 0, 1, UnOrderListItemLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(mainTemplateEClass, MainTemplate.class, "MainTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMainTemplate_Content(), this.getAnyTextSequence(), null, "content", null, 0, -1, MainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(orderListItemLevel1EClass, OrderListItemLevel1.class, "OrderListItemLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getOrderListItemLevel1_Name(), this.getAnyText(), null, "name", null, 0, 1, OrderListItemLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getOrderListItemLevel1_List(), this.getAnyTextSequence(), null, "list", null, 0, 1, OrderListItemLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(quoteTemplateEClass, QuoteTemplate.class, "QuoteTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(orderedListEClass, OrderedList.class, "OrderedList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOrderedList_Items(), this.getOrderListItem(), null, "items", null, 0, -1, OrderedList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOrderedList_End(), this.getParagraph(), null, "end", null, 0, 1, OrderedList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(unorderedListEClass, UnorderedList.class, "UnorderedList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getUnorderedList_Items(), this.getUnorderListItem(), null, "items", null, 0, -1, UnorderedList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUnorderedList_End(), this.getParagraph(), null, "end", null, 0, 1, UnorderedList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(unorderListItemEClass, UnorderListItem.class, "UnorderListItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getUnorderListItem_Level(), ecorePackage.getEString(), "level", null, 0, 1, UnorderListItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getUnorderListItem_Itemtext(), this.getAnyTextSequence(), null, "itemtext", null, 0, 1, UnorderListItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(orderListItemEClass, OrderListItem.class, "OrderListItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getOrderListItem_Itemtext(), this.getAnyTextSequence(), null, "itemtext", null, 0, 1, OrderListItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imageEClass, Image.class, "Image", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getImage_Name(), this.getText(), null, "name", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImage_Type(), this.getViewType(), "type", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImage_HAlign(), this.getHorizontalAlign(), "hAlign", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getImage_AltText(), this.getAbstractUnformattedInlineContent(), null, "altText", null, 0, 1, Image.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1125,9 +1187,6 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     initEClass(categoryEClass, Category.class, "Category", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCategory_Name(), this.getText(), null, "name", null, 0, 1, Category.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCategory_Value(), ecorePackage.getEString(), "value", null, 0, 1, Category.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(heading1EClass, Heading1.class, "Heading1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getHeading1_HeadingValue1(), this.getText(), null, "headingValue1", null, 0, 1, Heading1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(heading2EClass, Heading2.class, "Heading2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getHeading2_HeadingValue2(), this.getAbstractUnformattedInlineContent(), null, "headingValue2", null, 0, 1, Heading2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1156,39 +1215,29 @@ public class WikiMLPackageImpl extends EPackageImpl implements WikiMLPackage
     initEAttribute(getText_Name(), ecorePackage.getEString(), "name", null, 0, 1, Text.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(hyperLinkEClass, HyperLink.class, "HyperLink", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getHyperLink_AltText(), this.getAnyText(), null, "altText", null, 0, 1, HyperLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(internalEClass, Internal.class, "Internal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInternal_Name(), this.getText(), null, "name", null, 0, 1, Internal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(internalAltEClass, InternalAlt.class, "InternalAlt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getInternalAlt_Name(), this.getText(), null, "name", null, 0, 1, InternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getInternalAlt_AltText(), this.getAnyText(), null, "altText", null, 0, 1, InternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInternal_Link(), this.getWikiPage(), null, "link", null, 0, 1, Internal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getInternal_Anchor(), this.getText(), null, "anchor", null, 0, 1, Internal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(externalEClass, External.class, "External", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getExternal_Name(), ecorePackage.getEString(), "name", null, 0, 1, External.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(externalAltEClass, ExternalAlt.class, "ExternalAlt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getExternalAlt_Name(), ecorePackage.getEString(), "name", null, 0, 1, ExternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getExternalAlt_AltText(), this.getAnyText(), null, "altText", null, 0, 1, ExternalAlt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(anyTextSequenceEClass, AnyTextSequence.class, "AnyTextSequence", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAnyTextSequence_Content(), this.getAnyText(), null, "content", null, 0, -1, AnyTextSequence.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(anyTextEClass, AnyText.class, "AnyText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+    initEClass(paragraphEClass, Paragraph.class, "Paragraph", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getParagraph_Paragraph(), ecorePackage.getEString(), "paragraph", null, 0, 1, Paragraph.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     // Initialize enums and add enum literals
     initEEnum(viewTypeEEnum, ViewType.class, "ViewType");
     addEEnumLiteral(viewTypeEEnum, ViewType.THUMB);
-    addEEnumLiteral(viewTypeEEnum, ViewType.THUMBNAIL);
-    addEEnumLiteral(viewTypeEEnum, ViewType.FRAME);
-    addEEnumLiteral(viewTypeEEnum, ViewType.FRAMED);
-    addEEnumLiteral(viewTypeEEnum, ViewType.FRAMELESS);
 
     initEEnum(horizontalAlignEEnum, HorizontalAlign.class, "HorizontalAlign");
     addEEnumLiteral(horizontalAlignEEnum, HorizontalAlign.RIGHT);
-    addEEnumLiteral(horizontalAlignEEnum, HorizontalAlign.LEFT);
-    addEEnumLiteral(horizontalAlignEEnum, HorizontalAlign.CENTER);
-    addEEnumLiteral(horizontalAlignEEnum, HorizontalAlign.NONE);
 
     // Create resource
     createResource(eNS_URI);

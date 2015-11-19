@@ -2,8 +2,8 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItem;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,38 +13,39 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Heading1</b></em>'.
+ * An implementation of the model object '<em><b>Order List Item</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.Heading1Impl#getHeadingValue1 <em>Heading Value1</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.OrderListItemImpl#getItemtext <em>Itemtext</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class Heading1Impl extends ParagraphTypesImpl implements Heading1
+public class OrderListItemImpl extends MinimalEObjectImpl.Container implements OrderListItem
 {
   /**
-   * The cached value of the '{@link #getHeadingValue1() <em>Heading Value1</em>}' containment reference.
+   * The cached value of the '{@link #getItemtext() <em>Itemtext</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getHeadingValue1()
+   * @see #getItemtext()
    * @generated
    * @ordered
    */
-  protected Text headingValue1;
+  protected AnyTextSequence itemtext;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected Heading1Impl()
+  protected OrderListItemImpl()
   {
     super();
   }
@@ -57,7 +58,7 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
   @Override
   protected EClass eStaticClass()
   {
-    return WikiMLPackage.Literals.HEADING1;
+    return WikiMLPackage.Literals.ORDER_LIST_ITEM;
   }
 
   /**
@@ -65,9 +66,9 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
    * <!-- end-user-doc -->
    * @generated
    */
-  public Text getHeadingValue1()
+  public AnyTextSequence getItemtext()
   {
-    return headingValue1;
+    return itemtext;
   }
 
   /**
@@ -75,13 +76,13 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetHeadingValue1(Text newHeadingValue1, NotificationChain msgs)
+  public NotificationChain basicSetItemtext(AnyTextSequence newItemtext, NotificationChain msgs)
   {
-    Text oldHeadingValue1 = headingValue1;
-    headingValue1 = newHeadingValue1;
+    AnyTextSequence oldItemtext = itemtext;
+    itemtext = newItemtext;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.HEADING1__HEADING_VALUE1, oldHeadingValue1, newHeadingValue1);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT, oldItemtext, newItemtext);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +93,20 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setHeadingValue1(Text newHeadingValue1)
+  public void setItemtext(AnyTextSequence newItemtext)
   {
-    if (newHeadingValue1 != headingValue1)
+    if (newItemtext != itemtext)
     {
       NotificationChain msgs = null;
-      if (headingValue1 != null)
-        msgs = ((InternalEObject)headingValue1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.HEADING1__HEADING_VALUE1, null, msgs);
-      if (newHeadingValue1 != null)
-        msgs = ((InternalEObject)newHeadingValue1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.HEADING1__HEADING_VALUE1, null, msgs);
-      msgs = basicSetHeadingValue1(newHeadingValue1, msgs);
+      if (itemtext != null)
+        msgs = ((InternalEObject)itemtext).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT, null, msgs);
+      if (newItemtext != null)
+        msgs = ((InternalEObject)newItemtext).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT, null, msgs);
+      msgs = basicSetItemtext(newItemtext, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.HEADING1__HEADING_VALUE1, newHeadingValue1, newHeadingValue1));
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT, newItemtext, newItemtext));
   }
 
   /**
@@ -118,8 +119,8 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__HEADING_VALUE1:
-        return basicSetHeadingValue1(null, msgs);
+      case WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT:
+        return basicSetItemtext(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,8 +135,8 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__HEADING_VALUE1:
-        return getHeadingValue1();
+      case WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT:
+        return getItemtext();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +151,8 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__HEADING_VALUE1:
-        setHeadingValue1((Text)newValue);
+      case WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT:
+        setItemtext((AnyTextSequence)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +168,8 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__HEADING_VALUE1:
-        setHeadingValue1((Text)null);
+      case WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT:
+        setItemtext((AnyTextSequence)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,10 +185,10 @@ public class Heading1Impl extends ParagraphTypesImpl implements Heading1
   {
     switch (featureID)
     {
-      case WikiMLPackage.HEADING1__HEADING_VALUE1:
-        return headingValue1 != null;
+      case WikiMLPackage.ORDER_LIST_ITEM__ITEMTEXT:
+        return itemtext != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //Heading1Impl
+} //OrderListItemImpl

@@ -4,27 +4,28 @@
 package at.ac.univie.swa.ase2015.a9902268.task3.serializer;
 
 import at.ac.univie.swa.ase2015.a9902268.task3.services.WikiMLGrammarAccess;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AboutTemplate;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.BlockQuote;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Bold;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Category;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.External;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalAlt;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading2;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading3;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading4;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading5;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Internal;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalAlt;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Italic;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ItalicBold;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.MainTemplate;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItem;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderedList;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Paragraph;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.QuoteTemplate;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnorderListItem;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnorderedList;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage;
 import com.google.inject.Inject;
@@ -50,6 +51,9 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	@Override
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == WikiMLPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case WikiMLPackage.ABOUT_TEMPLATE:
+				sequence_AboutTemplate(context, (AboutTemplate) semanticObject); 
+				return; 
 			case WikiMLPackage.ANY_TEXT_SEQUENCE:
 				sequence_AnyTextSequence(context, (AnyTextSequence) semanticObject); 
 				return; 
@@ -64,12 +68,6 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 				return; 
 			case WikiMLPackage.EXTERNAL:
 				sequence_External(context, (External) semanticObject); 
-				return; 
-			case WikiMLPackage.EXTERNAL_ALT:
-				sequence_ExternalAlt(context, (ExternalAlt) semanticObject); 
-				return; 
-			case WikiMLPackage.HEADING1:
-				sequence_Heading1(context, (Heading1) semanticObject); 
 				return; 
 			case WikiMLPackage.HEADING2:
 				sequence_Heading2(context, (Heading2) semanticObject); 
@@ -89,29 +87,35 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			case WikiMLPackage.INTERNAL:
 				sequence_Internal(context, (Internal) semanticObject); 
 				return; 
-			case WikiMLPackage.INTERNAL_ALT:
-				sequence_InternalAlt(context, (InternalAlt) semanticObject); 
-				return; 
 			case WikiMLPackage.ITALIC:
 				sequence_Italic(context, (Italic) semanticObject); 
 				return; 
 			case WikiMLPackage.ITALIC_BOLD:
 				sequence_ItalicBold(context, (ItalicBold) semanticObject); 
 				return; 
-			case WikiMLPackage.ORDER_LIST_ITEM_LEVEL1:
-				sequence_OrderListItemLevel1(context, (OrderListItemLevel1) semanticObject); 
+			case WikiMLPackage.MAIN_TEMPLATE:
+				sequence_MainTemplate(context, (MainTemplate) semanticObject); 
 				return; 
-			case WikiMLPackage.TEMPLATE:
-				sequence_Template(context, (Template) semanticObject); 
+			case WikiMLPackage.ORDER_LIST_ITEM:
+				sequence_OrderListItem(context, (OrderListItem) semanticObject); 
+				return; 
+			case WikiMLPackage.ORDERED_LIST:
+				sequence_OrderedList(context, (OrderedList) semanticObject); 
+				return; 
+			case WikiMLPackage.PARAGRAPH:
+				sequence_Paragraph(context, (Paragraph) semanticObject); 
+				return; 
+			case WikiMLPackage.QUOTE_TEMPLATE:
+				sequence_QuoteTemplate(context, (QuoteTemplate) semanticObject); 
 				return; 
 			case WikiMLPackage.TEXT:
 				sequence_Text(context, (Text) semanticObject); 
 				return; 
-			case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1:
-				sequence_UnOrderListItemLevel1(context, (UnOrderListItemLevel1) semanticObject); 
+			case WikiMLPackage.UNORDER_LIST_ITEM:
+				sequence_UnorderListItem(context, (UnorderListItem) semanticObject); 
 				return; 
-			case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL2:
-				sequence_UnOrderListItemLevel2(context, (UnOrderListItemLevel2) semanticObject); 
+			case WikiMLPackage.UNORDERED_LIST:
+				sequence_UnorderedList(context, (UnorderedList) semanticObject); 
 				return; 
 			case WikiMLPackage.WIKI_PAGE:
 				sequence_WikiPage(context, (WikiPage) semanticObject); 
@@ -119,6 +123,15 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Constraint:
+	 *     (type='about' content+=AnyTextSequence+)
+	 */
+	protected void sequence_AboutTemplate(EObject context, AboutTemplate semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
 	
 	/**
 	 * Constraint:
@@ -172,42 +185,10 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=URL (altText=AbstractUnformattedInlineContent | altText=AbstractFormattedInlineContent))
-	 */
-	protected void sequence_ExternalAlt(EObject context, ExternalAlt semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     name=URL
+	 *     (name=URL (altText=AbstractUnformattedInlineContent | altText=AbstractFormattedInlineContent)?)
 	 */
 	protected void sequence_External(EObject context, External semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.EXTERNAL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.EXTERNAL__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getExternalAccess().getNameURLTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     headingValue1=Text
-	 */
-	protected void sequence_Heading1(EObject context, Heading1 semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.HEADING1__HEADING_VALUE1) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.HEADING1__HEADING_VALUE1));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getHeading1Access().getHeadingValue1TextParserRuleCall_1_0(), semanticObject.getHeadingValue1());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -277,7 +258,7 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=Text type=ViewType? hAlign=HorizontalAlign? altText=AbstractUnformattedInlineContent? caption=AnyTextSequence)
+	 *     (name=URL type=ViewType hAlign=HorizontalAlign? altText=AbstractUnformattedInlineContent? caption=AnyTextSequence)
 	 */
 	protected void sequence_Image(EObject context, Image semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -286,26 +267,10 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=Text (altText=AbstractUnformattedInlineContent | altText=AbstractFormattedInlineContent))
-	 */
-	protected void sequence_InternalAlt(EObject context, InternalAlt semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     name=Text
+	 *     (link=[WikiPage|Name]? anchor=Text? (altText=AbstractUnformattedInlineContent | altText=AbstractFormattedInlineContent)?)
 	 */
 	protected void sequence_Internal(EObject context, Internal semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.INTERNAL__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.INTERNAL__NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getInternalAccess().getNameTextParserRuleCall_1_0(), semanticObject.getName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -343,29 +308,69 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=AnyText list=AnyTextSequence)
+	 *     (type='main' content+=AnyTextSequence+)
 	 */
-	protected void sequence_OrderListItemLevel1(EObject context, OrderListItemLevel1 semanticObject) {
+	protected void sequence_MainTemplate(EObject context, MainTemplate semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     itemtext=AnyTextSequence
+	 */
+	protected void sequence_OrderListItem(EObject context, OrderListItem semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.ORDER_LIST_ITEM_LEVEL1__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.ORDER_LIST_ITEM_LEVEL1__NAME));
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.ORDER_LIST_ITEM_LEVEL1__LIST) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.ORDER_LIST_ITEM_LEVEL1__LIST));
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.ORDER_LIST_ITEM__ITEMTEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.ORDER_LIST_ITEM__ITEMTEXT));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getOrderListItemLevel1Access().getNameAnyTextParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getOrderListItemLevel1Access().getListAnyTextSequenceParserRuleCall_2_0(), semanticObject.getList());
+		feeder.accept(grammarAccess.getOrderListItemAccess().getItemtextAnyTextSequenceParserRuleCall_1_0(), semanticObject.getItemtext());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (content+=Text content+=Text+)
+	 *     (items+=OrderListItem+ end=Paragraph)
 	 */
-	protected void sequence_Template(EObject context, Template semanticObject) {
+	protected void sequence_OrderedList(EObject context, OrderedList semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     paragraph='
+	 *     
+	 *     '
+	 */
+	protected void sequence_Paragraph(EObject context, Paragraph semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.PARAGRAPH__PARAGRAPH) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.PARAGRAPH__PARAGRAPH));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getParagraphAccess().getParagraphControl000dControl000aControl000dControl000aKeyword_0(), semanticObject.getParagraph());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     type='''
+	 */
+	protected void sequence_QuoteTemplate(EObject context, QuoteTemplate semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.TEMPLATE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.TEMPLATE__TYPE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getQuoteTemplateAccess().getTypeApostropheKeyword_1_0(), semanticObject.getType());
+		feeder.finish();
 	}
 	
 	
@@ -387,45 +392,25 @@ public class WikiMLSemanticSequencer extends AbstractDelegatingSemanticSequencer
 	
 	/**
 	 * Constraint:
-	 *     (name=AnyText list=AnyTextSequence)
+	 *     ((level='*' | level='**') itemtext=AnyTextSequence)
 	 */
-	protected void sequence_UnOrderListItemLevel1(EObject context, UnOrderListItemLevel1 semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.UN_ORDER_LIST_ITEM_LEVEL1__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.UN_ORDER_LIST_ITEM_LEVEL1__NAME));
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.UN_ORDER_LIST_ITEM_LEVEL1__LIST) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.UN_ORDER_LIST_ITEM_LEVEL1__LIST));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getUnOrderListItemLevel1Access().getNameAnyTextParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getUnOrderListItemLevel1Access().getListAnyTextSequenceParserRuleCall_2_0(), semanticObject.getList());
-		feeder.finish();
+	protected void sequence_UnorderListItem(EObject context, UnorderListItem semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=AnyText list=AnyTextSequence)
+	 *     (items+=UnorderListItem+ end=Paragraph)
 	 */
-	protected void sequence_UnOrderListItemLevel2(EObject context, UnOrderListItemLevel2 semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.UN_ORDER_LIST_ITEM_LEVEL2__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.UN_ORDER_LIST_ITEM_LEVEL2__NAME));
-			if(transientValues.isValueTransient(semanticObject, WikiMLPackage.Literals.UN_ORDER_LIST_ITEM_LEVEL2__LIST) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, WikiMLPackage.Literals.UN_ORDER_LIST_ITEM_LEVEL2__LIST));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getUnOrderListItemLevel2Access().getNameAnyTextParserRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getUnOrderListItemLevel2Access().getListAnyTextSequenceParserRuleCall_2_0(), semanticObject.getList());
-		feeder.finish();
+	protected void sequence_UnorderedList(EObject context, UnorderedList semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=Heading1 elements+=ParagraphTypes*)
+	 *     (name=Name elements+=ParagraphTypes*)
 	 */
 	protected void sequence_WikiPage(EObject context, WikiPage semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

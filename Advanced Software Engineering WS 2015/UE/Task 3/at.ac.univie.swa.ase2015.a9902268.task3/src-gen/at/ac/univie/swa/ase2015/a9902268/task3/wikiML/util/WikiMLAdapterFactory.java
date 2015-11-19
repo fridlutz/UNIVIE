@@ -95,19 +95,39 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
         return createTemplateAdapter();
       }
       @Override
-      public Adapter caseUnOrderListItemLevel2(UnOrderListItemLevel2 object)
+      public Adapter caseAboutTemplate(AboutTemplate object)
       {
-        return createUnOrderListItemLevel2Adapter();
+        return createAboutTemplateAdapter();
       }
       @Override
-      public Adapter caseUnOrderListItemLevel1(UnOrderListItemLevel1 object)
+      public Adapter caseMainTemplate(MainTemplate object)
       {
-        return createUnOrderListItemLevel1Adapter();
+        return createMainTemplateAdapter();
       }
       @Override
-      public Adapter caseOrderListItemLevel1(OrderListItemLevel1 object)
+      public Adapter caseQuoteTemplate(QuoteTemplate object)
       {
-        return createOrderListItemLevel1Adapter();
+        return createQuoteTemplateAdapter();
+      }
+      @Override
+      public Adapter caseOrderedList(OrderedList object)
+      {
+        return createOrderedListAdapter();
+      }
+      @Override
+      public Adapter caseUnorderedList(UnorderedList object)
+      {
+        return createUnorderedListAdapter();
+      }
+      @Override
+      public Adapter caseUnorderListItem(UnorderListItem object)
+      {
+        return createUnorderListItemAdapter();
+      }
+      @Override
+      public Adapter caseOrderListItem(OrderListItem object)
+      {
+        return createOrderListItemAdapter();
       }
       @Override
       public Adapter caseImage(Image object)
@@ -118,11 +138,6 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseCategory(Category object)
       {
         return createCategoryAdapter();
-      }
-      @Override
-      public Adapter caseHeading1(Heading1 object)
-      {
-        return createHeading1Adapter();
       }
       @Override
       public Adapter caseHeading2(Heading2 object)
@@ -185,19 +200,9 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
         return createInternalAdapter();
       }
       @Override
-      public Adapter caseInternalAlt(InternalAlt object)
-      {
-        return createInternalAltAdapter();
-      }
-      @Override
       public Adapter caseExternal(External object)
       {
         return createExternalAdapter();
-      }
-      @Override
-      public Adapter caseExternalAlt(ExternalAlt object)
-      {
-        return createExternalAltAdapter();
       }
       @Override
       public Adapter caseAnyTextSequence(AnyTextSequence object)
@@ -208,6 +213,11 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
       public Adapter caseAnyText(AnyText object)
       {
         return createAnyTextAdapter();
+      }
+      @Override
+      public Adapter caseParagraph(Paragraph object)
+      {
+        return createParagraphAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -292,46 +302,106 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2 <em>Un Order List Item Level2</em>}'.
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AboutTemplate <em>About Template</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel2
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AboutTemplate
    * @generated
    */
-  public Adapter createUnOrderListItemLevel2Adapter()
+  public Adapter createAboutTemplateAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1 <em>Un Order List Item Level1</em>}'.
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.MainTemplate <em>Main Template</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnOrderListItemLevel1
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.MainTemplate
    * @generated
    */
-  public Adapter createUnOrderListItemLevel1Adapter()
+  public Adapter createMainTemplateAdapter()
   {
     return null;
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1 <em>Order List Item Level1</em>}'.
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.QuoteTemplate <em>Quote Template</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItemLevel1
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.QuoteTemplate
    * @generated
    */
-  public Adapter createOrderListItemLevel1Adapter()
+  public Adapter createQuoteTemplateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderedList <em>Ordered List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderedList
+   * @generated
+   */
+  public Adapter createOrderedListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnorderedList <em>Unordered List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnorderedList
+   * @generated
+   */
+  public Adapter createUnorderedListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnorderListItem <em>Unorder List Item</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.UnorderListItem
+   * @generated
+   */
+  public Adapter createUnorderListItemAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItem <em>Order List Item</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.OrderListItem
+   * @generated
+   */
+  public Adapter createOrderListItemAdapter()
   {
     return null;
   }
@@ -362,21 +432,6 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCategoryAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1 <em>Heading1</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1
-   * @generated
-   */
-  public Adapter createHeading1Adapter()
   {
     return null;
   }
@@ -562,21 +617,6 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalAlt <em>Internal Alt</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.InternalAlt
-   * @generated
-   */
-  public Adapter createInternalAltAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.External <em>External</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -587,21 +627,6 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExternalAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalAlt <em>External Alt</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ExternalAlt
-   * @generated
-   */
-  public Adapter createExternalAltAdapter()
   {
     return null;
   }
@@ -632,6 +657,21 @@ public class WikiMLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAnyTextAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Paragraph <em>Paragraph</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Paragraph
+   * @generated
+   */
+  public Adapter createParagraphAdapter()
   {
     return null;
   }

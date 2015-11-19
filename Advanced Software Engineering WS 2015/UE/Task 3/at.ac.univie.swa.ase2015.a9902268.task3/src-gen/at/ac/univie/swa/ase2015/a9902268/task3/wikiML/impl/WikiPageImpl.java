@@ -2,7 +2,6 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Heading1;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ParagraphTypes;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage;
@@ -40,14 +39,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class WikiPageImpl extends MinimalEObjectImpl.Container implements WikiPage
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected Heading1 name;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
@@ -85,7 +94,7 @@ public class WikiPageImpl extends MinimalEObjectImpl.Container implements WikiPa
    * <!-- end-user-doc -->
    * @generated
    */
-  public Heading1 getName()
+  public String getName()
   {
     return name;
   }
@@ -95,37 +104,12 @@ public class WikiPageImpl extends MinimalEObjectImpl.Container implements WikiPa
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(Heading1 newName, NotificationChain msgs)
+  public void setName(String newName)
   {
-    Heading1 oldName = name;
+    String oldName = name;
     name = newName;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.WIKI_PAGE__NAME, oldName, newName);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(Heading1 newName)
-  {
-    if (newName != name)
-    {
-      NotificationChain msgs = null;
-      if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.WIKI_PAGE__NAME, null, msgs);
-      if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.WIKI_PAGE__NAME, null, msgs);
-      msgs = basicSetName(newName, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.WIKI_PAGE__NAME, newName, newName));
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.WIKI_PAGE__NAME, oldName, name));
   }
 
   /**
@@ -152,8 +136,6 @@ public class WikiPageImpl extends MinimalEObjectImpl.Container implements WikiPa
   {
     switch (featureID)
     {
-      case WikiMLPackage.WIKI_PAGE__NAME:
-        return basicSetName(null, msgs);
       case WikiMLPackage.WIKI_PAGE__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
@@ -190,7 +172,7 @@ public class WikiPageImpl extends MinimalEObjectImpl.Container implements WikiPa
     switch (featureID)
     {
       case WikiMLPackage.WIKI_PAGE__NAME:
-        setName((Heading1)newValue);
+        setName((String)newValue);
         return;
       case WikiMLPackage.WIKI_PAGE__ELEMENTS:
         getElements().clear();
@@ -211,7 +193,7 @@ public class WikiPageImpl extends MinimalEObjectImpl.Container implements WikiPa
     switch (featureID)
     {
       case WikiMLPackage.WIKI_PAGE__NAME:
-        setName((Heading1)null);
+        setName(NAME_EDEFAULT);
         return;
       case WikiMLPackage.WIKI_PAGE__ELEMENTS:
         getElements().clear();
@@ -231,11 +213,28 @@ public class WikiPageImpl extends MinimalEObjectImpl.Container implements WikiPa
     switch (featureID)
     {
       case WikiMLPackage.WIKI_PAGE__NAME:
-        return name != null;
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case WikiMLPackage.WIKI_PAGE__ELEMENTS:
         return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
   }
 
 } //WikiPageImpl

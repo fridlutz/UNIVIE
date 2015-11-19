@@ -27,47 +27,7 @@ public enum ViewType implements Enumerator
    * @generated
    * @ordered
    */
-  THUMB(0, "thumb", "thumb"),
-
-  /**
-   * The '<em><b>Thumbnail</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #THUMBNAIL_VALUE
-   * @generated
-   * @ordered
-   */
-  THUMBNAIL(1, "thumbnail", "thumbnail"),
-
-  /**
-   * The '<em><b>Frame</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #FRAME_VALUE
-   * @generated
-   * @ordered
-   */
-  FRAME(2, "frame", "frame"),
-
-  /**
-   * The '<em><b>Framed</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #FRAMED_VALUE
-   * @generated
-   * @ordered
-   */
-  FRAMED(3, "framed", "framed"),
-
-  /**
-   * The '<em><b>Frameless</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #FRAMELESS_VALUE
-   * @generated
-   * @ordered
-   */
-  FRAMELESS(4, "frameless", "frameless");
+  THUMB(0, "thumb", "thumb");
 
   /**
    * The '<em><b>Thumb</b></em>' literal value.
@@ -85,66 +45,6 @@ public enum ViewType implements Enumerator
   public static final int THUMB_VALUE = 0;
 
   /**
-   * The '<em><b>Thumbnail</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Thumbnail</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #THUMBNAIL
-   * @model name="thumbnail"
-   * @generated
-   * @ordered
-   */
-  public static final int THUMBNAIL_VALUE = 1;
-
-  /**
-   * The '<em><b>Frame</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Frame</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #FRAME
-   * @model name="frame"
-   * @generated
-   * @ordered
-   */
-  public static final int FRAME_VALUE = 2;
-
-  /**
-   * The '<em><b>Framed</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Framed</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #FRAMED
-   * @model name="framed"
-   * @generated
-   * @ordered
-   */
-  public static final int FRAMED_VALUE = 3;
-
-  /**
-   * The '<em><b>Frameless</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Frameless</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #FRAMELESS
-   * @model name="frameless"
-   * @generated
-   * @ordered
-   */
-  public static final int FRAMELESS_VALUE = 4;
-
-  /**
    * An array of all the '<em><b>View Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -154,10 +54,6 @@ public enum ViewType implements Enumerator
     new ViewType[]
     {
       THUMB,
-      THUMBNAIL,
-      FRAME,
-      FRAMED,
-      FRAMELESS,
     };
 
   /**
@@ -223,10 +119,6 @@ public enum ViewType implements Enumerator
     switch (value)
     {
       case THUMB_VALUE: return THUMB;
-      case THUMBNAIL_VALUE: return THUMBNAIL;
-      case FRAME_VALUE: return FRAME;
-      case FRAMED_VALUE: return FRAMED;
-      case FRAMELESS_VALUE: return FRAMELESS;
     }
     return null;
   }

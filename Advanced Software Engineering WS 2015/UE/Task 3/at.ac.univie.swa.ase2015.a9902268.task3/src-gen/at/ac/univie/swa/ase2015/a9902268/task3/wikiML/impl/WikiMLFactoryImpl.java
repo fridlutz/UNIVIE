@@ -69,12 +69,15 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
       case WikiMLPackage.PARAGRAPH_TYPES: return createParagraphTypes();
       case WikiMLPackage.BLOCK_QUOTE: return createBlockQuote();
       case WikiMLPackage.TEMPLATE: return createTemplate();
-      case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL2: return createUnOrderListItemLevel2();
-      case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1: return createUnOrderListItemLevel1();
-      case WikiMLPackage.ORDER_LIST_ITEM_LEVEL1: return createOrderListItemLevel1();
+      case WikiMLPackage.ABOUT_TEMPLATE: return createAboutTemplate();
+      case WikiMLPackage.MAIN_TEMPLATE: return createMainTemplate();
+      case WikiMLPackage.QUOTE_TEMPLATE: return createQuoteTemplate();
+      case WikiMLPackage.ORDERED_LIST: return createOrderedList();
+      case WikiMLPackage.UNORDERED_LIST: return createUnorderedList();
+      case WikiMLPackage.UNORDER_LIST_ITEM: return createUnorderListItem();
+      case WikiMLPackage.ORDER_LIST_ITEM: return createOrderListItem();
       case WikiMLPackage.IMAGE: return createImage();
       case WikiMLPackage.CATEGORY: return createCategory();
-      case WikiMLPackage.HEADING1: return createHeading1();
       case WikiMLPackage.HEADING2: return createHeading2();
       case WikiMLPackage.HEADING3: return createHeading3();
       case WikiMLPackage.HEADING4: return createHeading4();
@@ -87,11 +90,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
       case WikiMLPackage.TEXT: return createText();
       case WikiMLPackage.HYPER_LINK: return createHyperLink();
       case WikiMLPackage.INTERNAL: return createInternal();
-      case WikiMLPackage.INTERNAL_ALT: return createInternalAlt();
       case WikiMLPackage.EXTERNAL: return createExternal();
-      case WikiMLPackage.EXTERNAL_ALT: return createExternalAlt();
       case WikiMLPackage.ANY_TEXT_SEQUENCE: return createAnyTextSequence();
       case WikiMLPackage.ANY_TEXT: return createAnyText();
+      case WikiMLPackage.PARAGRAPH: return createParagraph();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -184,10 +186,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnOrderListItemLevel2 createUnOrderListItemLevel2()
+  public AboutTemplate createAboutTemplate()
   {
-    UnOrderListItemLevel2Impl unOrderListItemLevel2 = new UnOrderListItemLevel2Impl();
-    return unOrderListItemLevel2;
+    AboutTemplateImpl aboutTemplate = new AboutTemplateImpl();
+    return aboutTemplate;
   }
 
   /**
@@ -195,10 +197,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public UnOrderListItemLevel1 createUnOrderListItemLevel1()
+  public MainTemplate createMainTemplate()
   {
-    UnOrderListItemLevel1Impl unOrderListItemLevel1 = new UnOrderListItemLevel1Impl();
-    return unOrderListItemLevel1;
+    MainTemplateImpl mainTemplate = new MainTemplateImpl();
+    return mainTemplate;
   }
 
   /**
@@ -206,10 +208,54 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public OrderListItemLevel1 createOrderListItemLevel1()
+  public QuoteTemplate createQuoteTemplate()
   {
-    OrderListItemLevel1Impl orderListItemLevel1 = new OrderListItemLevel1Impl();
-    return orderListItemLevel1;
+    QuoteTemplateImpl quoteTemplate = new QuoteTemplateImpl();
+    return quoteTemplate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OrderedList createOrderedList()
+  {
+    OrderedListImpl orderedList = new OrderedListImpl();
+    return orderedList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UnorderedList createUnorderedList()
+  {
+    UnorderedListImpl unorderedList = new UnorderedListImpl();
+    return unorderedList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public UnorderListItem createUnorderListItem()
+  {
+    UnorderListItemImpl unorderListItem = new UnorderListItemImpl();
+    return unorderListItem;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OrderListItem createOrderListItem()
+  {
+    OrderListItemImpl orderListItem = new OrderListItemImpl();
+    return orderListItem;
   }
 
   /**
@@ -232,17 +278,6 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
   {
     CategoryImpl category = new CategoryImpl();
     return category;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Heading1 createHeading1()
-  {
-    Heading1Impl heading1 = new Heading1Impl();
-    return heading1;
   }
 
   /**
@@ -382,32 +417,10 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public InternalAlt createInternalAlt()
-  {
-    InternalAltImpl internalAlt = new InternalAltImpl();
-    return internalAlt;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public External createExternal()
   {
     ExternalImpl external = new ExternalImpl();
     return external;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public ExternalAlt createExternalAlt()
-  {
-    ExternalAltImpl externalAlt = new ExternalAltImpl();
-    return externalAlt;
   }
 
   /**
@@ -430,6 +443,17 @@ public class WikiMLFactoryImpl extends EFactoryImpl implements WikiMLFactory
   {
     AnyTextImpl anyText = new AnyTextImpl();
     return anyText;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Paragraph createParagraph()
+  {
+    ParagraphImpl paragraph = new ParagraphImpl();
+    return paragraph;
   }
 
   /**

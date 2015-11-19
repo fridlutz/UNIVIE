@@ -5,37 +5,49 @@ generate wikiML "http://www.ac.at/univie/swa/ase2015/a9902268/task3/WikiML"
 //TODO: implement formatting as terminals with exceptions. similar as for JAVADOC example here: https://www.eclipse.org/forums/index.php/t/490044/
 WikiPage:
 //according to wikitext documentation, one single title per page
-	name=Heading1
+	'=' name=Name '='
 	//a page could potentially also exist without content
 	elements+=ParagraphTypes*;
 
 	//handle all types of paragraphs
 //FIXME: this list needs to be ordered, from general cases to specifics
 ParagraphTypes:
-    OrderListItemLevel1 | UnOrderListItemLevel1 | UnOrderListItemLevel2 | Image | Category | Template |
-	AnyText | BlockQuote | Heading1 | Heading2 | Heading3 |
-	Heading4 | Heading5;
+	OrderedList | UnorderedList | Image | Category | Template | AnyText |
+	BlockQuote | Heading2 | Heading3 | Heading4 | Heading5 | Paragraph;
 
 BlockQuote:
 	{BlockQuote} '<blockquote>' (content=(AnyTextSequence)) '</blockquote>';
 
-	//TODO Check how Templates work
 Template:
-	'{{' content+=Text ('|' content+=Text)+ '}}';
+	AboutTemplate | QuoteTemplate | MainTemplate;
 
-UnOrderListItemLevel2:
-	'**' name=(AnyText) list=(AnyTextSequence) ':LIST';
+AboutTemplate:
+	'{{' type='about' ('|' content+=AnyTextSequence)+ '}}';
 
-UnOrderListItemLevel1:
-	'*' name=(AnyText) list=(AnyTextSequence) ':LIST';
+MainTemplate:
+	'{{' type='main' ('|' content+=AnyTextSequence)+ '}}';
 
-OrderListItemLevel1:
-	'#' name=(AnyText) list=(AnyTextSequence) ':LIST';
+QuoteTemplate:
+	'{{' type='\'' '}}';
 
-/*OrderList:
+
+OrderedList:
+	items+=(OrderListItem)+ end=Paragraph
+;
+UnorderedList:
+	items+=(UnorderListItem)+ end=Paragraph
+;
+
+UnorderListItem:
+	level=('*' | '**') itemtext=(AnyTextSequence);
+
+OrderListItem:
+	'#' itemtext=(AnyTextSequence);
+
+	/*OrderList:
 	'#' name=(AnyText) list=(AnyTextSequence) ':LIST';
 */
-	//TODO: terminal rule for filename and supported formats
+//TODO: terminal rule for filename and supported formats
 /* Supported file types 
     jpg/jpeg – recommended for photographic images.
     svg – a vector format recommended for drawings and line-art illustration.
@@ -43,22 +55,19 @@ OrderListItemLevel1:
     gif
 */
 Image:
-	'[[' 'File:' name=Text ('|' type=ViewType)? ('|' hAlign=HorizontalAlign)? ('|alt='
+	'[[' 'File:' name=URL ('|' type=ViewType) ('|' hAlign=HorizontalAlign)? ('|alt='
 	altText=AbstractUnformattedInlineContent)? '|' caption=(AnyTextSequence) ']]';
 
 	//see display modes here: https://en.wikipedia.org/wiki/Help:Visual_file_markup, no displaymode = basic
 enum ViewType:
-	thumb='thumb' | thumbnail='thumbnail' | frame='frame' | framed='framed' | frameless='frameless';
+	thumb='thumb' /*| thumbnail='thumbnail' | frame='frame' | framed='framed' | frameless='frameless'*/;
 
 	//see alignment here: https://en.wikipedia.org/wiki/Help:Visual_file_markup, no displaymode = basic
 enum HorizontalAlign:
-	right='right' | left='left' | center='center' | none='none';
+	right='right'/*| left='left' | center='center' | none='none' */ ;
 
 Category:
 	'[[' 'Category:' name=Text value=('|*?')? ']]';
-
-Heading1:
-	'=' headingValue1=Text '=';
 
 Heading2:
 	'==' headingValue2=(AbstractUnformattedInlineContent) '==';
@@ -92,19 +101,15 @@ Text:
 	name=Name;
 
 HyperLink:
-	(Internal | InternalAlt | External | ExternalAlt);
+	(Internal | External);
 
 Internal:
-	'[[' name=Text ']]';
+	{Internal} '[[' (link=[WikiPage|Name])? ('#' anchor=Text)? ('|' altText=(AbstractUnformattedInlineContent | AbstractFormattedInlineContent))?']]';
 
-InternalAlt:
-	'[[' name=Text '|' altText=(AbstractUnformattedInlineContent | AbstractFormattedInlineContent) ']]';
 
 External:
-	'[' name=URL ']';
+	'[' name=URL (altText=(AbstractUnformattedInlineContent | AbstractFormattedInlineContent))? ']';
 
-ExternalAlt:
-	'[' name=URL altText=(AbstractUnformattedInlineContent | AbstractFormattedInlineContent) ']';
 
 AnyTextSequence /*hidden()*/:
 	{AnyTextSequence} content+=(AnyText)*;
@@ -112,100 +117,103 @@ AnyTextSequence /*hidden()*/:
 AnyText:
 	(AbstractFormattedInlineContent | AbstractUnformattedInlineContent);
 
-
-
 Name:
 	ID ( /*WS*/ ID)*;
+
+Paragraph:
+	paragraph='\r\n\r\n'
+;
 
 	//override of terminals
 
 terminal ID:
-	('A'..'Z' | 'a'..'z' | '_' | '-' | '(' | ')' | ',' | '#' | '"' | '.' | ':' | '0'..'9')*;
-
-terminal ML_COMMENT:
-	'<!--'->'-->';
+	('A'..'Z' | 'a'..'z' | '_' | '-' | '(' | ')' | ','  | '"' | '.' | ':' | '0'..'9')*;
 
 terminal STRING:
-('A'..'Z' | 'a'..'z' | '_' | '-' | '(' | ')' | ',' | '#' | '"' | '.' | ':' | '0'..'9' )*
+('A'..'Z' | 'a'..'z' | '_' | '-' | '(' | ')' | ','  | '"' | '.' | ':' | '0'..'9' )*
 ;
-	//found online: https://xtexterience.wordpress.com/2011/06/08/urls-in-xtext/
-terminal URL:
-	('a'..'z')+ '://' // Protocol
 
-	( // Hostname
-	(('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+) |
-	(('a'..'z' | 'A'..'Z')
-	('a'..'z' | 'A'..'Z' |
-	'0'..'9' |
-	'$' |
-	'-' |
-	'_' |
-	('\\'
-	('0'..'9' | 'a'..'f' | 'A'..'F')
-	('0'..'9' | 'a'..'f' | 'A'..'F')) |
-	('%'
-	('0'..'9')
-	('0'..'9')))*
-	('.'
-	('a'..'z' | 'A'..'Z')
-	('a'..'z' | 'A'..'Z' |
-	'0'..'9' |
-	'$' |
-	'-' |
-	'_' |
-	('\\'
-	('0'..'9' | 'a'..'f' | 'A'..'F')
-	('0'..'9' | 'a'..'f' | 'A'..'F')) |
-	('%'
-	('0'..'9')
-	('0'..'9')))*)*))
-	(':' ('0'..'9')+)? // Portnumber
+terminal ML_COMMENT :
+'<!--' -> '-->' ;
 
-	('/'
-	('a'..'z' | 'A'..'Z' |
-	'0'..'9' |
-	'$' |
-	'-' |
-	'_' |
-	'~' |
-	'+' |
-	'.' |
-	('\\'
-	('0'..'9' | 'a'..'f' | 'A'..'F')
-	('0'..'9' | 'a'..'f' | 'A'..'F')) |
-	('%'
-	('0'..'9')
-	('0'..'9')))*)* // Path
+//found online: https://xtexterience.wordpress.com/2011/06/08/urls-in-xtext/
+terminal URL :
+( 'a' .. 'z' ) + '://' // Protocol
 
-	('?'
-	('a'..'z' | 'A'..'Z' |
-	'0'..'9' |
-	'$' |
-	'-' |
-	'_' |
-	'=' |
-	'&' |
-	';' |
-	('\\'
-	('0'..'9' | 'a'..'f' | 'A'..'F')
-	('0'..'9' | 'a'..'f' | 'A'..'F')) |
-	('%'
-	('0'..'9')
-	('0'..'9')))+
-	('+'
-	('a'..'z' | 'A'..'Z' |
-	'0'..'9' |
-	'$' |
-	'-' |
-	'_' |
-	'=' |
-	'&' |
-	';' |
-	('\\'
-	('0'..'9' | 'a'..'f' | 'A'..'F')
-	('0'..'9' | 'a'..'f' | 'A'..'F')) |
-	('%'
-	('0'..'9')
-	('0'..'9')))+)*)? // Query
+( // Hostname
+( ( '0' .. '9' ) + '.' ( '0' .. '9' ) + '.' ( '0' .. '9' ) + '.' ( '0' .. '9' ) + ) |
+( ( 'a' .. 'z' | 'A' .. 'Z' )
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) *
+( '.'
+( 'a' .. 'z' | 'A' .. 'Z' )
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) * ) * ) )
+( ':' ( '0' .. '9' ) + ) ? // Portnumber
+
+( '/'
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+'~' |
+'+' |
+'.' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) * ) * // Path
+
+( '?'
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+'=' |
+'&' |
+';' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) +
+( '+'
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+'=' |
+'&' |
+';' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) + ) * ) ? // Query
 ;
 	

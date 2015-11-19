@@ -6,7 +6,6 @@ import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AbstractUnformattedInlineC
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.AnyTextSequence;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.HorizontalAlign;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Image;
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.ViewType;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
@@ -38,14 +37,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class ImageImpl extends ParagraphTypesImpl implements Image
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected Text name;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The default value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -133,7 +142,7 @@ public class ImageImpl extends ParagraphTypesImpl implements Image
    * <!-- end-user-doc -->
    * @generated
    */
-  public Text getName()
+  public String getName()
   {
     return name;
   }
@@ -143,37 +152,12 @@ public class ImageImpl extends ParagraphTypesImpl implements Image
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(Text newName, NotificationChain msgs)
+  public void setName(String newName)
   {
-    Text oldName = name;
+    String oldName = name;
     name = newName;
     if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.IMAGE__NAME, oldName, newName);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(Text newName)
-  {
-    if (newName != name)
-    {
-      NotificationChain msgs = null;
-      if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.IMAGE__NAME, null, msgs);
-      if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.IMAGE__NAME, null, msgs);
-      msgs = basicSetName(newName, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.IMAGE__NAME, newName, newName));
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.IMAGE__NAME, oldName, name));
   }
 
   /**
@@ -328,8 +312,6 @@ public class ImageImpl extends ParagraphTypesImpl implements Image
   {
     switch (featureID)
     {
-      case WikiMLPackage.IMAGE__NAME:
-        return basicSetName(null, msgs);
       case WikiMLPackage.IMAGE__ALT_TEXT:
         return basicSetAltText(null, msgs);
       case WikiMLPackage.IMAGE__CAPTION:
@@ -373,7 +355,7 @@ public class ImageImpl extends ParagraphTypesImpl implements Image
     switch (featureID)
     {
       case WikiMLPackage.IMAGE__NAME:
-        setName((Text)newValue);
+        setName((String)newValue);
         return;
       case WikiMLPackage.IMAGE__TYPE:
         setType((ViewType)newValue);
@@ -402,7 +384,7 @@ public class ImageImpl extends ParagraphTypesImpl implements Image
     switch (featureID)
     {
       case WikiMLPackage.IMAGE__NAME:
-        setName((Text)null);
+        setName(NAME_EDEFAULT);
         return;
       case WikiMLPackage.IMAGE__TYPE:
         setType(TYPE_EDEFAULT);
@@ -431,7 +413,7 @@ public class ImageImpl extends ParagraphTypesImpl implements Image
     switch (featureID)
     {
       case WikiMLPackage.IMAGE__NAME:
-        return name != null;
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case WikiMLPackage.IMAGE__TYPE:
         return type != TYPE_EDEFAULT;
       case WikiMLPackage.IMAGE__HALIGN:
@@ -455,7 +437,9 @@ public class ImageImpl extends ParagraphTypesImpl implements Image
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", type: ");
     result.append(type);
     result.append(", hAlign: ");
     result.append(hAlign);

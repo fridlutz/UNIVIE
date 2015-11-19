@@ -12,15 +12,30 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalWikiMLLexer extends Lexer {
+    public static final int RULE_STRING=6;
+    public static final int RULE_SL_COMMENT=9;
     public static final int T__19=19;
     public static final int T__15=15;
+    public static final int T__37=37;
     public static final int T__16=16;
+    public static final int T__38=38;
     public static final int T__17=17;
+    public static final int T__39=39;
     public static final int T__18=18;
+    public static final int T__33=33;
     public static final int T__12=12;
+    public static final int T__34=34;
     public static final int T__13=13;
+    public static final int T__35=35;
     public static final int T__14=14;
+    public static final int T__36=36;
+    public static final int EOF=-1;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_ID=4;
+    public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -28,33 +43,14 @@ public class InternalWikiMLLexer extends Lexer {
     public static final int T__29=29;
     public static final int RULE_URL=5;
     public static final int T__22=22;
-    public static final int RULE_ML_COMMENT=6;
+    public static final int RULE_ML_COMMENT=7;
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__20=20;
-    public static final int T__21=21;
-    public static final int RULE_STRING=7;
-    public static final int RULE_SL_COMMENT=9;
-    public static final int T__37=37;
-    public static final int T__38=38;
-    public static final int T__39=39;
-    public static final int T__33=33;
-    public static final int T__34=34;
-    public static final int T__35=35;
-    public static final int T__36=36;
-    public static final int EOF=-1;
-    public static final int T__30=30;
-    public static final int T__31=31;
-    public static final int T__32=32;
-    public static final int RULE_WS=10;
-    public static final int RULE_ANY_OTHER=11;
-    public static final int T__44=44;
-    public static final int T__45=45;
     public static final int T__40=40;
     public static final int T__41=41;
-    public static final int T__42=42;
-    public static final int T__43=43;
+    public static final int T__20=20;
+    public static final int T__21=21;
 
     // delegates
     // delegators
@@ -95,10 +91,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:12:7: ( 'thumbnail' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:12:9: 'thumbnail'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:12:7: ( 'right' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:12:9: 'right'
             {
-            match("thumbnail"); 
+            match("right"); 
 
 
             }
@@ -116,11 +112,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:13:7: ( 'frame' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:13:9: 'frame'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:13:7: ( '*' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:13:9: '*'
             {
-            match("frame"); 
-
+            match('*'); 
 
             }
 
@@ -137,10 +132,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:14:7: ( 'framed' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:14:9: 'framed'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:14:7: ( '**' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:14:9: '**'
             {
-            match("framed"); 
+            match("**"); 
 
 
             }
@@ -158,11 +153,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:15:7: ( 'frameless' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:15:9: 'frameless'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:15:7: ( '=' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:15:9: '='
             {
-            match("frameless"); 
-
+            match('='); 
 
             }
 
@@ -179,10 +173,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:16:7: ( 'right' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:16:9: 'right'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:16:7: ( '<blockquote>' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:16:9: '<blockquote>'
             {
-            match("right"); 
+            match("<blockquote>"); 
 
 
             }
@@ -200,10 +194,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:17:7: ( 'left' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:17:9: 'left'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:17:7: ( '</blockquote>' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:17:9: '</blockquote>'
             {
-            match("left"); 
+            match("</blockquote>"); 
 
 
             }
@@ -221,10 +215,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:18:7: ( 'center' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:18:9: 'center'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:18:7: ( '{{' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:18:9: '{{'
             {
-            match("center"); 
+            match("{{"); 
 
 
             }
@@ -242,10 +236,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:19:7: ( 'none' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:19:9: 'none'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:19:7: ( '}}' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:19:9: '}}'
             {
-            match("none"); 
+            match("}}"); 
 
 
             }
@@ -263,11 +257,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:20:7: ( '<blockquote>' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:20:9: '<blockquote>'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:20:7: ( '|' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:20:9: '|'
             {
-            match("<blockquote>"); 
-
+            match('|'); 
 
             }
 
@@ -284,11 +277,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:21:7: ( '</blockquote>' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:21:9: '</blockquote>'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:21:7: ( '#' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:21:9: '#'
             {
-            match("</blockquote>"); 
-
+            match('#'); 
 
             }
 
@@ -305,10 +297,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:22:7: ( '{{' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:22:9: '{{'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:22:7: ( '[[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:22:9: '[['
             {
-            match("{{"); 
+            match("[["); 
 
 
             }
@@ -326,10 +318,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:23:7: ( '}}' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:23:9: '}}'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:23:7: ( 'File:' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:23:9: 'File:'
             {
-            match("}}"); 
+            match("File:"); 
 
 
             }
@@ -347,10 +339,11 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:24:7: ( '|' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:24:9: '|'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:24:7: ( ']]' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:24:9: ']]'
             {
-            match('|'); 
+            match("]]"); 
+
 
             }
 
@@ -367,10 +360,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:25:7: ( '**' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:25:9: '**'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:25:7: ( '|alt=' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:25:9: '|alt='
             {
-            match("**"); 
+            match("|alt="); 
 
 
             }
@@ -388,10 +381,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:26:7: ( ':LIST' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:26:9: ':LIST'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:26:7: ( 'Category:' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:26:9: 'Category:'
             {
-            match(":LIST"); 
+            match("Category:"); 
 
 
             }
@@ -409,10 +402,11 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:27:7: ( '*' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:27:9: '*'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:27:7: ( '==' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:27:9: '=='
             {
-            match('*'); 
+            match("=="); 
+
 
             }
 
@@ -429,10 +423,11 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:28:7: ( '#' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:28:9: '#'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:28:7: ( '===' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:28:9: '==='
             {
-            match('#'); 
+            match("==="); 
+
 
             }
 
@@ -449,10 +444,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:29:7: ( '[[' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:29:9: '[['
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:29:7: ( '====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:29:9: '===='
             {
-            match("[["); 
+            match("===="); 
 
 
             }
@@ -470,10 +465,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:30:7: ( 'File:' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:30:9: 'File:'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:30:7: ( '=====' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:30:9: '====='
             {
-            match("File:"); 
+            match("====="); 
 
 
             }
@@ -491,10 +486,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:31:7: ( ']]' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:31:9: ']]'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:31:7: ( '\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:31:9: '\\'\\'\\''
             {
-            match("]]"); 
+            match("'''"); 
 
 
             }
@@ -512,10 +507,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:32:7: ( '|alt=' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:32:9: '|alt='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:32:7: ( '\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:32:9: '\\'\\''
             {
-            match("|alt="); 
+            match("''"); 
 
 
             }
@@ -533,10 +528,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:33:7: ( 'Category:' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:33:9: 'Category:'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:33:7: ( '\\'\\'\\'\\'\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:33:9: '\\'\\'\\'\\'\\''
             {
-            match("Category:"); 
+            match("'''''"); 
 
 
             }
@@ -554,10 +549,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:34:7: ( '=' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:34:9: '='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:34:7: ( '[' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:34:9: '['
             {
-            match('='); 
+            match('['); 
 
             }
 
@@ -574,11 +569,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:35:7: ( '==' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:35:9: '=='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:35:7: ( ']' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:35:9: ']'
             {
-            match("=="); 
-
+            match(']'); 
 
             }
 
@@ -595,10 +589,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:36:7: ( '===' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:36:9: '==='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:36:7: ( 'about' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:36:9: 'about'
             {
-            match("==="); 
+            match("about"); 
 
 
             }
@@ -616,10 +610,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:37:7: ( '====' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:37:9: '===='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:37:7: ( 'main' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:37:9: 'main'
             {
-            match("===="); 
+            match("main"); 
 
 
             }
@@ -637,11 +631,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:38:7: ( '=====' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:38:9: '====='
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:38:7: ( '\\'' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:38:9: '\\''
             {
-            match("====="); 
-
+            match('\''); 
 
             }
 
@@ -658,10 +651,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__40;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:39:7: ( '\\'\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:39:9: '\\'\\'\\''
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:39:7: ( '|*?' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:39:9: '|*?'
             {
-            match("'''"); 
+            match("|*?"); 
 
 
             }
@@ -679,10 +672,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = T__41;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:40:7: ( '\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:40:9: '\\'\\''
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:40:7: ( '\\r\\n\\r\\n' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:40:9: '\\r\\n\\r\\n'
             {
-            match("''"); 
+            match("\r\n\r\n"); 
 
 
             }
@@ -695,103 +688,21 @@ public class InternalWikiMLLexer extends Lexer {
     }
     // $ANTLR end "T__41"
 
-    // $ANTLR start "T__42"
-    public final void mT__42() throws RecognitionException {
-        try {
-            int _type = T__42;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:41:7: ( '\\'\\'\\'\\'\\'' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:41:9: '\\'\\'\\'\\'\\''
-            {
-            match("'''''"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__42"
-
-    // $ANTLR start "T__43"
-    public final void mT__43() throws RecognitionException {
-        try {
-            int _type = T__43;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:42:7: ( '[' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:42:9: '['
-            {
-            match('['); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__43"
-
-    // $ANTLR start "T__44"
-    public final void mT__44() throws RecognitionException {
-        try {
-            int _type = T__44;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:43:7: ( ']' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:43:9: ']'
-            {
-            match(']'); 
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__44"
-
-    // $ANTLR start "T__45"
-    public final void mT__45() throws RecognitionException {
-        try {
-            int _type = T__45;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:44:7: ( '|*?' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:44:9: '|*?'
-            {
-            match("|*?"); 
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "T__45"
-
     // $ANTLR start "RULE_ID"
     public final void mRULE_ID() throws RecognitionException {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4501:9: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '#' | '\"' | '.' | ':' | '0' .. '9' )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4501:11: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '#' | '\"' | '.' | ':' | '0' .. '9' )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4701:9: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '\"' | '.' | ':' | '0' .. '9' )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4701:11: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '\"' | '.' | ':' | '0' .. '9' )*
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4501:11: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '#' | '\"' | '.' | ':' | '0' .. '9' )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4701:11: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '\"' | '.' | ':' | '0' .. '9' )*
             loop1:
             do {
                 int alt1=2;
                 int LA1_0 = input.LA(1);
 
-                if ( ((LA1_0>='\"' && LA1_0<='#')||(LA1_0>='(' && LA1_0<=')')||(LA1_0>=',' && LA1_0<='.')||(LA1_0>='0' && LA1_0<=':')||(LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
+                if ( (LA1_0=='\"'||(LA1_0>='(' && LA1_0<=')')||(LA1_0>=',' && LA1_0<='.')||(LA1_0>='0' && LA1_0<=':')||(LA1_0>='A' && LA1_0<='Z')||LA1_0=='_'||(LA1_0>='a' && LA1_0<='z')) ) {
                     alt1=1;
                 }
 
@@ -800,7 +711,7 @@ public class InternalWikiMLLexer extends Lexer {
             	case 1 :
             	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:
             	    {
-            	    if ( (input.LA(1)>='\"' && input.LA(1)<='#')||(input.LA(1)>='(' && input.LA(1)<=')')||(input.LA(1)>=',' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<=':')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	    if ( input.LA(1)=='\"'||(input.LA(1)>='(' && input.LA(1)<=')')||(input.LA(1)>=',' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<=':')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
             	        input.consume();
 
             	    }
@@ -829,51 +740,103 @@ public class InternalWikiMLLexer extends Lexer {
     }
     // $ANTLR end "RULE_ID"
 
-    // $ANTLR start "RULE_ML_COMMENT"
-    public final void mRULE_ML_COMMENT() throws RecognitionException {
+    // $ANTLR start "RULE_STRING"
+    public final void mRULE_STRING() throws RecognitionException {
         try {
-            int _type = RULE_ML_COMMENT;
+            int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4503:17: ( '<!--' ( options {greedy=false; } : . )* '-->' )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4503:19: '<!--' ( options {greedy=false; } : . )* '-->'
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4703:13: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '\"' | '.' | ':' | '0' .. '9' )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4703:15: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '\"' | '.' | ':' | '0' .. '9' )*
             {
-            match("<!--"); 
-
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4503:26: ( options {greedy=false; } : . )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4703:15: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '\"' | '.' | ':' | '0' .. '9' )*
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0=='-') ) {
-                    int LA2_1 = input.LA(2);
-
-                    if ( (LA2_1=='-') ) {
-                        int LA2_3 = input.LA(3);
-
-                        if ( (LA2_3=='>') ) {
-                            alt2=2;
-                        }
-                        else if ( ((LA2_3>='\u0000' && LA2_3<='=')||(LA2_3>='?' && LA2_3<='\uFFFF')) ) {
-                            alt2=1;
-                        }
-
-
-                    }
-                    else if ( ((LA2_1>='\u0000' && LA2_1<=',')||(LA2_1>='.' && LA2_1<='\uFFFF')) ) {
-                        alt2=1;
-                    }
-
-
-                }
-                else if ( ((LA2_0>='\u0000' && LA2_0<=',')||(LA2_0>='.' && LA2_0<='\uFFFF')) ) {
+                if ( (LA2_0=='\"'||(LA2_0>='(' && LA2_0<=')')||(LA2_0>=',' && LA2_0<='.')||(LA2_0>='0' && LA2_0<=':')||(LA2_0>='A' && LA2_0<='Z')||LA2_0=='_'||(LA2_0>='a' && LA2_0<='z')) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4503:54: .
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:
+            	    {
+            	    if ( input.LA(1)=='\"'||(input.LA(1)>='(' && input.LA(1)<=')')||(input.LA(1)>=',' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<=':')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
+            	        input.consume();
+
+            	    }
+            	    else {
+            	        MismatchedSetException mse = new MismatchedSetException(null,input);
+            	        recover(mse);
+            	        throw mse;}
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop2;
+                }
+            } while (true);
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "RULE_STRING"
+
+    // $ANTLR start "RULE_ML_COMMENT"
+    public final void mRULE_ML_COMMENT() throws RecognitionException {
+        try {
+            int _type = RULE_ML_COMMENT;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4705:17: ( '<!--' ( options {greedy=false; } : . )* '-->' )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4705:19: '<!--' ( options {greedy=false; } : . )* '-->'
+            {
+            match("<!--"); 
+
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4705:26: ( options {greedy=false; } : . )*
+            loop3:
+            do {
+                int alt3=2;
+                int LA3_0 = input.LA(1);
+
+                if ( (LA3_0=='-') ) {
+                    int LA3_1 = input.LA(2);
+
+                    if ( (LA3_1=='-') ) {
+                        int LA3_3 = input.LA(3);
+
+                        if ( (LA3_3=='>') ) {
+                            alt3=2;
+                        }
+                        else if ( ((LA3_3>='\u0000' && LA3_3<='=')||(LA3_3>='?' && LA3_3<='\uFFFF')) ) {
+                            alt3=1;
+                        }
+
+
+                    }
+                    else if ( ((LA3_1>='\u0000' && LA3_1<=',')||(LA3_1>='.' && LA3_1<='\uFFFF')) ) {
+                        alt3=1;
+                    }
+
+
+                }
+                else if ( ((LA3_0>='\u0000' && LA3_0<=',')||(LA3_0>='.' && LA3_0<='\uFFFF')) ) {
+                    alt3=1;
+                }
+
+
+                switch (alt3) {
+            	case 1 :
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4705:54: .
             	    {
             	    matchAny(); 
 
@@ -881,7 +844,7 @@ public class InternalWikiMLLexer extends Lexer {
             	    break;
 
             	default :
-            	    break loop2;
+            	    break loop3;
                 }
             } while (true);
 
@@ -898,67 +861,15 @@ public class InternalWikiMLLexer extends Lexer {
     }
     // $ANTLR end "RULE_ML_COMMENT"
 
-    // $ANTLR start "RULE_STRING"
-    public final void mRULE_STRING() throws RecognitionException {
-        try {
-            int _type = RULE_STRING;
-            int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4505:13: ( ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '#' | '\"' | '.' | ':' | '0' .. '9' )* )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4505:15: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '#' | '\"' | '.' | ':' | '0' .. '9' )*
-            {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4505:15: ( 'A' .. 'Z' | 'a' .. 'z' | '_' | '-' | '(' | ')' | ',' | '#' | '\"' | '.' | ':' | '0' .. '9' )*
-            loop3:
-            do {
-                int alt3=2;
-                int LA3_0 = input.LA(1);
-
-                if ( ((LA3_0>='\"' && LA3_0<='#')||(LA3_0>='(' && LA3_0<=')')||(LA3_0>=',' && LA3_0<='.')||(LA3_0>='0' && LA3_0<=':')||(LA3_0>='A' && LA3_0<='Z')||LA3_0=='_'||(LA3_0>='a' && LA3_0<='z')) ) {
-                    alt3=1;
-                }
-
-
-                switch (alt3) {
-            	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:
-            	    {
-            	    if ( (input.LA(1)>='\"' && input.LA(1)<='#')||(input.LA(1)>='(' && input.LA(1)<=')')||(input.LA(1)>=',' && input.LA(1)<='.')||(input.LA(1)>='0' && input.LA(1)<=':')||(input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z') ) {
-            	        input.consume();
-
-            	    }
-            	    else {
-            	        MismatchedSetException mse = new MismatchedSetException(null,input);
-            	        recover(mse);
-            	        throw mse;}
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop3;
-                }
-            } while (true);
-
-
-            }
-
-            state.type = _type;
-            state.channel = _channel;
-        }
-        finally {
-        }
-    }
-    // $ANTLR end "RULE_STRING"
-
     // $ANTLR start "RULE_URL"
     public final void mRULE_URL() throws RecognitionException {
         try {
             int _type = RULE_URL;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:10: ( ( 'a' .. 'z' )+ '://' ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ) ( ':' ( '0' .. '9' )+ )? ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )? )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:12: ( 'a' .. 'z' )+ '://' ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ) ( ':' ( '0' .. '9' )+ )? ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )?
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:10: ( ( 'a' .. 'z' )+ '://' ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ) ( ':' ( '0' .. '9' )+ )? ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )? )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:12: ( 'a' .. 'z' )+ '://' ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ) ( ':' ( '0' .. '9' )+ )? ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )?
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:12: ( 'a' .. 'z' )+
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:12: ( 'a' .. 'z' )+
             int cnt4=0;
             loop4:
             do {
@@ -972,7 +883,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                 switch (alt4) {
             	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:13: 'a' .. 'z'
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:13: 'a' .. 'z'
             	    {
             	    matchRange('a','z'); 
 
@@ -990,7 +901,7 @@ public class InternalWikiMLLexer extends Lexer {
 
             match("://"); 
 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:30: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:30: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ | ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )* )
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -1008,9 +919,9 @@ public class InternalWikiMLLexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:31: ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:31: ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+ '.' ( '0' .. '9' )+
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:31: ( '0' .. '9' )+
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:31: ( '0' .. '9' )+
                     int cnt5=0;
                     loop5:
                     do {
@@ -1024,7 +935,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:32: '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:32: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1041,7 +952,7 @@ public class InternalWikiMLLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:47: ( '0' .. '9' )+
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:47: ( '0' .. '9' )+
                     int cnt6=0;
                     loop6:
                     do {
@@ -1055,7 +966,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:48: '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:48: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1072,7 +983,7 @@ public class InternalWikiMLLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:63: ( '0' .. '9' )+
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:63: ( '0' .. '9' )+
                     int cnt7=0;
                     loop7:
                     do {
@@ -1086,7 +997,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                         switch (alt7) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:64: '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:64: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1103,7 +1014,7 @@ public class InternalWikiMLLexer extends Lexer {
                     } while (true);
 
                     match('.'); 
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:79: ( '0' .. '9' )+
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:79: ( '0' .. '9' )+
                     int cnt8=0;
                     loop8:
                     do {
@@ -1117,7 +1028,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                         switch (alt8) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:80: '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:80: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1137,7 +1048,7 @@ public class InternalWikiMLLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:91: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:91: ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
                     {
                     if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
                         input.consume();
@@ -1148,56 +1059,56 @@ public class InternalWikiMLLexer extends Lexer {
                         recover(mse);
                         throw mse;}
 
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:111: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:111: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
                     loop9:
                     do {
                         int alt9=9;
                         alt9 = dfa9.predict(input);
                         switch (alt9) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:112: 'a' .. 'z'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:112: 'a' .. 'z'
                     	    {
                     	    matchRange('a','z'); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:121: 'A' .. 'Z'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:121: 'A' .. 'Z'
                     	    {
                     	    matchRange('A','Z'); 
 
                     	    }
                     	    break;
                     	case 3 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:130: '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:130: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
                     	    }
                     	    break;
                     	case 4 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:139: '$'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:139: '$'
                     	    {
                     	    match('$'); 
 
                     	    }
                     	    break;
                     	case 5 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:143: '-'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:143: '-'
                     	    {
                     	    match('-'); 
 
                     	    }
                     	    break;
                     	case 6 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:147: '_'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:147: '_'
                     	    {
                     	    match('_'); 
 
                     	    }
                     	    break;
                     	case 7 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:151: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:151: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
                     	    {
                     	    match('\\'); 
                     	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1222,7 +1133,7 @@ public class InternalWikiMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 8 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:214: '%' '0' .. '9' '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:214: '%' '0' .. '9' '0' .. '9'
                     	    {
                     	    match('%'); 
                     	    matchRange('0','9'); 
@@ -1236,7 +1147,7 @@ public class InternalWikiMLLexer extends Lexer {
                         }
                     } while (true);
 
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:238: ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:238: ( '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
                     loop11:
                     do {
                         int alt11=2;
@@ -1249,7 +1160,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                         switch (alt11) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:239: '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:239: '.' ( 'a' .. 'z' | 'A' .. 'Z' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
                     	    {
                     	    match('.'); 
                     	    if ( (input.LA(1)>='A' && input.LA(1)<='Z')||(input.LA(1)>='a' && input.LA(1)<='z') ) {
@@ -1261,56 +1172,56 @@ public class InternalWikiMLLexer extends Lexer {
                     	        recover(mse);
                     	        throw mse;}
 
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:263: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:263: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
                     	    loop10:
                     	    do {
                     	        int alt10=9;
                     	        alt10 = dfa10.predict(input);
                     	        switch (alt10) {
                     	    	case 1 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:264: 'a' .. 'z'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:264: 'a' .. 'z'
                     	    	    {
                     	    	    matchRange('a','z'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 2 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:273: 'A' .. 'Z'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:273: 'A' .. 'Z'
                     	    	    {
                     	    	    matchRange('A','Z'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 3 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:282: '0' .. '9'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:282: '0' .. '9'
                     	    	    {
                     	    	    matchRange('0','9'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 4 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:291: '$'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:291: '$'
                     	    	    {
                     	    	    match('$'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 5 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:295: '-'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:295: '-'
                     	    	    {
                     	    	    match('-'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 6 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:299: '_'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:299: '_'
                     	    	    {
                     	    	    match('_'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 7 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:303: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:303: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
                     	    	    {
                     	    	    match('\\'); 
                     	    	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1335,7 +1246,7 @@ public class InternalWikiMLLexer extends Lexer {
                     	    	    }
                     	    	    break;
                     	    	case 8 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:366: '%' '0' .. '9' '0' .. '9'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:366: '%' '0' .. '9' '0' .. '9'
                     	    	    {
                     	    	    match('%'); 
                     	    	    matchRange('0','9'); 
@@ -1364,7 +1275,7 @@ public class InternalWikiMLLexer extends Lexer {
 
             }
 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:393: ( ':' ( '0' .. '9' )+ )?
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:393: ( ':' ( '0' .. '9' )+ )?
             int alt14=2;
             int LA14_0 = input.LA(1);
 
@@ -1373,10 +1284,10 @@ public class InternalWikiMLLexer extends Lexer {
             }
             switch (alt14) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:394: ':' ( '0' .. '9' )+
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:394: ':' ( '0' .. '9' )+
                     {
                     match(':'); 
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:398: ( '0' .. '9' )+
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:398: ( '0' .. '9' )+
                     int cnt13=0;
                     loop13:
                     do {
@@ -1390,7 +1301,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                         switch (alt13) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:399: '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:399: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
@@ -1412,7 +1323,7 @@ public class InternalWikiMLLexer extends Lexer {
 
             }
 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:412: ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:412: ( '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )* )*
             loop16:
             do {
                 int alt16=2;
@@ -1425,80 +1336,80 @@ public class InternalWikiMLLexer extends Lexer {
 
                 switch (alt16) {
             	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:413: '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:413: '/' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
             	    {
             	    match('/'); 
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:417: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:417: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*
             	    loop15:
             	    do {
             	        int alt15=12;
             	        alt15 = dfa15.predict(input);
             	        switch (alt15) {
             	    	case 1 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:418: 'a' .. 'z'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:418: 'a' .. 'z'
             	    	    {
             	    	    matchRange('a','z'); 
 
             	    	    }
             	    	    break;
             	    	case 2 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:427: 'A' .. 'Z'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:427: 'A' .. 'Z'
             	    	    {
             	    	    matchRange('A','Z'); 
 
             	    	    }
             	    	    break;
             	    	case 3 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:436: '0' .. '9'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:436: '0' .. '9'
             	    	    {
             	    	    matchRange('0','9'); 
 
             	    	    }
             	    	    break;
             	    	case 4 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:445: '$'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:445: '$'
             	    	    {
             	    	    match('$'); 
 
             	    	    }
             	    	    break;
             	    	case 5 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:449: '-'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:449: '-'
             	    	    {
             	    	    match('-'); 
 
             	    	    }
             	    	    break;
             	    	case 6 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:453: '_'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:453: '_'
             	    	    {
             	    	    match('_'); 
 
             	    	    }
             	    	    break;
             	    	case 7 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:457: '~'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:457: '~'
             	    	    {
             	    	    match('~'); 
 
             	    	    }
             	    	    break;
             	    	case 8 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:461: '+'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:461: '+'
             	    	    {
             	    	    match('+'); 
 
             	    	    }
             	    	    break;
             	    	case 9 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:465: '.'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:465: '.'
             	    	    {
             	    	    match('.'); 
 
             	    	    }
             	    	    break;
             	    	case 10 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:469: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:469: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
             	    	    {
             	    	    match('\\'); 
             	    	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1523,7 +1434,7 @@ public class InternalWikiMLLexer extends Lexer {
             	    	    }
             	    	    break;
             	    	case 11 :
-            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:532: '%' '0' .. '9' '0' .. '9'
+            	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:532: '%' '0' .. '9' '0' .. '9'
             	    	    {
             	    	    match('%'); 
             	    	    matchRange('0','9'); 
@@ -1546,7 +1457,7 @@ public class InternalWikiMLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:558: ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )?
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:558: ( '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )* )?
             int alt20=2;
             int LA20_0 = input.LA(1);
 
@@ -1555,10 +1466,10 @@ public class InternalWikiMLLexer extends Lexer {
             }
             switch (alt20) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:559: '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )*
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:559: '?' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )*
                     {
                     match('?'); 
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:563: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:563: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
                     int cnt17=0;
                     loop17:
                     do {
@@ -1566,70 +1477,70 @@ public class InternalWikiMLLexer extends Lexer {
                         alt17 = dfa17.predict(input);
                         switch (alt17) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:564: 'a' .. 'z'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:564: 'a' .. 'z'
                     	    {
                     	    matchRange('a','z'); 
 
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:573: 'A' .. 'Z'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:573: 'A' .. 'Z'
                     	    {
                     	    matchRange('A','Z'); 
 
                     	    }
                     	    break;
                     	case 3 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:582: '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:582: '0' .. '9'
                     	    {
                     	    matchRange('0','9'); 
 
                     	    }
                     	    break;
                     	case 4 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:591: '$'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:591: '$'
                     	    {
                     	    match('$'); 
 
                     	    }
                     	    break;
                     	case 5 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:595: '-'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:595: '-'
                     	    {
                     	    match('-'); 
 
                     	    }
                     	    break;
                     	case 6 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:599: '_'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:599: '_'
                     	    {
                     	    match('_'); 
 
                     	    }
                     	    break;
                     	case 7 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:603: '='
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:603: '='
                     	    {
                     	    match('='); 
 
                     	    }
                     	    break;
                     	case 8 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:607: '&'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:607: '&'
                     	    {
                     	    match('&'); 
 
                     	    }
                     	    break;
                     	case 9 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:611: ';'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:611: ';'
                     	    {
                     	    match(';'); 
 
                     	    }
                     	    break;
                     	case 10 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:615: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:615: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
                     	    {
                     	    match('\\'); 
                     	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1654,7 +1565,7 @@ public class InternalWikiMLLexer extends Lexer {
                     	    }
                     	    break;
                     	case 11 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:678: '%' '0' .. '9' '0' .. '9'
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:678: '%' '0' .. '9' '0' .. '9'
                     	    {
                     	    match('%'); 
                     	    matchRange('0','9'); 
@@ -1672,7 +1583,7 @@ public class InternalWikiMLLexer extends Lexer {
                         cnt17++;
                     } while (true);
 
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:702: ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )*
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:702: ( '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+ )*
                     loop19:
                     do {
                         int alt19=2;
@@ -1685,10 +1596,10 @@ public class InternalWikiMLLexer extends Lexer {
 
                         switch (alt19) {
                     	case 1 :
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:703: '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:703: '+' ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
                     	    {
                     	    match('+'); 
-                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:707: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
+                    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:707: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+
                     	    int cnt18=0;
                     	    loop18:
                     	    do {
@@ -1696,70 +1607,70 @@ public class InternalWikiMLLexer extends Lexer {
                     	        alt18 = dfa18.predict(input);
                     	        switch (alt18) {
                     	    	case 1 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:708: 'a' .. 'z'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:708: 'a' .. 'z'
                     	    	    {
                     	    	    matchRange('a','z'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 2 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:717: 'A' .. 'Z'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:717: 'A' .. 'Z'
                     	    	    {
                     	    	    matchRange('A','Z'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 3 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:726: '0' .. '9'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:726: '0' .. '9'
                     	    	    {
                     	    	    matchRange('0','9'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 4 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:735: '$'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:735: '$'
                     	    	    {
                     	    	    match('$'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 5 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:739: '-'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:739: '-'
                     	    	    {
                     	    	    match('-'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 6 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:743: '_'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:743: '_'
                     	    	    {
                     	    	    match('_'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 7 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:747: '='
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:747: '='
                     	    	    {
                     	    	    match('='); 
 
                     	    	    }
                     	    	    break;
                     	    	case 8 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:751: '&'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:751: '&'
                     	    	    {
                     	    	    match('&'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 9 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:755: ';'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:755: ';'
                     	    	    {
                     	    	    match(';'); 
 
                     	    	    }
                     	    	    break;
                     	    	case 10 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:759: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:759: '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
                     	    	    {
                     	    	    match('\\'); 
                     	    	    if ( (input.LA(1)>='0' && input.LA(1)<='9')||(input.LA(1)>='A' && input.LA(1)<='F')||(input.LA(1)>='a' && input.LA(1)<='f') ) {
@@ -1784,7 +1695,7 @@ public class InternalWikiMLLexer extends Lexer {
                     	    	    }
                     	    	    break;
                     	    	case 11 :
-                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4507:822: '%' '0' .. '9' '0' .. '9'
+                    	    	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4707:822: '%' '0' .. '9' '0' .. '9'
                     	    	    {
                     	    	    match('%'); 
                     	    	    matchRange('0','9'); 
@@ -1833,10 +1744,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4509:10: ( ( '0' .. '9' )+ )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4509:12: ( '0' .. '9' )+
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4709:10: ( ( '0' .. '9' )+ )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4709:12: ( '0' .. '9' )+
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4509:12: ( '0' .. '9' )+
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4709:12: ( '0' .. '9' )+
             int cnt21=0;
             loop21:
             do {
@@ -1850,7 +1761,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                 switch (alt21) {
             	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4509:13: '0' .. '9'
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4709:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -1882,12 +1793,12 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4711:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4711:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4711:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop22:
             do {
                 int alt22=2;
@@ -1900,7 +1811,7 @@ public class InternalWikiMLLexer extends Lexer {
 
                 switch (alt22) {
             	case 1 :
-            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4711:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1920,7 +1831,7 @@ public class InternalWikiMLLexer extends Lexer {
                 }
             } while (true);
 
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:40: ( ( '\\r' )? '\\n' )?
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4711:40: ( ( '\\r' )? '\\n' )?
             int alt24=2;
             int LA24_0 = input.LA(1);
 
@@ -1929,9 +1840,9 @@ public class InternalWikiMLLexer extends Lexer {
             }
             switch (alt24) {
                 case 1 :
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:41: ( '\\r' )? '\\n'
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4711:41: ( '\\r' )? '\\n'
                     {
-                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:41: ( '\\r' )?
+                    // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4711:41: ( '\\r' )?
                     int alt23=2;
                     int LA23_0 = input.LA(1);
 
@@ -1940,7 +1851,7 @@ public class InternalWikiMLLexer extends Lexer {
                     }
                     switch (alt23) {
                         case 1 :
-                            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4511:41: '\\r'
+                            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4711:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1972,10 +1883,10 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4513:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4513:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4713:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4713:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4513:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4713:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt25=0;
             loop25:
             do {
@@ -2029,8 +1940,8 @@ public class InternalWikiMLLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4515:16: ( . )
-            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4515:18: .
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4715:16: ( . )
+            // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:4715:18: .
             {
             matchAny(); 
 
@@ -2045,8 +1956,8 @@ public class InternalWikiMLLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_ID | RULE_ML_COMMENT | RULE_STRING | RULE_URL | RULE_INT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt26=42;
+        // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_URL | RULE_INT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt26=38;
         alt26 = dfa26.predict(input);
         switch (alt26) {
             case 1 :
@@ -2260,84 +2171,56 @@ public class InternalWikiMLLexer extends Lexer {
                 }
                 break;
             case 31 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:190: T__42
-                {
-                mT__42(); 
-
-                }
-                break;
-            case 32 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:196: T__43
-                {
-                mT__43(); 
-
-                }
-                break;
-            case 33 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:202: T__44
-                {
-                mT__44(); 
-
-                }
-                break;
-            case 34 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:208: T__45
-                {
-                mT__45(); 
-
-                }
-                break;
-            case 35 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:214: RULE_ID
+                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:190: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 36 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:222: RULE_ML_COMMENT
-                {
-                mRULE_ML_COMMENT(); 
-
-                }
-                break;
-            case 37 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:238: RULE_STRING
+            case 32 :
+                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:198: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 38 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:250: RULE_URL
+            case 33 :
+                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:210: RULE_ML_COMMENT
+                {
+                mRULE_ML_COMMENT(); 
+
+                }
+                break;
+            case 34 :
+                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:226: RULE_URL
                 {
                 mRULE_URL(); 
 
                 }
                 break;
-            case 39 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:259: RULE_INT
+            case 35 :
+                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:235: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 40 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:268: RULE_SL_COMMENT
+            case 36 :
+                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:244: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 41 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:284: RULE_WS
+            case 37 :
+                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:260: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 42 :
-                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:292: RULE_ANY_OTHER
+            case 38 :
+                // ../at.ac.univie.swa.ase2015.a9902268.task3.ui/src-gen/at/ac/univie/swa/ase2015/a9902268/task3/ui/contentassist/antlr/internal/InternalWikiML.g:1:268: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -2411,7 +2294,7 @@ public class InternalWikiMLLexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "()* loopback of 4507:111: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
+            return "()* loopback of 4707:111: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
         }
     }
     static final String DFA10_eotS =
@@ -2470,7 +2353,7 @@ public class InternalWikiMLLexer extends Lexer {
             this.transition = DFA10_transition;
         }
         public String getDescription() {
-            return "()* loopback of 4507:263: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
+            return "()* loopback of 4707:263: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
         }
     }
     static final String DFA15_eotS =
@@ -2532,7 +2415,7 @@ public class InternalWikiMLLexer extends Lexer {
             this.transition = DFA15_transition;
         }
         public String getDescription() {
-            return "()* loopback of 4507:417: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
+            return "()* loopback of 4707:417: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '~' | '+' | '.' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )*";
         }
     }
     static final String DFA17_eotS =
@@ -2594,7 +2477,7 @@ public class InternalWikiMLLexer extends Lexer {
             this.transition = DFA17_transition;
         }
         public String getDescription() {
-            return "()+ loopback of 4507:563: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+";
+            return "()+ loopback of 4707:563: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+";
         }
     }
     static final String DFA18_eotS =
@@ -2656,106 +2539,92 @@ public class InternalWikiMLLexer extends Lexer {
             this.transition = DFA18_transition;
         }
         public String getDescription() {
-            return "()+ loopback of 4507:707: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+";
+            return "()+ loopback of 4707:707: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '$' | '-' | '_' | '=' | '&' | ';' | '\\\\' ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) | '%' '0' .. '9' '0' .. '9' )+";
         }
     }
     static final String DFA26_eotS =
-        "\7\25\3\32\1\53\1\55\1\25\1\57\1\61\1\25\1\64\1\25\1\67\1\32\1"+
-        "\25\1\uffff\2\25\1\32\2\uffff\11\25\12\uffff\1\25\3\uffff\1\25\2"+
-        "\uffff\1\25\1\107\1\uffff\1\111\1\25\2\uffff\1\25\1\uffff\10\25"+
-        "\1\124\1\uffff\1\126\1\uffff\3\25\1\132\1\25\1\134\3\25\1\141\3"+
-        "\uffff\1\143\1\146\1\147\1\uffff\1\25\1\uffff\1\151\1\152\1\25\2"+
-        "\uffff\1\25\1\uffff\1\155\1\25\2\uffff\1\157\2\uffff\2\25\1\uffff"+
-        "\1\25\1\uffff\4\25\1\167\1\170\1\171\3\uffff";
+        "\3\23\1\37\1\41\3\30\1\51\1\uffff\1\54\1\23\1\57\1\23\1\62\2\23"+
+        "\1\66\1\23\1\uffff\2\23\1\30\2\uffff\5\23\2\uffff\1\75\14\uffff"+
+        "\1\23\2\uffff\1\23\1\101\1\uffff\2\23\1\66\1\uffff\1\23\1\uffff"+
+        "\1\23\1\uffff\1\23\1\110\1\uffff\2\23\1\114\1\uffff\2\23\1\66\2"+
+        "\23\1\123\1\uffff\2\23\2\uffff\1\23\1\127\1\130\1\131\1\132\2\uffff"+
+        "\1\133\1\23\1\135\5\uffff\1\23\1\uffff\2\23\1\141\1\uffff";
     static final String DFA26_eofS =
-        "\172\uffff";
+        "\142\uffff";
     static final String DFA26_minS =
-        "\1\0\6\42\1\41\1\173\1\175\2\52\2\42\1\133\1\42\1\135\1\42\1\75"+
-        "\1\47\1\42\1\uffff\2\42\1\57\2\uffff\11\42\12\uffff\1\42\3\uffff"+
-        "\1\42\2\uffff\1\42\1\75\1\uffff\1\47\1\42\2\uffff\1\42\1\uffff\10"+
-        "\42\1\75\1\uffff\1\47\1\uffff\11\42\1\75\3\uffff\3\42\1\uffff\1"+
-        "\42\1\uffff\3\42\2\uffff\1\42\1\uffff\2\42\2\uffff\1\42\2\uffff"+
-        "\2\42\1\uffff\1\42\1\uffff\7\42\3\uffff";
+        "\1\0\2\42\1\52\1\75\1\41\1\173\1\175\1\52\1\uffff\1\133\1\42\1"+
+        "\135\1\42\1\47\2\42\1\12\1\42\1\uffff\2\42\1\57\2\uffff\5\42\2\uffff"+
+        "\1\75\14\uffff\1\42\2\uffff\1\42\1\47\1\uffff\2\42\1\15\1\uffff"+
+        "\1\42\1\uffff\1\42\1\uffff\1\42\1\75\1\uffff\2\42\1\47\1\uffff\2"+
+        "\42\1\12\2\42\1\75\1\uffff\2\42\2\uffff\2\42\1\11\2\42\2\uffff\3"+
+        "\42\5\uffff\1\42\1\uffff\3\42\1\uffff";
     static final String DFA26_maxS =
-        "\1\uffff\6\172\1\142\1\173\1\175\1\141\1\52\2\172\1\133\1\172\1"+
-        "\135\1\172\1\75\1\47\1\172\1\uffff\2\172\1\57\2\uffff\11\172\12"+
-        "\uffff\1\172\3\uffff\1\172\2\uffff\1\172\1\75\1\uffff\1\47\1\172"+
-        "\2\uffff\1\172\1\uffff\10\172\1\75\1\uffff\1\47\1\uffff\11\172\1"+
-        "\75\3\uffff\3\172\1\uffff\1\172\1\uffff\3\172\2\uffff\1\172\1\uffff"+
-        "\2\172\2\uffff\1\172\2\uffff\2\172\1\uffff\1\172\1\uffff\7\172\3"+
-        "\uffff";
+        "\1\uffff\2\172\1\52\1\75\1\142\1\173\1\175\1\141\1\uffff\1\133"+
+        "\1\172\1\135\1\172\1\47\2\172\1\12\1\172\1\uffff\2\172\1\57\2\uffff"+
+        "\5\172\2\uffff\1\75\14\uffff\1\172\2\uffff\1\172\1\47\1\uffff\2"+
+        "\172\1\15\1\uffff\1\172\1\uffff\1\172\1\uffff\1\172\1\75\1\uffff"+
+        "\2\172\1\47\1\uffff\2\172\1\12\2\172\1\75\1\uffff\2\172\2\uffff"+
+        "\2\172\1\40\2\172\2\uffff\3\172\5\uffff\1\172\1\uffff\3\172\1\uffff";
     static final String DFA26_acceptS =
-        "\25\uffff\1\43\3\uffff\1\51\1\52\11\uffff\1\12\1\13\1\44\1\14\1"+
-        "\15\1\26\1\42\1\16\1\17\1\21\1\uffff\1\22\1\23\1\40\1\uffff\1\25"+
-        "\1\41\2\uffff\1\30\2\uffff\1\50\1\51\1\uffff\1\46\11\uffff\1\31"+
-        "\1\uffff\1\36\12\uffff\1\32\1\37\1\35\3\uffff\1\7\1\uffff\1\11\3"+
-        "\uffff\1\34\1\33\1\uffff\1\1\2\uffff\1\3\1\6\1\uffff\1\20\1\24\2"+
-        "\uffff\1\4\1\uffff\1\10\7\uffff\1\2\1\5\1\27";
+        "\11\uffff\1\13\11\uffff\1\37\3\uffff\1\45\1\46\5\uffff\1\4\1\3"+
+        "\1\uffff\1\5\1\6\1\7\1\41\1\10\1\11\1\17\1\35\1\12\1\13\1\14\1\30"+
+        "\1\uffff\1\16\1\31\2\uffff\1\34\3\uffff\1\45\1\uffff\1\44\1\uffff"+
+        "\1\42\2\uffff\1\21\3\uffff\1\26\6\uffff\1\22\2\uffff\1\27\1\25\5"+
+        "\uffff\1\24\1\23\3\uffff\1\33\1\36\1\1\1\2\1\15\1\uffff\1\32\3\uffff"+
+        "\1\20";
     static final String DFA26_specialS =
-        "\1\0\171\uffff}>";
+        "\1\0\141\uffff}>";
     static final String[] DFA26_transitionS = {
-            "\11\32\2\31\2\32\1\31\22\32\1\31\1\32\1\27\1\15\3\32\1\23\2"+
-            "\27\1\13\1\32\3\27\1\30\12\26\1\14\1\32\1\7\1\22\3\32\2\27\1"+
-            "\21\2\27\1\17\24\27\1\16\1\32\1\20\1\32\1\27\1\32\2\24\1\5\2"+
-            "\24\1\2\5\24\1\4\1\24\1\6\3\24\1\3\1\24\1\1\6\24\1\10\1\12\1"+
-            "\11\uff82\32",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\7\35\1\33\22\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\21\35\1\37\10\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\10\35\1\40\21\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\4\35\1\41\25\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\4\35\1\42\25\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\16\35\1\43\13\35",
-            "\1\46\15\uffff\1\45\62\uffff\1\44",
-            "\1\47",
-            "\1\50",
-            "\1\52\66\uffff\1\51",
-            "\1\54",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\13\36"+
-            "\1\56\16\36\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\32\36",
-            "\1\60",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\10\36\1\62\21\36",
-            "\1\63",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\1\65\31\36",
-            "\1\66",
+            "\11\30\2\27\2\30\1\21\22\30\1\27\1\30\1\25\1\11\3\30\1\16\2"+
+            "\25\1\3\1\30\3\25\1\26\12\24\1\25\1\30\1\5\1\4\3\30\2\25\1\15"+
+            "\2\25\1\13\24\25\1\12\1\30\1\14\1\30\1\25\1\30\1\17\13\22\1"+
+            "\20\4\22\1\2\1\22\1\1\6\22\1\6\1\10\1\7\uff82\30",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\7\33\1\31\22\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\10\33\1\35\21\33",
+            "\1\36",
+            "\1\40",
+            "\1\44\15\uffff\1\43\62\uffff\1\42",
+            "\1\45",
+            "\1\46",
+            "\1\50\66\uffff\1\47",
+            "",
+            "\1\53",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\10\34\1\55\21\34",
+            "\1\56",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\1\60\31\34",
+            "\1\61",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\1\33\1\63\30\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\1\64\31\33",
+            "\1\65",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\33",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\67\1\34\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\32\34",
             "\1\70",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\71\1\36\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\32\36",
-            "\1\72",
             "",
             "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\24\35\1\74\5\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\75\13\36\6\uffff\32\36\4"+
-            "\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\1\76\31\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\6\35\1\77\23\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\5\35\1\100\24\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\15\35\1\101\14\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\15\35\1\102\14\35",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\24\33\1\71\5\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\72\13\34\6\uffff\32\34\4"+
+            "\uffff\1\34\1\uffff\32\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\32\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\6\33\1\73\23\33",
+            "",
+            "",
+            "\1\74",
             "",
             "",
             "",
@@ -2766,124 +2635,86 @@ public class InternalWikiMLLexer extends Lexer {
             "",
             "",
             "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\10\36"+
-            "\1\103\21\36\4\uffff\1\36\1\uffff\32\36",
+            "",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\13\34\1\76\16\34",
+            "",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\23\34\1\77\6\34",
+            "\1\100",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\16\33\1\102\13\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\10\33\1\103\21\33",
+            "\1\104",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\67\1\34\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\34",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\14\33\1\105\15\33",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\7\33\1\106\22\33",
+            "\1\107",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\4\34\1\111\25\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\4\34\1\112\25\34",
+            "\1\113",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\24\33\1\115\5\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\15\33\1\116\14\33",
+            "\1\117",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\1\33\1\120\30\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\23\33\1\121\6\33",
+            "\1\122",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\124\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\6\34\1\125\23\34",
+            "",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\23\33\1\126\6\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\33",
+            "\2\66\2\uffff\1\66\22\uffff\1\66",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\33",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\33",
+            "",
+            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\32\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\16\34\1\134\13\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\32\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\33",
             "",
             "",
             "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\13\36\1\104\16\36",
             "",
             "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\23\36\1\105\6\36",
-            "\1\106",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\21\34\1\136\10\34",
             "",
-            "\1\110",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\71\1\36\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\36",
-            "",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\14\35\1\112\15\35",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\14\35\1\113\15\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\7\35\1\114\22\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\23\35\1\115\6\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\23\35\1\116\6\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\4\35\1\117\25\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\22\36"+
-            "\1\120\7\36\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\4\36\1\121\25\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\4\36\1\122\25\36",
-            "\1\123",
-            "",
-            "\1\125",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\1\35\1\127\30\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\4\35\1\130\25\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\23\35\1\131\6\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\4\35\1\133\25\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\23\36"+
-            "\1\135\6\36\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\136\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\6\36\1\137\23\36",
-            "\1\140",
-            "",
-            "",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\15\35\1\142\14\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\3\35\1\144\7\35\1\145\16\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\21\35\1\150\10\35",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\16\36\1\153\13\36",
-            "",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\1\154\31\35",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\4\35\1\156\25\35",
-            "",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\21\36\1\160\10\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\10\35\1\161\21\35",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\22\35\1\162\7\35",
-            "",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\30\36\1\163\1\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\13\35\1\164\16\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\22\35\1\165\7\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\166\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\36",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\12\36\1\34\6\uffff"+
-            "\32\36\4\uffff\1\36\1\uffff\32\35",
-            "\2\36\4\uffff\2\36\2\uffff\3\36\1\uffff\13\36\6\uffff\32\36"+
-            "\4\uffff\1\36\1\uffff\32\36",
-            "",
-            "",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\30\34\1\137\1\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\12\34\1\140\6\uffff"+
+            "\32\34\4\uffff\1\34\1\uffff\32\34",
+            "\1\34\5\uffff\2\34\2\uffff\3\34\1\uffff\13\34\6\uffff\32\34"+
+            "\4\uffff\1\34\1\uffff\32\34",
             ""
     };
 
@@ -2917,7 +2748,7 @@ public class InternalWikiMLLexer extends Lexer {
             this.transition = DFA26_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | RULE_ID | RULE_ML_COMMENT | RULE_STRING | RULE_URL | RULE_INT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_URL | RULE_INT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -2929,55 +2760,51 @@ public class InternalWikiMLLexer extends Lexer {
                         s = -1;
                         if ( (LA26_0=='t') ) {s = 1;}
 
-                        else if ( (LA26_0=='f') ) {s = 2;}
+                        else if ( (LA26_0=='r') ) {s = 2;}
 
-                        else if ( (LA26_0=='r') ) {s = 3;}
+                        else if ( (LA26_0=='*') ) {s = 3;}
 
-                        else if ( (LA26_0=='l') ) {s = 4;}
+                        else if ( (LA26_0=='=') ) {s = 4;}
 
-                        else if ( (LA26_0=='c') ) {s = 5;}
+                        else if ( (LA26_0=='<') ) {s = 5;}
 
-                        else if ( (LA26_0=='n') ) {s = 6;}
+                        else if ( (LA26_0=='{') ) {s = 6;}
 
-                        else if ( (LA26_0=='<') ) {s = 7;}
+                        else if ( (LA26_0=='}') ) {s = 7;}
 
-                        else if ( (LA26_0=='{') ) {s = 8;}
+                        else if ( (LA26_0=='|') ) {s = 8;}
 
-                        else if ( (LA26_0=='}') ) {s = 9;}
+                        else if ( (LA26_0=='#') ) {s = 9;}
 
-                        else if ( (LA26_0=='|') ) {s = 10;}
+                        else if ( (LA26_0=='[') ) {s = 10;}
 
-                        else if ( (LA26_0=='*') ) {s = 11;}
+                        else if ( (LA26_0=='F') ) {s = 11;}
 
-                        else if ( (LA26_0==':') ) {s = 12;}
+                        else if ( (LA26_0==']') ) {s = 12;}
 
-                        else if ( (LA26_0=='#') ) {s = 13;}
+                        else if ( (LA26_0=='C') ) {s = 13;}
 
-                        else if ( (LA26_0=='[') ) {s = 14;}
+                        else if ( (LA26_0=='\'') ) {s = 14;}
 
-                        else if ( (LA26_0=='F') ) {s = 15;}
+                        else if ( (LA26_0=='a') ) {s = 15;}
 
-                        else if ( (LA26_0==']') ) {s = 16;}
+                        else if ( (LA26_0=='m') ) {s = 16;}
 
-                        else if ( (LA26_0=='C') ) {s = 17;}
+                        else if ( (LA26_0=='\r') ) {s = 17;}
 
-                        else if ( (LA26_0=='=') ) {s = 18;}
+                        else if ( ((LA26_0>='b' && LA26_0<='l')||(LA26_0>='n' && LA26_0<='q')||LA26_0=='s'||(LA26_0>='u' && LA26_0<='z')) ) {s = 18;}
 
-                        else if ( (LA26_0=='\'') ) {s = 19;}
+                        else if ( ((LA26_0>='0' && LA26_0<='9')) ) {s = 20;}
 
-                        else if ( ((LA26_0>='a' && LA26_0<='b')||(LA26_0>='d' && LA26_0<='e')||(LA26_0>='g' && LA26_0<='k')||LA26_0=='m'||(LA26_0>='o' && LA26_0<='q')||LA26_0=='s'||(LA26_0>='u' && LA26_0<='z')) ) {s = 20;}
+                        else if ( (LA26_0=='\"'||(LA26_0>='(' && LA26_0<=')')||(LA26_0>=',' && LA26_0<='.')||LA26_0==':'||(LA26_0>='A' && LA26_0<='B')||(LA26_0>='D' && LA26_0<='E')||(LA26_0>='G' && LA26_0<='Z')||LA26_0=='_') ) {s = 21;}
 
-                        else if ( ((LA26_0>='0' && LA26_0<='9')) ) {s = 22;}
+                        else if ( (LA26_0=='/') ) {s = 22;}
 
-                        else if ( (LA26_0=='\"'||(LA26_0>='(' && LA26_0<=')')||(LA26_0>=',' && LA26_0<='.')||(LA26_0>='A' && LA26_0<='B')||(LA26_0>='D' && LA26_0<='E')||(LA26_0>='G' && LA26_0<='Z')||LA26_0=='_') ) {s = 23;}
+                        else if ( ((LA26_0>='\t' && LA26_0<='\n')||LA26_0==' ') ) {s = 23;}
 
-                        else if ( (LA26_0=='/') ) {s = 24;}
+                        else if ( ((LA26_0>='\u0000' && LA26_0<='\b')||(LA26_0>='\u000B' && LA26_0<='\f')||(LA26_0>='\u000E' && LA26_0<='\u001F')||LA26_0=='!'||(LA26_0>='$' && LA26_0<='&')||LA26_0=='+'||LA26_0==';'||(LA26_0>='>' && LA26_0<='@')||LA26_0=='\\'||LA26_0=='^'||LA26_0=='`'||(LA26_0>='~' && LA26_0<='\uFFFF')) ) {s = 24;}
 
-                        else if ( ((LA26_0>='\t' && LA26_0<='\n')||LA26_0=='\r'||LA26_0==' ') ) {s = 25;}
-
-                        else if ( ((LA26_0>='\u0000' && LA26_0<='\b')||(LA26_0>='\u000B' && LA26_0<='\f')||(LA26_0>='\u000E' && LA26_0<='\u001F')||LA26_0=='!'||(LA26_0>='$' && LA26_0<='&')||LA26_0=='+'||LA26_0==';'||(LA26_0>='>' && LA26_0<='@')||LA26_0=='\\'||LA26_0=='^'||LA26_0=='`'||(LA26_0>='~' && LA26_0<='\uFFFF')) ) {s = 26;}
-
-                        else s = 21;
+                        else s = 19;
 
                         if ( s>=0 ) return s;
                         break;

@@ -3,8 +3,7 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="wikiML" nsURI="http://www.ac.at/univie/swa/ase2015/a9902268/task3/WikiML"
     nsPrefix="wikiML">
   <eClassifiers xsi:type="ecore:EClass" name="WikiPage">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Heading1"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//ParagraphTypes" containment="true"/>
   </eClassifiers>
@@ -14,29 +13,40 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Template" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AboutTemplate" eSuperTypes="#//Template">
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
-        eType="#//Text" containment="true"/>
+        eType="#//AnyTextSequence" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UnOrderListItemLevel2" eSuperTypes="#//ParagraphTypes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//AnyText"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="list" eType="#//AnyTextSequence"
+  <eClassifiers xsi:type="ecore:EClass" name="MainTemplate" eSuperTypes="#//Template">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
+        eType="#//AnyTextSequence" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="QuoteTemplate" eSuperTypes="#//Template"/>
+  <eClassifiers xsi:type="ecore:EClass" name="OrderedList" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//OrderListItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="end" eType="#//Paragraph"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="UnOrderListItemLevel1" eSuperTypes="#//ParagraphTypes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//AnyText"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="list" eType="#//AnyTextSequence"
+  <eClassifiers xsi:type="ecore:EClass" name="UnorderedList" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
+        eType="#//UnorderListItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="end" eType="#//Paragraph"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OrderListItemLevel1" eSuperTypes="#//ParagraphTypes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//AnyText"
+  <eClassifiers xsi:type="ecore:EClass" name="UnorderListItem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="itemtext" eType="#//AnyTextSequence"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="list" eType="#//AnyTextSequence"
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrderListItem">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="itemtext" eType="#//AnyTextSequence"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Image" eSuperTypes="#//ParagraphTypes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Text" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//ViewType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hAlign" eType="#//HorizontalAlign"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="altText" eType="#//AbstractUnformattedInlineContent"
@@ -46,24 +56,13 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ViewType">
     <eLiterals name="thumb" literal="thumb"/>
-    <eLiterals name="thumbnail" value="1" literal="thumbnail"/>
-    <eLiterals name="frame" value="2" literal="frame"/>
-    <eLiterals name="framed" value="3" literal="framed"/>
-    <eLiterals name="frameless" value="4" literal="frameless"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="HorizontalAlign">
     <eLiterals name="right" literal="right"/>
-    <eLiterals name="left" value="1" literal="left"/>
-    <eLiterals name="center" value="2" literal="center"/>
-    <eLiterals name="none" value="3" literal="none"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Category" eSuperTypes="#//ParagraphTypes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Text" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Heading1" eSuperTypes="#//ParagraphTypes">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="headingValue1" eType="#//Text"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Heading2" eSuperTypes="#//ParagraphTypes">
     <eStructuralFeatures xsi:type="ecore:EReference" name="headingValue2" eType="#//AbstractUnformattedInlineContent"
@@ -92,26 +91,24 @@
   <eClassifiers xsi:type="ecore:EClass" name="Text" eSuperTypes="#//AbstractUnformattedInlineContent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HyperLink" eSuperTypes="#//AbstractUnformattedInlineContent"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Internal" eSuperTypes="#//HyperLink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Text" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="InternalAlt" eSuperTypes="#//HyperLink">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//Text" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="HyperLink" eSuperTypes="#//AbstractUnformattedInlineContent">
     <eStructuralFeatures xsi:type="ecore:EReference" name="altText" eType="#//AnyText"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Internal" eSuperTypes="#//HyperLink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="link" eType="#//WikiPage"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="anchor" eType="#//Text"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="External" eSuperTypes="#//HyperLink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ExternalAlt" eSuperTypes="#//HyperLink">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="altText" eType="#//AnyText"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AnyTextSequence">
     <eStructuralFeatures xsi:type="ecore:EReference" name="content" upperBound="-1"
         eType="#//AnyText" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AnyText" eSuperTypes="#//ParagraphTypes"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Paragraph" eSuperTypes="#//ParagraphTypes">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="paragraph" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
 </ecore:EPackage>

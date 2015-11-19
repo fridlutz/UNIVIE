@@ -102,27 +102,60 @@ public class WikiMLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL2:
+      case WikiMLPackage.ABOUT_TEMPLATE:
       {
-        UnOrderListItemLevel2 unOrderListItemLevel2 = (UnOrderListItemLevel2)theEObject;
-        T result = caseUnOrderListItemLevel2(unOrderListItemLevel2);
-        if (result == null) result = caseParagraphTypes(unOrderListItemLevel2);
+        AboutTemplate aboutTemplate = (AboutTemplate)theEObject;
+        T result = caseAboutTemplate(aboutTemplate);
+        if (result == null) result = caseTemplate(aboutTemplate);
+        if (result == null) result = caseParagraphTypes(aboutTemplate);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.UN_ORDER_LIST_ITEM_LEVEL1:
+      case WikiMLPackage.MAIN_TEMPLATE:
       {
-        UnOrderListItemLevel1 unOrderListItemLevel1 = (UnOrderListItemLevel1)theEObject;
-        T result = caseUnOrderListItemLevel1(unOrderListItemLevel1);
-        if (result == null) result = caseParagraphTypes(unOrderListItemLevel1);
+        MainTemplate mainTemplate = (MainTemplate)theEObject;
+        T result = caseMainTemplate(mainTemplate);
+        if (result == null) result = caseTemplate(mainTemplate);
+        if (result == null) result = caseParagraphTypes(mainTemplate);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.ORDER_LIST_ITEM_LEVEL1:
+      case WikiMLPackage.QUOTE_TEMPLATE:
       {
-        OrderListItemLevel1 orderListItemLevel1 = (OrderListItemLevel1)theEObject;
-        T result = caseOrderListItemLevel1(orderListItemLevel1);
-        if (result == null) result = caseParagraphTypes(orderListItemLevel1);
+        QuoteTemplate quoteTemplate = (QuoteTemplate)theEObject;
+        T result = caseQuoteTemplate(quoteTemplate);
+        if (result == null) result = caseTemplate(quoteTemplate);
+        if (result == null) result = caseParagraphTypes(quoteTemplate);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.ORDERED_LIST:
+      {
+        OrderedList orderedList = (OrderedList)theEObject;
+        T result = caseOrderedList(orderedList);
+        if (result == null) result = caseParagraphTypes(orderedList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.UNORDERED_LIST:
+      {
+        UnorderedList unorderedList = (UnorderedList)theEObject;
+        T result = caseUnorderedList(unorderedList);
+        if (result == null) result = caseParagraphTypes(unorderedList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.UNORDER_LIST_ITEM:
+      {
+        UnorderListItem unorderListItem = (UnorderListItem)theEObject;
+        T result = caseUnorderListItem(unorderListItem);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.ORDER_LIST_ITEM:
+      {
+        OrderListItem orderListItem = (OrderListItem)theEObject;
+        T result = caseOrderListItem(orderListItem);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -139,14 +172,6 @@ public class WikiMLSwitch<T> extends Switch<T>
         Category category = (Category)theEObject;
         T result = caseCategory(category);
         if (result == null) result = caseParagraphTypes(category);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case WikiMLPackage.HEADING1:
-      {
-        Heading1 heading1 = (Heading1)theEObject;
-        T result = caseHeading1(heading1);
-        if (result == null) result = caseParagraphTypes(heading1);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -261,17 +286,6 @@ public class WikiMLSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case WikiMLPackage.INTERNAL_ALT:
-      {
-        InternalAlt internalAlt = (InternalAlt)theEObject;
-        T result = caseInternalAlt(internalAlt);
-        if (result == null) result = caseHyperLink(internalAlt);
-        if (result == null) result = caseAbstractUnformattedInlineContent(internalAlt);
-        if (result == null) result = caseAnyText(internalAlt);
-        if (result == null) result = caseParagraphTypes(internalAlt);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case WikiMLPackage.EXTERNAL:
       {
         External external = (External)theEObject;
@@ -280,17 +294,6 @@ public class WikiMLSwitch<T> extends Switch<T>
         if (result == null) result = caseAbstractUnformattedInlineContent(external);
         if (result == null) result = caseAnyText(external);
         if (result == null) result = caseParagraphTypes(external);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case WikiMLPackage.EXTERNAL_ALT:
-      {
-        ExternalAlt externalAlt = (ExternalAlt)theEObject;
-        T result = caseExternalAlt(externalAlt);
-        if (result == null) result = caseHyperLink(externalAlt);
-        if (result == null) result = caseAbstractUnformattedInlineContent(externalAlt);
-        if (result == null) result = caseAnyText(externalAlt);
-        if (result == null) result = caseParagraphTypes(externalAlt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -306,6 +309,14 @@ public class WikiMLSwitch<T> extends Switch<T>
         AnyText anyText = (AnyText)theEObject;
         T result = caseAnyText(anyText);
         if (result == null) result = caseParagraphTypes(anyText);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case WikiMLPackage.PARAGRAPH:
+      {
+        Paragraph paragraph = (Paragraph)theEObject;
+        T result = caseParagraph(paragraph);
+        if (result == null) result = caseParagraphTypes(paragraph);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -378,49 +389,113 @@ public class WikiMLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Un Order List Item Level2</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>About Template</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Un Order List Item Level2</em>'.
+   * @return the result of interpreting the object as an instance of '<em>About Template</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseUnOrderListItemLevel2(UnOrderListItemLevel2 object)
+  public T caseAboutTemplate(AboutTemplate object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Un Order List Item Level1</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Main Template</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Un Order List Item Level1</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Main Template</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseUnOrderListItemLevel1(UnOrderListItemLevel1 object)
+  public T caseMainTemplate(MainTemplate object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Order List Item Level1</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Quote Template</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Order List Item Level1</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Quote Template</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOrderListItemLevel1(OrderListItemLevel1 object)
+  public T caseQuoteTemplate(QuoteTemplate object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ordered List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ordered List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOrderedList(OrderedList object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Unordered List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Unordered List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUnorderedList(UnorderedList object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Unorder List Item</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Unorder List Item</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseUnorderListItem(UnorderListItem object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Order List Item</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Order List Item</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOrderListItem(OrderListItem object)
   {
     return null;
   }
@@ -453,22 +528,6 @@ public class WikiMLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCategory(Category object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Heading1</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Heading1</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseHeading1(Heading1 object)
   {
     return null;
   }
@@ -666,22 +725,6 @@ public class WikiMLSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Internal Alt</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Internal Alt</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseInternalAlt(InternalAlt object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>External</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -693,22 +736,6 @@ public class WikiMLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExternal(External object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>External Alt</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>External Alt</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseExternalAlt(ExternalAlt object)
   {
     return null;
   }
@@ -741,6 +768,22 @@ public class WikiMLSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAnyText(AnyText object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Paragraph</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Paragraph</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseParagraph(Paragraph object)
   {
     return null;
   }

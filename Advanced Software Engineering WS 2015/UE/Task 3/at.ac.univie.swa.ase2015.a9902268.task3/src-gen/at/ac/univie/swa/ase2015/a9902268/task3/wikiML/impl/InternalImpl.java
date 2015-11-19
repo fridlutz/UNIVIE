@@ -5,6 +5,7 @@ package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Internal;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiPage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -22,7 +23,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.InternalImpl#getName <em>Name</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.InternalImpl#getLink <em>Link</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.InternalImpl#getAnchor <em>Anchor</em>}</li>
  * </ul>
  *
  * @generated
@@ -30,14 +32,24 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class InternalImpl extends HyperLinkImpl implements Internal
 {
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
+   * The cached value of the '{@link #getLink() <em>Link</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getLink()
    * @generated
    * @ordered
    */
-  protected Text name;
+  protected WikiPage link;
+
+  /**
+   * The cached value of the '{@link #getAnchor() <em>Anchor</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAnchor()
+   * @generated
+   * @ordered
+   */
+  protected Text anchor;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,9 +77,19 @@ public class InternalImpl extends HyperLinkImpl implements Internal
    * <!-- end-user-doc -->
    * @generated
    */
-  public Text getName()
+  public WikiPage getLink()
   {
-    return name;
+    if (link != null && link.eIsProxy())
+    {
+      InternalEObject oldLink = (InternalEObject)link;
+      link = (WikiPage)eResolveProxy(oldLink);
+      if (link != oldLink)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, WikiMLPackage.INTERNAL__LINK, oldLink, link));
+      }
+    }
+    return link;
   }
 
   /**
@@ -75,13 +97,46 @@ public class InternalImpl extends HyperLinkImpl implements Internal
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetName(Text newName, NotificationChain msgs)
+  public WikiPage basicGetLink()
   {
-    Text oldName = name;
-    name = newName;
+    return link;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLink(WikiPage newLink)
+  {
+    WikiPage oldLink = link;
+    link = newLink;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.INTERNAL__LINK, oldLink, link));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Text getAnchor()
+  {
+    return anchor;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAnchor(Text newAnchor, NotificationChain msgs)
+  {
+    Text oldAnchor = anchor;
+    anchor = newAnchor;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.INTERNAL__NAME, oldName, newName);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, WikiMLPackage.INTERNAL__ANCHOR, oldAnchor, newAnchor);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -92,20 +147,20 @@ public class InternalImpl extends HyperLinkImpl implements Internal
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(Text newName)
+  public void setAnchor(Text newAnchor)
   {
-    if (newName != name)
+    if (newAnchor != anchor)
     {
       NotificationChain msgs = null;
-      if (name != null)
-        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.INTERNAL__NAME, null, msgs);
-      if (newName != null)
-        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.INTERNAL__NAME, null, msgs);
-      msgs = basicSetName(newName, msgs);
+      if (anchor != null)
+        msgs = ((InternalEObject)anchor).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.INTERNAL__ANCHOR, null, msgs);
+      if (newAnchor != null)
+        msgs = ((InternalEObject)newAnchor).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - WikiMLPackage.INTERNAL__ANCHOR, null, msgs);
+      msgs = basicSetAnchor(newAnchor, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.INTERNAL__NAME, newName, newName));
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.INTERNAL__ANCHOR, newAnchor, newAnchor));
   }
 
   /**
@@ -118,8 +173,8 @@ public class InternalImpl extends HyperLinkImpl implements Internal
   {
     switch (featureID)
     {
-      case WikiMLPackage.INTERNAL__NAME:
-        return basicSetName(null, msgs);
+      case WikiMLPackage.INTERNAL__ANCHOR:
+        return basicSetAnchor(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -134,8 +189,11 @@ public class InternalImpl extends HyperLinkImpl implements Internal
   {
     switch (featureID)
     {
-      case WikiMLPackage.INTERNAL__NAME:
-        return getName();
+      case WikiMLPackage.INTERNAL__LINK:
+        if (resolve) return getLink();
+        return basicGetLink();
+      case WikiMLPackage.INTERNAL__ANCHOR:
+        return getAnchor();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -150,8 +208,11 @@ public class InternalImpl extends HyperLinkImpl implements Internal
   {
     switch (featureID)
     {
-      case WikiMLPackage.INTERNAL__NAME:
-        setName((Text)newValue);
+      case WikiMLPackage.INTERNAL__LINK:
+        setLink((WikiPage)newValue);
+        return;
+      case WikiMLPackage.INTERNAL__ANCHOR:
+        setAnchor((Text)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -167,8 +228,11 @@ public class InternalImpl extends HyperLinkImpl implements Internal
   {
     switch (featureID)
     {
-      case WikiMLPackage.INTERNAL__NAME:
-        setName((Text)null);
+      case WikiMLPackage.INTERNAL__LINK:
+        setLink((WikiPage)null);
+        return;
+      case WikiMLPackage.INTERNAL__ANCHOR:
+        setAnchor((Text)null);
         return;
     }
     super.eUnset(featureID);
@@ -184,8 +248,10 @@ public class InternalImpl extends HyperLinkImpl implements Internal
   {
     switch (featureID)
     {
-      case WikiMLPackage.INTERNAL__NAME:
-        return name != null;
+      case WikiMLPackage.INTERNAL__LINK:
+        return link != null;
+      case WikiMLPackage.INTERNAL__ANCHOR:
+        return anchor != null;
     }
     return super.eIsSet(featureID);
   }

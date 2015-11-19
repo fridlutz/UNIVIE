@@ -2,7 +2,7 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl;
 
-import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template;
+import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Paragraph;
 import at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,45 +13,45 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Template</b></em>'.
+ * An implementation of the model object '<em><b>Paragraph</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.TemplateImpl#getType <em>Type</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.impl.ParagraphImpl#getParagraph <em>Paragraph</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TemplateImpl extends ParagraphTypesImpl implements Template
+public class ParagraphImpl extends ParagraphTypesImpl implements Paragraph
 {
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The default value of the '{@link #getParagraph() <em>Paragraph</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getParagraph()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected static final String PARAGRAPH_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #getParagraph() <em>Paragraph</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #getParagraph()
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected String paragraph = PARAGRAPH_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TemplateImpl()
+  protected ParagraphImpl()
   {
     super();
   }
@@ -64,7 +64,7 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   @Override
   protected EClass eStaticClass()
   {
-    return WikiMLPackage.Literals.TEMPLATE;
+    return WikiMLPackage.Literals.PARAGRAPH;
   }
 
   /**
@@ -72,9 +72,9 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getType()
+  public String getParagraph()
   {
-    return type;
+    return paragraph;
   }
 
   /**
@@ -82,12 +82,12 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setType(String newType)
+  public void setParagraph(String newParagraph)
   {
-    String oldType = type;
-    type = newType;
+    String oldParagraph = paragraph;
+    paragraph = newParagraph;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.TEMPLATE__TYPE, oldType, type));
+      eNotify(new ENotificationImpl(this, Notification.SET, WikiMLPackage.PARAGRAPH__PARAGRAPH, oldParagraph, paragraph));
   }
 
   /**
@@ -100,8 +100,8 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__TYPE:
-        return getType();
+      case WikiMLPackage.PARAGRAPH__PARAGRAPH:
+        return getParagraph();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -116,8 +116,8 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__TYPE:
-        setType((String)newValue);
+      case WikiMLPackage.PARAGRAPH__PARAGRAPH:
+        setParagraph((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -133,8 +133,8 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__TYPE:
-        setType(TYPE_EDEFAULT);
+      case WikiMLPackage.PARAGRAPH__PARAGRAPH:
+        setParagraph(PARAGRAPH_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -150,8 +150,8 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
   {
     switch (featureID)
     {
-      case WikiMLPackage.TEMPLATE__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+      case WikiMLPackage.PARAGRAPH__PARAGRAPH:
+        return PARAGRAPH_EDEFAULT == null ? paragraph != null : !PARAGRAPH_EDEFAULT.equals(paragraph);
     }
     return super.eIsSet(featureID);
   }
@@ -167,10 +167,10 @@ public class TemplateImpl extends ParagraphTypesImpl implements Template
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (type: ");
-    result.append(type);
+    result.append(" (paragraph: ");
+    result.append(paragraph);
     result.append(')');
     return result.toString();
   }
 
-} //TemplateImpl
+} //ParagraphImpl

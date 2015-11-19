@@ -59,31 +59,67 @@ public interface WikiMLFactory extends EFactory
   Template createTemplate();
 
   /**
-   * Returns a new object of class '<em>Un Order List Item Level2</em>'.
+   * Returns a new object of class '<em>About Template</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Un Order List Item Level2</em>'.
+   * @return a new object of class '<em>About Template</em>'.
    * @generated
    */
-  UnOrderListItemLevel2 createUnOrderListItemLevel2();
+  AboutTemplate createAboutTemplate();
 
   /**
-   * Returns a new object of class '<em>Un Order List Item Level1</em>'.
+   * Returns a new object of class '<em>Main Template</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Un Order List Item Level1</em>'.
+   * @return a new object of class '<em>Main Template</em>'.
    * @generated
    */
-  UnOrderListItemLevel1 createUnOrderListItemLevel1();
+  MainTemplate createMainTemplate();
 
   /**
-   * Returns a new object of class '<em>Order List Item Level1</em>'.
+   * Returns a new object of class '<em>Quote Template</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Order List Item Level1</em>'.
+   * @return a new object of class '<em>Quote Template</em>'.
    * @generated
    */
-  OrderListItemLevel1 createOrderListItemLevel1();
+  QuoteTemplate createQuoteTemplate();
+
+  /**
+   * Returns a new object of class '<em>Ordered List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ordered List</em>'.
+   * @generated
+   */
+  OrderedList createOrderedList();
+
+  /**
+   * Returns a new object of class '<em>Unordered List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Unordered List</em>'.
+   * @generated
+   */
+  UnorderedList createUnorderedList();
+
+  /**
+   * Returns a new object of class '<em>Unorder List Item</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Unorder List Item</em>'.
+   * @generated
+   */
+  UnorderListItem createUnorderListItem();
+
+  /**
+   * Returns a new object of class '<em>Order List Item</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Order List Item</em>'.
+   * @generated
+   */
+  OrderListItem createOrderListItem();
 
   /**
    * Returns a new object of class '<em>Image</em>'.
@@ -102,15 +138,6 @@ public interface WikiMLFactory extends EFactory
    * @generated
    */
   Category createCategory();
-
-  /**
-   * Returns a new object of class '<em>Heading1</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Heading1</em>'.
-   * @generated
-   */
-  Heading1 createHeading1();
 
   /**
    * Returns a new object of class '<em>Heading2</em>'.
@@ -221,15 +248,6 @@ public interface WikiMLFactory extends EFactory
   Internal createInternal();
 
   /**
-   * Returns a new object of class '<em>Internal Alt</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Internal Alt</em>'.
-   * @generated
-   */
-  InternalAlt createInternalAlt();
-
-  /**
    * Returns a new object of class '<em>External</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -237,15 +255,6 @@ public interface WikiMLFactory extends EFactory
    * @generated
    */
   External createExternal();
-
-  /**
-   * Returns a new object of class '<em>External Alt</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>External Alt</em>'.
-   * @generated
-   */
-  ExternalAlt createExternalAlt();
 
   /**
    * Returns a new object of class '<em>Any Text Sequence</em>'.
@@ -264,6 +273,15 @@ public interface WikiMLFactory extends EFactory
    * @generated
    */
   AnyText createAnyText();
+
+  /**
+   * Returns a new object of class '<em>Paragraph</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Paragraph</em>'.
+   * @generated
+   */
+  Paragraph createParagraph();
 
   /**
    * Returns the package supported by this factory.

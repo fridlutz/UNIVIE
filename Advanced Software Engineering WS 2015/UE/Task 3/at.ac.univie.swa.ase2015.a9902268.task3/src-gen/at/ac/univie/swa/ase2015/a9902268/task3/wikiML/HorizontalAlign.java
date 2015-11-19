@@ -27,37 +27,7 @@ public enum HorizontalAlign implements Enumerator
    * @generated
    * @ordered
    */
-  RIGHT(0, "right", "right"),
-
-  /**
-   * The '<em><b>Left</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #LEFT_VALUE
-   * @generated
-   * @ordered
-   */
-  LEFT(1, "left", "left"),
-
-  /**
-   * The '<em><b>Center</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #CENTER_VALUE
-   * @generated
-   * @ordered
-   */
-  CENTER(2, "center", "center"),
-
-  /**
-   * The '<em><b>None</b></em>' literal object.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #NONE_VALUE
-   * @generated
-   * @ordered
-   */
-  NONE(3, "none", "none");
+  RIGHT(0, "right", "right");
 
   /**
    * The '<em><b>Right</b></em>' literal value.
@@ -75,51 +45,6 @@ public enum HorizontalAlign implements Enumerator
   public static final int RIGHT_VALUE = 0;
 
   /**
-   * The '<em><b>Left</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Left</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #LEFT
-   * @model name="left"
-   * @generated
-   * @ordered
-   */
-  public static final int LEFT_VALUE = 1;
-
-  /**
-   * The '<em><b>Center</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>Center</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #CENTER
-   * @model name="center"
-   * @generated
-   * @ordered
-   */
-  public static final int CENTER_VALUE = 2;
-
-  /**
-   * The '<em><b>None</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of '<em><b>None</b></em>' literal object isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @see #NONE
-   * @model name="none"
-   * @generated
-   * @ordered
-   */
-  public static final int NONE_VALUE = 3;
-
-  /**
    * An array of all the '<em><b>Horizontal Align</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -129,9 +54,6 @@ public enum HorizontalAlign implements Enumerator
     new HorizontalAlign[]
     {
       RIGHT,
-      LEFT,
-      CENTER,
-      NONE,
     };
 
   /**
@@ -197,9 +119,6 @@ public enum HorizontalAlign implements Enumerator
     switch (value)
     {
       case RIGHT_VALUE: return RIGHT;
-      case LEFT_VALUE: return LEFT;
-      case CENTER_VALUE: return CENTER;
-      case NONE_VALUE: return NONE;
     }
     return null;
   }

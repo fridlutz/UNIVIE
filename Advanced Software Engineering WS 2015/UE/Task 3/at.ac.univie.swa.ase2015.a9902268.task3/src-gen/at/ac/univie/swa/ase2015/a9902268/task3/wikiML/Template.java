@@ -2,7 +2,6 @@
  */
 package at.ac.univie.swa.ase2015.a9902268.task3.wikiML;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template#getContent <em>Content</em>}</li>
+ *   <li>{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getTemplate()
@@ -23,19 +22,29 @@ import org.eclipse.emf.common.util.EList;
 public interface Template extends ParagraphTypes
 {
   /**
-   * Returns the value of the '<em><b>Content</b></em>' containment reference list.
-   * The list contents are of type {@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Text}.
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Content</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Type</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Content</em>' containment reference list.
-   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getTemplate_Content()
-   * @model containment="true"
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see at.ac.univie.swa.ase2015.a9902268.task3.wikiML.WikiMLPackage#getTemplate_Type()
+   * @model
    * @generated
    */
-  EList<Text> getContent();
+  String getType();
+
+  /**
+   * Sets the value of the '{@link at.ac.univie.swa.ase2015.a9902268.task3.wikiML.Template#getType <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
+   * @generated
+   */
+  void setType(String value);
 
 } // Template
