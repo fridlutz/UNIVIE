@@ -16,7 +16,7 @@
       <details key="constraints" value="atLeastOneSysOpOrAdminAvailable qualityOfWikipedia"/>
     </eAnnotations>
     <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot">
-      <details key="atLeastOneSysOpOrAdminAvailable" value="user->select(obj |&#xA;&#x9;&#x9;&#x9;&#x9;obj.oclIsKindOf(RegisteredUser))->size() > 0 implies (user->select(obj |&#xA;&#x9;&#x9;&#x9;&#x9;obj.oclIsKindOf(SysOp))->size() > 0 and user->select(obj | obj.oclIsKindOf(Administrator))->size() > 0)"/>
+      <details key="atLeastOneSysOpOrAdminAvailable" value="user->select(obj |&#x9;obj.oclIsKindOf(RegisteredUser))->size() > 0 &#xA;&#x9;&#x9;&#x9;implies (user->select(obj |obj.oclIsKindOf(SysOp))->size() > 0 and user->select(obj | obj.oclIsKindOf(Administrator))->size() > 0)"/>
       <details key="qualityOfWikipedia" value="averageEditedPagesPerUser >= 1"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="currentDateJD" lowerBound="1"
