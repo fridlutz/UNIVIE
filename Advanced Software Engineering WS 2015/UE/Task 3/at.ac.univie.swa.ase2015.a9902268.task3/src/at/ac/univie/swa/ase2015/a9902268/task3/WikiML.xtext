@@ -44,9 +44,6 @@ UnorderListItem:
 OrderListItem:
 	'#' itemtext=(AnyTextSequence);
 
-	/*OrderList:
-	'#' name=(AnyText) list=(AnyTextSequence) ':LIST';
-*/
 //TODO: terminal rule for filename and supported formats
 /* Supported file types 
     jpg/jpeg – recommended for photographic images.
