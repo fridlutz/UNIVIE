@@ -1,0 +1,145 @@
+grammar org.xtext.example.mydsl.MyDsl //with org.eclipse.xtext.common.Terminals
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+Model:				content+=(Structure | NewLine)*;
+
+Structure:			elements=(Header | File | Category | TextBlock | List | TaggedContent);
+
+TextBlock:			content+=TextContent+ new=NewLine;
+TextContent:		type=(PlainText | Link | Formatted | Template | Comment);
+
+Header:				type=(Header1 | Header2 | Header3 | Header4 | Header5 | Header6);
+Header1:			'=' content+=TextContent+ '=' new=NewLine;
+Header2:			'==' content+=TextContent+ '==' new=NewLine;
+Header3:			'===' content+=TextContent+ '===' new=NewLine;
+Header4:			'====' content+=TextContent+ '====' new=NewLine;
+Header5:			'=====' content+=TextContent+ '=====' new=NewLine;
+Header6:			'======' content+=TextContent+ '======' new=NewLine;
+
+
+List:				type=(OrderedList | UnorderedList);
+OrderedList:		listitems=(OrderedItem1 | OrderedItem2 | OrderedItem3 | OrderedItem4 | OrderedItem5); 
+OrderedItem1:		'#' content=TextBlock;
+OrderedItem2:		'##' content=TextBlock;
+OrderedItem3:		'###' content=TextBlock;
+OrderedItem4:		'####' content=TextBlock;
+OrderedItem5:		'#####' content=TextBlock;
+//etc.
+UnorderedList:		listitems=(UnOrderedItem1 | UnOrderedItem2 | UnOrderedItem3 | UnOrderedItem4 | UnOrderedItem5);
+UnOrderedItem1:		'*' content=TextBlock;
+UnOrderedItem2:		'**' content=TextBlock;
+UnOrderedItem3:		'***' content=TextBlock;
+UnOrderedItem4:		'****' content=TextBlock;
+UnOrderedItem5:		'*****' content=TextBlock;
+//etc.
+
+TagOpen:			type='<blockquote>';
+TagClose:			type='</blockquote>';
+TaggedContent:		open=TagOpen content+=TextContent+ close=TagClose;
+
+TemplateType:		type=('\'' | 'about' | 'main');
+Template:			'{{'type=TemplateType ('|'parameter+=PlainText)*'}}';
+
+File:				'[[File:' (filename=PlainText ('|thumb')? ('|right' | '|left' | '|center')? '|' description+=TextContent+) ']]';
+Category:			'[[Category:' (categoryname=PlainText ('|' sortname=PlainText)?) ']]';
+
+Link:				type=(InternalLink | ExternalLink);
+InternalLink:		'[[' ((link=PlainText ('#' section=PlainText)? | '#' section=PlainText) ('|' pipetext+=(PlainText | Formatted)+ )?) ']]';
+ExternalLink:		'[' (link=URL (label=PlainText)?) ']';
+
+//NOTE: this grammar produces a complex effect for internal links starting with a capital "C" or capital "F", because the parser is unable to distinguish them 
+//from the Category: and File: declarations; if you use this solution, you can either bypass this (e.g. add a white space after the "[[" for an internal link) or
+//you can rewrite the definition of a link to cover File:, Category:, and InternalLink:, and delegate the handling of these links to your generated code via "switch/case".
+
+Formatted:			type=(Bold | Italic | BoldItalic);
+Italic:				"''" content+=(PlainText | Link )+ "''";
+Bold:				"'''" content+=(PlainText | Link )+ "'''";
+BoldItalic:			"'''''" content+=(PlainText | Link )+ "'''''";
+
+PlainText:			content=TXT;
+terminal TXT:		('A'..'Z' | 'a'..'z' | '_' | '-' | '(' | ')' | ',' | '*' | '"' | '.' | ';' | ':' | '0'..'9' | ' ' | '/t')*;
+NewLine:			content=('\n' | '\r');
+Comment:			content=CMT;
+terminal CMT:		'<!--' -> '-->';
+
+//found online: https://xtexterience.wordpress.com/2011/06/08/urls-in-xtext/
+terminal URL :
+( 'a' .. 'z' ) + '://' // Protocol
+( // Hostname
+( ( '0' .. '9' ) + '.' ( '0' .. '9' ) + '.' ( '0' .. '9' ) + '.' ( '0' .. '9' ) + ) |
+( ( 'a' .. 'z' | 'A' .. 'Z' )
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) *
+( '.'
+( 'a' .. 'z' | 'A' .. 'Z' )
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) * ) * ) )
+( ':' ( '0' .. '9' ) + ) ? // Portnumber
+( '/'
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+'~' |
+'+' |
+'.' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) * ) * // Path
+
+( '?'
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+'=' |
+'&' |
+';' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) +
+( '+'
+( 'a' .. 'z' | 'A' .. 'Z' |
+'0' .. '9' |
+'$' |
+'-' |
+'_' |
+'=' |
+'&' |
+';' |
+( '\\'
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' )
+( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) ) |
+( '%'
+( '0' .. '9' )
+( '0' .. '9' ) ) ) + ) * ) ? // Query
+;
+
