@@ -1143,7 +1143,7 @@ public class ModelPackageImpl extends EPackageImpl implements ModelPackage {
 		  (getRegisteredUser_UserType(), 
 		   source, 
 		   new String[] {
-			 "derivation", "if (self.countRevisions < 20 or registeredSinceDays < 7) then userType::RegisteredUser\n\t\t\t\t\t\t\t\telse userType::AutoConfirmedUser\n\t\t\t\t\t\t\t\tendif"
+			 "derivation", "if (self.countRevisions < 1 or registeredSinceDays < 7) then userType::RegisteredUser\n\t\t\t\t\t\t\t\telse userType::AutoConfirmedUser\n\t\t\t\t\t\t\t\tendif"
 		   });	
 		addAnnotation
 		  (getRegisteredUser_AdminAction(), 
