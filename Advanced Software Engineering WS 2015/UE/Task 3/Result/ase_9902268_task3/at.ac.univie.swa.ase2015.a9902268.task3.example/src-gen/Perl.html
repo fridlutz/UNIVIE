@@ -1,0 +1,206 @@
+<html>
+  <head>
+    <title>Perl</title>
+
+    <style>
+    		.external {
+    			background-position: right center;
+    			background-repeat: no-repeat;
+    			background-image: linear-gradient(transparent, transparent), url("data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22UTF-8%22%3F%3E%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%3E%3Cg%20transform%3D%22translate%28-826.429%20-698.791%29%22%3E%3Crect%20width%3D%225.982%22%20height%3D%225.982%22%20x%3D%22826.929%22%20y%3D%22702.309%22%20fill%3D%22%23fff%22%20stroke%3D%22%2306c%22%2F%3E%3Cg%3E%3Cpath%20d%3D%22M831.194%20698.791h5.234v5.391l-1.571%201.545-1.31-1.31-2.725%202.725-2.689-2.689%202.808-2.808-1.311-1.311z%22%20fill%3D%22%2306f%22%2F%3E%3Cpath%20d%3D%22M835.424%20699.795l.022%204.885-1.817-1.817-2.881%202.881-1.228-1.228%202.881-2.881-1.851-1.851z%22%20fill%3D%22%23fff%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E");
+    			padding-right: 13px;
+    	}
+    	h1 {
+    		color: #000000; 
+    		background: none; 
+    		overflow: hidden; 
+    		page-break-after: avoid; 
+    		font-size: 1.8em; 
+    		font-family: Georgia,Times,serif; 
+    		margin-top: 1em; 
+    		margin-bottom: 0.25em; 
+    		line-height: 1.3; 
+    		padding: 0; 
+    		border-bottom: 1px solid #AAAAAA;	
+    	}
+    	.category {
+    		 padding-left: 0.25em;
+    		 border-left: medium none;
+    		 display: inline-block;
+    		 line-height: 1.25em;
+    		 margin: 0.125em 0px;
+    	}
+    	.categoryitem {
+    		padding-left: 0.25em;
+    		border-left: 1px solid #AAA; 
+    		display: inline-block;
+    		line-height: 1.25em;
+    		margin: 0.125em 0px;
+    	}
+    	h2 {
+    		color: #000000; 
+    		background: none; 
+    		overflow: hidden; 
+    		page-break-after: avoid; 
+    		font-size: 1.5em; 
+    		font-family: Georgia,Times,serif; 
+    		margin-top: 1em; 
+    		margin-bottom: 0.25em; 
+    		line-height: 1.3; 
+    		padding: 0; 
+    		border-bottom: 1px solid #AAAAAA;
+    	}
+    	h3 {
+    		color: #000000; 
+    		background: none; 
+    		overflow: hidden; 
+    		page-break-after: avoid; 
+    		font-size: 1.17em; 
+    		font-weight: bold; 
+    		margin-top: 0.3em; 
+    		margin-bottom: 0; 
+    		line-height: 1.6; 
+    		padding-top: 0.5em; 
+    		padding-bottom: 0;
+    	}
+    	h4 {
+    		color: #000000; 
+    		background: none; 
+    		overflow: hidden; 
+    		page-break-after: avoid; 
+    		font-size: 100%; 
+    		font-weight: bold; 
+    		margin-top: 0.3em; 
+    		margin-bottom: 0; 
+    		line-height: 1.6; 
+    		padding-top: 0.5em; 
+    		padding-bottom: 0;"
+    	}
+    	h5 {
+    		color: #000000; 
+    		background: none; 
+    		overflow: hidden; 
+    		page-break-after: avoid; 
+    		font-size: 100%; 
+    		font-weight: bold; 
+    		margin-top: 0.3em; 
+    		margin-bottom: 0; 
+    		line-height: 1.6; 
+    		padding-top: 0.5em; 
+    		padding-bottom: 0;
+    	}
+    	div.tright {
+    		margin: 0.5em 0px 1.3em 1.4em;
+		}
+		div.thumb {
+					margin-bottom: 0.5em;
+					width: auto;
+					background-color: transparent;
+		}
+		div.tright, div.floatright, table.floatright {
+					clear: right;
+					float: right;
+		}
+		table.wikitable {
+					border-collapse: collapse;
+					color: #000;
+		}
+		table {
+				font-size: 100%;
+		}
+		div.thumbinner {
+					border: 1px solid #CCC;
+					padding: 3px;
+					background-color: #F9F9F9;
+					font-size: 94%;
+				text-align: center;
+					overflow: hidden;
+		}
+		.thumbinner {
+					min-width: 100px;
+		}
+		.thumbinner {
+					min-width: 100px;
+		}
+		a {
+					text-decoration: none;
+					color: #0645AD;
+					background: transparent none repeat scroll 0% 0%;
+		}
+		div.thumb .thumbimage {
+		  	background-color: #FFF;
+		}
+		div.thumb .thumbimage {
+		  	background-color: #FFF;
+		}
+		html .thumbimage {
+		 	 border: 1px solid #CCC;
+		}
+		img {
+			  border: medium none;
+			  vertical-align: middle;
+		}
+		.mw-content-ltr .thumbcaption {
+		  	text-align: left;
+		}
+		.mw-content-ltr .thumbcaption {
+		  	text-align: left;
+		}
+		.thumbcaption {
+			  border: medium none;
+			  line-height: 1.4em;
+			  padding: 3px;
+			  font-size: 94%;
+			  text-align: left;
+		}
+		</style>
+		
+		</head>
+		<body>
+		<h1>Perl</h1>
+		Perl is a family of high-level, general-purpose, interpreted, dynamic programming languages. The languages in this family include Perl 5 and Perl 6. Though Perl is not officially an acronym,there are various backronyms in use, the most well-known being "Practical Extraction and Reporting Language".Perl was originally developed by Larry Wall in 1987 as a general-purpose Unix scripting language to make report processing easier. Since then, it has undergone many changes and revisions. Perl 6, which began as a redesign of Perl 5 in 2000, eventually evolved into a separate language. Both languages continue to be developed independently by different development teams and liberally borrow ideas from one another.
+		<br></br>
+		The Perl languages borrow features from other programming languages including C, shell script (sh), AWK, and sed. They provide powerful text processing facilities without the arbitrary data-length limits of many contemporary Unix commandline tools, facilitating easy manipulation of text files. Perl 5 gained widespread popularity in the late 1990s as a CGI scripting language, in part due to its unsurpassed regular expression and string parsing abilities.
+		<br></br>
+		In addition to CGI, Perl 5 is used for graphics programming, system administration, network programming, finance, bioinformatics, and other applications. It has been nicknamed "the Swiss Army chainsaw of scripting languages" because of its flexibility and power, and possibly also because of its "ugliness". In 1998, it was also referred to as the "duct tape that holds the Internet together", in reference to both its ubiquitous use as a glue language and its perceived inelegance.
+ <!-- categories at the end of the page -->
+ <div style="border: 1px solid #AAA;background-color: #F9F9F9;padding: 5px;margin-top: 1em;clear: both;">
+   <a href="https://en.wikipedia.org/wiki/Help:Category" title="Help:Category">Categories:</a>
+   <ul style="display: inline;margin: 0px;padding: 0px;list-style: outside none none;">
+  <li class="category"><a href="Category_Perl.html">Perl</a></li>
+  <!--0-->
+  <li class="categoryitem"><a href="Category_American inventions.html">American inventions</a></li>
+  <!--1-->
+  <li class="categoryitem"><a href="Category_C programming language family.html">C programming language family</a></li>
+  <!--2-->
+  <li class="categoryitem"><a href="Category_Cross-platform software.html">Cross-platform software</a></li>
+  <!--3-->
+  <li class="categoryitem"><a href="Category_Dynamic programming languages.html">Dynamic programming languages</a></li>
+  <!--4-->
+  <li class="categoryitem"><a href="Category_Dynamically typed programming languages.html">Dynamically typed programming languages</a></li>
+  <!--5-->
+  <li class="categoryitem"><a href="Category_Free compilers and interpreters.html">Free compilers and interpreters</a></li>
+  <!--6-->
+  <li class="categoryitem"><a href="Category_Free software programmed in C.html">Free software programmed in C</a></li>
+  <!--7-->
+  <li class="categoryitem"><a href="Category_High-level programming languages.html">High-level programming languages</a></li>
+  <!--8-->
+  <li class="categoryitem"><a href="Category_Object-oriented programming languages.html">Object-oriented programming languages</a></li>
+  <!--9-->
+  <li class="categoryitem"><a href="Category_Procedural programming languages.html">Procedural programming languages</a></li>
+  <!--10-->
+  <li class="categoryitem"><a href="Category_Programming languages created in 1987.html">Programming languages created in 1987</a></li>
+  <!--11-->
+  <li class="categoryitem"><a href="Category_Scripting languages.html">Scripting languages</a></li>
+  <!--12-->
+  <li class="categoryitem"><a href="Category_Software using the Artistic license.html">Software using the Artistic license</a></li>
+  <!--13-->
+  <li class="categoryitem"><a href="Category_Text-oriented programming languages.html">Text-oriented programming languages</a></li>
+  <!--14-->
+  <li class="categoryitem"><a href="Category_Unix programming tools.html">Unix programming tools</a></li>
+  <!--15-->
+  <li class="categoryitem"><a href="Category_Articles with example code.html">Articles with example code</a></li>
+  <!--16-->
+  </ul>
+  </div>
+  </body
+</html>
