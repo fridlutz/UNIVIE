@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<wikipedia:Wikipedia
-    xmi:version="2.0"
-    xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:wikipedia="http://task2.a9902268.ase2015.swa.univie.ac.at/model"
-    xsi:schemaLocation="http://task2.a9902268.ase2015.swa.univie.ac.at/model model.ecore">
-  <user xsi:type="wikipedia:RegisteredUser"/>
-</wikipedia:Wikipedia>
