@@ -108,7 +108,7 @@ public interface RegisteredUser extends User {
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.Wikipedia.userType
 	 * @see at.ac.univie.swa.ase2015.a9902268.task2.Wikipedia.ModelPackage#getRegisteredUser_UserType()
 	 * @model default="RegisteredUser" required="true" changeable="false" volatile="true" derived="true"
-	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='if (self.countRevisions < 1 or registeredSinceDays < 7) then userType::RegisteredUser\n\t\t\t\t\t\t\t\telse userType::AutoConfirmedUser\n\t\t\t\t\t\t\t\tendif'"
+	 *        annotation="http://www.eclipse.org/emf/2002/Ecore/OCL/Pivot derivation='if (self.countRevisions < 20 or registeredSinceDays < 7) then userType::RegisteredUser\n\t\t\t\t\t\t\t\telse userType::AutoConfirmedUser\n\t\t\t\t\t\t\t\tendif'"
 	 * @generated
 	 */
 	userType getUserType();
