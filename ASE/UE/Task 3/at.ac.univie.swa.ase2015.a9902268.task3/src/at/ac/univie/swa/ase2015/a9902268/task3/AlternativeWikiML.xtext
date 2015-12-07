@@ -1,0 +1,154 @@
+grammar at.ac.univie.swa.ase2015.a9902268.task3.WikiML with org.eclipse.xtext.common.Terminals
+
+generate wikiML "http://www.ac.at/univie/swa/ase2015/a9902268/task3/WikiML"
+
+WikiPage:
+//according to wikitext documentation, one single title per page
+	heading=HEADING1 paragraphs+=PARAGRAPHTYPES (EOL paragraphs+=PARAGRAPHTYPES)*;
+
+PARAGRAPHTYPES:
+	TEXTPARAGRAPH | HEADING2 | HEADING3 | HEADING4 | HEADING5;
+
+	//Heading1 = Title, can not be a link
+HEADING1:
+	'=' headingValue1=PLAINTEXT '=';
+
+HEADING2:
+	'==' headingValue2=PLAINTEXT '==';
+
+HEADING3:
+	'===' headingValue3=PLAINTEXT '===';
+
+HEADING4:
+	'====' headingValue4=PLAINTEXT '====';
+
+HEADING5:
+	'=====' headingValue5=PLAINTEXT '=====';
+
+TEXTPARAGRAPH hidden(ML_COMMENT):
+	text+=TEXTTYPES (WS text+=TEXTTYPES)*;
+
+TEXTTYPES:
+	FORMATTEDTEXT | UNFORMATTEDTEXT;
+	
+FORMATTEDTEXT:
+	ITALICBOLDTEXT | BOLDTEXT | ITALICTEXT
+;
+
+UNFORMATTEDTEXT:
+	PLAINTEXT | LINK
+;
+	//could be possibly done with a recursive logic
+ITALICBOLDTEXT hidden(ML_COMMENT):
+	'\'\'\'\'\'' text+=UNFORMATTEDTEXT (WS text+=UNFORMATTEDTEXT)* '\'\'\'\'\'';
+
+BOLDTEXT hidden(ML_COMMENT):
+	'\'\'\'' text+=UNFORMATTEDTEXT (WS text+=UNFORMATTEDTEXT)* '\'\'\'';
+
+ITALICTEXT hidden(ML_COMMENT):
+	'\'\'' text+=UNFORMATTEDTEXT (WS text+=UNFORMATTEDTEXT)* '\'\'';
+
+PLAINTEXT:
+	text=DT_WORD;
+
+LINK:
+	(INTERNALLINK | EXTERNALLINK);
+
+INTERNALLINK hidden(ML_COMMENT):
+	'[[' name+=PLAINTEXT (WS text+=PLAINTEXT)* ('|' alttext+=PLAINTEXT(WS text+=PLAINTEXT)*)? ']]';
+
+EXTERNALLINK:
+	'[' name=URL ('|' alttext=PLAINTEXT)? ']';
+
+DT_WORD:
+	(ID | INT | '_' | '-' | '(' | ')' | ',' | '#' | '"' | '.' | ':')*;
+
+
+terminal ML_COMMENT:
+	'<!--'->'-->';
+
+terminal EOL:
+	('\r' | '\n')+;
+
+terminal WS:
+	(' ' | '\t')+;
+
+terminal URL:
+	('a'..'z')+ '://' // Protocol
+
+	( // Hostname
+	(('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+ '.' ('0'..'9')+) |
+	(('a'..'z' | 'A'..'Z')
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))*
+	('.'
+	('a'..'z' | 'A'..'Z')
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))*)*))
+	(':' ('0'..'9')+)? // Portnumber
+
+	('/'
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	'~' |
+	'+' |
+	'.' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))*)* // Path
+
+	('?'
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	'=' |
+	'&' |
+	';' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))+
+	('+'
+	('a'..'z' | 'A'..'Z' |
+	'0'..'9' |
+	'$' |
+	'-' |
+	'_' |
+	'=' |
+	'&' |
+	';' |
+	('\\'
+	('0'..'9' | 'a'..'f' | 'A'..'F')
+	('0'..'9' | 'a'..'f' | 'A'..'F')) |
+	('%'
+	('0'..'9')
+	('0'..'9')))+)*)? // Query
+;
