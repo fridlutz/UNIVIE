@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="ASCII"?>
+<wikipedia:Wikipedia xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wikipedia="http://task2.a9902268.ase2015.swa.univie.ac.at/model" currentDateJD="1231312">
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.0/@revision.0" title="SEARCH/CREATE ARTICLEasdasd">
+    <revision author="//@user.0" content=""/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.1/@revision.0" title="Another">
+    <revision author="//@user.0" content=""/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.2/@revision.0" title="AnotherHugo">
+    <revision author="//@user.0" content=""/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.3/@revision.0" title="AnotherHugoElement">
+    <revision author="//@user.0" content=""/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.4/@revision.0" title="SEARCH/CREATE ARTICLE">
+    <revision author="//@user.0" content=""/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.5/@revision.0" title="HUGO">
+    <revision author="//@user.0" content=""/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.6/@revision.0" title="User:Wilfrid">
+    <revision author="//@user.0" content=""/>
+  </content>
+  <user xsi:type="wikipedia:UnregisteredUser"/>
+</wikipedia:Wikipedia>

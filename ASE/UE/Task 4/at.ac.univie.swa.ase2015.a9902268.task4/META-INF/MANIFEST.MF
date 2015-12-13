@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Task4
+Bundle-SymbolicName: at.ac.univie.swa.ase2015.a9902268.task4
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: at.ac.univie.swa.ase2015.a9902268.task4.test.Activator
+Require-Bundle: org.eclipse.emf.ecore;bundle-version="2.11.1",
+ at.ac.univie.swa.ase2015.a9902268.task2;bundle-version="0.1.0",
+ org.eclipse.emf.ecore.xmi;bundle-version="2.11.1",
+ org.eclipse.ocl.ecore;bundle-version="3.5.0",
+ at.ac.univie.swa.ase2015.a9902268.task3;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
