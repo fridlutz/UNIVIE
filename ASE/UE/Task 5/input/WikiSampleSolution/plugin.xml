@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated wikiSampleSolution -->
+      <package
+            uri="urn:swa.univie.ac.at:ase15:task2:wiki"
+            class="wikiSampleSolution.wikiSampleSolution.WikiSampleSolutionPackage"
+            genModel="model/wikiSampleSolution.genmodel"/>
+   </extension>
+
+</plugin>

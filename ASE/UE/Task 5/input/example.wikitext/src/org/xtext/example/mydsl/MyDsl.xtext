@@ -1,0 +1,147 @@
+grammar org.xtext.example.mydsl.MyDsl with org.eclipse.xtext.common.Terminals
+
+generate myDsl "http://www.xtext.org/example/mydsl/MyDsl"
+
+// name=Type	1
+// name+=Type	1-n
+// name+=Type*	0-n
+
+Document:
+	title=Heading1
+	elements+=AbstractElement*
+	categories+=Category*		// move to AbstractElement to enable defining categories anywhere
+;
+
+terminal CUSTOM_STRING:
+	('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'-'|'.'|'!'|'?'|','|'#'|':'|'('|')'|' '|'/'|'"')+
+;
+
+terminal WIKI_COMMENT:
+	'<!--' -> '-->'
+;
+
+//override STRING to ignore " and ' in actual instance text
+terminal STRING:
+	"´"
+;
+
+Comment:
+	comment=(WIKI_COMMENT)//"<!--" text=(CUSTOM_STRING) "-->"
+;
+	
+UnformattedText:
+	text=(CUSTOM_STRING)	//(ID | WS | SPECIAL_CHAR)
+;
+	
+FormattedText:
+	formattedText=(ItalicText | BoldText | ItalicBoldText | InternalLink | ExternalLink | UnformattedText)
+;
+
+FormattedTextWithoutLinks:
+	formattedTextWithoutLinks=(ItalicText | BoldText | ItalicBoldText | UnformattedText)
+;
+
+AbstractElement:
+	element=(Template | Heading | TextElement | Comment)
+;
+
+TextElement:
+	element=(BlockQuote | File | List | FormattedText)
+;
+
+Heading:
+	heading=(Heading2 | Heading3 | Heading4)
+;
+	
+Heading1:
+	"=" heading=FormattedText "="
+;
+
+Heading2:
+	"==" heading=FormattedText "=="
+;
+	
+Heading3:
+	"===" heading=FormattedText "==="
+;
+	
+Heading4:
+	"====" heading=FormattedText "===="
+;
+
+List:
+	list=(OrderedList | UnorderedList)
+;	
+
+OrderedList:
+	items+=OrderedListItem
+;
+
+UnorderedList:
+	items+=UnorderedListItem
+;
+
+OrderedListItem:
+	"#" item=(FormattedText | List)
+;
+	
+	
+UnorderedListItem:
+	"*" item=(FormattedText | List)
+;
+		
+ItalicText:
+	"''" italicText=(InternalLink | ExternalLink | UnformattedText) "''"
+;
+
+BoldText:
+	"'''" boldText=(InternalLink | ExternalLink | UnformattedText) "'''"
+;
+
+ItalicBoldText:
+	"'''''" italicBoldText=(InternalLink | ExternalLink | UnformattedText) "'''''"
+;
+
+BlockQuote:
+	"<blockquote>" blockQuoteText=(FormattedText) additional+=(FormattedText)* "</blockquote>"
+;
+
+ExternalLink:
+	"[" linkName=UnformattedText (" " renamedLink=FormattedTextWithoutLinks)? "]"
+;
+
+InternalLink:
+	"[[" linkName=UnformattedText ("|" renamedLink=FormattedTextWithoutLinks)? "]]"
+;
+
+File:
+	"[[File:" fileName=UnformattedText viewType=("|thumb" | "|frame" | "|frameless")? ("|" text=FormattedTextWithoutLinks additional+=(FormattedTextWithoutLinks)*)? "]]"
+;
+
+Category:
+	"[[Category:" categoryLink=UnformattedText ("|*")? "]]"
+;
+
+Template:
+	"{{" template=TemplateType "}}"
+;
+
+TemplateType:
+	type=(Metadata | MainInformation)
+;
+
+Metadata:
+	about=About (actualInfo=ActualInformation)?
+;
+
+About:
+	"about|" aboutText=UnformattedText
+;
+
+ActualInformation:
+	"|" informationOnWhat=UnformattedText "|" link=UnformattedText ("|and|" additionalLinks+=UnformattedText)*
+;
+
+MainInformation:
+	"main|" link=UnformattedText
+;

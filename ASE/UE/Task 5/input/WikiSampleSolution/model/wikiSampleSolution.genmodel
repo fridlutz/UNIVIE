@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/WikiSampleSolution/src" modelPluginID="WikiSampleSolution"
+    modelName="WikiSampleSolution" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>wikiSampleSolution.ecore</foreignModel>
+  <genPackages prefix="WikiSampleSolution" basePackage="wikiSampleSolution" disposableProviderFactory="true"
+      ecorePackage="wikiSampleSolution.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="wikiSampleSolution.ecore#//RoleType">
+      <genEnumLiterals ecoreEnumLiteral="wikiSampleSolution.ecore#//RoleType/REGISTERED_USER"/>
+      <genEnumLiterals ecoreEnumLiteral="wikiSampleSolution.ecore#//RoleType/AUTOCONFIRMED_USER"/>
+      <genEnumLiterals ecoreEnumLiteral="wikiSampleSolution.ecore#//RoleType/ADMIN"/>
+      <genEnumLiterals ecoreEnumLiteral="wikiSampleSolution.ecore#//RoleType/SYSOP"/>
+      <genEnumLiterals ecoreEnumLiteral="wikiSampleSolution.ecore#//RoleType/UNREGISTERED_USER"/>
+    </genEnums>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Wiki">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Wiki/content"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Wiki/privilegs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Wiki/groups"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Wiki/users"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Wiki/mode"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Wiki/role"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Content">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Content/history"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Content/discussionpage"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Content/group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Content/editor"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Content/Ttile"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Content/contentMarkup"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Article"/>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Media"/>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//ProjectPage"/>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//DiscussionPage"/>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Version">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Version/previous"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Version/timestamp"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Version/editedBy"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Version/diff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Version/commitMsg"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//History">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//History/versions"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//User">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//User/role"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//User/mode"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//User/registrationTimestamp"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Group/namespace"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Mode">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Mode/availableActions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Mode/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Mode/name"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Action">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Action/name"/>
+      <genOperations ecoreOperation="wikiSampleSolution.ecore#//Action/execute">
+        <genParameters ecoreParameter="wikiSampleSolution.ecore#//Action/execute/content"/>
+      </genOperations>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Privileg">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Privileg/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Privileg/action"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Privileg/name"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//RegisteredUser">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//RegisteredUser/profile"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//RegisteredUser/subscriptions"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//RegisteredUser/username"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//UnregisteredUser">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//UnregisteredUser/IPAddress"/>
+    </genClasses>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Profile"/>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Subscribable"/>
+    <genClasses ecoreClass="wikiSampleSolution.ecore#//Role">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wikiSampleSolution.ecore#//Role/privileg"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wikiSampleSolution.ecore#//Role/type"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

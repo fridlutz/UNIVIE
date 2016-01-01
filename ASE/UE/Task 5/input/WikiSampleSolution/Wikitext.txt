@@ -1,0 +1,33 @@
+=Task 12=
+{{about|the example instance for ASE Task 3| actual information on Mediawiki|MediaWiki|and|Help:Wiki markup|and|more|and|EVENMOAR}}
+[[File:Award numeral 3.svg|thumb|This is the example test for the '''''3rd Task''''']]
+==Background==
+When ''[[Wikipedia]]'' was first launched in January 2001 (cf. [[History of WikipediaTimeline|Timeline of Wikipedia]]), it 
+ran on the existing ''wiki'' software ''[[UseModWiki]]'', which was written in ''[[Perl]]'' and stored all ''wiki'' pages in 
+text files. This software soon proved limiting, both in its functionality and its performance. In mid-2001, [[Magnus Manske]], a
+ developer and student at the [[University of Cologne|Cologne University]], began working on new software that would replace
+  ''UseModWiki'', specifically for use by ''Wikipedia''. This software was written in ''[[PHP]]'' ([https://secure.php.net/]) and
+   stored all its information in a ''[[MySQL]]'' ([https://www.mysql.com/ www.mysql.com]) database.
+<blockquote>This software was referred to as "the ''PHP'' script" and as "phase II", with the name "phase I" retroactively given to the use of ''UseModWiki''.</blockquote>
+
+===Milestones===
+Major milestones in ''MediaWiki''s development have included (see also [[Version history|below]]):
+# the categorization system, added in 2004
+#[[Parsing|parser functions]], added in 2006 <!-- COMMENT -->
+#[[flagged revisions]], added in 2008
+# the "ResourceLoader", a delivery system for [[ Cascading Style Sheets|''CSS'']] and ''[[JavaScript]]'', added in 2011
+# the [[VisualEditor]], a [[WYSIWYG]] (What You See Is What You Get) editor, added in 2013
+
+====[[Version history]]====
+{{main|MediaWiki version history}}
+* 1.1
+* 1.2
+** 1.2.1
+** 1.2.4
+* 1.3
+
+[[Category:MediaWiki|*]]
+[[Category:Free software programmed in PHP]]
+[[Category:Free wiki software]]
+[[Category:2002 software]]
+[[Category:Cross-platform free software]]

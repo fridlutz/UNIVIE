@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated wikiSampleSolution -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="wikiSampleSolution.wikiSampleSolution.presentation.WikiSampleSolutionModelWizardID"
+            name="%_UI_WikiSampleSolutionModelWizard_label"
+            class="wikiSampleSolution.wikiSampleSolution.presentation.WikiSampleSolutionModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/WikiSampleSolutionModelFile.gif">
+         <description>%_UI_WikiSampleSolutionModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated wikiSampleSolution -->
+      <editor
+            id="wikiSampleSolution.wikiSampleSolution.presentation.WikiSampleSolutionEditorID"
+            name="%_UI_WikiSampleSolutionEditor_label"
+            icon="icons/full/obj16/WikiSampleSolutionModelFile.gif"
+            extensions="wikisamplesolution"
+            class="wikiSampleSolution.wikiSampleSolution.presentation.WikiSampleSolutionEditor"
+            contributorClass="wikiSampleSolution.wikiSampleSolution.presentation.WikiSampleSolutionActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

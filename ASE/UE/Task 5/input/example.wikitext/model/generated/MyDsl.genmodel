@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/example.wikitext/src-gen" editDirectory="/example.wikitext.edit/src"
+    editorDirectory="/example.wikitext.editor/src" modelPluginID="example.wikitext"
+    forceOverwrite="true" modelName="MyDsl" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="example.wikitext.edit"
+    editorPluginID="example.wikitext.editor" runtimeVersion="2.11">
+  <genPackages prefix="MyDsl" basePackage="org.xtext.example.mydsl" disposableProviderFactory="true"
+      fileExtensions="mydsl" ecorePackage="MyDsl.ecore#/">
+    <genClasses ecoreClass="MyDsl.ecore#//Document">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Document/title"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Document/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Document/categories"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Comment">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//Comment/comment"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//UnformattedText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//UnformattedText/text"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//FormattedText">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//FormattedText/formattedText"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//FormattedTextWithoutLinks">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//FormattedTextWithoutLinks/formattedTextWithoutLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//AbstractElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//AbstractElement/element"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//TextElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//TextElement/element"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Heading">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Heading/heading"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Heading1">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Heading1/heading"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Heading2">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Heading2/heading"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Heading3">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Heading3/heading"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Heading4">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Heading4/heading"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//List">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//List/list"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//OrderedList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//OrderedList/items"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//UnorderedList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//UnorderedList/items"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//OrderedListItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//OrderedListItem/item"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//UnorderedListItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//UnorderedListItem/item"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ItalicText">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ItalicText/italicText"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//BoldText">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//BoldText/boldText"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ItalicBoldText">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ItalicBoldText/italicBoldText"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//BlockQuote">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//BlockQuote/blockQuoteText"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//BlockQuote/additional"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ExternalLink">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ExternalLink/linkName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ExternalLink/renamedLink"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//InternalLink">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//InternalLink/linkName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//InternalLink/renamedLink"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//File">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//File/fileName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MyDsl.ecore#//File/viewType"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//File/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//File/additional"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Category">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Category/categoryLink"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Template">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Template/template"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//TemplateType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//TemplateType/type"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//Metadata">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Metadata/about"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//Metadata/actualInfo"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//About">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//About/aboutText"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//ActualInformation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ActualInformation/informationOnWhat"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ActualInformation/link"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//ActualInformation/additionalLinks"/>
+    </genClasses>
+    <genClasses ecoreClass="MyDsl.ecore#//MainInformation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MyDsl.ecore#//MainInformation/link"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
