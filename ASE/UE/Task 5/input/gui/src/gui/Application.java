@@ -29,6 +29,7 @@ public class Application implements ActionListener
 		button = new JButton( "Click me ..." );
 		button.addActionListener( this );
 		
+		
 		frame = new JFrame( "Application Frame" ); 
 		Container pane = frame.getContentPane();
 		pane.add( info,   BorderLayout.CENTER );
