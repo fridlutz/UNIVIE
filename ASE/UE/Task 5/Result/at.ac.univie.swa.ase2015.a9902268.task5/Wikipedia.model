@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ASCII"?>
+<wikipedia:Wikipedia xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wikipedia="http://task2.a9902268.ase2015.swa.univie.ac.at/model" currentDateJD="2463883">
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.0/@revision.2" title="University of Vienna">
+    <revision author="//@user.0" content="=University of Vienna="/>
+    <revision author="//@user.0" content="&#xA;=University of Vienna=&#xA;The '''University of Vienna''' is a [[public university]] located in [[Vienna]], [[Austria]]. It was founded by [[Rudolf IV, Duke of Austria|Duke Rudolph IV]] in 1365 and is one of the oldest universities in the [[German speaking world#Geographic distribution|German-speaking world]]. With its long and rich history, the University of Vienna has developed into one of the biggest universities in Europe, and also one of the most renowned, especially in the [[Humanities]]. It is associated with 15 [[Nobel prize]] winners and has been the academic home of a large number of figures both of historical and academic importance."/>
+    <revision author="//@user.0" content="&#xA;=University of Vienna= The '''University of Vienna''' is a public university located in Vienna, Austria. It was founded by Rudolf IV, Duke of Austria in 1365 and is one of the oldest universities in the German speaking world. With its long and rich history, the University of Vienna has developed into one of the biggest universities in Europe, and also one of the most renowned, especially in the Humanities. It is associated with 15 Nobel prize winners and has been the academic home of a large number of figures both of historical and academic importance."/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.1/@revision.0" title="Advanced Software Engineering">
+    <revision author="//@user.0" content="=Advanced Software Engineering="/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.2/@revision.0" title="Uwe Zdun">
+    <revision author="//@user.0" content="=Uwe Zdun="/>
+  </content>
+  <content xsi:type="wikipedia:Media" currentRevision="//@content.3/@revision.0" title="File:Logo UNIVIE">
+    <revision author="//@user.0"/>
+  </content>
+  <content xsi:type="wikipedia:InternalContent" currentRevision="//@content.4/@revision.0" title="Internal:Project Space ASE">
+    <revision author="//@user.0"/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.5/@revision.0" title="public university">
+    <revision author="//@user.0" content="=public university="/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.6/@revision.0" title="Vienna">
+    <revision author="//@user.0" content="=Vienna="/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.7/@revision.0" title="Rudolf IV">
+    <revision author="//@user.0" content="=Rudolf IV="/>
+  </content>
+  <content xsi:type="wikipedia:Article" currentRevision="//@content.8/@revision.0" title="Maria Theresia">
+    <revision author="//@user.0" content="=Maria Theresia="/>
+  </content>
+  <user xsi:type="wikipedia:UnregisteredUser" IPAddress="NB006-AM/192.168.56.1"/>
+  <user xsi:type="wikipedia:RegisteredUser" userName="Utz" registrationDateJD="2462991"/>
+</wikipedia:Wikipedia>
