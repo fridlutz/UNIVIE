@@ -288,11 +288,12 @@ public class WikipediaManager {
 		return null;
 	}
 
+
 	protected void runGenerator(String file) {
 		// load the resource
 		ResourceSet set = resourceSetProvider.get();
 		Resource resource = set.getResource(URI.createURI(file), true);
-
+	
 		List<Issue> list = validator.validate(resource, CheckMode.ALL, CancelIndicator.NullImpl);
 		if (!list.isEmpty()) {
 			for (Issue issue : list) {
@@ -300,11 +301,11 @@ public class WikipediaManager {
 			}
 			return;
 		}
-
+	
 		// configure and start the generator
 		fileAccess.setOutputPath("output/");
 		generator.doGenerate(resource, fileAccess);
-
+	
 		System.out.println("Code generation finished.");
 	}
 }

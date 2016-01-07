@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
-<wikipedia:Wikipedia xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wikipedia="http://task2.a9902268.ase2015.swa.univie.ac.at/model" currentDateJD="2462625">
+<wikipedia:Wikipedia xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wikipedia="http://task2.a9902268.ase2015.swa.univie.ac.at/model" currentDateJD="2463213">
   <content xsi:type="wikipedia:Article" currentRevision="//@content.0/@revision.2" title="WILFRID">
     <revision author="//@user.0" content="=WILFRID="/>
     <revision author="//@user.0" content="&#xA;=WILFRID=&#xA;New text added."/>
     <revision author="//@user.0" content="&#xA;=WILFRID= New text added.&#xA;==Another heading here =="/>
   </content>
   <user xsi:type="wikipedia:UnregisteredUser" IPAddress="NB006-AM/192.168.56.1"/>
+  <user xsi:type="wikipedia:UnregisteredUser" IPAddress="NB006-AM/78.104.3.248"/>
 </wikipedia:Wikipedia>
