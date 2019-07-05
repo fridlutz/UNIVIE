@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="studies">
+      <attribute name="name"/>
+      <attribute name="numberOfStudyPrograms">
+        <data type="integer"/>
+      </attribute>
+      <attribute name="period"/>
+      <oneOrMore>
+        <element name="study">
+          <attribute name="id">
+            <data type="NMTOKEN"/>
+          </attribute>
+          <attribute name="name"/>
+          <attribute name="parentID">
+            <data type="NMTOKEN"/>
+          </attribute>
+          <optional>
+            <ref name="course"/>
+          </optional>
+          <oneOrMore>
+            <element name="module">
+              <attribute name="id">
+                <data type="NMTOKEN"/>
+              </attribute>
+              <attribute name="name"/>
+              <attribute name="parentID">
+                <data type="NMTOKEN"/>
+              </attribute>
+              <zeroOrMore>
+                <ref name="course"/>
+              </zeroOrMore>
+              <zeroOrMore>
+                <element name="category">
+                  <attribute name="id">
+                    <data type="NMTOKEN"/>
+                  </attribute>
+                  <attribute name="name"/>
+                  <attribute name="parentID">
+                    <data type="NMTOKEN"/>
+                  </attribute>
+                  <zeroOrMore>
+                    <ref name="course"/>
+                  </zeroOrMore>
+                  <zeroOrMore>
+                    <element name="sub-category">
+                      <attribute name="id">
+                        <data type="NMTOKEN"/>
+                      </attribute>
+                      <attribute name="name"/>
+                      <attribute name="parentID">
+                        <data type="NMTOKEN"/>
+                      </attribute>
+                      <zeroOrMore>
+                        <ref name="course"/>
+                      </zeroOrMore>
+                    </element>
+                  </zeroOrMore>
+                </element>
+              </zeroOrMore>
+            </element>
+          </oneOrMore>
+        </element>
+      </oneOrMore>
+    </element>
+  </start>
+  <define name="course">
+    <element name="course">
+      <attribute name="continousassessment">
+        <data type="NCName"/>
+      </attribute>
+      <attribute name="ects"/>
+      <attribute name="groupcount">
+        <data type="integer"/>
+      </attribute>
+      <attribute name="id">
+        <data type="integer"/>
+      </attribute>
+      <attribute name="name"/>
+      <attribute name="responsible_unit"/>
+      <attribute name="title"/>
+      <attribute name="type"/>
+      <attribute name="weekhours">
+        <data type="integer"/>
+      </attribute>
+      <element name="group">
+        <attribute name="appointmentcount">
+          <data type="integer"/>
+        </attribute>
+        <attribute name="block">
+          <data type="NCName"/>
+        </attribute>
+        <attribute name="duration_min_sum">
+          <data type="integer"/>
+        </attribute>
+        <attribute name="learningplatform"/>
+        <attribute name="learningplatformurl">
+          <data type="anyURI"/>
+        </attribute>
+        <attribute name="livestream">
+          <data type="NCName"/>
+        </attribute>
+        <attribute name="signlanguage">
+          <data type="NCName"/>
+        </attribute>
+        <zeroOrMore>
+          <element name="appointment">
+            <attribute name="city">
+              <data type="NCName"/>
+            </attribute>
+            <attribute name="date">
+              <data type="NMTOKEN"/>
+            </attribute>
+            <attribute name="duration_min">
+              <data type="integer"/>
+            </attribute>
+            <attribute name="end">
+              <data type="integer"/>
+            </attribute>
+            <attribute name="room"/>
+            <attribute name="roomnumber">
+              <data type="NMTOKEN"/>
+            </attribute>
+            <attribute name="start">
+              <data type="integer"/>
+            </attribute>
+            <attribute name="street"/>
+            <attribute name="zip">
+              <data type="integer"/>
+            </attribute>
+          </element>
+        </zeroOrMore>
+        <oneOrMore>
+          <element name="courselanguage">
+            <data type="NCName"/>
+          </element>
+        </oneOrMore>
+        <oneOrMore>
+          <element name="lecturer">
+            <attribute name="email"/>
+            <attribute name="givenname"/>
+            <attribute name="name"/>
+            <attribute name="role"/>
+          </element>
+        </oneOrMore>
+      </element>
+    </element>
+  </define>
+</grammar>
